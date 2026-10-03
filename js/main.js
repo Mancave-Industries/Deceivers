@@ -233,6 +233,7 @@ const actions = {
     if (!setupNames.every((n) => n.trim().length > 0)) return;
     Sound.play('gather');
     startNewSeries(state, setupNames, seriesLength, setupIsComputer);
+    Analytics.gameStarted();
     uiStage.revealTapped = false;
     persist();
     render();
@@ -342,6 +343,7 @@ const actions = {
     uiStage.eliminationRevealed = false;
     if (state.phase === PHASES.RESULTS) {
       Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
+      Analytics.gameFinished();
     }
     persist();
     render();
@@ -374,6 +376,7 @@ const actions = {
   'next-game-in-series': () => {
     Sound.play('gather');
     startNextGameInSeries(state);
+    Analytics.gameStarted();
     uiStage.revealTapped = false;
     persist();
     render();

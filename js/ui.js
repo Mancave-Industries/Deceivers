@@ -541,14 +541,17 @@ UI.hideModal = function hideModal() {
 
 UI.helpContent = function helpContent() {
   return `
+    <p><strong>One phone, a group of friends — some of you are secretly Deceivers.</strong> Everyone else is Loyal. Loyal wins by rooting out every Deceiver; Deceivers win by staying hidden until they equal or outnumber whoever's left.</p>
+    <p>${CONFIG.minPlayers}–${CONFIG.maxPlayers} players, one shared phone passed hand to hand, no app to install. A game runs about 15–25 minutes, start to finish.</p>
+    <p>Each round, everyone draws a card, then something happens — a quiet night, a secret murder, or a vote to banish someone — and the whole table gathers to watch the outcome together. Play continues round after round until one side wins.</p>
+    <p>The Loyal win when every Deceiver is gone. The Deceivers win once they equal or outnumber the Loyal. Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
+    <div class="panel-title" style="margin-top:4px;">What the cards do</div>
     <div class="rule-row">${iconUse(ICONS.coin, 'icon')}<span>Gold cards fill the shared Prize Pot.</span></div>
     <div class="rule-row">${iconUse(ICONS.shield, 'icon')}<span>A held Shield protects you automatically if targeted — no action needed — then it's spent.</span></div>
     <div class="rule-row">${iconUse(ICONS.dagger, 'icon')}<span>Dagger adds +1 weight to your Banishment vote.</span></div>
     <div class="rule-row">${iconUse(ICONS.hoodedFigure, 'icon')}<span>Deceiver's Choice cancels a Shield at Night.</span></div>
     <div class="rule-row">${iconUse(ICONS.skull, 'icon')}<span>On a Murder round, the Deceivers pick a victim in secret.</span></div>
     <div class="rule-row">${iconUse(ICONS.vote, 'icon')}<span>Every living player votes to banish a suspect.</span></div>
-    <p>The Loyal win when every Deceiver is gone. The Deceivers win once they equal or outnumber the Loyal.</p>
-    <p>Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
     <p>Play a series of several games back to back and points carry across every game — set how many on the setup screen.</p>
     <p>Pass the phone honestly and don't peek — the ceremony depends on trust.</p>`;
 };
