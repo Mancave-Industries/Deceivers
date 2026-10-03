@@ -127,6 +127,28 @@ body {
   mask-image: radial-gradient(circle, #000 32%, transparent 68%);
 }
 
+/* A hairline ceremonial frame, inset from the device edge, with four
+   corner brackets instead of a full rectangle — reads as "designed card",
+   not "blank page", on every screen at once with zero per-screen work. */
+.app::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(201,162,75,0.08);
+  background:
+    linear-gradient(var(--gold-500), var(--gold-500)) top left / 20px 1.5px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top left / 1.5px 20px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top right / 20px 1.5px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top right / 1.5px 20px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 20px 1.5px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 1.5px 20px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 20px 1.5px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 1.5px 20px no-repeat;
+  opacity: 0.4;
+}
+
 .sprite-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .icon {
@@ -288,10 +310,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+  gap: 34px;
   text-align: center;
 }
-.title-emblem-svg { width: 190px; height: auto; }
+.title-emblem-svg { width: 240px; height: auto; }
+.title-rule {
+  width: 150px;
+  height: 10px;
+  background:
+    radial-gradient(circle, var(--gold-500) 0 1.5px, transparent 2.5px) center / 10px 10px no-repeat,
+    linear-gradient(90deg, transparent, var(--gold-700) 32%, var(--gold-700) 68%, transparent) center / 100% 1px no-repeat;
+  opacity: 0.45;
+}
+.title-byline {
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  opacity: 0.6;
+}
 .title-actions {
   display: flex;
   flex-direction: column;
@@ -574,6 +611,11 @@ body {
 }
 
 /* ---------- Elimination / ceremonial reveal ---------- */
+/* Shared by every pass-the-phone prompt, role/card reveal, and outcome
+   screen — by far the most-seen layout in the game — so bracketing it
+   top and bottom with the same dot-and-line rule used elsewhere turns
+   each one into a framed ceremony beat instead of a few lines floating
+   in a mostly-empty screen. */
 .reveal-stage {
   flex: 1;
   display: flex;
@@ -582,6 +624,16 @@ body {
   justify-content: center;
   gap: 18px;
   text-align: center;
+}
+.reveal-stage::before, .reveal-stage::after {
+  content: "";
+  width: 130px;
+  height: 10px;
+  flex-shrink: 0;
+  background:
+    radial-gradient(circle, var(--gold-500) 0 1.5px, transparent 2.5px) center / 10px 10px no-repeat,
+    linear-gradient(90deg, transparent, var(--gold-700) 32%, var(--gold-700) 68%, transparent) center / 100% 1px no-repeat;
+  opacity: 0.35;
 }
 .reveal-headline {
   font-family: var(--font-display);
@@ -704,7 +756,28 @@ body {
 @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 
 /* ---------- Misc ---------- */
-.spacer { flex: 1; }
+/* Every screen with a short, variable-length body (few players, an empty
+   hand, a short player list) ends with a .spacer pushing the primary
+   button to the bottom — on a tall phone that used to be bare dead air.
+   A single faint ceremonial rule — line, dot, line — fills it without
+   adding fake content or touching ui.js's six call sites. */
+.spacer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+}
+.spacer::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 10px;
+  background:
+    radial-gradient(circle, var(--gold-500) 0 1.5px, transparent 2.5px) center / 10px 10px no-repeat,
+    linear-gradient(90deg, transparent, var(--gold-700) 32%, var(--gold-700) 68%, transparent) center / 100% 1px no-repeat;
+  opacity: 0.4;
+}
 .stack { display: flex; flex-direction: column; gap: 10px; }
 .center-text { text-align: center; }
 .small-note { font-size: 11px; color: var(--ink-dim); text-align: center; }
