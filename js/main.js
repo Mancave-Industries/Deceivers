@@ -73,6 +73,7 @@ function resolveComputerTurn() {
         uiStage.eliminationRevealed = false;
         if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
+        else if (state.phase === PHASES.DISCUSS) Sound.play('gather');
       }
       break;
     }
@@ -138,10 +139,13 @@ function render() {
       UI.renderHand(state);
       break;
     case PHASES.NIGHT:
-      UI.renderNight();
+      UI.renderNight(state);
       break;
     case PHASES.MURDER:
       UI.renderMurder(state, uiStage.murderTapped, uiStage.murderTarget, uiStage.useChoice);
+      break;
+    case PHASES.DISCUSS:
+      UI.renderDiscuss(state);
       break;
     case PHASES.VOTE:
     case PHASES.FINAL_BANISHMENT:
@@ -282,6 +286,7 @@ const actions = {
       uiStage.eliminationRevealed = false;
       if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
+      else if (state.phase === PHASES.DISCUSS) Sound.play('gather');
     }
     persist();
     render();
@@ -292,6 +297,15 @@ const actions = {
     uiStage.murderTapped = false;
     uiStage.murderTarget = null;
     uiStage.useChoice = false;
+    render();
+  },
+  'begin-vote-queue': () => {
+    Sound.play('tap');
+    beginVotePhase(state, state.finalBanishmentActive);
+    uiStage.voteTapped = false;
+    uiStage.voteSelected = null;
+    uiStage.useDagger = false;
+    persist();
     render();
   },
   'tap-murder-turn': () => {

@@ -119,18 +119,24 @@ ends the round.
 2. **Fate card revealed** for the round, deciding that round's one event:
    - **Quiet Night** — no murder. Proceeds straight to an Elimination Reveal
      announcing nothing happened, then the round ends.
-   - **Murder** — ceremonial "pass the phone" Night transition, then every
-     living player takes a turn (see below); the acting Deceiver privately
-     chooses one living, non-Deceiver target via Murder Selection. A Shield
-     card the target is holding deploys automatically and is spent the
-     instant it blocks a Murder — the target never has to act on it; a
-     Deceiver's Choice card played by the Deceivers overrides a Shield in
-     effect (and still spends the Shield). A "Gather Everyone" checkpoint,
-     then an Elimination Reveal shows the outcome, then the round ends.
-   - **Banishment** — skips the night entirely. Every living player
-     privately casts one vote (pass device between voters) for who to
-     banish. A held Dagger card can be played to add +1 weight to that
-     vote. Most votes banished; ties banish no one. A "Gather Everyone"
+   - **Murder** — a ceremonial "pass the phone" Night transition that states
+     outright that tonight's Fate is Murder (there's nothing left to guess —
+     by design the Fate card is only ever hidden before the Draw Phase, not
+     after), then every living player takes a turn (see below); the acting
+     Deceiver privately chooses one living, non-Deceiver target via Murder
+     Selection. A Shield card the target is holding deploys automatically
+     and is spent the instant it blocks a Murder — the target never has to
+     act on it; a Deceiver's Choice card played by the Deceivers overrides a
+     Shield in effect (and still spends the Shield). A "Gather Everyone"
+     checkpoint, then an Elimination Reveal shows the outcome, then the
+     round ends.
+   - **Banishment** — skips the night entirely. An explicit **Open
+     Discussion** screen comes first: put the phone down, the whole table
+     talks it out loud — accuse, defend, ask questions — with a "Begin
+     Voting" button for whenever the table is ready. Only then does every
+     living player privately cast one vote (pass device between voters) for
+     who to banish. A held Dagger card can be played to add +1 weight to
+     that vote. Most votes banished; ties banish no one. A "Gather Everyone"
      checkpoint, then an Elimination Reveal shows the outcome, then the
      round ends.
 3. **Win check** (after every event's Elimination Reveal): Loyal wins if

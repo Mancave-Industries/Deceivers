@@ -188,8 +188,8 @@ function finishDrawForCurrent(state) {
 function routeAfterDraw(state) {
   const def = cardDefById(state.currentFateCard);
   if (state.finalBanishmentActive) {
-    beginVotePhase(state, true);
-    return PHASES.FINAL_BANISHMENT;
+    state.phase = PHASES.DISCUSS;
+    return PHASES.DISCUSS;
   }
   if (def.effect === 'murder-night') {
     state.phase = PHASES.NIGHT;
@@ -203,10 +203,12 @@ function routeAfterDraw(state) {
     state.phase = PHASES.ELIMINATION;
     return PHASES.ELIMINATION;
   }
-  // vote-only
+  // vote-only — every living player debates openly before voting begins
+  // (see PHASES.DISCUSS); beginVotePhase itself isn't called until that
+  // screen's "Begin Voting" button is tapped.
   state.fateDiscard.push(state.currentFateCard);
-  beginVotePhase(state, false);
-  return PHASES.VOTE;
+  state.phase = PHASES.DISCUSS;
+  return PHASES.DISCUSS;
 }
 
 /* ---------- Night Phase / Murder Selection ----------

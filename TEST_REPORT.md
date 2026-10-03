@@ -314,15 +314,68 @@ Murder, Vote/Final Banishment).
   seat's turn are indistinguishable in both duration (fixed
   `COMPUTER_TURN_DELAY_MS` either way) and on-screen content (name only).
 
+## 10. Instruction clarity: explicit Night/Murder copy and an Open Discussion step (follow-up round)
+
+Two reported points of confusion, both about whether the game was telling
+players clearly enough what to do: "Night Falls... will there be a murder or
+is it a quiet night" (the Night screen never actually said the word
+"Murder"), and no screen ever told the table to discuss/accuse/debate before
+a Banishment Vote — voting just started silently with whoever held the
+phone.
+
+- **Night screen**: now opens with "Tonight's Fate: Murder" plus the Murder
+  card's own description, before the usual "almost everyone has nothing to
+  do" explanation. By design (see "Fate is not revealed in advance" in
+  PROJECT_PLAN.md) this was never meant to be ambiguous — the Fate card is
+  only hidden *before* the Draw Phase, and reaching the Night screen already
+  meant Murder — so this is a copy fix, not a design change: it now says
+  outright what was previously only implied.
+- **New Discuss phase** (`PHASES.DISCUSS`, `UI.renderDiscuss`): a communal
+  screen inserted between the Draw Phase finishing and the Banishment Vote's
+  (or Final Banishment's) private voting queue beginning. Explicitly
+  instructs the table to put the phone down and deliberate out loud before
+  picking it back up to vote; final-banishment copy adds that it's the
+  decisive vote. `engine.js`'s `routeAfterDraw` now routes both the
+  `vote-only` Fate branch and the forced-Final-Banishment branch through
+  this screen instead of calling `beginVotePhase` immediately; a new
+  `begin-vote-queue` action in `main.js` calls it once the table taps
+  "Begin Voting".
+- **Engine-level simulation**: bundled `data.js`+`state.js`+`engine.js`,
+  500 randomized trials (3–8 players), driving `PHASES.DISCUSS` by calling
+  `beginVotePhase` itself (mirroring the new UI action) before continuing.
+  **485/500 visited Discuss at least once and reached a winner cleanly; the
+  other 15 (all 7–8 player games, 2 Deceivers) won via pure Murder
+  attrition without a Banishment ever being drawn** — confirmed by code
+  reading as pre-existing, correct behavior (Deceivers can never be
+  murdered, only banished, so reaching the Deceiver-outnumbers-Loyal win
+  condition purely through Murders with zero Banishment votes was already
+  possible before this change) rather than a regression.
+- **Headless Chromium UI verification**: 11 full playthroughs driven by
+  real clicks — five 3-player games (3 players hits the Final Banishment
+  threshold in round 1, so this reliably exercises the "final" Discuss
+  copy) and six 6-player mixed human/computer-roster games (exercising
+  normal Banishment, Murder, and Quiet Night branches). Every run was
+  asserted to reach Results with the Discuss screen's body text containing
+  an explicit discussion instruction and the Night screen's body text
+  containing the word "Murder" whenever either screen appeared. **11/11
+  reached Results, 0 violations, both Discuss variants (normal and Final
+  Banishment) and the explicit Night/Murder copy all confirmed present.**
+  (The run's console listener also caught 12 generic "Failed to load
+  resource: 404" messages — these are the already-documented local-only
+  `/Gameshed/nav.js` 404, one per page load/reload across the 11 runs; it
+  only resolves against the real production domain's sibling Gameshed
+  repo, and does not affect gameplay.)
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
 |---|---|---|---|
-| Engine (Node) | 2650 | 0 | — |
+| Engine (Node) | 3150 | 0 | — |
 | Full playthrough w/ screenshots | 5 rounds (all 12 screens; murder-phase redesign; series/payout; auto-shield & gather-everyone; sound) | 1 (card text clipping) | 1 |
 | Automated UI stress test | 98+ | 1 confirmed (test-script scoping, fixed) + several one-off timeouts (same signature across all occurrences), never reproduced with a stable rate or dedicated diagnostics | 1 confirmed fixed; flakiness documented, not app bugs |
 | Sound (instrumented WebAudio) | 1 full playthrough, 109 node creations | 1 (Continue-game didn't sync sound state) | 1 |
 | Computer players (engine sim + headless UI) | 500 engine trials + 3 UI scenarios ×4 runs | 0 | — |
+| Instruction clarity (engine sim + headless UI) | 500 engine trials + 11 full UI playthroughs | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
@@ -335,7 +388,10 @@ spoiled before it happens, the Prize Pot is paid out to the winning side's
 survivors every game, Shields deploy automatically, a Banishment can never
 open a fresh Fate-deck shuffle, every event ends with an explicit
 gather-everyone checkpoint before its outcome is revealed, a full
-synthesized sound design covers every meaningful moment in the game, and any
+synthesized sound design covers every meaningful moment in the game, any
 seat can be marked Computer — down to an all-computer roster — without ever
 exposing the secret Deceiver through a computer seat's turn timing or
-on-screen content.
+on-screen content, the Night screen says outright that tonight's Fate is
+Murder instead of leaving it ambiguous, and every Banishment Vote opens with
+an explicit instruction for the table to discuss out loud before voting
+starts.

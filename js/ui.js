@@ -278,14 +278,30 @@ UI.renderHand = function renderHand(state) {
 
 /* ---------- 7. Night ---------- */
 
-UI.renderNight = function renderNight() {
+UI.renderNight = function renderNight(state) {
+  const def = cardDefById(state.currentFateCard);
   screen('night').innerHTML = `
     <div class="reveal-stage fade-in">
-      ${iconUse(ICONS.candle, 'icon icon-lg flicker')}
-      <div class="pass-overlay-eyebrow">Night Falls</div>
-      <h2 class="reveal-headline">The phone will now pass to every player</h2>
-      <p class="reveal-body">One at a time, in turn. Almost everyone will see an empty screen with nothing to do — that's normal, so it never gives anything away. Stay silent and don't react either way.</p>
-      <button class="btn btn-danger btn-block" data-action="proceed-to-murder">Begin</button>
+      ${iconUse(ICONS.skull, 'icon icon-lg flicker')}
+      <div class="pass-overlay-eyebrow">Tonight's Fate</div>
+      <h2 class="reveal-headline">Murder</h2>
+      <p class="reveal-body">${def.description} The phone will now pass to every living player, one at a time. Almost everyone will see an empty screen with nothing to do — that's normal and expected, not a glitch; it's what keeps the Deceiver hidden. Stay silent and don't react either way, whether you had a task or not.</p>
+      <button class="btn btn-danger btn-block" data-action="proceed-to-murder">Begin The Night</button>
+    </div>`;
+};
+
+/* ---------- Open Discussion (before every Banishment Vote) ---------- */
+
+UI.renderDiscuss = function renderDiscuss(state) {
+  const isFinal = state.finalBanishmentActive;
+  screen('discuss').innerHTML = `
+    <div class="reveal-stage fade-in">
+      ${iconUse(ICONS.vote, 'icon icon-lg')}
+      <div class="pass-overlay-eyebrow">Tonight's Fate</div>
+      <h2 class="reveal-headline">${isFinal ? 'The Final Banishment' : 'Banishment Vote'}</h2>
+      <p class="reveal-body">Put the phone down in the middle of the table. This is the part where you all talk — accuse, defend, point fingers, ask questions, out loud, as a group. Nothing on this screen is private.${isFinal ? ' This is the last vote; whoever it names decides the game.' : ''}</p>
+      <p class="reveal-body">When the table is ready to vote, pick the phone back up and tap below. From there, voting is private and happens one person at a time.</p>
+      <button class="btn ${isFinal ? 'btn-danger' : 'btn-primary'} btn-block" data-action="begin-vote-queue">Begin Voting</button>
     </div>`;
 };
 
