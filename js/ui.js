@@ -582,6 +582,12 @@ UI.settingsContent = function settingsContent(state) {
         <span>Sound effects</span>
       </label>
     </div>
+    <div class="rule-row">
+      <label style="display:flex;align-items:center;gap:10px;width:100%;">
+        <input type="checkbox" id="musicToggle" ${state.settings.music ? 'checked' : ''}>
+        <span>Background music during discussion</span>
+      </label>
+    </div>
     <button class="btn btn-danger btn-block" data-action="reset-game" style="margin-top:14px;">Reset Game</button>`;
 };
 

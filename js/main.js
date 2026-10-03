@@ -22,6 +22,7 @@ const uiStage = {
 };
 
 Sound.setEnabled(state.settings.sound);
+Sound.setMusicEnabled(state.settings.music);
 
 let setupNames = Array(CONFIG.minPlayers).fill('');
 let setupIsComputer = Array(CONFIG.minPlayers).fill(false);
@@ -73,7 +74,7 @@ function resolveComputerTurn() {
         uiStage.eliminationRevealed = false;
         if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-        else if (state.phase === PHASES.DISCUSS) Sound.play('gather');
+        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
       }
       break;
     }
@@ -180,6 +181,7 @@ const actions = {
   'new-game': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    Sound.stopMusic();
     state = createInitialState();
     setupNames = Array(CONFIG.minPlayers).fill('');
     setupIsComputer = Array(CONFIG.minPlayers).fill(false);
@@ -190,11 +192,14 @@ const actions = {
   'continue-game': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    Sound.stopMusic();
     const saved = loadState();
     if (saved) {
       state = saved;
       Sound.setEnabled(state.settings.sound);
+      Sound.setMusicEnabled(state.settings.music);
       document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
+      if (state.phase === PHASES.DISCUSS) Sound.startMusic();
     }
     render();
   },
@@ -286,7 +291,7 @@ const actions = {
       uiStage.eliminationRevealed = false;
       if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-      else if (state.phase === PHASES.DISCUSS) Sound.play('gather');
+      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
     }
     persist();
     render();
@@ -301,6 +306,7 @@ const actions = {
   },
   'begin-vote-queue': () => {
     Sound.play('tap');
+    Sound.stopMusic();
     beginVotePhase(state, state.finalBanishmentActive);
     uiStage.voteTapped = false;
     uiStage.voteSelected = null;
@@ -398,6 +404,7 @@ const actions = {
   'play-again': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    Sound.stopMusic();
     clearState();
     state = createInitialState();
     render();
@@ -407,6 +414,7 @@ const actions = {
     UI.hideModal();
     if (!window.confirm('Reset the current game? This cannot be undone.')) return;
     cancelComputerTurnTimer();
+    Sound.stopMusic();
     clearState();
     state = createInitialState();
     render();
@@ -445,6 +453,15 @@ document.getElementById('menuBtn').addEventListener('click', () => {
       state.settings.sound = e.target.checked;
       Sound.setEnabled(state.settings.sound);
       if (state.settings.sound) Sound.play('tap');
+      persist();
+    });
+  }
+  const musicToggle = document.getElementById('musicToggle');
+  if (musicToggle) {
+    musicToggle.addEventListener('change', (e) => {
+      state.settings.music = e.target.checked;
+      Sound.setMusicEnabled(state.settings.music);
+      if (state.settings.music && state.phase === PHASES.DISCUSS) Sound.startMusic();
       persist();
     });
   }

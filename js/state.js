@@ -53,7 +53,7 @@ function createInitialState() {
     seriesScores: {},
     rosterNames: [],
     rosterIsComputer: [],
-    settings: { sound: false },
+    settings: { sound: false, music: false },
   };
 }
 

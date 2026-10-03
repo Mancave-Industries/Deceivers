@@ -366,6 +366,42 @@ phone.
   only resolves against the real production domain's sibling Gameshed
   repo, and does not affect gameplay.)
 
+## 11. Opt-in background music during Open Discussion (follow-up round)
+
+Added a second, independent Settings checkbox ("Background music during
+discussion"), off by default, alongside the existing sound-effects toggle.
+When on, `Sound.startMusic()` fades in a quiet three-oscillator drone (plus
+a slow filter LFO) the moment the Open Discussion screen appears, and
+`Sound.stopMusic()` fades it back out the moment "Begin Voting" is tapped —
+the only screen in the game this applies to, since it's the one place the
+phone sits untouched for an open stretch while the table talks instead of
+something a player is reading or deciding on.
+
+- **Unit-style checks** (`AudioContext.createOscillator` wrapped to record
+  each instance's start()/stop() calls, run directly against the `Sound`
+  module's public API, independent of game RNG): disabled →
+  `Sound.startMusic()` creates 0 oscillators (confirmed no-op); enabled →
+  exactly 4 (the 3-note drone + 1 LFO), all started immediately, none
+  stopped yet; calling `startMusic()` again while already playing is a
+  no-op (no duplicate voices — confirmed by oscillator count staying flat);
+  `Sound.stopMusic()` schedules a `.stop()` on all 4. **All passed.**
+- **Live integration** through the real Settings checkbox: started a
+  3-player game (hits Final Banishment, and so Open Discussion, in round 1
+  — fast and deterministic), confirmed the checkbox exists and is
+  unchecked by default, reached Discuss with 0 active oscillators, turned
+  the checkbox on from inside the live Discuss screen and confirmed exactly
+  4 became active, tapped "Begin Voting" and waited past the 1.4s fade-out
+  — confirmed all 4 had stopped. Game continued to Results with 0 console
+  errors. **All passed.**
+- An earlier draft of this test tried to infer music's oscillator
+  contribution by diffing raw oscillator counts between two independently
+  randomized full playthroughs (music on vs. off); discarded once it became
+  clear that varies run to run anyway, since which Fortune cards get
+  randomly drawn changes how many sound-effect oscillators fire before
+  Discuss is ever reached — not a real signal. The unit-style check above
+  (calling the music API directly and counting only what it itself
+  creates) replaced it as the reliable method.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -376,6 +412,7 @@ phone.
 | Sound (instrumented WebAudio) | 1 full playthrough, 109 node creations | 1 (Continue-game didn't sync sound state) | 1 |
 | Computer players (engine sim + headless UI) | 500 engine trials + 3 UI scenarios ×4 runs | 0 | — |
 | Instruction clarity (engine sim + headless UI) | 500 engine trials + 11 full UI playthroughs | 0 | — |
+| Background music (unit + live integration) | Sound-module unit checks + 1 full UI playthrough | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
@@ -392,6 +429,7 @@ synthesized sound design covers every meaningful moment in the game, any
 seat can be marked Computer — down to an all-computer roster — without ever
 exposing the secret Deceiver through a computer seat's turn timing or
 on-screen content, the Night screen says outright that tonight's Fate is
-Murder instead of leaving it ambiguous, and every Banishment Vote opens with
-an explicit instruction for the table to discuss out loud before voting
-starts.
+Murder instead of leaving it ambiguous, every Banishment Vote opens with an
+explicit instruction for the table to discuss out loud before voting
+starts, and that Open Discussion screen now has an opt-in ambient music bed
+that fades in and out cleanly and never plays anywhere else.

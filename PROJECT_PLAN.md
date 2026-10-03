@@ -234,10 +234,12 @@ or via Settings → "Reset Game".
 `js/sound.js` is a self-contained WebAudio synthesis module (no audio
 files — everything is generated from oscillators, noise buffers, and
 filters at runtime, consistent with "no paid libraries / no external
-assets"). It exposes only `Sound.setEnabled(bool)` and `Sound.play(name,
-delay?)`; nothing else in the codebase touches `AudioContext` directly.
-Muted by default (shared-device etiquette), toggled from the header speaker
-icon or Settings.
+assets"). It exposes `Sound.setEnabled(bool)` and `Sound.play(name,
+delay?)` for one-shot effects, plus `Sound.setMusicEnabled(bool)`,
+`Sound.startMusic()` and `Sound.stopMusic()` for the looping ambient bed
+described below; nothing else in the codebase touches `AudioContext`
+directly. Sound effects are muted by default (shared-device etiquette),
+toggled from the header speaker icon or Settings.
 
 Roughly 16 named cues cover every meaningful moment: a mysterious rising
 interval for a private role reveal (and its mirror-image fall for hiding it
@@ -256,6 +258,17 @@ as surely as a different-looking screen would. `tap-murder-turn` and
 who's actually acting that turn — the distinctive "something happened"
 sounds are deferred until the Elimination Reveal, once everyone is already
 gathered and audibility is no longer a leak.
+
+**Background music (opt-in, Open Discussion only)**: a separate Settings
+checkbox, off by default, independent of the sound-effects toggle. When on,
+a quiet low drone (three detuned oscillators forming an open fifth plus
+octave, under a slow filter-cutoff LFO so it isn't static) fades in the
+moment the Open Discussion screen appears and fades out the moment "Begin
+Voting" is tapped — the only screen in the game where the phone sits
+untouched in the middle of the table for an open-ended stretch while people
+talk, rather than something a player is actively reading or deciding on.
+Every other screen stays effects-only; a continuous bed anywhere else would
+compete with the thing on screen instead of setting a mood for it.
 
 ## 8. Computer players
 

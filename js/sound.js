@@ -3,7 +3,8 @@
    A synthesized (WebAudio, no audio files) sound design matching the dark
    ceremonial theme: bell tolls, low drones, bright coin chimes, dark/bright
    resolving chords for the two endings. Entirely self-contained — main.js
-   only ever calls Sound.setEnabled(bool) and Sound.play(name).
+   only ever calls Sound.setEnabled(bool), Sound.play(name),
+   Sound.setMusicEnabled(bool), Sound.startMusic() and Sound.stopMusic().
 
    Anonymity note: during the Murder phase's per-player turn queue, the
    *same* device that's passed hand to hand plays these sounds out loud for
@@ -13,10 +14,19 @@
    Deceiver, exactly mirroring the on-screen decoy. The distinctive
    "something happened" sounds only ever play once everyone is already
    gathered around for the reveal, where audibility is no longer a leak.
+
+   Background music is a separate opt-in (off by default, its own Settings
+   toggle) from the one-shot sound effects above: a quiet ambient drone
+   loop, only ever played during the Open Discussion screen, where the
+   phone sits untouched in the middle of the table while the group talks —
+   the one moment in the game an ongoing music bed makes sense instead of
+   competing with something the player is actively reading or deciding.
    ========================================================================== */
 
 const Sound = (() => {
   let enabled = false;
+  let musicEnabled = false;
+  let musicState = null;
   let ctx = null;
 
   function getCtx() {
@@ -27,6 +37,77 @@ const Sound = (() => {
 
   function setEnabled(value) {
     enabled = !!value;
+  }
+
+  function setMusicEnabled(value) {
+    musicEnabled = !!value;
+    if (!musicEnabled) stopMusic();
+  }
+
+  /* ---------- Ambient discussion music ---------- */
+
+  function startMusic() {
+    if (!musicEnabled || musicState) return;
+    try {
+      const c = getCtx();
+      const t0 = c.currentTime;
+
+      const master = c.createGain();
+      master.gain.setValueAtTime(0.0001, t0);
+      master.gain.exponentialRampToValueAtTime(0.05, t0 + 3);
+      master.connect(c.destination);
+
+      const filter = c.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 900;
+      filter.Q.value = 0.6;
+      filter.connect(master);
+
+      // A low, somber open fifth + octave drone — quiet enough to sit
+      // under table talk, not a melody to listen to.
+      const droneFreqs = [73.42, 110, 146.83];
+      const oscillators = droneFreqs.map((f, i) => {
+        const osc = c.createOscillator();
+        osc.type = i === 0 ? 'sine' : 'triangle';
+        osc.frequency.value = f;
+        const g = c.createGain();
+        g.gain.value = i === 0 ? 1 : 0.45;
+        osc.connect(g).connect(filter);
+        osc.start(t0);
+        return osc;
+      });
+
+      // Slowly sweeping filter cutoff so the drone breathes instead of
+      // sitting static.
+      const lfo = c.createOscillator();
+      lfo.type = 'sine';
+      lfo.frequency.value = 0.06;
+      const lfoGain = c.createGain();
+      lfoGain.gain.value = 260;
+      lfo.connect(lfoGain).connect(filter.frequency);
+      lfo.start(t0);
+
+      musicState = { master, nodes: [...oscillators, lfo] };
+    } catch (e) {
+      /* WebAudio unsupported or blocked — silently skip */
+      musicState = null;
+    }
+  }
+
+  function stopMusic() {
+    if (!musicState) return;
+    try {
+      const c = getCtx();
+      const t0 = c.currentTime;
+      const { master, nodes } = musicState;
+      master.gain.cancelScheduledValues(t0);
+      master.gain.setValueAtTime(master.gain.value, t0);
+      master.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.4);
+      nodes.forEach((n) => n.stop(t0 + 1.5));
+    } catch (e) {
+      /* ignore */
+    }
+    musicState = null;
   }
 
   /* ---------- Primitives ---------- */
@@ -184,5 +265,5 @@ const Sound = (() => {
     }
   }
 
-  return { setEnabled, play };
+  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic };
 })();
