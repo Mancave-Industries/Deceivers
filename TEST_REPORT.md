@@ -1227,6 +1227,34 @@ exhaust itself (e.g. only once per lone-Deceiver "streak," or deferred
 rather than skipped once the threshold is reached)? No code changed for
 this round pending that decision.
 
+## 29. A small accessibility pass: contrast audit + toast live region
+
+A quick, low-risk accessibility check, deliberately scoped to things
+checkable and fixable without a design decision — this is fundamentally a
+pass-the-phone party game built around a private screen being hidden from
+the table, so it's not aiming at full screen-reader support, but basic
+contrast and semantics cost nothing to get right.
+
+- **Contrast audit**: computed WCAG relative-luminance contrast ratios for
+  every primary text/background color pairing in `css/style.css` (`--ink`,
+  `--ink-dim`, and all three `--gold-*` tones against both `--charcoal-950`,
+  the main background, and `--charcoal-800`, the modal background). All six
+  pairings clear the AA threshold (4.5:1) comfortably — the tightest was
+  `--gold-500` on `--charcoal-950` at 8.26:1, and most clear AAA (7:1) with
+  room to spare (`--ink` at 16.81:1, `--gold-300` at 14.95:1). No changes
+  needed; recorded for the record.
+- **Existing semantics confirmed already in place**: all four icon-only
+  header buttons (menu, sound toggle, help, modal close) already carry
+  `aria-label`s — nothing to add there.
+- **One gap, fixed**: the toast notification div (`#toast` — used for the
+  "+N gold to the Prize Pot" confirmation) had no `aria-live` region, so a
+  screen reader would never announce it. Added `role="status"
+  aria-live="polite"`. Verified live: triggered a toast directly via
+  `UI.showToast()`, confirmed both attributes present on the element and
+  the toast still displays and clears exactly as before. Re-ran the full
+  playthrough screenshot test afterward — 0 errors, same screen sequence
+  as always.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1256,6 +1284,8 @@ this round pending that decision.
 | How To Play rules update + overnight soak test (visual check + reload/resume probe + regression) | 1 modal screenshot at 2 scroll positions + 1 reload-mid-interstitial probe + 1 continue-after-reload probe + 1 10-trial computer-only regression re-run (7-8p, 3 natural Recruit-or-Die triggers) | 0 | — |
 | Overnight regression sweep: Recruit×Hidden combo, 3-4p full playthroughs, 3-game series, sound re-check, 320px viewport | 1 Recruit+Hidden determinism test + 4 full 3-4p computer-only playthroughs (both knowledge modes) + 1 full 3-game series + 18-cue sound re-check + 3-screen narrow-viewport overflow audit + full-file debug-statement sweep | 0 | — |
 | Recruit-or-Die / Final Circle boundary probe (deterministic, engineered collision) | 2 targeted tests: mid-Final-Circle 2→1 Deceiver drop (must not trigger Recruit) + same-round-boundary collision with a forced Refuse into round 3 | 0 bugs (1 design interaction found and documented, not changed — see write-up above) | — |
+| Recruited-Deceiver payout correctness (deterministic, engineered 100-gold pot) | 1 test: engineered 1 Deceiver + 1 Loyal, successful recruit, instant majority win, checked payout recipients and amounts directly | 0 | — |
+| Accessibility pass: contrast audit + toast live region | 6 WCAG contrast-ratio computations (all text/background pairings) + 1 live toast attribute + playthrough re-check | 1 gap (missing `aria-live` on toast, not a defect in shipped behavior) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
