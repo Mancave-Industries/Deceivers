@@ -233,17 +233,25 @@ body {
    numbers, avatar initials) stay plain solid gold — at that size the
    grain would just read as noise, not texture. -webkit-text-fill-color
    is required for Safari; `color` is kept as the graceful-degradation
-   fallback for any browser without background-clip: text support. */
+   fallback for any browser without background-clip: text support.
+   Grain is listed FIRST (the blend source) and the gold gradient SECOND
+   (the backdrop) — soft-light then reads as the gradient's own base
+   value, lightly perturbed by the grain, rather than the other way
+   round. Getting this backwards (gradient as source, grain as backdrop,
+   under the harsher `overlay` mode) was the exact bug that made this
+   round's panel/button backgrounds look like broken TV static instead of
+   worn gold — on thin letter strokes specifically it read as sparkly and
+   cheap rather than aged, which is what prompted this fix. */
 .screen-title-row,
 .reveal-headline,
 .winner-banner h2,
 .modal-title,
 .prize-pot-value {
   background-image:
-    linear-gradient(180deg, var(--gold-300), var(--gold-700)),
-    url('../assets/brand/grain.png');
-  background-size: auto, 36px 36px;
-  background-blend-mode: overlay;
+    url('../assets/brand/grain.png'),
+    linear-gradient(180deg, var(--gold-300), var(--gold-700));
+  background-size: 36px 36px, auto;
+  background-blend-mode: soft-light;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

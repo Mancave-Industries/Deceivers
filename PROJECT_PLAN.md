@@ -88,14 +88,20 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
 - **"Grainy gold" display text**: the larger headlines (`.screen-title-
   row`, `.reveal-headline`, `.winner-banner h2`, `.modal-title`,
   `.prize-pot-value`) fill with a gold gradient blended with the same
-  grain tile used on `.app-grain` (`background-blend-mode: overlay`),
-  then clip that combined image to the glyphs themselves
+  grain tile used on `.app-grain` (grain listed first/as the blend
+  source, the gradient second/as the backdrop, `background-blend-mode:
+  soft-light`), then clip that combined image to the glyphs themselves
   (`background-clip: text`, `-webkit-text-fill-color: transparent` for
   Safari) instead of sitting flat behind them — so the text itself reads
-  as worn/textured, not just flat gold. Left off smaller labels (round
-  counter, seat numbers, avatar initials) where the grain tile would just
-  read as noise at that size, and off player names (`.pass-overlay-name`)
-  since forcing a person's name into stamped caps looks odd.
+  as subtly worn/textured, not just flat gold. (A follow-up round fixed
+  this from its original `overlay`-blend, gradient-as-source version,
+  which read as sparkly/broken rather than aged on thin letter strokes —
+  the same backwards-layer-order bug diagnosed and fixed for panel/button
+  backgrounds elsewhere, just never applied here since this rule hadn't
+  been touched by that round.) Left off smaller labels (round counter,
+  seat numbers, avatar initials) where the grain tile would just read as
+  noise at that size, and off player names (`.pass-overlay-name`) since
+  forcing a person's name into stamped caps looks odd.
 - **"Crumbling relic stone" borders**: an SVG `feTurbulence` +
   `feDisplacementMap` filter (`#crumble`, defined inline in `index.html`,
   referenced via `filter: url(#crumble)`) gives the app-wide corner-

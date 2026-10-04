@@ -887,6 +887,36 @@ player count hitting two (which ends it automatically, no vote).
   `checkDeceiverMajorityWin` unchanged from its already-proven pre-Final-
   Circle behavior, so the risk surface is small.
 
+## 23. Fixed the grainy headline text: same backwards-layer-order bug as the backgrounds, just never applied here (follow-up round)
+
+"The distressed typeface is a bit crap / Can we clean it up but make it
+somehow less crisp than the original." The grainy-gold headline-text rule
+(§20) had never been touched by the round that found and fixed the
+backwards-layer-order blend bug on panel/button backgrounds (§21's
+predecessor, the reverted "distress everything" round) — it was using the
+same broken pattern (gradient as the blend source, full-contrast grain.png
+as the backdrop, `overlay`) that produces harsh black/white static on any
+dark-backed surface. On a thin letter stroke specifically this read as
+sparkly and cheap rather than aged — the "a bit crap" the user flagged —
+rather than the obvious panel-sized blotches that made the earlier bug easy
+to spot by eye.
+
+- Regenerated `grain.png` as bounded, low-amplitude noise again
+  (`random.gauss(128, 16)`, clipped — range came out 72–177 of 255; the
+  revert a few rounds back had put it back to the original unbounded
+  0–255 version).
+- Swapped the headline rule's layer order (grain first/source, gradient
+  second/backdrop) and its blend mode (`overlay` → `soft-light`) — the
+  exact fix already proven correct for backgrounds.
+- **Verification**: screenshotted all 5 headline selectors in context —
+  Title header, Setup's "Gather The Circle", the Reveal screen's role
+  name, the Results winner-banner, and the How-To-Play modal title — all
+  now show a subtle, even gold sheen instead of scattered black/white
+  speckle, while still reading as textured rather than flat. Ran the
+  3-player Final Circle regression and a full playthrough afterward: 0
+  console errors, confirming the CSS/asset-only change didn't touch
+  anything functional.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -909,6 +939,7 @@ player count hitting two (which ends it automatically, no vote).
 | Oswald + grainy text + crumbling borders (visual check + full playthrough) | 4 screenshots + 1 full UI playthrough + 1 direct font-URL check | 0 | — |
 | Larger fonts + per-queue hand-off cues + natural voice (visual check + instrumented sound test) | 5 screenshots + 1 overflow re-check + 8 instrumented playthroughs (1,280 cue calls) | 1 (a first-attempt edit briefly replaced the Quiet Night arrival cue with the urgent Gather bell for every Elimination arrival) | 1 (caught before shipping; reverted to keep `quietNight` distinct from `gather`) |
 | The Final Circle end game (3 targeted scripts + 6-trial regression) | 1 deterministic Banish-Again-to-2 playthrough + 1 deterministic unanimous-End-Game playthrough + 6 instrumented 5–8 player regression trials | 1 (winner-banner flavor text wrongly claimed "equal or outnumber" for a 1-of-4-survivors Deceiver win) | 1 (conditional alternate line added) |
+| Grainy headline text fix (visual check + playthrough) | 5 screenshots (all headline selectors) + 1 Final Circle regression + 1 full playthrough | 0 (fix for a bug from an earlier, already-reverted round) | 1 (same layer-order/blend fix already proven on backgrounds) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
