@@ -648,6 +648,43 @@ load-bearing like text rendering) or living with the current serif.
 Left as an open decision rather than made unilaterally — see the day's
 conversation for the question put to the user.
 
+## 19. Title art upgraded to the portrait full-bleed poster (follow-up round)
+
+The brand sent a second, portrait-format piece of key art (853×1844 — the
+same lockup, built specifically for a phone screen's aspect ratio) as a
+direct follow-up to §18's square medallion treatment. Superseded that
+square version with this one:
+
+- `assets/brand/deceivers-title-seal.jpg` (square, §18) removed; replaced
+  by `assets/brand/deceivers-title-poster.jpg` (520×1124, resized from the
+  original).
+- `UI.renderTitle` no longer renders a framed `<img>` at all — the poster
+  now runs as `#screen-title`'s own CSS `background-image`
+  (`background-size: contain`, not `cover`), so the whole piece shows with
+  zero cropping rather than being forced into a small boxed medallion.
+  Chose `contain` over `cover` specifically after a first pass with
+  `cover` cropped the bottom banner ("MCI · GAME SHED DIV") right where
+  the action buttons sit — `contain` letterboxes left/right instead
+  (filled by the app's own dark background + grain + watermark, inside
+  the existing gold corner-bracket frame) and keeps the entire image
+  intact. `.title-hero` changed from vertically-centered to
+  `justify-content: flex-end`, landing the buttons in the image's own
+  emptier lower third rather than over its text.
+  Accessibility: moved to `role="img"`/`aria-label` on the container
+  since a CSS background-image carries no text alternative on its own.
+- Updated the three docs that referenced the superseded square asset
+  (`PROJECT_PLAN.md`, `CODEPEN_EXPORT.md`) to point at the new one — the
+  CodePen export instructions also simplified, since all three brand
+  assets are now CSS `background-image`s with no HTML/JS-panel references
+  to keep in sync.
+- **Verification**: screenshotted the Title screen with both `cover`
+  (showed the cropping problem) and `contain` (confirmed clean, full
+  image, no text-behind-button overlap) before settling on `contain`;
+  confirmed Setup and other screens are unaffected (the background is
+  scoped to `#screen-title` only); re-ran the syntax check on `ui.js` and
+  a full headless playthrough — 0 console errors, game still reaches
+  Results.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -666,6 +703,7 @@ conversation for the question put to the user.
 | Edge safe zones (automated bounding-box audit) | 10 screens/modals at default content + 1 worst-case 8-player stress test | 1 (Setup-screen overflow pushing its button into the bottom buffer at rest) | 1 |
 | Watermark artwork + opacity update (visual check) | 3 screenshots | 0 | — |
 | Title key art + app-wide grain (visual check + full playthrough) | 2 screenshots + 1 full UI playthrough | 0 | — |
+| Title art upgraded to portrait poster (visual check + full playthrough) | 2 sizing variants screenshotted + 1 full UI playthrough | 1 (cover-mode cropping overlapped button with banner text) | 1 (switched to contain) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

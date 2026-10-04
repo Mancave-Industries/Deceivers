@@ -56,9 +56,9 @@ assets/
                  murder, banishment, final-banishment, deceivers-choice
   ui/           button-primary, button-danger, button-confirm, modal-panel,
                  player-row, prize-pot-panel, hand-panel
-  brand/        deceivers-title-seal.jpg, mancave-gameshed-badge.jpg, grain.png
-                 — raster key art and texture, not vector; see "Visual
-                 Design System" below for why these three are raster
+  brand/        deceivers-title-poster.jpg, mancave-gameshed-badge.jpg,
+                 grain.png — raster key art and texture, not vector; see
+                 "Visual Design System" below for why these three are raster
 PROJECT_PLAN.md
 TEST_REPORT.md
 CODEPEN_EXPORT.md
@@ -77,15 +77,16 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   body text/buttons for legibility at small sizes.
 - **Texture**: mostly CSS — radial vignettes, hairline gold borders, soft
   inner shadows — plus three small raster assets (`assets/brand/`) where
-  CSS alone couldn't do the job: `deceivers-title-seal.jpg` (the real
-  brand key art, used whole as the Title screen's hero image — a
-  hand-distressed stamped-medallion look isn't something gradients and
-  box-shadows can fake convincingly), `mancave-gameshed-badge.jpg` (the
-  app-wide watermark, §below), and a tiny 64×64 `grain.png` tile
-  (`.app-grain`, `overlay` blend at 10% opacity) laid over the whole app
-  for a faint, always-on film-grain pass — pushing the general feel
-  toward that key art's distressed/stamped-metal look without needing a
-  texture behind every individual component.
+  CSS alone couldn't do the job: `deceivers-title-poster.jpg` (the real
+  brand key art — portrait, built for a phone screen — runs full-bleed as
+  `#screen-title`'s own `background-image`, `contain`-sized so none of it
+  is cropped; a hand-distressed stamped-medallion look isn't something
+  gradients and box-shadows can fake convincingly), `mancave-gameshed-
+  badge.jpg` (the app-wide watermark, §below), and a tiny 64×64
+  `grain.png` tile (`.app-grain`, `overlay` blend at 10% opacity) laid
+  over the whole app for a faint, always-on film-grain pass — pushing the
+  general feel toward that key art's distressed/stamped-metal look
+  without needing a texture behind every individual component.
 - **Motion**: restrained — fades, gentle scale-ins, a candle flicker
   keyframe, card flip on reveal. No bouncy/gamey easing.
 - **Icons/cards**: all inline SVG, single/double color (gold line art on

@@ -89,8 +89,7 @@ UI.updateHeader = function updateHeader(state) {
 
 UI.renderTitle = function renderTitle(hasSaved) {
   screen('title').innerHTML = `
-    <div class="title-hero fade-in">
-      <img class="title-seal" src="assets/brand/deceivers-title-seal.jpg" alt="The Deceivers — Ceremony Of Trust And Betrayal. A Mancave Industries / Game Shed production.">
+    <div class="title-hero fade-in" role="img" aria-label="The Deceivers — Ceremony Of Trust And Betrayal. A Mancave Industries / Game Shed production.">
       <div class="title-actions">
         ${hasSaved ? '<button class="btn btn-primary btn-block" data-action="continue-game">Continue Game</button>' : ''}
         <button class="btn ${hasSaved ? 'btn-ghost' : 'btn-primary'} btn-block" data-action="new-game">New Game</button>

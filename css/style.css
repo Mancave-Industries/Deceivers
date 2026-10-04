@@ -332,21 +332,26 @@ body {
 }
 
 /* ---------- Title screen ---------- */
+/* The title key art is tall/portrait (built for a phone screen), so it
+   runs full-bleed as #screen-title's own background rather than sitting
+   in a small framed box — background-origin/-clip default to padding-box/
+   border-box, so it already shows straight through .screen's own padding
+   with no extra markup. The lockup (title, tagline, brand) lives in the
+   image's upper two-thirds; the buttons sit in its emptier lower third. */
+#screen-title {
+  background-image: url('../assets/brand/deceivers-title-poster.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .title-hero {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 34px;
+  justify-content: flex-end;
+  padding-bottom: 28px;
   text-align: center;
-}
-.title-seal {
-  width: 290px;
-  max-width: 78vw;
-  height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-deep), 0 0 0 1px rgba(201,162,75,0.5);
 }
 .title-actions {
   display: flex;

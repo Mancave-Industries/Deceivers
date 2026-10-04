@@ -37,22 +37,20 @@ Unlike the icons/cards, three small images are **not** inline SVG and need
 to be uploaded to CodePen's Asset panel before the HTML/CSS panels will
 render correctly:
 
-- `assets/brand/deceivers-title-seal.jpg` (Title screen hero art)
+- `assets/brand/deceivers-title-poster.jpg` (Title screen hero art)
 - `assets/brand/mancave-gameshed-badge.jpg` (app-wide watermark)
 - `assets/brand/grain.png` (film-grain texture tile)
 
 Upload all three via CodePen's Asset panel (Pen Settings → Assets, or drag
 them into the editor), then copy each one's CodePen-hosted URL and replace
-the corresponding `assets/brand/...` reference with it — two in `css/
-style.css` (`url('../assets/brand/mancave-gameshed-badge.jpg')` and
-`url('../assets/brand/grain.png')`) and one in the HTML panel (the Title
-screen's `<img src="assets/brand/deceivers-title-seal.jpg">`, rendered by
-`UI.renderTitle` in `js/ui.js` — if you'd rather not hand-edit rendered
-output, change the `src` in that function instead and re-paste the JS
-panel). Without this step the Title screen, watermark, and grain texture
-will silently fail to load (broken image / missing background) while
-everything else keeps working, since none of those three are required for
-gameplay.
+all three `assets/brand/...` references with them in `css/style.css`
+(`url('../assets/brand/deceivers-title-poster.jpg')` on `#screen-title`,
+`url('../assets/brand/mancave-gameshed-badge.jpg')` on `.app::before`, and
+`url('../assets/brand/grain.png')` on `.app-grain`). All three are CSS
+`background-image`s now — nothing in the HTML or JS panels references
+them directly. Without this step the Title screen, watermark, and grain
+texture will silently fail to load (missing background) while everything
+else keeps working, since none of those three are required for gameplay.
 
 ## CSS panel
 
@@ -88,9 +86,9 @@ in current browsers.
 
 After pasting all three panels:
 
-1. The Title screen should render immediately with the title seal image
-   and "NEW GAME" / "HOW TO PLAY" buttons. If the seal is a broken-image
-   icon instead, the asset-URL swap above wasn't done.
+1. The Title screen should render immediately with the full-bleed poster
+   art behind "NEW GAME" / "HOW TO PLAY" buttons. If that background is
+   blank/missing, the asset-URL swap above wasn't done.
 2. Open the browser console — there should be no errors (a 404 for
    `/favicon.ico` from CodePen's own preview frame is normal and unrelated).
 3. Play through Setup → Reveal → a full round to confirm the SVG sprite
