@@ -52,13 +52,31 @@ them directly. Without this step the Title screen, watermark, and grain
 texture will silently fail to load (missing background) while everything
 else keeps working, since none of those three are required for gameplay.
 
+## Font (new — add this in CodePen's settings, not a panel)
+
+`index.html`'s `<head>` loads Oswald from Google Fonts via `<link>` tags —
+CodePen's HTML panel doesn't paste a `<head>`, so add the font a different
+way: Pen Settings → HTML → "Stuff for `<head>`", paste:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap">
+```
+
+(CodePen's Settings → Fonts picker works too, if you'd rather search for
+Oswald there instead of pasting the link tags.) Skipping this step isn't
+fatal — `--font-display` falls back to `'Arial Narrow', 'Helvetica Neue',
+sans-serif` — but headings won't match the key art's condensed look.
+
 ## CSS panel
 
 Paste the entire contents of `css/style.css` as-is, after swapping in the
-two CodePen asset URLs described above. It has no imports and no external
-fonts — every icon/card asset it needs is the inline SVG sprite already
-sitting in the HTML panel; only the two `url(...)` references above point
-outside it.
+three CodePen asset URLs described above. It has no imports of its own —
+every icon/card asset it needs is the inline SVG sprite already sitting in
+the HTML panel; only the three `url(...)` background-image references and
+the `var(--font-display)` font (added via Pen Settings, above) point
+outside the panel.
 
 ## JS panel
 

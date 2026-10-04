@@ -637,16 +637,11 @@ brand's real front-page key art (a distressed stamped-medallion lockup of
   (catches both a broken image path and any syntax error from the symbol
   removal).
 
-**Scope note, not yet done**: the key art's bold, heavily distressed
-display typeface ("THE DECEIVERS" lettering) isn't something the current
-system-font stack (Georgia/Times New Roman — chosen specifically to avoid
-any webfont network dependency) can replicate; matching it everywhere
-headings appear would mean either loading a free webfont (a new network
-dependency, the same category of tradeoff as the analytics ping and
-Spotify link, but one that hadn't been crossed yet for anything
-load-bearing like text rendering) or living with the current serif.
-Left as an open decision rather than made unilaterally — see the day's
-conversation for the question put to the user.
+**Scope note from this round, resolved in §20**: the key art's bold
+display typeface wasn't something the system-font stack could replicate;
+whether to cross the "first webfont" line was left as an open question
+for the user rather than decided unilaterally. Answered the same day —
+see §20.
 
 ## 19. Title art upgraded to the portrait full-bleed poster (follow-up round)
 
@@ -685,6 +680,61 @@ square version with this one:
   a full headless playthrough — 0 console errors, game still reaches
   Results.
 
+## 20. Oswald display font, grainy text, and crumbling-stone borders (follow-up round)
+
+Direct follow-up to §18-19's key-art work: "try Oswald but it must be
+grainy," plus "justify all borders and fonts where possible — crumbling
+relic stone vibe." Three changes:
+
+- **Oswald**: loaded via Google Fonts `<link>` in `index.html`'s `<head>`
+  (`font-display:swap`, `preconnect` hints) — the app's first text-
+  rendering network dependency, a decision explicitly left to the user in
+  §18 and confirmed this round. `--font-display` changed from the Georgia
+  serif stack to `'Oswald', 'Arial Narrow', 'Helvetica Neue', sans-serif`.
+  Added `text-transform: uppercase` to the four pure-headline selectors
+  (`.screen-title-row`, `.reveal-headline`, `.winner-banner h2`,
+  `.modal-title`) to lean into Oswald's condensed-caps strength, matching
+  the key art's all-caps lockup — left `.pass-overlay-name` (a player's
+  own name) and `.prize-pot-value` (a number) alone, where forcing caps
+  would look odd or do nothing.
+- **Grainy text**: the five largest headline selectors now fill with a
+  gold gradient blended (`background-blend-mode: overlay`) with the same
+  `grain.png` tile used on `.app-grain`, then `background-clip: text`
+  clips that combined image to the glyphs themselves (`-webkit-text-
+  fill-color: transparent` for Safari) — so the text itself carries
+  visible speckle/mottling instead of being flat gold with grain merely
+  sitting somewhere behind it. Left off small labels (round counter, seat
+  numbers, avatar initials), where a 36px grain tile would just read as
+  noise at that size, not texture.
+- **Crumbling relic stone**: added an SVG `feTurbulence` +
+  `feDisplacementMap` filter (`#crumble`, `index.html`), applied via
+  `filter: url(#crumble)` to the app-wide corner-bracket frame
+  (`.app::after`) only — every screen's corners now show genuinely
+  eroded, irregular edges instead of clean geometric brackets. Scoped
+  deliberately to that one decorative, text-free, non-interactive
+  element: a displacement filter on anything with live text would warp
+  the text along with the border, and applying it to buttons would cut
+  against the tap-target clarity work from the edge-safe-zone round.
+  Separately, redefined `--radius-lg`/`-md`/`-sm` from single uniform
+  values to four slightly different corner values each, so every panel,
+  row, card, and input across the whole app picked up a subtle hand-
+  carved asymmetry with zero per-selector changes. `--radius-pill`
+  (buttons) was deliberately left alone — that shape is load-bearing tap
+  affordance, not decoration, and distressing it risked undermining the
+  "idiot-proof" clarity work from earlier rounds.
+- **Verification**: syntax-checked `ui.js` (unchanged by this round, but
+  confirmed clean); screenshotted Title, Setup, Reveal (role-card
+  headline), and Results (winner banner) — grain visibly present in all
+  five targeted headline types, corner brackets visibly irregular on
+  every screen, asymmetric corners present throughout. Ran a full headless
+  playthrough to Results: 0 real console errors (two `ERR_CERT_AUTHORITY_
+  INVALID` entries for the Google Fonts request are a property of this
+  sandbox's TLS interception, not the app — confirmed the font URL itself
+  returns a valid `200 text/css` response via a direct `curl` outside the
+  browser sandbox, so Oswald will load normally for real users in real
+  browsers; the fallback font rendered correctly in these screenshots
+  either way, confirming the no-webfont degradation path also works).
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -704,6 +754,7 @@ square version with this one:
 | Watermark artwork + opacity update (visual check) | 3 screenshots | 0 | — |
 | Title key art + app-wide grain (visual check + full playthrough) | 2 screenshots + 1 full UI playthrough | 0 | — |
 | Title art upgraded to portrait poster (visual check + full playthrough) | 2 sizing variants screenshotted + 1 full UI playthrough | 1 (cover-mode cropping overlapped button with banner text) | 1 (switched to contain) |
+| Oswald + grainy text + crumbling borders (visual check + full playthrough) | 4 screenshots + 1 full UI playthrough + 1 direct font-URL check | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

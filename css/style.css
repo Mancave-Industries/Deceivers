@@ -30,9 +30,13 @@
   --ink: #f3ecd9;
   --ink-dim: #c9c0ac;
 
-  --radius-lg: 20px;
-  --radius-md: 14px;
-  --radius-sm: 9px;
+  /* Slightly asymmetric corners (not a uniform radius on any of these
+     three) for a hand-worn, not machine-perfect, feel — part of the
+     "crumbling relic stone" pass. --radius-pill stays a true pill: that
+     one's load-bearing tap-target shape, not decoration. */
+  --radius-lg: 18px 22px 19px 23px;
+  --radius-md: 12px 16px 13px 15px;
+  --radius-sm: 7px 11px 8px 10px;
   --radius-pill: 999px;
 
   --shadow-deep: 0 18px 40px rgba(0,0,0,0.55);
@@ -42,7 +46,7 @@
   --dur-med: 320ms;
   --dur-slow: 620ms;
 
-  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-display: 'Oswald', 'Arial Narrow', 'Helvetica Neue', sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   /* Mobile browser chrome (address bars, bottom toolbars, in-app-browser
@@ -157,6 +161,7 @@ body {
     linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 20px 1.5px no-repeat,
     linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 1.5px 20px no-repeat;
   opacity: 0.4;
+  filter: url(#crumble);
 }
 
 /* A faint, always-on film-grain pass over the whole app — pushes the
@@ -221,6 +226,29 @@ body {
   line-height: 1.1;
   overflow: hidden;
 }
+/* "Grainy gold" display text — a gold gradient blended with the same
+   grain tile used on .app-grain, then clipped to the glyphs themselves
+   (background-clip: text) instead of sitting flat behind them. Reserved
+   for the larger ceremonial headlines; small labels (round counter, seat
+   numbers, avatar initials) stay plain solid gold — at that size the
+   grain would just read as noise, not texture. -webkit-text-fill-color
+   is required for Safari; `color` is kept as the graceful-degradation
+   fallback for any browser without background-clip: text support. */
+.screen-title-row,
+.reveal-headline,
+.winner-banner h2,
+.modal-title,
+.prize-pot-value {
+  background-image:
+    linear-gradient(180deg, var(--gold-300), var(--gold-700)),
+    url('../assets/brand/grain.png');
+  background-size: auto, 36px 36px;
+  background-blend-mode: overlay;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .round-label {
   font-family: var(--font-display);
   font-size: 13px;
@@ -262,6 +290,7 @@ body {
   font-family: var(--font-display);
   font-size: 20px;
   letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--gold-400);
   text-align: center;
   margin-bottom: 4px;
@@ -662,6 +691,7 @@ body {
 .reveal-headline {
   font-family: var(--font-display);
   font-size: 22px;
+  text-transform: uppercase;
   color: var(--gold-300);
   letter-spacing: 1px;
 }
@@ -679,6 +709,8 @@ body {
 .winner-banner h2 {
   font-family: var(--font-display);
   font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: var(--gold-300);
 }
 .role-reveal-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
@@ -732,6 +764,7 @@ body {
 .modal-title {
   font-family: var(--font-display);
   font-size: 18px;
+  text-transform: uppercase;
   color: var(--gold-400);
   letter-spacing: 1px;
   margin-bottom: 12px;

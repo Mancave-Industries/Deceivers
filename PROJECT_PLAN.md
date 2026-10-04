@@ -72,9 +72,41 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
 - **Palette**: charcoal black (`#0c0b0e`, `#161319`), antique gold
   (`#c9a24b`, `#e6c877`), dark crimson (`#5c1420`, `#7d1f2b`), midnight blue
   (`#141c30`, `#1f2a44`), aged parchment (`#e9dcc0`, `#d8c9a3`).
-- **Type**: system serif stack for ceremonial headings (Georgia/"Iowan Old
-  Style"/Times New Roman fallback — no paid webfonts), system sans for UI
-  body text/buttons for legibility at small sizes.
+- **Type**: `Oswald` (Google Fonts, weights 500/700) for ceremonial
+  headings/display text — the one network-dependent asset in the app,
+  loaded via `<link>` in `index.html`'s `<head>`; falls back to `'Arial
+  Narrow', 'Helvetica Neue', sans-serif` if it fails to load, so a blocked
+  font request degrades gracefully rather than breaking anything. System
+  sans (`--font-body`) stays for UI body text/buttons, unaffected.
+  Replaces the earlier Georgia/Times serif stack, which read as "elegant
+  parlor game" rather than the brand's stamped/industrial key art.
+- **"Grainy gold" display text**: the larger headlines (`.screen-title-
+  row`, `.reveal-headline`, `.winner-banner h2`, `.modal-title`,
+  `.prize-pot-value`) fill with a gold gradient blended with the same
+  grain tile used on `.app-grain` (`background-blend-mode: overlay`),
+  then clip that combined image to the glyphs themselves
+  (`background-clip: text`, `-webkit-text-fill-color: transparent` for
+  Safari) instead of sitting flat behind them — so the text itself reads
+  as worn/textured, not just flat gold. Left off smaller labels (round
+  counter, seat numbers, avatar initials) where the grain tile would just
+  read as noise at that size, and off player names (`.pass-overlay-name`)
+  since forcing a person's name into stamped caps looks odd.
+- **"Crumbling relic stone" borders**: an SVG `feTurbulence` +
+  `feDisplacementMap` filter (`#crumble`, defined inline in `index.html`,
+  referenced via `filter: url(#crumble)`) gives the app-wide corner-
+  bracket frame (`.app::after`) genuinely eroded, irregular edges instead
+  of clean geometric brackets. Deliberately scoped to that one decorative,
+  text-free element — applying a displacement filter to anything with
+  live text inside would warp/blur the text along with the border, and
+  applying it to interactive elements (buttons) would undermine the tap-
+  target clarity worked out earlier (see "Edge safe zones" and the
+  Setup-screen spacing fixes). Separately, `--radius-lg/-md/-sm` (every
+  panel, card, row, and input's corner radius) were redefined from a
+  single uniform value to four slightly different corner values each —
+  a hand-carved-not-machine-stamped feel applied everywhere at once by
+  changing three tokens, with zero per-selector work. `--radius-pill`
+  (buttons) stays a true pill on purpose — that shape is load-bearing tap
+  affordance, not decoration.
 - **Texture**: mostly CSS — radial vignettes, hairline gold borders, soft
   inner shadows — plus three small raster assets (`assets/brand/`) where
   CSS alone couldn't do the job: `deceivers-title-poster.jpg` (the real

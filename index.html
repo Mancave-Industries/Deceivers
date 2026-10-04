@@ -6,6 +6,13 @@
 <title>The Deceivers</title>
 <meta name="description" content="The Deceivers — a dark ceremonial social deduction card game. Pass-the-phone prototype.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='20' fill='%230c0b0e'/%3E%3Ccircle cx='24' cy='24' r='18' fill='none' stroke='%23c9a24b' stroke-width='2'/%3E%3Cpath d='M24 12 L28 24 L24 36 L20 24 Z' fill='%23e6c877'/%3E%3C/svg%3E">
+<!-- Oswald: the one network-dependent font this app loads, for the bold
+     condensed display headings the brand's key art called for. Everything
+     else (icons, cards, layout) stays fully self-contained; if this fails
+     to load, headings just fall back to the system sans stack below. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,6 +20,15 @@
 
   <svg class="sprite-defs" aria-hidden="true">
     <defs>
+  <!-- Eroded-edge filter for the "crumbling relic stone" look — displaces
+       an element's rendered edges along a fixed noise field. Kept to
+       decorative, text-free elements only (referenced via CSS
+       `filter: url(#crumble)`); applying it to anything with live text
+       would blur the text along with the border. -->
+  <filter id="crumble" x="-25%" y="-25%" width="150%" height="150%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="11" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
   <symbol id="icon-coin" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="24" cy="24" r="17"/>
       <circle cx="24" cy="24" r="11.5"/>
