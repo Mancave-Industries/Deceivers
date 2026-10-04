@@ -333,7 +333,6 @@ const actions = {
     render();
   },
   'continue-from-hand': () => {
-    Sound.play('tap');
     state.phase = PHASES.DRAW;
     uiStage.drawTapped = false;
     const done = finishDrawForCurrent(state);
@@ -344,6 +343,9 @@ const actions = {
       if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
       else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); }
+    } else {
+      // Still more players in the Draw queue — hand the phone on.
+      Sound.play('passDevice');
     }
     persist();
     render();
@@ -380,13 +382,15 @@ const actions = {
       if (!uiStage.murderTarget) return;
       recordMurderChoice(state, uiStage.murderTarget, uiStage.useChoice);
     }
-    // Same sound every turn regardless of role — see sound.js header note.
-    Sound.play('tap');
     uiStage.murderTapped = false;
     uiStage.murderTarget = null;
     uiStage.useChoice = false;
-    advanceMurderQueue(state);
+    const done = advanceMurderQueue(state);
     uiStage.eliminationRevealed = false;
+    // Same sound every turn regardless of role or whether the queue just
+    // finished — see sound.js header note; `gather` is exactly as
+    // role-blind as `passDevice` was, so the anonymity guarantee holds.
+    Sound.play(done ? 'gather' : 'passDevice');
     persist();
     render();
   },
@@ -405,7 +409,6 @@ const actions = {
     render();
   },
   'continue-elimination': () => {
-    Sound.play('tap');
     continueAfterElimination(state);
     uiStage.voteTapped = false;
     uiStage.voteSelected = null;
@@ -414,6 +417,12 @@ const actions = {
     if (state.phase === PHASES.RESULTS) {
       Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
       Analytics.gameFinished();
+    } else if (state.phase === PHASES.MAIN) {
+      // The game continues into a fresh round — its own distinct cue,
+      // not the previous round's closing sound bleeding into it.
+      Sound.play('roundBegin');
+    } else {
+      Sound.play('tap');
     }
     persist();
     render();
@@ -430,7 +439,6 @@ const actions = {
   },
   'confirm-vote': () => {
     if (!uiStage.voteSelected) return;
-    Sound.play('tap');
     const voter = currentQueuePlayer(state);
     const done = castVote(state, voter.id, uiStage.voteSelected, uiStage.useDagger);
     uiStage.voteTapped = false;
@@ -439,6 +447,11 @@ const actions = {
     if (done) {
       resolveBanishment(state);
       uiStage.eliminationRevealed = false;
+      // Every ballot's in — summon the table for the reveal.
+      Sound.play('gather');
+    } else {
+      // More voters still to go — hand the phone on to the next one.
+      Sound.play('passDevice');
     }
     persist();
     render();

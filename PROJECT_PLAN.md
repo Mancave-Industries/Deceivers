@@ -79,7 +79,12 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   font request degrades gracefully rather than breaking anything. System
   sans (`--font-body`) stays for UI body text/buttons, unaffected.
   Replaces the earlier Georgia/Times serif stack, which read as "elegant
-  parlor game" rather than the brand's stamped/industrial key art.
+  parlor game" rather than the brand's stamped/industrial key art. Every
+  `font-size` in `css/style.css` was later scaled up ~15% (e.g. 13.5px →
+  15.5px body text, 20px → 23px screen titles), rounded to the nearest
+  half-pixel — real-device testing on a phone found the original sizes hard
+  to read at arm's length around a table, which matters more for a
+  pass-the-phone party game than it would for a single-player app.
 - **"Grainy gold" display text**: the larger headlines (`.screen-title-
   row`, `.reveal-headline`, `.winner-banner h2`, `.modal-title`,
   `.prize-pot-value`) fill with a gold gradient blended with the same
@@ -304,14 +309,33 @@ described below; nothing else in the codebase touches `AudioContext`
 directly. Sound effects are muted by default (shared-device etiquette),
 toggled from the header speaker icon or Settings.
 
-Roughly 16 named cues cover every meaningful moment: a mysterious rising
-interval for a private role reveal (and its mirror-image fall for hiding it
-again), a light tick for drawing a card, a bright ascending coin arpeggio
-when Gold hits the pot, a low swelling drone for Night falling, a recurring
-ceremonial bell (`gather`) reused for "Seal the Roles," "Next Game," and the
-Elimination Reveal's "Gather Everyone" checkpoint, distinct outcome stings
+18 named cues cover every meaningful moment: a mysterious rising interval
+for a private role reveal (and its mirror-image fall for hiding it again), a
+light tick for drawing a card, a bright ascending coin arpeggio when Gold
+hits the pot, a low swelling drone for Night falling, a recurring ceremonial
+bell (`gather`) reused for "Seal the Roles," "Next Game," and — now every
+time, not just when its button is tapped — the moment the Elimination
+Reveal's "Gather Everyone" screen itself first appears (at the end of the
+Murder and Vote queues, as well as a Quiet Night), distinct outcome stings
 for a Quiet Night / a Shield block / a Murder / a tied vote / a Banishment,
-and a dark minor chord vs. a bright major chord for the two endings.
+a bright single rising tone (`roundBegin`) marking a new round's start
+distinctly from the previous round's closing sound, and a dark minor chord
+vs. a bright major chord for the two endings.
+
+**A hand-off cue for every queue, not just the murder-identity-safe one**:
+earlier rounds gave each per-player queue (Reveal, Draw, Murder, Vote) a
+*button*-press sound, but advancing to the *next* player's turn reused the
+same near-silent generic `tap` used for ordinary UI navigation — easy to
+miss as a deliberate cue. `passDevice` (a soft two-note "here, take it"
+chime, louder and more distinct than `tap`) now plays specifically at that
+hand-off moment in the Draw, Murder, and Vote queues, replacing `tap` there;
+`gather`'s ceremonial bell plays instead once a queue's *last* player
+finishes, since that's the moment to look up rather than pass the phone
+again. (Reveal's queue keeps its existing `reveal`/`hide` pair unchanged —
+opening and closing a role card is already its own distinct pair of sounds,
+so no separate hand-off cue was added there.) `passDevice` is exactly as
+identical-every-turn as the `tap` it replaces in the Murder queue, so the
+anonymity guarantee below is unaffected.
 
 **Anonymity constraint carried over from the visual design**: because the
 phone is a *physical, audible* object passed hand to hand, a sound that only
@@ -360,12 +384,22 @@ immediately. If music is playing, it first swells to a brief, brighter
 crescendo (`Sound.crescendoMusic` — louder, more open filter, ~0.9s); then,
 if sound effects are on, a synthesized voice (the browser's own Web Speech
 API — no audio files, nothing recorded, same "no external assets" rule as
-everything else here, preferring a female-sounding installed voice by name
-match and falling back to the platform default where none is found; it
-silently no-ops on browsers without speech synthesis) says "The time for
-talk is over," at close to natural rate and pitch — an earlier version
-slowed and deepened it heavily for drama and it came across as a flat
-robotic drone rather than ominous. Only once that finishes does the music
+everything else here; it silently no-ops on browsers without speech
+synthesis) says "The time for talk is over," at the voice's own natural
+rate and pitch (`rate: 0.94`, `pitch: 1.0` — no artificial pitch-bend) — an
+earlier version slowed and deepened it heavily for drama and it came across
+as a flat robotic drone rather than ominous. Voice selection now prefers a
+female-sounding installed voice by name match as before, but within that
+pool prefers whichever one is labeled as a higher-quality tier — "Enhanced"/
+"Premium" (iOS/macOS Siri voices), "Natural"/"Neural" (Android), or "Google"
+(Chrome's network voices) — over the default compact/offline tier of the
+same name, since platforms that ship both make the higher tier sound
+noticeably less robotic; falls back to the platform default where no match
+of either kind is found. (The headless browser used for this project's own
+automated testing reports zero installed voices at all, same as most
+server/CI environments — this preference logic is exercised by code review
+and a live run in a real browser, not by the automated test suite.) Only
+once that finishes does the music
 fade out and the game actually move to the vote queue; the Discuss screen
 shows a button-less "The Time For Talk Is Over" sting for that whole
 stretch, so there's nothing to tap through that could cut the line off

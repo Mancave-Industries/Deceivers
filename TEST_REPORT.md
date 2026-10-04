@@ -735,6 +735,72 @@ relic stone vibe." Three changes:
   browsers; the fallback font rendered correctly in these screenshots
   either way, confirming the no-webfont degradation path also works).
 
+## 21. Larger body text, a hand-off cue for every queue, and a more natural spoken voice (follow-up round)
+
+Three direct follow-ups from a real-device playtest (screenshots of Round
+4/6/7 reveal screens sent back from an actual phone): "fonts larger,"
+"audio cues at each stage," and "a more natural voice."
+
+- **Larger fonts**: every `font-size` declaration in `css/style.css`
+  (34 of them) scaled up ~15%, rounded to the nearest half-pixel — e.g.
+  `.reveal-body`/`.pass-overlay-instruction` 13.5px → 15.5px,
+  `.screen-title-row` 20px → 23px, `.pass-overlay-name` 28px → 32px. A
+  uniform multiplier rather than hand-picking new values per selector, so
+  the existing size *relationships* (headline vs. body vs. label) stayed
+  intact. Re-ran the 8-player worst-case Setup-screen overflow check from
+  the edge-safe-zone round (§16) since larger text means more wrapped
+  lines: at the screen's natural scrolled-to-bottom resting point, the
+  "Seal The Roles & Begin" button's bottom edge sits 101px above the
+  viewport bottom — well clear of the ~84px (10vh) reserved buffer, so no
+  regression there despite several buttons/panels now wrapping to an
+  extra line.
+- **A hand-off cue for every queue**: previously, moving the phone to the
+  next player's turn inside the Reveal/Draw/Murder/Vote queues reused the
+  same near-silent generic `tap` cue used for ordinary menu navigation —
+  present, but easy to miss as a deliberate "something changed" signal.
+  Added `passDevice` (a soft, distinct two-note chime) and wired it into
+  the Draw and Vote queues' hand-off points, and swapped it in for Murder's
+  previously-generic `tap` (still exactly as identical-every-turn as `tap`
+  was, so the anonymity guarantee documented in `sound.js`'s header is
+  unaffected). Also added `roundBegin` (a single rising tone) for the
+  moment a new round's Main screen appears, distinguishing "a new round is
+  starting" from the previous round's closing sound bleeding into it. The
+  existing `gather` ceremonial bell now also plays the instant the
+  Elimination "Gather Everyone" screen itself first appears — at the end of
+  the Murder and Vote queues — not only when its "Reveal What Happened"
+  button is later tapped, so there's audible feedback the moment the table
+  needs to look up, not just once someone notices the screen changed and
+  taps through it. Left Reveal's queue untouched (it already has its own
+  distinct `reveal`/`hide` opening-and-closing pair) and left the Quiet
+  Night branch's existing `quietNight` arrival cue untouched (a first
+  attempt at this change briefly replaced it with the urgent `gather` bell
+  for every Elimination arrival regardless of cause, which would have lost
+  the deliberate distinction between "nothing happened, no need to rush"
+  and "something happened, gather round" — caught and reverted before
+  shipping, by tracing through `routeAfterDraw`'s branches rather than
+  just trusting the first edit).
+- **A more natural spoken voice**: removed the artificial pitch shift
+  (`pitch: 1.05` → `1.0`, the voice's own natural pitch) and kept the rate
+  close to natural (`0.94`). Voice selection still prefers a female-sounding
+  installed voice by name match, but now prefers whichever one is labeled
+  as a higher-quality tier — "Enhanced"/"Premium" (iOS/macOS), "Natural"/
+  "Neural" (Android), "Google" (Chrome) — over the default compact/offline
+  voice of the same name, since platforms that ship both make the higher
+  tier sound markedly less robotic.
+- **Verification**: an instrumented 8-trial headless run (monkey-patching
+  `Sound.play` to log every call) covering 3–6 player games, random Fate
+  cards, and multiple rounds per trial logged 1,280 total cue calls across
+  all 8 trials with 0 console errors, and confirmed all 15 of `sound.js`'s
+  non-modal cues fired at least once, including both new ones
+  (`passDevice`, `roundBegin`) and, critically, that the pre-existing
+  `quietNight` cue still fires correctly after the catch-and-revert above.
+  Voice-quality preference logic was verified by code review only — the
+  headless test browser reports zero installed speech-synthesis voices
+  (typical for server/CI environments), so it cannot exercise real voice
+  selection; this needs a live-browser check to fully confirm, same
+  limitation already noted for this project's Oswald webfont loading in
+  §20.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -755,6 +821,7 @@ relic stone vibe." Three changes:
 | Title key art + app-wide grain (visual check + full playthrough) | 2 screenshots + 1 full UI playthrough | 0 | — |
 | Title art upgraded to portrait poster (visual check + full playthrough) | 2 sizing variants screenshotted + 1 full UI playthrough | 1 (cover-mode cropping overlapped button with banner text) | 1 (switched to contain) |
 | Oswald + grainy text + crumbling borders (visual check + full playthrough) | 4 screenshots + 1 full UI playthrough + 1 direct font-URL check | 0 | — |
+| Larger fonts + per-queue hand-off cues + natural voice (visual check + instrumented sound test) | 5 screenshots + 1 overflow re-check + 8 instrumented playthroughs (1,280 cue calls) | 1 (a first-attempt edit briefly replaced the Quiet Night arrival cue with the urgent Gather bell for every Elimination arrival) | 1 (caught before shipping; reverted to keep `quietNight` distinct from `gather`) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

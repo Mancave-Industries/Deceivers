@@ -167,6 +167,20 @@ const Sound = (() => {
   // (whatever that happens to be) if none of these are installed.
   const FEMALE_VOICE_PATTERN = /female|woman|samantha|victoria|karen|moira|tessa|fiona|zira|susan|allison|ava|serena|salli|joanna|ivy|kendra|kimberly|hazel|google us english female|google uk english female/i;
 
+  // Platforms that ship multiple quality tiers of the same voice label them
+  // this way (iOS/macOS "Enhanced"/"Premium" Siri voices, Android's
+  // "Natural"/neural voices, Chrome's "Google" network voices) — these sound
+  // markedly less robotic than the default compact/offline tier of the same
+  // name, so prefer one of these over a plain female-name match when both
+  // are available.
+  const HIGH_QUALITY_VOICE_PATTERN = /enhanced|premium|natural|neural|google/i;
+
+  function pickVoice(voices) {
+    const female = voices.filter((v) => FEMALE_VOICE_PATTERN.test(v.name));
+    const pool = female.length ? female : voices;
+    return pool.find((v) => HIGH_QUALITY_VOICE_PATTERN.test(v.name)) || pool[0];
+  }
+
   function speak(text, onEnd) {
     const finish = () => { if (onEnd) onEnd(); };
     if (!enabled || !('speechSynthesis' in window)) {
@@ -175,14 +189,16 @@ const Sound = (() => {
     }
     try {
       const utter = new SpeechSynthesisUtterance(text);
-      // Close to natural speaking rate/pitch — a heavily slowed, deepened
-      // voice came across as a flat robotic drone rather than ominous.
-      utter.rate = 0.95;
-      utter.pitch = 1.05;
+      // Natural rate/pitch — no artificial pitch shift. A heavily slowed,
+      // deepened, or pitch-bent voice came across as a flat robotic drone
+      // rather than ominous; a real/enhanced voice at its own natural pitch
+      // reads as ominous from the words and pacing alone.
+      utter.rate = 0.94;
+      utter.pitch = 1.0;
       utter.volume = 1;
       const voices = window.speechSynthesis.getVoices();
-      const femaleVoice = voices.find((v) => FEMALE_VOICE_PATTERN.test(v.name));
-      if (femaleVoice) utter.voice = femaleVoice;
+      const chosenVoice = pickVoice(voices);
+      if (chosenVoice) utter.voice = chosenVoice;
       let done = false;
       const finishOnce = () => { if (!done) { done = true; finish(); } };
       utter.onend = finishOnce;
@@ -324,6 +340,20 @@ const Sound = (() => {
     // The ceremonial ready-bell — reused for "Seal the Roles & Begin",
     // "Next Game", and the Elimination Reveal's "Gather Everyone" moment.
     gather: () => bellTone(293.66, { dur: 1.2, peak: 0.14 }),
+
+    // Hand-off cue: plays every time the phone moves on to the next
+    // player's turn inside a per-player queue (Reveal, Draw, Murder, Vote)
+    // — a soft two-note "here, take it" tick, louder and more distinct than
+    // the generic `tap` it replaces in those spots, but still identical
+    // every time regardless of who's turn is next or what role they hold
+    // (see the anonymity note at the top of this file — Murder's queue
+    // depends on that).
+    passDevice: () => chord([392, 329.63], { type: 'sine', dur: 0.1, peak: 0.08, stagger: 0.05, attack: 0.006 }),
+
+    // A new round's Fate card is about to be drawn: a single clear rising
+    // tone, brighter than `tap`, marking "Round N" as its own moment
+    // instead of blending into the previous round's closing sound.
+    roundBegin: () => envTone(349.23, { type: 'triangle', dur: 0.3, peak: 0.1, attack: 0.01, endFreq: 440 }),
 
     // Quiet Night outcome: soft, warm, relieved.
     quietNight: () => chord([440, 523.25], { type: 'sine', dur: 0.45, peak: 0.1, stagger: 0.09, attack: 0.02 }),
