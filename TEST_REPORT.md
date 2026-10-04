@@ -1189,6 +1189,44 @@ changed in this round — every check came back clean.
 - Also swept all six `js/*.js` files for leftover `console.log` /
   `console.debug` / `console.warn` calls — none found.
 
+### A design interaction found while probing the Recruit-or-Die / Final Circle boundary — flagged for review, not changed
+
+While specifically probing the priority rule documented in `startRound`
+("Recruit or Die takes priority over entering the Final Circle if both
+conditions are somehow true on the same round"), confirmed something the
+comment doesn't fully spell out: **`shouldTriggerRecruitment` has no
+once-per-game limit**. It re-evaluates fresh at the start of every round,
+purely from current state (lone living Deceiver, started with more than
+one, Final Circle not yet active) — nothing marks a round as "already
+tried." So if a lone Deceiver's recruit keeps choosing Refuse, the Deceiver
+can be offered the *same* choice again next round, and the round after
+that, for as long as they remain the sole survivor and living players
+haven't yet triggered Final Circle. Each refusal is a visible on-table
+murder, so the group sees their numbers falling — it's not hidden — but it
+does mean a chain of refusals can carry a game's Deceiver count at 1 all
+the way down past the Final Circle threshold without the Final Circle ever
+actually engaging, because the priority check keeps deferring it round
+after round. The chain always still resolves correctly one of two ways —
+either a successful recruit brings the Deceiver count back to 2 and the
+trigger condition clears, or the shrinking Loyal count eventually satisfies
+the ordinary Deceiver-majority win check (`checkDeceiverMajorityWin`, which
+can fire after *any* elimination, same as it always could) — so nothing
+gets stuck and no error occurs either way. Confirmed directly: engineered 1
+Deceiver + 4 living players on the same round boundary, watched Recruit win
+priority as documented (`finalCircleActive` stayed `false`, the MAIN button
+stayed `begin-draw`), forced a Refuse, and watched round 3 offer the *same*
+lone Deceiver another Recruit attempt rather than entering the Final
+Circle, still with `finalCircleActive: false`. Deliberately left exactly as
+coded — the precedence rule is working exactly as its own comment
+describes, and capping or changing it is a game-balance call, not a
+bug-fix, so it's recorded here rather than touched. Worth a look: should a
+sufficiently unlucky/stubborn chain of refusals be allowed to carry a game
+all the way to a Deceiver-majority win while completely bypassing the
+Final Circle the threshold was supposed to guarantee, or should the trigger
+exhaust itself (e.g. only once per lone-Deceiver "streak," or deferred
+rather than skipped once the threshold is reached)? No code changed for
+this round pending that decision.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1217,6 +1255,7 @@ changed in this round — every check came back clean.
 | Fullscreen interstitials + raster icon family (visual check + full regression) | 1 dedicated interstitial screenshot test (5 trigger points) + icon `naturalWidth`/`complete` DOM check + full existing suite re-run (3-player Final Circle, Recruit Join/Refuse, Final Circle round>1, 10-trial 7-8p computer-only regression) after patching every test script for the new overlay | 0 (fixed 13 test scripts for the new overlay rendering outside `.screen.active`, not an app bug) | — |
 | How To Play rules update + overnight soak test (visual check + reload/resume probe + regression) | 1 modal screenshot at 2 scroll positions + 1 reload-mid-interstitial probe + 1 continue-after-reload probe + 1 10-trial computer-only regression re-run (7-8p, 3 natural Recruit-or-Die triggers) | 0 | — |
 | Overnight regression sweep: Recruit×Hidden combo, 3-4p full playthroughs, 3-game series, sound re-check, 320px viewport | 1 Recruit+Hidden determinism test + 4 full 3-4p computer-only playthroughs (both knowledge modes) + 1 full 3-game series + 18-cue sound re-check + 3-screen narrow-viewport overflow audit + full-file debug-statement sweep | 0 | — |
+| Recruit-or-Die / Final Circle boundary probe (deterministic, engineered collision) | 2 targeted tests: mid-Final-Circle 2→1 Deceiver drop (must not trigger Recruit) + same-round-boundary collision with a forced Refuse into round 3 | 0 bugs (1 design interaction found and documented, not changed — see write-up above) | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
