@@ -1149,6 +1149,46 @@ unattended play.
   firing unconditionally ahead of them, same as the deterministic tests
   already confirmed by construction. 0 errors across all 10 trials.
 
+## 28. Overnight regression sweep (no code changes)
+
+A second, broader pass the same night, deliberately aimed at combinations
+and extremes the existing suite didn't yet exercise directly. No app code
+changed in this round — every check came back clean.
+
+- **Recruit or Die × Hidden Deceiver Knowledge, together**: the two
+  mechanics had each been tested thoroughly on their own, but never in the
+  same game. Engineered the same 2-Deceivers-down-to-1 precondition as the
+  existing deterministic Recruit tests, this time with Setup's Deceiver
+  Knowledge explicitly set to Hidden beforehand. The Join flow resolved
+  identically to the Known-mode version (role flip to Deceiver, ordinary
+  Quiet Night elimination reveal), 0 errors.
+- **3- and 4-player tables, full computer-only playthroughs, both
+  knowledge modes** (4 complete games): the existing suite only checked
+  round 1's button action at these player counts, never played a full game
+  out. All 4 completed cleanly with 0 errors; none ever showed
+  `begin-final-circle` at round 1 (the fix holds at the smallest possible
+  tables); the Final Circle engaged at round 2 in three of the four, and
+  one 3-player Hidden-mode game ended at round 1 itself via an ordinary
+  Deceiver-majority win from a Murder round — a legitimate early finish
+  that never reaches the Final Circle at all, not a bug.
+- **3-game series, 7 computer players**: played a full series out
+  end-to-end, confirming `seriesScores` accumulate correctly across games
+  (two players' point totals climbed 0→16→34 across the three games while
+  two others held steady at 21 throughout, matching who actually won gold
+  each round) and that the series correctly returns to Setup once its
+  configured length is reached. 0 errors.
+- **Sound cue re-check**: re-ran the 18-cue instrumented execution check
+  from the sound/voice redesign round as a plain regression (no code in
+  `sound.js` changed since, but cheap to confirm) — all 18 still execute
+  without throwing.
+- **320px viewport** (iPhone SE 1st-gen, the narrowest common width this
+  project targets): Setup with 8 players under intentionally long names
+  (e.g. "Hollingsworth," "Guadalupe"), the Reveal screen, and the How To
+  Play modal all checked for horizontal overflow via `scrollWidth` vs
+  `clientWidth` — none, confirmed with screenshots at all three.
+- Also swept all six `js/*.js` files for leftover `console.log` /
+  `console.debug` / `console.warn` calls — none found.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1176,6 +1216,7 @@ unattended play.
 | Recruit or Die + Final Circle entry fix + Deceiver Knowledge + sound/voice redesign | 2 deterministic click-through Recruit tests (Join + Refuse/Shield-bypass) + 1 majority-win integration test + 1 no-trigger-for-1-Deceiver test + 4 Final Circle round>1 tests + 2 Deceiver Knowledge mode tests + 18-cue execution check + 10-trial computer-only regression (7-8p) + full playthrough + existing Final Circle suite re-run | 0 | — |
 | Fullscreen interstitials + raster icon family (visual check + full regression) | 1 dedicated interstitial screenshot test (5 trigger points) + icon `naturalWidth`/`complete` DOM check + full existing suite re-run (3-player Final Circle, Recruit Join/Refuse, Final Circle round>1, 10-trial 7-8p computer-only regression) after patching every test script for the new overlay | 0 (fixed 13 test scripts for the new overlay rendering outside `.screen.active`, not an app bug) | — |
 | How To Play rules update + overnight soak test (visual check + reload/resume probe + regression) | 1 modal screenshot at 2 scroll positions + 1 reload-mid-interstitial probe + 1 continue-after-reload probe + 1 10-trial computer-only regression re-run (7-8p, 3 natural Recruit-or-Die triggers) | 0 | — |
+| Overnight regression sweep: Recruit×Hidden combo, 3-4p full playthroughs, 3-game series, sound re-check, 320px viewport | 1 Recruit+Hidden determinism test + 4 full 3-4p computer-only playthroughs (both knowledge modes) + 1 full 3-game series + 18-cue sound re-check + 3-screen narrow-viewport overflow audit + full-file debug-statement sweep | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
