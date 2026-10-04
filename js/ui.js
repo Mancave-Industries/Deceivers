@@ -292,8 +292,23 @@ UI.renderNight = function renderNight(state) {
 
 /* ---------- Open Discussion (before every Banishment Vote) ---------- */
 
-UI.renderDiscuss = function renderDiscuss(state) {
+UI.renderDiscuss = function renderDiscuss(state, announced) {
   const isFinal = state.finalBanishmentActive;
+
+  // Closing beat after "Begin Voting" is tapped: the crescendo/voice line
+  // (if sound is on) plays under this, then main.js moves on once it's
+  // done. No button here on purpose — it's a timed ceremony beat, not
+  // something to tap through, so the line never gets cut off mid-sentence.
+  if (announced) {
+    screen('discuss').innerHTML = `
+      <div class="reveal-stage fade-in">
+        ${iconUse(ICONS.skull, 'icon icon-lg flicker')}
+        <h2 class="reveal-headline">The Time For Talk Is Over</h2>
+        <p class="reveal-body">Voting begins now.</p>
+      </div>`;
+    return;
+  }
+
   screen('discuss').innerHTML = `
     <div class="reveal-stage fade-in">
       ${iconUse(ICONS.vote, 'icon icon-lg')}

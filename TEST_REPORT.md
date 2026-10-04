@@ -402,6 +402,40 @@ something a player is reading or deciding on.
   (calling the music API directly and counting only what it itself
   creates) replaced it as the reliable method.
 
+## 12. Crescendo and spoken "time for talk is over" line (follow-up round)
+
+`Sound.announceVotingBegins(onComplete)`: if music is currently playing,
+swells it to a brief crescendo first (`crescendoMusic`, louder + brighter
+filter, ~0.9s), then speaks "The time for talk is over." via the Web Speech
+API, then calls back once the utterance ends so `main.js` can move on to
+the vote queue. The Discuss screen shows a button-less sting
+("The Time For Talk Is Over") for the whole sequence so there's nothing to
+tap through and cut the line off early.
+
+- **Unit-style timing checks**, calling `Sound.announceVotingBegins`
+  directly against the real Web Audio graph with `speechSynthesis.speak`
+  stubbed (captures the utterance text and fires `onend` almost
+  immediately, so the test measures the real ~0.9s crescendo ramp without
+  waiting on an actual TTS engine, which may not exist at all in a headless
+  sandbox): **sound effects off → callback fires in <2ms, nothing spoken.
+  Sound on, no music → speaks immediately (<15ms), callback follows.
+  Sound on, music playing → callback waits ~911ms** (matching the
+  configured 0.9s crescendo duration) **before anything is spoken** — i.e.
+  the swell reliably happens *before* the line, not after or concurrently.
+  All three cases passed.
+- **Live integration**: started a 3-player game (reaches Open Discussion in
+  round 1), turned on both sound effects and music from the real Settings
+  modal, reached Discuss, tapped "Begin Voting." Confirmed the sting screen
+  appeared with the correct text and **zero** `data-action` elements on it
+  (nothing to tap through), waited past the full sequence, and confirmed
+  the game landed on the first voter's normal Vote screen and went on to
+  reach Results with 0 console errors.
+- Speech synthesis itself (`'speechSynthesis' in window`) is graceful on
+  unsupported browsers by construction — `speak()` calls its completion
+  callback immediately if the API isn't present, so the crescendo still
+  happens (if music was on) but the game is never blocked waiting for a
+  voice line that was never going to play.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -413,6 +447,7 @@ something a player is reading or deciding on.
 | Computer players (engine sim + headless UI) | 500 engine trials + 3 UI scenarios ×4 runs | 0 | — |
 | Instruction clarity (engine sim + headless UI) | 500 engine trials + 11 full UI playthroughs | 0 | — |
 | Background music (unit + live integration) | Sound-module unit checks + 1 full UI playthrough | 0 | — |
+| Crescendo + spoken line (unit timing + live integration) | 3 timing scenarios + 1 full UI playthrough | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

@@ -263,12 +263,24 @@ gathered and audibility is no longer a leak.
 checkbox, off by default, independent of the sound-effects toggle. When on,
 a quiet low drone (three detuned oscillators forming an open fifth plus
 octave, under a slow filter-cutoff LFO so it isn't static) fades in the
-moment the Open Discussion screen appears and fades out the moment "Begin
-Voting" is tapped — the only screen in the game where the phone sits
-untouched in the middle of the table for an open-ended stretch while people
-talk, rather than something a player is actively reading or deciding on.
-Every other screen stays effects-only; a continuous bed anywhere else would
-compete with the thing on screen instead of setting a mood for it.
+moment the Open Discussion screen appears. Every other screen stays
+effects-only; a continuous bed anywhere else would compete with the thing
+on screen instead of setting a mood for it.
+
+**Closing the discussion**: tapping "Begin Voting" doesn't cut straight to
+voting. If music is playing, the drone first swells to a brief, brighter
+crescendo (`Sound.crescendoMusic` — louder, more open filter, ~0.9s); then,
+if sound effects are on, a synthesized voice (the browser's own Web Speech
+API — no audio files, nothing recorded, same "no external assets" rule as
+everything else here, and it silently no-ops on browsers without speech
+synthesis) says "The time for talk is over," pitched down and slowed for
+weight. Only once that finishes does the drone fade out and the game
+actually move to the vote queue — the Discuss screen shows a button-less
+"The Time For Talk Is Over" sting for that whole stretch instead of jumping
+straight to the next screen, specifically so there's nothing to tap through
+that could cut the line off mid-sentence. With sound effects off this
+entire sequence resolves instantly, same as a plain "Begin Voting" tap
+always did.
 
 ## 8. Computer players
 

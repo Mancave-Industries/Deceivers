@@ -4,7 +4,8 @@
    ceremonial theme: bell tolls, low drones, bright coin chimes, dark/bright
    resolving chords for the two endings. Entirely self-contained — main.js
    only ever calls Sound.setEnabled(bool), Sound.play(name),
-   Sound.setMusicEnabled(bool), Sound.startMusic() and Sound.stopMusic().
+   Sound.setMusicEnabled(bool), Sound.startMusic(), Sound.stopMusic(), and
+   Sound.announceVotingBegins(onComplete).
 
    Anonymity note: during the Murder phase's per-player turn queue, the
    *same* device that's passed hand to hand plays these sounds out loud for
@@ -87,7 +88,7 @@ const Sound = (() => {
       lfo.connect(lfoGain).connect(filter.frequency);
       lfo.start(t0);
 
-      musicState = { master, nodes: [...oscillators, lfo] };
+      musicState = { master, filter, nodes: [...oscillators, lfo] };
     } catch (e) {
       /* WebAudio unsupported or blocked — silently skip */
       musicState = null;
@@ -108,6 +109,74 @@ const Sound = (() => {
       /* ignore */
     }
     musicState = null;
+  }
+
+  /* Swells the already-playing drone toward a peak and brightens its
+     filter — the "something is about to happen" rise before a line is
+     spoken. Returns the ramp's duration in seconds (0 if no music is
+     playing), so the caller knows how long to wait before the next beat. */
+  function crescendoMusic(peakGain = 0.17, dur = 0.9) {
+    if (!musicState) return 0;
+    try {
+      const c = getCtx();
+      const t0 = c.currentTime;
+      const { master, filter } = musicState;
+      master.gain.cancelScheduledValues(t0);
+      master.gain.setValueAtTime(master.gain.value, t0);
+      master.gain.exponentialRampToValueAtTime(peakGain, t0 + dur);
+      filter.frequency.cancelScheduledValues(t0);
+      filter.frequency.setValueAtTime(filter.frequency.value, t0);
+      filter.frequency.linearRampToValueAtTime(2200, t0 + dur);
+    } catch (e) {
+      return 0;
+    }
+    return dur;
+  }
+
+  /* ---------- Spoken line (Web Speech API — no audio files, same
+     "no external assets" rule as the rest of this module; silently no-ops
+     wherever speech synthesis isn't available). ---------- */
+
+  function speak(text, onEnd) {
+    const finish = () => { if (onEnd) onEnd(); };
+    if (!enabled || !('speechSynthesis' in window)) {
+      finish();
+      return;
+    }
+    try {
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.rate = 0.82;
+      utter.pitch = 0.65;
+      utter.volume = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const deepVoice = voices.find((v) => /male|daniel|fred|alex|david/i.test(v.name));
+      if (deepVoice) utter.voice = deepVoice;
+      let done = false;
+      const finishOnce = () => { if (!done) { done = true; finish(); } };
+      utter.onend = finishOnce;
+      utter.onerror = finishOnce;
+      // Some platforms occasionally never fire onend — don't let that hang the game.
+      setTimeout(finishOnce, 6000);
+      window.speechSynthesis.speak(utter);
+    } catch (e) {
+      finish();
+    }
+  }
+
+  /* The Open Discussion screen's closing beat: swell the drone (if music
+     is on) to a peak, then speak the line, then call back once it's done
+     so main.js can move on to the vote queue. If sound effects are off,
+     resolves immediately with no sound at all — this is a flourish, never
+     a thing the game waits on. */
+  function announceVotingBegins(onComplete) {
+    const done = () => { if (onComplete) onComplete(); };
+    if (!enabled) { done(); return; }
+    const riseSeconds = crescendoMusic(0.17, 0.9);
+    if (riseSeconds > 0) {
+      setTimeout(() => speak('The time for talk is over.', done), riseSeconds * 1000);
+    } else {
+      speak('The time for talk is over.', done);
+    }
   }
 
   /* ---------- Primitives ---------- */
@@ -265,5 +334,5 @@ const Sound = (() => {
     }
   }
 
-  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic };
+  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins };
 })();

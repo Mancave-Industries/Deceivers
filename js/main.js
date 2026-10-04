@@ -19,6 +19,7 @@ const uiStage = {
   voteSelected: null,
   useDagger: false,
   eliminationRevealed: false,
+  votingAnnounced: false,
 };
 
 Sound.setEnabled(state.settings.sound);
@@ -72,6 +73,7 @@ function resolveComputerTurn() {
       if (done) {
         routeAfterDraw(state);
         uiStage.eliminationRevealed = false;
+        uiStage.votingAnnounced = false;
         if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
         else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
@@ -146,7 +148,7 @@ function render() {
       UI.renderMurder(state, uiStage.murderTapped, uiStage.murderTarget, uiStage.useChoice);
       break;
     case PHASES.DISCUSS:
-      UI.renderDiscuss(state);
+      UI.renderDiscuss(state, uiStage.votingAnnounced);
       break;
     case PHASES.VOTE:
     case PHASES.FINAL_BANISHMENT:
@@ -289,6 +291,7 @@ const actions = {
     if (done) {
       routeAfterDraw(state);
       uiStage.eliminationRevealed = false;
+      uiStage.votingAnnounced = false;
       if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
       else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
@@ -305,14 +308,21 @@ const actions = {
     render();
   },
   'begin-vote-queue': () => {
-    Sound.play('tap');
-    Sound.stopMusic();
-    beginVotePhase(state, state.finalBanishmentActive);
-    uiStage.voteTapped = false;
-    uiStage.voteSelected = null;
-    uiStage.useDagger = false;
-    persist();
+    // Crescendo (if music is on) then a spoken line, then move on — never
+    // tap-through, so the line can't get cut off mid-sentence. If sound
+    // is off this resolves immediately, same as before.
+    uiStage.votingAnnounced = true;
     render();
+    Sound.announceVotingBegins(() => {
+      Sound.stopMusic();
+      beginVotePhase(state, state.finalBanishmentActive);
+      uiStage.votingAnnounced = false;
+      uiStage.voteTapped = false;
+      uiStage.voteSelected = null;
+      uiStage.useDagger = false;
+      persist();
+      render();
+    });
   },
   'tap-murder-turn': () => {
     // Same sound every turn regardless of role — see sound.js header note.
