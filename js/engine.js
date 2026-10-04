@@ -36,6 +36,8 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   state.nightResult = null;
   state.voteResult = null;
   state.finalBanishmentActive = false;
+  state.finalCircleActive = false;
+  state.finalCircleDecisions = {};
   state.history = [];
 
   state.pendingQueue = state.players.map((p) => p.id);
@@ -142,14 +144,20 @@ function startRound(state) {
     p.drawnThisRound = false;
   });
 
-  const living = livingPlayers(state);
-  if (living.length <= CONFIG.finalBanishmentThreshold) {
-    state.finalBanishmentActive = true;
-    state.currentFateCard = FINAL_BANISHMENT_DEF.id;
-  } else {
-    state.finalBanishmentActive = false;
-    state.currentFateCard = drawFateCard(state);
+  state.finalBanishmentActive = false;
+  if (livingPlayers(state).length <= CONFIG.finalCircleThreshold) {
+    state.finalCircleActive = true;
   }
+  if (state.finalCircleActive) {
+    // No Fate card this round or ever again — the Final Circle has its own
+    // shape (see below). currentFateCard is just a non-null sentinel here
+    // so main.js's "only call startRound once per round" guard still works;
+    // nothing reads it as a real Fate card while finalCircleActive is true.
+    state.currentFateCard = FINAL_BANISHMENT_DEF.id;
+    state.phase = PHASES.MAIN;
+    return null;
+  }
+  state.currentFateCard = drawFateCard(state);
   state.phase = PHASES.MAIN;
   return cardDefById(state.currentFateCard);
 }
@@ -183,14 +191,13 @@ function finishDrawForCurrent(state) {
   return state.pendingQueue.length === 0;
 }
 
-/* ---------- Fate branch routing (after Draw Phase completes) ---------- */
+/* ---------- Fate branch routing (after Draw Phase completes) ----------
+   Only ever reached pre-Final-Circle: once state.finalCircleActive is true,
+   startRound never sets a real Fate card and the Draw Phase is never
+   entered at all, so this never runs during the Final Circle. */
 
 function routeAfterDraw(state) {
   const def = cardDefById(state.currentFateCard);
-  if (state.finalBanishmentActive) {
-    state.phase = PHASES.DISCUSS;
-    return PHASES.DISCUSS;
-  }
   if (def.effect === 'murder-night') {
     state.phase = PHASES.NIGHT;
     return PHASES.NIGHT;
@@ -413,15 +420,39 @@ function continueAfterElimination(state) {
   return ended ? PHASES.RESULTS : PHASES.MAIN;
 }
 
-/* ---------- Win condition ---------- */
+/* ---------- Win condition ----------
+   Two distinct checks, on purpose — not one function with two branches.
 
-function checkWinCondition(state) {
+   checkDeceiverMajorityWin can fire after *any* elimination, any time,
+   Final Circle or not: once living Deceivers equal or outnumber living
+   Loyal, no vote can ever remove enough of them again, so continuing is
+   pointless and the game ends immediately. This is a mathematical
+   inevitability, not a narrative beat — there's no suspense value in
+   delaying it, so it was never changed to wait for the Final Circle.
+
+   checkFinalCircleWinner is the *only* way the Loyal side can ever win,
+   and it only ever runs when the Final Circle concludes on its own terms
+   (everyone unanimously chooses End Game, or only two players remain) —
+   see resolveFinalCircleDecision / continueAfterFinalCircleBanishment
+   below. The Loyal are never told "you got them all" the instant it
+   becomes true; they only find out once the Final Circle itself ends,
+   exactly like the real-world show this mode is modeled on. Notably this
+   is a *simpler* rule than the majority check above: a single surviving
+   Deceiver still wins here even sitting alongside two or three Loyal
+   (1 Deceiver + 2 Loyal would never trip checkDeceiverMajorityWin's
+   1 >= 2), because by this point survival itself is the win condition,
+   not voting-bloc control. */
+function checkDeceiverMajorityWin(state) {
   const living = livingPlayers(state);
   const livingDeceivers = living.filter((p) => p.role === ROLES.DECEIVER.id).length;
   const livingLoyal = living.length - livingDeceivers;
-  if (livingDeceivers === 0) return ROLES.LOYAL.id;
-  if (livingDeceivers >= livingLoyal) return ROLES.DECEIVER.id;
+  if (livingDeceivers > 0 && livingDeceivers >= livingLoyal) return ROLES.DECEIVER.id;
   return null;
+}
+
+function checkFinalCircleWinner(state) {
+  const anyDeceiverAlive = livingPlayers(state).some((p) => p.role === ROLES.DECEIVER.id);
+  return anyDeceiverAlive ? ROLES.DECEIVER.id : ROLES.LOYAL.id;
 }
 
 /* Loyal winners split the pot among whoever is still standing; Deceiver
@@ -448,7 +479,7 @@ function finalizeGame(state, winner) {
 }
 
 function advanceRoundOrEnd(state) {
-  const winner = checkWinCondition(state);
+  const winner = checkDeceiverMajorityWin(state);
   if (winner) {
     finalizeGame(state, winner);
     return true;
@@ -457,4 +488,85 @@ function advanceRoundOrEnd(state) {
   state.currentFateCard = null;
   state.phase = PHASES.MAIN;
   return false;
+}
+
+/* ---------- Final Circle (End Game) ----------
+   Begins once living players drop to CONFIG.finalCircleThreshold (see
+   startRound) and never ends until the game itself does — no going back
+   to ordinary rounds. From here on there are no more Fate cards, Draws,
+   or Murders: every round is a secret per-player End Game / Banish Again
+   ballot, followed by a vote only if at least one player chose Banish
+   Again. Whoever that vote names is banished WITHOUT revealing their
+   allegiance (see ui.js renderElimination's 'final' context) — the
+   suspense that normally ends at every Elimination Reveal now survives
+   all the way to the Final Circle's own conclusion. */
+
+function beginFinalCircleDecision(state) {
+  state.pendingQueue = livingPlayers(state).map((p) => p.id);
+  state.finalCircleDecisions = {};
+  state.phase = PHASES.FINAL_CIRCLE_DECISION;
+}
+
+function recordFinalCircleDecision(state, playerId, decision) {
+  state.finalCircleDecisions[playerId] = decision;
+}
+
+/** Advances the per-player decision queue. Returns true once everyone
+ *  living has decided. */
+function advanceFinalCircleQueue(state) {
+  advanceQueue(state);
+  return state.pendingQueue.length === 0;
+}
+
+function allChoseEndGame(state) {
+  return livingPlayers(state).every((p) => state.finalCircleDecisions[p.id] === 'end');
+}
+
+/** Called once every living player has made their secret End Game / Banish
+ *  Again choice. Unanimous End Game ends the game right here, revealing
+ *  every role (checkFinalCircleWinner, above). Otherwise at least one
+ *  player chose Banish Again, so the circle moves to Open Discussion and
+ *  then a vote, exactly like an ordinary Banishment — just flagged final
+ *  so the vote and its outcome stay anonymous. Returns the phase the game
+ *  is now in, so main.js knows which sound/UI follow-up applies. */
+function resolveFinalCircleDecision(state) {
+  if (allChoseEndGame(state)) {
+    finalizeGame(state, checkFinalCircleWinner(state));
+    return PHASES.RESULTS;
+  }
+  state.finalBanishmentActive = true;
+  state.phase = PHASES.DISCUSS;
+  return PHASES.DISCUSS;
+}
+
+/** Called once the Elimination Reveal's Continue is tapped after a Final
+ *  Circle banishment (as opposed to an ordinary one — see main.js's
+ *  continue-elimination handler, which picks this over
+ *  continueAfterElimination based on eliminationContext). A Deceiver
+ *  majority can still end the game on the spot; otherwise, reaching two
+ *  survivors forces the end automatically, per the real rule this mode is
+ *  modeled on ("at two players, there is no more voting"); otherwise the
+ *  circle (now one smaller) gets another End Game / Banish Again round.
+ *  Returns the phase the game is now in. */
+function continueAfterFinalCircleBanishment(state) {
+  const majorityWinner = checkDeceiverMajorityWin(state);
+  if (majorityWinner) {
+    finalizeGame(state, majorityWinner);
+    return PHASES.RESULTS;
+  }
+  if (livingPlayers(state).length <= 2) {
+    finalizeGame(state, checkFinalCircleWinner(state));
+    return PHASES.RESULTS;
+  }
+  beginFinalCircleDecision(state);
+  return PHASES.FINAL_CIRCLE_DECISION;
+}
+
+/* Simple, non-strategic, consistent with the other bot* functions above —
+   the real tension in this decision only exists for a human group reading
+   each other's faces, so a biased-toward-continuing coin flip just keeps
+   a computer-only or mixed-computer Final Circle from fizzling out the
+   instant a bot gets a turn, without pretending to model actual strategy. */
+function botChooseFinalCircleDecision() {
+  return Math.random() < 0.7 ? 'banish' : 'end';
 }

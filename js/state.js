@@ -43,6 +43,12 @@ function createInitialState() {
     actingDeceiverId: null,
     pendingMurderChoice: null,
     finalBanishmentActive: false,
+    // Final Circle: once living players drop to CONFIG.finalCircleThreshold,
+    // this flips true for the rest of the game and never resets mid-game
+    // (see engine.js's "Final Circle" section). finalCircleDecisions maps
+    // playerId -> 'end' | 'banish' for the current round's secret ballot.
+    finalCircleActive: false,
+    finalCircleDecisions: {},
     history: [],
     winner: null,
     gamePayout: null,

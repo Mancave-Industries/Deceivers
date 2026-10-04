@@ -194,7 +194,7 @@ UI.renderMain = function renderMain(state) {
   const living = livingPlayers(state);
   const seriesNote = state.seriesLength > 1 ? `Game ${state.seriesGame} of ${state.seriesLength} — ` : '';
   screen('main').innerHTML = `
-    <div class="screen-title-row">Round ${state.round}</div>
+    <div class="screen-title-row">${state.finalCircleActive ? 'The Final Circle' : `Round ${state.round}`}</div>
     <div class="screen-subtitle">${seriesNote}${living.length} remain in the circle.</div>
     <div class="prize-pot-panel">
       ${iconUse(ICONS.coin, 'icon icon-lg')}
@@ -211,12 +211,41 @@ UI.renderMain = function renderMain(state) {
         </div>`).join('')}
     </div>
     <div class="spacer"></div>
-    ${state.finalBanishmentActive ? `
+    ${state.finalCircleActive ? `
       <div class="panel">
-        <div class="panel-title">The Final Banishment Looms</div>
-        <p class="small-note" style="text-align:left;">Few enough remain that this round's Banishment Vote will decide the game.</p>
+        <div class="panel-title">The Final Circle</div>
+        <p class="small-note" style="text-align:left;">Few enough remain that every round from here is private: each of you secretly chooses End Game or Banish Again. It takes just one Banish Again to force another vote, and no one's allegiance is revealed again until only two remain.</p>
       </div>` : ''}
-    <button class="btn btn-primary btn-block" data-action="begin-draw" style="margin-top:14px;">Begin Draw Phase</button>`;
+    <button class="btn btn-primary btn-block" data-action="${state.finalCircleActive ? 'begin-final-circle' : 'begin-draw'}" style="margin-top:14px;">${state.finalCircleActive ? 'Enter The Final Circle' : 'Begin Draw Phase'}</button>`;
+};
+
+/* ---------- 6.5. Final Circle: End Game / Banish Again (secret per-player decision) ---------- */
+
+UI.renderFinalCircleDecision = function renderFinalCircleDecision(state, tapped) {
+  const player = currentQueuePlayer(state);
+  if (!player) return;
+
+  if (!tapped) {
+    screen('finalCircleDecision').innerHTML = passPrompt({
+      icon: ICONS.compass,
+      name: player.name,
+      instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — this choice is private. Once ready, they tap below.`,
+      action: 'tap-final-circle-decision',
+      btnLabel: "I'm Ready To Decide",
+      btnClass: 'btn-danger',
+    });
+    return;
+  }
+
+  const living = livingPlayers(state).length;
+  screen('finalCircleDecision').innerHTML = `
+    <div class="screen-title-row">The Final Circle</div>
+    <div class="screen-subtitle">${living} remain. ${escapeHtml(player.name)}, decide in silence.</div>
+    <p class="reveal-body">Choose <strong>End Game</strong> to stop here and reveal every role now, or <strong>Banish Again</strong> to force one more vote. It only takes one Banish Again among the circle to force a vote — no one will ever know who chose what.</p>
+    <div class="spacer"></div>
+    <button class="btn btn-confirm btn-block" data-action="choose-end-game" style="margin-bottom:10px;">End Game</button>
+    <button class="btn btn-danger btn-block" data-action="choose-banish-again">Banish Again</button>
+    <p class="small-note" style="margin-top:14px;">After deciding, hide your choice and pass the phone to the next player.</p>`;
 };
 
 /* ---------- 5. Card Draw ---------- */
@@ -313,9 +342,9 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
   screen('discuss').innerHTML = `
     <div class="reveal-stage fade-in">
       ${iconUse(ICONS.vote, 'icon icon-lg')}
-      <div class="pass-overlay-eyebrow">Tonight's Fate</div>
-      <h2 class="reveal-headline">${isFinal ? 'The Final Banishment' : 'Banishment Vote'}</h2>
-      <p class="reveal-body">Put the phone down in the middle of the table. This is the part where you all talk — accuse, defend, point fingers, ask questions, out loud, as a group. Nothing on this screen is private.${isFinal ? ' This is the last vote; whoever it names decides the game.' : ''}</p>
+      <div class="pass-overlay-eyebrow">${isFinal ? 'The Final Circle' : "Tonight's Fate"}</div>
+      <h2 class="reveal-headline">${isFinal ? 'The Final Circle Vote' : 'Banishment Vote'}</h2>
+      <p class="reveal-body">Put the phone down in the middle of the table. This is the part where you all talk — accuse, defend, point fingers, ask questions, out loud, as a group. Nothing on this screen is private.${isFinal ? " No one's allegiance will be revealed once this vote is cast — only when the Final Circle itself ends." : ''}</p>
       <div class="prize-pot-panel" style="margin-top:6px;">
         <div><div class="prize-pot-value">${clock}</div><div class="prize-pot-label">Time Left To Discuss</div></div>
       </div>
@@ -394,7 +423,7 @@ UI.renderVote = function renderVote(state, tapped, selectedId, useDagger) {
     container.innerHTML = passPrompt({
       icon: ICONS.vote,
       name: voter.name,
-      instruction: `Hand the phone to <strong>${escapeHtml(voter.name)}</strong> now and look away — votes are private. ${isFinal ? 'This is the final vote; once ready, they tap below.' : 'Once ready, they tap below to vote.'}`,
+      instruction: `Hand the phone to <strong>${escapeHtml(voter.name)}</strong> now and look away — votes are private. ${isFinal ? "No one's allegiance will be revealed when this vote is cast; once ready, they tap below." : 'Once ready, they tap below to vote.'}`,
       action: 'tap-vote',
       btnLabel: "I'm Ready To Vote",
       btnClass: isFinal ? 'btn-danger' : 'btn-primary',
@@ -405,7 +434,7 @@ UI.renderVote = function renderVote(state, tapped, selectedId, useDagger) {
   const targets = eligibleVoteTargets(state, voter.id);
   const hasDagger = voter.hand.includes('dagger');
   container.innerHTML = `
-    <div class="screen-title-row">${isFinal ? 'The Final Banishment' : 'Banishment Vote'}</div>
+    <div class="screen-title-row">${isFinal ? 'The Final Circle Vote' : 'Banishment Vote'}</div>
     <div class="screen-subtitle">${escapeHtml(voter.name)}, choose who to banish.</div>
     <div class="target-grid">
       ${targets.map((p) => `
@@ -483,6 +512,28 @@ UI.renderElimination = function renderElimination(state, revealed) {
           <button class="btn btn-confirm btn-block" data-action="continue-elimination">Continue</button>
         </div>`;
     }
+  } else if (context === 'final') {
+    // Final Circle banishment: same ceremony, but allegiance stays hidden
+    // — see engine.js's "Final Circle" section. No cardFlip, no role line.
+    const v = state.voteResult;
+    if (v.tie || !v.banishedId) {
+      body = `
+        <div class="reveal-stage">
+          ${iconUse(ICONS.vote, 'icon icon-lg')}
+          <h2 class="reveal-headline">The Vote Is Tied</h2>
+          <p class="reveal-body">No one is banished this round.</p>
+          <button class="btn btn-confirm btn-block" data-action="continue-elimination">Continue</button>
+        </div>`;
+    } else {
+      const banished = findPlayer(state, v.banishedId);
+      body = `
+        <div class="reveal-stage">
+          ${iconUse(ICONS.vote, 'icon icon-lg')}
+          <h2 class="reveal-headline">${escapeHtml(banished.name)} Is Banished</h2>
+          <p class="reveal-body">Their allegiance stays hidden — for now.</p>
+          <button class="btn btn-confirm btn-block" data-action="continue-elimination">Continue</button>
+        </div>`;
+    }
   } else {
     const v = state.voteResult;
     if (v.tie || !v.banishedId) {
@@ -529,7 +580,9 @@ UI.renderResults = function renderResults(state) {
     <div class="winner-banner scale-in">
       <h2>${winnerRole === ROLES.DECEIVER ? 'The Deceivers Win' : 'The Loyal Prevail'}</h2>
       <p class="small-note">${winnerRole === ROLES.DECEIVER
-        ? 'The Deceivers now equal or outnumber the Loyal. The circle is theirs.'
+        ? (state.finalCircleActive
+          ? 'A Deceiver was hiding among the survivors all along. The circle is theirs.'
+          : 'The Deceivers now equal or outnumber the Loyal. The circle is theirs.')
         : 'Every Deceiver has been cast out. The circle is safe.'}</p>
     </div>
     <div class="prize-pot-panel">

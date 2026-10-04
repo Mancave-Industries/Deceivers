@@ -801,6 +801,92 @@ Three direct follow-ups from a real-device playtest (screenshots of Round
   limitation already noted for this project's Oswald webfont loading in
   §20.
 
+## 22. The Final Circle — a Traitors-UK-style End Game replacing the old forced Final Banishment (follow-up round)
+
+A rules change, not a visual one: the old design instantly ended the game
+the moment the last Deceiver was eliminated — the Loyal got an immediate,
+unambiguous "you got them all" confirmation they'd never actually get in
+real life. The brief for this round asked for that replaced with The
+Traitors UK's own endgame structure: ordinary rounds keep going until few
+enough players remain, then the game switches permanently into a Final
+Circle where each round is a secret End Game / Banish Again ballot instead
+of a Fate card, nobody's role is revealed when they're banished there, and
+the only two ways out are everyone unanimously agreeing to stop or the
+player count hitting two (which ends it automatically, no vote).
+
+- **Two win checks where there was one**: `checkWinCondition`'s old single
+  formula (`livingDeceivers === 0` → instant Loyal win;
+  `livingDeceivers >= livingLoyal` → instant Deceiver win) was split into
+  two separately-purposed functions. `checkDeceiverMajorityWin` keeps the
+  old majority-check behavior exactly, unchanged, firing at any time —
+  it's a mathematical inevitability (no vote can ever remove enough
+  Deceivers past that point), not a suspense beat, so there was never a
+  reason to gate it behind anything. The old instant-Loyal-win branch was
+  removed outright — Loyal can now *only* win via the Final Circle's own
+  conclusion, through a new `checkFinalCircleWinner`, whose rule is
+  deliberately simpler than the majority check: any surviving Deceiver
+  wins, full stop, even a single one sitting alongside two or three
+  surviving Loyal — a case the majority formula could never resolve on
+  its own (1 Deceiver is never ≥ 3 Loyal).
+- **New phase, new screen**: `PHASES.FINAL_CIRCLE_DECISION` and its
+  `UI.renderFinalCircleDecision`, following the same private pass-the-phone
+  pattern as every other per-player turn in the game — tap to confirm
+  you're looking, then choose End Game or Banish Again. Wired into the
+  existing computer-seat auto-advance system (`QUEUE_PHASES`,
+  `resolveComputerTurn`) with its own simple non-strategic bot
+  (`botChooseFinalCircleDecision`, a 70/30 banish-biased coin flip —
+  enough to keep an all-computer Final Circle from fizzling out instantly
+  without pretending to model real strategy, consistent with every other
+  bot* function's documented design intent).
+- **Reused rather than duplicated**: the Final Circle's actual banishment
+  vote reuses the existing Open Discussion → Vote → Elimination Reveal →
+  Continue pipeline wholesale (just flagged via the existing
+  `finalBanishmentActive`/`PHASES.FINAL_BANISHMENT`), and the Results
+  screen's full role reveal and `payoutPrizePot` split-among-survivors math
+  needed zero changes — once `checkFinalCircleWinner` picks the right
+  winner, the existing payout logic already implements the real show's
+  final-two table (Loyal+Loyal split / Loyal+Deceiver → Deceiver takes all
+  / Deceiver+Deceiver split) correctly, and generalizes cleanly to a 3- or
+  4-player unanimous stop too. The one genuinely new piece of UI-facing
+  logic is `renderElimination`'s new `'final'` context branch, which skips
+  the `cardFlip`/role-label entirely in favor of "Their allegiance stays
+  hidden — for now."
+- **Bug found and fixed during this round's own verification**: the
+  Results screen's winner-banner flavor text was hardcoded to "The
+  Deceivers now equal or outnumber the Loyal" for every Deceiver win,
+  regardless of *how* it was won — factually wrong for a Final Circle
+  unanimous-stop win where a single Deceiver survives among two or three
+  Loyal (1 is not "equal or outnumber" 3). Caught via the dedicated
+  4-player unanimous-End-Game test below, by actually reading the
+  resulting screenshot's text rather than just checking that *a* winner
+  screen rendered. Fixed with a `state.finalCircleActive`-conditioned
+  alternate line ("A Deceiver was hiding among the survivors all along").
+- **Verification**: three dedicated Playwright scripts, chosen to isolate
+  each new rule rather than relying only on random play. (1) A 3-player
+  game (enters the Final Circle immediately at round 1, since 3 is below
+  the 4-player threshold), everyone choosing Banish Again every round:
+  confirmed the vote fires, the banished player's role is hidden at the
+  Elimination Reveal, and — critically — the game auto-ends the instant
+  living players hit 2 with **no** further decision ballot asked, matching
+  "at two players, there is no more voting." (2) A 4-player game, all four
+  unanimously choosing End Game on the very first ballot: confirmed it
+  skips straight to Results with zero banishments, and confirmed the
+  surviving lone Deceiver (1 of 4) still wins the whole pot — the exact
+  case the old majority formula couldn't have resolved. (3) A 6-trial
+  instrumented regression across 5–8 computer-only players (random Fate
+  cards, random bot decisions): all 6 reached Results with 0 console
+  errors; 4 of 6 naturally reached and passed through the Final Circle
+  (including at least one hidden-role banishment each), the other 2 ended
+  earlier via the ordinary Deceiver-majority check — confirming neither
+  path regressed the other. One scenario was verified by code review
+  rather than a dedicated script: a Deceiver-majority win triggering
+  *mid*-Final-Circle (e.g. a wrongly-banished Loyal handing control to an
+  already-majority Deceiver pair) — the current `deceiverCountForPlayers`
+  scaling (2 Deceivers only above 6 players) makes this comparatively rare
+  to force deterministically in a short script, but it reuses
+  `checkDeceiverMajorityWin` unchanged from its already-proven pre-Final-
+  Circle behavior, so the risk surface is small.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -822,11 +908,13 @@ Three direct follow-ups from a real-device playtest (screenshots of Round
 | Title art upgraded to portrait poster (visual check + full playthrough) | 2 sizing variants screenshotted + 1 full UI playthrough | 1 (cover-mode cropping overlapped button with banner text) | 1 (switched to contain) |
 | Oswald + grainy text + crumbling borders (visual check + full playthrough) | 4 screenshots + 1 full UI playthrough + 1 direct font-URL check | 0 | — |
 | Larger fonts + per-queue hand-off cues + natural voice (visual check + instrumented sound test) | 5 screenshots + 1 overflow re-check + 8 instrumented playthroughs (1,280 cue calls) | 1 (a first-attempt edit briefly replaced the Quiet Night arrival cue with the urgent Gather bell for every Elimination arrival) | 1 (caught before shipping; reverted to keep `quietNight` distinct from `gather`) |
+| The Final Circle end game (3 targeted scripts + 6-trial regression) | 1 deterministic Banish-Again-to-2 playthrough + 1 deterministic unanimous-End-Game playthrough + 6 instrumented 5–8 player regression trials | 1 (winner-banner flavor text wrongly claimed "equal or outnumber" for a 1-of-4-survivors Deceiver win) | 1 (conditional alternate line added) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
 supported player count (3–8), across every Fate-card branch (Quiet Night,
-Murder, standard Banishment, and forced Final Banishment), every action card
+Murder, standard Banishment) and the Final Circle's own End Game / Banish
+Again branches once few enough players remain, every action card
 (Gold ×3 denominations, Shield, Dagger, Deceiver's Choice), and any series
 length from 1 to 20 games. The Murder phase no longer reveals Deceiver
 identity through phone-handoff patterns or sound, the Fate card is no longer

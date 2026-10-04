@@ -169,11 +169,13 @@ Two separate decks, both reshuffled from discard when exhausted:
   are resolved immediately into the shared Prize Pot; Dagger/Shield/
   Deceiver's Choice are kept in the drawing player's hand for later use.
 - **Fate Deck** (one card drawn per round, determines that round's shape):
-  Quiet Night, Murder, Banishment. Final Banishment is not shuffled into this
-  deck — it is force-triggered by the engine once living players drop to a
-  configured threshold (default: 3), replacing the normal vote with a
-  decisive, higher-stakes version, per the "Final Banishment" screen's
-  purpose as an endgame climax rather than a random event.
+  Quiet Night, Murder, Banishment — but only while the game is still in its
+  ordinary rounds. Once living players drop to a configured threshold
+  (default: 4), the Fate deck stops being drawn from entirely and the game
+  moves permanently into the Final Circle (see below) — there is no going
+  back to ordinary rounds once that happens, even if the Final Circle's own
+  banishments bring the player count back up relative to some earlier point
+  (they never do; it only ever shrinks).
 
 ### Round Flow
 
@@ -207,15 +209,73 @@ ends the round.
      that vote. Most votes banished; ties banish no one. A "Gather Everyone"
      checkpoint, then an Elimination Reveal shows the outcome, then the
      round ends.
-3. **Win check** (after every event's Elimination Reveal): Loyal wins if
-   all Deceivers are banished/murdered out; Deceivers win if remaining
-   Deceivers ≥ remaining Loyal. Otherwise the round counter increments and
-   play loops back to a fresh Draw Phase, substituting a forced Final
-   Banishment vote for the normal Fate-card draw once the living-player
-   threshold is hit.
+3. **Win check** (after every event's Elimination Reveal): Deceivers win
+   instantly, any time, the moment remaining Deceivers ≥ remaining Loyal —
+   no vote can ever remove enough of them past that point, so there's no
+   reason to delay ending it. Loyal eliminating every Deceiver does **not**
+   instantly end the game, though — see "The Final Circle" below for the
+   only way Loyal can actually win. If neither applies, the round counter
+   increments and play loops back to a fresh Draw Phase — unless the living
+   player count has now reached the Final Circle threshold, in which case
+   the game permanently switches modes (see below) instead of drawing
+   another Fate card.
 4. **Results Screen** — winning side, full role reveal of every player, this
    game's Prize Pot payout, series standings, and either "Next Game" or
    "New Series" depending on whether the series is complete.
+
+### The Final Circle (End Game)
+
+Modeled directly on The Traitors UK's endgame structure, added as a
+follow-up round specifically because the original "instant Loyal win the
+moment the last Deceiver is eliminated" design gave the Loyal team a
+no-tension confirmation they'd never get in real life — they can never
+actually know they've caught every Deceiver, only suspect it.
+
+Once living players drop to **4** (`CONFIG.finalCircleThreshold`), ordinary
+rounds stop for good — no more Fate cards, no more Draws, no more Murders —
+and every remaining round takes this shape instead:
+
+1. **A secret per-player ballot**: pass the phone to each living player in
+   turn, same private pass-device pattern as a vote; each one chooses
+   **End Game** or **Banish Again**, with no way for anyone else to ever
+   learn what anyone else chose.
+2. **If every living player chose End Game**, the game ends right there —
+   full role reveal, normal payout rules apply (see below).
+3. **Otherwise** (at least one Banish Again — it only takes one), the circle
+   moves to Open Discussion and then a Banishment Vote exactly like an
+   ordinary one, except the Elimination Reveal that follows **never shows
+   the banished player's role** — just "X Is Banished. Their allegiance
+   stays hidden — for now." The suspense that normally ends at every single
+   Elimination Reveal now survives all the way to whenever the Final Circle
+   itself concludes.
+4. **Once living players reach 2, there is no more voting** — the game ends
+   automatically, right then, with a full role reveal. This is the one
+   fixed exit that doesn't depend on anyone's choice.
+5. A Deceiver-majority win (step 3 above) can still fire mid–Final Circle
+   at any point, same as ever — e.g. a wrongly-banished Loyal could hand a
+   2-Deceiver, 1-Loyal circle an instant win without even reaching another
+   ballot.
+
+**How the Final Circle actually resolves a winner is a different, simpler
+rule than the ordinary-round majority check**: once the Final Circle
+concludes on its own terms (unanimous End Game, or down to two), *any*
+surviving Deceiver wins outright — even a single Deceiver sitting alongside
+two or three Loyal, a case the majority check (`livingDeceivers >=
+livingLoyal`) would never have been able to resolve on its own. This
+mirrors the real show's final-two table exactly:
+
+| Final survivors | Result |
+|---|---|
+| Loyal + Loyal | Split the pot |
+| Loyal + Deceiver | Deceiver takes the pot |
+| Deceiver + Deceiver | Deceivers split the pot |
+
+— and generalizes it cleanly to a 3- or 4-player unanimous End Game stop
+too, using the same "any surviving Deceiver wins" rule rather than a
+table limited to exactly two survivors. Payout math itself didn't need to
+change at all: the existing `payoutPrizePot` (split among winning-side
+survivors) already implements this correctly once the right winner is
+passed in — the only new code was *deciding* who that winner is.
 
 ### A Banishment never opens a fresh shuffle
 
@@ -239,11 +299,11 @@ watched by the whole table.
 
 The Main hub no longer previews which Fate card (Quiet Night / Murder /
 Banishment) is active for the round before the Draw Phase begins — only
-whether the round is a forced Final Banishment (a structural fact derived
-from the living-player count, not a hidden card, so naming it isn't a
-spoiler). The actual branch a round takes is revealed only as it happens,
-through the Night/Murder or Banishment Vote screens themselves, to keep
-every round suspenseful rather than telegraphed.
+whether the Final Circle has begun (a structural fact derived from the
+living-player count, not a hidden card, so naming it isn't a spoiler). The
+actual branch a round takes is revealed only as it happens, through the
+Night/Murder or Banishment Vote screens themselves, to keep every round
+suspenseful rather than telegraphed.
 
 ### Series play and the Prize Pot economy
 
@@ -435,7 +495,8 @@ the same skip regardless of role:
 
 - `main.js`'s `render()` calls `autoAdvanceComputerTurns()` before doing any
   phase-specific rendering. If the current turn (Reveal / Draw / Murder /
-  Vote / Final Banishment queue) belongs to a computer seat, it shows one
+  Vote / Final Circle decision / Final Circle Vote queue) belongs to a
+  computer seat, it shows one
   generic "Computer Seat — Taking its turn" screen (`UI.renderComputerTurn`,
   content driven only by the player's name, never by their role or by what
   the bot decided) and, after a short fixed pause

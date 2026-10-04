@@ -7,8 +7,11 @@ const CONFIG = {
   storageKey: 'deceivers_state_v1',
   minPlayers: 3,
   maxPlayers: 8,
-  // Living players at/below this count trigger Final Banishment instead of a normal vote.
-  finalBanishmentThreshold: 3,
+  // Living players at/below this count end ordinary rounds (Fate cards,
+  // Draws, Murders) for good and begin the Final Circle: a secret End
+  // Game / Banish Again decision each round instead. See engine.js's
+  // "Final Circle" section.
+  finalCircleThreshold: 4,
   // Optional real licensed music, played by the host's own Spotify app
   // alongside the game rather than embedded in it — tapping the link just
   // opens Spotify; nothing here talks to Spotify's API or touches auth.
@@ -85,12 +88,14 @@ const FATE_DECK_DEF = [
   { id: 'banishment', name: 'Banishment', deck: 'fate', type: 'event', symbol: 'card-banishment', frame: CARD_FRAMES.event, icon: ICONS.vote, count: 4, effect: 'vote-only', description: 'Skip the night. Go straight to the Banishment Vote.' },
 ];
 
-/* Forced endgame card — not shuffled into the Fate deck; the engine triggers
-   it directly once living players reach CONFIG.finalBanishmentThreshold. */
+/* Not shuffled into the Fate deck — kept only as a stable card id/symbol so
+   the Final Circle's own banishment vote (engine.js: beginVotePhase with
+   isFinal) has a labeled card to point to, the same way every other event
+   does, even though it's never actually drawn from a deck. */
 const FINAL_BANISHMENT_DEF = {
-  id: 'final-banishment', name: 'Final Banishment', deck: 'fate', type: 'event',
+  id: 'final-banishment', name: 'Final Circle Vote', deck: 'fate', type: 'event',
   symbol: 'card-final-banishment', frame: CARD_FRAMES.event, icon: ICONS.vote,
-  effect: 'final-vote', description: 'The last vote. Whoever it names decides the game.',
+  effect: 'final-vote', description: 'A Final Circle vote. Whoever it names is banished without revealing their allegiance.',
 };
 
 const ALL_CARD_DEFS = [...FORTUNE_DECK_DEF, ...FATE_DECK_DEF, FINAL_BANISHMENT_DEF];
@@ -111,6 +116,7 @@ const PHASES = {
   DISCUSS: 'discuss',
   VOTE: 'vote',
   ELIMINATION: 'elimination',
+  FINAL_CIRCLE_DECISION: 'finalCircleDecision',
   FINAL_BANISHMENT: 'finalBanishment',
   RESULTS: 'results',
 };
@@ -127,6 +133,7 @@ const PHASE_LABELS = {
   [PHASES.DISCUSS]: 'Open Discussion',
   [PHASES.VOTE]: 'Banishment Vote',
   [PHASES.ELIMINATION]: 'The Reveal',
-  [PHASES.FINAL_BANISHMENT]: 'Final Banishment',
+  [PHASES.FINAL_CIRCLE_DECISION]: 'The Final Circle',
+  [PHASES.FINAL_BANISHMENT]: 'The Final Circle',
   [PHASES.RESULTS]: 'Results',
 };

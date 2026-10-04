@@ -21,6 +21,7 @@ const uiStage = {
   eliminationRevealed: false,
   votingAnnounced: false,
   discussSecondsLeft: 0,
+  finalCircleTapped: false,
 };
 
 Sound.setEnabled(state.settings.sound);
@@ -37,7 +38,7 @@ let seriesLength = 1;
 const COMPUTER_TURN_DELAY_MS = 700;
 let computerTurnTimer = null;
 
-const QUEUE_PHASES = [PHASES.REVEAL, PHASES.DRAW, PHASES.MURDER, PHASES.VOTE, PHASES.FINAL_BANISHMENT];
+const QUEUE_PHASES = [PHASES.REVEAL, PHASES.DRAW, PHASES.MURDER, PHASES.VOTE, PHASES.FINAL_BANISHMENT, PHASES.FINAL_CIRCLE_DECISION];
 
 function cancelComputerTurnTimer() {
   if (computerTurnTimer !== null) {
@@ -108,6 +109,34 @@ function beginVotingSequence() {
   });
 }
 
+/* Shared by the choose-end-game / choose-banish-again action handlers —
+   records the current player's secret choice, advances the queue, and
+   either hands the phone on or (once everyone's decided) resolves the
+   round via resolveFinalCircleDecision, same pattern as the Murder/Vote
+   queues' confirm handlers. */
+function handleFinalCircleDecision(decision) {
+  const player = currentQueuePlayer(state);
+  if (!player) return;
+  recordFinalCircleDecision(state, player.id, decision);
+  uiStage.finalCircleTapped = false;
+  const done = advanceFinalCircleQueue(state);
+  if (!done) {
+    Sound.play('passDevice');
+    persist();
+    render();
+    return;
+  }
+  const nextPhase = resolveFinalCircleDecision(state);
+  if (nextPhase === PHASES.RESULTS) {
+    Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
+    Analytics.gameFinished();
+  } else if (nextPhase === PHASES.DISCUSS) {
+    Sound.play('gather');
+  }
+  persist();
+  render();
+}
+
 function resolveComputerTurn() {
   switch (state.phase) {
     case PHASES.REVEAL:
@@ -148,6 +177,23 @@ function resolveComputerTurn() {
       if (done) {
         resolveBanishment(state);
         uiStage.eliminationRevealed = false;
+      }
+      break;
+    }
+    case PHASES.FINAL_CIRCLE_DECISION: {
+      const player = currentQueuePlayer(state);
+      recordFinalCircleDecision(state, player.id, botChooseFinalCircleDecision());
+      const done = advanceFinalCircleQueue(state);
+      if (done) {
+        const nextPhase = resolveFinalCircleDecision(state);
+        if (nextPhase === PHASES.DISCUSS) {
+          Sound.play('gather');
+          Sound.startMusic();
+          startDiscussTimer();
+        } else if (nextPhase === PHASES.RESULTS) {
+          Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
+          Analytics.gameFinished();
+        }
       }
       break;
     }
@@ -203,6 +249,9 @@ function render() {
       break;
     case PHASES.ELIMINATION:
       UI.renderElimination(state, uiStage.eliminationRevealed);
+      break;
+    case PHASES.FINAL_CIRCLE_DECISION:
+      UI.renderFinalCircleDecision(state, uiStage.finalCircleTapped);
       break;
     case PHASES.RESULTS:
       UI.renderResults(state);
@@ -317,6 +366,13 @@ const actions = {
     persist();
     render();
   },
+  'begin-final-circle': () => {
+    Sound.play('tap');
+    beginFinalCircleDecision(state);
+    uiStage.finalCircleTapped = false;
+    persist();
+    render();
+  },
   'tap-draw': () => {
     const player = currentQueuePlayer(state);
     const result = drawFortuneCard(state, player.id);
@@ -394,6 +450,13 @@ const actions = {
     persist();
     render();
   },
+  'tap-final-circle-decision': () => {
+    uiStage.finalCircleTapped = true;
+    Sound.play('tap');
+    render();
+  },
+  'choose-end-game': () => handleFinalCircleDecision('end'),
+  'choose-banish-again': () => handleFinalCircleDecision('banish'),
   'reveal-elimination': () => {
     uiStage.eliminationRevealed = true;
     Sound.play('gather');
@@ -409,7 +472,14 @@ const actions = {
     render();
   },
   'continue-elimination': () => {
-    continueAfterElimination(state);
+    // A Final Circle banishment continues differently from an ordinary
+    // one — no fresh Fate-card round, just another End Game / Banish
+    // Again decision (or the game ending outright) — see engine.js.
+    if (state.eliminationContext === 'final') {
+      continueAfterFinalCircleBanishment(state);
+    } else {
+      continueAfterElimination(state);
+    }
     uiStage.voteTapped = false;
     uiStage.voteSelected = null;
     uiStage.useDagger = false;
@@ -421,6 +491,10 @@ const actions = {
       // The game continues into a fresh round — its own distinct cue,
       // not the previous round's closing sound bleeding into it.
       Sound.play('roundBegin');
+    } else if (state.phase === PHASES.FINAL_CIRCLE_DECISION) {
+      // Looping back into another Final Circle round — the same summoning
+      // bell used to enter Open Discussion, calling the circle back in.
+      Sound.play('gather');
     } else {
       Sound.play('tap');
     }
