@@ -917,6 +917,47 @@ to spot by eye.
   console errors, confirming the CSS/asset-only change didn't touch
   anything functional.
 
+## 24. A spoken "Pass the phone to X" for every hand-off (follow-up round)
+
+"Audible cues — can we create these instructions and somehow say 'pass the
+phone to players name'?" Added `Sound.announcePassDevice(name)` (`sound.js`)
+— reuses the existing Web Speech API voice-selection logic already built
+for the Discuss-closing line, just with a different, fixed-format sentence
+("Pass the phone to X.") — and wired it centrally into `main.js`'s
+`render()` via a new `maybeAnnouncePassDevice()` helper, rather than adding
+a call to every action handler that can lead to a new per-player turn.
+
+- **Why centralized, not scattered**: a given queue turn can be reached
+  from more than one action handler (e.g. a Draw-queue hand-off from
+  `continue-from-hand`, a Murder-queue one from `confirm-murder-turn`, a
+  Vote one from `confirm-vote`, a Final Circle decision one from either
+  `choose-end-game` or `choose-banish-again`, plus the computer-seat
+  auto-advance path for all of the above). Hooking `render()` itself once
+  — right after the existing computer-seat auto-advance check already
+  short-circuits computer turns — covers every path with one call site
+  instead of five-plus, and a `phase:playerId` dedup key means it fires
+  exactly once per turn no matter which of those paths got there.
+- **Anonymity**: the announcement is deliberately just the player's bare
+  name — no role, no phase, no instruction — so it's exactly as
+  identical-every-turn as the Murder queue's existing anonymity rule
+  requires (see `sound.js`'s header note, carried over unchanged from
+  earlier rounds). Computer seats are silently skipped, since nobody is
+  physically holding a phone for them to pass.
+- **Verification**: an instrumented test (monkey-patching
+  `Sound.announcePassDevice` to log calls, sound enabled, a 4-player game
+  with one seat marked Computer) through both the Reveal queue and the
+  Final Circle decision queue confirmed: the two human players + the game
+  owner were announced by name in the correct order, the Computer seat was
+  never announced, and no turn was announced twice — `["Ann","Cid","Dee"]`
+  for Reveal, `["Ann","Cid","Dee","Ann","Cid","Dee"]` after also running
+  the Final Circle decision queue (a fresh announcement per queue, as
+  intended, not suppressed by the dedup key since the phase string
+  differs). Also ran a full playthrough and the 3-player Final Circle
+  regression with the *real*, unmocked `announcePassDevice` — confirming
+  it doesn't throw even though this sandbox's headless browser has no
+  real installed voices to actually speak through. 0 console errors
+  across all of it.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -940,6 +981,7 @@ to spot by eye.
 | Larger fonts + per-queue hand-off cues + natural voice (visual check + instrumented sound test) | 5 screenshots + 1 overflow re-check + 8 instrumented playthroughs (1,280 cue calls) | 1 (a first-attempt edit briefly replaced the Quiet Night arrival cue with the urgent Gather bell for every Elimination arrival) | 1 (caught before shipping; reverted to keep `quietNight` distinct from `gather`) |
 | The Final Circle end game (3 targeted scripts + 6-trial regression) | 1 deterministic Banish-Again-to-2 playthrough + 1 deterministic unanimous-End-Game playthrough + 6 instrumented 5–8 player regression trials | 1 (winner-banner flavor text wrongly claimed "equal or outnumber" for a 1-of-4-survivors Deceiver win) | 1 (conditional alternate line added) |
 | Grainy headline text fix (visual check + playthrough) | 5 screenshots (all headline selectors) + 1 Final Circle regression + 1 full playthrough | 0 (fix for a bug from an earlier, already-reverted round) | 1 (same layer-order/blend fix already proven on backgrounds) |
+| Spoken "Pass the phone to X" announcements (instrumented + playthroughs) | 1 instrumented 4-player test (mixed human/computer, 2 queues) + 1 full playthrough + 1 Final Circle regression, real unmocked announcePassDevice | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

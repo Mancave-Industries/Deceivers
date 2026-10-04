@@ -227,6 +227,26 @@ const Sound = (() => {
     }
   }
 
+  /* Announces whose turn it is to hold the phone — called once for every
+     per-player queue turn (Reveal, Draw, Murder, Vote, Final Circle
+     decision). Deliberately just the player's own name, nothing else: it
+     carries no role information, so it's exactly as identical-every-turn
+     as the Murder queue's anonymity rule already requires (see this
+     file's header note) — every living player's turn gets this same
+     announcement, naming whoever's turn it actually is, Deceiver or not.
+     Cancels any previous still-speaking utterance first, since a table
+     tapping through turns quickly could otherwise queue up a backlog of
+     stale "pass to X" lines that would play late/out of order. */
+  function announcePassDevice(name) {
+    if (!enabled || !('speechSynthesis' in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+    } catch (e) {
+      /* ignore */
+    }
+    speak(`Pass the phone to ${name}.`);
+  }
+
   /* ---------- Primitives ---------- */
 
   function envTone(freq, { type = 'sine', start = 0, dur = 0.18, peak = 0.16, attack = 0.012, endFreq = null } = {}) {
@@ -396,5 +416,5 @@ const Sound = (() => {
     }
   }
 
-  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins };
+  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins, announcePassDevice };
 })();

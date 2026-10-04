@@ -403,6 +403,30 @@ so no separate hand-off cue was added there.) `passDevice` is exactly as
 identical-every-turn as the `tap` it replaces in the Murder queue, so the
 anonymity guarantee below is unaffected.
 
+**A spoken "Pass the phone to X" for every hand-off**: on top of the
+`passDevice` chime above, `Sound.announcePassDevice(name)` (`sound.js`)
+speaks the next player's name out loud the moment their pass-prompt screen
+actually appears — reusing the same Web Speech API voice-selection logic
+as the Discuss-closing line (§ below), not a separate implementation.
+Wired centrally in `main.js`'s `render()` (`maybeAnnouncePassDevice`,
+called once per render right after the computer-seat auto-advance check)
+rather than scattered across every action handler that can lead to a new
+turn — it tracks the last `phase:playerId` it already announced so it
+fires exactly once per turn regardless of which of the several possible
+code paths got there, and resets whenever the game leaves queue-phase
+territory so the same player leading a later round's queue is announced
+again. Computer seats are silently skipped (nobody's physically holding a
+phone for them), and the announcement itself is deliberately just a bare
+name — nothing about role, phase, or what to do — so it's exactly as
+identical-every-turn as the Murder queue's anonymity rule requires: every
+living player's turn gets this same announcement, naming whoever's turn it
+actually is, with zero information content beyond what's already shown on
+screen. Covers Reveal, Draw, Murder, Vote/Final Banishment, and the Final
+Circle's own decision queue — every screen built on the shared
+`passPrompt()` template; the Night and Elimination "gather everyone"
+screens are addressed to the whole table at once rather than one named
+player, so they were left without a spoken line.
+
 **Anonymity constraint carried over from the visual design**: because the
 phone is a *physical, audible* object passed hand to hand, a sound that only
 plays on the real Deceiver's turn would leak their identity to the room just

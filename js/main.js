@@ -63,6 +63,29 @@ function autoAdvanceComputerTurns() {
   return true;
 }
 
+/* Spoken "Pass the phone to X" announcement for every per-player queue
+   turn a human actually needs to see (computer turns never reach this —
+   autoAdvanceComputerTurns returns early for those, before render() gets
+   here). Tracks the last phase+player it announced so repeat renders of
+   the same still-current turn (there's no polling timer that would cause
+   this today, but it costs nothing to guard against) don't re-trigger
+   it; resets the moment the game leaves queue-phase territory so the
+   same player leading a later round's queue is announced again. */
+let lastAnnouncedTurn = null;
+
+function maybeAnnouncePassDevice() {
+  if (!QUEUE_PHASES.includes(state.phase)) {
+    lastAnnouncedTurn = null;
+    return;
+  }
+  const player = currentQueuePlayer(state);
+  if (!player) return;
+  const key = `${state.phase}:${player.id}`;
+  if (key === lastAnnouncedTurn) return;
+  lastAnnouncedTurn = key;
+  Sound.announcePassDevice(player.name);
+}
+
 /* Open Discussion runs on a clock — 30 seconds per living player — instead
    of a tap-when-ready button, so the table can't accidentally skip past it
    before anyone's actually talked. Ticks once a second; at zero it moves
@@ -213,6 +236,8 @@ function render() {
   UI.updateHeader(state);
 
   if (autoAdvanceComputerTurns()) return;
+
+  maybeAnnouncePassDevice();
 
   switch (state.phase) {
     case PHASES.TITLE:
