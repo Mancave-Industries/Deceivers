@@ -80,6 +80,23 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
 - **Icons/cards**: all inline SVG, single/double color (gold line art on
   transparent, or gold-on-crimson/midnight fills for frames), so they inherit
   `currentColor` and scale crisply at any size.
+- **Edge safe zones**: `--edge-buffer-top`/`--edge-buffer-bottom`
+  (`:root`, `css/style.css`) each reserve `max(10vh, env(safe-area-inset-*,
+  0px))` — a flat 10% of viewport height at top and bottom, with the iOS
+  notch/home-indicator inset layered on top for devices where that's
+  larger. `env(safe-area-inset-*)` alone only covers notches and
+  home-indicators; it says nothing about an address bar, a bottom toolbar,
+  or an in-app-browser's own nav chrome (Instagram/TikTok/etc. when a link
+  is opened from inside those apps) sitting over part of the viewport,
+  which is the more common real complaint on a shared-link party game. The
+  header absorbs the top buffer in its own height; every `.screen` absorbs
+  the bottom one in its own bottom padding, so no screen-specific code was
+  needed — every button in the app respects both automatically. On
+  screens that legitimately don't fit without scrolling regardless (Setup
+  with close to the 8-player max), the buffer is still there below the
+  final button once the screen is scrolled to its natural resting point —
+  the goal was never zero scrolling, just that a button never rests flush
+  against the literal device edge.
 
 ## 4. Game Design Assumptions
 

@@ -533,6 +533,48 @@ aren't really meant to run at once.
   the "Skip Ahead" button sitting right next to it on the Discuss screen
   still works, landing on the real vote queue afterward. 0 console errors.
 
+## 16. Top/bottom 10% edge safe zones (follow-up round)
+
+Reported problem: buttons sitting too close to the top and bottom edges of
+the screen, where mobile browser chrome (address bars, bottom toolbars,
+and especially in-app-browser nav chrome when a link is opened from inside
+Instagram/TikTok/etc.) can cover or intercept taps.
+
+- Added `--edge-buffer-top`/`--edge-buffer-bottom` (`max(10vh, env(
+  safe-area-inset-*, 0px))`) in `:root`. `.app-header` grew by
+  `--edge-buffer-top` (extra height + padding-top, buttons realigned to
+  the bottom of that taller band via `align-items: end`) so every header
+  icon clears the top 10%. Every `.screen` gained `--edge-buffer-bottom`
+  on top of its existing bottom padding, so every screen's primary button
+  — pushed to the bottom by the existing `.spacer` pattern — clears the
+  bottom 10% the same way, with zero per-screen code changes. `.modal-
+  overlay`'s padding got the same treatment for consistency.
+- **Regression found and fixed during verification**: the added bottom
+  padding pushed the Setup screen (already one of the denser screens, 3+
+  player rows plus the series-length panel) into needing a small scroll it
+  didn't need before, and at rest (scrollTop 0) its "Seal The Roles &
+  Begin" button sat 21px into the new bottom buffer. Traced to real
+  content overflow (`scrollHeight` 746 vs `clientHeight` 708 at 3
+  players), not a CSS mistake. Fixed by trimming vertical spacing in
+  several places that collectively give back more than the overflow (
+  `.screen-subtitle`, `.setup-list`, `.add-player-btn`, `.setup-hint`,
+  `.panel`, and the `.spacer` ornament's forced `min-height`) — a global
+  tightening, not a Setup-specific hack, so it benefits every screen's
+  rhythm a little rather than special-casing one.
+- **Verification**: a script walked Title, Setup, Reveal (pass-prompt and
+  card), Settings modal, Help modal, Open Discussion, a Vote pass-prompt
+  and target-selection screen, and Results, measuring every visible
+  button's bounding box against `[10% of viewport, 90% of viewport]` —
+  **0 violations across all of them** after the spacing fix (down from 1
+  before it). Separately stress-tested the worst realistic case — 8
+  players, 2 marked Computer, series length 2 — where the Setup screen
+  does genuinely require scrolling (content far exceeds one screen
+  regardless of spacing); confirmed that once scrolled to its natural
+  resting point, the primary button still clears the bottom 10% line
+  (bottom at 742px against a 760px limit on an 844px-tall test viewport).
+  The goal was never eliminating scrolling, only ensuring a button is
+  never flush against the literal device edge once it's actually in view.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -548,6 +590,7 @@ aren't really meant to run at once.
 | Discussion clock + audio quality pass (unit + live integration) | 1 unit scenario + 1 full UI playthrough | 0 (1 test-script selector bug, unscoped from `.screen.active`, same class of mistake documented in earlier rounds; fixed in the test, not the app) | — |
 | Skip Ahead early-vote option (live integration) | 1 full UI playthrough | 0 (1 test-timing bug in my own test script — checked the sting screen's text after it had already transitioned away, since the sequence resolves near-instantly with sound off; fixed in the test, not the app) | — |
 | Spotify playlist link-out (live integration) | 1 full UI playthrough | 0 (1 test-timing bug of the same kind, same fix) | — |
+| Edge safe zones (automated bounding-box audit) | 10 screens/modals at default content + 1 worst-case 8-player stress test | 1 (Setup-screen overflow pushing its button into the bottom buffer at rest) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
