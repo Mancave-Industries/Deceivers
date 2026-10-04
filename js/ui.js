@@ -292,13 +292,13 @@ UI.renderNight = function renderNight(state) {
 
 /* ---------- Open Discussion (before every Banishment Vote) ---------- */
 
-UI.renderDiscuss = function renderDiscuss(state, announced) {
+UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
   const isFinal = state.finalBanishmentActive;
 
-  // Closing beat after "Begin Voting" is tapped: the crescendo/voice line
-  // (if sound is on) plays under this, then main.js moves on once it's
-  // done. No button here on purpose — it's a timed ceremony beat, not
-  // something to tap through, so the line never gets cut off mid-sentence.
+  // Closing beat once the clock runs out: the crescendo/voice line (if
+  // sound is on) plays under this, then main.js moves on once it's done.
+  // No button here on purpose — it's a timed ceremony beat, not something
+  // to tap through, so the line never gets cut off mid-sentence.
   if (announced) {
     screen('discuss').innerHTML = `
       <div class="reveal-stage fade-in">
@@ -309,14 +309,20 @@ UI.renderDiscuss = function renderDiscuss(state, announced) {
     return;
   }
 
+  const mins = Math.floor(Math.max(0, secondsLeft) / 60);
+  const secs = Math.max(0, secondsLeft) % 60;
+  const clock = `${mins}:${String(secs).padStart(2, '0')}`;
+
   screen('discuss').innerHTML = `
     <div class="reveal-stage fade-in">
       ${iconUse(ICONS.vote, 'icon icon-lg')}
       <div class="pass-overlay-eyebrow">Tonight's Fate</div>
       <h2 class="reveal-headline">${isFinal ? 'The Final Banishment' : 'Banishment Vote'}</h2>
       <p class="reveal-body">Put the phone down in the middle of the table. This is the part where you all talk — accuse, defend, point fingers, ask questions, out loud, as a group. Nothing on this screen is private.${isFinal ? ' This is the last vote; whoever it names decides the game.' : ''}</p>
-      <p class="reveal-body">When the table is ready to vote, pick the phone back up and tap below. From there, voting is private and happens one person at a time.</p>
-      <button class="btn ${isFinal ? 'btn-danger' : 'btn-primary'} btn-block" data-action="begin-vote-queue">Begin Voting</button>
+      <div class="prize-pot-panel" style="margin-top:6px;">
+        <div><div class="prize-pot-value">${clock}</div><div class="prize-pot-label">Time Left To Discuss</div></div>
+      </div>
+      <p class="small-note">Voting begins automatically when the clock runs out — nothing to tap.</p>
     </div>`;
 };
 

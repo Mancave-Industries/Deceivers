@@ -261,26 +261,36 @@ gathered and audibility is no longer a leak.
 
 **Background music (opt-in, Open Discussion only)**: a separate Settings
 checkbox, off by default, independent of the sound-effects toggle. When on,
-a quiet low drone (three detuned oscillators forming an open fifth plus
-octave, under a slow filter-cutoff LFO so it isn't static) fades in the
-moment the Open Discussion screen appears. Every other screen stays
-effects-only; a continuous bed anywhere else would compete with the thing
-on screen instead of setting a mood for it.
+a quiet dark chord progression (three glide-tuned voices moving through a
+short descending loop — D minor, C major, Bb major, F major — under a slow
+filter-cutoff LFO) fades in the moment the Open Discussion screen appears,
+evolving slowly rather than sitting on one static note. Every other screen
+stays effects-only; a continuous bed anywhere else would compete with the
+thing on screen instead of setting a mood for it.
 
-**Closing the discussion**: tapping "Begin Voting" doesn't cut straight to
-voting. If music is playing, the drone first swells to a brief, brighter
+**The discussion runs on a clock, not a button**: 30 seconds per living
+player, shown as a countdown on the Discuss screen. An earlier version had
+a tap-when-ready "Begin Voting" button instead; in practice it got tapped
+almost immediately, before the table had actually talked anything through,
+so it was replaced with a clock that can't be skipped and only ever counts
+down.
+
+**Closing the discussion**: when the clock hits zero, voting doesn't start
+immediately. If music is playing, it first swells to a brief, brighter
 crescendo (`Sound.crescendoMusic` — louder, more open filter, ~0.9s); then,
 if sound effects are on, a synthesized voice (the browser's own Web Speech
 API — no audio files, nothing recorded, same "no external assets" rule as
-everything else here, and it silently no-ops on browsers without speech
-synthesis) says "The time for talk is over," pitched down and slowed for
-weight. Only once that finishes does the drone fade out and the game
-actually move to the vote queue — the Discuss screen shows a button-less
-"The Time For Talk Is Over" sting for that whole stretch instead of jumping
-straight to the next screen, specifically so there's nothing to tap through
-that could cut the line off mid-sentence. With sound effects off this
-entire sequence resolves instantly, same as a plain "Begin Voting" tap
-always did.
+everything else here, preferring a female-sounding installed voice by name
+match and falling back to the platform default where none is found; it
+silently no-ops on browsers without speech synthesis) says "The time for
+talk is over," at close to natural rate and pitch — an earlier version
+slowed and deepened it heavily for drama and it came across as a flat
+robotic drone rather than ominous. Only once that finishes does the music
+fade out and the game actually move to the vote queue; the Discuss screen
+shows a button-less "The Time For Talk Is Over" sting for that whole
+stretch, so there's nothing to tap through that could cut the line off
+mid-sentence. With sound effects off this entire sequence resolves
+instantly, same as the clock simply running out silently.
 
 ## 8. Computer players
 

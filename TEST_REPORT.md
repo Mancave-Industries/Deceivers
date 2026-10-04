@@ -436,6 +436,60 @@ tap through and cut the line off early.
   happens (if music was on) but the game is never blocked waiting for a
   voice line that was never going to play.
 
+## 13. Discussion clock (replacing the "Begin Voting" button) and an audio quality pass (follow-up round)
+
+Three reported problems with the previous round's work: the "Begin Voting"
+button let the table skip past discussion almost immediately ("we didn't
+get any time to talk"); the spoken line's heavily slowed, deepened delivery
+read as "dreadfully droney" rather than ominous; and the request for
+"proper music and a decent female voice."
+
+- **Discussion clock**: `main.js` gained `startDiscussTimer()` /
+  `cancelDiscussTimer()` — on entering `PHASES.DISCUSS`,
+  `uiStage.discussSecondsLeft` is set to `30 * livingPlayers(state).length`
+  and ticks down once a second via `setInterval`, re-rendering the Discuss
+  screen's countdown each tick. The `data-action="begin-vote-queue"` button
+  and its action handler were removed entirely — there's nothing to tap on
+  this screen anymore. At zero, `beginVotingSequence()` (the crescendo →
+  spoken line → vote-queue sequence from the previous round) fires
+  automatically, same as it previously fired on a button tap.
+- **Voice tuning**: `rate`/`pitch` changed from the heavily slowed/deepened
+  `0.82`/`0.65` to a near-natural `0.95`/`1.05`. Voice selection now
+  prefers a name matching a list of common female-leaning installed voices
+  (`FEMALE_VOICE_PATTERN`) instead of the previous male-leaning list,
+  falling back to the platform default where no match exists — the Web
+  Speech API has no standard gender field, so this is a best-effort name
+  match, not a guarantee, and is called out as such in the code comment.
+- **Richer music**: the single static 3-note drone was replaced with a
+  4-chord descending progression (D minor → C major → Bb major → F major)
+  that the same 3 persistent oscillators glide between every ~7.5s
+  (5s hold + 2.5s glide), under the existing filter LFO — evolving harmony
+  instead of one held chord, with no change to the oscillator count (still
+  exactly 4: 3 voices + 1 LFO) so the existing unit tests' node-count
+  assertions still hold.
+- **Verification**:
+  - Unit checks against the real Web Audio graph (`setInterval`/
+    `clearInterval` wrapped): starting music creates exactly 4 oscillators
+    and exactly one progression interval; stopping clears that interval
+    (no stray ticks continuing after stop) — confirmed.
+  - Voice selection with `speechSynthesis.getVoices()` returning an empty
+    array (simulating a platform with no installed voices) doesn't throw
+    and still speaks via the default voice — confirmed.
+  - Live 3-player playthrough: confirmed the countdown starts at exactly
+    90 (30 × 3 living players) and displays "1:30"; confirmed no
+    `data-action` elements exist anywhere on the Discuss screen; waited
+    2.2 real seconds and confirmed the displayed number actually ticked
+    down (the interval is live, not just computed once); forced the clock
+    to zero via the same function the real interval calls at zero and
+    confirmed the sting screen appears with zero tappable elements, the
+    game lands on the real per-voter Vote screen afterward, and the
+    playthrough still reaches Results with 0 console errors.
+  - Did not re-run the full 90-second real-time countdown end to end (that
+    would mean the test suite itself waiting 90+ seconds); instead verified
+    the interval is genuinely live (ticks down for real) separately from
+    verifying what happens at zero (triggered directly), which together
+    cover the same ground without the wait.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -448,6 +502,7 @@ tap through and cut the line off early.
 | Instruction clarity (engine sim + headless UI) | 500 engine trials + 11 full UI playthroughs | 0 | — |
 | Background music (unit + live integration) | Sound-module unit checks + 1 full UI playthrough | 0 | — |
 | Crescendo + spoken line (unit timing + live integration) | 3 timing scenarios + 1 full UI playthrough | 0 | — |
+| Discussion clock + audio quality pass (unit + live integration) | 1 unit scenario + 1 full UI playthrough | 0 (1 test-script selector bug, unscoped from `.screen.active`, same class of mistake documented in earlier rounds; fixed in the test, not the app) | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
@@ -464,7 +519,9 @@ synthesized sound design covers every meaningful moment in the game, any
 seat can be marked Computer — down to an all-computer roster — without ever
 exposing the secret Deceiver through a computer seat's turn timing or
 on-screen content, the Night screen says outright that tonight's Fate is
-Murder instead of leaving it ambiguous, every Banishment Vote opens with an
-explicit instruction for the table to discuss out loud before voting
-starts, and that Open Discussion screen now has an opt-in ambient music bed
-that fades in and out cleanly and never plays anywhere else.
+Murder instead of leaving it ambiguous, every Banishment Vote opens with a
+mandatory 30-seconds-per-living-player discussion clock instead of a
+button that could be tapped past before anyone had actually talked, and
+that Open Discussion screen has an opt-in ambient chord-progression music
+bed that fades in and out cleanly, closing with a crescendo and a
+natural-sounding spoken line once the clock runs out.

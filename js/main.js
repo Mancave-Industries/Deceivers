@@ -20,6 +20,7 @@ const uiStage = {
   useDagger: false,
   eliminationRevealed: false,
   votingAnnounced: false,
+  discussSecondsLeft: 0,
 };
 
 Sound.setEnabled(state.settings.sound);
@@ -61,6 +62,52 @@ function autoAdvanceComputerTurns() {
   return true;
 }
 
+/* Open Discussion runs on a clock — 30 seconds per living player — instead
+   of a tap-when-ready button, so the table can't accidentally skip past it
+   before anyone's actually talked. Ticks once a second; at zero it moves
+   straight into the crescendo/voice-line/vote-queue sequence with no tap
+   required. */
+let discussTimerId = null;
+
+function cancelDiscussTimer() {
+  if (discussTimerId !== null) {
+    clearInterval(discussTimerId);
+    discussTimerId = null;
+  }
+}
+
+function startDiscussTimer() {
+  cancelDiscussTimer();
+  uiStage.discussSecondsLeft = 30 * livingPlayers(state).length;
+  discussTimerId = setInterval(() => {
+    uiStage.discussSecondsLeft -= 1;
+    if (uiStage.discussSecondsLeft <= 0) {
+      cancelDiscussTimer();
+      beginVotingSequence();
+    } else {
+      render();
+    }
+  }, 1000);
+}
+
+/* Crescendo (if music is on) -> spoken line (if sound is on) -> actually
+   move to the vote queue. Triggered only by the Discuss timer reaching
+   zero (see startDiscussTimer) — there's no button for this anymore. */
+function beginVotingSequence() {
+  uiStage.votingAnnounced = true;
+  render();
+  Sound.announceVotingBegins(() => {
+    Sound.stopMusic();
+    beginVotePhase(state, state.finalBanishmentActive);
+    uiStage.votingAnnounced = false;
+    uiStage.voteTapped = false;
+    uiStage.voteSelected = null;
+    uiStage.useDagger = false;
+    persist();
+    render();
+  });
+}
+
 function resolveComputerTurn() {
   switch (state.phase) {
     case PHASES.REVEAL:
@@ -76,7 +123,7 @@ function resolveComputerTurn() {
         uiStage.votingAnnounced = false;
         if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
+        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); }
       }
       break;
     }
@@ -148,7 +195,7 @@ function render() {
       UI.renderMurder(state, uiStage.murderTapped, uiStage.murderTarget, uiStage.useChoice);
       break;
     case PHASES.DISCUSS:
-      UI.renderDiscuss(state, uiStage.votingAnnounced);
+      UI.renderDiscuss(state, uiStage.votingAnnounced, uiStage.discussSecondsLeft);
       break;
     case PHASES.VOTE:
     case PHASES.FINAL_BANISHMENT:
@@ -183,6 +230,7 @@ const actions = {
   'new-game': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    cancelDiscussTimer();
     Sound.stopMusic();
     state = createInitialState();
     setupNames = Array(CONFIG.minPlayers).fill('');
@@ -194,6 +242,7 @@ const actions = {
   'continue-game': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    cancelDiscussTimer();
     Sound.stopMusic();
     const saved = loadState();
     if (saved) {
@@ -201,7 +250,7 @@ const actions = {
       Sound.setEnabled(state.settings.sound);
       Sound.setMusicEnabled(state.settings.music);
       document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
-      if (state.phase === PHASES.DISCUSS) Sound.startMusic();
+      if (state.phase === PHASES.DISCUSS) { Sound.startMusic(); startDiscussTimer(); }
     }
     render();
   },
@@ -294,7 +343,7 @@ const actions = {
       uiStage.votingAnnounced = false;
       if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); }
+      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); }
     }
     persist();
     render();
@@ -306,23 +355,6 @@ const actions = {
     uiStage.murderTarget = null;
     uiStage.useChoice = false;
     render();
-  },
-  'begin-vote-queue': () => {
-    // Crescendo (if music is on) then a spoken line, then move on — never
-    // tap-through, so the line can't get cut off mid-sentence. If sound
-    // is off this resolves immediately, same as before.
-    uiStage.votingAnnounced = true;
-    render();
-    Sound.announceVotingBegins(() => {
-      Sound.stopMusic();
-      beginVotePhase(state, state.finalBanishmentActive);
-      uiStage.votingAnnounced = false;
-      uiStage.voteTapped = false;
-      uiStage.voteSelected = null;
-      uiStage.useDagger = false;
-      persist();
-      render();
-    });
   },
   'tap-murder-turn': () => {
     // Same sound every turn regardless of role — see sound.js header note.
@@ -414,6 +446,7 @@ const actions = {
   'play-again': () => {
     Sound.play('tap');
     cancelComputerTurnTimer();
+    cancelDiscussTimer();
     Sound.stopMusic();
     clearState();
     state = createInitialState();
@@ -424,6 +457,7 @@ const actions = {
     UI.hideModal();
     if (!window.confirm('Reset the current game? This cannot be undone.')) return;
     cancelComputerTurnTimer();
+    cancelDiscussTimer();
     Sound.stopMusic();
     clearState();
     state = createInitialState();

@@ -47,6 +47,19 @@ const Sound = (() => {
 
   /* ---------- Ambient discussion music ---------- */
 
+  // A short, dark, descending chord loop (i – VII – VI – III in D minor)
+  // instead of one static drone — the three voices glide from chord to
+  // chord rather than re-triggering, so it reads as a slowly moving piece
+  // of music, not a held note.
+  const CHORD_PROGRESSION = [
+    [146.83, 174.61, 220.00], // D minor
+    [130.81, 164.81, 196.00], // C major
+    [116.54, 146.83, 174.61], // Bb major
+    [87.31, 110.00, 130.81], // F major
+  ];
+  const CHORD_HOLD_SECONDS = 5;
+  const CHORD_GLIDE_SECONDS = 2.5;
+
   function startMusic() {
     if (!musicEnabled || musicState) return;
     try {
@@ -55,7 +68,7 @@ const Sound = (() => {
 
       const master = c.createGain();
       master.gain.setValueAtTime(0.0001, t0);
-      master.gain.exponentialRampToValueAtTime(0.05, t0 + 3);
+      master.gain.exponentialRampToValueAtTime(0.06, t0 + 3);
       master.connect(c.destination);
 
       const filter = c.createBiquadFilter();
@@ -64,21 +77,18 @@ const Sound = (() => {
       filter.Q.value = 0.6;
       filter.connect(master);
 
-      // A low, somber open fifth + octave drone — quiet enough to sit
-      // under table talk, not a melody to listen to.
-      const droneFreqs = [73.42, 110, 146.83];
-      const oscillators = droneFreqs.map((f, i) => {
+      const oscillators = CHORD_PROGRESSION[0].map((f, i) => {
         const osc = c.createOscillator();
         osc.type = i === 0 ? 'sine' : 'triangle';
-        osc.frequency.value = f;
+        osc.frequency.setValueAtTime(f, t0);
         const g = c.createGain();
-        g.gain.value = i === 0 ? 1 : 0.45;
+        g.gain.value = i === 0 ? 1 : 0.5;
         osc.connect(g).connect(filter);
         osc.start(t0);
         return osc;
       });
 
-      // Slowly sweeping filter cutoff so the drone breathes instead of
+      // Slowly sweeping filter cutoff so the pad breathes instead of
       // sitting static.
       const lfo = c.createOscillator();
       lfo.type = 'sine';
@@ -88,7 +98,20 @@ const Sound = (() => {
       lfo.connect(lfoGain).connect(filter.frequency);
       lfo.start(t0);
 
-      musicState = { master, filter, nodes: [...oscillators, lfo] };
+      let chordIndex = 0;
+      const advanceChord = () => {
+        chordIndex = (chordIndex + 1) % CHORD_PROGRESSION.length;
+        const chord = CHORD_PROGRESSION[chordIndex];
+        const now = c.currentTime;
+        oscillators.forEach((osc, i) => {
+          osc.frequency.cancelScheduledValues(now);
+          osc.frequency.setValueAtTime(osc.frequency.value, now);
+          osc.frequency.linearRampToValueAtTime(chord[i], now + CHORD_GLIDE_SECONDS);
+        });
+      };
+      const progressionTimer = setInterval(advanceChord, (CHORD_HOLD_SECONDS + CHORD_GLIDE_SECONDS) * 1000);
+
+      musicState = { master, filter, nodes: [...oscillators, lfo], progressionTimer };
     } catch (e) {
       /* WebAudio unsupported or blocked — silently skip */
       musicState = null;
@@ -100,7 +123,8 @@ const Sound = (() => {
     try {
       const c = getCtx();
       const t0 = c.currentTime;
-      const { master, nodes } = musicState;
+      const { master, nodes, progressionTimer } = musicState;
+      if (progressionTimer) clearInterval(progressionTimer);
       master.gain.cancelScheduledValues(t0);
       master.gain.setValueAtTime(master.gain.value, t0);
       master.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.4);
@@ -137,6 +161,12 @@ const Sound = (() => {
      "no external assets" rule as the rest of this module; silently no-ops
      wherever speech synthesis isn't available). ---------- */
 
+  // Common female-leaning voice names across Chrome/Android, Safari/iOS,
+  // and Windows — the Web Speech API has no standard gender field, so this
+  // is a best-effort name match; falls back to the platform default voice
+  // (whatever that happens to be) if none of these are installed.
+  const FEMALE_VOICE_PATTERN = /female|woman|samantha|victoria|karen|moira|tessa|fiona|zira|susan|allison|ava|serena|salli|joanna|ivy|kendra|kimberly|hazel|google us english female|google uk english female/i;
+
   function speak(text, onEnd) {
     const finish = () => { if (onEnd) onEnd(); };
     if (!enabled || !('speechSynthesis' in window)) {
@@ -145,12 +175,14 @@ const Sound = (() => {
     }
     try {
       const utter = new SpeechSynthesisUtterance(text);
-      utter.rate = 0.82;
-      utter.pitch = 0.65;
+      // Close to natural speaking rate/pitch — a heavily slowed, deepened
+      // voice came across as a flat robotic drone rather than ominous.
+      utter.rate = 0.95;
+      utter.pitch = 1.05;
       utter.volume = 1;
       const voices = window.speechSynthesis.getVoices();
-      const deepVoice = voices.find((v) => /male|daniel|fred|alex|david/i.test(v.name));
-      if (deepVoice) utter.voice = deepVoice;
+      const femaleVoice = voices.find((v) => FEMALE_VOICE_PATTERN.test(v.name));
+      if (femaleVoice) utter.voice = femaleVoice;
       let done = false;
       const finishOnce = () => { if (!done) { done = true; finish(); } };
       utter.onend = finishOnce;
