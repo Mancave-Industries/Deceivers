@@ -272,8 +272,12 @@ thing on screen instead of setting a mood for it.
 player, shown as a countdown on the Discuss screen. An earlier version had
 a tap-when-ready "Begin Voting" button instead; in practice it got tapped
 almost immediately, before the table had actually talked anything through,
-so it was replaced with a clock that can't be skipped and only ever counts
-down.
+so it was replaced with a clock that counts down on its own. A smaller,
+deliberately de-emphasized "Everyone's Ready — Skip Ahead" button (ghost
+style, not the prominent gold CTA the rest of the game uses for its primary
+action) still lets a table that's genuinely done early end discussion
+before the clock runs out — the default is still the full clock, this is
+an opt-in shortcut, not a replacement for it.
 
 **Closing the discussion**: when the clock hits zero, voting doesn't start
 immediately. If music is playing, it first swells to a brief, brighter

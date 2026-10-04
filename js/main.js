@@ -356,6 +356,14 @@ const actions = {
     uiStage.useChoice = false;
     render();
   },
+  'begin-vote-now': () => {
+    // Lets the table end discussion early instead of waiting out the full
+    // clock — the clock stays the default so voting is never skipped
+    // before it even starts, but a table that's genuinely done talking
+    // shouldn't have to sit through dead air.
+    cancelDiscussTimer();
+    beginVotingSequence();
+  },
   'tap-murder-turn': () => {
     // Same sound every turn regardless of role — see sound.js header note.
     uiStage.murderTapped = true;

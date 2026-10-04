@@ -322,7 +322,8 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
       <div class="prize-pot-panel" style="margin-top:6px;">
         <div><div class="prize-pot-value">${clock}</div><div class="prize-pot-label">Time Left To Discuss</div></div>
       </div>
-      <p class="small-note">Voting begins automatically when the clock runs out — nothing to tap.</p>
+      <p class="small-note">Voting begins automatically when the clock runs out.</p>
+      <button class="btn btn-ghost btn-sm" data-action="begin-vote-now" style="margin-top:4px;">Everyone's Ready — Skip Ahead</button>
     </div>`;
 };
 

@@ -490,6 +490,28 @@ read as "dreadfully droney" rather than ominous; and the request for
     verifying what happens at zero (triggered directly), which together
     cover the same ground without the wait.
 
+## 14. "Skip Ahead" early-vote option (follow-up round)
+
+A small, deliberately de-emphasized `btn-ghost btn-sm` button
+("Everyone's Ready — Skip Ahead") added to the Discuss screen's normal
+(non-sting) view, wired to a new `begin-vote-now` action that cancels the
+running countdown (`cancelDiscussTimer()`) and calls the same
+`beginVotingSequence()` the clock itself calls at zero — so skipping ahead
+still gets the crescendo/spoken-line sting, just earlier. The countdown
+stays the default and visually dominant element on the screen; this is an
+opt-in shortcut for a table that's genuinely done talking, not a
+replacement for the clock (which is what the previous "Begin Voting"
+button effectively was, and the reason it got replaced).
+
+- **Live headless verification**: reached Discuss, let the clock tick for
+  real (confirmed `discussSecondsLeft` had dropped below its starting 90),
+  tapped Skip Ahead, confirmed the sting screen appeared with the correct
+  text, confirmed `discussSecondsLeft` stopped changing afterward (the
+  interval was actually cancelled, not just ignored while still running in
+  the background), confirmed the game landed on the real per-voter Vote
+  screen, and confirmed the playthrough still reached Results with 0
+  console errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -503,6 +525,7 @@ read as "dreadfully droney" rather than ominous; and the request for
 | Background music (unit + live integration) | Sound-module unit checks + 1 full UI playthrough | 0 | — |
 | Crescendo + spoken line (unit timing + live integration) | 3 timing scenarios + 1 full UI playthrough | 0 | — |
 | Discussion clock + audio quality pass (unit + live integration) | 1 unit scenario + 1 full UI playthrough | 0 (1 test-script selector bug, unscoped from `.screen.active`, same class of mistake documented in earlier rounds; fixed in the test, not the app) | — |
+| Skip Ahead early-vote option (live integration) | 1 full UI playthrough | 0 (1 test-timing bug in my own test script — checked the sting screen's text after it had already transitioned away, since the sequence resolves near-instantly with sound off; fixed in the test, not the app) | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
