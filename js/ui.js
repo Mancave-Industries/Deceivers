@@ -780,7 +780,11 @@ UI.helpContent = function helpContent() {
     <p><strong>One phone, a group of friends — some of you are secretly Deceivers.</strong> Everyone else is Loyal. Loyal wins by rooting out every Deceiver; Deceivers win by staying hidden until they equal or outnumber whoever's left.</p>
     <p>${CONFIG.minPlayers}–${CONFIG.maxPlayers} players, one shared phone passed hand to hand, no app to install. A game runs about 15–25 minutes, start to finish.</p>
     <p>Each round, everyone draws a card, then something happens — a quiet night, a secret murder, or a vote to banish someone — and the whole table gathers to watch the outcome together. Play continues round after round until one side wins.</p>
-    <p>The Loyal win when every Deceiver is gone. The Deceivers win once they equal or outnumber the Loyal. Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
+    <p>The Loyal win by eliminating every Deceiver through ordinary play. The Deceivers win the moment they equal or outnumber the Loyal. Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
+    <div class="panel-title" style="margin-top:4px;">The Final Circle</div>
+    <p>Once only ${CONFIG.finalCircleThreshold} players remain — and at least one ordinary round has already been played — the game shifts into its endgame: every round becomes a private ballot where each survivor secretly chooses End Game or Banish Again. If everyone chooses End Game, or once only two players are left, the game ends outright — and at that point any surviving Deceiver wins, even a single one facing two Loyal.</p>
+    <div class="panel-title" style="margin-top:4px;">Recruit or Die</div>
+    <p>If a game starts with more than one Deceiver and every one of them but a single survivor is eliminated, that lone Deceiver gets one private chance to recruit instead of murdering — secretly asking a Loyal player to join them. Accept, and no one dies that night; refuse, and that player is murdered instead, Shield or no Shield. Nobody else at the table ever learns this happened.</p>
     <div class="panel-title" style="margin-top:4px;">What the cards do</div>
     <div class="rule-row">${iconUse(ICONS.coin, 'icon')}<span>Gold cards fill the shared Prize Pot.</span></div>
     <div class="rule-row">${iconUse(ICONS.shield, 'icon')}<span>A held Shield protects you automatically if targeted — no action needed — then it's spent.</span></div>
@@ -788,7 +792,7 @@ UI.helpContent = function helpContent() {
     <div class="rule-row">${iconUse(ICONS.hoodedFigure, 'icon')}<span>Deceiver's Choice cancels a Shield at Night.</span></div>
     <div class="rule-row">${iconUse(ICONS.skull, 'icon')}<span>On a Murder round, the Deceivers pick a victim in secret.</span></div>
     <div class="rule-row">${iconUse(ICONS.vote, 'icon')}<span>Every living player votes to banish a suspect.</span></div>
-    <p>Play a series of several games back to back and points carry across every game — set how many on the setup screen.</p>
+    <p>Play a series of several games back to back and points carry across every game — set how many on the setup screen. Setup also lets you choose whether Deceivers learn each other's identities at the reveal, or play completely in the dark from one another.</p>
     <p>Pass the phone honestly and don't peek — the ceremony depends on trust.</p>`;
 };
 

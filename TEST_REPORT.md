@@ -1096,6 +1096,59 @@ of any kind, per the brief.
   the cases where interstitials, Recruit or Die, and computer-seat
   auto-advance all overlap in the same playthrough.
 
+## 27. How To Play brought up to date, and overnight soak testing (follow-up round)
+
+An overnight pass, requested without a specific new feature attached: close
+the one documented gap flagged at the end of the interstitials round (the
+in-app rules modal predated the Final Circle entirely), then spend the rest
+of the night re-verifying everything already shipped under sustained,
+unattended play.
+
+- **The actual gap**: `UI.helpContent()` (`js/ui.js`) still described the
+  original, pre-Final-Circle win condition — "The Deceivers win once they
+  equal or outnumber the Loyal" — with no mention that a lone surviving
+  Deceiver can in fact win the Final Circle outright against two Loyal, no
+  mention of the Final Circle existing at all, and no mention of Recruit or
+  Die. Added two new sections to the modal body (The Final Circle, Recruit
+  or Die) in the same voice as the existing copy, corrected the win-condition
+  sentence to stop overclaiming "equal or outnumber" as the only way
+  Deceivers win, and added one sentence noting the Deceiver Knowledge setup
+  toggle. Explaining Recruit or Die's existence in a rules reference isn't a
+  leak of secret state — same as how a held Shield's effect is public
+  knowledge even though who holds one isn't; it's the live, in-game moment
+  that stays private, not the rule.
+- **Verification**: a live screenshot check of the modal at two scroll
+  positions confirmed both new sections render cleanly with the existing
+  `.panel-title` styling and no overflow, at the same 390px viewport used
+  throughout this project. A text-content check script initially misfired
+  (it compared for the literal string "Final Circle" case-sensitively,
+  while `.panel-title` applies `text-transform: uppercase` — the rendered
+  `innerText` quite correctly came back as "THE FINAL CIRCLE"); confirmed
+  via the modal's raw `innerHTML` that the source text was exactly right
+  and the mismatch was the ad hoc check script's own case-sensitivity, not
+  an app bug.
+- **A deliberately adversarial check this round**: `interstitialPending`
+  (the flag that drives the fullscreen transition cards) is a plain
+  in-memory JS variable, not part of the persisted `state` object — so what
+  happens if a player reloads the page while an interstitial is actually on
+  screen? Verified directly: triggered the Reveal interstitial, confirmed
+  it was visible, then reloaded mid-display. The app boots to the Title
+  screen as it always does on a fresh load (saved games only resume via an
+  explicit Continue tap, by design, per the comment already in `main.js`),
+  with the overlay correctly gone and zero console errors — then confirmed
+  tapping Continue from there resumes cleanly straight to the Reveal screen
+  with no interstitial stuck on top of it and no leftover overlay. No fix
+  needed; the flag's intentional non-persistence degrades gracefully by
+  construction rather than by luck.
+- **Soak test**: re-ran the 10-trial computer-only regression
+  (`fc_regression_recruit.js`, 7–8 players, fully random play with no
+  engineered preconditions) once more overnight. 3 of the 10 trials
+  naturally reached the Recruit-or-Die precondition on their own (not
+  forced), and all three resolved cleanly through the private recruit →
+  response → elimination-reveal chain with the Draw interstitial still
+  firing unconditionally ahead of them, same as the deterministic tests
+  already confirmed by construction. 0 errors across all 10 trials.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1122,6 +1175,7 @@ of any kind, per the brief.
 | Spoken "Pass the phone to X" announcements (instrumented + playthroughs) | 1 instrumented 4-player test (mixed human/computer, 2 queues) + 1 full playthrough + 1 Final Circle regression, real unmocked announcePassDevice | 0 | — |
 | Recruit or Die + Final Circle entry fix + Deceiver Knowledge + sound/voice redesign | 2 deterministic click-through Recruit tests (Join + Refuse/Shield-bypass) + 1 majority-win integration test + 1 no-trigger-for-1-Deceiver test + 4 Final Circle round>1 tests + 2 Deceiver Knowledge mode tests + 18-cue execution check + 10-trial computer-only regression (7-8p) + full playthrough + existing Final Circle suite re-run | 0 | — |
 | Fullscreen interstitials + raster icon family (visual check + full regression) | 1 dedicated interstitial screenshot test (5 trigger points) + icon `naturalWidth`/`complete` DOM check + full existing suite re-run (3-player Final Circle, Recruit Join/Refuse, Final Circle round>1, 10-trial 7-8p computer-only regression) after patching every test script for the new overlay | 0 (fixed 13 test scripts for the new overlay rendering outside `.screen.active`, not an app bug) | — |
+| How To Play rules update + overnight soak test (visual check + reload/resume probe + regression) | 1 modal screenshot at 2 scroll positions + 1 reload-mid-interstitial probe + 1 continue-after-reload probe + 1 10-trial computer-only regression re-run (7-8p, 3 natural Recruit-or-Die triggers) | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
