@@ -155,6 +155,77 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   the goal was never zero scrolling, just that a button never rests flush
   against the literal device edge.
 
+### Interstitials and the raster icon family (follow-up round)
+
+Brief fullscreen transition cards between major phases, plus a new icon
+family — both built from assets supplied directly, not generated/drawn as
+part of this round. The brief was explicit that these should bridge "dead
+space between pieces of game flow," not turn every screen into a poster,
+so only 11 specific moments got one: Reveal, Draw, Night Falls, Murder,
+Banishment, Final Circle (first entry only — see below), End Game,
+Banish Again, Final Two, and the two win screens. Recruit or Die is the
+deliberate exception — strictly private, no public interstitial of any
+kind (see "Recruit or Die" below).
+
+**Asset processing**: the 11 supplied poster images (941×1672 originals,
+1-3MB each) were resized to 480px wide and re-encoded as JPEG quality 84
+(`assets/brand/interstitials/`, ~35KB each, ~385KB total) — the same
+compression approach already used for the title poster and watermark. The
+4 supplied icon images (1254×1254 RGBA originals) were resized to 200×200
+and re-saved as optimized PNG (`assets/brand/icons/`, 14-45KB each,
+~132KB total). ~520KB of new assets altogether, comparable to the
+existing title poster + watermark's combined weight.
+
+**Mechanism** (`ui.js`'s `UI.showInterstitial`, `main.js`'s
+`interstitialPending`): an action handler sets `interstitialPending = '
+<key>'` right before calling `render()`; `render()` checks for it first,
+before anything else (including the computer-seat auto-advance check),
+and if set, shows the fullscreen overlay instead of the normal phase
+screen, then calls `render()` again once it's dismissed — either after a
+fixed 1.7s or immediately on tap, whichever comes first. This single
+choke point meant every one of the ~9 distinct trigger locations only
+needed one line (`interstitialPending = 'draw'`, etc.) rather than
+duplicating show/hide logic at each call site.
+
+**Trigger mapping** — the interesting cases:
+- **Final Circle** shows only once, the moment it's first entered
+  (`'begin-final-circle'` action) — the image's own baked-in text ("FOUR
+  REMAIN") is specific to that exact moment and would read as wrong on a
+  later round where only three remain. Every *subsequent* re-entry into
+  the Final Circle's decision ballot (after a Banish Again vote, via
+  `continue-elimination`'s loop-back branch) shows **End Game** instead,
+  which has no round-specific number baked in.
+- **Night Falls** vs. **Murder** are two separate moments, not one: Night
+  Falls fires when the Night screen itself first appears (its own
+  "Begin The Night" button is still a human tap away), Murder fires once
+  that button is actually tapped and the per-player Murder queue begins.
+- Exactly one interstitial per game ending, never two stacked: a forced
+  end at two living players shows **Final Two** (the one ending nobody
+  chose); everything else — a unanimous End Game stop at 3 or 4, an
+  ordinary pre-Final-Circle Deceiver-majority win, or a majority win
+  firing mid-Final-Circle with more than two still living — shows
+  **Loyal Win** or **Deceiver Win** instead. The actual winner-sound cue
+  still always plays regardless of which interstitial (if either) shows.
+- **Draw** fires unconditionally on every `'begin-draw'` tap, *before*
+  branching into either an ordinary Draw Phase or a secret Recruit or Die
+  round — see "Recruit or Die," where this matters for staying invisible.
+
+**The raster icon family**: `iconUse(id, cls)` (`ui.js`) now checks a
+small `RASTER_ICONS` map before falling back to the original inline-SVG
+sprite — if `id` is one of the 4 supplied icons (Hooded Figure
+— reused for the Deceiver role *and* the Deceiver's Choice card,
+Shield, Dagger, or the ceremonial compass/star medallion used for
+"Gather Everyone" moments), it renders an `<img>` pointing at the new
+asset instead of `<svg><use>`. Centralizing this one place meant every
+one of `iconUse`'s ~15 existing call sites — direct calls and the ones
+reached indirectly through the shared `passPrompt()` template alike —
+picked up the new artwork automatically, with no risk of missing one by
+hand-editing each call site individually. `.icon`/`.icon-lg`/`.icon-sm`'s
+existing width/height sizing applies to an `<img>` exactly as it did to
+an `<svg>`, so no new CSS variants were needed — just `object-fit:
+contain` added defensively, in case a future icon's native aspect ratio
+doesn't perfectly match its target box.
+
 ## 4. Game Design Assumptions
 
 The brief specifies required screens and required card types but not exact
@@ -338,7 +409,13 @@ Draw Phase" button is *exactly* the same button, text, and action
 regardless of whether this round is actually an ordinary Draw or a
 Recruit-or-Die detour — the branch happens invisibly inside the
 begin-draw handler the instant it's tapped (`main.js`), not anywhere
-startRound or the screen itself can be inspected in advance. The spoken
+startRound or the screen itself can be inspected in advance. The same
+logic extends to the "Draw" interstitial added in a later round (see
+"Interstitials and the raster icon family," above) — it's set
+unconditionally, before the branch, so a Draw card appears every single
+round regardless of which one secretly fires; its absence specifically on
+the Recruit round would otherwise be exactly the kind of pattern this
+mechanic is designed to never produce. The spoken
 cues are equally careful: the lone Deceiver's own hand-off still gets the
 normal named "Pass the phone to [name]" announcement (nothing unusual
 about naming whoever's turn it is — see Reveal/Draw/Vote below), but the

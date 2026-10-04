@@ -27,6 +27,13 @@ const uiStage = {
   recruitResponseTapped: false,
 };
 
+/* Set by an action handler right before calling render() to request a
+   brief fullscreen interstitial (see ui.js's showInterstitial) ahead of
+   the next screen. Checked first thing in render(), below — intentionally
+   NOT part of uiStage/state, since it's a one-shot request, not
+   persistent UI state to track across renders. */
+let interstitialPending = null;
+
 Sound.setEnabled(state.settings.sound);
 Sound.setMusicEnabled(state.settings.music);
 
@@ -193,8 +200,10 @@ function handleFinalCircleDecision(decision) {
   if (nextPhase === PHASES.RESULTS) {
     Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
     Analytics.gameFinished();
+    interstitialPending = state.winner === ROLES.DECEIVER.id ? 'deceiver-win' : 'loyal-win';
   } else if (nextPhase === PHASES.DISCUSS) {
     Sound.play('gather');
+    interstitialPending = 'banish-again';
   }
   persist();
   render();
@@ -213,9 +222,9 @@ function resolveComputerTurn() {
         routeAfterDraw(state);
         uiStage.eliminationRevealed = false;
         uiStage.votingAnnounced = false;
-        if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
+        if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); }
+        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
       }
       break;
     }
@@ -267,9 +276,11 @@ function resolveComputerTurn() {
           Sound.play('gather');
           Sound.startMusic();
           startDiscussTimer();
+          interstitialPending = 'banish-again';
         } else if (nextPhase === PHASES.RESULTS) {
           Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
           Analytics.gameFinished();
+          interstitialPending = state.winner === ROLES.DECEIVER.id ? 'deceiver-win' : 'loyal-win';
         }
       }
       break;
@@ -286,6 +297,13 @@ function showScreen(phaseName) {
 }
 
 function render() {
+  if (interstitialPending) {
+    const key = interstitialPending;
+    interstitialPending = null;
+    UI.showInterstitial(key, render);
+    return;
+  }
+
   showScreen(state.phase);
   UI.updateHeader(state);
 
@@ -437,6 +455,7 @@ const actions = {
     startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
     Analytics.gameStarted();
     uiStage.revealTapped = false;
+    interstitialPending = 'reveal';
     persist();
     render();
   },
@@ -456,7 +475,12 @@ const actions = {
     // Looks identical regardless of which branch fires — see engine.js's
     // "Recruit or Die" section and startRound's comment for why nothing
     // here or on screen hints that this round is anything but ordinary.
+    // interstitialPending is set unconditionally, before the branch, for
+    // the same reason — a "Draw" card has to appear every single round
+    // regardless of which branch secretly fires, or its absence on the
+    // Recruit round would itself be a tell.
     Sound.play('tap');
+    interstitialPending = 'draw';
     if (shouldTriggerRecruitment(state)) {
       beginRecruitment(state);
       uiStage.recruitTapped = false;
@@ -472,6 +496,7 @@ const actions = {
     Sound.play('tap');
     beginFinalCircleDecision(state);
     uiStage.finalCircleTapped = false;
+    interstitialPending = 'final-circle';
     persist();
     render();
   },
@@ -498,9 +523,9 @@ const actions = {
       routeAfterDraw(state);
       uiStage.eliminationRevealed = false;
       uiStage.votingAnnounced = false;
-      if (state.phase === PHASES.NIGHT) Sound.play('nightFalls');
+      if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); }
+      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
     } else {
       // Still more players in the Draw queue — hand the phone on.
       Sound.play('passDevice');
@@ -514,6 +539,7 @@ const actions = {
     uiStage.murderTapped = false;
     uiStage.murderTarget = null;
     uiStage.useChoice = false;
+    interstitialPending = 'murder';
     render();
   },
   'begin-vote-now': () => {
@@ -623,7 +649,8 @@ const actions = {
     // A Final Circle banishment continues differently from an ordinary
     // one — no fresh Fate-card round, just another End Game / Banish
     // Again decision (or the game ending outright) — see engine.js.
-    if (state.eliminationContext === 'final') {
+    const wasFinalCircleElimination = state.eliminationContext === 'final';
+    if (wasFinalCircleElimination) {
       continueAfterFinalCircleBanishment(state);
     } else {
       continueAfterElimination(state);
@@ -635,6 +662,15 @@ const actions = {
     if (state.phase === PHASES.RESULTS) {
       Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
       Analytics.gameFinished();
+      // "Final Two" is its own distinct beat (the one ending that isn't
+      // anyone's choice) and replaces the win interstitial for that one
+      // path, rather than stacking two interstitials back to back; a
+      // Deceiver-majority win firing mid-Final-Circle with more than two
+      // still living gets the ordinary win interstitial instead.
+      const livingCount = state.players.filter((p) => p.alive).length;
+      interstitialPending = (wasFinalCircleElimination && livingCount <= 2)
+        ? 'final-two'
+        : (state.winner === ROLES.DECEIVER.id ? 'deceiver-win' : 'loyal-win');
     } else if (state.phase === PHASES.MAIN) {
       // The game continues into a fresh round — its own distinct cue,
       // not the previous round's closing sound bleeding into it.
@@ -643,6 +679,7 @@ const actions = {
       // Looping back into another Final Circle round — the same summoning
       // bell used to enter Open Discussion, calling the circle back in.
       Sound.play('gather');
+      interstitialPending = 'end-game';
     } else {
       Sound.play('tap');
     }
@@ -683,6 +720,7 @@ const actions = {
     startNextGameInSeries(state);
     Analytics.gameStarted();
     uiStage.revealTapped = false;
+    interstitialPending = 'reveal';
     persist();
     render();
   },

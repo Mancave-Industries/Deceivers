@@ -47,10 +47,28 @@ all three `assets/brand/...` references with them in `css/style.css`
 (`url('../assets/brand/deceivers-title-poster.jpg')` on `#screen-title`,
 `url('../assets/brand/mancave-gameshed-badge.jpg')` on `.app::before`, and
 `url('../assets/brand/grain.png')` on `.app-grain`). All three are CSS
-`background-image`s now — nothing in the HTML or JS panels references
-them directly. Without this step the Title screen, watermark, and grain
-texture will silently fail to load (missing background) while everything
-else keeps working, since none of those three are required for gameplay.
+`background-image`s now. Without this step the Title screen, watermark,
+and grain texture will silently fail to load (missing background) while
+everything else keeps working, since none of those three are required for
+gameplay.
+
+**15 more raster assets (interstitials + icon family), referenced from JS
+this time, not CSS**: `assets/brand/interstitials/*.jpg` (11 files —
+reveal, draw, night-falls, murder, banishment, final-circle, end-game,
+banish-again, final-two, loyal-win, deceiver-win) and
+`assets/brand/icons/*.png` (4 files — hooded-figure, shield, dagger,
+compass-medallion). Unlike the three above, these are built into HTML
+strings inside `js/ui.js` (`INTERSTITIAL_IMAGES` and `RASTER_ICONS`, near
+the top of the file) rather than sitting in `css/style.css` — upload all
+15 the same way, then edit those two maps' values to the CodePen-hosted
+URLs instead of the relative `assets/brand/...` paths. Skipping this step
+is more noticeable than the three assets above: every interstitial card
+renders as a blank dark flash for its ~1.7s instead of showing anything,
+and the Deceiver role icon, Shield, Dagger, and the "Gather Everyone"
+compass icon all render as broken-image boxes everywhere they appear
+(Setup's Human toggle, card art, the How To Play modal, every relevant
+pass-prompt) — gameplay itself still works either way; nothing here is
+read by the engine.
 
 ## Font (new — add this in CodePen's settings, not a panel)
 

@@ -1039,6 +1039,63 @@ and a ground-up pass on the game's audio character and spoken coverage.
   playthrough and the existing Final Circle regression suite were re-run
   clean against every change in this round.
 
+## 26. Fullscreen interstitials and a raster icon family (follow-up round)
+
+The visual half of last round's full spec: 11 brief fullscreen transition
+cards between major phases, built from assets supplied directly, plus a
+new 4-icon raster family replacing 4 specific inline-SVG icons throughout
+the app. Recruit or Die was explicitly excluded — no public interstitial
+of any kind, per the brief.
+
+- **Asset processing**: the 11 poster images (941×1672, 1-3MB originals)
+  were resized to 480px wide and re-encoded as JPEG q84 (~35KB each,
+  ~385KB total); the 4 icon images (1254×1254 RGBA) were resized to
+  200×200 and re-saved as optimized PNG (14-45KB each, ~132KB total) —
+  ~520KB of new assets altogether, comparable to the existing title
+  poster + watermark's combined weight.
+- **Mechanism**: a single choke point (`interstitialPending`, checked
+  first thing in `render()`, before even the computer-seat auto-advance
+  check) meant every one of the ~9 distinct trigger locations across
+  `main.js` only needed to set one variable before calling `render()`,
+  rather than duplicating show/hide logic at each site.
+- **Icon family**: centralized inside `iconUse()` itself (`ui.js`) via a
+  small `RASTER_ICONS` lookup, rather than touching `iconUse`'s ~15
+  existing call sites individually — every call that happens to reference
+  one of the 4 replaced icon ids (Hooded Figure, Shield, Dagger, the
+  compass/star medallion) automatically picks up the new artwork, direct
+  calls and the ones reached indirectly through the shared `passPrompt()`
+  template alike, with no risk of missing one by hand-editing each site.
+- **A deliberate interaction with Recruit or Die**: the Draw interstitial
+  is set unconditionally in the begin-draw handler, *before* the branch
+  into either an ordinary Draw Phase or a secret Recruit or Die round —
+  not an afterthought, but a direct consequence of re-reading Recruit or
+  Die's own "nobody else sees anything different" invariant while
+  designing this round: skipping the interstitial specifically on a
+  secretly-Recruit round would itself have been exactly the kind of tell
+  that invariant exists to prevent. Documented in both the Interstitials
+  and Recruit or Die sections of PROJECT_PLAN.md so it's traceable from
+  either direction, and confirmed in testing (the Join/Refuse determinism
+  tests below both pass through a begin-draw tap on their way to
+  engineering the Recruit precondition, so they exercise this path too).
+- **Verification**: a dedicated screenshot test confirmed the overlay
+  renders correctly mid-playthrough (Reveal, Draw, Final Circle, and
+  both win interstitials captured and visually inspected — an early
+  capture caught the CSS fade-in transition itself, a 220ms cosmetic
+  artifact of screenshot timing, not a bug, confirmed by re-capturing
+  after the transition settles). The icon family was verified by
+  checking every `<img class="icon...">` element's `naturalWidth` and
+  `complete` state directly (all loaded successfully) plus a visual check
+  on the Setup screen's Human/Computer toggle. Every existing automated
+  test script needed a small patch — interstitials render outside
+  `.screen.active`, so the established "click the first available button"
+  driver pattern needed an added step to detect and dismiss them first;
+  once patched, the full existing suite (the 3-player Final Circle path,
+  the Recruit or Die Join/Refuse determinism tests, the Final Circle
+  round>1 regression, and a 10-trial computer-only regression across
+  7-8 players) was re-run clean — 0 console errors throughout, including
+  the cases where interstitials, Recruit or Die, and computer-seat
+  auto-advance all overlap in the same playthrough.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1064,6 +1121,7 @@ and a ground-up pass on the game's audio character and spoken coverage.
 | Grainy headline text fix (visual check + playthrough) | 5 screenshots (all headline selectors) + 1 Final Circle regression + 1 full playthrough | 0 (fix for a bug from an earlier, already-reverted round) | 1 (same layer-order/blend fix already proven on backgrounds) |
 | Spoken "Pass the phone to X" announcements (instrumented + playthroughs) | 1 instrumented 4-player test (mixed human/computer, 2 queues) + 1 full playthrough + 1 Final Circle regression, real unmocked announcePassDevice | 0 | — |
 | Recruit or Die + Final Circle entry fix + Deceiver Knowledge + sound/voice redesign | 2 deterministic click-through Recruit tests (Join + Refuse/Shield-bypass) + 1 majority-win integration test + 1 no-trigger-for-1-Deceiver test + 4 Final Circle round>1 tests + 2 Deceiver Knowledge mode tests + 18-cue execution check + 10-trial computer-only regression (7-8p) + full playthrough + existing Final Circle suite re-run | 0 | — |
+| Fullscreen interstitials + raster icon family (visual check + full regression) | 1 dedicated interstitial screenshot test (5 trigger points) + icon `naturalWidth`/`complete` DOM check + full existing suite re-run (3-player Final Circle, Recruit Join/Refuse, Final Circle round>1, 10-trial 7-8p computer-only regression) after patching every test script for the new overlay | 0 (fixed 13 test scripts for the new overlay rendering outside `.screen.active`, not an app bug) | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

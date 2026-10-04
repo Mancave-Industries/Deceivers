@@ -22,7 +22,28 @@ function initials(name) {
   return (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
 }
 
+/* The new raster icon family (replacing these 4 specific inline-SVG
+   symbols throughout the app — see the asset-processing note in
+   PROJECT_PLAN.md's Interstitials section) is wired in centrally here
+   rather than at each of iconUse's ~15 call sites, including the ones
+   that go through passPrompt's shared template: every existing call that
+   happens to reference one of these 4 icon ids automatically renders the
+   new artwork with zero changes needed at the call site itself, and
+   every other icon id keeps using the inline SVG sprite exactly as
+   before. ICONS.compass is the one of these 4 not tied to a specific
+   Fortune card — it's the ceremonial "Gather Everyone"/ready-bell icon. */
+const RASTER_ICONS = {
+  [ICONS.hoodedFigure]: 'assets/brand/icons/hooded-figure.png',
+  [ICONS.shield]: 'assets/brand/icons/shield.png',
+  [ICONS.dagger]: 'assets/brand/icons/dagger.png',
+  [ICONS.compass]: 'assets/brand/icons/compass-medallion.png',
+};
+
 function iconUse(id, cls) {
+  const raster = RASTER_ICONS[id];
+  if (raster) {
+    return `<img class="${cls || 'icon'}" src="${raster}" alt="" draggable="false">`;
+  }
   return `<svg class="${cls || 'icon'}" aria-hidden="true"><use href="#${id}"></use></svg>`;
 }
 
@@ -701,6 +722,57 @@ UI.showModal = function showModal(title, bodyHtml) {
 
 UI.hideModal = function hideModal() {
   document.getElementById('modalOverlay').classList.add('hidden');
+};
+
+/* ---------- Interstitials (brief fullscreen transition cards) ----------
+   Shown between major phases — see main.js's interstitialPending for the
+   full list of trigger points. Deliberately NOT used for Recruit or Die
+   (a strictly private, two-player event with no public announcement of
+   any kind) or for a Quiet Night (no asset exists for it; an uneventful
+   night is meant to read as uneventful, not get its own title card). */
+const INTERSTITIAL_IMAGES = {
+  reveal: 'assets/brand/interstitials/reveal.jpg',
+  draw: 'assets/brand/interstitials/draw.jpg',
+  'night-falls': 'assets/brand/interstitials/night-falls.jpg',
+  murder: 'assets/brand/interstitials/murder.jpg',
+  banishment: 'assets/brand/interstitials/banishment.jpg',
+  'final-circle': 'assets/brand/interstitials/final-circle.jpg',
+  'end-game': 'assets/brand/interstitials/end-game.jpg',
+  'banish-again': 'assets/brand/interstitials/banish-again.jpg',
+  'final-two': 'assets/brand/interstitials/final-two.jpg',
+  'loyal-win': 'assets/brand/interstitials/loyal-win.jpg',
+  'deceiver-win': 'assets/brand/interstitials/deceiver-win.jpg',
+};
+const INTERSTITIAL_DURATION_MS = 1700;
+let interstitialDismissTimer = null;
+
+/* Shows the named interstitial, then calls onComplete either once the
+   timer elapses or the moment it's tapped (whichever comes first) — a
+   brief cinematic beat, never something the game waits long on. If the
+   key is unrecognized, resolves immediately with no visual at all rather
+   than risk ever getting stuck on a blank overlay. */
+UI.showInterstitial = function showInterstitial(key, onComplete) {
+  const src = INTERSTITIAL_IMAGES[key];
+  const overlay = document.getElementById('interstitialOverlay');
+  const img = document.getElementById('interstitialImg');
+  if (!src || !overlay || !img) {
+    if (onComplete) onComplete();
+    return;
+  }
+  img.src = src;
+  overlay.classList.remove('hidden');
+
+  let done = false;
+  const finish = () => {
+    if (done) return;
+    done = true;
+    clearTimeout(interstitialDismissTimer);
+    overlay.removeEventListener('click', finish);
+    overlay.classList.add('hidden');
+    if (onComplete) onComplete();
+  };
+  overlay.addEventListener('click', finish, { once: true });
+  interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_DURATION_MS);
 };
 
 UI.helpContent = function helpContent() {

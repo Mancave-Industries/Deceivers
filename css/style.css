@@ -191,6 +191,7 @@ body {
   color: var(--gold-400);
   fill: none;
   flex-shrink: 0;
+  object-fit: contain; /* no-op for the inline-SVG icons, keeps the raster icon family (see iconUse in ui.js) from ever distorting */
 }
 .icon-lg { width: 32px; height: 32px; }
 .icon-sm { width: 16px; height: 16px; }
@@ -735,6 +736,36 @@ body {
 .role-reveal-row.loyal { border-left: 4px solid var(--midnight-500); }
 
 /* ---------- Modal ---------- */
+/* ---------- Interstitials ----------
+   Brief fullscreen transition cards between major phases (Draw, Night,
+   Murder, Banishment, Reveal, Final Circle, etc.) — see ui.js's
+   showInterstitial and the INTERSTITIAL_IMAGES map. z-index above the
+   modal (80 vs 60): the two should never overlap in practice, but if a
+   modal were somehow left open, the interstitial still needs to read as
+   the more urgent, momentary thing. Tap anywhere to skip early. */
+.interstitial-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--charcoal-950);
+  cursor: pointer;
+  animation: interstitialFade 220ms ease;
+}
+.interstitial-overlay.hidden { display: none; }
+.interstitial-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@keyframes interstitialFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
