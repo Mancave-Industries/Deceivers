@@ -9,6 +9,10 @@ const CONFIG = {
   maxPlayers: 8,
   // Living players at/below this count trigger Final Banishment instead of a normal vote.
   finalBanishmentThreshold: 3,
+  // Optional real licensed music, played by the host's own Spotify app
+  // alongside the game rather than embedded in it — tapping the link just
+  // opens Spotify; nothing here talks to Spotify's API or touches auth.
+  spotifyPlaylistUrl: 'https://open.spotify.com/playlist/0e1mniDxAo46QOU30W6tIQ?si=eOez9FZ-SCWZVqQCVDD2uQ&utm_source=copy-link&pi=gYE-oZ1JSdWkP',
 };
 
 const ICONS = {

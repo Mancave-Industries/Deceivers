@@ -512,6 +512,27 @@ button effectively was, and the reason it got replaced).
   screen, and confirmed the playthrough still reached Results with 0
   console errors.
 
+## 15. Spotify playlist link-out (follow-up round)
+
+Added `CONFIG.spotifyPlaylistUrl` (a curated playlist link) and an "Open
+Our Playlist In Spotify" link in two places — the Settings modal and the
+Discuss screen — both plain `<a href="..." target="_blank" rel="noopener
+noreferrer">` elements, nothing more. This is a deliberately simpler
+alternative to an embedded Spotify player: tapping it just hands off to
+the host's own Spotify app/tab; the game itself never makes a request to
+Spotify, never authenticates, and has no embedded player state to manage.
+The tradeoff, accepted on purpose: this audio source can't be ducked or
+coordinated with the game's own synthesized discussion music, so the two
+aren't really meant to run at once.
+
+- **Live headless verification**: confirmed the link appears in both
+  locations with the exact URL as given (query string and all — `si`,
+  `utm_source` and `pi` params preserved unmodified), `target="_blank"`,
+  and `rel="noopener noreferrer"` on both. Confirmed the new link doesn't
+  interfere with the global `[data-action]` click-delegation system —
+  the "Skip Ahead" button sitting right next to it on the Discuss screen
+  still works, landing on the real vote queue afterward. 0 console errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -526,6 +547,7 @@ button effectively was, and the reason it got replaced).
 | Crescendo + spoken line (unit timing + live integration) | 3 timing scenarios + 1 full UI playthrough | 0 | — |
 | Discussion clock + audio quality pass (unit + live integration) | 1 unit scenario + 1 full UI playthrough | 0 (1 test-script selector bug, unscoped from `.screen.active`, same class of mistake documented in earlier rounds; fixed in the test, not the app) | — |
 | Skip Ahead early-vote option (live integration) | 1 full UI playthrough | 0 (1 test-timing bug in my own test script — checked the sting screen's text after it had already transitioned away, since the sequence resolves near-instantly with sound off; fixed in the test, not the app) | — |
+| Spotify playlist link-out (live integration) | 1 full UI playthrough | 0 (1 test-timing bug of the same kind, same fix) | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
