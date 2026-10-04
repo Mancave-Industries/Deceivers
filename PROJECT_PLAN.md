@@ -55,7 +55,10 @@ assets/
   gamecards/    gold-one, gold-three, gold-five, dagger, shield, quiet-night,
                  murder, banishment, final-banishment, deceivers-choice
   ui/           button-primary, button-danger, button-confirm, modal-panel,
-                 player-row, prize-pot-panel, hand-panel, title-treatment
+                 player-row, prize-pot-panel, hand-panel
+  brand/        deceivers-title-seal.jpg, mancave-gameshed-badge.jpg, grain.png
+                 — raster key art and texture, not vector; see "Visual
+                 Design System" below for why these three are raster
 PROJECT_PLAN.md
 TEST_REPORT.md
 CODEPEN_EXPORT.md
@@ -72,14 +75,24 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
 - **Type**: system serif stack for ceremonial headings (Georgia/"Iowan Old
   Style"/Times New Roman fallback — no paid webfonts), system sans for UI
   body text/buttons for legibility at small sizes.
-- **Texture**: CSS-only — radial vignettes, subtle noise via layered
-  `repeating-conic-gradient`, hairline gold borders, soft inner shadows to
-  suggest aged parchment/leather without any raster images.
+- **Texture**: mostly CSS — radial vignettes, hairline gold borders, soft
+  inner shadows — plus three small raster assets (`assets/brand/`) where
+  CSS alone couldn't do the job: `deceivers-title-seal.jpg` (the real
+  brand key art, used whole as the Title screen's hero image — a
+  hand-distressed stamped-medallion look isn't something gradients and
+  box-shadows can fake convincingly), `mancave-gameshed-badge.jpg` (the
+  app-wide watermark, §below), and a tiny 64×64 `grain.png` tile
+  (`.app-grain`, `overlay` blend at 10% opacity) laid over the whole app
+  for a faint, always-on film-grain pass — pushing the general feel
+  toward that key art's distressed/stamped-metal look without needing a
+  texture behind every individual component.
 - **Motion**: restrained — fades, gentle scale-ins, a candle flicker
   keyframe, card flip on reveal. No bouncy/gamey easing.
 - **Icons/cards**: all inline SVG, single/double color (gold line art on
   transparent, or gold-on-crimson/midnight fills for frames), so they inherit
-  `currentColor` and scale crisply at any size.
+  `currentColor` and scale crisply at any size. The Title screen is the one
+  exception (raster key art, above) — every other icon, card frame, and UI
+  chrome piece stays vector so it scales crisply and costs nothing to load.
 - **Edge safe zones**: `--edge-buffer-top`/`--edge-buffer-bottom`
   (`:root`, `css/style.css`) each reserve `max(10vh, env(safe-area-inset-*,
   0px))` — a flat 10% of viewport height at top and bottom, with the iOS

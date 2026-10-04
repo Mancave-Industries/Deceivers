@@ -22,20 +22,45 @@ down through:
 ```
 
 (the closing tag of `<div class="app" id="app">`). This includes the
-`<svg class="sprite-defs">` block with all 41 `<symbol>` definitions, the
-header, all 12 `<section class="screen">` containers, the modal markup, and
-the toast — the sprite sheet is inline SVG, so nothing outside the HTML
-panel is needed to see icons or card art.
+`<svg class="sprite-defs">` block with all the `<symbol>` definitions (icons
+and card art), the `.app-grain` div, the header, all 13
+`<section class="screen">` containers, the modal markup, and the toast —
+the sprite sheet is inline SVG, so nothing outside the HTML panel is needed
+to see icons or card art.
 
 Do **not** paste the `<link rel="stylesheet" href="css/style.css">` or the
-five `<script src="js/...">` tags — CodePen's own panels replace those.
+six `<script src="js/...">` tags — CodePen's own panels replace those.
+
+## Raster assets (new — upload these first)
+
+Unlike the icons/cards, three small images are **not** inline SVG and need
+to be uploaded to CodePen's Asset panel before the HTML/CSS panels will
+render correctly:
+
+- `assets/brand/deceivers-title-seal.jpg` (Title screen hero art)
+- `assets/brand/mancave-gameshed-badge.jpg` (app-wide watermark)
+- `assets/brand/grain.png` (film-grain texture tile)
+
+Upload all three via CodePen's Asset panel (Pen Settings → Assets, or drag
+them into the editor), then copy each one's CodePen-hosted URL and replace
+the corresponding `assets/brand/...` reference with it — two in `css/
+style.css` (`url('../assets/brand/mancave-gameshed-badge.jpg')` and
+`url('../assets/brand/grain.png')`) and one in the HTML panel (the Title
+screen's `<img src="assets/brand/deceivers-title-seal.jpg">`, rendered by
+`UI.renderTitle` in `js/ui.js` — if you'd rather not hand-edit rendered
+output, change the `src` in that function instead and re-paste the JS
+panel). Without this step the Title screen, watermark, and grain texture
+will silently fail to load (broken image / missing background) while
+everything else keeps working, since none of those three are required for
+gameplay.
 
 ## CSS panel
 
-Paste the entire contents of `css/style.css` as-is. It has no imports,
-no external fonts, and no url() references to local files — every visual
-asset it needs is the inline SVG sprite already sitting in the HTML panel,
-so nothing else needs to be attached in CodePen's Asset panel.
+Paste the entire contents of `css/style.css` as-is, after swapping in the
+two CodePen asset URLs described above. It has no imports and no external
+fonts — every icon/card asset it needs is the inline SVG sprite already
+sitting in the HTML panel; only the two `url(...)` references above point
+outside it.
 
 ## JS panel
 
@@ -63,8 +88,9 @@ in current browsers.
 
 After pasting all three panels:
 
-1. The Title screen should render immediately with the gold compass emblem
-   and "NEW GAME" / "HOW TO PLAY" buttons.
+1. The Title screen should render immediately with the title seal image
+   and "NEW GAME" / "HOW TO PLAY" buttons. If the seal is a broken-image
+   icon instead, the asset-URL swap above wasn't done.
 2. Open the browser console — there should be no errors (a 404 for
    `/favicon.ico` from CodePen's own preview frame is normal and unrelated).
 3. Play through Setup → Reveal → a full round to confirm the SVG sprite

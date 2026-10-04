@@ -597,6 +597,57 @@ the new artwork.
   against it on every screen checked; no masking or sizing changes were
   needed for the new artwork.
 
+## 18. Title screen key art + app-wide grain texture (follow-up round)
+
+Reported direction: push the whole game's look "edgier," using the
+brand's real front-page key art (a distressed stamped-medallion lockup of
+"THE DECEIVERS" title, compass emblem, tagline, and the Mancave Industries
+/ Game Shed / Mangrenade badge, all in one piece) as the reference.
+
+- **Title screen**: `UI.renderTitle` now renders that key art directly
+  (`assets/brand/deceivers-title-seal.jpg`, an `<img>`) in place of the
+  old inline-SVG compass-and-text emblem, framed with a gold hairline
+  border and deep shadow so it reads as a physical stamped medallion
+  rather than a flat logo. The separate text byline and small dot-rule
+  divider that used to sit around the old emblem were removed — this
+  image already carries the full lockup (title, tagline, and brand
+  attribution) as one cohesive piece, so they'd have been redundant.
+  Removed the now-fully-unused `#title-treatment` `<symbol>` from the
+  inline sprite sheet and its standalone source file
+  (`assets/ui/title-treatment.svg`) — dead code once nothing referenced it.
+- **App-wide grain**: added a small 64×64 generated noise tile
+  (`assets/brand/grain.png`, `overlay` blend at 10% opacity, tiled across
+  a new `.app-grain` div) as a deliberately subtle always-on texture pass
+  over every screen — a lightweight, no-new-dependency nudge toward the
+  key art's distressed-metal feel everywhere, not just on the Title
+  screen, without needing a texture asset behind every individual
+  component.
+- Updated `CODEPEN_EXPORT.md`: the Pen export previously needed zero
+  files in CodePen's Asset panel (everything was inline SVG). That's no
+  longer true — three raster assets now exist (title seal, watermark,
+  grain tile) and must be uploaded there with their `assets/brand/...`
+  references swapped to CodePen-hosted URLs, or the Title screen,
+  watermark, and grain silently fail to load in a Pen export while
+  everything else keeps working.
+- **Verification**: screenshotted Title and Setup to confirm the new key
+  art renders correctly, is framed cleanly, and doesn't crowd or obscure
+  the action buttons below it; confirmed via a full headless playthrough
+  that the title `<img>` actually loads (`naturalWidth > 0`, not a broken
+  image) and the game still completes to Results with 0 console errors
+  (catches both a broken image path and any syntax error from the symbol
+  removal).
+
+**Scope note, not yet done**: the key art's bold, heavily distressed
+display typeface ("THE DECEIVERS" lettering) isn't something the current
+system-font stack (Georgia/Times New Roman — chosen specifically to avoid
+any webfont network dependency) can replicate; matching it everywhere
+headings appear would mean either loading a free webfont (a new network
+dependency, the same category of tradeoff as the analytics ping and
+Spotify link, but one that hadn't been crossed yet for anything
+load-bearing like text rendering) or living with the current serif.
+Left as an open decision rather than made unilaterally — see the day's
+conversation for the question put to the user.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -614,6 +665,7 @@ the new artwork.
 | Spotify playlist link-out (live integration) | 1 full UI playthrough | 0 (1 test-timing bug of the same kind, same fix) | — |
 | Edge safe zones (automated bounding-box audit) | 10 screens/modals at default content + 1 worst-case 8-player stress test | 1 (Setup-screen overflow pushing its button into the bottom buffer at rest) | 1 |
 | Watermark artwork + opacity update (visual check) | 3 screenshots | 0 | — |
+| Title key art + app-wide grain (visual check + full playthrough) | 2 screenshots + 1 full UI playthrough | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

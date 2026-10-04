@@ -159,6 +159,24 @@ body {
   opacity: 0.4;
 }
 
+/* A faint, always-on film-grain pass over the whole app — pushes the
+   aesthetic toward the brand's distressed/stamped-metal key art without
+   needing a texture asset behind every single component. Overlay blend
+   mode makes it read as surface grain (darkening already-dark areas,
+   lifting lighter ones slightly) rather than a flat noisy layer sitting
+   on top. */
+.app-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../assets/brand/grain.png');
+  background-repeat: repeat;
+  background-size: 64px 64px;
+  mix-blend-mode: overlay;
+  opacity: 0.1;
+}
+
 .sprite-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .icon {
@@ -323,21 +341,12 @@ body {
   gap: 34px;
   text-align: center;
 }
-.title-emblem-svg { width: 240px; height: auto; }
-.title-rule {
-  width: 150px;
-  height: 10px;
-  background:
-    radial-gradient(circle, var(--gold-500) 0 1.5px, transparent 2.5px) center / 10px 10px no-repeat,
-    linear-gradient(90deg, transparent, var(--gold-700) 32%, var(--gold-700) 68%, transparent) center / 100% 1px no-repeat;
-  opacity: 0.45;
-}
-.title-byline {
-  font-size: 10.5px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--ink-dim);
-  opacity: 0.6;
+.title-seal {
+  width: 290px;
+  max-width: 78vw;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-deep), 0 0 0 1px rgba(201,162,75,0.5);
 }
 .title-actions {
   display: flex;
