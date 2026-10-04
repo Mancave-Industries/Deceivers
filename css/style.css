@@ -114,12 +114,13 @@ body {
   flex-direction: column;
 }
 
-/* Mancave Industries / Game Shed badge, worked in as a faint always-there
-   watermark rather than a logo anyone has to look at — screen blend mode
-   drops its own near-black background out against ours and leaves only
-   the gold/coral linework, just barely readable. Sits behind every screen
-   (.screen has no background of its own, so this shows through the empty
-   space of all of them) and never intercepts taps. */
+/* Mancave Industries / Game Shed badge, worked in as an always-there
+   watermark at the brand's specified 15% opacity — screen blend mode
+   drops its own dark background out against ours and brightens the
+   cream/gold linework, so it reads as a legible stamp rather than a flat
+   logo pasted on top. Sits behind every screen (.screen has no background
+   of its own, so this shows through the empty space of all of them) and
+   never intercepts taps. */
 .app::before {
   content: "";
   position: absolute;
@@ -130,7 +131,7 @@ body {
   background-repeat: no-repeat;
   background-position: center 56%;
   background-size: 60%;
-  opacity: 0.045;
+  opacity: 0.15;
   mix-blend-mode: screen;
   -webkit-mask-image: radial-gradient(circle, #000 32%, transparent 68%);
   mask-image: radial-gradient(circle, #000 32%, transparent 68%);

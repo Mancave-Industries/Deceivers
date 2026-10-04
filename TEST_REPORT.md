@@ -575,6 +575,28 @@ Instagram/TikTok/etc.) can cover or intercept taps.
   The goal was never eliminating scrolling, only ensuring a button is
   never flush against the literal device edge once it's actually in view.
 
+## 17. Updated watermark artwork at 15% opacity (follow-up round)
+
+Replaced `assets/brand/mancave-gameshed-badge.jpg` with the brand's actual
+distressed-stamp artwork (circular "MANCAVE INDUSTRIES / MCI / GAME SHED
+DIV" seal with its own baked-in tiled background texture), resized to
+700×700 and re-compressed (~140KB). Raised `.app::before`'s `opacity` from
+the earlier ad-hoc `0.045` to the specified `0.15` — explicit brand
+instruction, not a value chosen for subtlety this time. Kept the existing
+`screen` blend mode and radial mask (crops the image's own square canvas
+edges to a soft circular falloff) since both still read correctly against
+the new artwork.
+
+- **Visual check**: screenshotted Title, Setup, and a Reveal pass-prompt
+  screen. At 15% the ring text ("MANCAVE INDUSTRIES", "GAME SHED DIV") is
+  now legibly readable behind sparse screens (Title, pass-prompts) — a
+  deliberate step up from the earlier barely-there treatment — while
+  staying out of the way on content-dense screens like Setup, where
+  opaque card/input/panel backgrounds cover most of it anyway. Game-
+  critical text (player names, instructions, buttons) stayed fully legible
+  against it on every screen checked; no masking or sizing changes were
+  needed for the new artwork.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -591,6 +613,7 @@ Instagram/TikTok/etc.) can cover or intercept taps.
 | Skip Ahead early-vote option (live integration) | 1 full UI playthrough | 0 (1 test-timing bug in my own test script — checked the sting screen's text after it had already transitioned away, since the sequence resolves near-instantly with sound off; fixed in the test, not the app) | — |
 | Spotify playlist link-out (live integration) | 1 full UI playthrough | 0 (1 test-timing bug of the same kind, same fix) | — |
 | Edge safe zones (automated bounding-box audit) | 10 screens/modals at default content + 1 worst-case 8-player stress test | 1 (Setup-screen overflow pushing its button into the bottom buffer at rest) | 1 |
+| Watermark artwork + opacity update (visual check) | 3 screenshots | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
