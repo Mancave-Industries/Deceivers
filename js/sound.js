@@ -227,24 +227,41 @@ const Sound = (() => {
     }
   }
 
-  /* Announces whose turn it is to hold the phone — called once for every
-     per-player queue turn (Reveal, Draw, Murder, Vote, Final Circle
-     decision). Deliberately just the player's own name, nothing else: it
-     carries no role information, so it's exactly as identical-every-turn
-     as the Murder queue's anonymity rule already requires (see this
-     file's header note) — every living player's turn gets this same
-     announcement, naming whoever's turn it actually is, Deceiver or not.
-     Cancels any previous still-speaking utterance first, since a table
-     tapping through turns quickly could otherwise queue up a backlog of
-     stale "pass to X" lines that would play late/out of order. */
-  function announcePassDevice(name) {
+  /* Shared by every short host-style instruction below — cancels any
+     previous still-speaking utterance first (a table moving quickly
+     through turns could otherwise queue up a backlog of stale lines that
+     play late/out of order), then speaks the new one. Fire-and-forget;
+     nothing here waits on the result. */
+  function announceInstruction(text) {
     if (!enabled || !('speechSynthesis' in window)) return;
     try {
       window.speechSynthesis.cancel();
     } catch (e) {
       /* ignore */
     }
-    speak(`Pass the phone to ${name}.`);
+    speak(text);
+  }
+
+  /* Announces whose turn it is to hold the phone — called once for every
+     per-player queue turn (Reveal, Draw, Vote, Final Circle decision).
+     Deliberately just the player's own name, nothing else: it carries no
+     role information, so naming whoever's turn it actually is leaks
+     nothing even for the Murder queue's acting-Deceiver turn specifically
+     — every living player's turn already gets this same announcement.
+     Pass a falsy name (used for the Murder queue, and never for the
+     Recruit-response hand-off — see main.js) to get a generic "next
+     player" line instead of a name: Murder's queue already treats every
+     turn as identical in screen and sound (see this file's header note),
+     and a bare "next player" line matches that same ritual anonymity a
+     touch better than naming each person in turn would, even though
+     naming would still be technically safe there too. The Recruit-
+     response hand-off is different in kind, not just in style — saying
+     the recruit's real name aloud would be audible to the whole room even
+     though the screen itself stays private, so main.js announces that
+     one with its own fixed, non-identifying line instead of calling this
+     function at all. */
+  function announcePassDevice(name) {
+    announceInstruction(name ? `Pass the phone to ${name}.` : 'Pass the phone to the next player.');
   }
 
   /* ---------- Primitives ---------- */
@@ -310,27 +327,85 @@ const Sound = (() => {
     freqs.forEach((f, i) => envTone(f, { ...opts, start: (opts.start || 0) + i * (opts.stagger || 0) }));
   }
 
-  /* ---------- Named cues ---------- */
+  /* A physical, dry impact — a sub-sine "body" under a short lowpassed
+     noise "knock". The weighty, non-musical backbone for anything meant
+     to land like a real object striking a surface (a gavel, a card
+     slapped down, a door) rather than ring like an instrument. */
+  function thud(freq, { start = 0, dur = 0.3, peak = 0.2, noiseFreq = 500 } = {}) {
+    noiseBurst({ start, dur: Math.min(dur, 0.1), peak: peak * 0.9, filterFreq: noiseFreq, filterType: 'lowpass', filterQ: 0.8 });
+    envTone(freq, { type: 'sine', start, dur, peak, attack: 0.004, endFreq: freq * 0.6 });
+  }
+
+  /* A short wooden knock — tight bandpass noise around a low-mid
+     resonance, sharp attack, fast decay. No tonal/melodic content at all,
+     which is the point: a dry, physical click rather than a digital
+     "beep," for anything standing in for a hand, a card, or a phone
+     touching a surface. */
+  function woodKnock({ start = 0, dur = 0.07, peak = 0.14, freq = 320 } = {}) {
+    noiseBurst({ start, dur, peak, filterFreq: freq, filterType: 'bandpass', filterQ: 2.5 });
+  }
+
+  /* A brief metallic ring — high-Q bandpass noise with a longer, ringing
+     decay than woodKnock. Used sparingly (coin, shield, bell strike) —
+     the one place a little brightness is earned, since actual metal
+     really does ring like this. */
+  function metalRing({ start = 0, dur = 0.3, peak = 0.14, freq = 2400 } = {}) {
+    const c = getCtx();
+    const t0 = c.currentTime + start;
+    const bufferSize = Math.max(1, Math.floor(c.sampleRate * dur));
+    const buffer = c.createBuffer(1, bufferSize, c.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+    const src = c.createBufferSource();
+    src.buffer = buffer;
+    const filter = c.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.value = freq;
+    filter.Q.value = 9;
+    const gain = c.createGain();
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(peak, t0 + 0.004);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    src.connect(filter).connect(gain).connect(c.destination);
+    src.start(t0);
+    src.stop(t0 + dur + 0.02);
+  }
+
+  /* ---------- Named cues ----------
+     Redesigned for a darker, more restrained, more physical palette —
+     muted wood/metal impacts and low tones rather than bright melodic
+     synth arpeggios. A few deliberate, weighty sounds rather than many
+     small bright ones; the biggest moments (Murder, Banishment, the two
+     endings) get the most room, everything else stays dry and brief. */
 
   const cues = {
-    // Generic UI navigation click — quiet, brief, used everywhere that
-    // doesn't have a more specific cue of its own.
-    tap: () => envTone(1180, { type: 'sine', dur: 0.05, peak: 0.05, attack: 0.004 }),
+    // Generic UI navigation click — a dry, near-silent wooden tap, not a
+    // digital beep.
+    tap: () => woodKnock({ dur: 0.045, peak: 0.07, freq: 500 }),
 
-    // Opening a private role card: a mysterious rising interval.
-    reveal: () => chord([220, 293.66], { type: 'sine', dur: 0.16, peak: 0.13, stagger: 0.09, attack: 0.01 }),
-    // Hiding it again / closing a private screen: the same interval falling.
-    hide: () => chord([293.66, 220], { type: 'sine', dur: 0.14, peak: 0.1, stagger: 0.07, attack: 0.008 }),
-
-    // Drawing a card: a light paper-flip tick.
-    draw: () => {
-      noiseBurst({ dur: 0.05, peak: 0.08, filterFreq: 2200, filterType: 'highpass' });
-      envTone(329.63, { type: 'triangle', dur: 0.1, peak: 0.1, attack: 0.006, start: 0.02 });
+    // Opening a private role card: a low card-slide (filtered noise sweep)
+    // under a single low tone, rising slightly — physical, not chimey.
+    reveal: () => {
+      noiseBurst({ dur: 0.1, peak: 0.07, filterFreq: 1400, filterType: 'bandpass', filterQ: 0.9 });
+      envTone(130.81, { type: 'sine', dur: 0.22, peak: 0.1, attack: 0.02, endFreq: 174.61 });
     },
-    // Gold landing in the Prize Pot: a bright ascending coin arpeggio.
+    // Hiding it again / closing a private screen: the same gesture, falling.
+    hide: () => {
+      noiseBurst({ dur: 0.09, peak: 0.06, filterFreq: 1100, filterType: 'bandpass', filterQ: 0.9 });
+      envTone(164.81, { type: 'sine', dur: 0.18, peak: 0.08, attack: 0.015, endFreq: 116.54 });
+    },
+
+    // Drawing a card: a dry paper-flick with a muted wooden tick under it
+    // — a real card hitting a real table, not a synth blip.
+    draw: () => {
+      noiseBurst({ dur: 0.05, peak: 0.09, filterFreq: 2000, filterType: 'highpass' });
+      woodKnock({ start: 0.03, dur: 0.05, peak: 0.08, freq: 260 });
+    },
+    // Gold landing in the Prize Pot: a single muted coin-drop — one short
+    // metallic ring over a soft low thud, not an ascending arpeggio.
     gold: () => {
-      noiseBurst({ dur: 0.04, peak: 0.1, filterFreq: 3500, filterType: 'highpass' });
-      chord([523.25, 659.25, 783.99], { type: 'triangle', dur: 0.14, peak: 0.11, stagger: 0.05, attack: 0.006 });
+      metalRing({ dur: 0.22, peak: 0.1, freq: 2600 });
+      thud(98, { start: 0.02, dur: 0.16, peak: 0.09, noiseFreq: 300 });
     },
 
     // Night falls: a low ominous drone swelling in and fading out.
@@ -342,63 +417,93 @@ const Sound = (() => {
       const lfoGain = c.createGain();
       const gain = c.createGain();
       osc.type = 'sine';
-      osc.frequency.value = 110;
+      osc.frequency.value = 98;
       lfo.type = 'sine';
-      lfo.frequency.value = 4.5;
-      lfoGain.gain.value = 3;
+      lfo.frequency.value = 4;
+      lfoGain.gain.value = 2.5;
       lfo.connect(lfoGain).connect(osc.frequency);
       gain.gain.setValueAtTime(0.0001, t0);
-      gain.gain.exponentialRampToValueAtTime(0.11, t0 + 0.35);
-      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.5);
+      gain.gain.exponentialRampToValueAtTime(0.12, t0 + 0.4);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 1.7);
       osc.connect(gain).connect(c.destination);
       osc.start(t0);
       lfo.start(t0);
-      osc.stop(t0 + 1.6);
-      lfo.stop(t0 + 1.6);
+      osc.stop(t0 + 1.8);
+      lfo.stop(t0 + 1.8);
     },
 
     // The ceremonial ready-bell — reused for "Seal the Roles & Begin",
     // "Next Game", and the Elimination Reveal's "Gather Everyone" moment.
-    gather: () => bellTone(293.66, { dur: 1.2, peak: 0.14 }),
+    // A real bell's strike is noisy before it rings, so a brief knock
+    // leads the tonal body in in now, instead of a pure, clean chime.
+    gather: () => {
+      noiseBurst({ dur: 0.05, peak: 0.1, filterFreq: 1800, filterType: 'bandpass', filterQ: 1.5 });
+      bellTone(246.94, { start: 0.015, dur: 1.3, peak: 0.13 });
+    },
 
     // Hand-off cue: plays every time the phone moves on to the next
     // player's turn inside a per-player queue (Reveal, Draw, Murder, Vote)
-    // — a soft two-note "here, take it" tick, louder and more distinct than
-    // the generic `tap` it replaces in those spots, but still identical
-    // every time regardless of who's turn is next or what role they hold
-    // (see the anonymity note at the top of this file — Murder's queue
-    // depends on that).
-    passDevice: () => chord([392, 329.63], { type: 'sine', dur: 0.1, peak: 0.08, stagger: 0.05, attack: 0.006 }),
+    // — a soft double wooden knock, like setting the phone down and
+    // picking it back up, louder and more distinct than the generic `tap`
+    // it replaces in those spots, but still identical every time
+    // regardless of who's turn is next or what role they hold (see the
+    // anonymity note at the top of this file — Murder's queue depends on
+    // that).
+    passDevice: () => {
+      woodKnock({ dur: 0.06, peak: 0.1, freq: 340 });
+      woodKnock({ start: 0.09, dur: 0.06, peak: 0.08, freq: 280 });
+    },
 
-    // A new round's Fate card is about to be drawn: a single clear rising
-    // tone, brighter than `tap`, marking "Round N" as its own moment
-    // instead of blending into the previous round's closing sound.
-    roundBegin: () => envTone(349.23, { type: 'triangle', dur: 0.3, peak: 0.1, attack: 0.01, endFreq: 440 }),
+    // A new round begins: a single low tone, rising slightly — restrained,
+    // marking "Round N" as its own moment without the previous round's
+    // closing sound bleeding into it, but no brighter than it needs to be.
+    roundBegin: () => envTone(130.81, { type: 'sine', dur: 0.32, peak: 0.09, attack: 0.015, endFreq: 164.81 }),
 
-    // Quiet Night outcome: soft, warm, relieved.
-    quietNight: () => chord([440, 523.25], { type: 'sine', dur: 0.45, peak: 0.1, stagger: 0.09, attack: 0.02 }),
-    // A Shield blocked the Murder: bright protective shimmer.
-    shieldSaved: () => chord([523.25, 659.25, 783.99], { type: 'triangle', dur: 0.22, peak: 0.12, stagger: 0.055, attack: 0.008 }),
-    // Someone was murdered: a dark descending tone under a soft thud.
+    // Quiet Night outcome: a soft, low exhale — relief, not a chime.
+    quietNight: () => {
+      noiseBurst({ dur: 0.5, peak: 0.045, filterFreq: 700, filterType: 'lowpass', filterQ: 0.6 });
+      envTone(196, { type: 'sine', dur: 0.5, peak: 0.07, attack: 0.05 });
+    },
+    // A Shield blocked the Murder: a brighter metallic ring (earned
+    // brightness — this is the one moment something protective and
+    // slightly magical is allowed to shimmer) over a low grounding tone.
+    shieldSaved: () => {
+      metalRing({ dur: 0.35, peak: 0.13, freq: 3200 });
+      envTone(196, { type: 'sine', dur: 0.3, peak: 0.08, attack: 0.01 });
+    },
+    // Someone was murdered: a weighty physical impact under a dark,
+    // descending low tone — the strongest, darkest cue in the game short
+    // of the Deceiver ending.
     murdered: () => {
-      noiseBurst({ dur: 0.14, peak: 0.16, filterFreq: 400, filterType: 'lowpass' });
-      envTone(293.66, { type: 'triangle', dur: 0.9, peak: 0.13, endFreq: 146.83, attack: 0.01 });
+      thud(110, { dur: 0.35, peak: 0.22, noiseFreq: 350 });
+      envTone(220, { type: 'sine', dur: 1.1, peak: 0.14, endFreq: 98, attack: 0.015, start: 0.04 });
     },
 
-    // The vote was tied: a single flat, anticlimactic knock — no melody.
-    tie: () => noiseBurst({ dur: 0.16, peak: 0.14, filterFreq: 260, filterType: 'lowpass' }),
-    // Someone was banished: a sharper gavel-knock under a falling tone.
+    // The vote was tied: a single flat, anticlimactic wooden knock — no
+    // melody, nothing resolves.
+    tie: () => woodKnock({ dur: 0.15, peak: 0.13, freq: 220 }),
+    // Someone was banished: a sharp gavel-strike (wood, not metal) under
+    // a low falling tone — no sawtooth buzz.
     banished: () => {
-      noiseBurst({ dur: 0.1, peak: 0.24, filterFreq: 900, filterType: 'bandpass', filterQ: 2 });
-      envTone(196, { type: 'sawtooth', dur: 0.4, peak: 0.1, endFreq: 130.81, attack: 0.008 });
+      woodKnock({ dur: 0.08, peak: 0.22, freq: 380 });
+      envTone(164.81, { type: 'sine', dur: 0.55, peak: 0.12, endFreq: 92.5, attack: 0.008, start: 0.02 });
     },
 
-    // Endings: dark minor chord for the Deceivers, bright major for Loyal.
-    deceiverWin: () => chord([110, 220, 261.63, 329.63], { type: 'sawtooth', dur: 1.4, peak: 0.09, stagger: 0.05, attack: 0.02 }),
-    loyalWin: () => chord([220, 277.18, 329.63, 440], { type: 'triangle', dur: 1.3, peak: 0.1, stagger: 0.05, attack: 0.02 }),
+    // Endings: the two heaviest, longest cues in the game. The Deceivers'
+    // win is a dark, dissonant, slow-swelling drone with a heavy impact
+    // under it — dread, not a jingle. The Loyal's win is warmer and
+    // resolves cleanly, but still a slow swell, not a bright arpeggio.
+    deceiverWin: () => {
+      thud(73.42, { dur: 0.5, peak: 0.2, noiseFreq: 250 });
+      chord([73.42, 87.31, 138.59], { type: 'sawtooth', dur: 2.2, peak: 0.06, stagger: 0.18, attack: 0.35 });
+    },
+    loyalWin: () => {
+      noiseBurst({ dur: 0.3, peak: 0.06, filterFreq: 1200, filterType: 'bandpass', filterQ: 0.8 });
+      chord([130.81, 164.81, 196], { type: 'sine', dur: 1.8, peak: 0.09, stagger: 0.15, attack: 0.25 });
+    },
 
-    modalOpen: () => chord([440, 523.25], { type: 'sine', dur: 0.09, peak: 0.06, stagger: 0.045, attack: 0.006 }),
-    modalClose: () => chord([523.25, 440], { type: 'sine', dur: 0.08, peak: 0.05, stagger: 0.04, attack: 0.006 }),
+    modalOpen: () => woodKnock({ dur: 0.05, peak: 0.07, freq: 700 }),
+    modalClose: () => woodKnock({ dur: 0.05, peak: 0.06, freq: 500 }),
   };
 
   function play(name, delay = 0) {
@@ -416,5 +521,5 @@ const Sound = (() => {
     }
   }
 
-  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins, announcePassDevice };
+  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins, announcePassDevice, announceInstruction };
 })();

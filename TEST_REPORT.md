@@ -958,6 +958,87 @@ a call to every action handler that can lead to a new per-player turn.
   real installed voices to actually speak through. 0 console errors
   across all of it.
 
+## 25. Recruit or Die, a Final Circle correctness fix, Deceiver Knowledge, and a sound/voice redesign (follow-up round)
+
+A large follow-up round covering a full spec: a new "Recruit or Die"
+mechanic, a fix to when the Final Circle may begin, a new Setup option,
+and a ground-up pass on the game's audio character and spoken coverage.
+
+- **Final Circle entry fix**: `startRound` (engine.js) previously entered
+  the Final Circle the instant `livingPlayers.length <= 4`, including on
+  round 1 for a game that simply *started* at or below that count (a 3- or
+  4-player game) — skipping ordinary play entirely. Now also requires
+  `state.round > 1`, so every game gets at least one ordinary round first
+  regardless of starting size, with zero behavior change for larger games
+  (already well past round 1 by the time eliminations bring them down to
+  the threshold).
+- **Deceiver Knowledge** (Setup screen, new Known/Hidden toggle,
+  `state.settings.deceiverKnowledge`): Known (default) is the existing
+  behavior — a Deceiver sees their fellow Deceivers at Reveal. Hidden
+  suppresses that list entirely. A successful Recruit or Die pact always
+  introduces the two parties to each other regardless of this setting,
+  since they've just made the pact directly.
+- **Recruit or Die**: triggers when exactly one Deceiver is alive, the
+  game started with more than one (`state.initialDeceiverCount`, guards
+  against ever triggering for a 3-6 player game that only ever had a
+  single Deceiver), and the Final Circle hasn't begun. A one-round detour
+  — no Fate card, no Draw, no Murder — touching only two players: the lone
+  Deceiver privately picks a Loyal target, the phone passes directly to
+  them, and they privately choose Join Us (become a Deceiver outright,
+  resolves to the table as an ordinary Quiet Night) or Refuse (dies
+  instead, resolves as an ordinary Murder, role revealed as Loyal — a held
+  Shield does **not** protect against this, deliberately bypassing the
+  Shield-check logic a real Murder goes through). The MAIN screen's
+  "Begin Draw Phase" button is pixel-for-pixel identical whether this
+  round is really a Recruit detour or an ordinary Draw — the branch
+  happens invisibly in the button's own handler. The hand-off to the
+  recruit specifically does not say their name aloud (a fixed,
+  non-identifying spoken line instead) — the screen itself can stay
+  private to whoever's holding the phone, but a name spoken into a room
+  full of people is a leak the screen alone can't prevent.
+- **Sound redesign**: rebuilt around three new primitives (`thud`,
+  `woodKnock`, `metalRing`) replacing the original bright melodic synth
+  arpeggios (an ascending triangle chime for Gold, four-note chords for
+  the two endings) with a darker, more physical, more restrained palette —
+  see PROJECT_PLAN.md's Sound design section for the full before/after on
+  each cue. Several cues got *simpler* (fewer layered elements) while
+  landing harder, per the explicit "a few good sounds, not many small
+  bright ones" brief.
+- **Voice**: two new collective spoken lines ("Night falls. Keep your
+  card secret." / "Gather everyone. Place the phone in the centre."),
+  centralized in `main.js`'s `render()` the same way the existing
+  per-turn announcer already was. The Murder queue's per-turn hand-off
+  switched to a generic "Pass the phone to the next player." line instead
+  of naming each player, for ritual consistency with its existing
+  identical-every-turn design (not a leak fix — naming would have been
+  just as safe there as it is for Reveal/Draw/Vote).
+- **Verification**: given Murder can never target a Deceiver (by design)
+  and Banishment votes are random, naturally reaching "2 Deceivers → 1"
+  through simulated play is unpredictably slow — so the core mechanic was
+  verified by directly engineering the precondition (killing one of two
+  initial Deceivers via `page.evaluate`) for two deterministic,
+  click-through UI tests: one driving the Join path (confirmed role
+  conversion, confirmed the Elimination Reveal reads as an ordinary Quiet
+  Night with no trace of recruitment) and one driving the Refuse path with
+  the target pre-loaded with a Shield (confirmed the kill went through
+  unconditionally, confirmed the reveal reads as an ordinary Murder with
+  the correct Loyal role shown). A third targeted test confirmed a
+  successful Join bringing Deceivers to majority triggers the existing
+  instant-win check correctly. A fourth confirmed recruitment never
+  triggers for a 3-6 player game (`initialDeceiverCount <= 1`). The Final
+  Circle fix was verified with dedicated 3- and 4-player tests confirming
+  round 1 always shows the ordinary "Begin Draw Phase" button, plus an
+  end-to-end run through round 1 into round 2 confirming the Final Circle
+  correctly activates once reached. The Deceiver Knowledge setting was
+  verified in both modes via an 8-player (2-Deceiver) game, checking the
+  Reveal screen's actual rendered HTML for the named fellow-Deceiver list.
+  All 18 redesigned sound cues were confirmed to execute without throwing.
+  Beyond the targeted tests, a 10-trial computer-only regression (7-8
+  players, fully random) naturally triggered the Recruit mechanic in 7 of
+  10 trials with 0 console errors across all 10, and a full ordinary
+  playthrough and the existing Final Circle regression suite were re-run
+  clean against every change in this round.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -982,6 +1063,7 @@ a call to every action handler that can lead to a new per-player turn.
 | The Final Circle end game (3 targeted scripts + 6-trial regression) | 1 deterministic Banish-Again-to-2 playthrough + 1 deterministic unanimous-End-Game playthrough + 6 instrumented 5–8 player regression trials | 1 (winner-banner flavor text wrongly claimed "equal or outnumber" for a 1-of-4-survivors Deceiver win) | 1 (conditional alternate line added) |
 | Grainy headline text fix (visual check + playthrough) | 5 screenshots (all headline selectors) + 1 Final Circle regression + 1 full playthrough | 0 (fix for a bug from an earlier, already-reverted round) | 1 (same layer-order/blend fix already proven on backgrounds) |
 | Spoken "Pass the phone to X" announcements (instrumented + playthroughs) | 1 instrumented 4-player test (mixed human/computer, 2 queues) + 1 full playthrough + 1 Final Circle regression, real unmocked announcePassDevice | 0 | — |
+| Recruit or Die + Final Circle entry fix + Deceiver Knowledge + sound/voice redesign | 2 deterministic click-through Recruit tests (Join + Refuse/Shield-bypass) + 1 majority-win integration test + 1 no-trigger-for-1-Deceiver test + 4 Final Circle round>1 tests + 2 Deceiver Knowledge mode tests + 18-cue execution check + 10-trial computer-only regression (7-8p) + full playthrough + existing Final Circle suite re-run | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
@@ -1004,4 +1086,10 @@ mandatory 30-seconds-per-living-player discussion clock instead of a
 button that could be tapped past before anyone had actually talked, and
 that Open Discussion screen has an opt-in ambient chord-progression music
 bed that fades in and out cleanly, closing with a crescendo and a
-natural-sounding spoken line once the clock runs out.
+natural-sounding spoken line once the clock runs out. A lone surviving
+Deceiver (of an originally larger team) gets one private, strictly
+two-player Recruit or Die round before the Final Circle begins, never a
+public event, with the recruit's choice resolving to the table as an
+indistinguishable ordinary Quiet Night or Murder either way; the Final
+Circle itself never begins before at least one ordinary round has been
+played, regardless of starting player count.

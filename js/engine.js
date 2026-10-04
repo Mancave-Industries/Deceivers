@@ -24,6 +24,11 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   state.players.forEach((p, i) => {
     p.role = shuffledIndexes.includes(i) ? ROLES.DECEIVER.id : ROLES.LOYAL.id;
   });
+  // Recruit or Die only ever applies to a game that started with more than
+  // one Deceiver and has since lost all but one — a game that only ever
+  // had a single Deceiver (3-6 players) has no one to "replenish" and
+  // should never trigger it. See shouldTriggerRecruitment, below.
+  state.initialDeceiverCount = deceiverCount;
 
   state.fortuneDeck = buildDeck(FORTUNE_DECK_DEF);
   state.fortuneDiscard = [];
@@ -38,6 +43,7 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   state.finalBanishmentActive = false;
   state.finalCircleActive = false;
   state.finalCircleDecisions = {};
+  state.recruitment = { recruiterId: null, targetId: null };
   state.history = [];
 
   state.pendingQueue = state.players.map((p) => p.id);
@@ -48,12 +54,16 @@ function setupNewGame(state, playerNames, isComputerFlags) {
 
 /* ---------- Series (several games back to back, points carried across) ---------- */
 
-function startNewSeries(state, playerNames, seriesLength, isComputerFlags) {
+function startNewSeries(state, playerNames, seriesLength, isComputerFlags, deceiverKnowledge) {
   state.seriesLength = Math.max(1, Math.min(20, seriesLength | 0));
   state.seriesGame = 1;
   state.seriesScores = {};
   state.rosterNames = playerNames.map((n) => n.trim());
   state.rosterIsComputer = playerNames.map((_, i) => !!(isComputerFlags && isComputerFlags[i]));
+  // A whole-series choice, not per-game — setupNewGame (called once per
+  // game, including every game in a series) never touches state.settings,
+  // so this holds for every game in the series once set here.
+  state.settings.deceiverKnowledge = deceiverKnowledge === 'hidden' ? 'hidden' : 'known';
   setupNewGame(state, state.rosterNames, state.rosterIsComputer);
 }
 
@@ -145,7 +155,35 @@ function startRound(state) {
   });
 
   state.finalBanishmentActive = false;
-  if (livingPlayers(state).length <= CONFIG.finalCircleThreshold) {
+
+  // Recruit or Die takes priority over entering the Final Circle if both
+  // conditions are somehow true on the same round -- see the "Recruit or
+  // Die" section below. Checked first, before the Final Circle threshold,
+  // so a lone surviving Deceiver always gets the chance to replenish
+  // before the game moves into its endgame mode.
+  if (!state.finalCircleActive && shouldTriggerRecruitment(state)) {
+    // Looks identical to an ordinary round on the MAIN screen (same
+    // "Begin Draw Phase" button, same round/player-list display) -- the
+    // branch into Recruit happens invisibly in main.js's begin-draw
+    // handler, not here, so nothing on screen outwardly signals that
+    // anything is different this round. See sound.js/main.js for why the
+    // spoken cues around it are equally careful not to leak anything.
+    state.currentFateCard = FINAL_BANISHMENT_DEF.id; // non-null sentinel only
+    state.phase = PHASES.MAIN;
+    return null;
+  }
+
+  // Final Circle begins once living players drop to the threshold -- but
+  // never on round 1, even for a game that *starts* at or below the
+  // threshold (a 3- or 4-player game). It's meant to be an end-state
+  // reached after some normal play, not a shortcut a small game falls
+  // into immediately; requiring round > 1 guarantees at least one
+  // ordinary round (Fate card, Draw, possibly a Murder or Banishment)
+  // happens first regardless of starting player count, while not
+  // changing anything for larger games, which would already be well
+  // past round 1 by the time eliminations bring them down to the
+  // threshold anyway.
+  if (state.round > 1 && livingPlayers(state).length <= CONFIG.finalCircleThreshold) {
     state.finalCircleActive = true;
   }
   if (state.finalCircleActive) {
@@ -311,6 +349,101 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
   state.eliminationContext = 'night';
   state.phase = PHASES.ELIMINATION;
   return state.nightResult;
+}
+
+/* ---------- Recruit or Die ----------
+   Triggers only when exactly one Deceiver is alive, the game started with
+   more than one (see initialDeceiverCount in setupNewGame — a game that
+   only ever had a single Deceiver has no one to replenish), and the Final
+   Circle hasn't begun. A one-round detour that fully replaces that
+   round's ordinary shape — no Fate card, no Draw, no Murder — and touches
+   only two players' hands: the lone Deceiver, then whichever Loyal player
+   they secretly approach. No one else is ever involved, and the brief
+   explicitly asks for nothing public: no interstitial, no announcement,
+   nothing on the MAIN screen or its button hints that this round is any
+   different from an ordinary one. See main.js's begin-draw handler (where
+   the decision to branch here actually happens) and sound.js (where the
+   spoken cues around the hand-off to the recruit deliberately avoid
+   saying their name aloud — the on-screen text already shows it, but a
+   name spoken into a room full of people is a real leak the screen alone
+   isn't). */
+
+function shouldTriggerRecruitment(state) {
+  if (state.finalCircleActive) return false;
+  if (!state.initialDeceiverCount || state.initialDeceiverCount <= 1) return false;
+  return livingPlayers(state).filter((p) => p.role === ROLES.DECEIVER.id).length === 1;
+}
+
+function beginRecruitment(state) {
+  const deceiver = livingPlayers(state).find((p) => p.role === ROLES.DECEIVER.id);
+  state.recruitment = { recruiterId: deceiver.id, targetId: null };
+  state.pendingQueue = [deceiver.id];
+  state.phase = PHASES.RECRUIT;
+}
+
+function eligibleRecruitTargets(state) {
+  return livingPlayers(state).filter((p) => p.role === ROLES.LOYAL.id);
+}
+
+function recordRecruitTarget(state, targetId) {
+  state.recruitment.targetId = targetId;
+}
+
+function advanceToRecruitResponse(state) {
+  state.pendingQueue = [state.recruitment.targetId];
+  state.phase = PHASES.RECRUIT_RESPONSE;
+}
+
+/* Successful recruitment: the target becomes a Deceiver outright, for
+   every win-condition and payout check from here on — payoutPrizePot
+   already splits by current role, so nothing else needs to change for
+   them to share normally if the Deceivers go on to win. Resolves to the
+   table as a Quiet Night ("no murder takes place that night," per the
+   brief), reusing the exact same nightResult/eliminationContext shape a
+   real Quiet Night uses, so the Elimination Reveal looks completely
+   ordinary. */
+function resolveRecruitmentJoin(state) {
+  const recruit = findPlayer(state, state.recruitment.targetId);
+  recruit.role = ROLES.DECEIVER.id;
+  state.nightResult = { quiet: true };
+  state.eliminationContext = 'quiet';
+  log(state, `${recruit.name} was secretly recruited and joined the Deceivers.`);
+  state.phase = PHASES.ELIMINATION;
+}
+
+/* Refused recruitment: the recruit dies — not the existing Deceiver —
+   presented to the table as an ordinary Murder (same nightResult shape
+   and 'night' context resolveMurder uses, so the Elimination Reveal is
+   indistinguishable from any other Murder outcome). Deliberately does
+   NOT reuse resolveMurder's Shield-check logic: a held Shield does not
+   protect against this, per the brief, so the kill is unconditional. */
+function resolveRecruitmentRefusal(state) {
+  const recruit = findPlayer(state, state.recruitment.targetId);
+  recruit.alive = false;
+  state.nightResult = {
+    quiet: false,
+    targetId: recruit.id,
+    name: recruit.name,
+    murdered: true,
+    protected: false,
+    deceiversChoicePlayed: false,
+  };
+  log(state, `${recruit.name} refused recruitment and was murdered in the night.`);
+  state.eliminationContext = 'night';
+  state.phase = PHASES.ELIMINATION;
+}
+
+function botPickRecruitTarget(state) {
+  const targets = eligibleRecruitTargets(state);
+  if (!targets.length) return null;
+  return targets[Math.floor(Math.random() * targets.length)].id;
+}
+
+/* Simple, non-strategic, consistent with the other bot* functions — a
+   plain coin flip, no modeling of whether joining or refusing is the
+   "smarter" choice for a computer-controlled Loyal seat. */
+function botChooseRecruitResponse() {
+  return Math.random() < 0.5;
 }
 
 /* ---------- Banishment Vote ---------- */

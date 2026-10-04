@@ -49,6 +49,13 @@ function createInitialState() {
     // playerId -> 'end' | 'banish' for the current round's secret ballot.
     finalCircleActive: false,
     finalCircleDecisions: {},
+    // Recruit or Die: set once per game in setupNewGame (engine.js) to
+    // that game's starting Deceiver count, so the mechanic only ever
+    // triggers for a game that's lost Deceivers down to one, never for a
+    // game that only ever had one. recruitment holds the in-progress
+    // recruiter/target pair for the current attempt, if any.
+    initialDeceiverCount: 1,
+    recruitment: { recruiterId: null, targetId: null },
     history: [],
     winner: null,
     gamePayout: null,
@@ -59,7 +66,12 @@ function createInitialState() {
     seriesScores: {},
     rosterNames: [],
     rosterIsComputer: [],
-    settings: { sound: false, music: false },
+    // deceiverKnowledge: 'known' (default — Deceivers see their fellow
+    // Deceivers at Reveal) or 'hidden' (they don't, until/unless a
+    // recruitment pact introduces them — see ui.js renderReveal and
+    // engine.js's Recruit or Die section). A whole-series choice, set
+    // once at Setup via startNewSeries, not reset per game.
+    settings: { sound: false, music: false, deceiverKnowledge: 'known' },
   };
 }
 

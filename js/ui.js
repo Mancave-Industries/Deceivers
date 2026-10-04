@@ -100,7 +100,7 @@ UI.renderTitle = function renderTitle(hasSaved) {
 
 /* ---------- 2. Setup ---------- */
 
-UI.renderSetup = function renderSetup(names, seriesLength, isComputer) {
+UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverKnowledge) {
   const allValid = names.every((n) => n.trim().length > 0);
   const deceivers = deceiverCountForPlayers(names.length);
   const computerCount = isComputer.filter(Boolean).length;
@@ -136,6 +136,16 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer) {
       </div>
       ${seriesLength > 1 ? '<p class="small-note" style="margin-top:8px;">Points carry across every game — the Prize Pot is paid out to the winning side each game.</p>' : ''}
     </div>
+    <div class="panel" style="margin-top:10px;">
+      <div class="panel-title">Deceiver Knowledge</div>
+      <div class="seat-mode-row" style="padding-left:0;">
+        <button type="button" class="seat-mode-btn ${deceiverKnowledge !== 'hidden' ? 'active' : ''}" data-action="set-deceiver-knowledge" data-mode="known">Known</button>
+        <button type="button" class="seat-mode-btn ${deceiverKnowledge === 'hidden' ? 'active' : ''}" data-action="set-deceiver-knowledge" data-mode="hidden">Hidden</button>
+      </div>
+      <p class="small-note" style="text-align:left; margin-top:8px;">${deceiverKnowledge === 'hidden'
+        ? "Deceivers begin without knowing who the others are — only a successful recruitment pact introduces two Deceivers to each other."
+        : 'Deceivers privately see their fellow Deceivers (if more than one) during the role reveal.'}</p>
+    </div>
     <div class="spacer"></div>
     <button class="btn btn-primary btn-block" data-action="start-game" ${allValid ? '' : 'disabled'}>Seal The Roles &amp; Begin</button>`;
 };
@@ -162,7 +172,8 @@ UI.renderReveal = function renderReveal(state, tapped) {
   const player = currentQueuePlayer(state);
   if (!player) return;
   const role = player.role === ROLES.DECEIVER.id ? ROLES.DECEIVER : ROLES.LOYAL;
-  const fellows = role === ROLES.DECEIVER ? fellowDeceivers(state, player.id) : [];
+  const knowFellows = state.settings.deceiverKnowledge !== 'hidden';
+  const fellows = (role === ROLES.DECEIVER && knowFellows) ? fellowDeceivers(state, player.id) : [];
   const fellowText = fellows.length
     ? `<br><br>Your fellow Deceiver${fellows.length > 1 ? 's' : ''}: <strong>${fellows.map(escapeHtml).join(', ')}</strong>`
     : '';
@@ -409,6 +420,68 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice) {
       main_onToggleDeceiversChoice(e.target.checked);
     });
   }
+};
+
+/* ---------- 8.5. Recruit or Die (a private two-player exchange, never a
+   public event — see engine.js's "Recruit or Die" section) ---------- */
+
+UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
+  const player = currentQueuePlayer(state);
+  if (!player) return;
+
+  if (!tapped) {
+    screen('recruit').innerHTML = passPrompt({
+      icon: ICONS.hoodedFigure,
+      name: player.name,
+      instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now. No talking. Once ready, they tap below.`,
+      action: 'tap-recruit',
+      btnLabel: 'My Turn',
+      btnClass: 'btn-danger',
+    });
+    return;
+  }
+
+  const targets = eligibleRecruitTargets(state);
+  screen('recruit').innerHTML = `
+    <div class="screen-title-row">Recruit Or Die</div>
+    <div class="screen-subtitle">Choose one Loyal player to secretly approach.</div>
+    <div class="target-grid">
+      ${targets.map((p) => `
+        <button class="target-card ${selectedId === p.id ? 'selected' : ''}" data-action="select-recruit-target" data-id="${p.id}">
+          <div class="player-avatar">${initials(p.name)}</div>
+          <span>${escapeHtml(p.name)}</span>
+        </button>`).join('')}
+    </div>
+    <p class="small-note" style="margin-top:14px;">If they refuse, they will not survive the night. Once confirmed, hide the screen and pass the phone directly to them — no one else.</p>
+    <div class="spacer"></div>
+    <button class="btn btn-danger btn-block" data-action="confirm-recruit-target" ${selectedId ? '' : 'disabled'}>Confirm Choice</button>`;
+};
+
+UI.renderRecruitResponse = function renderRecruitResponse(state, tapped) {
+  const player = currentQueuePlayer(state);
+  if (!player) return;
+
+  if (!tapped) {
+    screen('recruitResponse').innerHTML = passPrompt({
+      icon: ICONS.hoodedFigure,
+      name: player.name,
+      instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — no one else should see this screen. Once it's in their hands, they tap below.`,
+      action: 'tap-recruit-response',
+      btnLabel: 'My Turn',
+    });
+    return;
+  }
+
+  screen('recruitResponse').innerHTML = `
+    <div class="reveal-stage">
+      ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
+      <h2 class="reveal-headline">A Deceiver Has Approached You</h2>
+      <p class="reveal-body">In secret, one of the Deceivers offers you a place among them. Choose now — no one else will ever know this moment happened.</p>
+      <div class="spacer"></div>
+      <button class="btn btn-confirm btn-block" data-action="recruit-join" style="margin-bottom:10px;">Join Us</button>
+      <button class="btn btn-danger btn-block" data-action="recruit-refuse">Refuse</button>
+      <p class="small-note" style="margin-top:14px;">Refusing has a cost. Hide the screen and pass the phone back once you've chosen.</p>
+    </div>`;
 };
 
 /* ---------- 9. Banishment Vote / Final Banishment ---------- */

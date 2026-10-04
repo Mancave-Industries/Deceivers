@@ -165,8 +165,15 @@ assumptions rather than pause for questions:
 - 3–8 players (local pass-and-play, one shared phone).
 - Deceiver count scales with player count: 3–6 players → 1 Deceiver; 7–8 → 2.
   Remaining players are Loyal.
-- During private role reveal, a Deceiver also privately sees who their fellow
-  Deceivers are (if more than one); Loyal players see only their own role.
+- **Deceiver Knowledge** (Setup screen, a whole-series choice —
+  `state.settings.deceiverKnowledge`, 'known' by default): in **Known**
+  mode, a Deceiver also privately sees who their fellow Deceivers are
+  during the role reveal (if more than one); in **Hidden** mode they don't
+  — each Deceiver only ever learns their own role at Reveal. The one
+  exception either way: a successful Recruit or Die pact (below) always
+  introduces the recruiter and the new Deceiver to each other, since
+  they've just made the pact directly — Hidden mode just means that
+  doesn't also reveal anyone else's identity.
 
 ### Decks
 Two separate decks, both reshuffled from discard when exhausted:
@@ -237,9 +244,16 @@ moment the last Deceiver is eliminated" design gave the Loyal team a
 no-tension confirmation they'd never get in real life — they can never
 actually know they've caught every Deceiver, only suspect it.
 
-Once living players drop to **4** (`CONFIG.finalCircleThreshold`), ordinary
-rounds stop for good — no more Fate cards, no more Draws, no more Murders —
-and every remaining round takes this shape instead:
+Once living players drop to **4** (`CONFIG.finalCircleThreshold`) **and at
+least one ordinary round has already been played** (`state.round > 1`),
+ordinary rounds stop for good — no more Fate cards, no more Draws, no more
+Murders — and every remaining round takes this shape instead. The round>1
+requirement exists specifically so a game that *starts* at or below the
+threshold (a 3- or 4-player game) doesn't skip straight into the Final
+Circle on round 1 — it's meant to be an end-state reached after some
+normal play, not a shortcut a small game falls into immediately. It costs
+nothing for larger games, which are already well past round 1 by the time
+eliminations bring them down to the threshold anyway.
 
 1. **A secret per-player ballot**: pass the phone to each living player in
    turn, same private pass-device pattern as a vote; each one chooses
@@ -282,6 +296,66 @@ table limited to exactly two survivors. Payout math itself didn't need to
 change at all: the existing `payoutPrizePot` (split among winning-side
 survivors) already implements this correctly once the right winner is
 passed in — the only new code was *deciding* who that winner is.
+
+### Recruit or Die
+
+Also modeled on the real show, and strictly private — the brief is explicit
+that this mechanic gets no public interstitial or announcement of any
+kind, unlike every other event in the game.
+
+**Trigger**: `shouldTriggerRecruitment(state)` — exactly one living
+Deceiver, the game started with *more than one* (`state.
+initialDeceiverCount`, set once in `setupNewGame`), and the Final Circle
+hasn't begun. The "started with more than one" guard matters: a 3–6
+player game only ever has a single Deceiver from the start, with no one
+to replenish, so it should never trigger there — this is specifically
+about a lone *survivor* of an originally larger Deceiver team.
+
+**Shape**: a one-round detour that fully replaces that round's ordinary
+structure — no Fate card, no Draw, no Murder — and touches exactly two
+players' hands, nobody else:
+
+1. The lone Deceiver gets a private **Recruit Or Die** screen and secretly
+   picks one living Loyal player.
+2. The phone passes *directly* to that player (no one else is involved in
+   this round at all) for a private **Join Us** / **Refuse** choice.
+3. **Join Us**: that player becomes a Deceiver outright, for every future
+   win-condition and payout check — `payoutPrizePot` already splits by
+   current role, so nothing else needs to change for them to share
+   normally if the Deceivers later win. Resolves to the table as an
+   ordinary Quiet Night ("no murder takes place that night") — same
+   `nightResult`/`eliminationContext` shape a real Quiet Night uses, so
+   the Elimination Reveal is indistinguishable from any other Quiet Night.
+4. **Refuse**: that player dies instead — not the existing Deceiver —
+   resolved to the table as an ordinary Murder (same shape `resolveMurder`
+   produces, so the reveal looks identical to any other Murder outcome,
+   role and all). A held Shield does **not** protect against this; the
+   kill is unconditional, deliberately bypassing the Shield-check logic a
+   real Murder goes through.
+
+**Staying invisible to the rest of the table**: the MAIN screen's "Begin
+Draw Phase" button is *exactly* the same button, text, and action
+regardless of whether this round is actually an ordinary Draw or a
+Recruit-or-Die detour — the branch happens invisibly inside the
+begin-draw handler the instant it's tapped (`main.js`), not anywhere
+startRound or the screen itself can be inspected in advance. The spoken
+cues are equally careful: the lone Deceiver's own hand-off still gets the
+normal named "Pass the phone to [name]" announcement (nothing unusual
+about naming whoever's turn it is — see Reveal/Draw/Vote below), but the
+hand-off *to* the recruit deliberately does **not** say their name out
+loud — `Sound.announcePassDevice` would otherwise speak it audibly to the
+whole room even though the screen itself stays private to whoever's
+holding the phone. That hand-off instead gets a fixed, non-identifying
+line, "Pass the phone to your chosen recruit," spoken directly from the
+confirm-recruit-target action handler rather than through the generic
+per-turn announcer.
+
+**Bots**: `botPickRecruitTarget` (uniform random among eligible Loyal
+players) and `botChooseRecruitResponse` (a plain 50/50 coin flip) — simple
+and non-strategic, consistent with every other `bot*` function's
+documented design intent. A computer seat on either end of a recruitment
+attempt never needs special anonymity handling beyond what the existing
+generic "Computer Seat — taking its turn" decoy screen already provides.
 
 ### A Banishment never opens a fresh shuffle
 
@@ -375,18 +449,65 @@ described below; nothing else in the codebase touches `AudioContext`
 directly. Sound effects are muted by default (shared-device etiquette),
 toggled from the header speaker icon or Settings.
 
-18 named cues cover every meaningful moment: a mysterious rising interval
-for a private role reveal (and its mirror-image fall for hiding it again), a
-light tick for drawing a card, a bright ascending coin arpeggio when Gold
+18 named cues cover every meaningful moment: a low card-slide for a private
+role reveal (and its mirror-image fall for hiding it again), a dry paper-flick
+with a wooden tick for drawing a card, a single muted coin-drop when Gold
 hits the pot, a low swelling drone for Night falling, a recurring ceremonial
 bell (`gather`) reused for "Seal the Roles," "Next Game," and — now every
 time, not just when its button is tapped — the moment the Elimination
 Reveal's "Gather Everyone" screen itself first appears (at the end of the
 Murder and Vote queues, as well as a Quiet Night), distinct outcome stings
 for a Quiet Night / a Shield block / a Murder / a tied vote / a Banishment,
-a bright single rising tone (`roundBegin`) marking a new round's start
-distinctly from the previous round's closing sound, and a dark minor chord
-vs. a bright major chord for the two endings.
+a restrained low rising tone (`roundBegin`) marking a new round's start
+distinctly from the previous round's closing sound, and two long, slow-
+swelling drones for the two endings — dark and dissonant for the Deceivers,
+warmer but still restrained for the Loyal.
+
+**A darker, more physical palette (follow-up round)**: the original cues
+leaned on bright melodic synth arpeggios (a three-note ascending triangle
+chime for Gold, four-note sawtooth/triangle chords for the two endings) that
+read as "mobile game," not the dark-ceremonial key art the rest of the app
+chases. Rebuilt around three new primitives — `thud` (a sub-sine "body"
+under a short lowpassed-noise "knock," for a weighty physical impact),
+`woodKnock` (tight bandpass noise, no tonal content at all, for a dry click
+rather than a digital beep), and `metalRing` (high-Q bandpass noise with a
+longer ringing decay, used sparingly — Gold's coin-drop and the Shield's
+protective shimmer are the only two places real brightness is still
+earned) — and almost every cue was rebuilt on top of them: `tap` is now a
+near-silent wood tap instead of a pure sine beep, `gold` a single coin-drop
+instead of an ascending arpeggio, `banished` a wooden gavel-strike instead
+of a sawtooth buzz, and the two endings slow-swelling dissonant/warm drones
+instead of bright jingle-like chords. `nightFalls` and `gather` (now with a
+brief noisy strike leading its tonal body in, since a real bell's strike
+isn't a clean sine either) needed the least change — they were already
+closest to the target in character. The guiding principle throughout was
+"a few good sounds, not many small bright ones" — several cues (`gold`,
+`shieldSaved`, `banished`) actually got *simpler* (fewer layered elements)
+while landing harder, rather than gaining more.
+
+**A spoken host instruction wherever the phone needs to move or the group
+needs to act, not just per-player hand-offs (follow-up round)**: on top of
+the existing "Pass the phone to X" per-turn announcements (Reveal, Draw,
+Vote, Final Circle decision), two collective lines were added — "Night
+falls. Keep your card secret." the moment the Night screen appears, and
+"Gather everyone. Place the phone in the centre." the moment the
+Elimination Reveal's pre-reveal "Gather Everyone" screen appears — both
+centralized in `main.js`'s `render()` (`maybeAnnounceNightFalls`,
+`maybeAnnounceGather`), the same pattern as the existing
+`maybeAnnouncePassDevice`, so they fire exactly once on arrival regardless
+of which of several possible code paths got there. The Murder queue's
+per-turn hand-off switched from naming each player to a generic "Pass the
+phone to the next player." line — not a leak fix (every Murder turn already
+looks and sounds identical regardless of role, so naming would have been
+just as safe as it is for Reveal/Draw/Vote), but it better matches that
+same ritual anonymity than naming each person in turn would. The one
+genuinely new mechanism, not just a new line: `Sound.announceInstruction`,
+a shared cancel-then-speak helper both the per-turn and collective
+announcers now go through, and `Sound.announcePassDevice(name)` accepts a
+falsy name to fall back to the generic phrasing (used for Murder, and
+separately for Recruit or Die's name-free hand-off to the recruit — see
+"Recruit or Die" above). The existing "The time for talk is over" line
+already covers "the circle must now vote," so nothing new was added there.
 
 **A hand-off cue for every queue, not just the murder-identity-safe one**:
 earlier rounds gave each per-player queue (Reveal, Draw, Murder, Vote) a

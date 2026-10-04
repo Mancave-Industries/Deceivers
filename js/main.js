@@ -22,6 +22,9 @@ const uiStage = {
   votingAnnounced: false,
   discussSecondsLeft: 0,
   finalCircleTapped: false,
+  recruitTapped: false,
+  recruitTarget: null,
+  recruitResponseTapped: false,
 };
 
 Sound.setEnabled(state.settings.sound);
@@ -30,6 +33,7 @@ Sound.setMusicEnabled(state.settings.music);
 let setupNames = Array(CONFIG.minPlayers).fill('');
 let setupIsComputer = Array(CONFIG.minPlayers).fill(false);
 let seriesLength = 1;
+let setupDeceiverKnowledge = 'known';
 
 /* Computer seats never wait for a tap: this pauses briefly, then resolves
    their turn with the same bot logic no matter which seat holds the secret
@@ -38,7 +42,7 @@ let seriesLength = 1;
 const COMPUTER_TURN_DELAY_MS = 700;
 let computerTurnTimer = null;
 
-const QUEUE_PHASES = [PHASES.REVEAL, PHASES.DRAW, PHASES.MURDER, PHASES.VOTE, PHASES.FINAL_BANISHMENT, PHASES.FINAL_CIRCLE_DECISION];
+const QUEUE_PHASES = [PHASES.REVEAL, PHASES.DRAW, PHASES.MURDER, PHASES.VOTE, PHASES.FINAL_BANISHMENT, PHASES.FINAL_CIRCLE_DECISION, PHASES.RECRUIT, PHASES.RECRUIT_RESPONSE];
 
 function cancelComputerTurnTimer() {
   if (computerTurnTimer !== null) {
@@ -78,12 +82,48 @@ function maybeAnnouncePassDevice() {
     lastAnnouncedTurn = null;
     return;
   }
+  // The Recruit-response hand-off is announced manually, by name-free
+  // fixed line, at the moment the recruiting Deceiver confirms their
+  // choice (see confirm-recruit-target) — the generic system here would
+  // otherwise speak the recruit's actual name aloud, audible to the whole
+  // room even though the screen itself stays private to whoever holds it.
+  if (state.phase === PHASES.RECRUIT_RESPONSE) return;
   const player = currentQueuePlayer(state);
   if (!player) return;
   const key = `${state.phase}:${player.id}`;
   if (key === lastAnnouncedTurn) return;
   lastAnnouncedTurn = key;
-  Sound.announcePassDevice(player.name);
+  // Murder's queue gets a generic line instead of a name — see
+  // Sound.announcePassDevice's own comment for why.
+  Sound.announcePassDevice(state.phase === PHASES.MURDER ? null : player.name);
+}
+
+/* Two more collective (not per-player) spoken cues, each tracked the same
+   way as maybeAnnouncePassDevice — fire once on arrival, reset once the
+   game leaves that exact screen-state, so repeat renders of the same
+   still-current screen don't repeat it. */
+let nightAnnounced = false;
+let gatherAnnounced = false;
+
+function maybeAnnounceNightFalls() {
+  if (state.phase !== PHASES.NIGHT) {
+    nightAnnounced = false;
+    return;
+  }
+  if (nightAnnounced) return;
+  nightAnnounced = true;
+  Sound.announceInstruction('Night falls. Keep your card secret.');
+}
+
+function maybeAnnounceGather() {
+  const onGatherScreen = state.phase === PHASES.ELIMINATION && !uiStage.eliminationRevealed;
+  if (!onGatherScreen) {
+    gatherAnnounced = false;
+    return;
+  }
+  if (gatherAnnounced) return;
+  gatherAnnounced = true;
+  Sound.announceInstruction('Gather everyone. Place the phone in the centre.');
 }
 
 /* Open Discussion runs on a clock — 30 seconds per living player — instead
@@ -203,6 +243,20 @@ function resolveComputerTurn() {
       }
       break;
     }
+    case PHASES.RECRUIT: {
+      const targetId = botPickRecruitTarget(state);
+      if (targetId) {
+        recordRecruitTarget(state, targetId);
+        advanceToRecruitResponse(state);
+      }
+      break;
+    }
+    case PHASES.RECRUIT_RESPONSE: {
+      if (botChooseRecruitResponse()) resolveRecruitmentJoin(state);
+      else resolveRecruitmentRefusal(state);
+      uiStage.eliminationRevealed = false;
+      break;
+    }
     case PHASES.FINAL_CIRCLE_DECISION: {
       const player = currentQueuePlayer(state);
       recordFinalCircleDecision(state, player.id, botChooseFinalCircleDecision());
@@ -238,13 +292,15 @@ function render() {
   if (autoAdvanceComputerTurns()) return;
 
   maybeAnnouncePassDevice();
+  maybeAnnounceNightFalls();
+  maybeAnnounceGather();
 
   switch (state.phase) {
     case PHASES.TITLE:
       UI.renderTitle(hasSavedGame());
       break;
     case PHASES.SETUP:
-      UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
       break;
     case PHASES.REVEAL:
       UI.renderReveal(state, uiStage.revealTapped);
@@ -274,6 +330,12 @@ function render() {
       break;
     case PHASES.ELIMINATION:
       UI.renderElimination(state, uiStage.eliminationRevealed);
+      break;
+    case PHASES.RECRUIT:
+      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget);
+      break;
+    case PHASES.RECRUIT_RESPONSE:
+      UI.renderRecruitResponse(state, uiStage.recruitResponseTapped);
       break;
     case PHASES.FINAL_CIRCLE_DECISION:
       UI.renderFinalCircleDecision(state, uiStage.finalCircleTapped);
@@ -310,6 +372,7 @@ const actions = {
     setupNames = Array(CONFIG.minPlayers).fill('');
     setupIsComputer = Array(CONFIG.minPlayers).fill(false);
     seriesLength = 1;
+    setupDeceiverKnowledge = 'known';
     state.phase = PHASES.SETUP;
     render();
   },
@@ -338,35 +401,40 @@ const actions = {
       setupNames.push('');
       setupIsComputer.push(false);
     }
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
   },
   'remove-player': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupNames.splice(i, 1);
     setupIsComputer.splice(i, 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
   },
   'set-seat-mode': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupIsComputer[i] = btn.dataset.mode === 'computer';
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
   },
   'inc-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.min(20, seriesLength + 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
   },
   'dec-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.max(1, seriesLength - 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+  },
+  'set-deceiver-knowledge': (btn) => {
+    Sound.play('tap');
+    setupDeceiverKnowledge = btn.dataset.mode === 'hidden' ? 'hidden' : 'known';
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
   },
   'start-game': () => {
     if (!setupNames.every((n) => n.trim().length > 0)) return;
     Sound.play('gather');
-    startNewSeries(state, setupNames, seriesLength, setupIsComputer);
+    startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
     Analytics.gameStarted();
     uiStage.revealTapped = false;
     persist();
@@ -385,9 +453,18 @@ const actions = {
     render();
   },
   'begin-draw': () => {
+    // Looks identical regardless of which branch fires — see engine.js's
+    // "Recruit or Die" section and startRound's comment for why nothing
+    // here or on screen hints that this round is anything but ordinary.
     Sound.play('tap');
-    beginDrawPhase(state);
-    uiStage.drawTapped = false;
+    if (shouldTriggerRecruitment(state)) {
+      beginRecruitment(state);
+      uiStage.recruitTapped = false;
+      uiStage.recruitTarget = null;
+    } else {
+      beginDrawPhase(state);
+      uiStage.drawTapped = false;
+    }
     persist();
     render();
   },
@@ -472,6 +549,52 @@ const actions = {
     // finished — see sound.js header note; `gather` is exactly as
     // role-blind as `passDevice` was, so the anonymity guarantee holds.
     Sound.play(done ? 'gather' : 'passDevice');
+    persist();
+    render();
+  },
+  'tap-recruit': () => {
+    uiStage.recruitTapped = true;
+    Sound.play('tap');
+    render();
+  },
+  'select-recruit-target': (btn) => {
+    Sound.play('tap');
+    uiStage.recruitTarget = btn.dataset.id;
+    render();
+  },
+  'confirm-recruit-target': () => {
+    if (!uiStage.recruitTarget) return;
+    recordRecruitTarget(state, uiStage.recruitTarget);
+    advanceToRecruitResponse(state);
+    uiStage.recruitTapped = false;
+    uiStage.recruitTarget = null;
+    uiStage.recruitResponseTapped = false;
+    Sound.play('passDevice');
+    // Deliberately doesn't name the recruit — see sound.js's
+    // announcePassDevice comment and maybeAnnouncePassDevice's
+    // RECRUIT_RESPONSE guard above for why.
+    Sound.announceInstruction('Pass the phone to your chosen recruit.');
+    persist();
+    render();
+  },
+  'tap-recruit-response': () => {
+    uiStage.recruitResponseTapped = true;
+    Sound.play('tap');
+    render();
+  },
+  'recruit-join': () => {
+    resolveRecruitmentJoin(state);
+    uiStage.recruitResponseTapped = false;
+    uiStage.eliminationRevealed = false;
+    Sound.play('gather');
+    persist();
+    render();
+  },
+  'recruit-refuse': () => {
+    resolveRecruitmentRefusal(state);
+    uiStage.recruitResponseTapped = false;
+    uiStage.eliminationRevealed = false;
+    Sound.play('gather');
     persist();
     render();
   },

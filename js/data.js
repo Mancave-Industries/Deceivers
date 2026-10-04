@@ -116,6 +116,8 @@ const PHASES = {
   DISCUSS: 'discuss',
   VOTE: 'vote',
   ELIMINATION: 'elimination',
+  RECRUIT: 'recruit',
+  RECRUIT_RESPONSE: 'recruitResponse',
   FINAL_CIRCLE_DECISION: 'finalCircleDecision',
   FINAL_BANISHMENT: 'finalBanishment',
   RESULTS: 'results',
@@ -133,6 +135,12 @@ const PHASE_LABELS = {
   [PHASES.DISCUSS]: 'Open Discussion',
   [PHASES.VOTE]: 'Banishment Vote',
   [PHASES.ELIMINATION]: 'The Reveal',
+  // Deliberately discreet, not "Recruit Or Die" — only the two people
+  // actually involved ever see this screen, but the header is small,
+  // persistent chrome that a passerby could glimpse even briefly; a vague
+  // label costs nothing and a specific one risks more than it's worth.
+  [PHASES.RECRUIT]: 'Private Exchange',
+  [PHASES.RECRUIT_RESPONSE]: 'Private Exchange',
   [PHASES.FINAL_CIRCLE_DECISION]: 'The Final Circle',
   [PHASES.FINAL_BANISHMENT]: 'The Final Circle',
   [PHASES.RESULTS]: 'Results',
