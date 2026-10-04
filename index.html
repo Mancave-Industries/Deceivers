@@ -29,13 +29,6 @@
     <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="11" result="noise"/>
     <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
-  <!-- Same erosion, tuned down for small artwork (icons) where the
-       standard #crumble's displacement would be large relative to the
-       whole shape and read as broken rather than weathered. -->
-  <filter id="crumble-fine" x="-40%" y="-40%" width="180%" height="180%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="11" result="noise"/>
-    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
   <symbol id="icon-coin" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="24" cy="24" r="17"/>
       <circle cx="24" cy="24" r="11.5"/>
