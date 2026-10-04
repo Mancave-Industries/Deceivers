@@ -95,18 +95,20 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   `feDisplacementMap` filter (`#crumble`, defined inline in `index.html`,
   referenced via `filter: url(#crumble)`) gives the app-wide corner-
   bracket frame (`.app::after`) genuinely eroded, irregular edges instead
-  of clean geometric brackets. Deliberately scoped to that one decorative,
-  text-free element — applying a displacement filter to anything with
-  live text inside would warp/blur the text along with the border, and
-  applying it to interactive elements (buttons) would undermine the tap-
-  target clarity worked out earlier (see "Edge safe zones" and the
-  Setup-screen spacing fixes). Separately, `--radius-lg/-md/-sm` (every
-  panel, card, row, and input's corner radius) were redefined from a
-  single uniform value to four slightly different corner values each —
-  a hand-carved-not-machine-stamped feel applied everywhere at once by
-  changing three tokens, with zero per-selector work. `--radius-pill`
-  (buttons) stays a true pill on purpose — that shape is load-bearing tap
-  affordance, not decoration.
+  of clean geometric brackets. A second, gentler variant (`#crumble-fine`
+  — smaller-scale displacement, tuned for art much smaller than the
+  corner brackets) is applied to every icon (`.icon`) and every card face
+  (`.card svg`) via `filter: url(#crumble)`, so hand cards, reveal/draw
+  flip cards, and every icon show the same weathered-edge look without
+  losing legibility at their actual render sizes. Still deliberately
+  *not* applied to anything with live text running through it (a
+  displacement filter would warp the glyphs, not just the frame around
+  them). Separately, `--radius-lg/-md/-sm` (every panel, card, row, and
+  input's corner radius) were redefined from a single uniform value to
+  four slightly different corner values each — a hand-carved-not-machine-
+  stamped feel applied everywhere at once by changing three tokens, with
+  zero per-selector work. `--radius-pill` (buttons) stays a true pill on
+  purpose — that shape is load-bearing tap affordance, not decoration.
 - **Texture**: mostly CSS — radial vignettes, hairline gold borders, soft
   inner shadows — plus three small raster assets (`assets/brand/`) where
   CSS alone couldn't do the job: `deceivers-title-poster.jpg` (the real
@@ -115,15 +117,27 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   is cropped; a hand-distressed stamped-medallion look isn't something
   gradients and box-shadows can fake convincingly), `mancave-gameshed-
   badge.jpg` (the app-wide watermark, §below), and a tiny 64×64
-  `grain.png` tile (`.app-grain`, `overlay` blend at 10% opacity) laid
-  over the whole app for a faint, always-on film-grain pass — pushing the
-  general feel toward that key art's distressed/stamped-metal look
-  without needing a texture behind every individual component.
+  `grain.png` tile. `grain.png` is low-amplitude noise (`random.gauss(128,
+  16)` per pixel, clipped — actual range 72-177 of 255), not full-contrast
+  salt-and-pepper — this matters because any CSS blend mode that
+  preserves true-black/true-white backdrop pixels (`overlay`,
+  `soft-light`, etc. all do) passes *unbounded* noise through at full
+  contrast, which read as harsh static rather than texture the first time
+  this was tried. It's laid over the whole app at 10% opacity
+  (`.app-grain`, `mix-blend-mode: overlay`, unchanged from how it was
+  originally built) for a faint always-on film-grain pass, and — new this
+  round — blended (`background-blend-mode: soft-light`, grain layer always listed
+  *first*/as the blend source, the original color/gradient listed second
+  as the backdrop) into the header, every button, panel, row, the target-
+  card grid, and the modal, so the distressed look now extends to every
+  surface in the app rather than just the corner brackets and headline
+  text.
 - **Motion**: restrained — fades, gentle scale-ins, a candle flicker
   keyframe, card flip on reveal. No bouncy/gamey easing.
 - **Icons/cards**: all inline SVG, single/double color (gold line art on
   transparent, or gold-on-crimson/midnight fills for frames), so they inherit
-  `currentColor` and scale crisply at any size. The Title screen is the one
+  `currentColor` and scale crisply at any size, plus the `#crumble`/
+  `#crumble-fine` erosion filters above. The Title screen is the one
   exception (raster key art, above) — every other icon, card frame, and UI
   chrome piece stays vector so it scales crisply and costs nothing to load.
 - **Edge safe zones**: `--edge-buffer-top`/`--edge-buffer-bottom`

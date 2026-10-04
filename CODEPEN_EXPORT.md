@@ -46,11 +46,16 @@ them into the editor), then copy each one's CodePen-hosted URL and replace
 all three `assets/brand/...` references with them in `css/style.css`
 (`url('../assets/brand/deceivers-title-poster.jpg')` on `#screen-title`,
 `url('../assets/brand/mancave-gameshed-badge.jpg')` on `.app::before`, and
-`url('../assets/brand/grain.png')` on `.app-grain`). All three are CSS
-`background-image`s now — nothing in the HTML or JS panels references
-them directly. Without this step the Title screen, watermark, and grain
-texture will silently fail to load (missing background) while everything
-else keeps working, since none of those three are required for gameplay.
+`url('../assets/brand/grain.png')` — this last one now appears in about
+16 places, not just `.app-grain`: the grainy-gold headline text and the
+grain blended into the header, every button, panel, row, the target-card
+grid, and the modal all reference the same tile, so a find-and-replace
+across the whole CSS panel is easier than hunting each one down). All
+three are CSS `background-image`s now — nothing in the HTML or JS panels
+references them directly. Without this step the Title screen, watermark,
+and grain texture will silently fail to load (missing background) while
+everything else keeps working, since none of those three are required for
+gameplay.
 
 ## Font (new — add this in CodePen's settings, not a panel)
 

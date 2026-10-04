@@ -735,6 +735,88 @@ relic stone vibe." Three changes:
   browsers; the fallback font rendered correctly in these screenshots
   either way, confirming the no-webfont degradation path also works).
 
+## 21. Distressing pass: icons, card art, and every panel/button background (follow-up round)
+
+Direct follow-up to §20: "Graphics are all too clean / Every thing needs
+distressing." §20 had deliberately scoped the crumbling-stone treatment to
+one decorative, text-free element (the corner brackets) and the five
+headline selectors, explicitly holding back from buttons and panels "to
+avoid undermining tap-target clarity." This round's instruction overrode
+that caution directly, so the grain/erosion treatment was broadened to
+essentially everything: icons, card art, and the background of every
+button, panel, row, and the modal and header.
+
+- **Icons**: added a second, gentler SVG filter, `#crumble-fine`
+  (`feTurbulence baseFrequency=0.09` + small-scale `feDisplacementMap`),
+  applied via `filter: url(#crumble-fine)` to the global `.icon` class —
+  the existing `#crumble` filter's displacement is large relative to a
+  16-32px icon's own stroke width and reads as broken rather than
+  weathered at that size, so icons needed their own tuned-down variant
+  rather than reusing `#crumble` as-is.
+- **Card art**: applied the existing `#crumble` filter directly to
+  `.card svg`, so every card face — hand cards, the reveal/draw flip
+  cards, and the static card art shown in "How To Play" — now shows the
+  same eroded-edge look as the corner brackets, instead of being the one
+  remaining clean-edged element on screen.
+- **Backgrounds**: converted roughly 14 previously-flat or simple-gradient
+  `background` declarations to two-layer `background-image` stacks
+  (grain tile + the original color/gradient) with `background-blend-mode`,
+  covering `.app-header`, `.btn-primary`, `.btn-danger`, `.btn-confirm`,
+  `.panel`, `.setup-row`, `.player-row`, `.role-reveal-row`, `.target-card`
+  (both states), `.modal-panel`, `.prize-pot-panel`, `.winner-banner`, and
+  `.hand-tray` (this last one turned out to be dead CSS — nothing in
+  `ui.js` ever applies the `hand-tray` class to rendered markup; left the
+  rule converted for consistency since it costs nothing, but noting it
+  here since it couldn't be visually verified for that reason).
+
+**Bug found and fixed during this round's own verification** (consistent
+with this project's practice of logging what broke, not just what
+shipped): the first attempt produced a harsh black-and-white "TV static"
+look on every dark-background element instead of subtle texture, while
+bright gold/crimson buttons looked fine. Two compounding mistakes, found
+by working through the CSS blend-mode math against screenshots rather than
+guessing:
+1. `grain.png` (generated in §18) is *unbounded* noise — every pixel
+   independently random across the full 0-255 range. Any CSS blend mode
+   that preserves true-black/true-white backdrop pixels exactly (which
+   `overlay`, `soft-light`, and most others do, by design) will pass
+   full-contrast salt-and-pepper noise straight through once ~50% of the
+   backdrop's own pixels sit at or near the extremes — switching
+   `overlay` to `soft-light` alone (the first fix attempted) did not
+   solve this, since both modes share that extremes-preserving property.
+   Fixed by regenerating `grain.png` as *bounded* noise
+   (`random.gauss(128, 16)` per pixel, clipped to 0-255 — actual range
+   came out 72-177), matching how real film grain is subtle variance
+   around a midpoint rather than true salt-and-pepper.
+2. The two-layer `background-image` lists had the color/gradient listed
+   first (so it was the blend *source*) and `grain.png` listed second (so
+   it was the blend *backdrop*) — backwards from `.app-grain`'s
+   already-working pattern (a single grain image blended as the source
+   against the app's own dark background as backdrop, further diluted by
+   `opacity: 0.1` on that div). With grain as the backdrop, its own
+   mid-gray mean visibly washed out every dark panel toward gray
+   regardless of blend mode. Fixed by swapping both the `background-image`
+   and matching `background-size` layer order on all 14 selectors so
+   grain is always the source and the original color/gradient is always
+   the backdrop — this is also why `background-blend-mode: soft-light`
+   (not reverted back to `overlay`) was kept for all of them: with grain
+   correctly as the low-amplitude source, `soft-light` gives a gentler,
+   more film-like perturbation than `overlay` would. The five pre-existing
+   headline-text selectors and `.app-grain` were left exactly as they were
+   (`overlay`, unswapped layer order) since they were never broken — the
+   headline rule stayed safe because its source is a bright gold gradient
+   (dark backdrop extremes don't blow toward white the way they do
+   against a dark source), and `.app-grain` was always correctly ordered
+   (grain as source) from when it was first built in §18.
+- **Verification**: screenshotted Title, Setup, Reveal, Main, Draw, the
+  How-To-Play modal, the final-banishment target-card grid, and Results
+  (winner banner + role-reveal rows) — confirmed visible, subtle grain
+  texture (not static) on every dark panel/row/button, confirmed card art
+  and icons show a weathered edge without losing legibility at their
+  actual render sizes, and confirmed the pre-existing grainy-gold headline
+  text and app-wide watermark/grain pass were unaffected. Ran a full
+  headless playthrough through to Results: 0 console errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -755,6 +837,7 @@ relic stone vibe." Three changes:
 | Title key art + app-wide grain (visual check + full playthrough) | 2 screenshots + 1 full UI playthrough | 0 | — |
 | Title art upgraded to portrait poster (visual check + full playthrough) | 2 sizing variants screenshotted + 1 full UI playthrough | 1 (cover-mode cropping overlapped button with banner text) | 1 (switched to contain) |
 | Oswald + grainy text + crumbling borders (visual check + full playthrough) | 4 screenshots + 1 full UI playthrough + 1 direct font-URL check | 0 | — |
+| Distressing pass: icons, cards, all backgrounds (visual check + full playthrough) | 8 screenshots (incl. modal, target-card grid, results) + 2 full UI playthroughs | 1 (unbounded grain noise + reversed blend layer order produced harsh static on every dark panel) | 1 (bounded low-amplitude grain + corrected source/backdrop layer order) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
