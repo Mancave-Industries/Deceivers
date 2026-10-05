@@ -1347,6 +1347,30 @@ Checked it directly at the engine level, two ways:
 Confirms the guarantee holds under both of its own trigger conditions, not
 just the easy one. 0 errors, no code changed.
 
+## 33. Two more Prize Pot economy claims from PROJECT_PLAN, checked directly
+
+A third overnight check-in, closing out the remaining two specific,
+checkable claims from the "Series play and the Prize Pot economy" section
+that hadn't been directly tested yet (the core split-among-living-survivors
+math was already confirmed in §28's recruited-Deceiver payout check, but
+not these two edge cases specifically).
+
+- **"Anyone already eliminated, on either side, gets nothing"**: engineered
+  a 4-player game with 2 Deceivers, one of them (Ben) already dead, then
+  called `payoutPrizePot` with a 90-gold pot and `winner: 'deceiver'`.
+  Recipients came back as `["Ann"]` only — Ben, despite being on the
+  winning side, is correctly excluded for being dead, and the full 90 goes
+  to the one living Deceiver rather than being split two ways. Ben's
+  `seriesScores` entry stayed at 0.
+- **"The Prize Pot does not carry over between games"**: started a 3-game
+  series, manually set `state.prizePot` to a nonzero value (777, standing
+  in for whatever a game might end with before its own payout step zeroes
+  it), then called `startNextGameInSeries` directly — the pot came back at
+  exactly 0, confirming `setupNewGame`'s reset runs for every game in a
+  series, not just the first.
+
+Both matched PROJECT_PLAN.md's claims exactly. 0 errors, no code changed.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1381,6 +1405,7 @@ just the easy one. 0 errors, no code changed.
 | Final Circle "stall" investigation (direct repro + patience probe + budget fix) | 1 engineered 6p repro with full state snapshots + 1 no-click patience probe (confirmed ~1s/turn steady progress) + re-ran `fc_regression.js`'s 6-trial suite with the test's iteration budget raised 400→1500 | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
 | Deceiver's Choice vs. Shield (direct engine-level check) | 2 engineered hands checked straight against `resolveMurder()` (Shield alone, Shield + Deceiver's Choice) | 0 | — |
 | "Banishment never opens a fresh shuffle" stress test (direct engine-level check) | 5000 fresh-shuffle trials + 249 real reshuffle-from-discard cycles across 3000 consecutive draws | 0 | — |
+| Prize Pot economy: dead-winner exclusion + per-game reset (direct engine-level check) | 2 tests: engineered a dead Deceiver excluded from a 90-gold payout + a series' next-game Prize Pot reset from a nonzero value | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
