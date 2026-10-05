@@ -1506,6 +1506,46 @@ announcement of any kind."
   Deceiver Knowledge combo), a full playthrough screenshot test, and the
   18-cue sound check afterward — all clean, 0 errors.
 
+## 37. Raising the player cap to 16, with a generalized Deceiver-ratio formula
+
+The user asked whether 8 was a hard maximum (it was, `CONFIG.maxPlayers`),
+then specified the scaling rule for raising it: target roughly a 1:4
+Deceiver-to-player ratio, with 1:3 as the absolute hard ceiling, and raise
+the cap to 16.
+
+- **The formula**: `deceiverCountForPlayers` (`data.js`) changed from a
+  hardcoded two-tier `playerCount <= 6 ? 1 : 2` to
+  `Math.ceil((playerCount - 2) / 4)`. This exact formula was chosen
+  because it reproduces the original, already-shipped 3–6→1, 7–8→2 table
+  with *zero* change to those player counts (confirmed by direct
+  computation against the live function: 3→1, 4→1, 5→1, 6→1, 7→2, 8→2),
+  while extending the same pattern cleanly: 9–10→2, 11–14→3, 15–16→4.
+  Worst-case ratio across the whole 3–16 range is exactly 1:3 at the
+  3-player minimum (unavoidable — one Deceiver among three is as good as a
+  minimum-size game gets) and ~1:3.5 at 7 players — both already true of
+  the original table, not new compromises introduced by the extension.
+  `CONFIG.maxPlayers` raised from 8 to 16.
+- **Verified the formula directly** against the live `data.js` function
+  for every value 3–16, matching the intended table exactly.
+- **Checked for other hardcoded assumptions**: grepped the whole codebase
+  for a literal `8` anywhere player-count-related — found none; every
+  other reference (Setup screen copy, How To Play's player-count line, the
+  Add Player button's cutoff) already reads `CONFIG.minPlayers`/
+  `CONFIG.maxPlayers` dynamically, so raising the constant was sufficient
+  on its own.
+- **Visual checks at 16 players**: Setup screen with all 16 rows filled —
+  no horizontal overflow, scrolls cleanly, the dynamic hint text correctly
+  read "16 players — 4 Deceivers will be chosen in secret." Confirmed the
+  Add Player button correctly disappears once the (new) cap is reached.
+  Engineered a 16-player game down to 1 living Deceiver (of 4) and
+  screenshotted the Recruit or Die target-selection screen with its full
+  12 eligible Loyal targets — a clean 2-column grid, no overflow, header
+  still correctly reads the deliberately vague "Round 1 / PRIVATE
+  EXCHANGE" label.
+- **Full 16-player computer-only playthrough**: driven start to finish,
+  confirmed Deceiver count was exactly 4 at game start, and the game
+  reached a resolved winner with 0 console errors throughout.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1545,6 +1585,7 @@ announcement of any kind."
 | fc_regression_recruit.js budget fix, second instance of §30's class | Re-ran the 10-trial suite after the same 400→1500 fix | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
 | A more natural voice: phrase variety, tone, and jitter (feature change) | Monkey-patched `SpeechSynthesisUtterance` captured exact text/rate/pitch across 30 named + 20 generic pass-device calls, plus Night Falls/Gather Everyone sequence checks + 1 full live 3-player playthrough with sound enabled + 18-cue sound re-check + full playthrough screenshot re-check | 0 | 1 (feature added per user request) |
 | Recruit or Die hand-off anonymity leak (real bug, reported by designer) | Engineered the Recruit precondition, captured exact spoken text at the hand-off via monkey-patched `SpeechSynthesisUtterance`, confirmed no "recruit" mention + correct named phrasing + full recruit suite + playthrough + sound-cue re-check | 1 (the word "recruit" spoken aloud to the whole table) | 1 |
+| Player cap raised 8→16 with a generalized Deceiver-ratio formula (feature change) | Direct formula verification (3-16) against the live function + full-codebase hardcoded-"8" sweep + 16p Setup/Recruit-screen visual checks (no overflow) + 1 full 16p computer-only playthrough (22 rounds, resolved clean) + 11p computer-only playthrough (3 Deceivers, resolved clean) | 0 | 1 (feature added per user decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

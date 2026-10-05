@@ -6,7 +6,7 @@
 const CONFIG = {
   storageKey: 'deceivers_state_v1',
   minPlayers: 3,
-  maxPlayers: 8,
+  maxPlayers: 16,
   // Living players at/below this count end ordinary rounds (Fate cards,
   // Draws, Murders) for good and begin the Final Circle: a secret End
   // Game / Banish Again decision each round instead. See engine.js's
@@ -63,11 +63,19 @@ const ROLES = {
 };
 
 /**
- * Deceiver count scales with living-at-start player count.
+ * Deceiver count scales with starting player count, targeting roughly a
+ * 1:4 Deceiver-to-player ratio and never exceeding 1:3 (the absolute max
+ * — any worse and the Loyal side's "spot the minority" premise erodes).
+ * ceil((playerCount - 2) / 4) exactly reproduces the original 3-6->1,
+ * 7-8->2 table (so nothing already shipped/tested changes) and extends
+ * the same pattern upward: 9-10->2, 11-14->3, 15-16->4. Worst-case ratio
+ * across the whole 3-16 range is 1:3 exactly at playerCount 3 (the
+ * unavoidable minimum-game case — one Deceiver among as few as three
+ * players, since a game needs at least one of each side to mean anything)
+ * and 2/7 (~29%) at 7 — both already true of the original table, not new.
  */
 function deceiverCountForPlayers(playerCount) {
-  if (playerCount <= 6) return 1;
-  return 2;
+  return Math.ceil((playerCount - 2) / 4);
 }
 
 /* Fortune Deck — drawn one per living player each Draw Phase.
