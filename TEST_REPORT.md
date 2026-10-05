@@ -1255,6 +1255,48 @@ contrast and semantics cost nothing to get right.
   playthrough screenshot test afterward — 0 errors, same screen sequence
   as always.
 
+## 30. Chasing down an apparent stall in a long Final Circle sequence — confirmed a test-harness limit, not an app bug
+
+One of the overnight regression results from earlier (`fc_regression.js`
+trial 1, a 6-player game) ended its run sitting on the `finalBanishment`
+screen with `winner: null` instead of reaching `results` — reported at the
+time as 0 console errors, but worth tracking down properly rather than
+waving past it, since a silent stall is exactly the kind of thing that
+looks fine in a quick pass and isn't.
+
+- **Reproduced it directly**: engineered a 6-player, all-computer game
+  straight into the Final Circle and stepped through it with full state
+  snapshots at every turn. Found the actual cause quickly: computer-only
+  `finalCircleDecision` and `finalBanishment` queues resolve via the
+  existing timer-based auto-advance (`autoAdvanceComputerTurns`, the same
+  ~700ms-per-seat pattern used everywhere else in the game) rather than
+  visible buttons, so a driver script that only clicks buttons sees nothing
+  to click and has to simply wait each turn out.
+- **Confirmed the turns genuinely progress** (not frozen): a dedicated
+  patience probe that does no clicking at all except the Discuss
+  skip-ahead button watched `pendingQueue` count down steadily, about one
+  player roughly every second, through a full `finalCircleDecision` ballot
+  and a full `finalBanishment` vote in just under 11 seconds — it only
+  stopped advancing at the Elimination Reveal screen, which is correct:
+  that screen is a shared group beat that always needs an explicit tap
+  regardless of how many seats are computer-controlled, and this probe
+  deliberately wasn't clicking it.
+- **Root cause, confirmed**: the Final Circle can loop through several
+  Banish-Again rounds in a row before reaching End Game or two survivors,
+  and `fc_regression.js`'s original 400-iteration budget (at ~90-250ms per
+  polling iteration) could occasionally run out partway through an
+  unusually long sequence — not because anything stopped advancing, but
+  because the test simply stopped watching before the game was done.
+  Bumped the budget to 1500 iterations and re-ran: the exact same 6-player
+  trial pattern that stalled before now completes cleanly through to
+  `results` with a resolved winner. This was a test-script limit, not an
+  app regression — in the same family as this project's other documented
+  cases of test patience/timing running out before a real (correctly
+  advancing) sequence finished — but it earned the direct investigation
+  rather than being assumed, since "stalls occasionally, still reports 0
+  errors" is also exactly what a genuine intermittent stuck-state bug would
+  look like from the outside, and the difference matters.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1286,6 +1328,7 @@ contrast and semantics cost nothing to get right.
 | Recruit-or-Die / Final Circle boundary probe (deterministic, engineered collision) | 2 targeted tests: mid-Final-Circle 2→1 Deceiver drop (must not trigger Recruit) + same-round-boundary collision with a forced Refuse into round 3 | 0 bugs (1 design interaction found and documented, not changed — see write-up above) | — |
 | Recruited-Deceiver payout correctness (deterministic, engineered 100-gold pot) | 1 test: engineered 1 Deceiver + 1 Loyal, successful recruit, instant majority win, checked payout recipients and amounts directly | 0 | — |
 | Accessibility pass: contrast audit + toast live region | 6 WCAG contrast-ratio computations (all text/background pairings) + 1 live toast attribute + playthrough re-check | 1 gap (missing `aria-live` on toast, not a defect in shipped behavior) | 1 |
+| Final Circle "stall" investigation (direct repro + patience probe + budget fix) | 1 engineered 6p repro with full state snapshots + 1 no-click patience probe (confirmed ~1s/turn steady progress) + re-ran `fc_regression.js`'s 6-trial suite with the test's iteration budget raised 400→1500 | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
