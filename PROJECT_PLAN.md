@@ -426,17 +426,28 @@ logic extends to the "Draw" interstitial added in a later round (see
 unconditionally, before the branch, so a Draw card appears every single
 round regardless of which one secretly fires; its absence specifically on
 the Recruit round would otherwise be exactly the kind of pattern this
-mechanic is designed to never produce. The spoken
-cues are equally careful: the lone Deceiver's own hand-off still gets the
-normal named "Pass the phone to [name]" announcement (nothing unusual
-about naming whoever's turn it is — see Reveal/Draw/Vote below), but the
-hand-off *to* the recruit deliberately does **not** say their name out
-loud — `Sound.announcePassDevice` would otherwise speak it audibly to the
-whole room even though the screen itself stays private to whoever's
-holding the phone. That hand-off instead gets a fixed, non-identifying
-line, "Pass the phone to your chosen recruit," spoken directly from the
-confirm-recruit-target action handler rather than through the generic
-per-turn announcer.
+mechanic is designed to never produce. The spoken cues are equally
+careful, but got this wrong once: both hand-offs — the lone Deceiver's own
+turn, *and* the hand-off to their chosen target — now go through the exact
+same generic `maybeAnnouncePassDevice` path every other queue turn uses,
+named out loud with the same phrase bank as any other hand-off ("Ann, it's
+your turn," etc.). An earlier version deliberately avoided naming the
+*target* specifically, worried that saying their name aloud would leak who
+they were, and gave that hand-off its own fixed line instead — "Pass the
+phone to your chosen recruit." That reasoning was backwards, and was
+caught as a live bug after shipping (reported directly by the game's
+designer): naming a player is not the leak — every living player's name
+already gets called out loud at some point during an ordinary Draw queue,
+so one more named hand-off reveals nothing on its own. The real leak was
+the word *"recruit"* itself, spoken aloud to the whole table, not just
+whoever's holding the phone — it announced that a recruitment was
+happening at all, independent of whether a name was ever said, which is
+exactly the kind of public announcement the brief says this mechanic must
+never produce. Fixed by deleting the special case entirely rather than
+patching its wording: the Recruit-response hand-off no longer gets any
+bespoke announcement, manual call, or guard in `main.js` — it is now
+*structurally* indistinguishable from any other named queue turn, because
+it *is* one.
 
 **Bots**: `botPickRecruitTarget` (uniform random among eligible Loyal
 players) and `botChooseRecruitResponse` (a plain 50/50 coin flip) — simple

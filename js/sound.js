@@ -381,14 +381,6 @@ const Sound = (() => {
     announceInstruction(pick(GATHER_EVERYONE_PHRASES), null, 'urgent');
   }
 
-  const RECRUIT_HANDOFF_PHRASES = [
-    'Pass the phone to your chosen recruit.',
-    'Hand the phone to the one you have chosen.',
-  ];
-  function announceRecruitHandoff() {
-    announceInstruction(pick(RECRUIT_HANDOFF_PHRASES), null, 'calm');
-  }
-
   /* ---------- Primitives ---------- */
 
   function envTone(freq, { type = 'sine', start = 0, dur = 0.18, peak = 0.16, attack = 0.012, endFreq = null } = {}) {
@@ -649,6 +641,6 @@ const Sound = (() => {
   return {
     setEnabled, play, setMusicEnabled, startMusic, stopMusic,
     announceVotingBegins, announcePassDevice, announceInstruction,
-    announceNightFalls, announceGather, announceRecruitHandoff,
+    announceNightFalls, announceGather,
   };
 })();

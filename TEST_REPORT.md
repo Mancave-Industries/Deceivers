@@ -1465,6 +1465,47 @@ function calls) — e.g. "Ann, it's your turn." / "Pass the phone to Ben." /
 clean, confirming the non-voice sound effects were untouched. 0 errors
 throughout. No code changed to anything but the spoken-line system itself.
 
+## 36. A real anonymity leak in Recruit or Die's hand-off, caught by the designer
+
+Reported directly after the voice-variety round shipped: "you are
+suggesting that the deceiver passes the phone to the recruit... that lets
+the cat out the bag on both fronts." Correct, and a genuine bug, not a
+nitpick — this was the one spoken line in the entire game that broke the
+brief's core requirement for this mechanic: "no public interstitial or
+announcement of any kind."
+
+- **What was actually wrong**: the hand-off from the lone Deceiver to
+  their chosen target played a dedicated line — "Pass the phone to your
+  chosen recruit" — built specifically to avoid saying the target's name
+  out loud. But the word *"recruit"* was itself the leak: spoken aloud to
+  the whole table (not just whoever's holding the phone, same as every
+  other sound cue in this game), it announced that a recruitment was
+  happening at all, regardless of whether a name was ever said — exactly
+  the kind of public tell the brief explicitly rules out. The original
+  reasoning (avoid naming the target) was solving the wrong problem: a
+  name alone leaks nothing, since every living player's name already gets
+  called out loud at some point during an ordinary Draw queue — the
+  *wording itself* was the only thing that made this moment stand out.
+- **The fix**: deleted the special case rather than patching its wording.
+  `maybeAnnouncePassDevice`'s RECRUIT_RESPONSE guard is gone, and so is the
+  manual `Sound.announceRecruitHandoff()` call in `confirm-recruit-target`
+  (along with the now-dead `announceRecruitHandoff` function and its
+  phrase bank in `sound.js`). The hand-off now goes through the exact same
+  generic per-queue-turn path as every other turn in the game, named with
+  the same phrase bank ("Ann, it's your turn," etc.) — structurally
+  indistinguishable from an ordinary continuing Draw-queue turn, because
+  it now *is* one, rather than a parallel code path that could drift out
+  of sync with the rest of the anonymity design again.
+- **Verified directly**: engineered the Recruit-or-Die precondition,
+  captured the exact spoken text at the hand-off moment via a
+  monkey-patched `SpeechSynthesisUtterance` (same technique as the voice
+  variety round), and confirmed two things explicitly: no utterance ever
+  contains the word "recruit" (checked with a case-insensitive match), and
+  the target's name is spoken using one of the ordinary named phrase
+  variants. Re-ran the full existing recruit suite (Join, Refuse, Hidden
+  Deceiver Knowledge combo), a full playthrough screenshot test, and the
+  18-cue sound check afterward — all clean, 0 errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1503,6 +1544,7 @@ throughout. No code changed to anything but the spoken-line system itself.
 | Recruit or Die capped at one attempt per game (resolves §28, feature change) | Re-ran §28's exact collision scenario end-to-end (now correctly enters Final Circle on round 3 instead of re-offering Recruit) + 1 isolated cap-only test (6-7p, well above FC threshold) + full existing recruit suite (6 scripts) + both randomized computer-only regressions | 0 | 1 (feature added per user decision) |
 | fc_regression_recruit.js budget fix, second instance of §30's class | Re-ran the 10-trial suite after the same 400→1500 fix | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
 | A more natural voice: phrase variety, tone, and jitter (feature change) | Monkey-patched `SpeechSynthesisUtterance` captured exact text/rate/pitch across 30 named + 20 generic pass-device calls, plus Night Falls/Gather Everyone sequence checks + 1 full live 3-player playthrough with sound enabled + 18-cue sound re-check + full playthrough screenshot re-check | 0 | 1 (feature added per user request) |
+| Recruit or Die hand-off anonymity leak (real bug, reported by designer) | Engineered the Recruit precondition, captured exact spoken text at the hand-off via monkey-patched `SpeechSynthesisUtterance`, confirmed no "recruit" mention + correct named phrasing + full recruit suite + playthrough + sound-cue re-check | 1 (the word "recruit" spoken aloud to the whole table) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

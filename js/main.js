@@ -89,12 +89,16 @@ function maybeAnnouncePassDevice() {
     lastAnnouncedTurn = null;
     return;
   }
-  // The Recruit-response hand-off is announced manually, by name-free
-  // fixed line, at the moment the recruiting Deceiver confirms their
-  // choice (see confirm-recruit-target) — the generic system here would
-  // otherwise speak the recruit's actual name aloud, audible to the whole
-  // room even though the screen itself stays private to whoever holds it.
-  if (state.phase === PHASES.RECRUIT_RESPONSE) return;
+  // The Recruit-response hand-off (Deceiver -> their chosen target) goes
+  // through this exact same generic path, named out loud just like any
+  // other queue turn — a previous version gave it a special "pass the
+  // phone to your chosen recruit" line instead, which was the actual leak:
+  // the word "recruit," spoken aloud to the whole table (not just whoever
+  // holds the phone), announced on its own that a recruitment was
+  // happening at all, independent of whether a name was said. A player's
+  // name alone leaks nothing — every living player's name already gets
+  // called out at some point during an ordinary Draw queue turn, so this
+  // one more named hand-off is indistinguishable from any other.
   const player = currentQueuePlayer(state);
   if (!player) return;
   const key = `${state.phase}:${player.id}`;
@@ -595,11 +599,11 @@ const actions = {
     uiStage.recruitTapped = false;
     uiStage.recruitTarget = null;
     uiStage.recruitResponseTapped = false;
+    // Voice announcement fires automatically from render() ->
+    // maybeAnnouncePassDevice(), the same generic path every other queue
+    // turn uses — see that function's comment for why this hand-off is
+    // deliberately NOT special-cased.
     Sound.play('passDevice');
-    // Deliberately doesn't name the recruit — see sound.js's
-    // announcePassDevice comment and maybeAnnouncePassDevice's
-    // RECRUIT_RESPONSE guard above for why.
-    Sound.announceRecruitHandoff();
     persist();
     render();
   },
