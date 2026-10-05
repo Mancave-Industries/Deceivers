@@ -1319,6 +1319,34 @@ when the DOM state itself isn't what's in question.
 
 Both matched the documented rule exactly. 0 errors, no code changed.
 
+## 32. "A Banishment never opens a fresh shuffle," stress-tested directly
+
+A second overnight check-in, picking up a specific, checkable invariant
+from PROJECT_PLAN.md's Game Design Assumptions that hadn't been directly
+tested this session: `keepBanishmentOffTop` is supposed to guarantee a
+Banishment card can never be the very first card drawn after a fresh Fate
+deck shuffle — not just at game start, but every single time the deck
+empties out and gets rebuilt from its own discard pile — so the table is
+never asked to vote someone out with zero information from a preceding
+Quiet Night or Murder.
+
+Checked it directly at the engine level, two ways:
+
+- **5000 fresh shuffles**: called `keepBanishmentOffTop(shuffle(buildDeck(
+  FATE_DECK_DEF)))` 5000 times (the exact call `drawFateCard` makes on a
+  truly fresh deck) and checked the top-of-stack card (`deck[deck.length -
+  1]`, since cards are drawn via `pop()`) — 0 came back Banishment.
+- **249 real reshuffle-from-discard cycles**: drove `drawFateCard` through
+  3000 consecutive draws on a live state object (discarding each card
+  after it's drawn, exactly as `startRound`/`resolveMurder`/etc. do),
+  tracking every point where the deck was empty and had to rebuild from
+  `fateDiscard` — 249 such reshuffles occurred naturally across those 3000
+  draws, and the very next card drawn after every single one of them was
+  checked. 0 were Banishment.
+
+Confirms the guarantee holds under both of its own trigger conditions, not
+just the easy one. 0 errors, no code changed.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1352,6 +1380,7 @@ Both matched the documented rule exactly. 0 errors, no code changed.
 | Accessibility pass: contrast audit + toast live region | 6 WCAG contrast-ratio computations (all text/background pairings) + 1 live toast attribute + playthrough re-check | 1 gap (missing `aria-live` on toast, not a defect in shipped behavior) | 1 |
 | Final Circle "stall" investigation (direct repro + patience probe + budget fix) | 1 engineered 6p repro with full state snapshots + 1 no-click patience probe (confirmed ~1s/turn steady progress) + re-ran `fc_regression.js`'s 6-trial suite with the test's iteration budget raised 400→1500 | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
 | Deceiver's Choice vs. Shield (direct engine-level check) | 2 engineered hands checked straight against `resolveMurder()` (Shield alone, Shield + Deceiver's Choice) | 0 | — |
+| "Banishment never opens a fresh shuffle" stress test (direct engine-level check) | 5000 fresh-shuffle trials + 249 real reshuffle-from-discard cycles across 3000 consecutive draws | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
