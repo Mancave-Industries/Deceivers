@@ -15,7 +15,7 @@ const CONFIG = {
   // Optional real licensed music, played by the host's own Spotify app
   // alongside the game rather than embedded in it — tapping the link just
   // opens Spotify; nothing here talks to Spotify's API or touches auth.
-  spotifyPlaylistUrl: 'https://open.spotify.com/playlist/0e1mniDxAo46QOU30W6tIQ?si=eOez9FZ-SCWZVqQCVDD2uQ&utm_source=copy-link&pi=gYE-oZ1JSdWkP',
+  spotifyPlaylistUrl: 'https://open.spotify.com/playlist/1iwY55WpCl8Hb1UXrWx5RY?si=S-NIPJhGR--nsvL4UFWmMA&utm_source=copy-link&pi=zk-4FU8ZT2aCM',
 };
 
 const ICONS = {
