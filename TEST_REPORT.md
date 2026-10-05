@@ -1408,6 +1408,13 @@ every round for as long as they remain the sole survivor.
   screenshot test, the Known/Hidden reveal-list test, and both randomized
   computer-only regressions (`fc_regression.js`, `fc_regression_recruit.js`)
   — all unaffected by the cap, 0 errors throughout.
+- **One loose end from §30, closed**: `fc_regression_recruit.js`'s first
+  run here left one of its 10 trials mid-sequence (`screen: 'draw'`,
+  `winner: null`) rather than at `results` — same exact signature as §30's
+  investigated-and-resolved "stall": this script still carried the
+  original 400-iteration budget, never bumped like `fc_regression.js` was.
+  Applied the same 400→1500 fix; re-ran, and all 10 trials now complete
+  cleanly (5 of 10 naturally reaching Recruit or Die this time), 0 errors.
 
 ## Summary
 
