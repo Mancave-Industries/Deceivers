@@ -1371,6 +1371,44 @@ not these two edge cases specifically).
 
 Both matched PROJECT_PLAN.md's claims exactly. 0 errors, no code changed.
 
+## 34. Recruit or Die capped at one attempt per game (resolves §28)
+
+The user's call on the open design question from §28: a lone Deceiver
+should only ever be offered Recruit or Die once per game, not re-offered
+every round for as long as they remain the sole survivor.
+
+- **Change**: added `state.recruitmentAttempted` (defaults `false`, reset
+  in `setupNewGame` so every game in a series gets its own fresh chance).
+  `beginRecruitment` sets it `true` the moment the lone Deceiver's attempt
+  actually begins — win or refuse, it's spent either way.
+  `shouldTriggerRecruitment` now also requires `!state.
+  recruitmentAttempted` alongside its existing checks (not
+  `finalCircleActive`, started with more than one Deceiver, exactly one
+  living now). A successful Join doesn't need special handling here: it
+  already brings the living Deceiver count back to 2, which independently
+  fails the "exactly one living" check.
+- **Verified the exact §28 scenario now resolves correctly**: re-ran the
+  same engineered collision from §28's write-up (1 Deceiver + 4 total
+  living players on the same round boundary) through a Refuse and into the
+  next round. Before this change, round 3 offered the *same* lone Deceiver
+  another Recruit attempt (`finalCircleActive: false`, MAIN button still
+  `begin-draw`). Now it correctly enters the Final Circle instead
+  (`finalCircleActive: true`, MAIN button `begin-final-circle`).
+- **Isolated the cap from the threshold**: a separate direct test kept 6-7
+  players alive throughout (well above the Final Circle threshold of 4,
+  so the Final Circle's own gate was never in play) and confirmed
+  `shouldTriggerRecruitment` still correctly returns `false` for the same
+  lone Deceiver after one Refuse, purely because of the new flag — proving
+  the cap itself works, not just its interaction with Final Circle timing.
+- **Full existing suite re-run clean**: `recruit_engine_test.js` (Join),
+  `recruit_refuse_test.js` (Refuse/Shield-bypass), `recruit_majority_test.js`
+  (instant win), `recruit_hidden_test.js` (Hidden Deceiver Knowledge
+  combo), `recruit_vs_finalcircle_test.js` (mid-Final-Circle exclusion),
+  `recruit_payout_test.js` (payout correctness), a full-playthrough
+  screenshot test, the Known/Hidden reveal-list test, and both randomized
+  computer-only regressions (`fc_regression.js`, `fc_regression_recruit.js`)
+  — all unaffected by the cap, 0 errors throughout.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1406,6 +1444,7 @@ Both matched PROJECT_PLAN.md's claims exactly. 0 errors, no code changed.
 | Deceiver's Choice vs. Shield (direct engine-level check) | 2 engineered hands checked straight against `resolveMurder()` (Shield alone, Shield + Deceiver's Choice) | 0 | — |
 | "Banishment never opens a fresh shuffle" stress test (direct engine-level check) | 5000 fresh-shuffle trials + 249 real reshuffle-from-discard cycles across 3000 consecutive draws | 0 | — |
 | Prize Pot economy: dead-winner exclusion + per-game reset (direct engine-level check) | 2 tests: engineered a dead Deceiver excluded from a 90-gold payout + a series' next-game Prize Pot reset from a nonzero value | 0 | — |
+| Recruit or Die capped at one attempt per game (resolves §28, feature change) | Re-ran §28's exact collision scenario end-to-end (now correctly enters Final Circle on round 3 instead of re-offering Recruit) + 1 isolated cap-only test (6-7p, well above FC threshold) + full existing recruit suite (6 scripts) + both randomized computer-only regressions | 0 | 1 (feature added per user decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

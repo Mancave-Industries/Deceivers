@@ -376,11 +376,22 @@ kind, unlike every other event in the game.
 
 **Trigger**: `shouldTriggerRecruitment(state)` — exactly one living
 Deceiver, the game started with *more than one* (`state.
-initialDeceiverCount`, set once in `setupNewGame`), and the Final Circle
-hasn't begun. The "started with more than one" guard matters: a 3–6
-player game only ever has a single Deceiver from the start, with no one
-to replenish, so it should never trigger there — this is specifically
-about a lone *survivor* of an originally larger Deceiver team.
+initialDeceiverCount`, set once in `setupNewGame`), the Final Circle
+hasn't begun, and it hasn't already fired once this game (`state.
+recruitmentAttempted`, set the moment `beginRecruitment` runs). The
+"started with more than one" guard matters: a 3–6 player game only ever
+has a single Deceiver from the start, with no one to replenish, so it
+should never trigger there — this is specifically about a lone *survivor*
+of an originally larger Deceiver team. The once-per-game cap matters too:
+without it, a lone Deceiver whose recruit keeps choosing Refuse could be
+offered the same choice again every single round, round after round,
+which could in principle carry a game past the Final Circle threshold
+without the Final Circle ever actually engaging (found and flagged during
+overnight testing — see TEST_REPORT.md §28 for the original write-up).
+One attempt per game, win or refuse, closes that off cleanly: the lone
+Deceiver gets exactly one shot at replenishing, and if it's refused, the
+game carries on as an ordinary round from there (including, eventually,
+the Final Circle, on its own normal terms).
 
 **Shape**: a one-round detour that fully replaces that round's ordinary
 structure — no Fate card, no Draw, no Murder — and touches exactly two

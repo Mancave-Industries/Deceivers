@@ -54,8 +54,12 @@ function createInitialState() {
     // triggers for a game that's lost Deceivers down to one, never for a
     // game that only ever had one. recruitment holds the in-progress
     // recruiter/target pair for the current attempt, if any.
+    // recruitmentAttempted caps the mechanic at one attempt per game --
+    // once a lone Deceiver has been offered the choice, win or refuse, it
+    // never fires again that game (see shouldTriggerRecruitment).
     initialDeceiverCount: 1,
     recruitment: { recruiterId: null, targetId: null },
+    recruitmentAttempted: false,
     history: [],
     winner: null,
     gamePayout: null,

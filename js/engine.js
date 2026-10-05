@@ -44,6 +44,7 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   state.finalCircleActive = false;
   state.finalCircleDecisions = {};
   state.recruitment = { recruiterId: null, targetId: null };
+  state.recruitmentAttempted = false;
   state.history = [];
 
   state.pendingQueue = state.players.map((p) => p.id);
@@ -354,11 +355,15 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
 /* ---------- Recruit or Die ----------
    Triggers only when exactly one Deceiver is alive, the game started with
    more than one (see initialDeceiverCount in setupNewGame — a game that
-   only ever had a single Deceiver has no one to replenish), and the Final
-   Circle hasn't begun. A one-round detour that fully replaces that
-   round's ordinary shape — no Fate card, no Draw, no Murder — and touches
-   only two players' hands: the lone Deceiver, then whichever Loyal player
-   they secretly approach. No one else is ever involved, and the brief
+   only ever had a single Deceiver has no one to replenish), the Final
+   Circle hasn't begun, and it hasn't already been offered once this game
+   (recruitmentAttempted — capped at one attempt per game regardless of
+   outcome, so a refusal can't chain into repeat offers round after round
+   and quietly carry a game past the Final Circle threshold without it
+   ever engaging). A one-round detour that fully replaces that round's
+   ordinary shape — no Fate card, no Draw, no Murder — and touches only
+   two players' hands: the lone Deceiver, then whichever Loyal player they
+   secretly approach. No one else is ever involved, and the brief
    explicitly asks for nothing public: no interstitial, no announcement,
    nothing on the MAIN screen or its button hints that this round is any
    different from an ordinary one. See main.js's begin-draw handler (where
@@ -370,6 +375,7 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
 
 function shouldTriggerRecruitment(state) {
   if (state.finalCircleActive) return false;
+  if (state.recruitmentAttempted) return false;
   if (!state.initialDeceiverCount || state.initialDeceiverCount <= 1) return false;
   return livingPlayers(state).filter((p) => p.role === ROLES.DECEIVER.id).length === 1;
 }
@@ -377,6 +383,7 @@ function shouldTriggerRecruitment(state) {
 function beginRecruitment(state) {
   const deceiver = livingPlayers(state).find((p) => p.role === ROLES.DECEIVER.id);
   state.recruitment = { recruiterId: deceiver.id, targetId: null };
+  state.recruitmentAttempted = true;
   state.pendingQueue = [deceiver.id];
   state.phase = PHASES.RECRUIT;
 }
