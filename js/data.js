@@ -65,17 +65,26 @@ const ROLES = {
 /**
  * Deceiver count scales with starting player count, targeting roughly a
  * 1:4 Deceiver-to-player ratio and never exceeding 1:3 (the absolute max
- * — any worse and the Loyal side's "spot the minority" premise erodes).
- * ceil((playerCount - 2) / 4) exactly reproduces the original 3-6->1,
- * 7-8->2 table (so nothing already shipped/tested changes) and extends
- * the same pattern upward: 9-10->2, 11-14->3, 15-16->4. Worst-case ratio
- * across the whole 3-16 range is 1:3 exactly at playerCount 3 (the
- * unavoidable minimum-game case — one Deceiver among as few as three
- * players, since a game needs at least one of each side to mean anything)
- * and 2/7 (~29%) at 7 — both already true of the original table, not new.
+ * — any worse and the Loyal side's "spot the minority" premise erodes),
+ * capped at an absolute maximum of 3 regardless of player count — a
+ * fourth Deceiver was judged too many to track at the table even at 16
+ * players. ceil((playerCount - 2) / 4) exactly reproduces the original
+ * 3-6->1, 7-8->2 table (so nothing already shipped/tested changes) and
+ * extends the same pattern upward: 9-10->2, 11-16->3 (the cap holds flat
+ * from 11 players on, rather than reaching 4 at 15-16 the way the
+ * uncapped formula would). Worst-case ratio across the whole 3-16 range
+ * is 1:3 exactly at playerCount 3 (the unavoidable minimum-game case —
+ * one Deceiver among as few as three players, since a game needs at
+ * least one of each side to mean anything) and 2/7 (~29%) at 7 — both
+ * already true of the original table, not new. The cap also bounds
+ * Recruit or Die for free: that mechanic only ever replenishes from one
+ * living Deceiver back up to two (it can never exceed a game's own
+ * initialDeceiverCount), so capping this function at 3 means recruitment
+ * can never produce a fourth Deceiver either, with no separate check
+ * needed in engine.js.
  */
 function deceiverCountForPlayers(playerCount) {
-  return Math.ceil((playerCount - 2) / 4);
+  return Math.min(3, Math.ceil((playerCount - 2) / 4));
 }
 
 /* Fortune Deck — drawn one per living player each Draw Phase.

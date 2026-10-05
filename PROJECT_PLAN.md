@@ -237,16 +237,25 @@ assumptions rather than pause for questions:
   8; raised to 16 in a follow-up round once the Deceiver-count formula below
   was generalized to scale cleanly past that point.
 - **Deceiver count** (`deceiverCountForPlayers`, `data.js`) —
-  `Math.ceil((playerCount - 2) / 4)`, targeting roughly a 1:4
-  Deceiver-to-player ratio and never exceeding 1:3 (the absolute max — any
-  worse and the Loyal side's "spot the minority" premise erodes). This
-  formula was chosen specifically because it exactly reproduces the
+  `Math.min(3, Math.ceil((playerCount - 2) / 4))`, targeting roughly a 1:4
+  Deceiver-to-player ratio, never exceeding 1:3 (the absolute max — any
+  worse and the Loyal side's "spot the minority" premise erodes), and
+  capped at an absolute maximum of 3 regardless of player count — a fourth
+  Deceiver was judged too many to track at the table even at 16 players.
+  This formula was chosen specifically because it exactly reproduces the
   original, already-shipped-and-tested 3–6→1, 7–8→2 table with zero
   change to those player counts, and extends the same pattern upward:
-  9–10→2, 11–14→3, 15–16→4. Worst-case ratio across the whole range is
-  exactly 1:3 at the minimum 3-player game (unavoidable — a game needs at
-  least one Deceiver to mean anything, and one in three is as good as it
-  gets at that size) and ~1:3.5 at 7 players (already true of the original
+  9–10→2, then the cap holds flat at 3 from 11 all the way through 16
+  (the uncapped formula would have reached 4 at 15–16; the `Math.min(3,
+  ...)` wrapper stops that). The cap bounds Recruit or Die for free too —
+  that mechanic only ever replenishes from one living Deceiver back up to
+  two, never above a game's own `initialDeceiverCount`, so capping this
+  function at 3 means recruitment can never produce a fourth Deceiver
+  either, with no separate check needed anywhere else. Worst-case ratio
+  across the whole range is exactly 1:3 at the minimum 3-player game
+  (unavoidable — a game needs at least one Deceiver to mean anything, and
+  one in three is as good as it gets at that size) and ~1:3.5 at 7 players
+  (already true of the original
   table, not a new compromise). Remaining players are Loyal.
 - **Deceiver Knowledge** (Setup screen, a whole-series choice —
   `state.settings.deceiverKnowledge`, 'known' by default): in **Known**

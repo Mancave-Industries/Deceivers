@@ -1545,6 +1545,32 @@ the cap to 16.
 - **Full 16-player computer-only playthrough**: driven start to finish,
   confirmed Deceiver count was exactly 4 at game start, and the game
   reached a resolved winner with 0 console errors throughout.
+  (Superseded one round later — see below: the 4-Deceiver tier this
+  specific test exercised no longer exists.)
+
+## 38. Deceiver count capped at an absolute max of 3, never 4
+
+Immediate follow-up to §37: the user set a hard ceiling — "Max 3... Never
+4" — regardless of how high the player count goes.
+
+- **The change**: `deceiverCountForPlayers` wrapped in `Math.min(3, ...)`.
+  The 3–10 player range is untouched (1 or 2 Deceivers, same as §37); the
+  11–16 range, which previously climbed to 3 then 4 at the top end, now
+  holds flat at 3 all the way from 11 through 16 players instead of
+  reaching 4 at 15–16.
+- **Recruit or Die needed no separate change**: that mechanic only ever
+  replenishes from exactly one living Deceiver back up to two — it can
+  never push the total above whatever `initialDeceiverCount` already was.
+  Capping the player-count formula at 3 therefore caps recruitment's
+  ceiling at 3 for free, with no new check needed anywhere in `engine.js`.
+- **Verified directly**: computed the function's output for every value
+  3–16 against the live source (via a regex-extracted `eval` of the actual
+  function body, not a hand-copied reproduction) — 11 through 16 all now
+  read exactly 3. Confirmed the same in a live browser across five player
+  counts (10, 11, 13, 15, 16): 10→2, the rest→3, with 15 and 16
+  specifically confirmed to no longer produce 4. Re-ran the Join/Refuse
+  recruit tests and a full playthrough screenshot test afterward — all
+  clean, 0 errors.
 
 ## Summary
 
@@ -1586,6 +1612,7 @@ the cap to 16.
 | A more natural voice: phrase variety, tone, and jitter (feature change) | Monkey-patched `SpeechSynthesisUtterance` captured exact text/rate/pitch across 30 named + 20 generic pass-device calls, plus Night Falls/Gather Everyone sequence checks + 1 full live 3-player playthrough with sound enabled + 18-cue sound re-check + full playthrough screenshot re-check | 0 | 1 (feature added per user request) |
 | Recruit or Die hand-off anonymity leak (real bug, reported by designer) | Engineered the Recruit precondition, captured exact spoken text at the hand-off via monkey-patched `SpeechSynthesisUtterance`, confirmed no "recruit" mention + correct named phrasing + full recruit suite + playthrough + sound-cue re-check | 1 (the word "recruit" spoken aloud to the whole table) | 1 |
 | Player cap raised 8→16 with a generalized Deceiver-ratio formula (feature change) | Direct formula verification (3-16) against the live function + full-codebase hardcoded-"8" sweep + 16p Setup/Recruit-screen visual checks (no overflow) + 1 full 16p computer-only playthrough (22 rounds, resolved clean) + 11p computer-only playthrough (3 Deceivers, resolved clean) | 0 | 1 (feature added per user decision) |
+| Deceiver count capped at absolute max 3, never 4 (feature change) | Direct formula verification against live source for all 3-16 + live-browser check across 5 player counts (10/11/13/15/16) + Join/Refuse recruit suite + playthrough re-check + 9p/11p/12p computer-only playthroughs (all resolved clean) | 0 | 1 (feature added per user decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
