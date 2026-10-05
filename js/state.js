@@ -40,8 +40,13 @@ function createInitialState() {
     nightResult: null,
     voteResult: null,
     eliminationContext: null,
-    actingDeceiverId: null,
-    pendingMurderChoice: null,
+    // How the currently-living Deceivers are deciding this Murder round —
+    // recomputed fresh at the start of every Murder phase (engine.js's
+    // beginMurderPhase), not persisted across rounds, since deaths between
+    // rounds can change who's "lowest-numbered" or shrink the group. See
+    // engine.js's murderStepFor for the full Hidden/Known, 1-3-Deceiver
+    // decision shapes this supports.
+    murderDecision: { order: [], shortlist: [], narrowedTargetId: null, finalTargetId: null, useDeceiversChoice: false, deciderId: null },
     finalBanishmentActive: false,
     // Final Circle: once living players drop to CONFIG.finalCircleThreshold,
     // this flips true for the rest of the game and never resets mid-game

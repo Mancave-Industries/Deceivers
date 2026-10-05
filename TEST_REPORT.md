@@ -1572,6 +1572,71 @@ Immediate follow-up to §37: the user set a hard ceiling — "Max 3... Never
   recruit tests and a full playthrough screenshot test afterward — all
   clean, 0 errors.
 
+## 39. How multiple Deceivers decide a Murder target
+
+The user asked what happens if Deceivers would pick different Murder
+victims — the honest answer was that it couldn't happen, since only one
+designated Deceiver ever got a say, the others silently sitting out every
+Murder round. With 2-3 Deceiver games now common after §37/§38, that
+became a real, visible design gap rather than a theoretical one, and the
+user specified the fix directly: Hidden mode keeps one decider (lowest
+seat number); Known mode shares the decision — shortlist of 2, then
+either a direct final pick (2 living Deceivers) or a narrow-then-veto
+(3 living, with the third able to save instead of kill).
+
+- **Engine (`engine.js`)**: replaced the old single `actingDeceiverId` /
+  `pendingMurderChoice` pair with `state.murderDecision` (`order`,
+  `shortlist`, `narrowedTargetId`, `finalTargetId`, `useDeceiversChoice`,
+  `deciderId`), recomputed fresh every Murder phase from the *currently*
+  living Deceivers (not fixed once per game — a Banishment Vote between
+  rounds can kill one and reshuffle who's lowest-numbered). New
+  `murderStepFor(state, playerId)` is the single source of truth for what
+  a given living Deceiver does this round (`'single'`, `'shortlist'`,
+  `'narrow'`, `'narrow-final'`, `'veto'`, or `null`), used by both the
+  human action handlers and the bot dispatch so there's no risk of the two
+  drifting apart. `recordMurderShortlist`, `recordMurderTarget` (shared by
+  `'single'`/`'narrow'`/`'narrow-final'`, branching internally on the
+  current step), and `recordMurderVeto` record each step; a Save
+  deliberately falls through the exact same "no valid target recorded"
+  branch `advanceMurderQueue` already had, rather than a new code path.
+  New bots: `botPickMurderShortlist`, `botPickFromMurderShortlist`,
+  `botChooseMurderVeto` (a plain 50/50 coin flip, same spirit as
+  `botChooseRecruitResponse`'s).
+- **UI (`ui.js`)**: `renderMurder` now branches on `currentMurderStep`,
+  with four new screen variants (Shortlist, Narrow, Narrow-Final, Veto) on
+  top of the existing Single/Nothing-To-Do pair, sharing a
+  `murderTargetGrid` helper for the three that show a target grid. The
+  Deceiver's Choice checkbox is deliberately only ever offered at
+  `'single'`, `'narrow-final'`, and `'veto'` — never at `'shortlist'` or
+  `'narrow'`, since those don't commit to a final target yet.
+- **Verified directly at the engine level** (6 targeted scenarios, no UI
+  driving): Known+2-living → shortlist+narrow-final, final target correctly
+  drawn from the shortlist, decider correctly recorded as the second
+  Deceiver; Known+3-living → shortlist+narrow+veto(kill), narrowed target
+  correctly carries through to the final kill; Known+3-living →
+  veto(save) → resolves as an ordinary Quiet Night, nobody dies; Hidden+3-
+  living → only the lowest-seat Deceiver gets `'single'`, the other two get
+  `null`; Known+1-living (2 already dead) → falls back to `'single'`
+  correctly rather than attempting a shortlist with no one to hand off to;
+  step values correctly differentiate all three steps regardless of who
+  holds a Deceiver's Choice card.
+- **Verified through the real UI**, full click-through at 11 players (3
+  Deceivers, Known mode, all three holding a Deceiver's Choice card to
+  probe checkbox visibility at every step): Shortlist screen — no checkbox
+  (confirmed in the live DOM). Narrow screen — no checkbox, and showed
+  exactly the two shortlisted names forwarded correctly from the previous
+  step. Veto screen — checkbox present (correctly the only step it's
+  offered at this count), body text correctly named the narrowed
+  candidate. Confirmed Kill resolves as an ordinary Murder reveal and
+  (separately) Save resolves as an indistinguishable "A Quiet Night."
+- **Computer-only regression** across 6 configurations (5p/1-Deceiver
+  baseline, 7p Known/Hidden at 2 Deceivers, 11p/14p Known/Hidden at 3
+  Deceivers) confirmed: the baseline 1-Deceiver game never shows a
+  shortlist step (unaffected by this round); 7p Known naturally exercised
+  the shortlist step under real random play; 7p Hidden never did (single
+  decider only, as designed) — all resolved to a winner with 0 console
+  errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1613,6 +1678,7 @@ Immediate follow-up to §37: the user set a hard ceiling — "Max 3... Never
 | Recruit or Die hand-off anonymity leak (real bug, reported by designer) | Engineered the Recruit precondition, captured exact spoken text at the hand-off via monkey-patched `SpeechSynthesisUtterance`, confirmed no "recruit" mention + correct named phrasing + full recruit suite + playthrough + sound-cue re-check | 1 (the word "recruit" spoken aloud to the whole table) | 1 |
 | Player cap raised 8→16 with a generalized Deceiver-ratio formula (feature change) | Direct formula verification (3-16) against the live function + full-codebase hardcoded-"8" sweep + 16p Setup/Recruit-screen visual checks (no overflow) + 1 full 16p computer-only playthrough (22 rounds, resolved clean) + 11p computer-only playthrough (3 Deceivers, resolved clean) | 0 | 1 (feature added per user decision) |
 | Deceiver count capped at absolute max 3, never 4 (feature change) | Direct formula verification against live source for all 3-16 + live-browser check across 5 player counts (10/11/13/15/16) + Join/Refuse recruit suite + playthrough re-check + 9p/11p/12p computer-only playthroughs (all resolved clean) | 0 | 1 (feature added per user decision) |
+| Multi-Deceiver Murder decision (shortlist/narrow/veto, feature change) | 6 direct engine-level scenarios + full UI click-through at 11p (checkbox gating at every step, Kill and Save outcomes) + dedicated Shield-vs-Choice-at-veto UI test (card consumption confirmed) + 1 fixed stale test script (old `actingDeceiverId` field) + 6-config computer-only regression (5p baseline, 7p/11p Known+Hidden) | 0 app bugs (1 stale test script using a removed field, fixed) | 1 (feature added per user decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

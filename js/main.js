@@ -14,6 +14,7 @@ const uiStage = {
   drawTapped: false,
   murderTapped: false,
   murderTarget: null,
+  murderShortlist: [],
   useChoice: false,
   voteTapped: false,
   voteSelected: null,
@@ -233,12 +234,25 @@ function resolveComputerTurn() {
       break;
     }
     case PHASES.MURDER: {
-      // Same two calls regardless of role — recordMurderChoice only runs on
-      // the acting Deceiver's own turn, exactly like confirm-murder-turn.
-      if (isActingDeceiverTurn(state)) {
+      // Same advanceMurderQueue() call at the end regardless of role or
+      // step — only a living Deceiver whose turn the current step actually
+      // is records anything first, exactly matching the human action
+      // handlers (see currentMurderStep, engine.js).
+      const step = currentMurderStep(state);
+      if (step === 'single') {
         const targetId = botPickMurderTarget(state);
         const useChoice = botShouldUseDeceiversChoice(state);
-        if (targetId) recordMurderChoice(state, targetId, useChoice);
+        if (targetId) recordMurderTarget(state, targetId, useChoice);
+      } else if (step === 'shortlist') {
+        recordMurderShortlist(state, botPickMurderShortlist(state));
+      } else if (step === 'narrow' || step === 'narrow-final') {
+        const targetId = botPickFromMurderShortlist(state);
+        const useChoice = step === 'narrow-final' ? botShouldUseDeceiversChoice(state) : false;
+        if (targetId) recordMurderTarget(state, targetId, useChoice);
+      } else if (step === 'veto') {
+        const decision = botChooseMurderVeto();
+        const useChoice = decision === 'kill' ? botShouldUseDeceiversChoice(state) : false;
+        recordMurderVeto(state, decision, useChoice);
       }
       advanceMurderQueue(state);
       uiStage.eliminationRevealed = false;
@@ -341,7 +355,7 @@ function render() {
       UI.renderNight(state);
       break;
     case PHASES.MURDER:
-      UI.renderMurder(state, uiStage.murderTapped, uiStage.murderTarget, uiStage.useChoice);
+      UI.renderMurder(state, uiStage.murderTapped, uiStage.murderTarget, uiStage.useChoice, uiStage.murderShortlist);
       break;
     case PHASES.DISCUSS:
       UI.renderDiscuss(state, uiStage.votingAnnounced, uiStage.discussSecondsLeft);
@@ -542,6 +556,7 @@ const actions = {
     beginMurderPhase(state);
     uiStage.murderTapped = false;
     uiStage.murderTarget = null;
+    uiStage.murderShortlist = [];
     uiStage.useChoice = false;
     interstitialPending = 'murder';
     render();
@@ -566,9 +581,9 @@ const actions = {
     render();
   },
   'confirm-murder-turn': () => {
-    if (isActingDeceiverTurn(state)) {
+    if (currentMurderStep(state) === 'single') {
       if (!uiStage.murderTarget) return;
-      recordMurderChoice(state, uiStage.murderTarget, uiStage.useChoice);
+      recordMurderTarget(state, uiStage.murderTarget, uiStage.useChoice);
     }
     uiStage.murderTapped = false;
     uiStage.murderTarget = null;
@@ -578,6 +593,71 @@ const actions = {
     // Same sound every turn regardless of role or whether the queue just
     // finished — see sound.js header note; `gather` is exactly as
     // role-blind as `passDevice` was, so the anonymity guarantee holds.
+    Sound.play(done ? 'gather' : 'passDevice');
+    persist();
+    render();
+  },
+  'select-murder-shortlist-target': (btn) => {
+    Sound.play('tap');
+    const id = btn.dataset.id;
+    const list = uiStage.murderShortlist;
+    if (list.includes(id)) {
+      uiStage.murderShortlist = list.filter((x) => x !== id);
+    } else if (list.length < 2) {
+      uiStage.murderShortlist = [...list, id];
+    }
+    // A third tap while two are already selected is simply ignored —
+    // untap one first, same pattern as every other confirm-gated picker
+    // in this game.
+    render();
+  },
+  'confirm-murder-shortlist': () => {
+    if (uiStage.murderShortlist.length !== 2) return;
+    recordMurderShortlist(state, uiStage.murderShortlist);
+    uiStage.murderTapped = false;
+    uiStage.murderShortlist = [];
+    // The shortlist step never resolves the round itself — there's always
+    // at least one more living Deceiver still to act (narrow or
+    // narrow-final) — but still advances the physical queue to them.
+    advanceMurderQueue(state);
+    uiStage.eliminationRevealed = false;
+    Sound.play('passDevice');
+    persist();
+    render();
+  },
+  'select-murder-narrow-target': (btn) => {
+    Sound.play('tap');
+    uiStage.murderTarget = btn.dataset.id;
+    render();
+  },
+  'confirm-murder-narrow': () => {
+    if (!uiStage.murderTarget) return;
+    recordMurderTarget(state, uiStage.murderTarget, uiStage.useChoice);
+    uiStage.murderTapped = false;
+    uiStage.murderTarget = null;
+    uiStage.useChoice = false;
+    const done = advanceMurderQueue(state);
+    uiStage.eliminationRevealed = false;
+    Sound.play(done ? 'gather' : 'passDevice');
+    persist();
+    render();
+  },
+  'murder-veto-kill': () => {
+    recordMurderVeto(state, 'kill', uiStage.useChoice);
+    uiStage.murderTapped = false;
+    uiStage.useChoice = false;
+    const done = advanceMurderQueue(state);
+    uiStage.eliminationRevealed = false;
+    Sound.play(done ? 'gather' : 'passDevice');
+    persist();
+    render();
+  },
+  'murder-veto-save': () => {
+    recordMurderVeto(state, 'save', false);
+    uiStage.murderTapped = false;
+    uiStage.useChoice = false;
+    const done = advanceMurderQueue(state);
+    uiStage.eliminationRevealed = false;
     Sound.play(done ? 'gather' : 'passDevice');
     persist();
     render();

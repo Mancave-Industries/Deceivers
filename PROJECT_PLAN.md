@@ -297,14 +297,16 @@ ends the round.
    - **Murder** — a ceremonial "pass the phone" Night transition that states
      outright that tonight's Fate is Murder (there's nothing left to guess —
      by design the Fate card is only ever hidden before the Draw Phase, not
-     after), then every living player takes a turn (see below); the acting
-     Deceiver privately chooses one living, non-Deceiver target via Murder
-     Selection. A Shield card the target is holding deploys automatically
-     and is spent the instant it blocks a Murder — the target never has to
-     act on it; a Deceiver's Choice card played by the Deceivers overrides a
-     Shield in effect (and still spends the Shield). A "Gather Everyone"
-     checkpoint, then an Elimination Reveal shows the outcome, then the
-     round ends.
+     after), then every living player takes a turn (see below); the living
+     Deceivers privately choose one living, non-Deceiver target via Murder
+     Selection — see "How multiple Deceivers decide a Murder target,"
+     below, for exactly how that choice gets made when more than one
+     Deceiver is alive. A Shield card the target is holding deploys
+     automatically and is spent the instant it blocks a Murder — the target
+     never has to act on it; a Deceiver's Choice card played by whichever
+     Deceiver makes the final call overrides a Shield in effect (and still
+     spends the Shield). A "Gather Everyone" checkpoint, then an Elimination
+     Reveal shows the outcome, then the round ends.
    - **Banishment** — skips the night entirely. An explicit **Open
      Discussion** screen comes first: put the phone down, the whole table
      talks it out loud — accuse, defend, ask questions — with a "Begin
@@ -327,6 +329,66 @@ ends the round.
 4. **Results Screen** — winning side, full role reveal of every player, this
    game's Prize Pot payout, series standings, and either "Next Game" or
    "New Series" depending on whether the series is complete.
+
+### How multiple Deceivers decide a Murder target
+
+With Deceiver counts now able to reach 2 or 3 (see "Deceiver count" under
+Roles, above), the question of what happens when they'd pick different
+victims needed an actual answer — the original design only ever had one
+Deceiver acting. The brief's answer, directly from the game's designer,
+splits on the Deceiver Knowledge setting:
+
+**Hidden mode, or whenever only one Deceiver is currently alive (either
+mode)** — unchanged from the original design: the lowest-seat-numbered
+living Deceiver decides alone, picking straight from every eligible
+target, exactly as a single Deceiver always has. Every other living
+Deceiver's turn in the queue looks identical to a Loyal player's
+("Nothing To Do") — which doubles as a quiet, nameless tell to them that a
+lower-numbered Deceiver must exist (since *someone* has to be deciding),
+without ever revealing who.
+
+**Known mode, exactly two living Deceivers** — a two-step hand-off: the
+lowest-numbered Deceiver shortlists exactly two candidates; the phone then
+passes to the next-lowest-numbered living Deceiver, who picks the final
+target from that shortlist of two. That pick *is* the binding target — a
+held Deceiver's Choice card is only ever offered to whoever makes this
+final call, never at the shortlist step (a provisional candidate isn't
+what a Shield would even be checked against).
+
+**Known mode, exactly three living Deceivers** — the same shortlist step,
+then a third step instead of a final one: the second Deceiver narrows the
+shortlist to a single candidate, and the phone passes to the third
+Deceiver, who is told "your fellow Deceiver has chosen [name] — confirm
+the kill, or save them instead." **Kill** resolves as an ordinary Murder
+against that candidate (Shield/Deceiver's Choice logic unchanged, the
+Choice card only offered here). **Save** resolves the round as an
+ordinary Quiet Night — nobody dies, same `nightResult`/`eliminationContext`
+shape a real Quiet Night uses, sharing the exact fallback branch
+`advanceMurderQueue` already had for "no valid target was ever recorded,"
+rather than a separate code path.
+
+`state.murderDecision.order` — the currently-living Deceivers' ids, lowest
+seat number first — is recomputed fresh at the start of *every* Murder
+phase (`beginMurderPhase`), not persisted across rounds the way the
+original single-Deceiver `actingDeceiverId` was: a Banishment Vote between
+rounds can kill a Deceiver and reshuffle who's "lowest," or shrink a
+3-Deceiver game down to 2 or 1, and the shape of the decision (single /
+shortlist+narrow-final / shortlist+narrow+veto) has to re-derive from
+however many are alive *this* round, not whatever the game started with.
+`murderStepFor(state, playerId)` is the single source of truth for which
+step, if any, a given living Deceiver performs that round — both the human
+action handlers and the computer-seat bot logic (`resolveComputerTurn`'s
+`MURDER` case) dispatch off its return value, so there's exactly one place
+that decides who does what, not two implementations that could drift out
+of sync.
+
+Bots mirror the human steps with the same simple, non-strategic spirit as
+every other `bot*` function: `botPickMurderShortlist` picks two random
+eligible targets, `botPickFromMurderShortlist` picks one of whichever
+shortlist it's handed, and `botChooseMurderVeto` is a plain 50/50 coin
+flip — same spirit as `botChooseRecruitResponse`'s coin flip, since the
+third Deceiver has no information a real strategic AI would weigh here
+either.
 
 ### The Final Circle (End Game)
 

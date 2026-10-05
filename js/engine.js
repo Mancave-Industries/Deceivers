@@ -269,28 +269,110 @@ function eligibleMurderTargets(state) {
   return livingPlayers(state).filter((p) => p.role !== ROLES.DECEIVER.id);
 }
 
+/* How multiple living Deceivers decide a Murder target together, per the
+   brief: in Hidden Deceiver Knowledge mode (or whenever only one Deceiver
+   is currently alive, in either mode — there's no one to hand off to),
+   the lowest-seat-numbered living Deceiver decides alone, exactly as a
+   single Deceiver always has; every other living Deceiver's turn looks
+   identical to a Loyal player's ("Nothing To Do"), which doubles as a
+   quiet tell to them that a lower-numbered Deceiver must exist, without
+   ever saying who. In Known mode with two or three living Deceivers, the
+   decision is shared: the lowest-numbered picks a 2-player shortlist: the
+   next-lowest either picks the final target directly from it (exactly
+   two living) or narrows it to one candidate for a third Deceiver to
+   confirm (exactly three living), who can choose to kill that candidate
+   or save them — a save resolves the round as an ordinary Quiet Night.
+   state.murderDecision.order is the living Deceivers' ids in seat order,
+   computed fresh every Murder phase (deaths between rounds can shrink or
+   reorder who's "lowest"). */
+
 function beginMurderPhase(state) {
   state.pendingQueue = livingPlayers(state).map((p) => p.id);
-  if (!state.actingDeceiverId || !findPlayer(state, state.actingDeceiverId)?.alive) {
-    const deceiver = livingPlayers(state).find((p) => p.role === ROLES.DECEIVER.id);
-    state.actingDeceiverId = deceiver ? deceiver.id : null;
-  }
-  state.pendingMurderChoice = null;
+  const order = livingPlayers(state).filter((p) => p.role === ROLES.DECEIVER.id).map((p) => p.id);
+  state.murderDecision = {
+    order,
+    shortlist: [],
+    narrowedTargetId: null,
+    finalTargetId: null,
+    useDeceiversChoice: false,
+    deciderId: null,
+  };
   state.phase = PHASES.MURDER;
 }
 
-function isActingDeceiverTurn(state) {
+/** Returns which step, if any, the given player id performs this Murder
+ *  round: 'single' (decides alone — Hidden mode, or Known mode with only
+ *  one living Deceiver), 'shortlist' (Known mode, picks 2 candidates),
+ *  'narrow' (Known mode, exactly 3 living — picks 1 of the shortlist,
+ *  passed on to the third Deceiver rather than resolving), 'narrow-final'
+ *  (Known mode, exactly 2 living — picks 1 of the shortlist, which *is*
+ *  the final target), 'veto' (Known mode, exactly 3 living — confirms or
+ *  overrides the narrowed target), or null (no task this round, same
+ *  "Nothing To Do" turn as any Loyal player gets). */
+function murderStepFor(state, playerId) {
+  const { order } = state.murderDecision;
+  const known = state.settings.deceiverKnowledge !== 'hidden';
+  if (!known || order.length === 1) {
+    return playerId === order[0] ? 'single' : null;
+  }
+  if (playerId === order[0]) return 'shortlist';
+  if (playerId === order[1]) return order.length >= 3 ? 'narrow' : 'narrow-final';
+  if (order.length >= 3 && playerId === order[2]) return 'veto';
+  return null;
+}
+
+function currentMurderStep(state) {
   const player = currentQueuePlayer(state);
-  return !!player && player.id === state.actingDeceiverId;
+  return player ? murderStepFor(state, player.id) : null;
 }
 
-function actingDeceiverHoldsChoiceCard(state) {
-  const actor = findPlayer(state, state.actingDeceiverId);
-  return !!actor && actor.hand.includes('deceivers-choice');
+/** Whether the player currently holding the phone — who must be the one
+ *  about to make a binding kill decision ('single', 'narrow-final', or
+ *  'veto'; the 'shortlist'/'narrow' steps never offer this, since those
+ *  don't commit to a final target — a provisional candidate isn't who a
+ *  Shield would even be checked against) — holds a Deceiver's Choice
+ *  card of their own. */
+function currentMurderDeciderHoldsChoiceCard(state) {
+  const player = currentQueuePlayer(state);
+  return !!player && player.hand.includes('deceivers-choice');
 }
 
-function recordMurderChoice(state, targetId, useDeceiversChoice) {
-  state.pendingMurderChoice = { targetId, useDeceiversChoice: !!useDeceiversChoice };
+function shortlistedMurderTargets(state) {
+  return state.murderDecision.shortlist.map((id) => findPlayer(state, id)).filter(Boolean);
+}
+
+function recordMurderShortlist(state, targetIds) {
+  state.murderDecision.shortlist = targetIds.slice(0, 2);
+}
+
+/** Used for both the 'single' step (picks straight from every eligible
+ *  target) and the 'narrow'/'narrow-final' steps (picks from the
+ *  2-player shortlist only) — which one depends on the current step, so
+ *  this only needs the target id, not which list it came from. */
+function recordMurderTarget(state, targetId, useDeceiversChoice) {
+  if (currentMurderStep(state) === 'narrow') {
+    // Exactly 3 living Deceivers: this narrows the shortlist to one
+    // candidate for the third Deceiver to confirm or veto — not yet a
+    // binding target, so no Deceiver's Choice offer and no decider
+    // recorded here.
+    state.murderDecision.narrowedTargetId = targetId;
+    return;
+  }
+  state.murderDecision.finalTargetId = targetId;
+  state.murderDecision.useDeceiversChoice = !!useDeceiversChoice;
+  state.murderDecision.deciderId = currentQueuePlayer(state).id;
+}
+
+/** The third Deceiver's turn in a 3-living-Deceiver Known-mode round:
+ *  confirm the kill against the already-narrowed candidate, or save them
+ *  outright (resolves the round as an ordinary Quiet Night — see
+ *  advanceMurderQueue's fallback, below, which this deliberately shares
+ *  rather than duplicating). */
+function recordMurderVeto(state, decision, useDeceiversChoice) {
+  if (decision !== 'kill') return; // 'save' — finalTargetId stays unset
+  state.murderDecision.finalTargetId = state.murderDecision.narrowedTargetId;
+  state.murderDecision.useDeceiversChoice = !!useDeceiversChoice;
+  state.murderDecision.deciderId = currentQueuePlayer(state).id;
 }
 
 /** Advances the per-player murder queue. Returns true once everyone has had
@@ -298,12 +380,15 @@ function recordMurderChoice(state, targetId, useDeceiversChoice) {
 function advanceMurderQueue(state) {
   advanceQueue(state);
   if (state.pendingQueue.length) return false;
-  const choice = state.pendingMurderChoice;
-  if (choice && choice.targetId) {
-    resolveMurder(state, choice.targetId, choice.useDeceiversChoice);
+  const { finalTargetId, useDeceiversChoice } = state.murderDecision;
+  if (finalTargetId) {
+    resolveMurder(state, finalTargetId, useDeceiversChoice);
   } else {
-    // Safety fallback: no valid pick was recorded (should not happen —
-    // the acting Deceiver's confirm button is disabled without a target).
+    // No binding target was ever recorded — either the safety-fallback
+    // case this always had (shouldn't happen; every step's confirm button
+    // is disabled without a valid pick) or, new with the shared-decision
+    // flow, a deliberate Save in the 3-Deceiver veto step. Both resolve
+    // the same safe way: nobody dies tonight.
     state.nightResult = { quiet: true };
     state.eliminationContext = 'quiet';
     state.fateDiscard.push(state.currentFateCard);
@@ -316,7 +401,7 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
   const target = findPlayer(state, targetId);
 
   if (useDeceiversChoice) {
-    const holder = findPlayer(state, state.actingDeceiverId);
+    const holder = findPlayer(state, state.murderDecision.deciderId);
     if (holder && holder.hand.includes('deceivers-choice')) {
       holder.hand.splice(holder.hand.indexOf('deceivers-choice'), 1);
       state.fortuneDiscard.push('deceivers-choice');
@@ -518,10 +603,11 @@ function resolveBanishment(state) {
    isn't intelligence, it's anonymity: every computer seat must decide and
    behave identically to every other computer seat regardless of its own
    secret role, exactly like the human decoy-screen pattern above. A bot's
-   Murder-turn function is only ever invoked on the acting Deceiver's turn
-   (mirroring the human confirm-murder-turn handler), so it never runs
-   differently for a non-acting-Deceiver computer seat versus a Loyal one —
-   both simply advance the queue with no action taken. */
+   Murder-turn function for a given step is only ever invoked on a
+   living Deceiver whose turn that step actually is (mirroring the human
+   action handlers — see currentMurderStep), so it never runs differently
+   for a non-deciding computer seat versus a Loyal one — both simply
+   advance the queue with no action taken. */
 
 function botPickMurderTarget(state) {
   const targets = eligibleMurderTargets(state);
@@ -529,8 +615,28 @@ function botPickMurderTarget(state) {
   return targets[Math.floor(Math.random() * targets.length)].id;
 }
 
+function botPickMurderShortlist(state) {
+  const targets = shuffle(eligibleMurderTargets(state).map((p) => p.id));
+  return targets.slice(0, 2);
+}
+
+function botPickFromMurderShortlist(state) {
+  const list = state.murderDecision.shortlist;
+  if (!list.length) return null;
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+/* A plain coin flip, same non-strategic spirit as botChooseRecruitResponse
+   — the third Deceiver has no information a real strategic AI would weigh
+   (the shortlist/narrow steps don't leak anything a bot could reason
+   about), so a 50/50 kill-or-save call is exactly as simple and
+   plausible as the rest of this project's bot logic aims to be. */
+function botChooseMurderVeto() {
+  return Math.random() < 0.5 ? 'kill' : 'save';
+}
+
 function botShouldUseDeceiversChoice(state) {
-  if (!actingDeceiverHoldsChoiceCard(state)) return false;
+  if (!currentMurderDeciderHoldsChoiceCard(state)) return false;
   return Math.random() < 0.4;
 }
 

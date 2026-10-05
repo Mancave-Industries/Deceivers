@@ -388,7 +388,31 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
 
 /* ---------- 8. Murder Selection (every player takes a turn) ---------- */
 
-UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice) {
+/* Shared by the 'single', 'narrow', and 'narrow-final' steps below — a
+   target grid plus (where offered) the Deceiver's Choice checkbox, over
+   whichever candidate list and confirm action the step calls for. */
+function murderTargetGrid({ targets, selectedId, subtitle, canUseChoice, useChoice, confirmAction, confirmLabel, selectAction }) {
+  return `
+    <div class="screen-title-row">Choose A Victim</div>
+    <div class="screen-subtitle">${subtitle}</div>
+    <div class="target-grid">
+      ${targets.map((p) => `
+        <button class="target-card ${selectedId === p.id ? 'selected' : ''}" data-action="${selectAction}" data-id="${p.id}">
+          <div class="player-avatar">${initials(p.name)}</div>
+          <span>${escapeHtml(p.name)}</span>
+        </button>`).join('')}
+    </div>
+    ${canUseChoice ? `
+      <label class="rule-row" style="margin-top:16px;">
+        <input type="checkbox" id="dcToggle" ${useChoice ? 'checked' : ''}>
+        <span>Play Deceiver's Choice — cancel a Shield in play</span>
+      </label>` : ''}
+    <p class="small-note" style="margin-top:14px;">Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
+    <div class="spacer"></div>
+    <button class="btn btn-danger btn-block" data-action="${confirmAction}" ${selectedId ? '' : 'disabled'}>${confirmLabel}</button>`;
+}
+
+UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, shortlistSelection) {
   const player = currentQueuePlayer(state);
   if (!player) return;
 
@@ -404,7 +428,9 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice) {
     return;
   }
 
-  if (!isActingDeceiverTurn(state)) {
+  const step = currentMurderStep(state);
+
+  if (!step) {
     screen('murder').innerHTML = `
       <div class="reveal-stage">
         ${iconUse(ICONS.candle, 'icon icon-lg flicker')}
@@ -412,34 +438,86 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice) {
         <p class="reveal-body">There's no task for you this turn. Hide the screen and pass the phone to the next player.</p>
         <button class="btn btn-confirm btn-block" data-action="confirm-murder-turn">Continue</button>
       </div>`;
+      return;
+  }
+
+  if (step === 'single') {
+    const canUseChoice = currentMurderDeciderHoldsChoiceCard(state);
+    screen('murder').innerHTML = murderTargetGrid({
+      targets: eligibleMurderTargets(state),
+      selectedId,
+      subtitle: "Deceivers, select tonight's target in silence.",
+      canUseChoice, useChoice,
+      confirmAction: 'confirm-murder-turn', confirmLabel: 'Confirm Target',
+      selectAction: 'select-murder-target',
+    });
+    if (canUseChoice) {
+      document.getElementById('dcToggle').addEventListener('change', (e) => {
+        main_onToggleDeceiversChoice(e.target.checked);
+      });
+    }
     return;
   }
 
-  const targets = eligibleMurderTargets(state);
-  const canUseChoice = actingDeceiverHoldsChoiceCard(state);
-  screen('murder').innerHTML = `
-    <div class="screen-title-row">Choose A Victim</div>
-    <div class="screen-subtitle">Deceivers, select tonight's target in silence.</div>
-    <div class="target-grid">
-      ${targets.map((p) => `
-        <button class="target-card ${selectedId === p.id ? 'selected' : ''}" data-action="select-murder-target" data-id="${p.id}">
-          <div class="player-avatar">${initials(p.name)}</div>
-          <span>${escapeHtml(p.name)}</span>
-        </button>`).join('')}
-    </div>
-    ${canUseChoice ? `
-      <label class="rule-row" style="margin-top:16px;">
-        <input type="checkbox" id="dcToggle" ${useChoice ? 'checked' : ''}>
-        <span>Play Deceiver's Choice — cancel a Shield in play</span>
-      </label>` : ''}
-    <p class="small-note" style="margin-top:14px;">Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
-    <div class="spacer"></div>
-    <button class="btn btn-danger btn-block" data-action="confirm-murder-turn" ${selectedId ? '' : 'disabled'}>Confirm Target</button>`;
+  if (step === 'shortlist') {
+    const targets = eligibleMurderTargets(state);
+    const selection = shortlistSelection || [];
+    screen('murder').innerHTML = `
+      <div class="screen-title-row">Shortlist Two Victims</div>
+      <div class="screen-subtitle">Choose two players. Your fellow Deceiver will decide between them.</div>
+      <div class="target-grid">
+        ${targets.map((p) => `
+          <button class="target-card ${selection.includes(p.id) ? 'selected' : ''}" data-action="select-murder-shortlist-target" data-id="${p.id}">
+            <div class="player-avatar">${initials(p.name)}</div>
+            <span>${escapeHtml(p.name)}</span>
+          </button>`).join('')}
+      </div>
+      <p class="small-note" style="margin-top:14px;">Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
+      <div class="spacer"></div>
+      <button class="btn btn-danger btn-block" data-action="confirm-murder-shortlist" ${selection.length === 2 ? '' : 'disabled'}>Confirm Shortlist</button>`;
+    return;
+  }
 
-  if (canUseChoice) {
-    document.getElementById('dcToggle').addEventListener('change', (e) => {
-      main_onToggleDeceiversChoice(e.target.checked);
+  if (step === 'narrow' || step === 'narrow-final') {
+    const canUseChoice = step === 'narrow-final' && currentMurderDeciderHoldsChoiceCard(state);
+    screen('murder').innerHTML = murderTargetGrid({
+      targets: shortlistedMurderTargets(state),
+      selectedId,
+      subtitle: "Your fellow Deceiver has shortlisted two players. Choose who it will be.",
+      canUseChoice, useChoice,
+      confirmAction: 'confirm-murder-narrow', confirmLabel: 'Confirm Target',
+      selectAction: 'select-murder-narrow-target',
     });
+    if (canUseChoice) {
+      document.getElementById('dcToggle').addEventListener('change', (e) => {
+        main_onToggleDeceiversChoice(e.target.checked);
+      });
+    }
+    return;
+  }
+
+  if (step === 'veto') {
+    const target = findPlayer(state, state.murderDecision.narrowedTargetId);
+    const canUseChoice = currentMurderDeciderHoldsChoiceCard(state);
+    screen('murder').innerHTML = `
+      <div class="reveal-stage">
+        ${iconUse(ICONS.candle, 'icon icon-lg flicker')}
+        <h2 class="reveal-headline">Your Fellow Deceiver Has Chosen</h2>
+        <p class="reveal-body">They want to kill <strong>${escapeHtml(target ? target.name : '')}</strong>. Confirm the kill, or save them instead.</p>
+        ${canUseChoice ? `
+          <label class="rule-row" style="margin-top:4px; text-align:left;">
+            <input type="checkbox" id="dcToggle" ${useChoice ? 'checked' : ''}>
+            <span>Play Deceiver's Choice — cancel a Shield in play</span>
+          </label>` : ''}
+        <div class="spacer"></div>
+        <button class="btn btn-danger btn-block" data-action="murder-veto-kill" style="margin-bottom:10px;">Kill Them</button>
+        <button class="btn btn-confirm btn-block" data-action="murder-veto-save">Save Them</button>
+      </div>`;
+    if (canUseChoice) {
+      document.getElementById('dcToggle').addEventListener('change', (e) => {
+        main_onToggleDeceiversChoice(e.target.checked);
+      });
+    }
   }
 };
 
