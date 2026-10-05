@@ -1416,6 +1416,55 @@ every round for as long as they remain the sole survivor.
   Applied the same 400→1500 fix; re-ran, and all 10 trials now complete
   cleanly (5 of 10 naturally reaching Recruit or Die this time), 0 errors.
 
+## 35. A more natural voice: phrase variety, tone, and jitter (no cloud TTS)
+
+The user's follow-up request: "How can we get a more natural voice with
+genuine variety of intonation." Every spoken line previously used one fixed
+sentence at one fixed rate/pitch — the single most-repeated line in the
+game ("Pass the phone to X," every per-player queue turn) could play 20+
+times in a session as the literal same words at the literal same pace.
+Presented two paths — tune the existing free Web Speech API further, or
+move to a paid cloud neural voice (a real architecture change: API key,
+network dependency, per-character cost, for this static no-backend site)
+— and the user chose to do the free improvement now and treat cloud TTS as
+a separate future conversation.
+
+- **Phrase variety**: most cues now pick randomly from 2-4 interchangeable
+  wordings each time, in new `*_PHRASES` constants in `sound.js`. The
+  anonymity-critical generic (name-free) Murder-queue phrasing got its own
+  separate pool, varied the same way but never at risk of naming anyone.
+- **Tone presets + per-utterance jitter**: three named rate/pitch shapes
+  (`calm`/`ominous`/`urgent`) for different moments, each nudged by a small
+  random amount per line so even repeated instances of the same tone don't
+  land at the identical rate/pitch.
+- **Paced sequences**: two-sentence lines (Night Falls, Gather Everyone)
+  now speak as two short utterances with a real pause between them instead
+  of one run-on utterance.
+- Moved the three raw strings that used to live directly in `main.js`
+  (Night Falls, Gather Everyone, the Recruit hand-off) into named `sound.js`
+  wrappers (`announceNightFalls`, `announceGather`,
+  `announceRecruitHandoff`) alongside the phrase banks and tone choices, so
+  everything spoken lives in one place.
+
+**Verification**: a monkey-patched `SpeechSynthesisUtterance` captured the
+exact text/rate/pitch sound.js actually produces, independent of whether
+the sandbox has real voices installed (it doesn't — same as most CI
+environments). 30 consecutive `announcePassDevice('Ann')` calls produced
+all 4 named phrase variants, rate and pitch both varied call to call within
+the `calm` tone's jitter range, and every single one still correctly said
+"Ann." The generic Murder-queue variant was checked the same way across 20
+calls — all 3 generic variants appeared, and critically, none ever
+contained a player name, confirming the anonymity guarantee survived the
+rewrite. Night Falls and Gather Everyone each correctly produced exactly
+two utterances (one per sentence, at their tone's rate) with the real pause
+between them. A full live 3-player playthrough with sound enabled showed
+genuine phrase variety across real in-game turns (not just isolated
+function calls) — e.g. "Ann, it's your turn." / "Pass the phone to Ben." /
+"Over to you, Cid." across one round's queue, each different. Re-ran the
+18-cue sound check and a full playthrough screenshot test afterward — both
+clean, confirming the non-voice sound effects were untouched. 0 errors
+throughout. No code changed to anything but the spoken-line system itself.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1452,6 +1501,8 @@ every round for as long as they remain the sole survivor.
 | "Banishment never opens a fresh shuffle" stress test (direct engine-level check) | 5000 fresh-shuffle trials + 249 real reshuffle-from-discard cycles across 3000 consecutive draws | 0 | — |
 | Prize Pot economy: dead-winner exclusion + per-game reset (direct engine-level check) | 2 tests: engineered a dead Deceiver excluded from a 90-gold payout + a series' next-game Prize Pot reset from a nonzero value | 0 | — |
 | Recruit or Die capped at one attempt per game (resolves §28, feature change) | Re-ran §28's exact collision scenario end-to-end (now correctly enters Final Circle on round 3 instead of re-offering Recruit) + 1 isolated cap-only test (6-7p, well above FC threshold) + full existing recruit suite (6 scripts) + both randomized computer-only regressions | 0 | 1 (feature added per user decision) |
+| fc_regression_recruit.js budget fix, second instance of §30's class | Re-ran the 10-trial suite after the same 400→1500 fix | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
+| A more natural voice: phrase variety, tone, and jitter (feature change) | Monkey-patched `SpeechSynthesisUtterance` captured exact text/rate/pitch across 30 named + 20 generic pass-device calls, plus Night Falls/Gather Everyone sequence checks + 1 full live 3-player playthrough with sound enabled + 18-cue sound re-check + full playthrough screenshot re-check | 0 | 1 (feature added per user request) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

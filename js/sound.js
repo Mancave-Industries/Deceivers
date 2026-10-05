@@ -159,7 +159,25 @@ const Sound = (() => {
 
   /* ---------- Spoken line (Web Speech API — no audio files, same
      "no external assets" rule as the rest of this module; silently no-ops
-     wherever speech synthesis isn't available). ---------- */
+     wherever speech synthesis isn't available).
+
+     Three things make every repeated line sound a little less like a
+     machine reading a script, with no external service and no network
+     call — just the same Web Speech API already in use:
+
+     1. Phrase variety — most cues have several interchangeable wordings
+        (the *_PHRASES constants, below) and pick one at random each time,
+        so "Pass the phone to X" doesn't come out as the literal same
+        sentence 20+ times across a game.
+     2. Tone presets + per-line jitter — a small set of named rate/pitch
+        shapes (TONES) for different emotional registers (a routine
+        hand-off reads differently than "night falls"), each nudged by a
+        small random amount per utterance (jitterTone) so even the same
+        tone preset doesn't land at the exact same rate/pitch every time.
+     3. Deliberate pauses between clauses — speakSequence chains multiple
+        short utterances with a real gap between them, closer to how a
+        person actually pauses between sentences than the engine's own
+        (often too-quick) default inter-sentence gap. ---------- */
 
   // Common female-leaning voice names across Chrome/Android, Safari/iOS,
   // and Windows — the Web Speech API has no standard gender field, so this
@@ -181,7 +199,43 @@ const Sound = (() => {
     return pool.find((v) => HIGH_QUALITY_VOICE_PATTERN.test(v.name)) || pool[0];
   }
 
-  function speak(text, onEnd) {
+  // Named rate/pitch shapes for different emotional registers. The spread
+  // between tones is deliberately subtle, not a cartoon voice change — see
+  // the no-artificial-pitch-shift note in speak(), below — just enough that
+  // "night falls" doesn't land in the same register as a routine hand-off.
+  const TONES = {
+    calm: { rate: 0.94, pitch: 1.0 },     // routine hand-offs — the default, most-heard tone
+    ominous: { rate: 0.89, pitch: 0.95 }, // Night Falls — slower, a touch lower
+    urgent: { rate: 0.98, pitch: 1.03 },  // Gather Everyone / voting begins — a touch brighter, pressing forward
+  };
+
+  function randBetween(lo, hi) {
+    return lo + Math.random() * (hi - lo);
+  }
+
+  // A small random nudge layered on top of a named tone so the *same* tone
+  // still varies slightly utterance to utterance — never enough to sound
+  // like a different voice, just enough that it isn't a flat, identical
+  // reading every single time.
+  function jitterTone(tone) {
+    const base = TONES[tone] || TONES.calm;
+    return {
+      rate: Math.max(0.6, randBetween(base.rate - 0.035, base.rate + 0.035)),
+      pitch: Math.max(0.5, randBetween(base.pitch - 0.04, base.pitch + 0.04)),
+    };
+  }
+
+  function pick(list) {
+    return list[Math.floor(Math.random() * list.length)];
+  }
+
+  // Bumped at the start of every new announcement (single-line or
+  // multi-part sequence) so an in-flight speakSequence's pending setTimeout
+  // can tell it's been superseded and stop advancing, even though the
+  // actually-playing utterance is also cancelled immediately below.
+  let announceGeneration = 0;
+
+  function speak(text, onEnd, tone) {
     const finish = () => { if (onEnd) onEnd(); };
     if (!enabled || !('speechSynthesis' in window)) {
       finish();
@@ -189,12 +243,14 @@ const Sound = (() => {
     }
     try {
       const utter = new SpeechSynthesisUtterance(text);
-      // Natural rate/pitch — no artificial pitch shift. A heavily slowed,
-      // deepened, or pitch-bent voice came across as a flat robotic drone
-      // rather than ominous; a real/enhanced voice at its own natural pitch
-      // reads as ominous from the words and pacing alone.
-      utter.rate = 0.94;
-      utter.pitch = 1.0;
+      // Natural rate/pitch as a base — no heavy artificial pitch shift. A
+      // heavily slowed, deepened, or pitch-bent voice came across as a flat
+      // robotic drone rather than ominous; a real/enhanced voice at close
+      // to its own natural register reads as ominous (or urgent, or calm)
+      // from the words, pacing, and this small tone shift alone.
+      const { rate, pitch } = jitterTone(tone);
+      utter.rate = rate;
+      utter.pitch = pitch;
       utter.volume = 1;
       const voices = window.speechSynthesis.getVoices();
       const chosenVoice = pickVoice(voices);
@@ -211,35 +267,66 @@ const Sound = (() => {
     }
   }
 
-  /* The Open Discussion screen's closing beat: swell the drone (if music
-     is on) to a peak, then speak the line, then call back once it's done
-     so main.js can move on to the vote queue. If sound effects are off,
-     resolves immediately with no sound at all — this is a flourish, never
-     a thing the game waits on. */
-  function announceVotingBegins(onComplete) {
-    const done = () => { if (onComplete) onComplete(); };
-    if (!enabled) { done(); return; }
-    const riseSeconds = crescendoMusic(0.17, 0.9);
-    if (riseSeconds > 0) {
-      setTimeout(() => speak('The time for talk is over.', done), riseSeconds * 1000);
-    } else {
-      speak('The time for talk is over.', done);
+  // Speaks several short parts in order with a real pause between them —
+  // closer to how someone actually pauses between sentences than most
+  // engines' own (often too-quick) default gap. Cancels cleanly if a newer
+  // announcement supersedes it mid-sequence (announceGeneration changes).
+  function speakSequence(parts, onEnd, tone, pauseMs) {
+    const generation = announceGeneration;
+    let i = 0;
+    function next() {
+      if (generation !== announceGeneration) return; // superseded — stop silently
+      if (i >= parts.length) { if (onEnd) onEnd(); return; }
+      const part = parts[i++];
+      speak(part, () => {
+        if (generation !== announceGeneration) return;
+        if (i < parts.length) setTimeout(next, pauseMs);
+        else next();
+      }, tone);
     }
+    next();
   }
 
-  /* Shared by every short host-style instruction below — cancels any
-     previous still-speaking utterance first (a table moving quickly
-     through turns could otherwise queue up a backlog of stale lines that
-     play late/out of order), then speaks the new one. Fire-and-forget;
-     nothing here waits on the result. */
-  function announceInstruction(text) {
-    if (!enabled || !('speechSynthesis' in window)) return;
+  /* Shared by every announcement below — bumps the generation counter and
+     cancels any previous still-speaking utterance first (a table moving
+     quickly through turns could otherwise queue up a backlog of stale
+     lines that play late/out of order, or leave a superseded multi-part
+     sequence still mid-pause), then speaks the new line(s). Fire-and-forget
+     by default; pass onEnd to be notified when the whole line has finished.
+     text may be a single string or an array of parts to speak as a paced
+     sequence (see speakSequence). */
+  function announceInstruction(text, onEnd, tone) {
+    announceGeneration++;
+    if (!enabled || !('speechSynthesis' in window)) { if (onEnd) onEnd(); return; }
     try {
       window.speechSynthesis.cancel();
     } catch (e) {
       /* ignore */
     }
-    speak(text);
+    if (Array.isArray(text)) speakSequence(text, onEnd, tone, 300);
+    else speak(text, onEnd, tone);
+  }
+
+  /* The Open Discussion screen's closing beat: swell the drone (if music
+     is on) to a peak, then speak the line, then call back once it's done
+     so main.js can move on to the vote queue. If sound effects are off,
+     resolves immediately with no sound at all — this is a flourish, never
+     a thing the game waits on. */
+  const VOTING_BEGINS_PHRASES = [
+    'The time for talk is over.',
+    'Talk ends now.',
+    'Enough talk. It is time to vote.',
+  ];
+  function announceVotingBegins(onComplete) {
+    const done = () => { if (onComplete) onComplete(); };
+    if (!enabled) { done(); return; }
+    const riseSeconds = crescendoMusic(0.17, 0.9);
+    const line = pick(VOTING_BEGINS_PHRASES);
+    if (riseSeconds > 0) {
+      setTimeout(() => announceInstruction(line, done, 'urgent'), riseSeconds * 1000);
+    } else {
+      announceInstruction(line, done, 'urgent');
+    }
   }
 
   /* Announces whose turn it is to hold the phone — called once for every
@@ -260,8 +347,46 @@ const Sound = (() => {
      though the screen itself stays private, so main.js announces that
      one with its own fixed, non-identifying line instead of calling this
      function at all. */
+  const PASS_DEVICE_NAMED_PHRASES = [
+    (name) => `Pass the phone to ${name}.`,
+    (name) => `${name}, you're up.`,
+    (name) => `Over to you, ${name}.`,
+    (name) => `${name}, it's your turn.`,
+  ];
+  const PASS_DEVICE_GENERIC_PHRASES = [
+    'Pass the phone to the next player.',
+    'Hand it to the next player.',
+    'On to the next turn.',
+  ];
   function announcePassDevice(name) {
-    announceInstruction(name ? `Pass the phone to ${name}.` : 'Pass the phone to the next player.');
+    const line = name ? pick(PASS_DEVICE_NAMED_PHRASES)(name) : pick(PASS_DEVICE_GENERIC_PHRASES);
+    announceInstruction(line, null, 'calm');
+  }
+
+  const NIGHT_FALLS_PHRASES = [
+    ['Night falls.', 'Keep your card secret.'],
+    ['The night falls.', 'Guard your card.'],
+    ['Night has come.', 'Keep it hidden.'],
+  ];
+  function announceNightFalls() {
+    announceInstruction(pick(NIGHT_FALLS_PHRASES), null, 'ominous');
+  }
+
+  const GATHER_EVERYONE_PHRASES = [
+    ['Gather everyone.', 'Place the phone in the centre.'],
+    ['Everyone, gather round.', 'Set the phone down in the centre.'],
+    ['Bring the circle together.', 'Phone in the centre.'],
+  ];
+  function announceGather() {
+    announceInstruction(pick(GATHER_EVERYONE_PHRASES), null, 'urgent');
+  }
+
+  const RECRUIT_HANDOFF_PHRASES = [
+    'Pass the phone to your chosen recruit.',
+    'Hand the phone to the one you have chosen.',
+  ];
+  function announceRecruitHandoff() {
+    announceInstruction(pick(RECRUIT_HANDOFF_PHRASES), null, 'calm');
   }
 
   /* ---------- Primitives ---------- */
@@ -521,5 +646,9 @@ const Sound = (() => {
     }
   }
 
-  return { setEnabled, play, setMusicEnabled, startMusic, stopMusic, announceVotingBegins, announcePassDevice, announceInstruction };
+  return {
+    setEnabled, play, setMusicEnabled, startMusic, stopMusic,
+    announceVotingBegins, announcePassDevice, announceInstruction,
+    announceNightFalls, announceGather, announceRecruitHandoff,
+  };
 })();

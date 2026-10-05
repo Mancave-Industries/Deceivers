@@ -119,7 +119,7 @@ function maybeAnnounceNightFalls() {
   }
   if (nightAnnounced) return;
   nightAnnounced = true;
-  Sound.announceInstruction('Night falls. Keep your card secret.');
+  Sound.announceNightFalls();
 }
 
 function maybeAnnounceGather() {
@@ -130,7 +130,7 @@ function maybeAnnounceGather() {
   }
   if (gatherAnnounced) return;
   gatherAnnounced = true;
-  Sound.announceInstruction('Gather everyone. Place the phone in the centre.');
+  Sound.announceGather();
 }
 
 /* Open Discussion runs on a clock — 30 seconds per living player — instead
@@ -599,7 +599,7 @@ const actions = {
     // Deliberately doesn't name the recruit — see sound.js's
     // announcePassDevice comment and maybeAnnouncePassDevice's
     // RECRUIT_RESPONSE guard above for why.
-    Sound.announceInstruction('Pass the phone to your chosen recruit.');
+    Sound.announceRecruitHandoff();
     persist();
     render();
   },

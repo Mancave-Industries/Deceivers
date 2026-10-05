@@ -705,6 +705,69 @@ stretch, so there's nothing to tap through that could cut the line off
 mid-sentence. With sound effects off this entire sequence resolves
 instantly, same as the clock simply running out silently.
 
+**Phrase variety, tone, and jitter — a more natural voice without a cloud
+TTS service (follow-up round)**: every spoken line used to be one fixed
+sentence at one fixed rate/pitch (`0.94`/`1.0`, see above) — accurate when
+first written, but "Pass the phone to X" is the single most-repeated line
+in the game (every Reveal/Draw/Vote/Final-Circle-decision queue turn), and
+hearing the literal same sentence at the literal same rate 20+ times in one
+session reads as mechanical regardless of how good the underlying voice is.
+Three changes, still entirely on the free, offline, no-API Web Speech
+API already in use — a genuine cloud neural voice (ElevenLabs, Google/
+Azure/Amazon TTS) would sound more human still, but needs an API key, a
+network call per line, and ongoing cost; that's a real architecture
+decision for this no-backend static site, deliberately left as a separate
+future conversation rather than folded into this round:
+1. **Phrase variety** — most cues now have 2-4 interchangeable wordings
+   (the `*_PHRASES` constants in `sound.js`) picked at random each time
+   ("Pass the phone to X." / "X, you're up." / "Over to you, X." / "X,
+   it's your turn."), so the same functional announcement doesn't come out
+   as identical text call after call. The anonymity-critical generic
+   (name-free) Murder-queue variant got its own separate phrase pool
+   (`PASS_DEVICE_GENERIC_PHRASES`) — varied in the same way, but never at
+   risk of leaking a name, since Murder's queue only ever calls
+   `announcePassDevice(null)`.
+2. **Named tone presets + per-utterance jitter** — three small rate/pitch
+   shapes (`TONES`: `calm` for routine hand-offs, `ominous` for Night
+   Falls, `urgent` for Gather Everyone and "the time for talk is over"),
+   each nudged by a small random amount per line (`jitterTone`) so even
+   repeated instances of the *same* tone land at slightly different
+   rate/pitch rather than a flat, identical reading every time. The spread
+   stays deliberately subtle — not a cartoon voice change, and still no
+   heavy artificial pitch-bend (the original flat-robotic-drone lesson
+   above still holds); just enough that different moments read in
+   different registers.
+3. **Paced multi-part sequences** — two-sentence lines (Night Falls,
+   Gather Everyone) now speak as two short utterances with a real pause
+   between them (`speakSequence`, 300ms) rather than one utterance
+   containing both sentences back to back, closer to how someone actually
+   pauses between sentences than most engines' own default inter-sentence
+   gap.
+
+`Sound.announceInstruction` now accepts an optional `onEnd` callback and
+`tone` name, and `text` can be a single string or an array of parts for a
+paced sequence; `announceNightFalls()`, `announceGather()`, and
+`announceRecruitHandoff()` are new named wrappers (replacing the raw
+strings that used to live directly in `main.js`) so the phrase banks and
+tone choices for every line live in one place, `sound.js`, rather than
+scattered across call sites. A shared `announceGeneration` counter (bumped
+at the start of every new announcement) lets an in-flight multi-part
+sequence detect it's been superseded by a newer announcement and stop
+advancing silently, on top of the existing `speechSynthesis.cancel()` that
+already stopped whatever was audibly playing.
+
+Verified directly: a monkey-patched `SpeechSynthesisUtterance` captured the
+exact text/rate/pitch of 30 consecutive `announcePassDevice('Ann')` calls
+— all 4 named phrase variants appeared, rate/pitch both varied call to
+call within the `calm` tone's range, and every one still correctly
+included "Ann." The generic (Murder-queue) variant was checked the same
+way across 20 calls — all 3 generic variants appeared, and none ever
+contained a player name. Night Falls and Gather Everyone were each
+confirmed to produce exactly two utterances (one per sentence) at their
+tone's rate, with the real pause between them. A full live 3-player
+playthrough with sound enabled showed genuine phrase variety across real
+in-game turns, not just isolated calls. 0 console errors throughout.
+
 ## 8. Computer players
 
 Any seat on the Setup screen can be marked **Computer** instead of Human via
