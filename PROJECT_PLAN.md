@@ -339,13 +339,33 @@ Deceiver acting. The brief's answer, directly from the game's designer,
 splits on the Deceiver Knowledge setting:
 
 **Hidden mode, or whenever only one Deceiver is currently alive (either
-mode)** — unchanged from the original design: the lowest-seat-numbered
-living Deceiver decides alone, picking straight from every eligible
-target, exactly as a single Deceiver always has. Every other living
-Deceiver's turn in the queue looks identical to a Loyal player's
-("Nothing To Do") — which doubles as a quiet, nameless tell to them that a
-lower-numbered Deceiver must exist (since *someone* has to be deciding),
-without ever revealing who.
+mode)** — the lowest-seat-numbered living Deceiver still decides alone,
+exactly as a single Deceiver always has. Every other living Deceiver's
+turn in the queue looks identical to a Loyal player's ("Nothing To Do") —
+which doubles as a quiet, nameless tell to them that a lower-numbered
+Deceiver must exist (since *someone* has to be deciding), without ever
+revealing who.
+
+**Hidden-mode "friendly fire" and automatic immunity (follow-up round)** —
+one further rule, specified directly by the game's designer: in Hidden
+mode specifically, the lone decider genuinely doesn't know who their
+fellow Deceivers are, so their target pool is no longer every *non*-
+Deceiver — it's every *other* living player, full stop, fellow Deceivers
+included (`eligibleMurderTargets` branches on `deceiverKnowledge` for
+exactly this). Picking a teammate by accident is a real possibility now,
+not a null case. But a Deceiver is automatically immune to Murder
+(`resolveMurder`'s `isFellowDeceiver` check) — a held Deceiver's Choice
+card cannot override this, since Choice exists to counter a target's own
+*external* protection (a held Shield), not to let the Deceivers kill one
+of their own even unknowingly. The outcome resolves exactly like an
+ordinary Shield-save in every visible way — same `protected`/`murdered`
+flags, same reveal text ("A Shield protected them. They survive the
+night."), same everything — so the rest of the table can never tell the
+difference between a real Shield and a Deceiver who got lucky, and the
+existing Shield-save code path doesn't need a special case for it. Known
+mode is unaffected: a shortlisting or narrowing Deceiver there knows
+exactly who their teammates are and the target pool still excludes every
+Deceiver outright, same as the original design.
 
 **Known mode, exactly two living Deceivers** — a two-step hand-off: the
 lowest-numbered Deceiver shortlists exactly two candidates; the phone then

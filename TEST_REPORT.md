@@ -1637,6 +1637,61 @@ either a direct final pick (2 living Deceivers) or a narrow-then-veto
   decider only, as designed) — all resolved to a winner with 0 console
   errors.
 
+## 40. Hidden-mode "friendly fire": Deceivers can be targeted, but are automatically immune
+
+Immediate follow-up to §39, specified directly: "In a game where
+deceivers are not known to each other... deceivers can be killed. In a
+game where identity is hidden - deceivers are automatically shielded."
+Read together, this is one coherent rule: in Hidden mode, the lone
+decider genuinely doesn't know who their fellow Deceivers are, so picking
+one by accident should be a real possibility (they *can* be targeted) —
+but when it happens, that target is automatically immune (*shielded*),
+so the Deceiver team never actually loses a member to their own
+teammate's ignorance.
+
+- **The change**: `eligibleMurderTargets` now branches on
+  `deceiverKnowledge`. Known mode is unchanged — the pool still excludes
+  every Deceiver outright, since a shortlisting/narrowing Deceiver there
+  knows exactly who their teammates are. Hidden mode's `'single'` step
+  pool is now every *other* living player (excluding only the decider
+  themselves) — fellow Deceivers included. `resolveMurder` gained an
+  `isFellowDeceiver` check: if the resolved target turns out to be a
+  Deceiver, they're immune — folded directly into the existing
+  `wasShielded` boolean so it reuses the Shield-save code path and reveal
+  text exactly, rather than a new branch. Deceiver's Choice cannot
+  override this (it still gets consumed from the decider's hand if played,
+  same as any other attempt — it just doesn't help here), matching the
+  reasoning that Choice counters a target's *external* protection, not
+  their own side's ignorance of them.
+- **Verified directly at the engine level** (6 scenarios): Hidden+2-living
+  → pool correctly includes the fellow Deceiver and excludes self (size 6
+  of 7 total); Known+2-living → pool still excludes all Deceivers
+  (unchanged); `resolveMurder` against a fellow Deceiver → survives,
+  `protected: true`; same + Deceiver's Choice played → still survives,
+  *and* the card is still correctly consumed; `resolveMurder` against an
+  ordinary Loyal target → unaffected, still dies normally (no regression);
+  Known+1-living fallback → correctly uses the known-mode branch.
+- **Verified through the real UI**: built a deterministic 7-player Hidden
+  game directly in state (seat 0 and seat 1 as the two Deceivers) to avoid
+  hunting through a random number of preceding turns, walked the lowest
+  seat's turn, confirmed the live DOM's target grid read exactly `["Ben",
+  "Cid", "Dee", "Eve", "Fin", "Gus"]` (the fellow Deceiver present, self
+  absent), clicked the fellow Deceiver, walked the rest of the queue, and
+  confirmed the Elimination Reveal read "Ben Was Targeted" / "A Shield
+  protected them. They survive the night." — word-for-word identical to
+  an ordinary real Shield-save — with Ben confirmed still alive afterward.
+  (Two test-script bugs surfaced and were fixed along the way, neither an
+  app issue: a missing disabled-state check before clicking a confirm
+  button mid-transition, caught by Playwright's own 30s click-retry
+  timeout rather than silently passing; and an exact-iteration-budget
+  walk-through loop with zero margin for a 5-player "Nothing To Do"
+  sweep.)
+- **Computer-only regression**: 2× 7-player Hidden-mode games confirmed
+  the widened target pool genuinely appears during real random play (not
+  just reachable in principle), both resolved to a winner with 0 console
+  errors. Re-ran the full Known-mode multi-Deceiver suite (§39) afterward
+  to confirm this round's changes didn't disturb it — all still clean.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1679,6 +1734,7 @@ either a direct final pick (2 living Deceivers) or a narrow-then-veto
 | Player cap raised 8→16 with a generalized Deceiver-ratio formula (feature change) | Direct formula verification (3-16) against the live function + full-codebase hardcoded-"8" sweep + 16p Setup/Recruit-screen visual checks (no overflow) + 1 full 16p computer-only playthrough (22 rounds, resolved clean) + 11p computer-only playthrough (3 Deceivers, resolved clean) | 0 | 1 (feature added per user decision) |
 | Deceiver count capped at absolute max 3, never 4 (feature change) | Direct formula verification against live source for all 3-16 + live-browser check across 5 player counts (10/11/13/15/16) + Join/Refuse recruit suite + playthrough re-check + 9p/11p/12p computer-only playthroughs (all resolved clean) | 0 | 1 (feature added per user decision) |
 | Multi-Deceiver Murder decision (shortlist/narrow/veto, feature change) | 6 direct engine-level scenarios + full UI click-through at 11p (checkbox gating at every step, Kill and Save outcomes) + dedicated Shield-vs-Choice-at-veto UI test (card consumption confirmed) + 1 fixed stale test script (old `actingDeceiverId` field) + 6-config computer-only regression (5p baseline, 7p/11p Known+Hidden) | 0 app bugs (1 stale test script using a removed field, fixed) | 1 (feature added per user decision) |
+| Hidden-mode Murder "friendly fire" + automatic Deceiver immunity (feature change) | 6 direct engine-level scenarios + 1 deterministic full UI click-through (target pool contents, reveal text verified word-for-word against an ordinary Shield-save) + 2×7p computer-only regression (widened pool confirmed live in random play) + full Known-mode suite re-check | 0 app bugs (2 test-script bugs fixed: missing disabled-state check, zero-margin iteration budget) | 1 (feature added per user decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

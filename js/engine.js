@@ -265,8 +265,25 @@ function routeAfterDraw(state) {
    everyone else — Loyal and non-acting Deceivers alike — sees an identical,
    content-free "nothing to do" screen. */
 
+/* In Known mode (or whenever the current step is a shared-decision one --
+   'shortlist'/'narrow'/'narrow-final'/'veto' -- which only ever happen in
+   Known mode to begin with), the deciding Deceiver(s) know exactly who
+   their fellow Deceivers are and would never pick one, so the pool
+   excludes every Deceiver, same as the original design. In Hidden mode's
+   'single' step, the lone deciding Deceiver genuinely doesn't know who
+   else is on their side -- the pool is every OTHER living player,
+   fellow Deceivers included, since picking one by accident is a real
+   possibility. (A fellow Deceiver who ends up targeted this way is
+   automatically immune -- see resolveMurder's isFellowDeceiver check,
+   below -- so this never actually costs the Deceiver team a member; it
+   just means a Hidden-mode Murder attempt can harmlessly fail.) */
 function eligibleMurderTargets(state) {
-  return livingPlayers(state).filter((p) => p.role !== ROLES.DECEIVER.id);
+  const known = state.settings.deceiverKnowledge !== 'hidden';
+  if (known) {
+    return livingPlayers(state).filter((p) => p.role !== ROLES.DECEIVER.id);
+  }
+  const deciderId = currentQueuePlayer(state)?.id;
+  return livingPlayers(state).filter((p) => p.id !== deciderId);
 }
 
 /* How multiple living Deceivers decide a Murder target together, per the
@@ -417,7 +434,19 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
     state.fortuneDiscard.push('shield');
   }
 
-  const wasShielded = hadShield && !useDeceiversChoice;
+  // A fellow Deceiver is automatically immune — this can only actually
+  // happen in Hidden mode (see eligibleMurderTargets, above), where the
+  // deciding Deceiver genuinely didn't know their target was on their own
+  // side. Deceiver's Choice cannot override this: it exists to counter a
+  // target's own external protection (a held Shield), not to let the
+  // Deceivers kill one of their own even by accident. Resolves identically
+  // to an ordinary Shield-save in every visible way — same reveal text,
+  // same sound, same everything — so the rest of the table can never tell
+  // the difference, and the Shield-save branch doesn't need to special-
+  // case it.
+  const isFellowDeceiver = target.role === ROLES.DECEIVER.id;
+
+  const wasShielded = isFellowDeceiver || (hadShield && !useDeceiversChoice);
   if (!wasShielded) target.alive = false;
 
   state.fateDiscard.push(state.currentFateCard);
