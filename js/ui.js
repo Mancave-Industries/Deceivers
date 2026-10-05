@@ -383,6 +383,7 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
       <p class="small-note">Voting begins automatically when the clock runs out.</p>
       <button class="btn btn-ghost btn-sm" data-action="begin-vote-now" style="margin-top:4px;">Everyone's Ready — Skip Ahead</button>
       <a class="btn btn-ghost btn-sm" href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:8px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Open Our Playlist In Spotify</a>
+      <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
     </div>`;
 };
 
@@ -889,6 +890,7 @@ UI.settingsContent = function settingsContent(state) {
       </label>
     </div>
     <a class="btn btn-ghost btn-sm btn-block" href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:10px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Open Our Playlist In Spotify</a>
+    <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
     <button class="btn btn-danger btn-block" data-action="reset-game" style="margin-top:14px;">Reset Game</button>`;
 };
 
