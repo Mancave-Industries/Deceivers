@@ -1297,6 +1297,28 @@ looks fine in a quick pass and isn't.
   errors" is also exactly what a genuine intermittent stuck-state bug would
   look like from the outside, and the difference matters.
 
+## 31. Deceiver's Choice vs. Shield, checked directly at the engine level
+
+Closed out one more documented-but-not-directly-tested-this-session card
+interaction: a held Shield normally saves a Murder target automatically,
+but Deceiver's Choice overrides it. Checked `resolveMurder` directly with
+two engineered hands rather than driving it through the UI — `setupNewGame`,
+`resolveMurder`, and friends are plain globals, reachable straight from
+`page.evaluate()` without a single click, which is a faster and more
+precise way to pin down pure engine logic than stepping through screens
+when the DOM state itself isn't what's in question.
+
+- **Shield alone**: target holds a Shield, Deceiver's Choice not played →
+  target survives (`murdered: false, protected: true`), exactly as shown
+  in How To Play's own card description.
+- **Shield + Deceiver's Choice**: same target, same Shield, but the acting
+  Deceiver also holds and plays Deceiver's Choice → target dies anyway
+  (`murdered: true, protected: false, deceiversChoicePlayed: true`), and
+  the Deceiver's Choice card is correctly removed from the deceiver's hand
+  and discarded (`deceiverHandAfter: []`).
+
+Both matched the documented rule exactly. 0 errors, no code changed.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1329,6 +1351,7 @@ looks fine in a quick pass and isn't.
 | Recruited-Deceiver payout correctness (deterministic, engineered 100-gold pot) | 1 test: engineered 1 Deceiver + 1 Loyal, successful recruit, instant majority win, checked payout recipients and amounts directly | 0 | — |
 | Accessibility pass: contrast audit + toast live region | 6 WCAG contrast-ratio computations (all text/background pairings) + 1 live toast attribute + playthrough re-check | 1 gap (missing `aria-live` on toast, not a defect in shipped behavior) | 1 |
 | Final Circle "stall" investigation (direct repro + patience probe + budget fix) | 1 engineered 6p repro with full state snapshots + 1 no-click patience probe (confirmed ~1s/turn steady progress) + re-ran `fc_regression.js`'s 6-trial suite with the test's iteration budget raised 400→1500 | 0 app bugs (1 test-harness budget limit, fixed in the test script only) | 1 (test-only) |
+| Deceiver's Choice vs. Shield (direct engine-level check) | 2 engineered hands checked straight against `resolveMurder()` (Shield alone, Shield + Deceiver's Choice) | 0 | — |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
