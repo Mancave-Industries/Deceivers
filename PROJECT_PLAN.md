@@ -853,15 +853,19 @@ followed by a short note telling the table to play it through a connected
 speaker, not the phone itself — the phone's own speaker is about to be
 passed hand-to-hand for the rest of the game.
 
-**Promo link, between games only**: `CONFIG.tiktokAdUrl` holds a link to a
-promo clip, shown on the Results screen as a graphic banner (designer-
-supplied artwork, resized/compressed the same way as the interstitial
-posters — see "Asset processing" above — and saved to
+**Promo link, shown when a full game ends**: `CONFIG.tiktokAdUrl` holds a
+link to a promo clip, shown on the Results screen as a graphic banner
+(designer-supplied artwork, resized/compressed the same way as the
+interstitial posters — see "Asset processing" above — and saved to
 `assets/brand/watch-our-ad.jpg`) wrapped in the same plain link-out pattern
-as the Spotify link. It only ever appears between games in a series
-(`state.seriesGame < state.seriesLength`) — never on a standalone single
-game's results, never on the series' last game's results, and never on any
-mid-game screen, so it can't interrupt the game itself.
+as the Spotify link. Gated on `isLastGame` — a standalone single game's
+results, or the last game of a series — and never on any mid-game screen,
+so it can't interrupt the game itself. Originally gated the opposite way
+(shown *between* games in a series, hidden on the game/series' actual
+conclusion); flipped per the designer's explicit call once the first
+version shipped — the moment a player is done and about to close the
+game out is the one that actually makes sense for this, not mid-series
+when they're eager to keep playing.
 
 **Tip link, dual placement**: `CONFIG.tipUrl` holds a Stripe Payment Link
 ("Send a Tip to MANCAVEMAN"), rendered the same graphic-banner way as the
@@ -869,10 +873,9 @@ TikTok ad (`assets/brand/send-a-tip.jpg`, same resize/compress convention,
 chosen from 6 designer-supplied variants for matching the TikTok banner's
 style — crowned/bearded figure, drippy stencil-graffiti treatment, the
 Mancave Industries stamp — so the two read as a matching pair rather than
-unrelated ads). Appears in two places, mirroring the Spotify link's own
-dual placement rather than the TikTok banner's single one: Settings (
-always available, directly below the Spotify link) and the Results screen
-(same between-games-only gating as the TikTok banner, stacked directly
+unrelated ads). Appears in two places: Settings (always available,
+directly below the Spotify link) and the Results screen (same
+end-of-game `isLastGame` gating as the TikTok banner, stacked directly
 beneath it). The game never embeds a payment form or touches Stripe's API
 — tapping it just opens the hosted Stripe Payment Link in a new tab, same
 "hand off to the real thing" pattern as every other external link here.

@@ -17,13 +17,15 @@ const CONFIG = {
   // opens Spotify; nothing here talks to Spotify's API or touches auth.
   spotifyPlaylistUrl: 'https://open.spotify.com/playlist/1iwY55WpCl8Hb1UXrWx5RY?si=S-NIPJhGR--nsvL4UFWmMA&utm_source=copy-link&pi=zk-4FU8ZT2aCM',
   // A promo clip, linked out rather than embedded (same "just open the
-  // real app" pattern as the Spotify link above). Only ever shown between
-  // games in a series — see renderResults — never mid-game.
+  // real app" pattern as the Spotify link above). Only ever shown on the
+  // Results screen when a full game actually ends — a standalone game, or
+  // the last game of a series (isLastGame) — never between games mid-series
+  // and never mid-game. See renderResults.
   tiktokAdUrl: 'https://vm.tiktok.com/ZN8khsJqn/',
   // A Stripe Payment Link, opened in a new tab -- the game never embeds a
   // payment form or touches Stripe's API directly. Shown in Settings
-  // (always available) and on the Results screen between games in a
-  // series, same dual placement as the Spotify link / TikTok ad banner.
+  // (always available) and on the Results screen when a full game ends,
+  // same isLastGame gating as the TikTok ad banner above.
   tipUrl: 'https://buy.stripe.com/bJe9AU0iz9UTbo93IX1RC02',
 };
 

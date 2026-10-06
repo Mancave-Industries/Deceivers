@@ -1990,6 +1990,36 @@ single-spot TikTok banner.
 - Re-ran an existing recruit regression script for a quick sanity check
   (this round touched only markup/config, no engine logic) -- 0 errors.
 
+## 47. TikTok ad + tip banners flipped to show at the end of a full game, not between games
+
+Immediate follow-up to §46: "These need to pop up at the end of a full
+game." Both banners were gated on `!isLastGame` (between games in a
+series, hidden on the game/series' actual conclusion); flipped to
+`isLastGame` so they show precisely when a standalone game or the last
+game of a series finishes — the moment a player is wrapping up, rather
+than mid-series when they're mid-flow toward the next game.
+
+- **The change**: one-line flip (`!isLastGame` → `isLastGame`) in
+  `UI.renderResults` for both the TikTok `<a>` block and the tip `<a>`
+  block (they're adjacent, same conditional). Updated both `data.js`
+  comments and the PROJECT_PLAN.md write-up to describe the new gating
+  and note it's a deliberate reversal of the original between-games
+  design, not a fresh feature.
+- **Verified**: re-ran all 4 gating scenarios with outcomes inverted from
+  §44's original test — mid-series (game 1 of 2) now correctly hides
+  both banners, the last game of a 2-game series now correctly shows
+  both, a standalone single game (`seriesLength` 1, which is *always*
+  its own last game) now correctly shows both, and a mid-game Draw-phase
+  screen still never shows them under any circumstance. All 4 correct, 0
+  console errors.
+- **Verified visually**: tall-viewport screenshot of a standalone game's
+  Results screen shows both banners stacked directly above "Play Again,"
+  with no Series Standings panel present (correctly not a series).
+- **Bumped the cache-bust `?v=` version** to `202610061457` (touched
+  `js/data.js` and `js/ui.js`).
+- Re-ran an existing recruit regression script for a quick sanity check
+  (markup/config-only change, no engine logic touched) — 0 errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2039,6 +2069,7 @@ single-spot TikTok banner.
 | Deceiver-majority win removed entirely -- exactly 2 ways to end a game (feature change, designer decision) | 5 direct engine-level checks (strict majority above/at threshold, all-Loyal-dead, mid-FC strict majority, unanimous End Game and Final Two sanity) + 2 full production-path walkthroughs for the newly-exposed "ordinary round drops straight to 2 living" edge case (2v0 and 1v1 origins, both screenshotted) + full 9-script recruit suite re-run + 6-trial fc_regression.js re-run | 1 secondary bug caught while implementing (a fresh Final Circle entry at exactly 2 living could start a rule-breaking ballot instead of resolving Final Two immediately) | 2 |
 | Stale phone cache served a pre-fix build after a real deploy (deploy-hygiene bug, caught live) | Confirmed the GitHub Pages deploy itself was current (Actions workflow run) + full page load check (script resolution, 0 console errors) + recruit regression re-check | 1 (no cache-busting on any local css/js tag -- a phone's old cached copy could silently keep running stale game logic indefinitely after a fix shipped) | 1 |
 | "Send a Tip to MANCAVEMAN" button added (designer-supplied art, dual placement) | 2-scenario Results gating re-check + Settings-modal presence check + tall-viewport Results screenshot + Settings screenshot + recruit regression re-check | 0 | 1 (feature added per designer decision) |
+| TikTok ad + tip banners flipped to end-of-full-game gating (designer decision) | Full 4-scenario gating re-check with inverted expected outcomes + tall-viewport standalone-game screenshot + recruit regression re-check | 0 | 1 (gating reversed per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

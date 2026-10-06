@@ -800,7 +800,7 @@ UI.renderResults = function renderResults(state) {
             <strong style="color:var(--gold-300);">${score}</strong>
           </div>`).join('')}
       </div>` : ''}
-    ${!isLastGame ? `
+    ${isLastGame ? `
     <a href="${CONFIG.tiktokAdUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:16px; border-radius:10px; overflow:hidden; line-height:0;">
       <img src="assets/brand/watch-our-ad.jpg" alt="Watch our ad on TikTok" style="width:100%; height:auto; display:block;">
     </a>
