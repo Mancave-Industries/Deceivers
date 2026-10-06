@@ -2160,6 +2160,47 @@ small `:root` token set feeding every component.
   attempted blind, since photographic/painted-art hue-shifting is far
   more failure-prone than the clean hex-table swaps done here.
 
+## 52. First ChatGPT art batch reviewed: icons wired in, 12 posters sent back for a second pass
+
+The designer sent back a 16-image zip ("Cleaner Tones") generated from
+`ASSET_PROMPTS.md`. Reviewed every image against the brief before
+integrating anything, rather than wiring the whole pack in blind.
+
+- **The 4 icons matched the brief exactly**: simple bold yellow stencil
+  silhouettes, transparent background, already at the exact target
+  200×200px with no resize needed. Verified each visually
+  (`hooded-figure`, `shield`, `dagger`, `compass-medallion` all viewed
+  directly), confirmed they render crisply at real in-app sizes — 16px
+  in Setup's seat-mode buttons, card-frame size in the Hand screen — with
+  0 console errors, and shipped them.
+- **The 12 posters (Title + 11 interstitials) did not match**, reviewed
+  by sampling 5 of the 12 directly: no Mancaveman figure, no Mancave
+  Industries stamp, no graffiti-stencil/drip/torn-paper texture anywhere
+  — each image instead used its own unrelated illustrated/painterly
+  style and color scheme (title poster cream/red with ravens, `draw.jpg`
+  dark teal/blue, `final-circle.jpg` green/teal, `murder.jpg` and
+  `deceiver-win.jpg` red/black). Also caught a likely content error:
+  `final-circle.jpg` appeared to show more than the exactly-four figures
+  that moment should ever depict (it only fires at exactly 4 living
+  players, never more).
+- Reported the mismatch directly to the designer with 3 sample images
+  attached (title poster, `final-circle.jpg`, `draw.jpg`) rather than
+  silently fixing or silently shipping it, and asked how to proceed.
+- **Designer's call**: keep the per-image accent-color variation (liked
+  that murder was red, cooler moments used cooler tones) but bring back
+  the Mancaveman/stamp/texture elements that got dropped. Rewrote
+  `ASSET_PROMPTS.md` to v2: the varied-accent idea is now an explicit,
+  deliberate brief requirement rather than a deviation to correct, while
+  the Mancaveman figure, Mancave Industries stamp, and graffiti-stencil
+  texture are called out as non-negotiable regardless of which accent a
+  given image uses; the `final-circle.jpg` prompt now says "exactly
+  four, count them before finalizing" in two places. The 4 icons'
+  section is kept in the doc for reference but marked done, not
+  reissued.
+- Re-ran an existing recruit regression script after wiring the icons in
+  — 0 errors. The 12-poster gap remains open pending the second
+  ChatGPT pass.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2214,6 +2255,7 @@ small `:root` token set feeding every component.
 | Big "THE DECEIVERS" wordmark fills the blank top safe-area buffer | Bounding-box overflow/overlap checks at 2 viewport widths (390px, 320px) + click-still-works check at both + 4 screenshots (Setup ×2 widths, mid-game Main, Title) + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 | §49's wordmark duplicated "The Deceivers" on Title and Setup (real bug, reported by designer) | 4-phase header-label text check (Title, Setup, mid-game Main, Results) + Setup screenshot + recruit regression re-check | 1 (the exact bug reported: Title/Setup showed "The Deceivers" twice) | 1 |
 | Graffiti/street-art reskin: whole-app chrome recolored to match the promo banners (feature change, designer decision) | Palette sampled from source art (Python/Pillow) + ~80 token call sites verified via cascade + ~13 hardcoded rgba literals remapped + ~200 inline-SVG hex fills remapped via script + 8-screen visual verification + recruit regression re-check | 0 app bugs (1 open gap flagged: 16 raster brand assets not yet reskinned) | 1 (feature added per designer decision) |
+| First ChatGPT art batch reviewed: 4 icons shipped, 12 posters sent back off-brief | 5 of 12 posters sampled directly against the brief + all 4 icons verified directly + 2 real-size in-app render checks (Setup seat buttons, Hand screen cards) + recruit regression re-check | 1 content error caught in the unshipped batch (`final-circle.jpg` showed more than 4 figures) -- never reached production | 1 (icons shipped; posters sent back with a revised brief, not yet re-delivered) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

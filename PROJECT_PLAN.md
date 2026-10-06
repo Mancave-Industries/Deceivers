@@ -304,6 +304,31 @@ automated hue-shift of photographic/painted art is much more failure-
 prone than the clean hex-for-hex swaps above and risks landing worse
 than just leaving it be.
 
+**`ASSET_PROMPTS.md` was written** to hand that decision's execution to
+ChatGPT-generated art rather than either of those: per-image prompts
+built from the actual code (each interstitial's real trigger moment and
+exact baked-in text, pulled from `main.js`'s `interstitialPending`
+assignments), with a shared style-guide paragraph to keep all 16
+consistent with each other and with the already-shipped promo banners.
+
+**First batch back ("Cleaner Tones") only partially matched**: the 4
+icons (`hooded-figure.png`, `shield.png`, `dagger.png`,
+`compass-medallion.png`) landed exactly on brief — simple bold yellow
+stencil silhouettes, transparent background, legible down to the 16px
+they actually render at in Setup's seat-mode buttons — and are wired in.
+The 12 posters (Title + 11 interstitials) drifted: no Mancaveman figure,
+no Mancave Industries stamp, no graffiti-stencil/drip/torn-paper texture
+anywhere, and `final-circle.jpg` showed more than the exactly-four
+figures that moment should ever depict (it only ever fires at exactly 4
+living players). One thing from that batch *was* worth keeping, by the
+designer's own call: each poster leaning into its own accent color
+(murder in red, cooler tones for quieter moments) rather than forcing
+yellow across all 12 — `ASSET_PROMPTS.md` v2 now bakes that in as a
+deliberate brief requirement (accent varies by mood) while making the
+Mancaveman/stamp/texture elements non-negotiable regardless of which
+accent a given image uses. The 12 posters are still pending a second
+pass; this gap isn't closed yet.
+
 ### Interstitials and the raster icon family (follow-up round)
 
 Brief fullscreen transition cards between major phases, plus a new icon
