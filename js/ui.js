@@ -803,6 +803,9 @@ UI.renderResults = function renderResults(state) {
     ${!isLastGame ? `
     <a href="${CONFIG.tiktokAdUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:16px; border-radius:10px; overflow:hidden; line-height:0;">
       <img src="assets/brand/watch-our-ad.jpg" alt="Watch our ad on TikTok" style="width:100%; height:auto; display:block;">
+    </a>
+    <a href="${CONFIG.tipUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:10px; border-radius:10px; overflow:hidden; line-height:0;">
+      <img src="assets/brand/send-a-tip.jpg" alt="Send a tip to MANCAVEMAN" style="width:100%; height:auto; display:block;">
     </a>` : ''}
     <div class="spacer"></div>
     ${isLastGame
@@ -910,6 +913,9 @@ UI.settingsContent = function settingsContent(state) {
     </div>
     <a class="btn btn-ghost btn-sm btn-block" href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:10px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Open Our Playlist In Spotify</a>
     <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
+    <a href="${CONFIG.tipUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:14px; border-radius:10px; overflow:hidden; line-height:0;">
+      <img src="assets/brand/send-a-tip.jpg" alt="Send a tip to MANCAVEMAN" style="width:100%; height:auto; display:block;">
+    </a>
     <button class="btn btn-danger btn-block" data-action="reset-game" style="margin-top:14px;">Reset Game</button>`;
 };
 

@@ -20,6 +20,11 @@ const CONFIG = {
   // real app" pattern as the Spotify link above). Only ever shown between
   // games in a series — see renderResults — never mid-game.
   tiktokAdUrl: 'https://vm.tiktok.com/ZN8khsJqn/',
+  // A Stripe Payment Link, opened in a new tab -- the game never embeds a
+  // payment form or touches Stripe's API directly. Shown in Settings
+  // (always available) and on the Results screen between games in a
+  // series, same dual placement as the Spotify link / TikTok ad banner.
+  tipUrl: 'https://buy.stripe.com/bJe9AU0iz9UTbo93IX1RC02',
 };
 
 const ICONS = {

@@ -863,6 +863,20 @@ as the Spotify link. It only ever appears between games in a series
 game's results, never on the series' last game's results, and never on any
 mid-game screen, so it can't interrupt the game itself.
 
+**Tip link, dual placement**: `CONFIG.tipUrl` holds a Stripe Payment Link
+("Send a Tip to MANCAVEMAN"), rendered the same graphic-banner way as the
+TikTok ad (`assets/brand/send-a-tip.jpg`, same resize/compress convention,
+chosen from 6 designer-supplied variants for matching the TikTok banner's
+style — crowned/bearded figure, drippy stencil-graffiti treatment, the
+Mancave Industries stamp — so the two read as a matching pair rather than
+unrelated ads). Appears in two places, mirroring the Spotify link's own
+dual placement rather than the TikTok banner's single one: Settings (
+always available, directly below the Spotify link) and the Results screen
+(same between-games-only gating as the TikTok banner, stacked directly
+beneath it). The game never embeds a payment form or touches Stripe's API
+— tapping it just opens the hosted Stripe Payment Link in a new tab, same
+"hand off to the real thing" pattern as every other external link here.
+
 **Closing the discussion**: when the clock hits zero, voting doesn't start
 immediately. If music is playing, it first swells to a brief, brighter
 crescendo (`Sound.crescendoMusic` — louder, more open filter, ~0.9s); then,

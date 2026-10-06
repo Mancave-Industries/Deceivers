@@ -1962,6 +1962,34 @@ looked like none of today's fixes had actually taken effect.
   logic touched, so the main risk was a typo breaking a script path
   entirely, not a behavioral regression.
 
+## 46. "Send a Tip to MANCAVEMAN" button added (designer-supplied art)
+
+Follow-up to the TikTok ad banner, same pattern: a Stripe Payment Link
+wrapped in a designer-supplied graphic banner (6 candidates supplied;
+chose the one matching the already-shipped TikTok banner's style --
+crowned/bearded figure, drippy stencil-graffiti treatment, Mancave
+Industries stamp -- over a neon-pink variant off the app's palette and a
+couple of others missing the stamp or leaning more "industrial sign"),
+resized/compressed the same way (`assets/brand/send-a-tip.jpg`). Placed
+in two spots per the designer's choice: Settings (always available,
+directly below the Spotify link) and the Results screen (same
+between-games-only gating as the TikTok banner, stacked directly under
+it) -- mirroring the Spotify link's own dual placement rather than the
+single-spot TikTok banner.
+
+- **Verified the same 2-scenario gating re-check** the TikTok banner
+  already has (mid-series results shows it, last game of series doesn't)
+  plus a dedicated Settings-modal check (present, correct `src`) -- all
+  3 correct, 0 console errors.
+- **Verified visually**: a tall-viewport screenshot of the Results screen
+  shows both banners stacked cleanly as a matching pair; a Settings
+  modal screenshot shows the tip banner sitting directly below the
+  Spotify link and its speaker note, above Reset Game.
+- **Bumped the cache-bust `?v=` version** (per §45's new convention) to
+  `202610061454` since this round touched `js/data.js` and `js/ui.js`.
+- Re-ran an existing recruit regression script for a quick sanity check
+  (this round touched only markup/config, no engine logic) -- 0 errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2010,6 +2038,7 @@ looked like none of today's fixes had actually taken effect.
 | Deceiver-majority win required strict outnumbering, not equality (real bug, reported by designer) | 6 direct engine-level checks (1v1 through 3v2) + 1 full production-path walkthrough (continueAfterElimination + real render()'s lazy startRound + screenshot + tap-through) + 5 direct Final Circle 2v2-outcome checks (banish-a-Deceiver, banish-a-Loyal, tied vote, unanimous End Game, Final Two sanity) + 6-trial fc_regression.js re-run + Recruit-or-Die majority/payout re-check | 1 (the exact bug reported: an 8-player 2v2 ending skipped the Final Circle and its Final Banishment entirely) | 1 |
 | Deceiver-majority win removed entirely -- exactly 2 ways to end a game (feature change, designer decision) | 5 direct engine-level checks (strict majority above/at threshold, all-Loyal-dead, mid-FC strict majority, unanimous End Game and Final Two sanity) + 2 full production-path walkthroughs for the newly-exposed "ordinary round drops straight to 2 living" edge case (2v0 and 1v1 origins, both screenshotted) + full 9-script recruit suite re-run + 6-trial fc_regression.js re-run | 1 secondary bug caught while implementing (a fresh Final Circle entry at exactly 2 living could start a rule-breaking ballot instead of resolving Final Two immediately) | 2 |
 | Stale phone cache served a pre-fix build after a real deploy (deploy-hygiene bug, caught live) | Confirmed the GitHub Pages deploy itself was current (Actions workflow run) + full page load check (script resolution, 0 console errors) + recruit regression re-check | 1 (no cache-busting on any local css/js tag -- a phone's old cached copy could silently keep running stale game logic indefinitely after a fix shipped) | 1 |
+| "Send a Tip to MANCAVEMAN" button added (designer-supplied art, dual placement) | 2-scenario Results gating re-check + Settings-modal presence check + tall-viewport Results screenshot + Settings screenshot + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
