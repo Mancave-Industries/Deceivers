@@ -770,9 +770,7 @@ UI.renderResults = function renderResults(state) {
     <div class="winner-banner scale-in">
       <h2>${winnerRole === ROLES.DECEIVER ? 'The Deceivers Win' : 'The Loyal Prevail'}</h2>
       <p class="small-note">${winnerRole === ROLES.DECEIVER
-        ? (state.finalCircleActive
-          ? 'A Deceiver was hiding among the survivors all along. The circle is theirs.'
-          : 'The Deceivers now outnumber the Loyal. The circle is theirs.')
+        ? 'A Deceiver was hiding among the survivors all along. The circle is theirs.'
         : 'Every Deceiver has been cast out. The circle is safe.'}</p>
     </div>
     <div class="prize-pot-panel">
@@ -877,10 +875,10 @@ UI.showInterstitial = function showInterstitial(key, onComplete) {
 
 UI.helpContent = function helpContent() {
   return `
-    <p><strong>One phone, a group of friends — some of you are secretly Deceivers.</strong> Everyone else is Loyal. Loyal wins by rooting out every Deceiver; Deceivers win by staying hidden until they outnumber whoever's left.</p>
+    <p><strong>One phone, a group of friends — some of you are secretly Deceivers.</strong> Everyone else is Loyal. Loyal wins by rooting out every Deceiver before the game's final reckoning; Deceivers win by staying hidden long enough to survive it — see The Final Circle, below.</p>
     <p>${CONFIG.minPlayers}–${CONFIG.maxPlayers} players, one shared phone passed hand to hand, no app to install. A game runs about 15–25 minutes, start to finish.</p>
     <p>Each round, everyone draws a card, then something happens — a quiet night, a secret murder, or a vote to banish someone — and the whole table gathers to watch the outcome together. Play continues round after round until one side wins.</p>
-    <p>The Loyal win by eliminating every Deceiver through ordinary play. The Deceivers win the moment they outnumber the Loyal. Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
+    <p>Every game is decided at the Final Circle (see below): the Loyal win only if every Deceiver has already been cast out by then, and the Deceivers win if even one of them is still standing when it concludes. Whoever wins splits that game's Prize Pot among themselves — if the Loyal win, the surviving Loyal split it; if the Deceivers win, the surviving Deceivers take the whole thing. Anyone already eliminated gets nothing.</p>
     <div class="panel-title" style="margin-top:4px;">The Final Circle</div>
     <p>Once only ${CONFIG.finalCircleThreshold} players remain — and at least one ordinary round has already been played — the game shifts into its endgame: every round becomes a private ballot where each survivor secretly chooses End Game or Banish Again. If everyone chooses End Game, or once only two players are left, the game ends outright — and at that point any surviving Deceiver wins, even a single one facing two Loyal.</p>
     <div class="panel-title" style="margin-top:4px;">Recruit or Die</div>

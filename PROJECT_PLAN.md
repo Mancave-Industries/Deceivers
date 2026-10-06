@@ -201,11 +201,10 @@ duplicating show/hide logic at each call site.
   that button is actually tapped and the per-player Murder queue begins.
 - Exactly one interstitial per game ending, never two stacked: a forced
   end at two living players shows **Final Two** (the one ending nobody
-  chose); everything else — a unanimous End Game stop at 3 or 4, an
-  ordinary pre-Final-Circle Deceiver-majority win, or a majority win
-  firing mid-Final-Circle with more than two still living — shows
-  **Loyal Win** or **Deceiver Win** instead. The actual winner-sound cue
-  still always plays regardless of which interstitial (if either) shows.
+  chose); a unanimous End Game stop at 3 or 4 shows **Loyal Win** or
+  **Deceiver Win** instead — the game's only two possible endings (see
+  "Win condition," below). The actual winner-sound cue still always
+  plays regardless of which interstitial shows.
 - **Draw** fires unconditionally on every `'begin-draw'` tap, *before*
   branching into either an ordinary Draw Phase or a secret Recruit or Die
   round — see "Recruit or Die," where this matters for staying invisible.
@@ -445,18 +444,12 @@ eliminations bring them down to the threshold anyway.
 4. **Once living players reach 2, there is no more voting** — the game ends
    automatically, right then, with a full role reveal. This is the one
    fixed exit that doesn't depend on anyone's choice.
-5. A Deceiver-majority win (step 3 above) can still fire mid–Final Circle
-   at any point, same as ever — e.g. a wrongly-banished Loyal could hand a
-   2-Deceiver, 1-Loyal circle an instant win without even reaching another
-   ballot.
 
-**How the Final Circle actually resolves a winner is a different, simpler
-rule than the ordinary-round majority check**: once the Final Circle
-concludes on its own terms (unanimous End Game, or down to two), *any*
-surviving Deceiver wins outright — even a single Deceiver sitting alongside
-two or three Loyal, a case the majority check (`livingDeceivers >
-livingLoyal`) would never have been able to resolve on its own. This
-mirrors the real show's final-two table exactly:
+**These two endings — unanimous End Game, or down to two — are the
+*only* ways a game can ever end**, resolved by `checkFinalCircleWinner`:
+*any* surviving Deceiver wins outright, even a single Deceiver sitting
+alongside two or three Loyal. This mirrors the real show's final-two
+table exactly:
 
 | Final survivors | Result |
 |---|---|
@@ -471,27 +464,37 @@ change at all: the existing `payoutPrizePot` (split among winning-side
 survivors) already implements this correctly once the right winner is
 passed in — the only new code was *deciding* who that winner is.
 
-**The ordinary-round majority check requires Deceivers to strictly
-outnumber the Loyal, not merely equal them** — `checkDeceiverMajorityWin`
-originally fired on `livingDeceivers >= livingLoyal`, auto-ending the game
-the instant counts went even (most commonly an 8-player game's two
-Deceivers both surviving down to a 4-player, 2-vs-2 standoff, which also
-happens to be the Final Circle's own entry threshold — so the majority
-check won the race and the Final Circle never got to start at all).
-The reasoning at the time was that the Deceivers could always force a
-tied vote by voting as a bloc, and a tie banishes no one, so an exact tie
-in living counts was supposedly just as hopeless for the Loyal as being
-outnumbered outright. That reasoning doesn't actually hold in this game:
-the Dagger card (`effect: 'vote-weight'`, +1 to a single vote during a
-Banishment) can break an otherwise-even split, so the Loyal genuinely can
-still win a Banishment Vote at equal counts — it isn't mathematically
-decided the way strict outnumbering is. Caught by the game's designer
-reasoning through an exact 8-player, 2v2 ending by hand (see
-TEST_REPORT.md §43). Fixed by changing the comparison to `>`: an equal
-count now plays on normally instead of ending on the spot, which in
-practice means it proceeds into the Final Circle once living drops to the
-threshold, vote (and Dagger) and all, same as any other count at or under
-it.
+**There used to be a third way to end a game — a "Deceiver majority"
+shortcut — and it was removed entirely.** `checkDeceiverMajorityWin`
+ended the game the instant living Deceivers numerically overtook living
+Loyal, anywhere, Final Circle or not, on the reasoning that such a
+position was already unwinnable for the Loyal so there was no suspense
+value in dragging it out. That reasoning went through two rounds of
+scrutiny from the game's designer, both triggered by real games that
+ended with no Final Banishment at all:
+
+- First (TEST_REPORT.md §43): the check originally fired on
+  `livingDeceivers >= livingLoyal` — *equal* counts, not just outnumbered
+  ones. An 8-player game's two Deceivers both surviving down to a
+  4-player, 2-vs-2 standoff (also exactly the Final Circle's own entry
+  threshold) ended the game on the spot, before the Final Circle ever
+  got a chance to start. The reasoning at the time was that the
+  Deceivers could always force a tied vote by voting as a bloc, and a
+  tie banishes no one — but that doesn't actually hold in this game: the
+  Dagger card (+1 weight to a single vote during a Banishment) can break
+  an otherwise-even split, so the Loyal genuinely could still win a
+  Banishment Vote at equal counts. Fixed by requiring *strict*
+  outnumbering (`>`) instead.
+- Then (TEST_REPORT.md §44): even strict outnumbering turned out to be
+  the wrong rule to auto-end on at all, anywhere. The designer's point:
+  the game has exactly two endings, full stop — not "two endings, plus a
+  shortcut for when the vote is already decided." A lopsided ordinary
+  round (every Loyal eliminated while a handful of Deceivers remain, or
+  a wrongly-banished Loyal handing the Deceivers a majority mid-Final-
+  Circle) now just keeps playing — ordinary rounds until the threshold,
+  then the Final Circle — exactly like any other count, all the way to
+  one of the two real endings. `checkDeceiverMajorityWin` was deleted
+  outright rather than left unused.
 
 ### Recruit or Die
 

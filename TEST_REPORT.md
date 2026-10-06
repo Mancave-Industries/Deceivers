@@ -1861,6 +1861,75 @@ mechanics don't match the premise the `>=` comparison relied on.
   errors; the existing Recruit-or-Die majority/payout tests (both
   engineer a strict-outnumber 2v1/2v0 ending) re-confirmed unaffected.
 
+## 44. The Deceiver-majority win shortcut removed entirely — exactly two ways to end a game now
+
+Immediate follow-up to §43. After seeing the strict-outnumbering fix
+explained, the game's designer pushed further: "The game ends in one of
+2 ways: All vote to end OR 2 players remain." Not a request to further
+narrow the majority check (as §43 did) but to remove it outright,
+everywhere — not just mid-Final-Circle, but the ordinary pre-Final-Circle
+case too. Confirmed the scope explicitly before touching anything this
+large, since it's a different-sized change depending on whether it's
+scoped to "inside the Final Circle only" or "the whole game": the
+designer confirmed "everywhere."
+
+- **The change**: deleted `checkDeceiverMajorityWin` outright (not left
+  unused) along with its only two call sites. `advanceRoundOrEnd`
+  (renamed `advanceRound`, since it now always advances and never ends)
+  no longer checks for a winner at all — an ordinary round's elimination
+  just advances to the next round, full stop, regardless of how lopsided
+  the living counts get. `continueAfterFinalCircleBanishment`'s majority
+  branch is gone too; the function itself was removed as a redundant
+  wrapper once its only remaining job (the `living <= 2` check) moved
+  into `beginFinalCircleDecision` directly (see the next bullet) — both
+  of its call sites now call that directly instead.
+- **A second, related bug surfaced while removing the first**: with the
+  majority shortcut gone, an *ordinary* round can now reach exactly 2
+  living players on its own (e.g. a 1-Deceiver/1-Loyal Quiet Night) —
+  something that could never happen before, since the majority check
+  always caught it first. The very first tap of "Enter The Final Circle"
+  at that point called `beginFinalCircleDecision` unconditionally, which
+  would have started a pointless (and rule-breaking) 2-player End
+  Game/Banish Again ballot — directly contradicting "once living players
+  reach 2, there is no more voting," a rule this app already documented
+  but had only ever enforced *after* a Final Circle banishment, not at
+  the Final Circle's own first entry. Fixed by moving the `living <= 2`
+  guard into `beginFinalCircleDecision` itself, so every call site (first
+  entry and every subsequent round alike) is automatically safe.
+- **User-facing copy updated to match**: the Deceiver role's description
+  and two lines in the How To Play modal no longer frame winning as
+  "outnumbering" the Loyal at all (that was never the actual rule once
+  this landed) — rewritten around survival to the Final Circle's
+  conclusion instead. The winner-banner's now-unreachable
+  pre-Final-Circle majority flavor text was removed from `UI.
+  renderResults` (every Deceiver win now genuinely is "a Deceiver was
+  hiding among the survivors all along").
+- **Verified directly at the engine level**: confirmed both
+  `checkDeceiverMajorityWin` and `advanceRoundOrEnd` no longer exist;
+  checked a strict Deceiver majority well above the Final Circle
+  threshold (3 Deceivers vs. 2 Loyal, 5 living) no longer ends the game,
+  just advances the round normally; checked every Loyal eliminated while
+  3 Deceivers remain (living = 3, mathematically always ≤ the threshold
+  given the Deceiver cap of 3 — confirmed this can never be an
+  above-threshold state) correctly proceeds into the Final Circle rather
+  than auto-ending; checked a mid-Final-Circle wrongly-banished Loyal
+  creating a strict 2v1 majority no longer ends the game, continuing to
+  another Final Circle round instead; re-confirmed unanimous End Game and
+  Final Two both still work correctly.
+- **Verified the real production path end-to-end for both newly-exposed
+  edge cases**: an ordinary round dropping to 2 Deceivers/0 Loyal
+  (aftermath of a late-game successful recruit) correctly reaches Final
+  Two on the very next "Enter The Final Circle" tap rather than stalling
+  or offering a ballot; an ordinary round dropping to a fresh
+  1-Deceiver/1-Loyal pair does the same, screenshotted showing "FINAL
+  TWO — NO MORE VOTING" reached directly from an ordinary-round origin
+  for the first time.
+- **Full regression re-run**: all 9 existing recruit-suite scripts (cap,
+  refuse, Final-Circle-collision, vs-Final-Circle, voice-leak, engine,
+  Hidden-mode) re-confirmed unaffected, 0 errors; `fc_regression.js`'s
+  6-trial computer-only suite (5-8 players) re-run after every change in
+  this round, 0 errors throughout.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1907,6 +1976,7 @@ mechanics don't match the premise the `>=` comparison relied on.
 | TikTok ad button redesigned as a graphic banner (designer-supplied art) | 4-scenario gating re-check (mid-series/last-game/standalone/mid-game) + image decode/load check + tall-viewport screenshot | 0 | 1 (visual redesign per designer decision) |
 | Recruit or Die "Join Us" clarity fix: private role confirmation + fellow-Deceiver reveal | 2×1 deterministic UI click-through (Known + Hidden mode, lone-survivor-of-2 precondition) + full existing recruit suite re-run (9 scripts, 6 patched for the new confirm step) + 10-trial computer-only regression (bots unaffected, bypass the UI confirmation) | 1 real UX bug (reported by designer) + 1 secondary bug caught while fixing it (`fellowDeceivers` named a dead former teammate) | 2 |
 | Deceiver-majority win required strict outnumbering, not equality (real bug, reported by designer) | 6 direct engine-level checks (1v1 through 3v2) + 1 full production-path walkthrough (continueAfterElimination + real render()'s lazy startRound + screenshot + tap-through) + 5 direct Final Circle 2v2-outcome checks (banish-a-Deceiver, banish-a-Loyal, tied vote, unanimous End Game, Final Two sanity) + 6-trial fc_regression.js re-run + Recruit-or-Die majority/payout re-check | 1 (the exact bug reported: an 8-player 2v2 ending skipped the Final Circle and its Final Banishment entirely) | 1 |
+| Deceiver-majority win removed entirely -- exactly 2 ways to end a game (feature change, designer decision) | 5 direct engine-level checks (strict majority above/at threshold, all-Loyal-dead, mid-FC strict majority, unanimous End Game and Final Two sanity) + 2 full production-path walkthroughs for the newly-exposed "ordinary round drops straight to 2 living" edge case (2v0 and 1v1 origins, both screenshotted) + full 9-script recruit suite re-run + 6-trial fc_regression.js re-run | 1 secondary bug caught while implementing (a fresh Final Circle entry at exactly 2 living could start a rule-breaking ballot instead of resolving Final Two immediately) | 2 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

@@ -513,9 +513,19 @@ const actions = {
   },
   'begin-final-circle': () => {
     Sound.play('tap');
-    beginFinalCircleDecision(state);
+    const nextPhase = beginFinalCircleDecision(state);
     uiStage.finalCircleTapped = false;
-    interstitialPending = 'final-circle';
+    if (nextPhase === PHASES.RESULTS) {
+      // Entering the Final Circle already at 2 living players -- no
+      // ballot to hold, Final Two concludes it on the spot. Can happen
+      // when an ordinary (pre-Final-Circle) round drops straight to 2,
+      // e.g. a 1-Deceiver/1-Loyal Quiet Night.
+      Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
+      Analytics.gameFinished();
+      interstitialPending = 'final-two';
+    } else {
+      interstitialPending = 'final-circle';
+    }
     persist();
     render();
   },
@@ -746,7 +756,7 @@ const actions = {
     // Again decision (or the game ending outright) — see engine.js.
     const wasFinalCircleElimination = state.eliminationContext === 'final';
     if (wasFinalCircleElimination) {
-      continueAfterFinalCircleBanishment(state);
+      beginFinalCircleDecision(state);
     } else {
       continueAfterElimination(state);
     }
@@ -757,15 +767,13 @@ const actions = {
     if (state.phase === PHASES.RESULTS) {
       Sound.play(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin', 0.3);
       Analytics.gameFinished();
-      // "Final Two" is its own distinct beat (the one ending that isn't
-      // anyone's choice) and replaces the win interstitial for that one
-      // path, rather than stacking two interstitials back to back; a
-      // Deceiver-majority win firing mid-Final-Circle with more than two
-      // still living gets the ordinary win interstitial instead.
-      const livingCount = state.players.filter((p) => p.alive).length;
-      interstitialPending = (wasFinalCircleElimination && livingCount <= 2)
-        ? 'final-two'
-        : (state.winner === ROLES.DECEIVER.id ? 'deceiver-win' : 'loyal-win');
+      // Reaching RESULTS from a banishment's Continue now only ever means
+      // the Final Two ending (2 living players forcing an automatic end)
+      // -- see engine.js's "Win condition" comment: that's the only way
+      // beginFinalCircleDecision's own guard can set RESULTS here, and
+      // the ordinary (non-final) path never does. Its own distinct beat,
+      // rather than stacking two interstitials back to back.
+      interstitialPending = 'final-two';
     } else if (state.phase === PHASES.MAIN) {
       // The game continues into a fresh round — its own distinct cue,
       // not the previous round's closing sound bleeding into it.

@@ -696,57 +696,35 @@ function botShouldUseDagger(state, voterId) {
    in between; each round has exactly one event. */
 
 function continueAfterElimination(state) {
-  const ended = advanceRoundOrEnd(state);
-  return ended ? PHASES.RESULTS : PHASES.MAIN;
+  advanceRound(state);
+  return PHASES.MAIN;
 }
 
 /* ---------- Win condition ----------
-   Two distinct checks, on purpose — not one function with two branches.
+   Exactly two ways a game can ever end — both live entirely inside the
+   Final Circle, both resolved by checkFinalCircleWinner below: everyone
+   unanimously chooses End Game (resolveFinalCircleDecision), or living
+   players drop to 2 (beginFinalCircleDecision's own guard — checked at
+   every entry to a fresh ballot, not just mid-circle ones, since an
+   ordinary pre-Final-Circle round can drop straight to 2 just as easily).
 
-   checkDeceiverMajorityWin can fire after *any* elimination, any time,
-   Final Circle or not: once living Deceivers *strictly outnumber* living
-   Loyal, the Deceivers control enough votes to force a tie (or win one
-   outright) every single Banishment from here on, with no further
-   Murder even required — so continuing is pointless and the game ends
-   immediately. This is a mathematical inevitability, not a narrative
-   beat — there's no suspense value in delaying it.
-
-   An exact tie in living counts (2 Deceivers vs. 2 Loyal, etc.) is
-   deliberately NOT included here, even though a naive vote-counting
-   argument makes it look just as hopeless for the Loyal (the Deceivers
-   voting as a bloc can force a 50/50 split, and a tied vote banishes no
-   one). That argument doesn't actually hold in this game: the Dagger
-   card (`effect: 'vote-weight'`) lets a single voter add +1 weight to
-   their own vote during a Banishment, which can break an otherwise-even
-   split either way. A caught-in-the-act bug report from the game's
-   designer, reasoning through an exact 2v2 ending by hand, is what
-   surfaced this — the original `>=` comparison here ended the game
-   immediately on reaching parity, denying the Loyal a Banishment Vote
-   that wasn't actually mathematically decided. An equal count now plays
-   on normally instead: if it reaches the Final Circle threshold, it
-   proceeds into the Final Circle below exactly like any other count at
-   or under that threshold, vote and all.
-
-   checkFinalCircleWinner is the *only* way the Loyal side can ever win,
-   and it only ever runs when the Final Circle concludes on its own terms
-   (everyone unanimously chooses End Game, or only two players remain) —
-   see resolveFinalCircleDecision / continueAfterFinalCircleBanishment
-   below. The Loyal are never told "you got them all" the instant it
-   becomes true; they only find out once the Final Circle itself ends,
-   exactly like the real-world show this mode is modeled on. Notably this
-   is a *simpler* rule than the majority check above: a single surviving
-   Deceiver still wins here even sitting alongside two or three Loyal
-   (1 Deceiver + 2 Loyal would never trip checkDeceiverMajorityWin's
-   1 > 2), because by this point survival itself is the win condition,
-   not voting-bloc control. */
-function checkDeceiverMajorityWin(state) {
-  const living = livingPlayers(state);
-  const livingDeceivers = living.filter((p) => p.role === ROLES.DECEIVER.id).length;
-  const livingLoyal = living.length - livingDeceivers;
-  if (livingDeceivers > 0 && livingDeceivers > livingLoyal) return ROLES.DECEIVER.id;
-  return null;
-}
-
+   There used to be a third way: an ordinary-round or mid-Final-Circle
+   "Deceiver majority" shortcut that ended the game the instant living
+   Deceivers outnumbered living Loyal, on the reasoning that such a
+   position was already mathematically unwinnable for the Loyal. That
+   reasoning turned out not to hold even for a strict majority (not just
+   an exact tie — see the Dagger card's vote-weight effect, which can
+   swing an outnumbered vote), and more importantly it kept robbing games
+   of their actual ending: an 8-player game whose two Deceivers both
+   survived to an exact 2v2 standoff would skip the Final Circle — and
+   therefore any Final Banishment — entirely, since the standoff itself
+   was already an auto-win. Removed per the designer's explicit call:
+   every game, no matter how lopsided the living count gets, now plays
+   all the way to the Final Circle and ends only by one of the two ways
+   above. A lopsided ordinary round (say, every Loyal eliminated while
+   Deceivers still vastly outnumber the handful left) simply keeps
+   playing ordinary rounds until living drops to the Final Circle
+   threshold, same as any other game. */
 function checkFinalCircleWinner(state) {
   const anyDeceiverAlive = livingPlayers(state).some((p) => p.role === ROLES.DECEIVER.id);
   return anyDeceiverAlive ? ROLES.DECEIVER.id : ROLES.LOYAL.id;
@@ -775,16 +753,10 @@ function finalizeGame(state, winner) {
   log(state, winner === ROLES.LOYAL.id ? 'Every Deceiver has fallen. The Loyal prevail.' : 'The Deceivers now rule the circle.');
 }
 
-function advanceRoundOrEnd(state) {
-  const winner = checkDeceiverMajorityWin(state);
-  if (winner) {
-    finalizeGame(state, winner);
-    return true;
-  }
+function advanceRound(state) {
   state.round += 1;
   state.currentFateCard = null;
   state.phase = PHASES.MAIN;
-  return false;
 }
 
 /* ---------- Final Circle (End Game) ----------
@@ -798,10 +770,26 @@ function advanceRoundOrEnd(state) {
    suspense that normally ends at every Elimination Reveal now survives
    all the way to the Final Circle's own conclusion. */
 
+/** Starts a fresh per-player End Game / Banish Again ballot — unless
+ *  living players have already dropped to 2, in which case there is
+ *  nothing left to ballot about ("once living players reach 2, there is
+ *  no more voting") and the game ends immediately instead. This guard
+ *  matters at every call site, not just mid-Final-Circle ones: an
+ *  ordinary (pre-Final-Circle) round can drop living straight to 2 just
+ *  as easily — e.g. a 1-Deceiver, 1-Loyal Quiet Night — and the very
+ *  first "Enter The Final Circle" tap afterward must not offer a
+ *  pointless ballot between the game's last two players. Returns the
+ *  phase the game is now in, so callers (and main.js's sound/interstitial
+ *  dispatch) know whether a ballot actually started. */
 function beginFinalCircleDecision(state) {
+  if (livingPlayers(state).length <= 2) {
+    finalizeGame(state, checkFinalCircleWinner(state));
+    return PHASES.RESULTS;
+  }
   state.pendingQueue = livingPlayers(state).map((p) => p.id);
   state.finalCircleDecisions = {};
   state.phase = PHASES.FINAL_CIRCLE_DECISION;
+  return PHASES.FINAL_CIRCLE_DECISION;
 }
 
 function recordFinalCircleDecision(state, playerId, decision) {
@@ -836,28 +824,12 @@ function resolveFinalCircleDecision(state) {
   return PHASES.DISCUSS;
 }
 
-/** Called once the Elimination Reveal's Continue is tapped after a Final
- *  Circle banishment (as opposed to an ordinary one — see main.js's
- *  continue-elimination handler, which picks this over
- *  continueAfterElimination based on eliminationContext). A Deceiver
- *  majority can still end the game on the spot; otherwise, reaching two
- *  survivors forces the end automatically, per the real rule this mode is
- *  modeled on ("at two players, there is no more voting"); otherwise the
- *  circle (now one smaller) gets another End Game / Banish Again round.
- *  Returns the phase the game is now in. */
-function continueAfterFinalCircleBanishment(state) {
-  const majorityWinner = checkDeceiverMajorityWin(state);
-  if (majorityWinner) {
-    finalizeGame(state, majorityWinner);
-    return PHASES.RESULTS;
-  }
-  if (livingPlayers(state).length <= 2) {
-    finalizeGame(state, checkFinalCircleWinner(state));
-    return PHASES.RESULTS;
-  }
-  beginFinalCircleDecision(state);
-  return PHASES.FINAL_CIRCLE_DECISION;
-}
+/* A Final Circle banishment continues into another beginFinalCircleDecision
+   call, same as the very first entry — its own "living <= 2" guard
+   already covers "once living players reach 2, there is no more voting"
+   (see its comment, above), so there's nothing left for a separate
+   wrapper to add; main.js's continue-elimination handler calls
+   beginFinalCircleDecision directly. */
 
 /* Simple, non-strategic, consistent with the other bot* functions above —
    the real tension in this decision only exists for a human group reading
