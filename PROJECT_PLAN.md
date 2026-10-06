@@ -187,6 +187,16 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   own "THE DECEIVERS" lettering, judged an acceptable minor overlap
   rather than worth a Title-specific suppression rule.
 
+  One redundancy wasn't acceptable, though, caught immediately after
+  shipping: `UI.updateHeader`'s small `#roundLabel` text (just below the
+  new wordmark) also read "The Deceivers" on the Title and Setup
+  screens specifically — the exact same words, twice, in the same
+  glance. Fixed by blanking both `#roundLabel` and `#phaseLabel` for
+  those two phases now that the big wordmark above already covers it,
+  rather than hunting for different filler text just to have something
+  there. Every other phase is untouched — gameplay screens still show
+  "Round N" / the phase name, Results still shows "The Circle Closes."
+
 ### Interstitials and the raster icon family (follow-up round)
 
 Brief fullscreen transition cards between major phases, plus a new icon

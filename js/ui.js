@@ -95,7 +95,11 @@ UI.updateHeader = function updateHeader(state) {
   const roundLabel = document.getElementById('roundLabel');
   const phaseLabel = document.getElementById('phaseLabel');
   if (state.phase === PHASES.TITLE || state.phase === PHASES.SETUP) {
-    roundLabel.textContent = 'The Deceivers';
+    // The big .app-header-wordmark above already says "The Deceivers" --
+    // repeating it here in the small label would just say it twice in
+    // the same glance. Left blank rather than finding something else to
+    // fill it with.
+    roundLabel.textContent = '';
     phaseLabel.textContent = '';
   } else if (state.phase === PHASES.RESULTS) {
     roundLabel.textContent = 'The Circle Closes';

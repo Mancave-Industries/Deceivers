@@ -2081,6 +2081,29 @@ Title, which has its own full poster there instead.
 - Re-ran an existing recruit regression script as a sanity check (pure
   markup/CSS change, no logic touched) — 0 errors.
 
+## 50. §49's wordmark duplicated "The Deceivers" on Title and Setup
+
+Immediate follow-up, caught by the designer right after §49 shipped:
+"So now it says deceivers twice." Correct — `UI.updateHeader`'s small
+`#roundLabel` text, directly below the new big wordmark, also read "The
+Deceivers" specifically on the Title and Setup phases, so those two
+screens showed the exact same words twice in the same glance.
+
+- **The fix**: blanked both `#roundLabel` and `#phaseLabel` for the
+  Title/Setup branch of `UI.updateHeader`, now that the wordmark above
+  already covers that branding. Every other phase untouched.
+- **Verified directly**: checked `#roundLabel`/`#phaseLabel` text
+  content on all 4 relevant phases — Title and Setup now both blank (no
+  duplication), a mid-game Main screen still correctly shows "Round 3" /
+  "The Circle" and Results still shows "The Circle Closes" — confirming
+  the fix is scoped to exactly the two phases that needed it.
+- **Verified visually**: Setup screenshot shows a clean wordmark + bare
+  icon row, no repeated text.
+- **Bumped the cache-bust `?v=` version** to `202610061534` (touches
+  `js/ui.js`).
+- Re-ran an existing recruit regression script as a sanity check — 0
+  errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2133,6 +2156,7 @@ Title, which has its own full poster there instead.
 | TikTok ad + tip banners flipped to end-of-full-game gating (designer decision) | Full 4-scenario gating re-check with inverted expected outcomes + tall-viewport standalone-game screenshot + recruit regression re-check | 0 | 1 (gating reversed per designer decision) |
 | Spotify link redesigned as a graphic banner (designer-supplied art) | 2-location presence + decode check (Discuss, Settings) + 2 screenshots + recruit regression re-check | 0 | 1 (visual redesign per designer decision) |
 | Big "THE DECEIVERS" wordmark fills the blank top safe-area buffer | Bounding-box overflow/overlap checks at 2 viewport widths (390px, 320px) + click-still-works check at both + 4 screenshots (Setup ×2 widths, mid-game Main, Title) + recruit regression re-check | 0 | 1 (feature added per designer decision) |
+| §49's wordmark duplicated "The Deceivers" on Title and Setup (real bug, reported by designer) | 4-phase header-label text check (Title, Setup, mid-game Main, Results) + Setup screenshot + recruit regression re-check | 1 (the exact bug reported: Title/Setup showed "The Deceivers" twice) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
