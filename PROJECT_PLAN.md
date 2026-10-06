@@ -82,11 +82,25 @@ legacy/         (previous, unrelated prototype — preserved, not part of this g
 
 ## 3. Visual Design System
 
-Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
+Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy),
+reskinned in a later round (see "Graffiti/street-art reskin," below) from
+muted antique-gold toward the vivid Mancave Industries street-art palette
+seen in the game's own promo banners — the structure and tokens described
+here are unchanged, only the hex values underneath them:
 
-- **Palette**: charcoal black (`#0c0b0e`, `#161319`), antique gold
-  (`#c9a24b`, `#e6c877`), dark crimson (`#5c1420`, `#7d1f2b`), midnight blue
-  (`#141c30`, `#1f2a44`), aged parchment (`#e9dcc0`, `#d8c9a3`).
+- **Palette**: near-black charcoal (`--charcoal-950`/`-900`, currently
+  `#060606`/`#121212`), vivid stencil-spray yellow (`--gold-300` through
+  `-900`, currently `#fff3b8` → `#3d3000` — still named `gold` for the
+  token/variable names, now holding yellow values; see the reskin section
+  below for why the name wasn't also changed), vivid stencil-spray red
+  (`--crimson-300` through `-900`, `#d91216` core), midnight blue
+  (`--midnight-*`, unchanged — this is the Loyal-team role accent, not
+  part of the brand palette). The aged-parchment family
+  (`--parchment-100`/`-300`/`-muted`) is CSS-token-unused dead weight
+  (0 references in `style.css`) carried over from an earlier pass; a few
+  inline-SVG card-frame fills used the same muted-tan *concept* without
+  going through those unused tokens, and were reskinned toward muted
+  yellow alongside everything else (see below).
 - **Type**: `Oswald` (Google Fonts, weights 500/700) for ceremonial
   headings/display text — the one network-dependent asset in the app,
   loaded via `<link>` in `index.html`'s `<head>`; falls back to `'Arial
@@ -196,6 +210,99 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   rather than hunting for different filler text just to have something
   there. Every other phase is untouched — gameplay screens still show
   "Round N" / the phase name, Results still shows "The Circle Closes."
+
+### Graffiti/street-art reskin (follow-up round)
+
+The designer's call, after seeing several promo banners (TikTok ad, tip,
+Spotify) land in the app already built in a bold yellow/black/red
+graffiti-stencil style: "I think we need to brand this more like this. I
+want to skin the whole game like this" — i.e. bring the *app's own*
+chrome in line with the banners' style, not the other way round.
+
+**Scope, and why it's mostly a token change**: `css/style.css` was
+already built "tokens → base → layout → components → screens → motion"
+(its own header comment) — every color-bearing rule reads from a small
+set of `:root` custom properties rather than hardcoding hex values
+per-component. That architecture meant the bulk of this reskin was
+redefining five groups of tokens in one place (`--charcoal-*` toward
+neutral near-black instead of a faint purple-black; `--gold-*` toward a
+vivid stencil yellow; `--crimson-*` toward a vivid stencil red), and
+every one of the ~80 existing `var(--gold-*)`/`var(--crimson-*)` call
+sites across buttons, panels, borders, headline text, and card rows
+picked up the new look automatically, no per-component edits needed.
+Kept the original token *names* (`--gold-*`, `--crimson-*`) rather than
+renaming to `--yellow-*`/`--red-*` — a rename would've touched the same
+~80 call sites for a cosmetic-only win, versus zero extra edits by just
+redefining the values in place; the semantic mismatch (a token named
+"gold" holding a yellow hex value) is a minor internal-naming nit judged
+not worth that much churn.
+
+**New values, sampled from the designer's own supplied artwork** rather
+than guessed by eye — the exact yellow (`#fedd04`) and red (`#da1115`)
+pulled directly from the most common non-black/white pixels in the
+uploaded "DECEIVERS" banner, then extended into matching light/dark
+shades that preserve each original token's *role* (`-300`/`-400` =
+light, used as either light-text-on-dark or a bright gradient top;
+`-900` = dark, used as either dark-text-on-bright or a dark gradient
+base) so contrast relationships that already worked (e.g. `.btn-primary`'s
+dark `--gold-900` text on its own bright `--gold-400`→`--gold-500`
+background) kept working without individual review:
+
+| Token | Old (muted gold/crimson) | New (vivid stencil) |
+|---|---|---|
+| `--gold-300` | `#f2dfa0` | `#fff3b8` |
+| `--gold-400` | `#e6c877` | `#ffe866` |
+| `--gold-500` | `#c9a24b` | `#ffd900` |
+| `--gold-700` | `#8a6a2f` | `#a88600` |
+| `--gold-900` | `#3a2c10` | `#3d3000` |
+| `--crimson-900` | `#430e17` | `#330405` |
+| `--crimson-700` | `#7d1f2b` | `#7a0a0e` |
+| `--crimson-500` | `#8a2536` | `#d91216` |
+| `--charcoal-950` | `#0a0910` | `#060606` |
+| `--charcoal-900` | `#14121a` | `#121212` |
+| `--charcoal-800` | `#1e1a24` | `#1c1c1c` |
+| `--charcoal-700` | `#29232f` | `#272727` |
+
+`--midnight-*` (the Loyal-team role accent — a separate concept from the
+brand palette entirely) was deliberately left untouched.
+
+**What the tokens alone didn't cover**: ~13 hardcoded `rgba(r,g,b,alpha)`
+literals in `style.css` (border/overlay tints that needed their own
+alpha value, so they'd been written as the gold/crimson/charcoal tokens'
+literal RGB decimal equivalents rather than `var()` — e.g.
+`rgba(201,162,75,0.25)` for the old gold-500) — found and remapped to
+the new RGB values by the same logic, same alpha untouched. The
+ceremonial corner-bracket frame (`.app::after`) also got a deliberate
+boldness bump alongside the color swap — 1.5px hairlines to 3px, 0.4
+opacity to 0.55 — reading as a hand-stamped/stencilled bracket rather
+than a fine hairline, closer to the source art's own linework weight;
+and `.app-grain`'s overlay opacity went from 0.1 to 0.16 for a grittier
+base texture. Separately, ~200 hardcoded hex fills/strokes inside
+`index.html`'s inline SVG `<defs>` (the card-frame gradients — gold,
+action, protection, event, role) aren't CSS and don't read `:root`
+tokens at all; remapped with the same old-hex → new-hex table via a
+one-off script, including a handful of muted-tan accent fills that don't
+correspond to any actual CSS token (dead `--parchment-*` tokens exist in
+`:root` but nothing reads them — these SVG fills used the same *concept*
+without going through them) — shifted toward a muted yellow to match
+rather than left as a leftover tan that would've clashed.
+
+**What's deliberately NOT done, and still an open gap**: the game's
+*raster* brand assets — the Title screen's full poster
+(`deceivers-title-poster.jpg`), all 11 interstitial posters
+(`assets/brand/interstitials/*.jpg`), and the 4 raster icons
+(`assets/brand/icons/*.png`, Hooded Figure/Shield/Dagger/compass
+medallion) — are baked JPEGs/PNGs in the *old* muted-gold/rust palette,
+and nothing in this round touched them. They're visibly out of step with
+the now-reskinned chrome around them (most noticeable on the Title
+screen, where the vivid new wordmark and "New Game" button now sit above
+a poster still in the old tones). Fixing this needs either new
+designer-supplied art in the new palette for each of the 16 images (the
+pattern every other asset swap this session has followed), or a
+programmatic recolor attempt — not done without that decision, since an
+automated hue-shift of photographic/painted art is much more failure-
+prone than the clean hex-for-hex swaps above and risks landing worse
+than just leaving it be.
 
 ### Interstitials and the raster icon family (follow-up round)
 

@@ -2104,6 +2104,62 @@ screens showed the exact same words twice in the same glance.
 - Re-ran an existing recruit regression script as a sanity check — 0
   errors.
 
+## 51. Graffiti/street-art reskin: the whole app's chrome recolored to match the promo banners
+
+Designer's call, prompted by seeing a new "DECEIVERS" banner land
+alongside the already-shipped TikTok/tip/Spotify banners: "I think we
+need to brand this more like this. I want to skin the whole game like
+this." Scoped as a token-driven palette swap (the muted "dark ceremonial"
+gold/crimson toward the banners' own vivid yellow/red) rather than a
+layout rebuild, since `css/style.css` was already architected around a
+small `:root` token set feeding every component.
+
+- **Palette sourced from the actual artwork**: sampled the most common
+  non-black/white pixels in the newly-uploaded banner directly (Python/
+  Pillow) rather than eyeballing hex values — landed on `#fedd04`
+  (yellow) and `#da1115` (red) as the true source colors, then built
+  matching `-300`/`-400`/`-500`/`-700`/`-900` shades preserving each
+  token's original light/dark *role* (see PROJECT_PLAN.md's new
+  "Graffiti/street-art reskin" section for the full old→new table).
+- **`:root` token redefinition** cascaded automatically through ~80
+  existing `var(--gold-*)`/`var(--crimson-*)` call sites (buttons,
+  panels, borders, grainy headline text, card-row accents) with zero
+  other CSS edits needed, confirming the token architecture did its job.
+- **~13 hardcoded `rgba(r,g,b,alpha)` literals** in `style.css` (gold/
+  crimson/charcoal's RGB written out literally wherever a one-off alpha
+  was needed) found via `grep -oE` and remapped to the new RGB values by
+  hand, same alpha preserved each time.
+- **~200 hardcoded hex fills/strokes inside `index.html`'s inline SVG
+  `<defs>`** (the card-frame gradients, which don't read CSS custom
+  properties at all) mapped old-hex → new-hex via a one-off Python
+  script and verified via `grep -oE` afterward that only the
+  deliberately-untouched midnight/blue (Loyal-role) family remained —
+  confirmed clean, no strays.
+- Bumped the ceremonial corner-bracket frame's weight (1.5px → 3px
+  hairlines, 0.4 → 0.55 opacity) and the base grain texture's opacity
+  (0.1 → 0.16) for a bolder, grittier feel closer to the source art.
+- **Verified visually** across 8 representative screens/states (Title,
+  Setup, private Reveal with a role card, mid-game Main, Discuss with
+  the Spotify banner, Results with both promo banners, Settings modal,
+  and a Hand screen covering all 4 card-frame types: gold/action/
+  protection/role) — every one reads cohesively in the new palette, the
+  Shield card's blue correctly untouched (Loyal-role color, not brand),
+  and the already-shipped promo banners now blend naturally into their
+  surrounding chrome instead of standing out as the only colorful thing
+  on screen.
+- **Bumped the cache-bust `?v=` version** to `202610061541` (touches
+  `css/style.css`; `index.html`'s own SVG-fill edit isn't covered by
+  that query-string convention, same as the header-wordmark markup
+  change two rounds ago — not newly introduced by this round).
+- Re-ran an existing recruit regression script — 0 errors.
+- **Flagged, not fixed**: 16 raster brand assets (Title poster, 11
+  interstitial posters, 4 icon PNGs) are still the old muted-gold JPEGs/
+  PNGs and now visibly clash with the reskinned chrome around them,
+  worst on the Title screen. Needs either new designer-supplied art per
+  image or an explicit decision to attempt a programmatic recolor — not
+  attempted blind, since photographic/painted-art hue-shifting is far
+  more failure-prone than the clean hex-table swaps done here.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2157,6 +2213,7 @@ screens showed the exact same words twice in the same glance.
 | Spotify link redesigned as a graphic banner (designer-supplied art) | 2-location presence + decode check (Discuss, Settings) + 2 screenshots + recruit regression re-check | 0 | 1 (visual redesign per designer decision) |
 | Big "THE DECEIVERS" wordmark fills the blank top safe-area buffer | Bounding-box overflow/overlap checks at 2 viewport widths (390px, 320px) + click-still-works check at both + 4 screenshots (Setup ×2 widths, mid-game Main, Title) + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 | §49's wordmark duplicated "The Deceivers" on Title and Setup (real bug, reported by designer) | 4-phase header-label text check (Title, Setup, mid-game Main, Results) + Setup screenshot + recruit regression re-check | 1 (the exact bug reported: Title/Setup showed "The Deceivers" twice) | 1 |
+| Graffiti/street-art reskin: whole-app chrome recolored to match the promo banners (feature change, designer decision) | Palette sampled from source art (Python/Pillow) + ~80 token call sites verified via cascade + ~13 hardcoded rgba literals remapped + ~200 inline-SVG hex fills remapped via script + 8-screen visual verification + recruit regression re-check | 0 app bugs (1 open gap flagged: 16 raster brand assets not yet reskinned) | 1 (feature added per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

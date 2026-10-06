@@ -4,20 +4,31 @@
    ========================================================================== */
 
 :root {
-  --charcoal-950: #0a0910;
-  --charcoal-900: #14121a;
-  --charcoal-800: #1e1a24;
-  --charcoal-700: #29232f;
+  /* Reskinned to match the Mancave Industries graffiti/street-art key
+     art (designer-supplied banners): a flat near-black backdrop, a
+     vivid stencil-spray yellow in place of the old muted gold, and a
+     vivid stencil-spray red in place of the old muted crimson. Values
+     sampled directly from the supplied artwork (yellow ~#fedd04, red
+     ~#da1115) rather than guessed, then extended into matching
+     light/dark shades preserving each token's original role (300/400 =
+     light, reads as text-on-dark or a bright gradient top; 900 = dark,
+     reads as text-on-bright or a dark gradient base) so every existing
+     component that already consumed --gold-*/--crimson-* picks up the
+     new look with no other changes needed. */
+  --charcoal-950: #060606;
+  --charcoal-900: #121212;
+  --charcoal-800: #1c1c1c;
+  --charcoal-700: #272727;
 
-  --gold-300: #f2dfa0;
-  --gold-400: #e6c877;
-  --gold-500: #c9a24b;
-  --gold-700: #8a6a2f;
-  --gold-900: #3a2c10;
+  --gold-300: #fff3b8;
+  --gold-400: #ffe866;
+  --gold-500: #ffd900;
+  --gold-700: #a88600;
+  --gold-900: #3d3000;
 
-  --crimson-900: #430e17;
-  --crimson-700: #7d1f2b;
-  --crimson-500: #8a2536;
+  --crimson-900: #330405;
+  --crimson-700: #7a0a0e;
+  --crimson-500: #d91216;
 
   --midnight-900: #141c30;
   --midnight-700: #1f2a44;
@@ -99,8 +110,8 @@ input {
 /* Background texture: subtle vignette + faint radial noise, CSS only */
 body {
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(201,162,75,0.08), transparent 55%),
-    radial-gradient(ellipse at 50% 110%, rgba(125,31,43,0.10), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(255,217,0,0.08), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(217,18,22,0.10), transparent 60%),
     var(--charcoal-950);
 }
 
@@ -150,17 +161,17 @@ body {
   inset: 10px;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(201,162,75,0.08);
+  border: 1px solid rgba(255,217,0,0.08);
   background:
-    linear-gradient(var(--gold-500), var(--gold-500)) top left / 20px 1.5px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) top left / 1.5px 20px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) top right / 20px 1.5px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) top right / 1.5px 20px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 20px 1.5px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 1.5px 20px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 20px 1.5px no-repeat,
-    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 1.5px 20px no-repeat;
-  opacity: 0.4;
+    linear-gradient(var(--gold-500), var(--gold-500)) top left / 24px 3px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top left / 3px 24px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top right / 24px 3px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) top right / 3px 24px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 24px 3px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom left / 3px 24px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 24px 3px no-repeat,
+    linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 3px 24px no-repeat;
+  opacity: 0.55;
   filter: url(#crumble);
 }
 
@@ -179,7 +190,7 @@ body {
   background-repeat: repeat;
   background-size: 64px 64px;
   mix-blend-mode: overlay;
-  opacity: 0.1;
+  opacity: 0.16;
 }
 
 .sprite-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
@@ -205,8 +216,8 @@ body {
   grid-template-columns: 44px 1fr 44px 44px;
   align-items: end;
   padding: var(--edge-buffer-top) 6px 8px;
-  border-bottom: 1px solid rgba(201,162,75,0.25);
-  background: linear-gradient(180deg, rgba(20,18,26,0.9), rgba(20,18,26,0.6));
+  border-bottom: 1px solid rgba(255,217,0,0.25);
+  background: linear-gradient(180deg, rgba(18,18,18,0.9), rgba(18,18,18,0.6));
   z-index: 20;
 }
 /* Fills the --edge-buffer-top safe-area reservation above the icon row --
@@ -256,7 +267,7 @@ body {
   justify-content: center;
   transition: background var(--dur-fast) ease;
 }
-.icon-btn:active { background: rgba(201,162,75,0.15); }
+.icon-btn:active { background: rgba(255,217,0,0.15); }
 .header-mid {
   display: flex;
   flex-direction: column;
@@ -387,7 +398,7 @@ body {
 .btn-ghost {
   color: var(--ink-dim);
   background: transparent;
-  border-color: rgba(201,162,75,0.4);
+  border-color: rgba(255,217,0,0.4);
 }
 
 /* ---------- Generic panel ---------- */
@@ -443,7 +454,7 @@ body {
   align-items: center;
   gap: 10px;
   background: var(--charcoal-800);
-  border: 1px solid rgba(201,162,75,0.3);
+  border: 1px solid rgba(255,217,0,0.3);
   border-radius: var(--radius-sm);
   padding: 6px 10px;
 }
@@ -474,7 +485,7 @@ body {
   justify-content: center;
   gap: 5px;
   padding: 5px 8px;
-  border: 1px solid rgba(201,162,75,0.25);
+  border: 1px solid rgba(255,217,0,0.25);
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--ink-dim);
@@ -485,7 +496,7 @@ body {
 .seat-mode-btn.active {
   border-color: var(--gold-500);
   color: var(--gold-300);
-  background: rgba(201,162,75,0.12);
+  background: rgba(255,217,0,0.12);
 }
 .remove-player-btn {
   background: none;
@@ -687,7 +698,7 @@ body {
   text-align: center;
   padding: 30px;
   background:
-    radial-gradient(ellipse at 50% 40%, rgba(30,26,36,0.98), rgba(8,7,10,0.99)),
+    radial-gradient(ellipse at 50% 40%, rgba(28,28,28,0.98), rgba(6,6,6,0.99)),
     var(--charcoal-950);
 }
 .pass-overlay .icon-lg { width: 54px; height: 54px; }
@@ -811,7 +822,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: max(20px, var(--edge-buffer-top)) 20px max(20px, var(--edge-buffer-bottom));
-  background: rgba(6,5,8,0.82);
+  background: rgba(6,6,6,0.82);
 }
 .modal-panel {
   width: 100%;
@@ -857,7 +868,7 @@ body {
   bottom: 90px;
   transform: translateX(-50%);
   z-index: 55;
-  background: rgba(20,18,26,0.95);
+  background: rgba(18,18,18,0.95);
   border: 1.5px solid var(--gold-500);
   color: var(--gold-300);
   font-size: 15px;
