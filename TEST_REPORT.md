@@ -2045,6 +2045,42 @@ treatment changed, exactly like the TikTok banner's own earlier upgrade.
 - Re-ran an existing recruit regression script for a quick sanity check
   (markup-only change, no logic touched) — 0 errors.
 
+## 49. Big "THE DECEIVERS" wordmark fills the blank top safe-area buffer
+
+Reported by the designer from a Setup-screen screenshot: the
+`--edge-buffer-top` safe-area reservation (a flat 10vh minimum at the
+top of every screen, explained in PROJECT_PLAN.md's "Edge safe zones")
+sat visibly blank above the header's icon row on every screen except
+Title, which has its own full poster there instead.
+
+- **The change**: added `.app-header-wordmark`, a big "THE DECEIVERS"
+  label absolutely positioned to exactly the `--edge-buffer-top` region
+  inside the shared `<header>` (outside the per-screen `.screen`
+  elements, so it's present on every screen automatically, no
+  per-screen code). Sized with `height: var(--edge-buffer-top)` so it
+  can never compete with the icon row below for space, and
+  `pointer-events: none` since it's purely decorative. Reuses the
+  existing grainy-gold `background-clip: text` treatment
+  (`.screen-title-row` and friends) rather than a new image asset.
+  `font-size: clamp(20px, min(9vh, 8vw), 44px)` caps on both a height
+  *and* a width unit together, since a pure-vh size could still overflow
+  a narrow phone at a tall aspect ratio.
+- **Verified directly**: checked the rendered wordmark's bounding box
+  against both icon buttons at two viewport widths (390px and a 320px
+  "SE-class" narrow phone) — no overflow past the viewport edge on
+  either, no overlap with the menu or sound icon buttons, and confirmed
+  the menu button is still clickable (opens Settings) at both sizes with
+  the wordmark layered on top.
+- **Verified visually**: screenshots of the Setup screen at both
+  viewport widths, a mid-game Main screen (Final Circle), and the Title
+  screen — the wordmark reads cleanly everywhere, including sitting
+  slightly redundantly above the Title poster's own lettering there
+  (judged acceptable, not worth a screen-specific suppression rule).
+- **Bumped the cache-bust `?v=` version** to `202610061517` (touches
+  `css/style.css` and `index.html`'s markup).
+- Re-ran an existing recruit regression script as a sanity check (pure
+  markup/CSS change, no logic touched) — 0 errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2096,6 +2132,7 @@ treatment changed, exactly like the TikTok banner's own earlier upgrade.
 | "Send a Tip to MANCAVEMAN" button added (designer-supplied art, dual placement) | 2-scenario Results gating re-check + Settings-modal presence check + tall-viewport Results screenshot + Settings screenshot + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 | TikTok ad + tip banners flipped to end-of-full-game gating (designer decision) | Full 4-scenario gating re-check with inverted expected outcomes + tall-viewport standalone-game screenshot + recruit regression re-check | 0 | 1 (gating reversed per designer decision) |
 | Spotify link redesigned as a graphic banner (designer-supplied art) | 2-location presence + decode check (Discuss, Settings) + 2 screenshots + recruit regression re-check | 0 | 1 (visual redesign per designer decision) |
+| Big "THE DECEIVERS" wordmark fills the blank top safe-area buffer | Bounding-box overflow/overlap checks at 2 viewport widths (390px, 320px) + click-still-works check at both + 4 screenshots (Setup ×2 widths, mid-game Main, Title) + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

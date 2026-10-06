@@ -198,6 +198,7 @@ body {
 
 /* ---------- Header ---------- */
 .app-header {
+  position: relative;
   flex: 0 0 auto;
   height: calc(52px + var(--edge-buffer-top));
   display: grid;
@@ -207,6 +208,42 @@ body {
   border-bottom: 1px solid rgba(201,162,75,0.25);
   background: linear-gradient(180deg, rgba(20,18,26,0.9), rgba(20,18,26,0.6));
   z-index: 20;
+}
+/* Fills the --edge-buffer-top safe-area reservation above the icon row --
+   previously just blank space on every screen except Title (which has
+   its own full poster). Sized to the buffer itself (height: 100%, since
+   the header's own top padding IS that buffer), so it never competes
+   with the icon row for space; pointer-events: none keeps it purely
+   decorative, since the tappable icons already sit in their own area
+   below this one. Same grainy-gold text treatment as .screen-title-row
+   and friends, just reused here rather than a new image asset. Width
+   constrained with min(vh, vw) so it scales down safely on both a short
+   landscape-ish viewport and a narrow one, not just one axis. */
+.app-header-wordmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--edge-buffer-top);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, min(9vh, 8vw), 44px);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-image:
+    url('../assets/brand/grain.png'),
+    linear-gradient(180deg, var(--gold-300), var(--gold-700));
+  background-size: 36px 36px, auto;
+  background-blend-mode: soft-light;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold-400);
 }
 .icon-btn {
   width: 40px;

@@ -169,6 +169,23 @@ Dark ceremonial aesthetic, entirely original (no Traitors branding/marks/copy):
   final button once the screen is scrolled to its natural resting point —
   the goal was never zero scrolling, just that a button never rests flush
   against the literal device edge.
+- **`.app-header-wordmark`**: that top buffer sat visibly blank on every
+  screen except Title (which has its own full poster) until a designer
+  playtest flagged it as wasted space. Filled with a big "THE DECEIVERS"
+  wordmark, absolutely positioned to exactly the `--edge-buffer-top`
+  region (`height: var(--edge-buffer-top)`), so it can never compete with
+  the icon row below it for space, `pointer-events: none` since it's
+  purely decorative. Reuses the same grainy-gold `background-clip: text`
+  treatment as `.screen-title-row` and friends rather than a new image
+  asset, and its `font-size: clamp(20px, min(9vh, 8vw), 44px)`
+  deliberately caps on *both* a height and a width unit — a flat
+  viewport-height size alone could still overflow a narrow phone's width
+  at a tall aspect ratio, and vice versa on a short/wide one. Lives in
+  the shared `<header>` markup (outside the per-screen `.screen`
+  elements), so it's automatically present on every screen at once —
+  including Title, where it sits slightly redundantly above the poster's
+  own "THE DECEIVERS" lettering, judged an acceptable minor overlap
+  rather than worth a Title-specific suppression rule.
 
 ### Interstitials and the raster icon family (follow-up round)
 
