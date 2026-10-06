@@ -16,6 +16,10 @@ const CONFIG = {
   // alongside the game rather than embedded in it — tapping the link just
   // opens Spotify; nothing here talks to Spotify's API or touches auth.
   spotifyPlaylistUrl: 'https://open.spotify.com/playlist/1iwY55WpCl8Hb1UXrWx5RY?si=S-NIPJhGR--nsvL4UFWmMA&utm_source=copy-link&pi=zk-4FU8ZT2aCM',
+  // A promo clip, linked out rather than embedded (same "just open the
+  // real app" pattern as the Spotify link above). Only ever shown between
+  // games in a series — see renderResults — never mid-game.
+  tiktokAdUrl: 'https://vm.tiktok.com/ZN8khsJqn/',
 };
 
 const ICONS = {

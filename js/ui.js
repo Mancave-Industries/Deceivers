@@ -785,6 +785,8 @@ UI.renderResults = function renderResults(state) {
             <strong style="color:var(--gold-300);">${score}</strong>
           </div>`).join('')}
       </div>` : ''}
+    ${!isLastGame ? `
+    <a class="btn btn-ghost btn-sm btn-block" href="${CONFIG.tiktokAdUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:16px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Watch Our Ad On TikTok</a>` : ''}
     <div class="spacer"></div>
     ${isLastGame
       ? `${seriesActive ? '<p class="small-note" style="margin-bottom:10px;">The series is complete.</p>' : ''}<button class="btn btn-primary btn-block" data-action="play-again">${seriesActive ? 'New Series' : 'Play Again'}</button>`
