@@ -34,6 +34,21 @@ This means: to change a game rule, edit `engine.js`. To restyle, edit
 `style.css`. To change wording/copy or add a card, edit `data.js`. Rendering
 never contains rule logic, and rule logic never touches `document`.
 
+**Cache-busting on every deploy**: `index.html`'s `css/style.css` and every
+local `js/*.js` tag carries a `?v=<timestamp>` query string (the external
+Google Fonts link and the site-wide `/Gameshed/nav.js` don't need it — that
+file isn't part of this app's own deploys). With no build step, nothing
+else fingerprints these filenames, and GitHub Pages' caching plus phone
+browsers (iOS Safari especially) will happily keep serving an old cached
+copy indefinitely after a push — a returning player's already-open tab can
+silently keep running stale game logic well after a fix has shipped and
+the deploy workflow has gone green. Caught live: a designer playtest hit
+an already-fixed bug because their phone was still running `ui.js`/`data.js`
+cached from before that session even started. **Bump the `?v=` value on
+every commit that touches `css/style.css` or any `js/*.js` file** — a
+UTC timestamp (`date -u +%Y%m%d%H%M`) is the convention, applied to all
+seven local tags identically with one `sed` pass across `index.html`.
+
 ## 2. Folder Structure
 
 ```

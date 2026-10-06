@@ -1930,6 +1930,38 @@ designer confirmed "everywhere."
   6-trial computer-only suite (5-8 players) re-run after every change in
   this round, 0 errors throughout.
 
+## 45. Stale phone cache served a pre-§43 build, making a fixed bug look live
+
+The designer played a real game shortly after §44 shipped and saw "The
+Deceivers now equal or outnumber the Loyal" — wording from *before* even
+§43's first fix, on a win that skipped the Final Banishment entirely,
+exactly the original reported bug. Alarming at first glance, since it
+looked like none of today's fixes had actually taken effect.
+
+- **Confirmed the deploy itself was fine**: `pages build and deployment`
+  workflow run #47 (GitHub Actions) successfully built and deployed
+  commit `71a820e` (§44's exact commit) ~35 minutes before the screenshot
+  was taken, going by the device clock. Every commit from today's session
+  has its own green deployment run.
+- **Root cause**: `index.html`'s script/stylesheet tags (`js/data.js`,
+  `js/ui.js`, etc.) carried no version or cache-busting query string at
+  all — just the bare filename. A phone that had this page open (or
+  revisited a bookmark) from *before* today's fixes shipped could keep
+  running its already-cached copy of `ui.js`/`data.js` indefinitely,
+  silently, with no indication to the player that they were playing a
+  stale build — even though the server had the fix the entire time.
+- **The fix**: every local `css`/`js` tag in `index.html` now carries a
+  `?v=<UTC timestamp>` query string, bumped on every commit that touches
+  one of those files (see PROJECT_PLAN.md's Architecture section for the
+  convention). This round's value: `202610061443`.
+- **Verified**: confirmed `js/data.js?v=...` and `css/style.css?v=...`
+  both still resolve correctly (query strings don't affect static file
+  serving), a full page load shows `createInitialState`/`UI`/`render`
+  all correctly defined with 0 console errors, and an existing recruit
+  regression script re-ran clean — this is a markup-only change with no
+  logic touched, so the main risk was a typo breaking a script path
+  entirely, not a behavioral regression.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1977,6 +2009,7 @@ designer confirmed "everywhere."
 | Recruit or Die "Join Us" clarity fix: private role confirmation + fellow-Deceiver reveal | 2×1 deterministic UI click-through (Known + Hidden mode, lone-survivor-of-2 precondition) + full existing recruit suite re-run (9 scripts, 6 patched for the new confirm step) + 10-trial computer-only regression (bots unaffected, bypass the UI confirmation) | 1 real UX bug (reported by designer) + 1 secondary bug caught while fixing it (`fellowDeceivers` named a dead former teammate) | 2 |
 | Deceiver-majority win required strict outnumbering, not equality (real bug, reported by designer) | 6 direct engine-level checks (1v1 through 3v2) + 1 full production-path walkthrough (continueAfterElimination + real render()'s lazy startRound + screenshot + tap-through) + 5 direct Final Circle 2v2-outcome checks (banish-a-Deceiver, banish-a-Loyal, tied vote, unanimous End Game, Final Two sanity) + 6-trial fc_regression.js re-run + Recruit-or-Die majority/payout re-check | 1 (the exact bug reported: an 8-player 2v2 ending skipped the Final Circle and its Final Banishment entirely) | 1 |
 | Deceiver-majority win removed entirely -- exactly 2 ways to end a game (feature change, designer decision) | 5 direct engine-level checks (strict majority above/at threshold, all-Loyal-dead, mid-FC strict majority, unanimous End Game and Final Two sanity) + 2 full production-path walkthroughs for the newly-exposed "ordinary round drops straight to 2 living" edge case (2v0 and 1v1 origins, both screenshotted) + full 9-script recruit suite re-run + 6-trial fc_regression.js re-run | 1 secondary bug caught while implementing (a fresh Final Circle entry at exactly 2 living could start a rule-breaking ballot instead of resolving Final Two immediately) | 2 |
+| Stale phone cache served a pre-fix build after a real deploy (deploy-hygiene bug, caught live) | Confirmed the GitHub Pages deploy itself was current (Actions workflow run) + full page load check (script resolution, 0 console errors) + recruit regression re-check | 1 (no cache-busting on any local css/js tag -- a phone's old cached copy could silently keep running stale game logic indefinitely after a fix shipped) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
