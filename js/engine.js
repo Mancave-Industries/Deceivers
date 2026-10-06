@@ -704,11 +704,28 @@ function continueAfterElimination(state) {
    Two distinct checks, on purpose — not one function with two branches.
 
    checkDeceiverMajorityWin can fire after *any* elimination, any time,
-   Final Circle or not: once living Deceivers equal or outnumber living
-   Loyal, no vote can ever remove enough of them again, so continuing is
-   pointless and the game ends immediately. This is a mathematical
-   inevitability, not a narrative beat — there's no suspense value in
-   delaying it, so it was never changed to wait for the Final Circle.
+   Final Circle or not: once living Deceivers *strictly outnumber* living
+   Loyal, the Deceivers control enough votes to force a tie (or win one
+   outright) every single Banishment from here on, with no further
+   Murder even required — so continuing is pointless and the game ends
+   immediately. This is a mathematical inevitability, not a narrative
+   beat — there's no suspense value in delaying it.
+
+   An exact tie in living counts (2 Deceivers vs. 2 Loyal, etc.) is
+   deliberately NOT included here, even though a naive vote-counting
+   argument makes it look just as hopeless for the Loyal (the Deceivers
+   voting as a bloc can force a 50/50 split, and a tied vote banishes no
+   one). That argument doesn't actually hold in this game: the Dagger
+   card (`effect: 'vote-weight'`) lets a single voter add +1 weight to
+   their own vote during a Banishment, which can break an otherwise-even
+   split either way. A caught-in-the-act bug report from the game's
+   designer, reasoning through an exact 2v2 ending by hand, is what
+   surfaced this — the original `>=` comparison here ended the game
+   immediately on reaching parity, denying the Loyal a Banishment Vote
+   that wasn't actually mathematically decided. An equal count now plays
+   on normally instead: if it reaches the Final Circle threshold, it
+   proceeds into the Final Circle below exactly like any other count at
+   or under that threshold, vote and all.
 
    checkFinalCircleWinner is the *only* way the Loyal side can ever win,
    and it only ever runs when the Final Circle concludes on its own terms
@@ -720,13 +737,13 @@ function continueAfterElimination(state) {
    is a *simpler* rule than the majority check above: a single surviving
    Deceiver still wins here even sitting alongside two or three Loyal
    (1 Deceiver + 2 Loyal would never trip checkDeceiverMajorityWin's
-   1 >= 2), because by this point survival itself is the win condition,
+   1 > 2), because by this point survival itself is the win condition,
    not voting-bloc control. */
 function checkDeceiverMajorityWin(state) {
   const living = livingPlayers(state);
   const livingDeceivers = living.filter((p) => p.role === ROLES.DECEIVER.id).length;
   const livingLoyal = living.length - livingDeceivers;
-  if (livingDeceivers > 0 && livingDeceivers >= livingLoyal) return ROLES.DECEIVER.id;
+  if (livingDeceivers > 0 && livingDeceivers > livingLoyal) return ROLES.DECEIVER.id;
   return null;
 }
 

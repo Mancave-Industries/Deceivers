@@ -454,7 +454,7 @@ eliminations bring them down to the threshold anyway.
 rule than the ordinary-round majority check**: once the Final Circle
 concludes on its own terms (unanimous End Game, or down to two), *any*
 surviving Deceiver wins outright — even a single Deceiver sitting alongside
-two or three Loyal, a case the majority check (`livingDeceivers >=
+two or three Loyal, a case the majority check (`livingDeceivers >
 livingLoyal`) would never have been able to resolve on its own. This
 mirrors the real show's final-two table exactly:
 
@@ -470,6 +470,28 @@ table limited to exactly two survivors. Payout math itself didn't need to
 change at all: the existing `payoutPrizePot` (split among winning-side
 survivors) already implements this correctly once the right winner is
 passed in — the only new code was *deciding* who that winner is.
+
+**The ordinary-round majority check requires Deceivers to strictly
+outnumber the Loyal, not merely equal them** — `checkDeceiverMajorityWin`
+originally fired on `livingDeceivers >= livingLoyal`, auto-ending the game
+the instant counts went even (most commonly an 8-player game's two
+Deceivers both surviving down to a 4-player, 2-vs-2 standoff, which also
+happens to be the Final Circle's own entry threshold — so the majority
+check won the race and the Final Circle never got to start at all).
+The reasoning at the time was that the Deceivers could always force a
+tied vote by voting as a bloc, and a tie banishes no one, so an exact tie
+in living counts was supposedly just as hopeless for the Loyal as being
+outnumbered outright. That reasoning doesn't actually hold in this game:
+the Dagger card (`effect: 'vote-weight'`, +1 to a single vote during a
+Banishment) can break an otherwise-even split, so the Loyal genuinely can
+still win a Banishment Vote at equal counts — it isn't mathematically
+decided the way strict outnumbering is. Caught by the game's designer
+reasoning through an exact 8-player, 2v2 ending by hand (see
+TEST_REPORT.md §43). Fixed by changing the comparison to `>`: an equal
+count now plays on normally instead of ending on the spot, which in
+practice means it proceeds into the Final Circle once living drops to the
+threshold, vote (and Dagger) and all, same as any other count at or under
+it.
 
 ### Recruit or Die
 

@@ -55,7 +55,7 @@ const ROLES = {
     label: 'Deceiver',
     symbol: 'role-deceiver',
     icon: ICONS.hoodedFigure,
-    description: 'You are a Deceiver. Blend in, mislead the vote, and help your fellow Deceivers survive until you equal or outnumber the Loyal.',
+    description: 'You are a Deceiver. Blend in, mislead the vote, and help your fellow Deceivers survive until you outnumber the Loyal.',
   },
   LOYAL: {
     id: 'loyal',

@@ -1788,6 +1788,79 @@ only said "Refusing has a cost" without saying what that cost was.
   that path) — 5 of 10 trials naturally triggered Recruit or Die, 0
   errors.
 
+## 43. Deceiver-majority win required equality instead of strict outnumbering — skipped the Final Circle entirely at a tied count
+
+Reported directly by the game's designer: an 8-player game ended with no
+Final Banishment at all. Traced it to `checkDeceiverMajorityWin`'s
+`livingDeceivers >= livingLoyal` comparison. An 8-player game starts with
+exactly 2 Deceivers (the ratio-capped formula), and the only way two
+Deceivers can ever reach a majority is by both surviving down to a
+4-player, 2-vs-2 standoff — which is *also* exactly the Final Circle's own
+entry threshold (`CONFIG.finalCircleThreshold`). Because the majority
+check runs immediately after the elimination that brings the count to
+four (in `advanceRoundOrEnd`, called from `continueAfterElimination`),
+and the Final Circle only activates one render later (lazily, inside
+`startRound`, the first time `render()` sees a `MAIN` phase with no
+current Fate card), the majority check always won that race: the game
+ended on the spot, and the Final Circle — and with it, a Final
+Banishment — never got the chance to start.
+
+Initially defended this as working-as-designed (the `>=` comparison was
+original, deliberate, and explicitly documented in both `engine.js` and
+PROJECT_PLAN.md as mirroring "the real show's" rule that Deceivers voting
+as a bloc can always force a tied Banishment vote, and a tie banishes no
+one). The designer pushed back: the Loyal genuinely can still win a
+Banishment Vote at an exact tie in this implementation, because the
+Dagger card (`effect: 'vote-weight'`, +1 to a single vote) can break an
+otherwise-even split either way — so "equal counts are just as hopeless
+as being outnumbered" doesn't actually hold here, even though it's the
+real show's own stated rule. That's a correct catch: this app's own
+mechanics don't match the premise the `>=` comparison relied on.
+
+- **The fix**: changed the comparison to `livingDeceivers > livingLoyal`
+  (strict). An exact tie in living counts no longer ends the game on the
+  spot — it plays on normally, which in practice means it proceeds into
+  the Final Circle once living drops to the threshold, vote (and Dagger)
+  and all, same as any other count at or under it. Strict outnumbering
+  (2v1, 3v2, etc.) is completely unchanged — those still end the game
+  immediately, exactly as before.
+- **User-facing copy updated to match**: the Deceiver role's own
+  description, the winner-banner flavor text for a pre-Final-Circle
+  majority win, and two lines in the How To Play modal all said "equal or
+  outnumber" — changed to "outnumber" in all four places so the rules
+  text doesn't contradict the actual win condition.
+- **Verified directly at the engine level**: `checkDeceiverMajorityWin`
+  checked against every count from 1v1 to 3v2 — 2v2, 3v3, and 1v1 now all
+  correctly return no winner; 2v1 and 3v2 (strict outnumber) are
+  unchanged and still return a Deceiver win; 1v2 (Loyal still ahead) is
+  unchanged and still returns no winner.
+- **Verified the real production path end-to-end**: engineered an
+  8-player game sitting at 2 living Deceivers + 2 living Loyal (4 already
+  eliminated), called `continueAfterElimination` (the exact function the
+  real game calls right after every Elimination Reveal's Continue
+  button) — confirmed no winner is declared and the round correctly
+  advances — then called the real `render()`, which (via its own
+  lazy `startRound` call) correctly activated the Final Circle on the
+  very next frame, screenshotted showing "THE FINAL CIRCLE — 4 remain in
+  the circle" and the Final Circle interstitial, then walked an actual
+  tap through to the Final Circle Decision screen.
+- **Verified every Final Circle outcome at a 2v2 standoff directly**
+  against `continueAfterFinalCircleBanishment`: a Final Circle vote that
+  successfully banishes a Deceiver (→ 1v2) correctly continues to another
+  Final Circle round rather than ending; a vote that wrongly banishes a
+  Loyal (→ 2v1, strict outnumber) still correctly ends the game in the
+  Deceivers' favor immediately, unchanged; a tied vote at 2v2 (no one
+  banished) correctly loops back into another Final Circle round instead
+  of stalling or ending; a 2v2 stalemate resolved by unanimous End Game
+  still correctly ends in the Deceivers' favor (the designed way out of
+  an endless tie loop); the existing Final Two (1v1, forced conclusion at
+  2 living players) is unaffected.
+- **Full regression re-run**: `fc_regression.js`'s 6-trial computer-only
+  suite (5-8 players, mixed knowledge modes) — all 6 reached the Final
+  Circle correctly, a healthy mix of both Loyal and Deceiver wins, 0
+  errors; the existing Recruit-or-Die majority/payout tests (both
+  engineer a strict-outnumber 2v1/2v0 ending) re-confirmed unaffected.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1833,6 +1906,7 @@ only said "Refusing has a cost" without saying what that cost was.
 | Hidden-mode Murder "friendly fire" + automatic Deceiver immunity (feature change) | 6 direct engine-level scenarios + 1 deterministic full UI click-through (target pool contents, reveal text verified word-for-word against an ordinary Shield-save) + 2×7p computer-only regression (widened pool confirmed live in random play) + full Known-mode suite re-check | 0 app bugs (2 test-script bugs fixed: missing disabled-state check, zero-margin iteration budget) | 1 (feature added per user decision) |
 | TikTok ad button redesigned as a graphic banner (designer-supplied art) | 4-scenario gating re-check (mid-series/last-game/standalone/mid-game) + image decode/load check + tall-viewport screenshot | 0 | 1 (visual redesign per designer decision) |
 | Recruit or Die "Join Us" clarity fix: private role confirmation + fellow-Deceiver reveal | 2×1 deterministic UI click-through (Known + Hidden mode, lone-survivor-of-2 precondition) + full existing recruit suite re-run (9 scripts, 6 patched for the new confirm step) + 10-trial computer-only regression (bots unaffected, bypass the UI confirmation) | 1 real UX bug (reported by designer) + 1 secondary bug caught while fixing it (`fellowDeceivers` named a dead former teammate) | 2 |
+| Deceiver-majority win required strict outnumbering, not equality (real bug, reported by designer) | 6 direct engine-level checks (1v1 through 3v2) + 1 full production-path walkthrough (continueAfterElimination + real render()'s lazy startRound + screenshot + tap-through) + 5 direct Final Circle 2v2-outcome checks (banish-a-Deceiver, banish-a-Loyal, tied vote, unanimous End Game, Final Two sanity) + 6-trial fc_regression.js re-run + Recruit-or-Die majority/payout re-check | 1 (the exact bug reported: an 8-player 2v2 ending skipped the Final Circle and its Final Banishment entirely) | 1 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
