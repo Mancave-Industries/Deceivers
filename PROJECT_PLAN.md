@@ -838,20 +838,24 @@ before the clock runs out — the default is still the full clock, this is
 an opt-in shortcut, not a replacement for it.
 
 **Real licensed music, outside the app**: `CONFIG.spotifyPlaylistUrl` holds
-a link to a curated Spotify playlist. "Open Our Playlist In Spotify"
-appears both in Settings and on the Discuss screen — a plain `<a target=
-"_blank" rel="noopener noreferrer">`, nothing more. Tapping it hands off to
-the host's own Spotify app entirely; the game never embeds, streams,
-authenticates against, or otherwise talks to Spotify's API. This was a
-deliberate choice over an embedded player: no login requirement, no new
-third-party dependency inside the app itself, and it was the simpler of
-the two options weighed, at the cost of the two audio sources (this and the
-synthesized discussion music) not being able to duck or coordinate with
-each other — a host who wants the real playlist should probably leave the
-built-in background-music toggle off. Both appearances of the link are
-followed by a short note telling the table to play it through a connected
-speaker, not the phone itself — the phone's own speaker is about to be
-passed hand-to-hand for the rest of the game.
+a link to a curated Spotify playlist, rendered as a graphic banner
+("Listen To Our Deceitful Playlist," designer-supplied artwork, resized/
+compressed the same way as the other promo banners and saved to
+`assets/brand/listen-on-spotify.jpg`) — same design-family treatment as
+the TikTok ad and tip banners, after starting out as a plain text link.
+Appears both in Settings and on the Discuss screen, wrapped in a plain
+`<a target="_blank" rel="noopener noreferrer">`, nothing more. Tapping it
+hands off to the host's own Spotify app entirely; the game never embeds,
+streams, authenticates against, or otherwise talks to Spotify's API. This
+was a deliberate choice over an embedded player: no login requirement, no
+new third-party dependency inside the app itself, and it was the simpler
+of the two options weighed, at the cost of the two audio sources (this
+and the synthesized discussion music) not being able to duck or
+coordinate with each other — a host who wants the real playlist should
+probably leave the built-in background-music toggle off. Both appearances
+of the banner are followed by a short note telling the table to play it
+through a connected speaker, not the phone itself — the phone's own
+speaker is about to be passed hand-to-hand for the rest of the game.
 
 **Promo link, shown when a full game ends**: `CONFIG.tiktokAdUrl` holds a
 link to a promo clip, shown on the Results screen as a graphic banner

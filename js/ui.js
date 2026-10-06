@@ -382,7 +382,9 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
       </div>
       <p class="small-note">Voting begins automatically when the clock runs out.</p>
       <button class="btn btn-ghost btn-sm" data-action="begin-vote-now" style="margin-top:4px;">Everyone's Ready — Skip Ahead</button>
-      <a class="btn btn-ghost btn-sm" href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:8px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Open Our Playlist In Spotify</a>
+      <a href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:10px; border-radius:10px; overflow:hidden; line-height:0;">
+        <img src="assets/brand/listen-on-spotify.jpg" alt="Listen to our Deceitful playlist on Spotify" style="width:100%; height:auto; display:block;">
+      </a>
       <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
     </div>`;
 };
@@ -911,7 +913,9 @@ UI.settingsContent = function settingsContent(state) {
         <span>Background music during discussion</span>
       </label>
     </div>
-    <a class="btn btn-ghost btn-sm btn-block" href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:10px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Open Our Playlist In Spotify</a>
+    <a href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:10px; border-radius:10px; overflow:hidden; line-height:0;">
+      <img src="assets/brand/listen-on-spotify.jpg" alt="Listen to our Deceitful playlist on Spotify" style="width:100%; height:auto; display:block;">
+    </a>
     <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
     <a href="${CONFIG.tipUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:14px; border-radius:10px; overflow:hidden; line-height:0;">
       <img src="assets/brand/send-a-tip.jpg" alt="Send a tip to MANCAVEMAN" style="width:100%; height:auto; display:block;">

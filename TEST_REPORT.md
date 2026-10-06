@@ -2020,6 +2020,31 @@ than mid-series when they're mid-flow toward the next game.
 - Re-ran an existing recruit regression script for a quick sanity check
   (markup/config-only change, no engine logic touched) — 0 errors.
 
+## 48. Spotify link redesigned as a graphic banner, completing the promo-banner set
+
+Follow-up, designer-supplied art: upgraded the plain "Open Our Playlist
+In Spotify" ghost-style text link to a graphic banner ("Listen To Our
+Deceitful Playlist" — crowned/bearded figure, Spotify-green graffiti
+treatment, Mancave Industries stamp, same family as the TikTok and tip
+banners already shipped), resized/compressed the same way to
+`assets/brand/listen-on-spotify.jpg`. Both existing appearances (Discuss
+screen, Settings) swapped in place — same link, same `rel` attributes,
+same "play through a connected speaker" note underneath, only the visual
+treatment changed, exactly like the TikTok banner's own earlier upgrade.
+
+- **Verified both locations directly**: Settings modal and Discuss
+  screen each confirmed to render the new banner image (correct `src`),
+  both fully decoded with 0 console errors.
+- **Verified visually**: screenshots of both locations — the Discuss
+  screen shows the banner sitting cleanly below the compact "Skip Ahead"
+  button despite the size difference; the Settings modal now shows all
+  three promo banners (Spotify, tip, and — once the player opens it from
+  Results — TikTok) as a cohesive matching set.
+- **Bumped the cache-bust `?v=` version** to `202610061500` (touches
+  `js/ui.js`).
+- Re-ran an existing recruit regression script for a quick sanity check
+  (markup-only change, no logic touched) — 0 errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2070,6 +2095,7 @@ than mid-series when they're mid-flow toward the next game.
 | Stale phone cache served a pre-fix build after a real deploy (deploy-hygiene bug, caught live) | Confirmed the GitHub Pages deploy itself was current (Actions workflow run) + full page load check (script resolution, 0 console errors) + recruit regression re-check | 1 (no cache-busting on any local css/js tag -- a phone's old cached copy could silently keep running stale game logic indefinitely after a fix shipped) | 1 |
 | "Send a Tip to MANCAVEMAN" button added (designer-supplied art, dual placement) | 2-scenario Results gating re-check + Settings-modal presence check + tall-viewport Results screenshot + Settings screenshot + recruit regression re-check | 0 | 1 (feature added per designer decision) |
 | TikTok ad + tip banners flipped to end-of-full-game gating (designer decision) | Full 4-scenario gating re-check with inverted expected outcomes + tall-viewport standalone-game screenshot + recruit regression re-check | 0 | 1 (gating reversed per designer decision) |
+| Spotify link redesigned as a graphic banner (designer-supplied art) | 2-location presence + decode check (Discuss, Settings) + 2 screenshots + recruit regression re-check | 0 | 1 (visual redesign per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every
