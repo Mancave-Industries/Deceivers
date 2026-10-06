@@ -504,19 +504,37 @@ players' hands, nobody else:
    picks one living Loyal player.
 2. The phone passes *directly* to that player (no one else is involved in
    this round at all) for a private **Join Us** / **Refuse** choice.
-3. **Join Us**: that player becomes a Deceiver outright, for every future
+3. **Join Us**: before anything resolves, the recruit sees one more
+   private screen — "You Are Now A Deceiver," the role's own description,
+   and the name of their (sole, by construction — see "Trigger," above)
+   fellow living Deceiver, exactly as the original Reveal screen shows a
+   starting Deceiver their teammates. Only once they tap through does
+   `resolveRecruitmentJoin` actually flip their role, for every future
    win-condition and payout check — `payoutPrizePot` already splits by
    current role, so nothing else needs to change for them to share
    normally if the Deceivers later win. Resolves to the table as an
    ordinary Quiet Night ("no murder takes place that night") — same
    `nightResult`/`eliminationContext` shape a real Quiet Night uses, so
    the Elimination Reveal is indistinguishable from any other Quiet Night.
+   This two-step confirmation was added after the initial version jumped
+   straight from "Join Us" to the public Elimination screen with no
+   private moment in between — unclear to the recruit both that they'd
+   actually just become a Deceiver and who their new teammate was,
+   reported directly by the game's designer. (This is also the one
+   documented exception to Hidden-mode knowledge: the fellow-Deceiver
+   reveal fires regardless of the `deceiverKnowledge` setting, since a
+   successful recruitment pact is specifically what's meant to introduce
+   two Deceivers to each other in Hidden mode — see Deceiver Knowledge,
+   below.)
 4. **Refuse**: that player dies instead — not the existing Deceiver —
    resolved to the table as an ordinary Murder (same shape `resolveMurder`
    produces, so the reveal looks identical to any other Murder outcome,
    role and all). A held Shield does **not** protect against this; the
    kill is unconditional, deliberately bypassing the Shield-check logic a
-   real Murder goes through.
+   real Murder goes through. The pre-choice screen now states this cost
+   explicitly ("Refuse: you are murdered tonight instead, Shield or no
+   Shield") rather than the vaguer "Refusing has a cost" it used before —
+   found alongside the Join confirmation gap above, same report.
 
 **Staying invisible to the rest of the table**: the MAIN screen's "Begin
 Draw Phase" button is *exactly* the same button, text, and action

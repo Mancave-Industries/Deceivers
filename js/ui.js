@@ -557,7 +557,7 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
     <button class="btn btn-danger btn-block" data-action="confirm-recruit-target" ${selectedId ? '' : 'disabled'}>Confirm Choice</button>`;
 };
 
-UI.renderRecruitResponse = function renderRecruitResponse(state, tapped) {
+UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinConfirmed) {
   const player = currentQueuePlayer(state);
   if (!player) return;
 
@@ -572,15 +572,32 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped) {
     return;
   }
 
+  if (joinConfirmed) {
+    const fellows = fellowDeceivers(state, player.id);
+    const fellowText = fellows.length
+      ? `<br><br>Your fellow Deceiver${fellows.length > 1 ? 's' : ''}: <strong>${fellows.map(escapeHtml).join(', ')}</strong>`
+      : '';
+    screen('recruitResponse').innerHTML = `
+      <div class="reveal-stage">
+        ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
+        <h2 class="reveal-headline">You Are Now A Deceiver</h2>
+        ${meaningBlock(`${ROLES.DECEIVER.description}${fellowText}`)}
+        <div class="spacer"></div>
+        <button class="btn btn-confirm btn-block" data-action="confirm-recruit-join">Hide This &amp; Pass The Phone Back</button>
+      </div>`;
+    return;
+  }
+
   screen('recruitResponse').innerHTML = `
     <div class="reveal-stage">
       ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
       <h2 class="reveal-headline">A Deceiver Has Approached You</h2>
       <p class="reveal-body">In secret, one of the Deceivers offers you a place among them. Choose now — no one else will ever know this moment happened.</p>
+      ${meaningBlock('<strong>Join Us:</strong> you become a Deceiver yourself, starting tonight — hidden among the table, working to help the Deceivers win. No one dies tonight. <strong>Refuse:</strong> you are murdered tonight instead, Shield or no Shield.')}
       <div class="spacer"></div>
       <button class="btn btn-confirm btn-block" data-action="recruit-join" style="margin-bottom:10px;">Join Us</button>
       <button class="btn btn-danger btn-block" data-action="recruit-refuse">Refuse</button>
-      <p class="small-note" style="margin-top:14px;">Refusing has a cost. Hide the screen and pass the phone back once you've chosen.</p>
+      <p class="small-note" style="margin-top:14px;">Hide the screen and pass the phone back once you've chosen.</p>
     </div>`;
 };
 

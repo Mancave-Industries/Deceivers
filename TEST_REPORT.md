@@ -1727,6 +1727,67 @@ didn't get a matching write-up at the time; noting that gap here rather
 than reconstructing after the fact, since both were visually verified by
 the designer directly at the time.)
 
+## 42. Recruit or Die's "Join Us" clarified: a private confirmation of the new role, before anything resolves
+
+Reported directly by the game's designer: "it's a bit unclear to the
+invitee what this means and also whether they are now a deceiver."
+Correct — the old flow jumped straight from tapping "Join Us" to the
+public Elimination screen, with zero private moment confirming the role
+actually changed or naming the new teammate, and the pre-choice screen
+only said "Refusing has a cost" without saying what that cost was.
+
+- **The change**: the pre-choice screen (`UI.renderRecruitResponse`) now
+  states both outcomes explicitly before the recruit has to choose —
+  joining makes them a Deceiver starting immediately with no one dying
+  that night, refusing gets them murdered that night regardless of a
+  held Shield. Tapping "Join Us" no longer resolves anything — it just
+  flips a new ephemeral `uiStage.recruitJoinConfirmed` flag and
+  re-renders the *same* phase with a new private screen: "You Are Now A
+  Deceiver," the role's own description, and the name of their fellow
+  living Deceiver (reusing `fellowDeceivers`, the same helper the
+  original Reveal screen uses for starting Deceivers), with its own
+  "Hide This & Pass The Phone Back" button. Only that button's handler
+  (`confirm-recruit-join`, new) actually calls `resolveRecruitmentJoin`
+  and advances to the public Elimination screen — matching the existing
+  documented design intent (PROJECT_PLAN.md's Deceiver Knowledge section
+  already said a successful recruitment pact always introduces the two to
+  each other, in both Known and Hidden mode; the implementation just
+  hadn't caught up to that sentence until now).
+- **A second bug caught along the way**: `fellowDeceivers` didn't filter
+  by `alive`, so in the engineered test scenario below (a lone Deceiver
+  survivor of an originally 2-Deceiver team) the new recruit's
+  confirmation screen named their already-eliminated former teammate as a
+  current "fellow Deceiver" — wrong and confusing in exactly the way this
+  round is trying to fix. Filtered to living Deceivers only; a no-op at
+  the original Reveal screen's call site, since nobody's dead yet at game
+  start.
+- **Verified directly through the UI** (both Deceiver Knowledge modes):
+  engineered a lone-survivor-of-2 Deceiver precondition (one already
+  eliminated, one alive), walked Begin Draw → Recruit target pick →
+  Recruit Response → Join Us, and confirmed mid-state *before* tapping the
+  new confirm button: target's role still `loyal`, phase still
+  `recruitResponse` (i.e. nothing resolved prematurely). Confirmed the
+  screen read "Your fellow Deceiver: Ann" (singular, correctly excluding
+  the dead former teammate) in both Known and Hidden mode. Tapped the new
+  confirm button and verified: role now `deceiver`, phase `elimination`,
+  `nightResult.quiet === true` — identical outcome shape to before this
+  round, just reached one explicit tap later. 0 console errors in either
+  mode.
+- **Full existing recruit suite re-run** (6 UI-driving scripts patched to
+  add the new confirm click where they exercised the Join path; 3 others
+  needed no change since they only exercise Refuse or stay at the engine
+  level): majority-win-on-join, Prize-Pot payout-includes-recruit,
+  Hidden-mode join, plain engine-level join/elimination-reveal check,
+  Refuse (unaffected, re-run for regression only), spoken-cue leak check
+  (unaffected), Recruit-vs-Final-Circle collision, Recruit-vs-Final-Circle
+  priority, and the once-per-game cap — all 0 bugs, 0 errors.
+- **Computer-only regression**: re-ran `fc_regression_recruit.js`'s
+  10-trial suite (bots bypass the UI confirmation screen entirely and
+  call `resolveRecruitmentJoin`/`resolveRecruitmentRefusal` directly, the
+  same as every other `bot*` function — nothing about this round touches
+  that path) — 5 of 10 trials naturally triggered Recruit or Die, 0
+  errors.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1771,6 +1832,7 @@ the designer directly at the time.)
 | Multi-Deceiver Murder decision (shortlist/narrow/veto, feature change) | 6 direct engine-level scenarios + full UI click-through at 11p (checkbox gating at every step, Kill and Save outcomes) + dedicated Shield-vs-Choice-at-veto UI test (card consumption confirmed) + 1 fixed stale test script (old `actingDeceiverId` field) + 6-config computer-only regression (5p baseline, 7p/11p Known+Hidden) | 0 app bugs (1 stale test script using a removed field, fixed) | 1 (feature added per user decision) |
 | Hidden-mode Murder "friendly fire" + automatic Deceiver immunity (feature change) | 6 direct engine-level scenarios + 1 deterministic full UI click-through (target pool contents, reveal text verified word-for-word against an ordinary Shield-save) + 2×7p computer-only regression (widened pool confirmed live in random play) + full Known-mode suite re-check | 0 app bugs (2 test-script bugs fixed: missing disabled-state check, zero-margin iteration budget) | 1 (feature added per user decision) |
 | TikTok ad button redesigned as a graphic banner (designer-supplied art) | 4-scenario gating re-check (mid-series/last-game/standalone/mid-game) + image decode/load check + tall-viewport screenshot | 0 | 1 (visual redesign per designer decision) |
+| Recruit or Die "Join Us" clarity fix: private role confirmation + fellow-Deceiver reveal | 2×1 deterministic UI click-through (Known + Hidden mode, lone-survivor-of-2 precondition) + full existing recruit suite re-run (9 scripts, 6 patched for the new confirm step) + 10-trial computer-only regression (bots unaffected, bypass the UI confirmation) | 1 real UX bug (reported by designer) + 1 secondary bug caught while fixing it (`fellowDeceivers` named a dead former teammate) | 2 |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

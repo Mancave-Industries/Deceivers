@@ -26,6 +26,7 @@ const uiStage = {
   recruitTapped: false,
   recruitTarget: null,
   recruitResponseTapped: false,
+  recruitJoinConfirmed: false,
 };
 
 /* Set by an action handler right before calling render() to request a
@@ -371,7 +372,7 @@ function render() {
       UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget);
       break;
     case PHASES.RECRUIT_RESPONSE:
-      UI.renderRecruitResponse(state, uiStage.recruitResponseTapped);
+      UI.renderRecruitResponse(state, uiStage.recruitResponseTapped, uiStage.recruitJoinConfirmed);
       break;
     case PHASES.FINAL_CIRCLE_DECISION:
       UI.renderFinalCircleDecision(state, uiStage.finalCircleTapped);
@@ -679,6 +680,7 @@ const actions = {
     uiStage.recruitTapped = false;
     uiStage.recruitTarget = null;
     uiStage.recruitResponseTapped = false;
+    uiStage.recruitJoinConfirmed = false;
     // Voice announcement fires automatically from render() ->
     // maybeAnnouncePassDevice(), the same generic path every other queue
     // turn uses — see that function's comment for why this hand-off is
@@ -693,8 +695,17 @@ const actions = {
     render();
   },
   'recruit-join': () => {
+    // Doesn't resolve yet -- shows a private confirmation of the new role
+    // (and fellow Deceiver, if any) first. See 'confirm-recruit-join'
+    // below for where the actual role change happens.
+    uiStage.recruitJoinConfirmed = true;
+    Sound.play('tap');
+    render();
+  },
+  'confirm-recruit-join': () => {
     resolveRecruitmentJoin(state);
     uiStage.recruitResponseTapped = false;
+    uiStage.recruitJoinConfirmed = false;
     uiStage.eliminationRevealed = false;
     Sound.play('gather');
     persist();

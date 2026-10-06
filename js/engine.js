@@ -74,7 +74,12 @@ function startNextGameInSeries(state) {
 }
 
 function fellowDeceivers(state, playerId) {
-  return state.players.filter((p) => p.id !== playerId && p.role === ROLES.DECEIVER.id).map((p) => p.name);
+  // alive-only: at the initial Reveal this is a no-op (nobody's dead yet),
+  // but Recruit or Die's post-join confirmation also calls this, and a
+  // lone surviving Deceiver can have an already-eliminated former
+  // teammate -- naming them as a current "fellow Deceiver" would be both
+  // wrong and confusing to a player who just joined.
+  return state.players.filter((p) => p.id !== playerId && p.alive && p.role === ROLES.DECEIVER.id).map((p) => p.name);
 }
 
 function currentQueuePlayer(state) {
