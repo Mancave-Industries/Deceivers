@@ -1692,6 +1692,41 @@ teammate's ignorance.
   errors. Re-ran the full Known-mode multi-Deceiver suite (§39) afterward
   to confirm this round's changes didn't disturb it — all still clean.
 
+## 41. TikTok ad button redesigned as a graphic banner (designer-supplied art)
+
+Follow-up to the TikTok ad link shipped just before §40 as a plain
+ghost-style text button ("Nah - Boring. Make it more like a splash.").
+The designer supplied 6 candidate banner graphics (graffiti/splash-style
+artwork, bearded host character, "WATCH OUR AD" lettering, play-button
+icon); the one chosen (`MCI_Watch_Our_Ad_6.png`) best matched the app's
+existing gold/charcoal palette and carried the Mancave Industries stamp
+alongside the host character, rather than the off-palette pink/magenta
+or logo-less variants among the other five.
+
+- **The change**: the source 1064×204 PNG was resized to 780×150
+  (preserving aspect ratio, a mobile-appropriate ~2x width for a 390px
+  viewport) and re-encoded as JPEG at quality 84 — the same
+  resize/compress convention already used for the fullscreen interstitial
+  posters under `assets/brand/`. Saved as `assets/brand/watch-our-ad.jpg`
+  (47KB). `UI.renderResults`'s TikTok link now wraps this image
+  (`width:100%; height:auto`, rounded corners via `overflow:hidden` on the
+  anchor) instead of a text button; the link target, `rel`, and the exact
+  `!isLastGame` gating are unchanged from the version shipped before §40.
+- **Verified**: re-ran the existing 4-scenario gating test (mid-series
+  results shows the banner with the image fully decoded at its native
+  780×150; the series' last game's results doesn't show it; a standalone
+  single game doesn't; a mid-game Draw-phase screen never shows it) — all
+  4 correct, 0 console/network errors, image `complete: true` after
+  settling. Confirmed via screenshot at a tall viewport that the banner
+  renders cleanly between Series Standings and the Next Game button, with
+  no layout overlap.
+
+(Two commits shipped between §40 and this one — the Spotify "use a
+connected speaker" note and the original plain-text TikTok link itself —
+didn't get a matching write-up at the time; noting that gap here rather
+than reconstructing after the fact, since both were visually verified by
+the designer directly at the time.)
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -1735,6 +1770,7 @@ teammate's ignorance.
 | Deceiver count capped at absolute max 3, never 4 (feature change) | Direct formula verification against live source for all 3-16 + live-browser check across 5 player counts (10/11/13/15/16) + Join/Refuse recruit suite + playthrough re-check + 9p/11p/12p computer-only playthroughs (all resolved clean) | 0 | 1 (feature added per user decision) |
 | Multi-Deceiver Murder decision (shortlist/narrow/veto, feature change) | 6 direct engine-level scenarios + full UI click-through at 11p (checkbox gating at every step, Kill and Save outcomes) + dedicated Shield-vs-Choice-at-veto UI test (card consumption confirmed) + 1 fixed stale test script (old `actingDeceiverId` field) + 6-config computer-only regression (5p baseline, 7p/11p Known+Hidden) | 0 app bugs (1 stale test script using a removed field, fixed) | 1 (feature added per user decision) |
 | Hidden-mode Murder "friendly fire" + automatic Deceiver immunity (feature change) | 6 direct engine-level scenarios + 1 deterministic full UI click-through (target pool contents, reveal text verified word-for-word against an ordinary Shield-save) + 2×7p computer-only regression (widened pool confirmed live in random play) + full Known-mode suite re-check | 0 app bugs (2 test-script bugs fixed: missing disabled-state check, zero-margin iteration budget) | 1 (feature added per user decision) |
+| TikTok ad button redesigned as a graphic banner (designer-supplied art) | 4-scenario gating re-check (mid-series/last-game/standalone/mid-game) + image decode/load check + tall-viewport screenshot | 0 | 1 (visual redesign per designer decision) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

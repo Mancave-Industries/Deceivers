@@ -786,7 +786,9 @@ UI.renderResults = function renderResults(state) {
           </div>`).join('')}
       </div>` : ''}
     ${!isLastGame ? `
-    <a class="btn btn-ghost btn-sm btn-block" href="${CONFIG.tiktokAdUrl}" target="_blank" rel="noopener noreferrer" style="margin-top:16px; text-decoration:none;">${iconUse(ICONS.sound, 'icon-sm')} Watch Our Ad On TikTok</a>` : ''}
+    <a href="${CONFIG.tiktokAdUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:16px; border-radius:10px; overflow:hidden; line-height:0;">
+      <img src="assets/brand/watch-our-ad.jpg" alt="Watch our ad on TikTok" style="width:100%; height:auto; display:block;">
+    </a>` : ''}
     <div class="spacer"></div>
     ${isLastGame
       ? `${seriesActive ? '<p class="small-note" style="margin-bottom:10px;">The series is complete.</p>' : ''}<button class="btn btn-primary btn-block" data-action="play-again">${seriesActive ? 'New Series' : 'Play Again'}</button>`

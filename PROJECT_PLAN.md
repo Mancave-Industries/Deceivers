@@ -790,7 +790,20 @@ third-party dependency inside the app itself, and it was the simpler of
 the two options weighed, at the cost of the two audio sources (this and the
 synthesized discussion music) not being able to duck or coordinate with
 each other — a host who wants the real playlist should probably leave the
-built-in background-music toggle off.
+built-in background-music toggle off. Both appearances of the link are
+followed by a short note telling the table to play it through a connected
+speaker, not the phone itself — the phone's own speaker is about to be
+passed hand-to-hand for the rest of the game.
+
+**Promo link, between games only**: `CONFIG.tiktokAdUrl` holds a link to a
+promo clip, shown on the Results screen as a graphic banner (designer-
+supplied artwork, resized/compressed the same way as the interstitial
+posters — see "Asset processing" above — and saved to
+`assets/brand/watch-our-ad.jpg`) wrapped in the same plain link-out pattern
+as the Spotify link. It only ever appears between games in a series
+(`state.seriesGame < state.seriesLength`) — never on a standalone single
+game's results, never on the series' last game's results, and never on any
+mid-game screen, so it can't interrupt the game itself.
 
 **Closing the discussion**: when the clock hits zero, voting doesn't start
 immediately. If music is playing, it first swells to a brief, brighter
