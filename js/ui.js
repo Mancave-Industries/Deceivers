@@ -846,8 +846,11 @@ UI.hideModal = function hideModal() {
    timer, so it isn't tied to exactly how long any particular clip turns
    out to be — a future re-export at a different length just works,
    nothing here needs updating to match. */
+// Each path can carry a cache-bust query string (bumped whenever that
+// specific file is swapped) so a reskinned interstitial can't get stuck
+// showing a stale cached image on a phone the way the game logic once did.
 const INTERSTITIAL_IMAGES = {
-  reveal: 'assets/brand/interstitials/reveal.jpg',
+  reveal: 'assets/brand/interstitials/reveal.jpg?v=202610071550',
   draw: 'assets/brand/interstitials/draw.jpg',
   'night-falls': 'assets/brand/interstitials/night-falls.jpg',
   murder: 'assets/brand/interstitials/murder.jpg',
@@ -883,7 +886,7 @@ UI.showInterstitial = function showInterstitial(key, onComplete) {
     if (onComplete) onComplete();
     return;
   }
-  const isVideo = src.endsWith('.mp4');
+  const isVideo = /\.mp4(\?|$)/.test(src);
 
   let done = false;
   const finish = () => {
