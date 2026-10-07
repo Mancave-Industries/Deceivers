@@ -33,10 +33,10 @@ function initials(name) {
    before. ICONS.compass is the one of these 4 not tied to a specific
    Fortune card — it's the ceremonial "Gather Everyone"/ready-bell icon. */
 const RASTER_ICONS = {
-  [ICONS.hoodedFigure]: 'assets/brand/icons/hooded-figure.png',
-  [ICONS.shield]: 'assets/brand/icons/shield.png',
-  [ICONS.dagger]: 'assets/brand/icons/dagger.png',
-  [ICONS.compass]: 'assets/brand/icons/compass-medallion.png',
+  [ICONS.hoodedFigure]: 'assets/brand/icons/hooded-figure.png?v=202610072037',
+  [ICONS.shield]: 'assets/brand/icons/shield.png?v=202610072037',
+  [ICONS.dagger]: 'assets/brand/icons/dagger.png?v=202610072037',
+  [ICONS.compass]: 'assets/brand/icons/compass-medallion.png?v=202610072037',
 };
 
 function iconUse(id, cls) {
