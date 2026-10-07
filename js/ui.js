@@ -136,7 +136,7 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverK
       ${names.map((n, i) => `
         <div class="setup-player-block">
           <div class="setup-row">
-            <span class="seat-index">${i + 1}</span>
+            <span class="seat-index">${String(i + 1).padStart(2, '0')}</span>
             <input class="name-input" type="text" data-index="${i}" maxlength="18" placeholder="Player ${i + 1} name" value="${escapeHtml(n)}" autocomplete="off">
             ${names.length > CONFIG.minPlayers ? `<button class="remove-player-btn" data-action="remove-player" data-index="${i}" aria-label="Remove player">&times;</button>` : ''}
           </div>
@@ -152,12 +152,12 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverK
     <div class="panel" style="margin-top:6px;">
       <div class="panel-title">How Many Games?</div>
       <div style="display:flex; align-items:center; justify-content:center; gap:20px;">
-        <button class="icon-btn" data-action="dec-series-length" aria-label="Fewer games" style="border:1.5px solid var(--gold-700); font-size:22px; color:var(--gold-400); line-height:1;">−</button>
+        <button class="stepper-btn" data-action="dec-series-length" aria-label="Fewer games">−</button>
         <div style="text-align:center;">
           <div class="prize-pot-value" style="font-size:26px;">${seriesLength}</div>
           <div class="prize-pot-label">${seriesLength > 1 ? 'games in the series' : 'game'}</div>
         </div>
-        <button class="icon-btn" data-action="inc-series-length" aria-label="More games" style="border:1.5px solid var(--gold-700); font-size:22px; color:var(--gold-400); line-height:1;">+</button>
+        <button class="stepper-btn" data-action="inc-series-length" aria-label="More games">+</button>
       </div>
       ${seriesLength > 1 ? '<p class="small-note" style="margin-top:8px;">Points carry across every game — the Prize Pot is paid out to the winning side each game.</p>' : ''}
     </div>

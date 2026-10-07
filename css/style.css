@@ -15,10 +15,10 @@
      gradient base) so every existing component that already consumed
      --charcoal-*/--gold-*/--crimson-* picks up the new look with no
      other changes needed. */
-  --charcoal-950: #0a1420;
-  --charcoal-900: #12202f;
-  --charcoal-800: #1c3350;
-  --charcoal-700: #284568;
+  --charcoal-950: #080f18;
+  --charcoal-900: #0e1824;
+  --charcoal-800: #16222f;
+  --charcoal-700: #1f2f40;
 
   --gold-300: #ffecb8;
   --gold-400: #ffd166;
@@ -41,14 +41,32 @@
   --ink: #fef0d3;
   --ink-dim: #c9bda4;
 
-  /* Slightly asymmetric corners (not a uniform radius on any of these
-     three) for a hand-worn, not machine-perfect, feel — part of the
-     "crumbling relic stone" pass. --radius-pill stays a true pill: that
-     one's load-bearing tap-target shape, not decoration. */
+  /* Component language, third pass: the painted-poster house style reads
+     as cinematic/ceremonial through hard-edged, slightly chamfered cards
+     and controls, not soft rounded pills — pills now read as "generic
+     mobile web app" next to that artwork. --radius-pill survives only
+     for genuinely circular things (avatar discs, icon-only taps);
+     everything else (buttons, fields, panels, rows) clips to a shallow
+     cut-corner hexagon via --clip-chamfer/-sm instead of border-radius,
+     which also makes the border itself follow the cut corners for free
+     (clip-path clips border-box by default). --hairline is the default,
+     low-contrast edge for ordinary containers; a visible --gold-700/500
+     border is reserved for components that are themselves a significant
+     choice or state (primary CTA, selected toggle, the prize pot, a
+     modal) — see the design review that prompted this pass: almost
+     everything had the same gold ring, so nothing did. --field-bg is
+     deliberately darker/less saturated than --charcoal-800 (which still
+     reads fine as a large panel fill) — at form-field size the same
+     navy read as "bright blue input box", not "dark ceremonial ledger". */
   --radius-lg: 18px 22px 19px 23px;
   --radius-md: 12px 16px 13px 15px;
   --radius-sm: 7px 11px 8px 10px;
   --radius-pill: 999px;
+  --radius-tight: 4px;
+  --clip-chamfer: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  --clip-chamfer-sm: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  --hairline: rgba(254,240,211,0.1);
+  --field-bg: #0a141f;
 
   --shadow-deep: 0 18px 40px rgba(0,0,0,0.55);
   --shadow-soft: 0 8px 20px rgba(0,0,0,0.4);
@@ -173,6 +191,27 @@ body {
     linear-gradient(var(--gold-500), var(--gold-500)) bottom right / 3px 24px no-repeat;
   opacity: 0.55;
   filter: url(#crumble);
+}
+
+/* Restrained atmospheric layer, cropped straight from the approved house-
+   style artwork (moon + castle skyline) rather than invented fresh —
+   sits behind every screen at very low opacity, anchored top-right so it
+   never sits under the center-column content any screen actually uses.
+   This is the "it must never compete with the controls" requirement: an
+   atmosphere, not a background image. */
+.app-skyline {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--edge-buffer-top));
+  right: -10%;
+  width: 78%;
+  aspect-ratio: 527 / 568;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../assets/brand/night-skyline.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
 
 /* A faint, always-on film-grain pass over the whole app — pushes the
@@ -345,15 +384,16 @@ body {
 
 .screen-title-row {
   font-family: var(--font-display);
-  font-size: 23px;
-  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: clamp(26px, 7.5vw, 31px);
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--gold-400);
   text-align: center;
   margin-bottom: 4px;
 }
 .screen-subtitle {
-  font-size: 14.5px;
+  font-size: 14px;
   color: var(--ink-dim);
   text-align: center;
   margin-bottom: 10px;
@@ -363,12 +403,13 @@ body {
 /* ---------- Buttons ---------- */
 .btn {
   appearance: none;
-  border: 1.5px solid var(--gold-900);
-  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
   padding: 14px 22px;
-  font-size: 17px;
+  font-size: 16.5px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   transition: transform var(--dur-fast) ease, filter var(--dur-fast) ease;
@@ -376,36 +417,42 @@ body {
 .btn:active { transform: scale(0.97); filter: brightness(0.95); }
 .btn:disabled { opacity: 0.4; pointer-events: none; }
 .btn-block { display: block; width: 100%; }
-.btn-sm { padding: 9px 16px; font-size: 14.5px; letter-spacing: 0.8px; }
+.btn-sm { padding: 9px 16px; font-size: 14px; letter-spacing: 0.6px; }
 
+/* Primary/confirm are the significant choices on their screen — they keep
+   a real gold treatment. Danger is the one place red belongs on a button
+   (a destructive/Deceiver-side action). Ghost is secondary/low-stakes by
+   design, so it stays understated rather than matching primary's weight. */
 .btn-primary {
-  color: var(--gold-900);
+  color: var(--charcoal-950);
   background: linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
-  box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.35);
+  border-color: var(--gold-900);
+  box-shadow: var(--shadow-soft);
 }
 .btn-danger {
   color: var(--gold-300);
-  background: linear-gradient(180deg, var(--crimson-500), var(--crimson-900) 85%);
-  border-color: var(--gold-500);
+  background: linear-gradient(180deg, var(--crimson-700), var(--crimson-900) 85%);
+  border-color: var(--crimson-500);
   box-shadow: var(--shadow-soft);
 }
 .btn-confirm {
-  color: var(--gold-900);
+  color: var(--charcoal-950);
   background: linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
   border-color: var(--gold-900);
-  box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: var(--shadow-soft);
 }
 .btn-ghost {
   color: var(--ink-dim);
-  background: transparent;
-  border-color: rgba(253,183,20,0.4);
+  background: var(--field-bg);
+  border-color: var(--hairline);
 }
 
 /* ---------- Generic panel ---------- */
 .panel {
   background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
-  border: 1.4px solid var(--gold-700);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
   padding: 12px 16px;
 }
 .panel-title {
@@ -453,15 +500,21 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--charcoal-800);
-  border: 1px solid rgba(253,183,20,0.3);
-  border-radius: var(--radius-sm);
+  background: var(--field-bg);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.5);
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
   padding: 6px 10px;
+  transition: border-color var(--dur-fast) ease;
 }
+.setup-row:focus-within { border-color: var(--gold-500); }
 .setup-row .seat-index {
   font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.5px;
   color: var(--gold-500);
-  width: 20px;
+  width: 22px;
   text-align: center;
   flex-shrink: 0;
 }
@@ -478,25 +531,33 @@ body {
 .name-input::placeholder { color: var(--ink-dim); }
 .setup-player-block { display: flex; flex-direction: column; gap: 6px; }
 .seat-mode-row { display: flex; gap: 6px; padding-left: 30px; }
+/* "Choice plate" toggle, shared by Human/Computer and Known/Hidden: the
+   unselected state is a flat, barely-there plate (not another gold-ringed
+   component competing for attention); the selected state is a solid gold
+   fill with dark text -- unambiguous at a glance without a glow/neon
+   treatment. */
 .seat-mode-btn {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 5px 8px;
-  border: 1px solid rgba(253,183,20,0.25);
-  border-radius: var(--radius-sm);
-  background: transparent;
+  padding: 6px 8px;
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
+  background: var(--field-bg);
   color: var(--ink-dim);
-  font-size: 12.5px;
-  letter-spacing: 0.5px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
+  transition: background var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 .seat-mode-btn.active {
-  border-color: var(--gold-500);
-  color: var(--gold-300);
-  background: rgba(253,183,20,0.12);
+  border-color: var(--gold-900);
+  color: var(--charcoal-950);
+  background: var(--gold-500);
+  font-weight: 700;
 }
 .remove-player-btn {
   background: none;
@@ -514,21 +575,37 @@ body {
   gap: 8px;
   width: 100%;
   padding: 10px;
-  border: 1.5px dashed var(--gold-700);
-  border-radius: var(--radius-sm);
+  border: 1.5px dashed var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
   background: transparent;
   color: var(--gold-400);
-  font-size: 15.5px;
+  font-size: 14.5px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 .setup-hint {
-  font-size: 13px;
+  font-size: 12.5px;
+  letter-spacing: 0.3px;
   color: var(--ink-dim);
   text-align: center;
   margin-bottom: 6px;
 }
+.stepper-btn {
+  appearance: none;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
+  background: var(--field-bg);
+  color: var(--gold-400);
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.stepper-btn:active { background: var(--charcoal-800); }
 
 /* ---------- Player list (main screen) ---------- */
 .player-list { display: flex; flex-direction: column; gap: 8px; }
@@ -537,10 +614,11 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(90deg, var(--midnight-700), var(--charcoal-900));
-  border: 1px solid var(--gold-700);
-  border-left: 4px solid var(--gold-500);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
+  background: linear-gradient(90deg, var(--charcoal-900), var(--charcoal-950));
+  border: 1px solid var(--hairline);
+  border-left: 3px solid var(--gold-500);
   position: relative;
 }
 .player-row.eliminated {
@@ -562,7 +640,7 @@ body {
   color: var(--gold-300);
   flex-shrink: 0;
 }
-.player-name { flex: 1; font-size: 16.5px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.player-name { flex: 1; font-size: 17px; font-weight: 700; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .player-meta { font-size: 12px; color: var(--ink-dim); }
 .player-badge { width: 18px; height: 18px; color: var(--crimson-500); flex-shrink: 0; }
 
@@ -574,7 +652,8 @@ body {
   gap: 12px;
   background: linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
   border: 2px solid var(--gold-500);
-  border-radius: var(--radius-md);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
   padding: 14px;
   margin-bottom: 14px;
 }
@@ -670,9 +749,10 @@ body {
   align-items: center;
   gap: 6px;
   padding: 14px 8px;
-  border-radius: var(--radius-md);
-  background: var(--charcoal-800);
-  border: 1.5px solid var(--gold-700);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
+  background: var(--charcoal-900);
+  border: 1px solid var(--hairline);
   color: var(--ink);
   font-size: 15px;
   text-align: center;
@@ -759,7 +839,8 @@ body {
   text-align: center;
   padding: 18px;
   margin-bottom: 16px;
-  border-radius: var(--radius-md);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
   border: 2px solid var(--gold-400);
   background: linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
 }
@@ -776,9 +857,10 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  background: var(--charcoal-800);
-  border: 1px solid var(--gold-700);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer-sm);
+  background: var(--charcoal-900);
+  border: 1px solid var(--hairline);
 }
 .role-reveal-row.deceiver { border-left: 4px solid var(--crimson-500); }
 .role-reveal-row.loyal { border-left: 4px solid var(--midnight-500); }
@@ -832,7 +914,8 @@ body {
   overflow-y: auto;
   background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
   border: 2px solid var(--gold-500);
-  border-radius: var(--radius-lg);
+  border-radius: 0;
+  clip-path: var(--clip-chamfer);
   padding: 22px 20px;
   position: relative;
 }
