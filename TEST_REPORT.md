@@ -2201,6 +2201,89 @@ integrating anything, rather than wiring the whole pack in blind.
   — 0 errors. The 12-poster gap remains open pending the second
   ChatGPT pass.
 
+## 53. Second art pack reviewed clean; direction shifted to animated interstitials
+
+A duplicate upload (byte-identical to §52's batch, confirmed via
+`diff -rq`) was caught and flagged before any wasted integration work;
+the designer then sent a genuinely new "Final" pack. Reviewed it the
+same way as §52, not assumed clean: programmatically scanned all 11
+interstitials for the cross-contamination seam pattern from the first
+batch (comparing narrow pixel strips across every x-column, looking for
+a sustained color jump characteristic of a wrong-neighbor bleed) — none
+found, confirmed by direct visual review of several samples. `final-
+circle.jpg` now correctly shows exactly four hooded figures (the §52
+content error is fixed). The pack settled on its own consistent style
+(hooded sorcerer figure, castle-and-moon motif, gold/red palette, Mancave
+Industries stamp present throughout) rather than the Mancaveman/graffiti
+treatment originally specified — not blocking, since it's internally
+cohesive and on-brand via the stamp, and the designer moved the
+conversation straight to animating these rather than iterating the
+stills further.
+
+## 54. Interstitial video files inspected: valid format, two real constraints found
+
+10 MP4 clips arrived (animated versions of 10 of the 11 interstitials,
+missing `reveal`). No `ffmpeg`/`ffprobe` available in this environment
+to inspect them the normal way, and a first attempt to check for one via
+`apt list` was stopped by the user mid-command — correctly: installing
+packages wasn't needed. Used two tool-free approaches instead:
+
+- **Format/playability**: loading each file in a real `<video>` element
+  (via headless Chromium, the same engine real browsers use) returned
+  `error code 4` (format not supported) for all 10 — but a direct
+  `canPlayType()` check on that same browser build showed it has *no*
+  H.264 support at all (only open codecs: VP8/VP9/AV1), confirming this
+  was the sandboxed test browser's own stripped codec licensing, not a
+  problem with the files. Grepped the raw bytes for MP4 codec FourCCs
+  instead and found `avc1` (H.264) + `mp4a` (AAC) consistently across
+  all 10 — the universal, maximally-compatible web video format, correct
+  and expected to work on real devices (iOS Safari, Android Chrome, etc).
+- **Duration/size**: wrote a minimal pure-Python MP4 box parser (reads
+  the `moov`/`mvhd` atoms directly, no library) to confirm all 10 clips
+  run exactly 6.04s. Combined with `os.path.getsize`: 2.4-3.8MB per
+  clip, ~31MB for the set — flagged as roughly 60-100x heavier than the
+  JPEGs they'd replace, against this app's offline/instant-load design
+  goal.
+- Reported both findings plainly and asked the designer how to handle
+  each rather than deciding unilaterally: duration was resolved as
+  "extend the interstitial display to match" (~6s, not the previous
+  ~1.7s); size was resolved as "re-export smaller from the source tool"
+  rather than ship as-is or have this environment attempt compression it
+  has no tooling for.
+
+## 55. Video-capable interstitial mechanism built and tested (files still pending)
+
+Built ahead of the smaller re-export landing, so integration is a pure
+asset drop-in once it arrives — per the designer's own call on both
+open questions from §54.
+
+- **The change**: `INTERSTITIAL_IMAGES` entries can now be either `.jpg`
+  or `.mp4`, dispatched per-key by extension. A still keeps the existing
+  fixed-timer dismissal; a video is dismissed on its own `ended` event
+  (not a hardcoded duration, so a future re-export at a different length
+  needs no code change), with an `error` listener for an immediate
+  dismiss on a decode/load failure and a 12s fallback timer as the last
+  resort against ever freezing on a blank overlay. `index.html` now
+  carries both an `<img>` and a `<video muted playsinline>` inside the
+  same overlay, toggled via the existing `.hidden` utility class.
+- **Verified without being able to actually play the real H.264 files**
+  (this sandbox's browser can't decode them, per §54): temporarily
+  copied one real clip in as a `.mp4` test key (never committed — cleaned
+  up immediately after, confirmed via `git status`) and drove it through
+  the *actual* decode-failure path the sandbox produces, confirming the
+  full control flow completes correctly end to end — overlay/video
+  element visibility toggling mid-flight, the `error` listener firing a
+  fast ~70-100ms dismissal rather than silently waiting out the full
+  12s fallback, and `onComplete` firing correctly. Confirmed the
+  existing still-image path (`murder.jpg`) is completely unaffected,
+  same exact ~1700ms timing as before. Re-ran an existing recruit
+  regression script — 0 errors throughout.
+- **Not done this round**: the actual video files aren't in the repo —
+  the 10 delivered clips are ~31MB combined, well outside what should be
+  committed before the designer's smaller re-export arrives. Once they
+  do, dropping them into `assets/brand/interstitials/` at the existing
+  filenames is the entire remaining step.
+
 ## Summary
 
 | Layer | Trials | Bugs found | Bugs fixed |
@@ -2256,6 +2339,9 @@ integrating anything, rather than wiring the whole pack in blind.
 | §49's wordmark duplicated "The Deceivers" on Title and Setup (real bug, reported by designer) | 4-phase header-label text check (Title, Setup, mid-game Main, Results) + Setup screenshot + recruit regression re-check | 1 (the exact bug reported: Title/Setup showed "The Deceivers" twice) | 1 |
 | Graffiti/street-art reskin: whole-app chrome recolored to match the promo banners (feature change, designer decision) | Palette sampled from source art (Python/Pillow) + ~80 token call sites verified via cascade + ~13 hardcoded rgba literals remapped + ~200 inline-SVG hex fills remapped via script + 8-screen visual verification + recruit regression re-check | 0 app bugs (1 open gap flagged: 16 raster brand assets not yet reskinned) | 1 (feature added per designer decision) |
 | First ChatGPT art batch reviewed: 4 icons shipped, 12 posters sent back off-brief | 5 of 12 posters sampled directly against the brief + all 4 icons verified directly + 2 real-size in-app render checks (Setup seat buttons, Hand screen cards) + recruit regression re-check | 1 content error caught in the unshipped batch (`final-circle.jpg` showed more than 4 figures) -- never reached production | 1 (icons shipped; posters sent back with a revised brief, not yet re-delivered) |
+| Second art pack reviewed: duplicate upload caught, genuine new pack confirmed clean | `diff -rq` byte comparison against the first pack (caught an exact duplicate before any wasted work) + programmatic edge-seam scan across all 11 interstitials + direct visual re-check of several samples | 0 (the §52 figure-count error is fixed; no bleed/contamination found) | -- |
+| Interstitial video files inspected: format/codec confirmed, duration + size constraints found | `<video>` element load test across all 10 clips (headless Chromium) + `canPlayType()` isolation check (ruled out a false "unsupported" reading) + raw-byte codec-marker grep + a from-scratch pure-Python MP4 `moov`/`mvhd` box parser for duration | 0 app bugs; 2 real constraints surfaced and resolved with the designer (6.04s clips vs. a 1.7s display window; ~31MB total vs. the JPEGs' ~385KB) | -- (both resolved as explicit decisions, not code fixes) |
+| Video-capable interstitial mechanism built and tested (asset integration still pending) | Temporary single-clip integration test (copied in, never committed, cleaned up after) exercising the real decode-failure control-flow path end to end + still-image-path regression (`murder.jpg` timing unchanged) + recruit regression re-check | 0 | 1 (feature built ahead of asset delivery, per designer's resolved decisions above) |
 
 The game can be played start-to-finish — Title through Results, and back to
 Title via Play Again or Next Game — with no console errors, for every

@@ -383,6 +383,36 @@ duplicating show/hide logic at each call site.
   branching into either an ordinary Draw Phase or a secret Recruit or Die
   round — see "Recruit or Die," where this matters for staying invisible.
 
+**Video support (follow-up round)**: `INTERSTITIAL_IMAGES` can now point
+a key at either a still (`.jpg`) or a short clip (`.mp4`) — decided per
+key by file extension alone, no separate flag to keep in sync, so
+upgrading one moment from a still to a clip (or back) is a one-line
+change. A still is still shown for the fixed `INTERSTITIAL_DURATION_MS`
+(1.7s); a clip is shown for its own actual length, dismissed on the
+`<video>` element's native `ended` event rather than a hardcoded timer —
+deliberately not pinned to any particular clip's length, so a future
+re-export at a different duration just works with no code change. An
+`error` listener dismisses immediately too (a decode/load failure is as
+final as `ended`, no reason to make the table wait out the full fallback
+for it), and a generous 12s fallback timer is the last resort if neither
+event ever fires, so a bad clip still can't freeze the game on a blank
+fullscreen overlay. `index.html` carries both an `<img>` and a `<video
+muted playsinline>` in the same overlay now, toggled via the existing
+`.hidden` utility class rather than swapped in and out of the DOM.
+
+Driven by a designer request to animate the interstitials — the actual
+10 generated video clips (6.04s each, ~2.4-3.8MB apiece, ~31MB total)
+weren't wired in during this round: at that size they're roughly
+60-100x heavier than the JPEGs they'd replace, which cuts directly
+against this app's "loads instantly, works offline, zero network
+weight" design goal (see "Architecture," above). The designer opted to
+re-export smaller from the source video tool rather than ship them as-is
+or have this app attempt compression without any video tooling available
+in its environment. The code above is the complete, tested mechanism
+ready to receive those — dropping smaller `.mp4` files into
+`assets/brand/interstitials/` at the existing filenames is the entire
+remaining integration step once they arrive.
+
 **The raster icon family**: `iconUse(id, cls)` (`ui.js`) now checks a
 small `RASTER_ICONS` map before falling back to the original inline-SVG
 sprite — if `id` is one of the 4 supplied icons (Hooded Figure

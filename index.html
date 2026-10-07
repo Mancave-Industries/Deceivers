@@ -21,7 +21,7 @@
      css/style.css or any js/*.js file, so returning
      players' phones are forced to re-fetch instead of silently running
      stale game logic. Harmless no-op on a brand new load either way. -->
-<link rel="stylesheet" href="css/style.css?v=202610061541">
+<link rel="stylesheet" href="css/style.css?v=202610070912">
 </head>
 <body>
 <div class="app" id="app">
@@ -613,18 +613,19 @@
 
   <div class="interstitial-overlay hidden" id="interstitialOverlay">
     <img id="interstitialImg" alt="" draggable="false">
+    <video id="interstitialVideo" class="hidden" muted playsinline webkit-playsinline="true" disablepictureinpicture></video>
   </div>
 
   <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
 </div>
 
-<script src="js/data.js?v=202610061541"></script>
-<script src="js/state.js?v=202610061541"></script>
-<script src="js/engine.js?v=202610061541"></script>
-<script src="js/sound.js?v=202610061541"></script>
-<script src="js/analytics.js?v=202610061541"></script>
-<script src="js/ui.js?v=202610061541"></script>
-<script src="js/main.js?v=202610061541"></script>
+<script src="js/data.js?v=202610070912"></script>
+<script src="js/state.js?v=202610070912"></script>
+<script src="js/engine.js?v=202610070912"></script>
+<script src="js/sound.js?v=202610070912"></script>
+<script src="js/analytics.js?v=202610070912"></script>
+<script src="js/ui.js?v=202610070912"></script>
+<script src="js/main.js?v=202610070912"></script>
 <script src="/Gameshed/nav.js" defer></script>
 </body>
 </html>

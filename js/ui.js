@@ -836,7 +836,16 @@ UI.hideModal = function hideModal() {
    full list of trigger points. Deliberately NOT used for Recruit or Die
    (a strictly private, two-player event with no public announcement of
    any kind) or for a Quiet Night (no asset exists for it; an uneventful
-   night is meant to read as uneventful, not get its own title card). */
+   night is meant to read as uneventful, not get its own title card).
+
+   Each entry can point at either a still (.jpg) or a short looping clip
+   (.mp4) — decided per-key by the file extension, no separate "is this a
+   video" flag to keep in sync. A still is shown for a fixed
+   INTERSTITIAL_DURATION_MS; a video is shown for its own real duration
+   (dismissed on the browser's 'ended' event) rather than a hardcoded
+   timer, so it isn't tied to exactly how long any particular clip turns
+   out to be — a future re-export at a different length just works,
+   nothing here needs updating to match. */
 const INTERSTITIAL_IMAGES = {
   reveal: 'assets/brand/interstitials/reveal.jpg',
   draw: 'assets/brand/interstitials/draw.jpg',
@@ -851,23 +860,30 @@ const INTERSTITIAL_IMAGES = {
   'deceiver-win': 'assets/brand/interstitials/deceiver-win.jpg',
 };
 const INTERSTITIAL_DURATION_MS = 1700;
+// Safety net only, not the normal path: if a video somehow never fires
+// 'ended' (autoplay blocked, a corrupt file, a very long future export),
+// this guarantees the game still moves on rather than ever getting stuck
+// on a frozen fullscreen overlay.
+const INTERSTITIAL_VIDEO_FALLBACK_MS = 12000;
 let interstitialDismissTimer = null;
 
-/* Shows the named interstitial, then calls onComplete either once the
-   timer elapses or the moment it's tapped (whichever comes first) — a
-   brief cinematic beat, never something the game waits long on. If the
-   key is unrecognized, resolves immediately with no visual at all rather
-   than risk ever getting stuck on a blank overlay. */
+/* Shows the named interstitial, then calls onComplete once it's done --
+   for a still, once the timer elapses or the moment it's tapped
+   (whichever comes first); for a video, once it finishes playing (or the
+   fallback timer above, or a tap) -- a cinematic beat the game waits on,
+   but never indefinitely. If the key is unrecognized, resolves
+   immediately with no visual at all rather than risk ever getting stuck
+   on a blank overlay. */
 UI.showInterstitial = function showInterstitial(key, onComplete) {
   const src = INTERSTITIAL_IMAGES[key];
   const overlay = document.getElementById('interstitialOverlay');
   const img = document.getElementById('interstitialImg');
-  if (!src || !overlay || !img) {
+  const video = document.getElementById('interstitialVideo');
+  if (!src || !overlay || !img || !video) {
     if (onComplete) onComplete();
     return;
   }
-  img.src = src;
-  overlay.classList.remove('hidden');
+  const isVideo = src.endsWith('.mp4');
 
   let done = false;
   const finish = () => {
@@ -875,11 +891,32 @@ UI.showInterstitial = function showInterstitial(key, onComplete) {
     done = true;
     clearTimeout(interstitialDismissTimer);
     overlay.removeEventListener('click', finish);
+    video.removeEventListener('ended', finish);
+    video.removeEventListener('error', finish);
+    video.pause();
     overlay.classList.add('hidden');
     if (onComplete) onComplete();
   };
   overlay.addEventListener('click', finish, { once: true });
-  interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_DURATION_MS);
+
+  if (isVideo) {
+    img.classList.add('hidden');
+    video.classList.remove('hidden');
+    video.addEventListener('ended', finish, { once: true });
+    // A decode/load failure is just as final as 'ended' -- dismiss right
+    // away rather than silently waiting out the full fallback timer below.
+    video.addEventListener('error', finish, { once: true });
+    video.src = src;
+    video.currentTime = 0;
+    video.play().catch(() => {}); // autoplay can be blocked; the fallback timer below still dismisses it either way
+    interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_VIDEO_FALLBACK_MS);
+  } else {
+    video.classList.add('hidden');
+    img.classList.remove('hidden');
+    img.src = src;
+    interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_DURATION_MS);
+  }
+  overlay.classList.remove('hidden');
 };
 
 UI.helpContent = function helpContent() {
