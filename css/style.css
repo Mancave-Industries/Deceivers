@@ -378,20 +378,35 @@ body {
 .btn-block { display: block; width: 100%; }
 .btn-sm { padding: 9px 16px; font-size: 14.5px; letter-spacing: 0.8px; }
 
+/* Buttons are small, deliberate surfaces sitting right next to the
+   hand-stencilled poster art (title/interstitials), so they get the same
+   grain.png texture already used for the app-wide noise pass, layered over
+   each button's own color gradient — otherwise a flat vector gradient next
+   to a gritty spray-paint poster reads as two different apps glued
+   together. */
 .btn-primary {
   color: var(--gold-900);
-  background: linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.35);
 }
 .btn-danger {
   color: var(--gold-300);
-  background: linear-gradient(180deg, var(--crimson-500), var(--crimson-900) 85%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--crimson-500), var(--crimson-900) 85%);
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border-color: var(--gold-500);
   box-shadow: var(--shadow-soft);
 }
 .btn-confirm {
   color: var(--gold-900);
-  background: linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border-color: var(--gold-900);
   box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.5);
 }
@@ -403,7 +418,10 @@ body {
 
 /* ---------- Generic panel ---------- */
 .panel {
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 1.4px solid var(--gold-700);
   border-radius: var(--radius-md);
   padding: 12px 16px;
@@ -538,7 +556,10 @@ body {
   gap: 10px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(90deg, var(--midnight-700), var(--charcoal-900));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(90deg, var(--midnight-700), var(--charcoal-900));
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 1px solid var(--gold-700);
   border-left: 4px solid var(--gold-500);
   position: relative;
@@ -830,7 +851,10 @@ body {
   max-width: 340px;
   max-height: 80vh;
   overflow-y: auto;
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background-repeat: repeat, no-repeat;
+  background-size: 48px 48px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 2px solid var(--gold-500);
   border-radius: var(--radius-lg);
   padding: 22px 20px;
