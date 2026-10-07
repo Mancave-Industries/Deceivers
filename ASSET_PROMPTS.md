@@ -1,30 +1,34 @@
 # Art Prompts — Graffiti/Street-Art Reskin
 
-Ready-to-paste prompts for ChatGPT (image generation) to produce the 16
+Ready-to-paste prompts for ChatGPT (image generation) to produce the
 raster assets still in the old muted-gold style after the CSS/SVG reskin.
 These are the images the reskin *couldn't* touch — baked JPEGs/PNGs, not
 CSS tokens.
 
-**v2 — what changed from the first pass**: the first batch
-("Cleaner Tones") came back well-drawn but drifted off-brand — no
-Mancaveman figure, no Mancave Industries stamp, no graffiti-stencil/drip/
-torn-paper texture, and `final-circle.jpg` showed more than the 4 figures
-it should (that moment always fires at exactly 4 living players). The
-**4 icons matched the brief and don't need regenerating** — only Part 1
-(title poster) and Part 2 (11 interstitials) below need a new pass. One
-thing from the first batch is worth *keeping*: each image leaning into
-its own accent color rather than forcing yellow everywhere (murder red,
-draw's cooler tones, etc.) read well and is now built into the brief
-below as a deliberate feature, not a deviation.
+**v3 — a third "Send A Tip" batch came back, and this time it landed.**
+Several of those variants (torn-paper and riveted-metal-sign ones
+especially) are dead-on the brief — Mancaveman, crown, stamp, drip/
+stencil texture, vivid yellow/black. A second, unrelated batch of
+gothic/hooded-sorcerer posters was also sent over, but that's a rejected
+direction from earlier and is **not** a style reference for anything
+below — ignore it. Nothing else changed: Part 1 (title poster) and
+Part 2 (11 interstitials) are still the only raster gap, the 4 icons in
+Part 3 are still done, and Part 4 (button texture) below is a new,
+optional add-on, not a blocker.
 
-**How to use this**: open a new ChatGPT conversation, attach 2–3 of the
-banners you already have (the "Send A Tip" and "Listen To Our Deceitful
-Playlist" ones are good references — same artist/style, already approved)
-as reference images alongside the first prompt, then generate the rest of
-the prompts in the *same* conversation thread so later images stay
-consistent with earlier ones. Generating all 16 as totally separate,
-fresh chats tends to drift in style — which is most of what went wrong
-last time.
+**How to use this**: open a new ChatGPT conversation and attach these as
+reference images before the first prompt:
+- the **"Send A Tip" torn-paper or riveted-metal-sign variants** from the
+  latest batch (the ones with the ripped-edge/tape-corner look, or the
+  stamped-steel-sign look) — these are the closest thing to "correct"
+  you've gotten back so far
+- the **Mancaveman portrait medallion** close-up, if you still have it —
+  useful as a clean reference for his face/beard/crown so he stays
+  consistent across 12 more images
+
+Then generate every prompt below in that *same* thread so later images
+stay consistent with earlier ones. Generating them as separate fresh
+chats is most of what went wrong on both earlier attempts.
 
 Once you have images back, send them to me (or drop them in
 `assets/brand/` / `assets/brand/interstitials/` yourself) and I'll
@@ -202,6 +206,27 @@ in one place.
 3. `dagger.png` — dagger/knife silhouette, blade up (vote-weight card).
 4. `compass-medallion.png` — compass-star/sunburst medallion (ceremonial
    "gather everyone" moments).
+
+---
+
+## Part 4 — button/panel texture (1 image, optional)
+
+**File**: `assets/brand/btn-texture.png` · **Size**: 128×128px, tileable,
+semi-transparent (mostly transparent with faint grey/black speckle and
+a few drip marks — not a picture, a texture). Right now buttons and
+panels are clean flat CSS gradients in the brand colors — on-palette but
+smooth, not hand-stencilled like the banners. This one small tileable
+texture would get laid over every button/panel via a soft blend mode, the
+same trick already used for the always-on `grain.png` app-wide texture,
+so one file upgrades every button at once with no layout risk. **Skip
+this one if you'd rather keep buttons clean/flat** — it's a nice-to-have,
+not part of the core gap.
+
+> Seamless tileable texture, 128x128px, mostly transparent PNG. Faint
+> grey/black spray speckle and a couple of thin paint-drip streaks,
+> subtle enough to read as surface grain rather than a picture — no
+> text, no logo, no strong shapes, just rough hand-stencilled texture
+> that tiles edge-to-edge with no visible seam.
 
 ---
 
