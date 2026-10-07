@@ -4,31 +4,31 @@
    ========================================================================== */
 
 :root {
-  /* Reskinned to match the Mancave Industries graffiti/street-art key
-     art (designer-supplied banners): a flat near-black backdrop, a
-     vivid stencil-spray yellow in place of the old muted gold, and a
-     vivid stencil-spray red in place of the old muted crimson. Values
-     sampled directly from the supplied artwork (yellow ~#fedd04, red
-     ~#da1115) rather than guessed, then extended into matching
-     light/dark shades preserving each token's original role (300/400 =
-     light, reads as text-on-dark or a bright gradient top; 900 = dark,
-     reads as text-on-bright or a dark gradient base) so every existing
-     component that already consumed --gold-*/--crimson-* picks up the
-     new look with no other changes needed. */
-  --charcoal-950: #060606;
-  --charcoal-900: #121212;
-  --charcoal-800: #1c1c1c;
-  --charcoal-700: #272727;
+  /* Reskinned a second time to match the "house style" key art: painted
+     moonlit-castle posters (hooded figure, gothic castle, full moon),
+     not the earlier graffiti/stencil direction. Values sampled directly
+     from the approved reference poster (night sky ~#1c3b53, crown gold
+     ~#fdb714, danger red ~#ee141b, cream type ~#fef0d3) rather than
+     guessed, extended into matching light/dark shades preserving each
+     token's original role (300/400 = light, reads as text-on-dark or a
+     bright gradient top; 900 = dark, reads as text-on-bright or a dark
+     gradient base) so every existing component that already consumed
+     --charcoal-*/--gold-*/--crimson-* picks up the new look with no
+     other changes needed. */
+  --charcoal-950: #0a1420;
+  --charcoal-900: #12202f;
+  --charcoal-800: #1c3350;
+  --charcoal-700: #284568;
 
-  --gold-300: #fff3b8;
-  --gold-400: #ffe866;
-  --gold-500: #ffd900;
-  --gold-700: #a88600;
-  --gold-900: #3d3000;
+  --gold-300: #ffecb8;
+  --gold-400: #ffd166;
+  --gold-500: #fdb714;
+  --gold-700: #b8830a;
+  --gold-900: #4a3205;
 
-  --crimson-900: #330405;
-  --crimson-700: #7a0a0e;
-  --crimson-500: #d91216;
+  --crimson-900: #3a0306;
+  --crimson-700: #8c0b10;
+  --crimson-500: #ee141b;
 
   --midnight-900: #141c30;
   --midnight-700: #1f2a44;
@@ -38,8 +38,8 @@
   --parchment-300: #d8c9a3;
   --parchment-muted: #a9895a;
 
-  --ink: #f3ecd9;
-  --ink-dim: #c9c0ac;
+  --ink: #fef0d3;
+  --ink-dim: #c9bda4;
 
   /* Slightly asymmetric corners (not a uniform radius on any of these
      three) for a hand-worn, not machine-perfect, feel — part of the
@@ -110,8 +110,8 @@ input {
 /* Background texture: subtle vignette + faint radial noise, CSS only */
 body {
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,217,0,0.08), transparent 55%),
-    radial-gradient(ellipse at 50% 110%, rgba(217,18,22,0.10), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(253,183,20,0.08), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(238,20,27,0.10), transparent 60%),
     var(--charcoal-950);
 }
 
@@ -142,7 +142,7 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('../assets/brand/mancave-gameshed-badge.jpg');
+  background-image: url('../assets/brand/mancave-gameshed-badge.jpg?v=202610072020');
   background-repeat: no-repeat;
   background-position: center 56%;
   background-size: 60%;
@@ -161,7 +161,7 @@ body {
   inset: 10px;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(255,217,0,0.08);
+  border: 1px solid rgba(253,183,20,0.08);
   background:
     linear-gradient(var(--gold-500), var(--gold-500)) top left / 24px 3px no-repeat,
     linear-gradient(var(--gold-500), var(--gold-500)) top left / 3px 24px no-repeat,
@@ -216,7 +216,7 @@ body {
   grid-template-columns: 44px 1fr 44px 44px;
   align-items: end;
   padding: var(--edge-buffer-top) 6px 8px;
-  border-bottom: 1px solid rgba(255,217,0,0.25);
+  border-bottom: 1px solid rgba(253,183,20,0.25);
   background: linear-gradient(180deg, rgba(18,18,18,0.9), rgba(18,18,18,0.6));
   z-index: 20;
 }
@@ -267,7 +267,7 @@ body {
   justify-content: center;
   transition: background var(--dur-fast) ease;
 }
-.icon-btn:active { background: rgba(255,217,0,0.15); }
+.icon-btn:active { background: rgba(253,183,20,0.15); }
 .header-mid {
   display: flex;
   flex-direction: column;
@@ -378,50 +378,32 @@ body {
 .btn-block { display: block; width: 100%; }
 .btn-sm { padding: 9px 16px; font-size: 14.5px; letter-spacing: 0.8px; }
 
-/* Buttons are small, deliberate surfaces sitting right next to the
-   hand-stencilled poster art (title/interstitials), so they get the same
-   grain.png texture already used for the app-wide noise pass, layered over
-   each button's own color gradient — otherwise a flat vector gradient next
-   to a gritty spray-paint poster reads as two different apps glued
-   together. */
 .btn-primary {
   color: var(--gold-900);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
   box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.35);
 }
 .btn-danger {
   color: var(--gold-300);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--crimson-500), var(--crimson-900) 85%);
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(180deg, var(--crimson-500), var(--crimson-900) 85%);
   border-color: var(--gold-500);
   box-shadow: var(--shadow-soft);
 }
 .btn-confirm {
   color: var(--gold-900);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
   border-color: var(--gold-900);
   box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,0.5);
 }
 .btn-ghost {
   color: var(--ink-dim);
   background: transparent;
-  border-color: rgba(255,217,0,0.4);
+  border-color: rgba(253,183,20,0.4);
 }
 
 /* ---------- Generic panel ---------- */
 .panel {
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
   border: 1.4px solid var(--gold-700);
   border-radius: var(--radius-md);
   padding: 12px 16px;
@@ -472,7 +454,7 @@ body {
   align-items: center;
   gap: 10px;
   background: var(--charcoal-800);
-  border: 1px solid rgba(255,217,0,0.3);
+  border: 1px solid rgba(253,183,20,0.3);
   border-radius: var(--radius-sm);
   padding: 6px 10px;
 }
@@ -503,7 +485,7 @@ body {
   justify-content: center;
   gap: 5px;
   padding: 5px 8px;
-  border: 1px solid rgba(255,217,0,0.25);
+  border: 1px solid rgba(253,183,20,0.25);
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--ink-dim);
@@ -514,7 +496,7 @@ body {
 .seat-mode-btn.active {
   border-color: var(--gold-500);
   color: var(--gold-300);
-  background: rgba(255,217,0,0.12);
+  background: rgba(253,183,20,0.12);
 }
 .remove-player-btn {
   background: none;
@@ -556,10 +538,7 @@ body {
   gap: 10px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(90deg, var(--midnight-700), var(--charcoal-900));
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(90deg, var(--midnight-700), var(--charcoal-900));
   border: 1px solid var(--gold-700);
   border-left: 4px solid var(--gold-500);
   position: relative;
@@ -851,10 +830,7 @@ body {
   max-width: 340px;
   max-height: 80vh;
   overflow-y: auto;
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
-  background-repeat: repeat, no-repeat;
-  background-size: 48px 48px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
   border: 2px solid var(--gold-500);
   border-radius: var(--radius-lg);
   padding: 22px 20px;

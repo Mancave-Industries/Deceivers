@@ -851,16 +851,16 @@ UI.hideModal = function hideModal() {
 // showing a stale cached image on a phone the way the game logic once did.
 const INTERSTITIAL_IMAGES = {
   reveal: 'assets/brand/interstitials/reveal.jpg?v=202610071550',
-  draw: 'assets/brand/interstitials/draw.jpg',
-  'night-falls': 'assets/brand/interstitials/night-falls.jpg',
-  murder: 'assets/brand/interstitials/murder.jpg',
-  banishment: 'assets/brand/interstitials/banishment.jpg',
-  'final-circle': 'assets/brand/interstitials/final-circle.jpg',
-  'end-game': 'assets/brand/interstitials/end-game.jpg',
-  'banish-again': 'assets/brand/interstitials/banish-again.jpg',
-  'final-two': 'assets/brand/interstitials/final-two.jpg',
-  'loyal-win': 'assets/brand/interstitials/loyal-win.jpg',
-  'deceiver-win': 'assets/brand/interstitials/deceiver-win.jpg',
+  draw: 'assets/brand/interstitials/draw.jpg?v=202610072020',
+  'night-falls': 'assets/brand/interstitials/night-falls.jpg?v=202610072020',
+  murder: 'assets/brand/interstitials/murder.jpg?v=202610072020',
+  banishment: 'assets/brand/interstitials/banishment.jpg?v=202610072020',
+  'final-circle': 'assets/brand/interstitials/final-circle.jpg?v=202610072020',
+  'end-game': 'assets/brand/interstitials/end-game.jpg?v=202610072020',
+  'banish-again': 'assets/brand/interstitials/banish-again.jpg?v=202610072020',
+  'final-two': 'assets/brand/interstitials/final-two.jpg?v=202610072020',
+  'loyal-win': 'assets/brand/interstitials/loyal-win.jpg?v=202610072020',
+  'deceiver-win': 'assets/brand/interstitials/deceiver-win.jpg?v=202610072020',
 };
 const INTERSTITIAL_DURATION_MS = 1700;
 // Safety net only, not the normal path: if a video somehow never fires
