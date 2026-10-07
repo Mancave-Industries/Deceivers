@@ -425,7 +425,7 @@ body {
    with no extra markup. The lockup (title, tagline, brand) lives in the
    image's upper two-thirds; the buttons sit in its emptier lower third. */
 #screen-title {
-  background-image: url('../assets/brand/deceivers-title-poster.jpg');
+  background-image: url('../assets/brand/deceivers-title-poster.jpg?v=202610071539');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
