@@ -239,9 +239,7 @@ body {
   z-index: 0;
   pointer-events: none;
   opacity: 0.9;
-  background:
-    radial-gradient(ellipse 55% 45% at 50% 18%, rgba(243,231,197,0.22), transparent 70%),
-    url('../assets/brand/night-skyline.png') center top / cover no-repeat;
+  background: url('../assets/brand/night-skyline.png') center top / cover no-repeat;
   -webkit-mask-image: linear-gradient(to bottom,
     #000 0%,
     #000 40%,
@@ -424,7 +422,7 @@ body {
   position: relative;
   appearance: none;
   font-family: var(--font-display);
-  border: 1.5px solid var(--hairline);
+  border: 2.5px solid var(--hairline);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   padding: 14px 22px;
@@ -461,15 +459,13 @@ body {
 }
 .btn-primary, .btn-confirm {
   color: var(--charcoal-950);
-  background: linear-gradient(180deg, var(--gold-300), var(--gold-500) 75%);
-  border-color: var(--gold-900);
-  box-shadow: 0 4px 14px rgba(245,190,22,0.28);
+  background: var(--gold-500);
+  border-color: #000000;
 }
 .btn-danger {
   color: var(--ink);
-  background: linear-gradient(180deg, var(--crimson-500), var(--crimson-700) 85%);
-  border-color: var(--crimson-900);
-  box-shadow: 0 4px 14px rgba(200,25,32,0.3);
+  background: var(--crimson-500);
+  border-color: #000000;
 }
 .btn-ghost {
   color: var(--ink);
@@ -679,12 +675,11 @@ body {
   justify-content: center;
   gap: 12px;
   position: relative;
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background: var(--charcoal-900);
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   padding: 14px;
-  box-shadow: 0 4px 18px rgba(245,190,22,0.1);
   margin-bottom: 14px;
 }
 .prize-pot-value {
@@ -723,7 +718,7 @@ body {
   backface-visibility: hidden;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-soft), 0 0 22px rgba(245,190,22,0.18);
+  box-shadow: var(--shadow-soft);
 }
 .card-face svg { width: 100%; height: 100%; display: block; }
 .card-face.card-back-face { }
@@ -896,8 +891,7 @@ body {
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   border: 2px solid var(--gold-400);
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
-  box-shadow: 0 4px 18px rgba(245,190,22,0.12);
+  background: var(--charcoal-900);
 }
 .winner-banner h2 {
   font-family: var(--font-display);
@@ -967,13 +961,12 @@ body {
   max-width: 340px;
   max-height: 80vh;
   overflow-y: auto;
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background: var(--charcoal-900);
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   padding: 22px 20px;
   position: relative;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
 }
 .modal-close {
   position: absolute;
