@@ -156,6 +156,10 @@ body {
    logo pasted on top. Sits behind every screen (.screen has no background
    of its own, so this shows through the empty space of all of them) and
    never intercepts taps. */
+/* A physical stamp pressed into the corner of the composition, not a
+   logo centred neatly behind the content -- oversized and cropped off
+   two edges by .app's own overflow:hidden, no vignette mask holding it
+   to a tidy circle. */
 .app::before {
   content: "";
   position: absolute;
@@ -164,12 +168,10 @@ body {
   pointer-events: none;
   background-image: url('../assets/brand/mancave-gameshed-badge.jpg?v=202610072020');
   background-repeat: no-repeat;
-  background-position: center 56%;
-  background-size: 60%;
-  opacity: 0.15;
+  background-position: 145% 85%;
+  background-size: 120%;
+  opacity: 0.16;
   mix-blend-mode: screen;
-  -webkit-mask-image: radial-gradient(circle, #000 32%, transparent 68%);
-  mask-image: radial-gradient(circle, #000 32%, transparent 68%);
 }
 
 /* A hairline ceremonial frame, inset from the device edge, with four
@@ -596,16 +598,18 @@ body {
 .stepper-btn:active { background: var(--charcoal-800); }
 
 /* ---------- Player list (main screen) ---------- */
-.player-list { display: flex; flex-direction: column; gap: 8px; }
+/* The circle is ONE ledger, not a stack of separate cards: a single rule
+   above the list, a hairline between rows, and the gold/crimson left
+   edge carries status -- no per-row box, no background fill. */
+.player-list { display: flex; flex-direction: column; border-top: 1px solid var(--hairline); }
 .player-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  border-radius: 0;
-  clip-path: var(--clip-chamfer-sm);
-  background: linear-gradient(90deg, var(--charcoal-900), var(--charcoal-950));
-  border: 1px solid var(--hairline);
+  padding: 12px 4px 12px 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--hairline);
   border-left: 3px solid var(--gold-500);
   position: relative;
 }
