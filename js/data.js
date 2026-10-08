@@ -39,6 +39,7 @@ const ICONS = {
   vote: 'icon-vote',
   hourglass: 'icon-hourglass',
   hoodedFigure: 'icon-hooded-figure',
+  person: 'icon-person',
   compass: 'icon-compass-emblem',
   sound: 'icon-sound',
   menu: 'icon-menu',

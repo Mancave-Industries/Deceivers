@@ -193,25 +193,48 @@ body {
   filter: url(#crumble);
 }
 
-/* Restrained atmospheric layer, cropped straight from the approved house-
-   style artwork (moon + castle skyline) rather than invented fresh —
-   sits behind every screen at very low opacity, anchored top-right so it
-   never sits under the center-column content any screen actually uses.
-   This is the "it must never compete with the controls" requirement: an
-   atmosphere, not a background image. */
+/* Atmospheric layer, cropped straight from the approved house-style
+   artwork (moon + castle skyline) rather than invented fresh — anchors
+   the top of every screen the way the reference mockup does: the scene
+   reads clearly up top, then the image's own built-in vertical fade
+   (baked into night-skyline.png's alpha channel) dissolves it into
+   plain dark before the mid-screen content any given screen actually
+   uses. Full-width now, not a corner accent -- this is meant to read as
+   "the screen is cut from the poster," not a faint watermark. */
 .app-skyline {
   content: "";
   position: absolute;
   top: calc(-1 * var(--edge-buffer-top));
-  right: -10%;
-  width: 78%;
-  aspect-ratio: 527 / 568;
+  left: 0;
+  right: 0;
+  height: 46%;
   z-index: 0;
   pointer-events: none;
   background-image: url('../assets/brand/night-skyline.png');
-  background-size: contain;
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
-  opacity: 0.1;
+  opacity: 0.6;
+}
+
+/* Readability scrim, layered directly over .app-skyline: a dark gradient
+   stronger right under the header (where the screen title sits) and
+   easing off through the rest of the art band, so copy stays legible
+   without flattening the scene into a faint ghost. */
+.app-scrim {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--edge-buffer-top));
+  left: 0;
+  right: 0;
+  height: 50%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(8,15,24,0.55) 0%,
+    rgba(8,15,24,0.3) 35%,
+    rgba(8,15,24,0.55) 75%,
+    var(--charcoal-950) 100%);
 }
 
 /* A faint, always-on film-grain pass over the whole app — pushes the
@@ -350,12 +373,14 @@ body {
   font-size: 15px;
   letter-spacing: 1.5px;
   color: var(--gold-300);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
 }
 .phase-label {
   font-size: 11.5px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--ink-dim);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
 }
 
 /* ---------- Screens ---------- */
@@ -391,6 +416,7 @@ body {
   color: var(--gold-400);
   text-align: center;
   margin-bottom: 4px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 .screen-subtitle {
   font-size: 14px;
@@ -398,6 +424,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   line-height: 1.4;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
 }
 
 /* ---------- Buttons ---------- */
@@ -423,21 +450,34 @@ body {
    a real gold treatment. Danger is the one place red belongs on a button
    (a destructive/Deceiver-side action). Ghost is secondary/low-stakes by
    design, so it stays understated rather than matching primary's weight. */
+/* Weathered-gold-plaque finish: the reference mockup's buttons/cards
+   carry visible grain/wear, not a flat vector gradient -- reusing the
+   same grain.png tile already shipped for the app-wide noise pass,
+   blended into each button's own color gradient. */
 .btn-primary {
   color: var(--charcoal-950);
-  background: linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: soft-light, normal;
   border-color: var(--gold-900);
   box-shadow: var(--shadow-soft);
 }
 .btn-danger {
   color: var(--gold-300);
-  background: linear-gradient(180deg, var(--crimson-700), var(--crimson-900) 85%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--crimson-700), var(--crimson-900) 85%);
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border-color: var(--crimson-500);
   box-shadow: var(--shadow-soft);
 }
 .btn-confirm {
   color: var(--charcoal-950);
-  background: linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: soft-light, normal;
   border-color: var(--gold-900);
   box-shadow: var(--shadow-soft);
 }
@@ -449,7 +489,10 @@ body {
 
 /* ---------- Generic panel ---------- */
 .panel {
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 1px solid var(--hairline);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
@@ -556,7 +599,10 @@ body {
 .seat-mode-btn.active {
   border-color: var(--gold-900);
   color: var(--charcoal-950);
-  background: var(--gold-500);
+  background-image: url('../assets/brand/grain.png'), linear-gradient(var(--gold-500), var(--gold-500));
+  background-repeat: repeat, no-repeat;
+  background-size: 30px 30px, 100% 100%;
+  background-blend-mode: soft-light, normal;
   font-weight: 700;
 }
 .remove-player-btn {
@@ -650,7 +696,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
@@ -815,6 +864,30 @@ body {
   gap: 18px;
   text-align: center;
 }
+/* Radiating gold sunburst behind the stage's main ceremonial icon
+   (skull, compass, candle, etc.) -- matches the house-style mockup's
+   engraved-halo treatment on Murder/Gather Everyone/etc. without any new
+   art: a conic gradient standing in for the rays, with a soft radial
+   glow underneath so it reads as light, not a sharp starburst graphic. */
+.reveal-stage > .icon-lg {
+  position: relative;
+}
+.reveal-stage > .icon-lg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background:
+    repeating-conic-gradient(from 0deg, var(--gold-500) 0deg 2deg, transparent 2deg 15deg),
+    radial-gradient(circle, rgba(253,183,20,0.22), transparent 62%);
+  -webkit-mask-image: radial-gradient(circle, #000 38%, transparent 68%);
+  mask-image: radial-gradient(circle, #000 38%, transparent 68%);
+  opacity: 0.55;
+}
 .reveal-stage::before, .reveal-stage::after {
   content: "";
   width: 130px;
@@ -842,7 +915,10 @@ body {
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   border: 2px solid var(--gold-400);
-  background: linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: overlay, normal;
 }
 .winner-banner h2 {
   font-family: var(--font-display);
@@ -912,7 +988,10 @@ body {
   max-width: 340px;
   max-height: 80vh;
   overflow-y: auto;
-  background: linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
+  background-repeat: repeat, no-repeat;
+  background-size: 40px 40px, 100% 100%;
+  background-blend-mode: overlay, normal;
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);

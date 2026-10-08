@@ -141,7 +141,7 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverK
             ${names.length > CONFIG.minPlayers ? `<button class="remove-player-btn" data-action="remove-player" data-index="${i}" aria-label="Remove player">&times;</button>` : ''}
           </div>
           <div class="seat-mode-row">
-            <button type="button" class="seat-mode-btn ${!isComputer[i] ? 'active' : ''}" data-action="set-seat-mode" data-index="${i}" data-mode="human">${iconUse(ICONS.hoodedFigure, 'icon-sm')} Human</button>
+            <button type="button" class="seat-mode-btn ${!isComputer[i] ? 'active' : ''}" data-action="set-seat-mode" data-index="${i}" data-mode="human">${iconUse(ICONS.person, 'icon-sm')} Human</button>
             <button type="button" class="seat-mode-btn ${isComputer[i] ? 'active' : ''}" data-action="set-seat-mode" data-index="${i}" data-mode="computer">${iconUse(ICONS.settings, 'icon-sm')} Computer</button>
           </div>
         </div>`).join('')}

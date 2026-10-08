@@ -21,7 +21,7 @@
      css/style.css or any js/*.js file, so returning
      players' phones are forced to re-fetch instead of silently running
      stale game logic. Harmless no-op on a brand new load either way. -->
-<link rel="stylesheet" href="css/style.css?v=202610072037">
+<link rel="stylesheet" href="css/style.css?v=202610080641">
 </head>
 <body>
 <div class="app" id="app">
@@ -88,6 +88,10 @@
     <circle cx="24" cy="15" r="7.5"/>
       <path d="M11 42 C11 27 16 20 24 20 C32 20 37 27 37 42"/>
       <path d="M18 27 C20 30 28 30 30 27"/>
+  </symbol>
+  <symbol id="icon-person" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="15" r="8"/>
+      <path d="M9 41 C9 29.5 15.5 23 24 23 C32.5 23 39 29.5 39 41"/>
   </symbol>
   <symbol id="icon-compass-emblem" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="24" cy="24" r="18"/>
@@ -566,6 +570,7 @@
   </svg>
 
   <div class="app-skyline" aria-hidden="true"></div>
+  <div class="app-scrim" aria-hidden="true"></div>
   <div class="app-grain" aria-hidden="true"></div>
 
   <header class="app-header">
@@ -620,13 +625,13 @@
   <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
 </div>
 
-<script src="js/data.js?v=202610072156"></script>
-<script src="js/state.js?v=202610072156"></script>
-<script src="js/engine.js?v=202610072156"></script>
-<script src="js/sound.js?v=202610072156"></script>
-<script src="js/analytics.js?v=202610072156"></script>
-<script src="js/ui.js?v=202610072156"></script>
-<script src="js/main.js?v=202610072156"></script>
+<script src="js/data.js?v=202610080641"></script>
+<script src="js/state.js?v=202610080641"></script>
+<script src="js/engine.js?v=202610080641"></script>
+<script src="js/sound.js?v=202610080641"></script>
+<script src="js/analytics.js?v=202610080641"></script>
+<script src="js/ui.js?v=202610080641"></script>
+<script src="js/main.js?v=202610080641"></script>
 <script src="/Gameshed/nav.js" defer></script>
 </body>
 </html>
