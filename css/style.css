@@ -18,19 +18,19 @@
      --crimson-500 are the exact hard yellow/red; --ink/--ink-dim are the
      exact cream/muted text colours. */
   --charcoal-950: #000000;
-  --charcoal-900: #02060a;
+  --charcoal-900: #05090c;
   --charcoal-800: #06111b;
   --charcoal-700: #0b1824;
 
   --gold-300: #fbd873;
   --gold-400: #f8c730;
-  --gold-500: #f6b817;
+  --gold-500: #f5be16;
   --gold-700: #c98e0a;
   --gold-900: #000000;
 
   --crimson-900: #2b0407;
   --crimson-700: #8c0b10;
-  --crimson-500: #d71920;
+  --crimson-500: #c81920;
 
   --midnight-900: #141c30;
   --midnight-700: #1f2a44;
@@ -40,7 +40,7 @@
   --parchment-300: #d8c9a3;
   --parchment-muted: #a9895a;
 
-  --ink: #f4e8ce;
+  --ink: #f3e7c5;
   --ink-dim: #a79f91;
 
   /* Component language, third pass: the painted-poster house style reads
@@ -67,8 +67,8 @@
   --radius-tight: 4px;
   --clip-chamfer: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
   --clip-chamfer-sm: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
-  --hairline: rgba(254,240,211,0.1);
-  --field-bg: #02060a;
+  --hairline: rgba(243,231,197,0.1);
+  --field-bg: #000000;
 
   --shadow-deep: 0 18px 40px rgba(0,0,0,0.55);
   --shadow-soft: 0 8px 20px rgba(0,0,0,0.4);
@@ -130,8 +130,8 @@ input {
 /* Background texture: subtle vignette + faint radial noise, CSS only */
 body {
   background:
-    radial-gradient(ellipse at 50% -10%, rgba(253,183,20,0.08), transparent 55%),
-    radial-gradient(ellipse at 50% 110%, rgba(238,20,27,0.10), transparent 60%),
+    radial-gradient(ellipse at 50% -10%, rgba(245,190,22,0.08), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(200,25,32,0.10), transparent 60%),
     var(--charcoal-950);
 }
 
@@ -177,7 +177,7 @@ body {
   background-repeat: no-repeat;
   background-position: 145% 85%;
   background-size: 120%;
-  opacity: 0.12;
+  opacity: 0.09;
 }
 
 /* A hairline ceremonial frame, inset from the device edge, with four
@@ -189,7 +189,7 @@ body {
   inset: 10px;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(253,183,20,0.08);
+  border: 1px solid rgba(245,190,22,0.08);
   background:
     linear-gradient(var(--gold-500), var(--gold-500)) top left / 24px 3px no-repeat,
     linear-gradient(var(--gold-500), var(--gold-500)) top left / 3px 24px no-repeat,
@@ -227,24 +227,29 @@ body {
    center, dissolving toward both the bottom AND the left/right edges
    at once, so the scene reads as atmosphere emerging from black rather
    than a photo dropped into a header. */
+/* Restrained motif, not a hero image: short enough and fading fast
+   enough that it resolves to true black before the screen title even
+   starts, let alone the body copy beneath it -- "establish atmosphere,
+   then get out of the way," not a moon sitting behind ordinary text. */
 .app-skyline {
   content: "";
   position: absolute;
   inset: calc(-1 * var(--edge-buffer-top)) 0 auto 0;
-  height: 38vh;
+  height: 24vh;
   z-index: 0;
   pointer-events: none;
+  opacity: 0.9;
   background: url('../assets/brand/night-skyline.png') center top / cover no-repeat;
   -webkit-mask-image: linear-gradient(to bottom,
     #000 0%,
-    #000 55%,
-    rgba(0,0,0,0.75) 72%,
-    transparent 100%);
+    #000 40%,
+    rgba(0,0,0,0.6) 60%,
+    transparent 85%);
   mask-image: linear-gradient(to bottom,
     #000 0%,
-    #000 55%,
-    rgba(0,0,0,0.75) 72%,
-    transparent 100%);
+    #000 40%,
+    rgba(0,0,0,0.6) 60%,
+    transparent 85%);
 }
 
 /* A faint, always-on film-grain pass over the whole app. Multiply blend
@@ -260,7 +265,7 @@ body {
   background-repeat: repeat;
   background-size: 64px 64px;
   mix-blend-mode: multiply;
-  opacity: 0.12;
+  opacity: 0.07;
 }
 
 .sprite-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
@@ -286,7 +291,7 @@ body {
   grid-template-columns: 44px 1fr 44px 44px;
   align-items: end;
   padding: var(--edge-buffer-top) 6px 8px;
-  border-bottom: 1px solid rgba(246,184,23,0.3);
+  border-bottom: 1px solid rgba(245,190,22,0.3);
   background: transparent;
   z-index: 20;
 }
@@ -330,7 +335,7 @@ body {
   justify-content: center;
   transition: background var(--dur-fast) ease;
 }
-.icon-btn:active { background: rgba(253,183,20,0.15); }
+.icon-btn:active { background: rgba(245,190,22,0.15); }
 .header-mid {
   display: flex;
   flex-direction: column;
@@ -462,9 +467,9 @@ body {
   border-color: var(--crimson-900);
 }
 .btn-ghost {
-  color: var(--ink-dim);
+  color: var(--ink);
   background: var(--field-bg);
-  border-color: var(--hairline);
+  border-color: rgba(245,190,22,0.4);
 }
 
 /* ---------- Generic panel ---------- */
@@ -522,7 +527,7 @@ body {
   align-items: center;
   gap: 10px;
   background: var(--field-bg);
-  border: 1px solid rgba(246,184,23,0.65);
+  border: 1px solid rgba(245,190,22,0.65);
   border-radius: 0;
   clip-path: var(--clip-chamfer-sm);
   padding: 6px 10px;
@@ -851,7 +856,7 @@ body {
   z-index: -1;
   background:
     repeating-conic-gradient(from 0deg, var(--gold-500) 0deg 2deg, transparent 2deg 15deg),
-    radial-gradient(circle, rgba(253,183,20,0.22), transparent 62%);
+    radial-gradient(circle, rgba(245,190,22,0.22), transparent 62%);
   -webkit-mask-image: radial-gradient(circle, #000 38%, transparent 68%);
   mask-image: radial-gradient(circle, #000 38%, transparent 68%);
   opacity: 0.55;
