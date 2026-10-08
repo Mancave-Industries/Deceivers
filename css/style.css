@@ -805,7 +805,8 @@ body {
 }
 .pass-overlay .icon-lg { width: 54px; height: 54px; }
 .pass-overlay-eyebrow {
-  font-size: 12.5px;
+  font-family: var(--font-display);
+  font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--ink-dim);

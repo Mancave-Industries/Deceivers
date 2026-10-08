@@ -217,7 +217,6 @@ UI.renderReveal = function renderReveal(state, tapped) {
   screen('reveal').innerHTML = `
     <div class="reveal-stage">
       ${cardFlip(CARD_FRAMES.back, role.symbol, 'card-lg', 'revealCard')}
-      <h2 class="reveal-headline">${role.label}</h2>
       ${meaningBlock(`${role.description}${fellowText}`)}
       <button class="btn btn-confirm btn-block" data-action="confirm-reveal">Hide My Role &amp; Pass The Phone</button>
     </div>`;
