@@ -4,31 +4,33 @@
    ========================================================================== */
 
 :root {
-  /* Reskinned a second time to match the "house style" key art: painted
-     moonlit-castle posters (hooded figure, gothic castle, full moon),
-     not the earlier graffiti/stencil direction. Values sampled directly
-     from the approved reference poster (night sky ~#1c3b53, crown gold
-     ~#fdb714, danger red ~#ee141b, cream type ~#fef0d3) rather than
-     guessed, extended into matching light/dark shades preserving each
-     token's original role (300/400 = light, reads as text-on-dark or a
-     bright gradient top; 900 = dark, reads as text-on-bright or a dark
-     gradient base) so every existing component that already consumed
-     --charcoal-*/--gold-*/--crimson-* picks up the new look with no
-     other changes needed. */
-  --charcoal-950: #080f18;
-  --charcoal-900: #0e1824;
-  --charcoal-800: #16222f;
-  --charcoal-700: #1f2f40;
+  /* Rendering correction, fourth pass: pulp-comic / Dick Tracy printing,
+     not "premium dark app". Hard rule set, not a guess —
+     JET BLACK + CREAM + SATURATED YELLOW + BLOOD RED, almost no
+     mid-grey, no translucent panels washing black toward charcoal.
+     Keeping the existing --charcoal-*/--gold-*/--crimson-*/--ink names
+     (every component already consumes them) but setting their VALUES to
+     the hard rule — not renaming to --ink/--panel/etc as literally
+     proposed, since --ink already means "text colour" throughout this
+     file and reusing it for "page black" would silently invert every
+     text rule. --charcoal-950 IS the page-black requirement (#000000);
+     --charcoal-900/800 are the panel blacks; --gold-500 and
+     --crimson-500 are the exact hard yellow/red; --ink/--ink-dim are the
+     exact cream/muted text colours. */
+  --charcoal-950: #000000;
+  --charcoal-900: #02060a;
+  --charcoal-800: #06111b;
+  --charcoal-700: #0b1824;
 
-  --gold-300: #ffecb8;
-  --gold-400: #ffd166;
-  --gold-500: #fdb714;
-  --gold-700: #b8830a;
-  --gold-900: #4a3205;
+  --gold-300: #fbd873;
+  --gold-400: #f8c730;
+  --gold-500: #f6b817;
+  --gold-700: #c98e0a;
+  --gold-900: #000000;
 
-  --crimson-900: #3a0306;
+  --crimson-900: #2b0407;
   --crimson-700: #8c0b10;
-  --crimson-500: #ee141b;
+  --crimson-500: #d71920;
 
   --midnight-900: #141c30;
   --midnight-700: #1f2a44;
@@ -38,8 +40,8 @@
   --parchment-300: #d8c9a3;
   --parchment-muted: #a9895a;
 
-  --ink: #fef0d3;
-  --ink-dim: #c9bda4;
+  --ink: #f4e8ce;
+  --ink-dim: #a79f91;
 
   /* Component language, third pass: the painted-poster house style reads
      as cinematic/ceremonial through hard-edged, slightly chamfered cards
@@ -66,7 +68,7 @@
   --clip-chamfer: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
   --clip-chamfer-sm: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
   --hairline: rgba(254,240,211,0.1);
-  --field-bg: #0a141f;
+  --field-bg: #02060a;
 
   --shadow-deep: 0 18px 40px rgba(0,0,0,0.55);
   --shadow-soft: 0 8px 20px rgba(0,0,0,0.4);
@@ -195,54 +197,36 @@ body {
 
 /* Atmospheric layer, cropped straight from the approved house-style
    artwork (moon + castle skyline) rather than invented fresh — anchors
-   the top of every screen the way the reference mockup does: the scene
-   reads clearly up top, then the image's own built-in vertical fade
-   (baked into night-skyline.png's alpha channel) dissolves it into
-   plain dark before the mid-screen content any given screen actually
-   uses. Full-width now, not a corner accent -- this is meant to read as
-   "the screen is cut from the poster," not a faint watermark. */
+   the top of every screen. It is SCENERY, not a translucent wash over
+   the UI: rendered near-full opacity so the art stays saturated, with
+   no separate scrim/gradient layered over it or over the controls below
+   it. The darken-for-readability work is baked directly into the
+   image's own alpha channel (night-skyline.png fades itself out by
+   ~70-95% of its own height) so it falls into the app's own true-black
+   background on its own, abruptly rather than through a long grey
+   gradient smear. Text sitting over the art band gets its contrast from
+   a tight drop-shadow on the type itself (see .screen-title-row etc.),
+   never from dimming this layer or anything beneath it. */
 .app-skyline {
   content: "";
   position: absolute;
   top: calc(-1 * var(--edge-buffer-top));
   left: 0;
   right: 0;
-  height: 46%;
+  height: 42%;
   z-index: 0;
   pointer-events: none;
   background-image: url('../assets/brand/night-skyline.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  opacity: 0.92;
 }
 
-/* Readability scrim, layered directly over .app-skyline: a dark gradient
-   stronger right under the header (where the screen title sits) and
-   easing off through the rest of the art band, so copy stays legible
-   without flattening the scene into a faint ghost. */
-.app-scrim {
-  content: "";
-  position: absolute;
-  top: calc(-1 * var(--edge-buffer-top));
-  left: 0;
-  right: 0;
-  height: 50%;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg,
-    rgba(8,15,24,0.55) 0%,
-    rgba(8,15,24,0.3) 35%,
-    rgba(8,15,24,0.55) 75%,
-    var(--charcoal-950) 100%);
-}
-
-/* A faint, always-on film-grain pass over the whole app — pushes the
-   aesthetic toward the brand's distressed/stamped-metal key art without
-   needing a texture asset behind every single component. Overlay blend
-   mode makes it read as surface grain (darkening already-dark areas,
-   lifting lighter ones slightly) rather than a flat noisy layer sitting
-   on top. */
+/* A faint, always-on film-grain pass over the whole app. Multiply blend
+   only ever darkens -- true black stays true black -- unlike overlay/
+   soft-light, which lift lighter pixels and were the main cause of the
+   washed-out "grey veil" look this theme had to be corrected away from. */
 .app-grain {
   position: absolute;
   inset: 0;
@@ -251,8 +235,8 @@ body {
   background-image: url('../assets/brand/grain.png');
   background-repeat: repeat;
   background-size: 64px 64px;
-  mix-blend-mode: overlay;
-  opacity: 0.16;
+  mix-blend-mode: multiply;
+  opacity: 0.12;
 }
 
 .sprite-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
@@ -278,8 +262,8 @@ body {
   grid-template-columns: 44px 1fr 44px 44px;
   align-items: end;
   padding: var(--edge-buffer-top) 6px 8px;
-  border-bottom: 1px solid rgba(253,183,20,0.25);
-  background: linear-gradient(180deg, rgba(18,18,18,0.9), rgba(18,18,18,0.6));
+  border-bottom: 1px solid rgba(246,184,23,0.3);
+  background: var(--charcoal-950);
   z-index: 20;
 }
 /* Fills the --edge-buffer-top safe-area reservation above the icon row --
@@ -308,15 +292,8 @@ body {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   white-space: nowrap;
-  background-image:
-    url('../assets/brand/grain.png'),
-    linear-gradient(180deg, var(--gold-300), var(--gold-700));
-  background-size: 36px 36px, auto;
-  background-blend-mode: soft-light;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--gold-400);
+  color: var(--gold-500);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.9);
 }
 .icon-btn {
   width: 40px;
@@ -337,35 +314,18 @@ body {
   line-height: 1.1;
   overflow: hidden;
 }
-/* "Grainy gold" display text — a gold gradient blended with the same
-   grain tile used on .app-grain, then clipped to the glyphs themselves
-   (background-clip: text) instead of sitting flat behind them. Reserved
-   for the larger ceremonial headlines; small labels (round counter, seat
-   numbers, avatar initials) stay plain solid gold — at that size the
-   grain would just read as noise, not texture. -webkit-text-fill-color
-   is required for Safari; `color` is kept as the graceful-degradation
-   fallback for any browser without background-clip: text support.
-   Grain is listed FIRST (the blend source) and the gold gradient SECOND
-   (the backdrop) — soft-light then reads as the gradient's own base
-   value, lightly perturbed by the grain, rather than the other way
-   round. Getting this backwards (gradient as source, grain as backdrop,
-   under the harsher `overlay` mode) was the exact bug that made this
-   round's panel/button backgrounds look like broken TV static instead of
-   worn gold — on thin letter strokes specifically it read as sparkly and
-   cheap rather than aged, which is what prompted this fix. */
+/* Flat, saturated gold display text -- pulp-ink printing, not a metallic
+   gradient. A gradient (even gold-to-gold) plus a soft-light-blended
+   grain clipped to the glyphs is exactly what read as "antique/brassy"
+   instead of punchy ink-yellow; a hard offset shadow (zero blur) gives
+   it weight/contrast against the art without turning into a soft glow. */
 .screen-title-row,
 .reveal-headline,
 .winner-banner h2,
 .modal-title,
 .prize-pot-value {
-  background-image:
-    url('../assets/brand/grain.png'),
-    linear-gradient(180deg, var(--gold-300), var(--gold-700));
-  background-size: 36px 36px, auto;
-  background-blend-mode: soft-light;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--gold-500);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.9);
 }
 
 .round-label {
@@ -373,14 +333,14 @@ body {
   font-size: 15px;
   letter-spacing: 1.5px;
   color: var(--gold-300);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.9);
 }
 .phase-label {
   font-size: 11.5px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--ink-dim);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.9);
 }
 
 /* ---------- Screens ---------- */
@@ -413,10 +373,10 @@ body {
   font-size: clamp(26px, 7.5vw, 31px);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--gold-400);
+  color: var(--gold-500);
   text-align: center;
   margin-bottom: 4px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.9);
 }
 .screen-subtitle {
   font-size: 14px;
@@ -424,11 +384,12 @@ body {
   text-align: center;
   margin-bottom: 10px;
   line-height: 1.4;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.85);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.9);
 }
 
 /* ---------- Buttons ---------- */
 .btn {
+  position: relative;
   appearance: none;
   border: 1.5px solid var(--hairline);
   border-radius: 0;
@@ -439,47 +400,41 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  transition: transform var(--dur-fast) ease, filter var(--dur-fast) ease;
+  transition: transform var(--dur-fast) ease;
 }
-.btn:active { transform: scale(0.97); filter: brightness(0.95); }
+.btn:active { transform: scale(0.97); }
 .btn:disabled { opacity: 0.4; pointer-events: none; }
 .btn-block { display: block; width: 100%; }
 .btn-sm { padding: 9px 16px; font-size: 14px; letter-spacing: 0.6px; }
 
-/* Primary/confirm are the significant choices on their screen — they keep
-   a real gold treatment. Danger is the one place red belongs on a button
-   (a destructive/Deceiver-side action). Ghost is secondary/low-stakes by
-   design, so it stays understated rather than matching primary's weight. */
-/* Weathered-gold-plaque finish: the reference mockup's buttons/cards
-   carry visible grain/wear, not a flat vector gradient -- reusing the
-   same grain.png tile already shipped for the app-wide noise pass,
-   blended into each button's own color gradient. */
-.btn-primary {
+/* Flat, saturated ink colors -- no gradients. Distressed texture is a
+   SEPARATE pseudo-element at real low opacity (~7%) using multiply, which
+   can only darken: the solid color underneath never washes out toward
+   grey/brass the way a soft-light/overlay blend over bright gold did. */
+.btn::after,
+.panel::after,
+.prize-pot-panel::after,
+.winner-banner::after,
+.modal-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/brand/grain.png');
+  background-repeat: repeat;
+  background-size: 40px 40px;
+  mix-blend-mode: multiply;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.btn-primary, .btn-confirm {
   color: var(--charcoal-950);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-400), var(--gold-500) 80%);
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: soft-light, normal;
+  background: var(--gold-500);
   border-color: var(--gold-900);
-  box-shadow: var(--shadow-soft);
 }
 .btn-danger {
-  color: var(--gold-300);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--crimson-700), var(--crimson-900) 85%);
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: overlay, normal;
-  border-color: var(--crimson-500);
-  box-shadow: var(--shadow-soft);
-}
-.btn-confirm {
-  color: var(--charcoal-950);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(180deg, var(--gold-300), var(--gold-500) 85%);
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: soft-light, normal;
-  border-color: var(--gold-900);
-  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  background: var(--crimson-500);
+  border-color: var(--crimson-900);
 }
 .btn-ghost {
   color: var(--ink-dim);
@@ -489,10 +444,8 @@ body {
 
 /* ---------- Generic panel ---------- */
 .panel {
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-900));
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  position: relative;
+  background: var(--charcoal-800);
   border: 1px solid var(--hairline);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
@@ -544,8 +497,7 @@ body {
   align-items: center;
   gap: 10px;
   background: var(--field-bg);
-  box-shadow: inset 0 1px 4px rgba(0,0,0,0.5);
-  border: 1px solid var(--hairline);
+  border: 1px solid rgba(246,184,23,0.65);
   border-radius: 0;
   clip-path: var(--clip-chamfer-sm);
   padding: 6px 10px;
@@ -599,10 +551,7 @@ body {
 .seat-mode-btn.active {
   border-color: var(--gold-900);
   color: var(--charcoal-950);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(var(--gold-500), var(--gold-500));
-  background-repeat: repeat, no-repeat;
-  background-size: 30px 30px, 100% 100%;
-  background-blend-mode: soft-light, normal;
+  background: var(--gold-500);
   font-weight: 700;
 }
 .remove-player-btn {
@@ -696,10 +645,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  position: relative;
+  background: var(--charcoal-900);
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
@@ -826,9 +773,7 @@ body {
   gap: 20px;
   text-align: center;
   padding: 30px;
-  background:
-    radial-gradient(ellipse at 50% 40%, rgba(28,28,28,0.98), rgba(6,6,6,0.99)),
-    var(--charcoal-950);
+  background: var(--charcoal-950);
 }
 .pass-overlay .icon-lg { width: 54px; height: 54px; }
 .pass-overlay-eyebrow {
@@ -909,16 +854,14 @@ body {
 
 /* ---------- Results screen ---------- */
 .winner-banner {
+  position: relative;
   text-align: center;
   padding: 18px;
   margin-bottom: 16px;
   border-radius: 0;
   clip-path: var(--clip-chamfer);
   border: 2px solid var(--gold-400);
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--gold-900), var(--charcoal-900));
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: var(--charcoal-900);
 }
 .winner-banner h2 {
   font-family: var(--font-display);
@@ -981,17 +924,14 @@ body {
   align-items: center;
   justify-content: center;
   padding: max(20px, var(--edge-buffer-top)) 20px max(20px, var(--edge-buffer-bottom));
-  background: rgba(6,6,6,0.82);
+  background: rgba(0,0,0,0.9);
 }
 .modal-panel {
   width: 100%;
   max-width: 340px;
   max-height: 80vh;
   overflow-y: auto;
-  background-image: url('../assets/brand/grain.png'), linear-gradient(160deg, var(--charcoal-800), var(--charcoal-950));
-  background-repeat: repeat, no-repeat;
-  background-size: 40px 40px, 100% 100%;
-  background-blend-mode: overlay, normal;
+  background: var(--charcoal-900);
   border: 2px solid var(--gold-500);
   border-radius: 0;
   clip-path: var(--clip-chamfer);
@@ -1031,7 +971,7 @@ body {
   bottom: 90px;
   transform: translateX(-50%);
   z-index: 55;
-  background: rgba(18,18,18,0.95);
+  background: var(--charcoal-950);
   border: 1.5px solid var(--gold-500);
   color: var(--gold-300);
   font-size: 15px;
