@@ -215,20 +215,34 @@ body {
    gradient smear. Text sitting over the art band gets its contrast from
    a tight drop-shadow on the type itself (see .screen-title-row etc.),
    never from dimming this layer or anything beneath it. */
+/* The previous version relied on the PNG's own baked-in alpha fade to
+   dissolve into black -- but background-size:cover on a wide/short box
+   (~390x240) against a tall portrait source (377x868) scales to fit
+   width and crops from the top down, so the box's bottom edge lands
+   well inside the image's fully-opaque region; the fade baked into the
+   file never gets a chance to render, leaving a hard rectangular cut
+   (exactly "a banner sitting above the UI"). Fixed properly this time
+   with a CSS mask on the layer itself, which fades regardless of how
+   the image is cropped: a single radial ellipse, opaque near top-
+   center, dissolving toward both the bottom AND the left/right edges
+   at once, so the scene reads as atmosphere emerging from black rather
+   than a photo dropped into a header. */
 .app-skyline {
   content: "";
   position: absolute;
   top: calc(-1 * var(--edge-buffer-top));
   left: 0;
   right: 0;
-  height: 28%;
+  height: 34%;
   z-index: 0;
   pointer-events: none;
   background-image: url('../assets/brand/night-skyline.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  opacity: 0.92;
+  opacity: 0.95;
+  -webkit-mask-image: radial-gradient(ellipse 72% 100% at 50% 0%, #000 0%, #000 38%, rgba(0,0,0,0.55) 62%, transparent 92%);
+  mask-image: radial-gradient(ellipse 72% 100% at 50% 0%, #000 0%, #000 38%, rgba(0,0,0,0.55) 62%, transparent 92%);
 }
 
 /* A faint, always-on film-grain pass over the whole app. Multiply blend
@@ -271,7 +285,7 @@ body {
   align-items: end;
   padding: var(--edge-buffer-top) 6px 8px;
   border-bottom: 1px solid rgba(246,184,23,0.3);
-  background: var(--charcoal-950);
+  background: transparent;
   z-index: 20;
 }
 /* Fills the --edge-buffer-top safe-area reservation above the icon row --
