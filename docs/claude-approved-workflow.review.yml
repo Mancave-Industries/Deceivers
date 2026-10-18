@@ -1,6 +1,9 @@
 # REVIEW COPY ONLY — inert because stored under docs/, not .github/workflows/
 # After separate activation approval, move to .github/workflows/claude-approved.yml.
 # The environment name intentionally includes the trailing period, as created by Mark.
+# Anthropic's official setup guide documents a Pro/Max OAuth route using
+# `claude setup-token` locally. Verify subscription usage terms and limitations
+# before activation; no additional API billing has been authorised.
 name: Claude approved job
 on:
   workflow_dispatch:
@@ -45,7 +48,7 @@ jobs:
       - name: Claude Code (unreachable until verifier is implemented)
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             Implement only the authorised work described in issue #${{ inputs.issue_number }}.
             Work on a development branch, create a draft PR, and report tests,
