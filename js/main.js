@@ -592,7 +592,12 @@ const actions = {
     render();
   },
   'select-murder-target': (btn) => {
-    Sound.play('tap');
+    // Deliberately silent (see sound.js's header note): a nothing-to-do
+    // turn plays exactly 'tap' (My Turn) then 'passDevice'/'gather'
+    // (confirm) -- so this turn, the one with a real decision, must play
+    // the identical two sounds and no more. Playing 'tap' here too would
+    // make the deciding turn audibly countable against every other turn,
+    // the exact side channel this silence closes (issue #2 follow-up).
     uiStage.murderTarget = btn.dataset.id;
     render();
   },
@@ -614,7 +619,9 @@ const actions = {
     render();
   },
   'select-murder-shortlist-target': (btn) => {
-    Sound.play('tap');
+    // Silent for the same reason as select-murder-target, above -- a
+    // shortlist pick (up to two taps) must not sound different from a
+    // single pick or no pick at all.
     const id = btn.dataset.id;
     const list = uiStage.murderShortlist;
     if (list.includes(id)) {
@@ -642,7 +649,7 @@ const actions = {
     render();
   },
   'select-murder-narrow-target': (btn) => {
-    Sound.play('tap');
+    // Silent for the same reason as select-murder-target, above.
     uiStage.murderTarget = btn.dataset.id;
     render();
   },

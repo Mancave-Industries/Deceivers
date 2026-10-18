@@ -16,6 +16,15 @@
    "something happened" sounds only ever play once everyone is already
    gathered around for the reveal, where audibility is no longer a leak.
 
+   This extends to COUNT, not just identity: picking a target (or a
+   shortlist, or a narrowed candidate) plays no sound of its own in
+   main.js — only the turn's opening tap and its closing confirm do. A
+   turn with a real decision must produce exactly the same two audible
+   events as a "Nothing To Do" turn; an extra click sound on the deciding
+   turn would let a listener who can't see the screen simply count sounds
+   to find the Deceiver (issue #2 follow-up). The same reasoning applies
+   to the Recruit-or-Die queue's two full-table passes.
+
    Background music is a separate opt-in (off by default, its own Settings
    toggle) from the one-shot sound effects above: a quiet ambient drone
    loop, only ever played during the Open Discussion screen, where the
