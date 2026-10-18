@@ -16,6 +16,15 @@
    "something happened" sounds only ever play once everyone is already
    gathered around for the reveal, where audibility is no longer a leak.
 
+   This extends to COUNT, not just identity: picking a target (or a
+   shortlist, or a narrowed candidate) plays no sound of its own in
+   main.js — only the turn's opening tap and its closing confirm do. A
+   turn with a real decision must produce exactly the same two audible
+   events as a "Nothing To Do" turn; an extra click sound on the deciding
+   turn would let a listener who can't see the screen simply count sounds
+   to find the Deceiver (issue #2 follow-up). The same reasoning applies
+   to the Recruit-or-Die queue's two full-table passes.
+
    Background music is a separate opt-in (off by default, its own Settings
    toggle) from the one-shot sound effects above: a quiet ambient drone
    loop, only ever played during the Open Discussion screen, where the
@@ -335,18 +344,12 @@ const Sound = (() => {
      role information, so naming whoever's turn it actually is leaks
      nothing even for the Murder queue's acting-Deceiver turn specifically
      — every living player's turn already gets this same announcement.
-     Pass a falsy name (used for the Murder queue, and never for the
-     Recruit-response hand-off — see main.js) to get a generic "next
-     player" line instead of a name: Murder's queue already treats every
-     turn as identical in screen and sound (see this file's header note),
-     and a bare "next player" line matches that same ritual anonymity a
-     touch better than naming each person in turn would, even though
-     naming would still be technically safe there too. The Recruit-
-     response hand-off is different in kind, not just in style — saying
-     the recruit's real name aloud would be audible to the whole room even
-     though the screen itself stays private, so main.js announces that
-     one with its own fixed, non-identifying line instead of calling this
-     function at all. */
+     Pass a falsy name to get a generic "next player" line instead: Murder,
+     Recruit, and Recruit Response all run as full-table queue passes where
+     every turn already looks and sounds identical regardless of role (see
+     this file's header note and main.js's maybeAnnouncePassDevice), and a
+     bare "next player" line matches that same ritual anonymity across all
+     three, even though naming would still be technically safe there too. */
   const PASS_DEVICE_NAMED_PHRASES = [
     (name) => `Pass the phone to ${name}.`,
     (name) => `${name}, you're up.`,

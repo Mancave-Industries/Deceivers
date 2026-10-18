@@ -45,6 +45,8 @@ const ICONS = {
   menu: 'icon-menu',
   settings: 'icon-settings',
   help: 'icon-help',
+  lock: 'icon-lock',
+  group: 'icon-group',
 };
 
 const CARD_FRAMES = {

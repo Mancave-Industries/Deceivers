@@ -1,0 +1,214 @@
+=== running G1_3p_murder ===
+G1_3p_murder -> transitions: 14 leaks: 1 reachedResults: true finalPhase: results winner: deceiver
+=== running G2_4p_hidden ===
+G2_4p_hidden -> transitions: 21 leaks: 2 reachedResults: true finalPhase: results winner: deceiver
+=== running G3_5p_1bot ===
+G3_5p_1bot -> transitions: 25 leaks: 2 reachedResults: true finalPhase: results winner: deceiver
+=== running G4_6p_2bot_vote ===
+G4_6p_2bot_vote -> transitions: 77 leaks: 7 reachedResults: true finalPhase: results winner: deceiver
+=== running G5_7p_2deceiver ===
+G5_7p_2deceiver -> transitions: 120 leaks: 15 reachedResults: true finalPhase: results winner: deceiver
+=== running G6_7p_recruit_accept ===
+G6_7p_recruit_accept -> transitions: 64 leaks: 2 reachedResults: true finalPhase: results winner: loyal
+=== running G7_7p_recruit_refuse ===
+G7_7p_recruit_refuse -> transitions: 45 leaks: 6 reachedResults: true finalPhase: results winner: deceiver
+=== running G8_8p_bot_heavy ===
+G8_8p_bot_heavy -> transitions: 160 leaks: 16 reachedResults: true finalPhase: results winner: deceiver
+=== running G9_4p_series3 ===
+G9_4p_series3 -> transitions: 44 leaks: 3 reachedResults: true finalPhase: results winner: deceiver
+=== running G10_5p_series2_banishagain ===
+G10_5p_series2_banishagain -> transitions: 103 leaks: 8 reachedResults: true finalPhase: results winner: deceiver
+
+=== SUMMARY ===
+[
+  {
+    "id": "G1_3p_murder",
+    "transitions": 14,
+    "leaks": 1,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": []
+  },
+  {
+    "id": "G2_4p_hidden",
+    "transitions": 21,
+    "leaks": 2,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": []
+  },
+  {
+    "id": "G3_5p_1bot",
+    "transitions": 25,
+    "leaks": 2,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      905,
+      995,
+      897,
+      784
+    ]
+  },
+  {
+    "id": "G4_6p_2bot_vote",
+    "transitions": 77,
+    "leaks": 7,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      867,
+      871,
+      895,
+      863,
+      863,
+      861,
+      609,
+      850,
+      864
+    ]
+  },
+  {
+    "id": "G5_7p_2deceiver",
+    "transitions": 120,
+    "leaks": 15,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      888,
+      846,
+      864,
+      741,
+      837,
+      860,
+      867,
+      848,
+      609,
+      702,
+      871,
+      846,
+      831
+    ]
+  },
+  {
+    "id": "G6_7p_recruit_accept",
+    "transitions": 64,
+    "leaks": 2,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "loyal",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      832,
+      844,
+      848,
+      835,
+      848,
+      843,
+      870,
+      861,
+      846,
+      843
+    ]
+  },
+  {
+    "id": "G7_7p_recruit_refuse",
+    "transitions": 45,
+    "leaks": 6,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      871,
+      845,
+      849,
+      867,
+      867,
+      865,
+      865
+    ]
+  },
+  {
+    "id": "G8_8p_bot_heavy",
+    "transitions": 160,
+    "leaks": 16,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 1,
+    "computerTurnTimings": [
+      876,
+      651,
+      865,
+      846,
+      859,
+      848,
+      709,
+      846,
+      710,
+      839,
+      888,
+      860,
+      843
+    ]
+  },
+  {
+    "id": "G9_4p_series3",
+    "transitions": 44,
+    "leaks": 3,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 2,
+    "computerTurnTimings": []
+  },
+  {
+    "id": "G10_5p_series2_banishagain",
+    "transitions": 103,
+    "leaks": 8,
+    "errors": 0,
+    "reachedResults": true,
+    "finalPhase": "results",
+    "winner": "deceiver",
+    "seriesGame": 2,
+    "computerTurnTimings": [
+      865,
+      854,
+      860,
+      705,
+      862,
+      852,
+      842,
+      842,
+      821,
+      837,
+      835,
+      861,
+      870,
+      834,
+      859,
+      869,
+      871
+    ]
+  }
+]
