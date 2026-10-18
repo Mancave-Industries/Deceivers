@@ -91,24 +91,22 @@ function maybeAnnouncePassDevice() {
     lastAnnouncedTurn = null;
     return;
   }
-  // The Recruit-response hand-off (Deceiver -> their chosen target) goes
-  // through this exact same generic path, named out loud just like any
-  // other queue turn — a previous version gave it a special "pass the
-  // phone to your chosen recruit" line instead, which was the actual leak:
-  // the word "recruit," spoken aloud to the whole table (not just whoever
-  // holds the phone), announced on its own that a recruitment was
-  // happening at all, independent of whether a name was said. A player's
-  // name alone leaks nothing — every living player's name already gets
-  // called out at some point during an ordinary Draw queue turn, so this
-  // one more named hand-off is indistinguishable from any other.
   const player = currentQueuePlayer(state);
   if (!player) return;
   const key = `${state.phase}:${player.id}`;
   if (key === lastAnnouncedTurn) return;
   lastAnnouncedTurn = key;
-  // Murder's queue gets a generic line instead of a name — see
-  // Sound.announcePassDevice's own comment for why.
-  Sound.announcePassDevice(state.phase === PHASES.MURDER ? null : player.name);
+  // Murder, Recruit, and Recruit Response all get a generic line instead
+  // of a name — see Sound.announcePassDevice's own comment for why. All
+  // three now run as full-table queue passes where only one specific
+  // player's turn actually does anything (the acting Deceiver during
+  // Murder and Recruit; the chosen target during Recruit Response), so
+  // naming every turn would make the one turn that matters no harder to
+  // single out than any other — but staying silent on the name keeps all
+  // three passes audibly identical to each other and to Murder, which is
+  // the simpler invariant to hold and verify (see issue #2 / #1).
+  const GENERIC_ANNOUNCE_PHASES = [PHASES.MURDER, PHASES.RECRUIT, PHASES.RECRUIT_RESPONSE];
+  Sound.announcePassDevice(GENERIC_ANNOUNCE_PHASES.includes(state.phase) ? null : player.name);
 }
 
 /* Two more collective (not per-player) spoken cues, each tracked the same
@@ -272,17 +270,24 @@ function resolveComputerTurn() {
       break;
     }
     case PHASES.RECRUIT: {
-      const targetId = botPickRecruitTarget(state);
-      if (targetId) {
-        recordRecruitTarget(state, targetId);
-        advanceToRecruitResponse(state);
+      // Same advanceRecruitQueue() call at the end regardless of role —
+      // only the recruiting Deceiver's turn actually records anything
+      // first, exactly matching the human action handler (see
+      // currentRecruitStep, engine.js) and Murder's identical pattern
+      // above.
+      if (currentRecruitStep(state) === 'offer') {
+        const targetId = botPickRecruitTarget(state);
+        if (targetId) recordRecruitTarget(state, targetId);
       }
+      advanceRecruitQueue(state);
       break;
     }
     case PHASES.RECRUIT_RESPONSE: {
-      if (botChooseRecruitResponse()) resolveRecruitmentJoin(state);
-      else resolveRecruitmentRefusal(state);
-      uiStage.eliminationRevealed = false;
+      if (currentRecruitResponseStep(state) === 'response') {
+        recordRecruitResponse(state, botChooseRecruitResponse() ? 'join' : 'refuse');
+      }
+      const done = advanceRecruitResponseQueue(state);
+      if (done) uiStage.eliminationRevealed = false;
       break;
     }
     case PHASES.FINAL_CIRCLE_DECISION: {
@@ -674,6 +679,9 @@ const actions = {
     render();
   },
   'tap-recruit': () => {
+    // Same tap for every living player's turn during the Recruit queue
+    // pass, whether they're the recruiting Deceiver or not — identical to
+    // tap-murder-turn.
     uiStage.recruitTapped = true;
     Sound.play('tap');
     render();
@@ -683,14 +691,19 @@ const actions = {
     uiStage.recruitTarget = btn.dataset.id;
     render();
   },
-  'confirm-recruit-target': () => {
-    if (!uiStage.recruitTarget) return;
-    recordRecruitTarget(state, uiStage.recruitTarget);
-    advanceToRecruitResponse(state);
+  'confirm-recruit-turn': () => {
+    // Used by BOTH the recruiting Deceiver's real turn and every other
+    // living player's "Nothing To Do" turn during the Recruit queue pass
+    // — identical pattern to confirm-murder-turn.
+    if (currentRecruitStep(state) === 'offer') {
+      if (!uiStage.recruitTarget) return;
+      recordRecruitTarget(state, uiStage.recruitTarget);
+    }
     uiStage.recruitTapped = false;
     uiStage.recruitTarget = null;
     uiStage.recruitResponseTapped = false;
     uiStage.recruitJoinConfirmed = false;
+    advanceRecruitQueue(state);
     // Voice announcement fires automatically from render() ->
     // maybeAnnouncePassDevice(), the same generic path every other queue
     // turn uses — see that function's comment for why this hand-off is
@@ -700,32 +713,47 @@ const actions = {
     render();
   },
   'tap-recruit-response': () => {
+    // Same tap for every living player's turn during the Recruit Response
+    // queue pass, whether they're the chosen target or not.
     uiStage.recruitResponseTapped = true;
     Sound.play('tap');
+    render();
+  },
+  'confirm-recruit-response-turn': () => {
+    // The "Nothing To Do" continue for every living player except the
+    // chosen target during the Recruit Response queue pass — identical
+    // pattern to confirm-murder-turn's "nothing to do" branch.
+    uiStage.recruitResponseTapped = false;
+    const done = advanceRecruitResponseQueue(state);
+    if (done) uiStage.eliminationRevealed = false;
+    Sound.play(done ? 'gather' : 'passDevice');
+    persist();
     render();
   },
   'recruit-join': () => {
     // Doesn't resolve yet -- shows a private confirmation of the new role
     // (and fellow Deceiver, if any) first. See 'confirm-recruit-join'
-    // below for where the actual role change happens.
+    // below for where the choice is actually recorded.
     uiStage.recruitJoinConfirmed = true;
     Sound.play('tap');
     render();
   },
   'confirm-recruit-join': () => {
-    resolveRecruitmentJoin(state);
+    recordRecruitResponse(state, 'join');
     uiStage.recruitResponseTapped = false;
     uiStage.recruitJoinConfirmed = false;
-    uiStage.eliminationRevealed = false;
-    Sound.play('gather');
+    const done = advanceRecruitResponseQueue(state);
+    if (done) uiStage.eliminationRevealed = false;
+    Sound.play(done ? 'gather' : 'passDevice');
     persist();
     render();
   },
   'recruit-refuse': () => {
-    resolveRecruitmentRefusal(state);
+    recordRecruitResponse(state, 'refuse');
     uiStage.recruitResponseTapped = false;
-    uiStage.eliminationRevealed = false;
-    Sound.play('gather');
+    const done = advanceRecruitResponseQueue(state);
+    if (done) uiStage.eliminationRevealed = false;
+    Sound.play(done ? 'gather' : 'passDevice');
     persist();
     render();
   },

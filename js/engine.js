@@ -486,11 +486,23 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
    explicitly asks for nothing public: no interstitial, no announcement,
    nothing on the MAIN screen or its button hints that this round is any
    different from an ordinary one. See main.js's begin-draw handler (where
-   the decision to branch here actually happens) and sound.js (where the
-   spoken cues around the hand-off to the recruit deliberately avoid
-   saying their name aloud — the on-screen text already shows it, but a
-   name spoken into a room full of people is a real leak the screen alone
-   isn't). */
+   the decision to branch here actually happens).
+
+   Privacy fix (issue #2): this used to pass the phone directly from the
+   recruiter to the target and nobody else — two named hand-offs back to
+   back with no filler turns, which was itself the tell (see issue #1).
+   It now runs as TWO full-table queue passes, exactly mirroring Murder's
+   single pass: RECRUIT cycles every living player once (only the
+   recruiting Deceiver has a real task — recruitStepFor — everyone else
+   gets the same content-free "Nothing To Do" turn Murder already uses),
+   then RECRUIT_RESPONSE cycles every living player a second time (only
+   the chosen target has a real task — recruitResponseStepFor). The
+   recruiter also gets an ordinary "nothing to do" turn during the second
+   pass, and the eventual target got one during the first — nobody's path
+   through either queue is shaped any differently by their role. Spoken
+   announcements during both phases are generic ("pass the phone to the
+   next player"), never a name — see maybeAnnouncePassDevice in main.js —
+   matching Murder exactly, so naming is never a secondary leak either. */
 
 function shouldTriggerRecruitment(state) {
   if (state.finalCircleActive) return false;
@@ -501,9 +513,9 @@ function shouldTriggerRecruitment(state) {
 
 function beginRecruitment(state) {
   const deceiver = livingPlayers(state).find((p) => p.role === ROLES.DECEIVER.id);
-  state.recruitment = { recruiterId: deceiver.id, targetId: null };
+  state.recruitment = { recruiterId: deceiver.id, targetId: null, response: null };
   state.recruitmentAttempted = true;
-  state.pendingQueue = [deceiver.id];
+  state.pendingQueue = livingPlayers(state).map((p) => p.id);
   state.phase = PHASES.RECRUIT;
 }
 
@@ -511,13 +523,70 @@ function eligibleRecruitTargets(state) {
   return livingPlayers(state).filter((p) => p.role === ROLES.LOYAL.id);
 }
 
+/** Mirrors murderStepFor: only the recruiting Deceiver has a real task
+ *  this queue pass ('offer' — choose who to approach); every other living
+ *  player sees the same content-free "Nothing To Do" turn. */
+function recruitStepFor(state, playerId) {
+  return playerId === state.recruitment.recruiterId ? 'offer' : null;
+}
+
+function currentRecruitStep(state) {
+  const player = currentQueuePlayer(state);
+  return player ? recruitStepFor(state, player.id) : null;
+}
+
 function recordRecruitTarget(state, targetId) {
   state.recruitment.targetId = targetId;
 }
 
+/** Advances the Recruit queue one turn. Returns true once every living
+ *  player has had a turn, at which point the second full pass (Recruit
+ *  Response) begins. */
+function advanceRecruitQueue(state) {
+  advanceQueue(state);
+  if (state.pendingQueue.length) return false;
+  advanceToRecruitResponse(state);
+  return true;
+}
+
 function advanceToRecruitResponse(state) {
-  state.pendingQueue = [state.recruitment.targetId];
+  state.pendingQueue = livingPlayers(state).map((p) => p.id);
   state.phase = PHASES.RECRUIT_RESPONSE;
+}
+
+/** Mirrors recruitStepFor for the second pass: only the chosen target has
+ *  a real task ('response' — accept or refuse); everyone else, including
+ *  the recruiter themselves, sees the same "Nothing To Do" turn. */
+function recruitResponseStepFor(state, playerId) {
+  return playerId === state.recruitment.targetId ? 'response' : null;
+}
+
+function currentRecruitResponseStep(state) {
+  const player = currentQueuePlayer(state);
+  return player ? recruitResponseStepFor(state, player.id) : null;
+}
+
+/** Records the target's choice without resolving it yet — resolution (and
+ *  the resulting public Elimination Reveal) waits until every remaining
+ *  living player has also had their "Nothing To Do" turn, the same way
+ *  Murder defers resolveMurder until advanceMurderQueue empties the
+ *  queue. */
+function recordRecruitResponse(state, response) {
+  state.recruitment.response = response;
+}
+
+/** Advances the Recruit Response queue one turn. Returns true once every
+ *  living player has had a turn, at which point the recorded response is
+ *  resolved into a (now public) Elimination Reveal. */
+function advanceRecruitResponseQueue(state) {
+  advanceQueue(state);
+  if (state.pendingQueue.length) return false;
+  if (state.recruitment.response === 'join') {
+    resolveRecruitmentJoin(state);
+  } else {
+    resolveRecruitmentRefusal(state);
+  }
+  return true;
 }
 
 /* Successful recruitment: the target becomes a Deceiver outright, for

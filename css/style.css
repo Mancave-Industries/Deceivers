@@ -8,7 +8,7 @@
      not "premium dark app". Hard rule set, not a guess —
      JET BLACK + CREAM + SATURATED YELLOW + BLOOD RED, almost no
      mid-grey, no translucent panels washing black toward charcoal.
-     Keeping the existing --charcoal-*/--gold-*/--crimson-*/--ink names
+     Keeping the existing --charcoal-* / --gold-* / --crimson-* / --ink names
      (every component already consumes them) but setting their VALUES to
      the hard rule — not renaming to --ink/--panel/etc as literally
      proposed, since --ink already means "text colour" throughout this
@@ -789,6 +789,31 @@ body {
   box-shadow: 0 0 0 2px var(--gold-400) inset;
 }
 .target-card .player-avatar { width: 44px; height: 44px; font-size: 20.5px; }
+
+/* ---------- Privacy badge (PRIVATE / PUBLIC labeling, issue #2) ---------- */
+/* Icon + text together, never colour alone -- WCAG 1.4.1. Chamfered like
+   every other component here (buttons, toggles, panels), not a pill --
+   see the component-language note at the top of this file. */
+.privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px 7px 11px;
+  clip-path: var(--clip-chamfer-sm);
+  border: 2px solid #000000;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  align-self: center;
+  margin-bottom: 14px;
+}
+/* .reveal-stage already spaces its children with its own gap -- cancel
+   the badge's own margin there so the two don't stack. */
+.reveal-stage > .privacy-badge { margin-bottom: 0; }
+.privacy-badge .icon { width: 17px; height: 17px; flex-shrink: 0; }
+.privacy-badge.is-private { background: var(--crimson-500); color: var(--ink); }
+.privacy-badge.is-public { background: var(--gold-500); color: var(--charcoal-950); }
 
 /* ---------- Pass-device overlay ---------- */
 .pass-overlay {

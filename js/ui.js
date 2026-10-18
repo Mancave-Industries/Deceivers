@@ -78,9 +78,25 @@ function meaningBlock(text) {
     <p class="reveal-body" style="font-size:13px;">${text}</p>`;
 }
 
+/* Explicit PRIVATE/PUBLIC labeling (issue #2 / audit #1, P0.2): every
+   hand-off and announcement screen carries one of these, distinguished by
+   icon + text, never colour alone. 'private' always uses passPrompt's own
+   lock icon and crimson tone; 'public' always uses the group icon and
+   gold tone — the same pairing on every screen that uses it, so the
+   badge itself becomes a learned, trustworthy signal rather than one
+   more thing to read carefully each time. */
+function privacyBadge(kind) {
+  const isPrivate = kind === 'private';
+  return `<div class="privacy-badge ${isPrivate ? 'is-private' : 'is-public'}">
+    ${iconUse(isPrivate ? ICONS.lock : ICONS.group, 'icon')}
+    <span>${isPrivate ? 'Private — Your Eyes Only' : 'Public — Everyone Watch'}</span>
+  </div>`;
+}
+
 function passPrompt({ icon, name, instruction, action, btnLabel, btnClass }) {
   return `
     <div class="reveal-stage fade-in">
+      ${privacyBadge('private')}
       ${iconUse(icon, 'icon icon-lg')}
       <div class="pass-overlay-eyebrow">Pass the phone to</div>
       <div class="pass-overlay-name">${escapeHtml(name)}</div>
@@ -216,6 +232,7 @@ UI.renderReveal = function renderReveal(state, tapped) {
 
   screen('reveal').innerHTML = `
     <div class="reveal-stage">
+      ${privacyBadge('private')}
       ${cardFlip(CARD_FRAMES.back, role.symbol, 'card-lg', 'revealCard')}
       ${meaningBlock(`${role.description}${fellowText}`)}
       <button class="btn btn-confirm btn-block" data-action="confirm-reveal">Hide My Role &amp; Pass The Phone</button>
@@ -229,6 +246,7 @@ UI.renderMain = function renderMain(state) {
   const living = livingPlayers(state);
   const seriesNote = state.seriesLength > 1 ? `Game ${state.seriesGame} of ${state.seriesLength} — ` : '';
   screen('main').innerHTML = `
+    ${privacyBadge('public')}
     <div class="screen-title-row">${state.finalCircleActive ? 'The Final Circle' : `Round ${state.round}`}</div>
     <div class="screen-subtitle">${seriesNote}${living.length} remain in the circle.</div>
     <div class="prize-pot-panel">
@@ -274,6 +292,7 @@ UI.renderFinalCircleDecision = function renderFinalCircleDecision(state, tapped)
 
   const living = livingPlayers(state).length;
   screen('finalCircleDecision').innerHTML = `
+    ${privacyBadge('private')}
     <div class="screen-title-row">The Final Circle</div>
     <div class="screen-subtitle">${living} remain. ${escapeHtml(player.name)}, decide in silence.</div>
     <p class="reveal-body">Choose <strong>End Game</strong> to stop here and reveal every role now, or <strong>Banish Again</strong> to force one more vote. It only takes one Banish Again among the circle to force a vote — no one will ever know who chose what.</p>
@@ -293,7 +312,7 @@ UI.renderDraw = function renderDraw(state, tapped) {
     screen('draw').innerHTML = passPrompt({
       icon: ICONS.hourglass,
       name: player.name,
-      instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now, then they tap below to draw their card for this round.`,
+      instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — their card is their own business. Once it's in their hands, they tap below to draw.`,
       action: 'tap-draw',
       btnLabel: 'Draw A Card',
     });
@@ -304,6 +323,7 @@ UI.renderDraw = function renderDraw(state, tapped) {
   const def = result.def;
   screen('draw').innerHTML = `
     <div class="reveal-stage">
+      ${privacyBadge('private')}
       ${cardFlip(CARD_FRAMES.back, def.symbol, 'card-lg', 'drawCard')}
       <p class="reveal-body">${result.wentToPot
         ? `<strong>${escapeHtml(player.name)}</strong> drew ${def.name} — <strong>${def.value} gold</strong> added to the Prize Pot!`
@@ -321,8 +341,10 @@ UI.renderHand = function renderHand(state) {
   if (!player) return;
 
   screen('hand').innerHTML = `
+    ${privacyBadge('private')}
     <div class="screen-title-row">${escapeHtml(player.name)}'s Hand</div>
     <div class="screen-subtitle">Your held cards — what each one means:</div>
+    <p class="small-note">Still just for you — keep the screen down until you're ready to pass it on.</p>
     <div class="hand-scroll">
       ${player.hand.length === 0 ? '<div class="hand-empty">No cards held.</div>' : player.hand.map((cardId) => {
         const def = cardDefById(cardId);
@@ -343,6 +365,7 @@ UI.renderNight = function renderNight(state) {
   const def = cardDefById(state.currentFateCard);
   screen('night').innerHTML = `
     <div class="reveal-stage fade-in">
+      ${privacyBadge('public')}
       ${iconUse(ICONS.skull, 'icon icon-lg flicker')}
       <div class="pass-overlay-eyebrow">Tonight's Fate</div>
       <h2 class="reveal-headline">Murder</h2>
@@ -363,6 +386,7 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
   if (announced) {
     screen('discuss').innerHTML = `
       <div class="reveal-stage fade-in">
+        ${privacyBadge('public')}
         ${iconUse(ICONS.skull, 'icon icon-lg flicker')}
         <h2 class="reveal-headline">The Time For Talk Is Over</h2>
         <p class="reveal-body">Voting begins now.</p>
@@ -376,6 +400,7 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
 
   screen('discuss').innerHTML = `
     <div class="reveal-stage fade-in">
+      ${privacyBadge('public')}
       ${iconUse(ICONS.vote, 'icon icon-lg')}
       <div class="pass-overlay-eyebrow">${isFinal ? 'The Final Circle' : "Tonight's Fate"}</div>
       <h2 class="reveal-headline">${isFinal ? 'The Final Circle Vote' : 'Banishment Vote'}</h2>
@@ -399,6 +424,7 @@ UI.renderDiscuss = function renderDiscuss(state, announced, secondsLeft) {
    whichever candidate list and confirm action the step calls for. */
 function murderTargetGrid({ targets, selectedId, subtitle, canUseChoice, useChoice, confirmAction, confirmLabel, selectAction }) {
   return `
+    ${privacyBadge('private')}
     <div class="screen-title-row">Choose A Victim</div>
     <div class="screen-subtitle">${subtitle}</div>
     <div class="target-grid">
@@ -439,6 +465,7 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
   if (!step) {
     screen('murder').innerHTML = `
       <div class="reveal-stage">
+        ${privacyBadge('private')}
         ${iconUse(ICONS.candle, 'icon icon-lg flicker')}
         <h2 class="reveal-headline">Nothing To Do</h2>
         <p class="reveal-body">There's no task for you this turn. Hide the screen and pass the phone to the next player.</p>
@@ -469,6 +496,7 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
     const targets = eligibleMurderTargets(state);
     const selection = shortlistSelection || [];
     screen('murder').innerHTML = `
+      ${privacyBadge('private')}
       <div class="screen-title-row">Shortlist Two Victims</div>
       <div class="screen-subtitle">Choose two players. Your fellow Deceiver will decide between them.</div>
       <div class="target-grid">
@@ -507,6 +535,7 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
     const canUseChoice = currentMurderDeciderHoldsChoiceCard(state);
     screen('murder').innerHTML = `
       <div class="reveal-stage">
+        ${privacyBadge('private')}
         ${iconUse(ICONS.candle, 'icon icon-lg flicker')}
         <h2 class="reveal-headline">Your Fellow Deceiver Has Chosen</h2>
         <p class="reveal-body">They want to kill <strong>${escapeHtml(target ? target.name : '')}</strong>. Confirm the kill, or save them instead.</p>
@@ -546,8 +575,26 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
     return;
   }
 
+  // Full-table queue pass, mirroring Murder: only the recruiting
+  // Deceiver's turn (currentRecruitStep === 'offer') shows real content —
+  // every other living player sees the identical content-free turn Murder
+  // already uses, so the phone's path around the table never shows who
+  // the recruiter is.
+  if (currentRecruitStep(state) !== 'offer') {
+    screen('recruit').innerHTML = `
+      <div class="reveal-stage">
+        ${privacyBadge('private')}
+        ${iconUse(ICONS.hoodedFigure, 'icon icon-lg flicker')}
+        <h2 class="reveal-headline">Nothing To Do</h2>
+        <p class="reveal-body">There's no task for you this turn. Hide the screen and pass the phone to the next player.</p>
+        <button class="btn btn-confirm btn-block" data-action="confirm-recruit-turn">Continue</button>
+      </div>`;
+    return;
+  }
+
   const targets = eligibleRecruitTargets(state);
   screen('recruit').innerHTML = `
+    ${privacyBadge('private')}
     <div class="screen-title-row">Recruit Or Die</div>
     <div class="screen-subtitle">Choose one Loyal player to secretly approach.</div>
     <div class="target-grid">
@@ -557,9 +604,9 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
           <span>${escapeHtml(p.name)}</span>
         </button>`).join('')}
     </div>
-    <p class="small-note" style="margin-top:14px;">If they refuse, they will not survive the night. Once confirmed, hide the screen and pass the phone directly to them — no one else.</p>
+    <p class="small-note" style="margin-top:14px;">If they refuse, they will not survive the night. Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
     <div class="spacer"></div>
-    <button class="btn btn-danger btn-block" data-action="confirm-recruit-target" ${selectedId ? '' : 'disabled'}>Confirm Choice</button>`;
+    <button class="btn btn-danger btn-block" data-action="confirm-recruit-turn" ${selectedId ? '' : 'disabled'}>Confirm Choice</button>`;
 };
 
 UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinConfirmed) {
@@ -577,6 +624,22 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinCon
     return;
   }
 
+  // Full-table queue pass, mirroring Murder: only the chosen target's
+  // turn (currentRecruitResponseStep === 'response') shows real content —
+  // every other living player, including the recruiter, sees the
+  // identical content-free turn.
+  if (currentRecruitResponseStep(state) !== 'response') {
+    screen('recruitResponse').innerHTML = `
+      <div class="reveal-stage">
+        ${privacyBadge('private')}
+        ${iconUse(ICONS.hoodedFigure, 'icon icon-lg flicker')}
+        <h2 class="reveal-headline">Nothing To Do</h2>
+        <p class="reveal-body">There's no task for you this turn. Hide the screen and pass the phone to the next player.</p>
+        <button class="btn btn-confirm btn-block" data-action="confirm-recruit-response-turn">Continue</button>
+      </div>`;
+    return;
+  }
+
   if (joinConfirmed) {
     const fellows = fellowDeceivers(state, player.id);
     const fellowText = fellows.length
@@ -584,17 +647,19 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinCon
       : '';
     screen('recruitResponse').innerHTML = `
       <div class="reveal-stage">
+        ${privacyBadge('private')}
         ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
         <h2 class="reveal-headline">You Are Now A Deceiver</h2>
         ${meaningBlock(`${ROLES.DECEIVER.description}${fellowText}`)}
         <div class="spacer"></div>
-        <button class="btn btn-confirm btn-block" data-action="confirm-recruit-join">Hide This &amp; Pass The Phone Back</button>
+        <button class="btn btn-confirm btn-block" data-action="confirm-recruit-join">Hide This &amp; Pass The Phone On</button>
       </div>`;
     return;
   }
 
   screen('recruitResponse').innerHTML = `
     <div class="reveal-stage">
+      ${privacyBadge('private')}
       ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
       <h2 class="reveal-headline">A Deceiver Has Approached You</h2>
       <p class="reveal-body">In secret, one of the Deceivers offers you a place among them. Choose now — no one else will ever know this moment happened.</p>
@@ -602,7 +667,7 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinCon
       <div class="spacer"></div>
       <button class="btn btn-confirm btn-block" data-action="recruit-join" style="margin-bottom:10px;">Join Us</button>
       <button class="btn btn-danger btn-block" data-action="recruit-refuse">Refuse</button>
-      <p class="small-note" style="margin-top:14px;">Hide the screen and pass the phone back once you've chosen.</p>
+      <p class="small-note" style="margin-top:14px;">Hide the screen and pass the phone to the next player once you've chosen, same as everyone else.</p>
     </div>`;
 };
 
@@ -629,6 +694,7 @@ UI.renderVote = function renderVote(state, tapped, selectedId, useDagger) {
   const targets = eligibleVoteTargets(state, voter.id);
   const hasDagger = voter.hand.includes('dagger');
   container.innerHTML = `
+    ${privacyBadge('private')}
     <div class="screen-title-row">${isFinal ? 'The Final Circle Vote' : 'Banishment Vote'}</div>
     <div class="screen-subtitle">${escapeHtml(voter.name)}, choose who to banish.</div>
     <div class="target-grid">
@@ -666,6 +732,7 @@ UI.renderElimination = function renderElimination(state, revealed) {
     const eventLabel = context === 'quiet' ? 'the night' : context === 'night' ? 'the night' : 'the vote';
     screen('elimination').innerHTML = `
       <div class="reveal-stage fade-in">
+        ${privacyBadge('public')}
         ${iconUse(ICONS.compass, 'icon icon-lg')}
         <div class="pass-overlay-eyebrow">Gather Everyone</div>
         <h2 class="reveal-headline">The Circle Must See This</h2>
@@ -753,7 +820,7 @@ UI.renderElimination = function renderElimination(state, revealed) {
     }
   }
 
-  screen('elimination').innerHTML = body;
+  screen('elimination').innerHTML = privacyBadge('public') + body;
   triggerFlip('elimCard');
 };
 
@@ -772,6 +839,7 @@ UI.renderResults = function renderResults(state) {
   const leaderboard = Object.entries(state.seriesScores).sort((a, b) => b[1] - a[1]);
 
   screen('results').innerHTML = `
+    ${privacyBadge('public')}
     <div class="winner-banner scale-in">
       <h2>${winnerRole === ROLES.DECEIVER ? 'The Deceivers Win' : 'The Loyal Prevail'}</h2>
       <p class="small-note">${winnerRole === ROLES.DECEIVER
