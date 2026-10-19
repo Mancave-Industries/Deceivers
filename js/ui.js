@@ -935,6 +935,9 @@ const INTERSTITIAL_DURATION_MS = 1700;
 // this guarantees the game still moves on rather than ever getting stuck
 // on a frozen fullscreen overlay.
 const INTERSTITIAL_VIDEO_FALLBACK_MS = 12000;
+// Ceiling for a held still (see `hold`, below) — the opening narration is
+// ~20 s; this only matters if audio somehow never reports finishing.
+const INTERSTITIAL_HOLD_MAX_MS = 40000;
 let interstitialDismissTimer = null;
 
 /* Shows the named interstitial, then calls onComplete once it's done --
@@ -943,8 +946,14 @@ let interstitialDismissTimer = null;
    fallback timer above, or a tap) -- a cinematic beat the game waits on,
    but never indefinitely. If the key is unrecognized, resolves
    immediately with no visual at all rather than risk ever getting stuck
-   on a blank overlay. */
-UI.showInterstitial = function showInterstitial(key, onComplete) {
+   on a blank overlay.
+
+   Optional `hold(release)`: for a still, keeps it up past the normal
+   duration until release() is called (the opening narration uses this so
+   lines 01-03 play over the Reveal card, before anyone sees a private
+   role). A tap still dismisses it immediately, and it never stays longer
+   than INTERSTITIAL_HOLD_MAX_MS. */
+UI.showInterstitial = function showInterstitial(key, onComplete, hold) {
   const src = INTERSTITIAL_IMAGES[key];
   const overlay = document.getElementById('interstitialOverlay');
   const img = document.getElementById('interstitialImg');
@@ -984,7 +993,16 @@ UI.showInterstitial = function showInterstitial(key, onComplete) {
     video.classList.add('hidden');
     img.classList.remove('hidden');
     img.src = src;
-    interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_DURATION_MS);
+    if (typeof hold === 'function') {
+      let minElapsed = false;
+      let released = false;
+      const tryFinish = () => { if (minElapsed && released) finish(); };
+      interstitialDismissTimer = setTimeout(() => { minElapsed = true; tryFinish(); }, INTERSTITIAL_DURATION_MS);
+      setTimeout(finish, INTERSTITIAL_HOLD_MAX_MS);
+      hold(() => { released = true; tryFinish(); });
+    } else {
+      interstitialDismissTimer = setTimeout(finish, INTERSTITIAL_DURATION_MS);
+    }
   }
   overlay.classList.remove('hidden');
 };

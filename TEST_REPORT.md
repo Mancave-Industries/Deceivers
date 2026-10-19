@@ -2371,3 +2371,36 @@ public event, with the recruit's choice resolving to the table as an
 indistinguishable ordinary Quiet Night or Murder either way; the Final
 Circle itself never begins before at least one ordinary round has been
 played, regardless of starting player count.
+
+
+---
+
+## Recorded narration (feature/recorded-narration)
+
+The Web Speech voice is replaced by 115 prerecorded Mancaveman clips (see `PROJECT_PLAN.md` §8b). Test harness: `tests/narration/` (local headless Chromium, no network, no paid services). Evidence: `test-evidence/recorded-narration/`. **32/32 checks passed.**
+
+**Assets** — manifest lists exactly 115 clips, all present, no 16_C/35_C; all AAC mono 48 kHz, 590 s, 7.4 MB; no text-to-speech left in the code; pools use only lines 1–39, unused exactly 19, 28, 29.
+
+**Take selection** — 6,000 picks per pool: every take reachable, lines and takes uniform within 8%, no take of a line ever repeated back to back, 16 and 35 only ever A/B.
+
+**Full-game gate (10 games)** — 3–8 seats, human/bot mixes, hidden knowledge, recruit accept and refuse, forced murder and banishment rounds, 3- and 2-game series, Banish Again loops: all reached Results with no page errors or unhandled promise rejections; between them every one of the 24 narration pools fired; the hand-off line is always last in a sequence.
+
+**Patient play (2 games at listening pace, no interstitial skipping)** — every requested clip played to its end (64/64 and 67/67), none cut off, none overlapping; the opening (01–03) played over the held Reveal card.
+
+**Failure modes** — every clip 404, and real AAC in a browser that can't decode it: games complete, the vote still starts, no uncaught errors. Sound off: no sound, line or clip at all, vote still starts. Mute mid-clip: voice stops in ~100 ms. Voting callback fires exactly once when its line is superseded, and immediately with sound off.
+
+**Matched pairs (only who holds which role differs) — audio identical, including which take played and the event count:**
+- M1 3-player murder, Deceiver seat 1 vs 3 — 10 vs 10 events
+- M2 7-player two-Deceiver shortlist/narrow — 22 vs 22
+- R1 Recruit accept, recruiter seat differs — 37 vs 37
+- R2 Recruit accept vs refuse, same seats — 37 vs 37
+- F1 Final Circle ballot, Deceiver seat differs — 13 vs 13
+
+**Secrecy fixes made in this branch (all Recruit or Die):**
+1. Picking a recruit target played a tap only on the recruiter's turn — now silent (same fix issue #2 made for murder).
+2. Tapping Join played a tap only on the approached player's turn when they accepted — now silent. *Found by R1/R2 failing on the first run.*
+3. A recruit round had no Night Falls beat, unlike a murder round — the first pass now ends with the Night Falls cue and the second opens with a Night Falls line.
+
+**Still different (structural, not narration):** an ordinary murder round's Draw pass makes a card sound per turn and the Night screen adds one "Proceed" tap; a recruit round has neither (and looks different on screen). Fixing that means changing the Recruit-or-Die flow.
+
+**Not tested here — needs a real iPhone:** AAC playback in Safari, silent switch, lock-screen interruption mid-line, memory over a long series, first load on mobile data.

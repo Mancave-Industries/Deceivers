@@ -141,3 +141,5 @@ CodePen preview frames run on a sandboxed origin (`*.cdpn.io`), so
 `localStorage` (used for Continue/save) works the same as any other origin
 — saves persist across reloads of that same Pen, but won't carry over if
 you fork the Pen to a new URL (a fresh Pen is a fresh origin).
+
+> **Recorded narration:** a CodePen paste can't carry the 115 clips in `assets/audio/narration/`, so the voice is silent there (the game still plays normally — missing clips are skipped). To hear it, host the files somewhere and point `NARRATION.BASE` in `js/narration.js` at that URL.

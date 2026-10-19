@@ -501,7 +501,7 @@ function resolveMurder(state, targetId, useDeceiversChoice) {
    pass, and the eventual target got one during the first — nobody's path
    through either queue is shaped any differently by their role. Spoken
    announcements during both phases are generic ("pass the phone to the
-   next player"), never a name — see maybeAnnouncePassDevice in main.js —
+   next player"), never a name — see collectHandoffNarration in main.js —
    matching Murder exactly, so naming is never a secondary leak either. */
 
 function shouldTriggerRecruitment(state) {

@@ -1214,6 +1214,53 @@ Public UI surfaces that are allowed to show Human/Computer status — because
 it was never secret — mark it plainly: the Setup screen's per-seat toggle,
 the Main hub's player list, and the Results screen's full role reveal.
 
+## 8b. Recorded narration (replaces the Web Speech voice)
+
+**Supersedes every Web Speech API / "Pass the phone to X" / tone-and-jitter
+note above.** All spoken narration is now the prerecorded Mancaveman voice:
+39 scripted lines, up to three takes each, 115 clips in
+`assets/audio/narration/NN_X.m4a` (AAC-LC 96 kbps mono, -20 LUFS, ~7.4 MB
+total). `js/narration.js` is the manifest and maps game moments to named
+line pools; `js/sound.js` plays them through the existing WebAudio context.
+There is no text-to-speech anywhere, and **player names are never spoken**
+— every hand-off in every queue uses the generic lines 05-08; names stay on
+screen.
+
+Each moment picks a line from its pool at random, then a take at random,
+never the same take of a line twice in a row (16 and 35 have A/B only).
+Clips are fetched in the background after Start Game and decoded on
+demand (decoding everything would be ~110 MB). Any clip that fails or is
+slow is skipped silently; the vote never waits more than 12 s on its line.
+
+| Moment | Lines |
+|---|---|
+| Opening, over the held Reveal card before any role is seen | 01, 02, 03 |
+| Round 1 board, each game | 04 |
+| Every human hand-off | 05-08 |
+| Night falls (and the second Recruit-or-Die pass, see below) | 09-11 |
+| Gather screen before a reveal | 12-14 |
+| Discussion ends (ordinary / Final Circle) | 15-17 / 25 |
+| Discussion starts (ordinary / after Banish Again) | 18 / 32 |
+| Reveal: murder (first / later), quiet, shield, banished, tie | 20 / 20-21, 22, 23, 24, 26 |
+| Final Circle opens (once per game) then each ballot round | 30, 31 |
+| Game over: lead-in, winner, closing on the series' last game | 27/33, 34-35 or 36-37, 38 |
+| Play Again | 39 |
+
+Unused by design: 19 (no clean trigger), 28 and 29 (Recruit or Die must
+have no announcement of its own).
+
+**Recruit-or-Die audio secrecy fixes (same branch):** picking a recruit
+target is now silent, like picking a murder target (it used to add a tap
+only on the recruiter's turn); tapping Join is now silent too (it used to
+add a tap only on the approached player's turn when they accepted —
+found by the matched-pair tests, which now show accept, refuse and every
+"Nothing To Do" turn making identical sounds); and the end of the first recruit pass now
+plays the Night Falls cue and the second pass opens with a Night Falls
+line, so a recruit round has the same audible shape as an ordinary murder
+round (pass, Night Falls, pass, gather) instead of standing out. Per-turn
+card sounds in an ordinary Draw pass still differ from the recruit pass —
+see `TEST_REPORT.md`.
+
 ## 9. Out of scope for this prototype
 
 - Networked/multi-device play (explicitly a shared-phone prototype per brief)

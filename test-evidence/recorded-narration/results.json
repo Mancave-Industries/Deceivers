@@ -1,0 +1,220 @@
+{
+ "when": "2026-10-19T23:16:41.514Z",
+ "passed": 32,
+ "failed": 0,
+ "results": [
+  {
+   "name": "manifest lists exactly 115 clips",
+   "pass": true,
+   "detail": "115"
+  },
+  {
+   "name": "every manifest clip exists on disk and no extra files",
+   "pass": true,
+   "detail": "115 files"
+  },
+  {
+   "name": "no 16_C or 35_C anywhere",
+   "pass": true
+  },
+  {
+   "name": "pools reference only lines 1-39; unused lines are exactly 19, 28, 29",
+   "pass": true,
+   "detail": "unused [19,28,29]"
+  },
+  {
+   "name": "no text-to-speech left in the game code",
+   "pass": true
+  },
+  {
+   "name": "all clips are AAC mono 48 kHz",
+   "pass": true,
+   "detail": "590 s total, 7.4 MB"
+  },
+  {
+   "name": "take picker: every take reachable, uniform within 8%, no back-to-back repeat, 16/35 A/B only (6,000 picks per pool)",
+   "pass": true,
+   "detail": "24 pools"
+  },
+  {
+   "name": "gate G1_3p_murder",
+   "pass": true,
+   "detail": "13 phase changes, 15 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G2_4p_hidden",
+   "pass": true,
+   "detail": "19 phase changes, 28 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G3_5p_1bot",
+   "pass": true,
+   "detail": "31 phase changes, 60 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G4_6p_2bot_vote",
+   "pass": true,
+   "detail": "47 phase changes, 61 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,discussion,votingBegins,gather,banished,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G5_7p_2deceiver",
+   "pass": true,
+   "detail": "91 phase changes, 115 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,murderLater,discussion,votingBegins,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G6_7p_recruit_accept",
+   "pass": true,
+   "detail": "75 phase changes, 99 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,quietNight,discussion,votingBegins,tie,murderFirst,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G7_7p_recruit_refuse",
+   "pass": true,
+   "detail": "47 phase changes, 86 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,discussion,votingBegins,tie,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G8_8p_bot_heavy",
+   "pass": true,
+   "detail": "101 phase changes, 105 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,shieldSaved,murderFirst,discussion,votingBegins,tie,quietNight,murderLater,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+  },
+  {
+   "name": "gate G9_4p_series3",
+   "pass": true,
+   "detail": "73 phase changes, 133 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,finalCircle,finalDecision,banishAgain,finalVotingBegins,tie,banished,endLeadIn,deceiverWin,loyalWin,nightFalls,murderFirst,seriesClosing,farewell"
+  },
+  {
+   "name": "gate G10_5p_series2_banishagain",
+   "pass": true,
+   "detail": "140 phase changes, 177 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,nightFalls,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,discussion,votingBegins,shieldSaved,seriesClosing"
+  },
+  {
+   "name": "gate exercised every narration pool",
+   "pass": true,
+   "detail": "24 pools"
+  },
+  {
+   "name": "hand-off line is always the last part of a sequence (never interrupts a phase line)",
+   "pass": true
+  },
+  {
+   "name": "patient P1_5p_patient: all requested clips played, none overlapping",
+   "pass": true,
+   "detail": {
+    "problems": [],
+    "requested": 64,
+    "started": 64,
+    "failed": 0,
+    "superseded": [],
+    "overlap": 0,
+    "intro": "intro1+intro2+intro3"
+   }
+  },
+  {
+   "name": "patient P2_7p_recruit_refuse_patient: all requested clips played, none overlapping",
+   "pass": true,
+   "detail": {
+    "problems": [],
+    "requested": 67,
+    "started": 67,
+    "failed": 0,
+    "superseded": [],
+    "overlap": 0,
+    "intro": "intro1+intro2+intro3"
+   }
+  },
+  {
+   "name": "failure mode \"404\": game completes, vote still starts, no uncaught errors",
+   "pass": true,
+   "detail": {
+    "problems": [],
+    "failedClips": 74,
+    "narrations": 72
+   }
+  },
+  {
+   "name": "failure mode \"m4a\": game completes, vote still starts, no uncaught errors",
+   "pass": true,
+   "detail": {
+    "problems": [],
+    "failedClips": 74,
+    "narrations": 72
+   }
+  },
+  {
+   "name": "sound off: no sound effect, line or clip at all, vote still starts",
+   "pass": true,
+   "detail": {
+    "audibleEvents": 0,
+    "loggerOnly": 27
+   }
+  },
+  {
+   "name": "mute mid-clip stops the voice within 200 ms",
+   "pass": true,
+   "detail": {
+    "ignore": true,
+    "muteStopMs": 99,
+    "votingCallsAfterSupersede": 1,
+    "votingCallsSoundOff": 1
+   }
+  },
+  {
+   "name": "voting callback fires exactly once when its line is superseded, and immediately with sound off",
+   "pass": true,
+   "detail": {
+    "ignore": true,
+    "muteStopMs": 99,
+    "votingCallsAfterSupersede": 1,
+    "votingCallsSoundOff": 1
+   }
+  },
+  {
+   "name": "matched pair M1 3p single-decider murder: audio identical (sound effects, lines, takes, count)",
+   "pass": true,
+   "detail": "10 vs 10 events"
+  },
+  {
+   "name": "matched pair M2 7p two Deceivers (shortlist/narrow): audio identical (sound effects, lines, takes, count)",
+   "pass": true,
+   "detail": "22 vs 22 events"
+  },
+  {
+   "name": "matched pair R1 recruit accept, different recruiter seat: audio identical (sound effects, lines, takes, count)",
+   "pass": true,
+   "detail": "37 vs 37 events"
+  },
+  {
+   "name": "matched pair R2 recruit accept vs refuse (same seats): audio identical (sound effects, lines, takes, count)",
+   "pass": true,
+   "detail": "37 vs 37 events"
+  },
+  {
+   "name": "matched pair F1 Final Circle ballot, Deceiver seat differs: audio identical (sound effects, lines, takes, count)",
+   "pass": true,
+   "detail": "13 vs 13 events"
+  },
+  {
+   "name": "recruit round vs ordinary murder round (6 living): same hand-off count and Night Falls beat",
+   "pass": true,
+   "detail": {
+    "recruit": {
+     "handoffLines": 12,
+     "nightFallsVoice": 2,
+     "nightFallsSfx": 1,
+     "passKnocks": 10,
+     "taps": 13,
+     "cardSounds": 0
+    },
+    "ordinary": {
+     "handoffLines": 12,
+     "nightFallsVoice": 2,
+     "nightFallsSfx": 1,
+     "passKnocks": 10,
+     "taps": 14,
+     "cardSounds": 6
+    }
+   }
+  }
+ ],
+ "clipSeconds": 590,
+ "clipBytes": 7449342
+}

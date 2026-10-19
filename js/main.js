@@ -76,65 +76,141 @@ function autoAdvanceComputerTurns() {
   return true;
 }
 
-/* Spoken "Pass the phone to X" announcement for every per-player queue
-   turn a human actually needs to see (computer turns never reach this —
-   autoAdvanceComputerTurns returns early for those, before render() gets
-   here). Tracks the last phase+player it announced so repeat renders of
-   the same still-current turn (there's no polling timer that would cause
-   this today, but it costs nothing to guard against) don't re-trigger
-   it; resets the moment the game leaves queue-phase territory so the
-   same player leading a later round's queue is announced again. */
-let lastAnnouncedTurn = null;
+/* Recorded narration (see sound.js / narration.js). Each render collects
+   what should be spoken for the screen it's showing, in order, and hands
+   it to Sound.narrate as ONE sequence — phase-arrival lines first, then
+   the hand-off line for a human queue turn. Every line fires once per
+   arrival, tracked by the flags below (reset the moment the game leaves
+   that screen-state), so repeat renders of the same still-current screen
+   never repeat it.
 
-function maybeAnnouncePassDevice() {
+   Hand-offs are always the generic "next player" lines (05-08), in every
+   queue — no player name is ever spoken; names stay on screen. Nothing
+   chosen here depends on anyone's secret role. */
+let lastAnnouncedTurn = null;
+let nightAnnounced = false;
+let recruitNightAnnounced = false;
+let gatherAnnounced = false;
+let discussAnnounced = false;
+let finalDecisionAnnounced = false;
+let resultsAnnounced = false;
+let gameBeginsAnnouncedFor = null;
+let finalCircleIntroducedFor = null;
+let murdersThisGame = 0;
+// Set by start-game: holds the Reveal interstitial on screen while the
+// opening lines (01-03) play, before anyone sees a private role.
+let introPending = false;
+
+function resetNarrationTracking() {
+  lastAnnouncedTurn = null;
+  nightAnnounced = false;
+  recruitNightAnnounced = false;
+  gatherAnnounced = false;
+  discussAnnounced = false;
+  finalDecisionAnnounced = false;
+  resultsAnnounced = false;
+  gameBeginsAnnouncedFor = null;
+  finalCircleIntroducedFor = null;
+  murdersThisGame = 0;
+}
+
+function collectPhaseNarration() {
+  const parts = [];
+  const phase = state.phase;
+
+  // Round 1's board, once per game: "Let the game begin."
+  if (phase === PHASES.MAIN && state.round === 1 && gameBeginsAnnouncedFor !== state.seriesGame) {
+    gameBeginsAnnouncedFor = state.seriesGame;
+    parts.push('gameBegins');
+  }
+
+  if (phase === PHASES.NIGHT) {
+    if (!nightAnnounced) { nightAnnounced = true; parts.push('nightFalls'); }
+  } else {
+    nightAnnounced = false;
+  }
+
+  // Recruit or Die runs as two full-table passes. An ordinary murder round
+  // is: a pass, Night Falls, a pass, then the reveal — so the second
+  // recruit pass opens with the same Night Falls beat, making the round's
+  // audible shape match instead of standing out (secrecy fix).
+  if (phase === PHASES.RECRUIT_RESPONSE) {
+    if (!recruitNightAnnounced) { recruitNightAnnounced = true; parts.push('nightFalls'); }
+  } else {
+    recruitNightAnnounced = false;
+  }
+
+  if (phase === PHASES.ELIMINATION && !uiStage.eliminationRevealed) {
+    if (!gatherAnnounced) { gatherAnnounced = true; parts.push('gather'); }
+  } else {
+    gatherAnnounced = false;
+  }
+
+  if (phase === PHASES.DISCUSS) {
+    if (!discussAnnounced && !uiStage.votingAnnounced) {
+      discussAnnounced = true;
+      parts.push(state.finalBanishmentActive ? 'banishAgain' : 'discussion');
+    }
+  } else {
+    discussAnnounced = false;
+  }
+
+  if (phase === PHASES.FINAL_CIRCLE_DECISION) {
+    if (!finalDecisionAnnounced) {
+      finalDecisionAnnounced = true;
+      if (finalCircleIntroducedFor !== state.seriesGame) {
+        finalCircleIntroducedFor = state.seriesGame;
+        parts.push('finalCircle');
+      }
+      parts.push('finalDecision');
+    }
+  } else {
+    finalDecisionAnnounced = false;
+  }
+
+  if (phase === PHASES.RESULTS) {
+    if (!resultsAnnounced) {
+      resultsAnnounced = true;
+      parts.push('endLeadIn');
+      parts.push(state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin');
+      if (state.seriesGame >= state.seriesLength) parts.push('seriesClosing');
+    }
+  } else {
+    resultsAnnounced = false;
+  }
+
+  return parts;
+}
+
+/* The hand-off line for a human queue turn (computer turns never reach
+   this — autoAdvanceComputerTurns returns early for those). Keyed on
+   phase+player so a repeat render of the same turn doesn't repeat it. */
+function collectHandoffNarration() {
   if (!QUEUE_PHASES.includes(state.phase)) {
     lastAnnouncedTurn = null;
-    return;
+    return [];
   }
   const player = currentQueuePlayer(state);
-  if (!player) return;
+  if (!player) return [];
   const key = `${state.phase}:${player.id}`;
-  if (key === lastAnnouncedTurn) return;
+  if (key === lastAnnouncedTurn) return [];
   lastAnnouncedTurn = key;
-  // Murder, Recruit, and Recruit Response all get a generic line instead
-  // of a name — see Sound.announcePassDevice's own comment for why. All
-  // three now run as full-table queue passes where only one specific
-  // player's turn actually does anything (the acting Deceiver during
-  // Murder and Recruit; the chosen target during Recruit Response), so
-  // naming every turn would make the one turn that matters no harder to
-  // single out than any other — but staying silent on the name keeps all
-  // three passes audibly identical to each other and to Murder, which is
-  // the simpler invariant to hold and verify (see issue #2 / #1).
-  const GENERIC_ANNOUNCE_PHASES = [PHASES.MURDER, PHASES.RECRUIT, PHASES.RECRUIT_RESPONSE];
-  Sound.announcePassDevice(GENERIC_ANNOUNCE_PHASES.includes(state.phase) ? null : player.name);
+  return ['handoff'];
 }
 
-/* Two more collective (not per-player) spoken cues, each tracked the same
-   way as maybeAnnouncePassDevice — fire once on arrival, reset once the
-   game leaves that exact screen-state, so repeat renders of the same
-   still-current screen don't repeat it. */
-let nightAnnounced = false;
-let gatherAnnounced = false;
-
-function maybeAnnounceNightFalls() {
-  if (state.phase !== PHASES.NIGHT) {
-    nightAnnounced = false;
-    return;
+/* The outcome line for the Elimination Reveal, chosen purely from the
+   public outcome the card flip is about to show. */
+function revealNarrationPool() {
+  const context = state.eliminationContext;
+  if (context === 'quiet') return 'quietNight';
+  if (context === 'night') {
+    if (state.nightResult.protected) return 'shieldSaved';
+    const pool = murdersThisGame > 0 ? 'murderLater' : 'murderFirst';
+    murdersThisGame += 1;
+    return pool;
   }
-  if (nightAnnounced) return;
-  nightAnnounced = true;
-  Sound.announceNightFalls();
-}
-
-function maybeAnnounceGather() {
-  const onGatherScreen = state.phase === PHASES.ELIMINATION && !uiStage.eliminationRevealed;
-  if (!onGatherScreen) {
-    gatherAnnounced = false;
-    return;
-  }
-  if (gatherAnnounced) return;
-  gatherAnnounced = true;
-  Sound.announceGather();
+  const tied = state.voteResult.tie || !state.voteResult.banishedId;
+  return tied ? 'tie' : 'banished';
 }
 
 /* Open Discussion runs on a clock — 30 seconds per living player — instead
@@ -169,6 +245,8 @@ function startDiscussTimer() {
    move to the vote queue. Triggered only by the Discuss timer reaching
    zero (see startDiscussTimer) — there's no button for this anymore. */
 function beginVotingSequence() {
+  // Guard: the clock and the "vote now" button can't both start it.
+  if (uiStage.votingAnnounced) return;
   uiStage.votingAnnounced = true;
   render();
   Sound.announceVotingBegins(() => {
@@ -180,7 +258,7 @@ function beginVotingSequence() {
     uiStage.useDagger = false;
     persist();
     render();
-  });
+  }, state.finalBanishmentActive);
 }
 
 /* Shared by the choose-end-game / choose-banish-again action handlers —
@@ -279,7 +357,9 @@ function resolveComputerTurn() {
         const targetId = botPickRecruitTarget(state);
         if (targetId) recordRecruitTarget(state, targetId);
       }
-      advanceRecruitQueue(state);
+      // End of the first pass sounds exactly like the end of an ordinary
+      // round's Draw pass going into a murder night (secrecy fix).
+      if (advanceRecruitQueue(state)) Sound.play('nightFalls');
       break;
     }
     case PHASES.RECRUIT_RESPONSE: {
@@ -324,18 +404,22 @@ function render() {
   if (interstitialPending) {
     const key = interstitialPending;
     interstitialPending = null;
-    UI.showInterstitial(key, render);
+    const hold = key === 'reveal' && introPending ? Sound.narrateIntro : null;
+    introPending = false;
+    UI.showInterstitial(key, render, hold);
     return;
   }
 
   showScreen(state.phase);
   UI.updateHeader(state);
 
-  if (autoAdvanceComputerTurns()) return;
-
-  maybeAnnouncePassDevice();
-  maybeAnnounceNightFalls();
-  maybeAnnounceGather();
+  const phaseNarration = collectPhaseNarration();
+  if (autoAdvanceComputerTurns()) {
+    if (phaseNarration.length) Sound.narrate(phaseNarration);
+    return;
+  }
+  const narration = phaseNarration.concat(collectHandoffNarration());
+  if (narration.length) Sound.narrate(narration);
 
   switch (state.phase) {
     case PHASES.TITLE:
@@ -411,6 +495,7 @@ const actions = {
     cancelDiscussTimer();
     Sound.stopMusic();
     state = createInitialState();
+    resetNarrationTracking();
     setupNames = Array(CONFIG.minPlayers).fill('');
     setupIsComputer = Array(CONFIG.minPlayers).fill(false);
     seriesLength = 1;
@@ -426,7 +511,9 @@ const actions = {
     const saved = loadState();
     if (saved) {
       state = saved;
+      resetNarrationTracking();
       Sound.setEnabled(state.settings.sound);
+      Sound.preloadNarration();
       Sound.setMusicEnabled(state.settings.music);
       document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
       if (state.phase === PHASES.DISCUSS) { Sound.startMusic(); startDiscussTimer(); }
@@ -478,8 +565,11 @@ const actions = {
     Sound.play('gather');
     startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
     Analytics.gameStarted();
+    resetNarrationTracking();
+    Sound.preloadNarration();
     uiStage.revealTapped = false;
     interstitialPending = 'reveal';
+    introPending = true;
     persist();
     render();
   },
@@ -694,7 +784,10 @@ const actions = {
     render();
   },
   'select-recruit-target': (btn) => {
-    Sound.play('tap');
+    // Deliberately silent, exactly like select-murder-target: the
+    // recruiter's real turn must make the same two sounds (open tap,
+    // closing confirm) as every "Nothing To Do" turn in this pass, or a
+    // listener could count sounds to find the last Deceiver (secrecy fix).
     uiStage.recruitTarget = btn.dataset.id;
     render();
   },
@@ -710,12 +803,13 @@ const actions = {
     uiStage.recruitTarget = null;
     uiStage.recruitResponseTapped = false;
     uiStage.recruitJoinConfirmed = false;
-    advanceRecruitQueue(state);
-    // Voice announcement fires automatically from render() ->
-    // maybeAnnouncePassDevice(), the same generic path every other queue
-    // turn uses — see that function's comment for why this hand-off is
-    // deliberately NOT special-cased.
-    Sound.play('passDevice');
+    const passDone = advanceRecruitQueue(state);
+    // Hand-off voice comes from render() -> collectHandoffNarration(), the
+    // same generic path every queue turn uses. The pass's last confirm
+    // plays the Night Falls cue instead of the hand-off knock — exactly
+    // what an ordinary round's last Draw does going into a murder night
+    // (secrecy fix; see collectPhaseNarration).
+    Sound.play(passDone ? 'nightFalls' : 'passDevice');
     persist();
     render();
   },
@@ -741,8 +835,12 @@ const actions = {
     // Doesn't resolve yet -- shows a private confirmation of the new role
     // (and fellow Deceiver, if any) first. See 'confirm-recruit-join'
     // below for where the choice is actually recorded.
+    // Deliberately silent (secrecy fix): accepting must make exactly the
+    // same sounds as refusing and as every "Nothing To Do" turn in this
+    // pass — open tap, then one closing knock. A tap here gave the chosen
+    // target's turn an extra sound, revealing who was approached and that
+    // they joined.
     uiStage.recruitJoinConfirmed = true;
-    Sound.play('tap');
     render();
   },
   'confirm-recruit-join': () => {
@@ -784,6 +882,7 @@ const actions = {
       Sound.play(tied ? 'tie' : 'banished', 0.5);
     }
     render();
+    Sound.narrate([revealNarrationPool()], null, { delay: 0.9 });
   },
   'continue-elimination': () => {
     // A Final Circle banishment continues differently from an ordinary
@@ -857,6 +956,7 @@ const actions = {
     Sound.play('gather');
     startNextGameInSeries(state);
     Analytics.gameStarted();
+    murdersThisGame = 0;
     uiStage.revealTapped = false;
     interstitialPending = 'reveal';
     persist();
@@ -869,7 +969,9 @@ const actions = {
     Sound.stopMusic();
     clearState();
     state = createInitialState();
+    resetNarrationTracking();
     render();
+    Sound.narrate(['farewell']);
   },
   'reset-game': () => {
     Sound.play('tap');
@@ -878,8 +980,10 @@ const actions = {
     cancelComputerTurnTimer();
     cancelDiscussTimer();
     Sound.stopMusic();
+    Sound.stopNarration();
     clearState();
     state = createInitialState();
+    resetNarrationTracking();
     render();
   },
 };
@@ -915,7 +1019,7 @@ document.getElementById('menuBtn').addEventListener('click', () => {
     toggle.addEventListener('change', (e) => {
       state.settings.sound = e.target.checked;
       Sound.setEnabled(state.settings.sound);
-      if (state.settings.sound) Sound.play('tap');
+      if (state.settings.sound) { Sound.play('tap'); if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration(); }
       persist();
     });
   }
@@ -939,7 +1043,7 @@ document.getElementById('soundBtn').addEventListener('click', () => {
   state.settings.sound = !state.settings.sound;
   Sound.setEnabled(state.settings.sound);
   document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
-  if (state.settings.sound) Sound.play('tap');
+  if (state.settings.sound) { Sound.play('tap'); if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration(); }
   persist();
 });
 
