@@ -93,15 +93,19 @@ function privacyBadge(kind) {
   </div>`;
 }
 
-function passPrompt({ icon, name, instruction, action, btnLabel, btnClass }) {
+function passPrompt({ icon, name, instruction, action, btnLabel, btnClass, artworkKey }) {
+  const art = artworkKey ? HANDOFF_ARTWORK[artworkKey] : null;
   return `
-    <div class="reveal-stage fade-in">
-      ${privacyBadge('private')}
-      ${iconUse(icon, 'icon icon-lg')}
-      <div class="pass-overlay-eyebrow">Pass the phone to</div>
-      <div class="pass-overlay-name">${escapeHtml(name)}</div>
-      <p class="pass-overlay-instruction">${instruction}</p>
-      <button class="btn ${btnClass || 'btn-primary'}" data-action="${action}">${btnLabel}</button>
+    <div class="handoff-screen">
+      ${art ? `<div class="handoff-art" style="background-image:url('${art}')"></div>` : ''}
+      <div class="reveal-stage fade-in">
+        ${privacyBadge('private')}
+        ${iconUse(icon, 'icon icon-lg')}
+        <div class="pass-overlay-eyebrow">Pass the phone to</div>
+        <div class="pass-overlay-name">${escapeHtml(name)}</div>
+        <p class="pass-overlay-instruction">${instruction}</p>
+        <button class="btn ${btnClass || 'btn-primary'}" data-action="${action}">${btnLabel}</button>
+      </div>
     </div>`;
 }
 
@@ -226,6 +230,7 @@ UI.renderReveal = function renderReveal(state, tapped) {
       instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — no one else should see this screen. Once it's in their hands, they tap below.`,
       action: 'tap-reveal',
       btnLabel: 'Reveal My Role',
+      artworkKey: 'reveal',
     });
     return;
   }
@@ -286,6 +291,7 @@ UI.renderFinalCircleDecision = function renderFinalCircleDecision(state, tapped)
       action: 'tap-final-circle-decision',
       btnLabel: "I'm Ready To Decide",
       btnClass: 'btn-danger',
+      artworkKey: 'finalCircleDecision',
     });
     return;
   }
@@ -315,6 +321,7 @@ UI.renderDraw = function renderDraw(state, tapped) {
       instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — their card is their own business. Once it's in their hands, they tap below to draw.`,
       action: 'tap-draw',
       btnLabel: 'Draw A Card',
+      artworkKey: 'draw',
     });
     return;
   }
@@ -456,6 +463,7 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
       action: 'tap-murder-turn',
       btnLabel: 'My Turn',
       btnClass: 'btn-danger',
+      artworkKey: 'murder',
     });
     return;
   }
@@ -571,6 +579,7 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
       action: 'tap-recruit',
       btnLabel: 'My Turn',
       btnClass: 'btn-danger',
+      artworkKey: 'recruit',
     });
     return;
   }
@@ -620,6 +629,7 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinCon
       instruction: `Hand the phone to <strong>${escapeHtml(player.name)}</strong> now and look away — no one else should see this screen. Once it's in their hands, they tap below.`,
       action: 'tap-recruit-response',
       btnLabel: 'My Turn',
+      artworkKey: 'recruitResponse',
     });
     return;
   }
@@ -687,6 +697,7 @@ UI.renderVote = function renderVote(state, tapped, selectedId, useDagger) {
       action: 'tap-vote',
       btnLabel: "I'm Ready To Vote",
       btnClass: isFinal ? 'btn-danger' : 'btn-primary',
+      artworkKey: 'vote',
     });
     return;
   }
@@ -930,6 +941,24 @@ const INTERSTITIAL_IMAGES = {
   'deceiver-win': 'assets/brand/interstitials/deceiver-win.jpg?v=202610072020',
 };
 const INTERSTITIAL_DURATION_MS = 1700;
+
+// Murder Queue and Recruit-or-Die (including the Recruit response step,
+// which mirrors Murder's full-table queue pass) must be visually
+// indistinguishable -- every living player passes through one of these
+// uniformly, real task or not, so a single shared constant is used for
+// all three rather than three keys independently set to the same path.
+// That makes the artwork drift apart under future edits structurally
+// impossible instead of just unlikely.
+const MURDER_RECRUIT_ARTWORK = INTERSTITIAL_IMAGES['night-falls'];
+const HANDOFF_ARTWORK = {
+  reveal: INTERSTITIAL_IMAGES.reveal,
+  draw: INTERSTITIAL_IMAGES.draw,
+  murder: MURDER_RECRUIT_ARTWORK,
+  recruit: MURDER_RECRUIT_ARTWORK,
+  recruitResponse: MURDER_RECRUIT_ARTWORK,
+  vote: INTERSTITIAL_IMAGES.banishment,
+  finalCircleDecision: 'assets/brand/night-skyline.png?v=202610081216',
+};
 // Safety net only, not the normal path: if a video somehow never fires
 // 'ended' (autoplay blocked, a corrupt file, a very long future export),
 // this guarantees the game still moves on rather than ever getting stuck
