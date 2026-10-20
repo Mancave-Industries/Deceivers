@@ -1249,17 +1249,31 @@ slow is skipped silently; the vote never waits more than 12 s on its line.
 Unused by design: 19 (no clean trigger), 28 and 29 (Recruit or Die must
 have no announcement of its own).
 
-**Recruit-or-Die audio secrecy fixes (same branch):** picking a recruit
-target is now silent, like picking a murder target (it used to add a tap
-only on the recruiter's turn); tapping Join is now silent too (it used to
-add a tap only on the approached player's turn when they accepted —
-found by the matched-pair tests, which now show accept, refuse and every
-"Nothing To Do" turn making identical sounds); and the end of the first recruit pass now
-plays the Night Falls cue and the second pass opens with a Night Falls
-line, so a recruit round has the same audible shape as an ordinary murder
-round (pass, Night Falls, pass, gather) instead of standing out. Per-turn
-card sounds in an ordinary Draw pass still differ from the recruit pass —
-see `TEST_REPORT.md`.
+**Recruit-or-Die audio secrecy (same branch):** a recruit round now sounds
+exactly like an ordinary murder round — same sounds, same voice lines, same
+count, same game-driven timing — whether the approached player accepts or
+refuses. No rules changed; only what the table hears and the order of
+screens:
+
+- The first (recruit) pass stands in for a Draw pass, three taps per turn
+  like a draw: **My Turn** plays the card sound, **Continue / Confirm
+  Choice** plays a tap, then the player's own hand screen and **Done — Pass
+  The Phone** plays the pass-on knock. Picking the target is silent.
+- After the last turn: the Night Falls cue, the Night card, the public
+  Night screen ("Tonight's Fate: Murder", Night Falls line) and the same
+  **Begin The Night** tap and Murder card as an ordinary murder round.
+- The second (response) pass already mirrored a Murder pass; **Join** is now
+  silent (it used to add a tap only on the approached player's turn when
+  they accepted).
+- Drawing a card always plays the plain card sound — the separate coin
+  chime for gold is retired, because a recruit pass draws nothing and gold
+  is ~60% of draws, so the chime alone would give the round away. The gold
+  still shows on the drawer's screen and in the Prize Pot.
+
+**Not audio, still visible:** after a recruit round nobody's card count on
+the public board has gone up and the Prize Pot hasn't moved, because no one
+drew (that's the rule). The recruiter's turn also has one extra, silent tap
+(picking the target), like a Deceiver's murder turn does.
 
 ## 9. Out of scope for this prototype
 

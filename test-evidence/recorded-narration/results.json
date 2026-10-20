@@ -1,6 +1,6 @@
 {
- "when": "2026-10-19T23:16:41.514Z",
- "passed": 32,
+ "when": "2026-10-20T06:12:26.472Z",
+ "passed": 34,
  "failed": 0,
  "results": [
   {
@@ -54,7 +54,7 @@
   {
    "name": "gate G4_6p_2bot_vote",
    "pass": true,
-   "detail": "47 phase changes, 61 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,discussion,votingBegins,gather,banished,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+   "detail": "44 phase changes, 55 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,discussion,votingBegins,gather,banished,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,loyalWin,seriesClosing"
   },
   {
    "name": "gate G5_7p_2deceiver",
@@ -64,27 +64,27 @@
   {
    "name": "gate G6_7p_recruit_accept",
    "pass": true,
-   "detail": "75 phase changes, 99 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,quietNight,discussion,votingBegins,tie,murderFirst,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+   "detail": "163 phase changes, 182 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,quietNight,discussion,votingBegins,tie,shieldSaved,murderFirst,murderLater,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing"
   },
   {
    "name": "gate G7_7p_recruit_refuse",
    "pass": true,
-   "detail": "47 phase changes, 86 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,discussion,votingBegins,tie,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+   "detail": "22 phase changes, 43 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,discussion,votingBegins,banished,finalCircle,finalDecision,endLeadIn,deceiverWin,seriesClosing"
   },
   {
    "name": "gate G8_8p_bot_heavy",
    "pass": true,
-   "detail": "101 phase changes, 105 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,shieldSaved,murderFirst,discussion,votingBegins,tie,quietNight,murderLater,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
+   "detail": "75 phase changes, 83 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,shieldSaved,murderFirst,discussion,votingBegins,banished,quietNight,murderLater,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing"
   },
   {
    "name": "gate G9_4p_series3",
    "pass": true,
-   "detail": "73 phase changes, 133 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,finalCircle,finalDecision,banishAgain,finalVotingBegins,tie,banished,endLeadIn,deceiverWin,loyalWin,nightFalls,murderFirst,seriesClosing,farewell"
+   "detail": "71 phase changes, 126 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,finalCircle,finalDecision,banishAgain,finalVotingBegins,tie,banished,endLeadIn,deceiverWin,nightFalls,murderFirst,seriesClosing,farewell"
   },
   {
    "name": "gate G10_5p_series2_banishagain",
    "pass": true,
-   "detail": "140 phase changes, 177 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,nightFalls,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,discussion,votingBegins,shieldSaved,seriesClosing"
+   "detail": "110 phase changes, 144 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,nightFalls,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,discussion,votingBegins,loyalWin,seriesClosing"
   },
   {
    "name": "gate exercised every narration pool",
@@ -113,8 +113,8 @@
    "pass": true,
    "detail": {
     "problems": [],
-    "requested": 67,
-    "started": 67,
+    "requested": 124,
+    "started": 124,
     "failed": 0,
     "superseded": [],
     "overlap": 0,
@@ -180,12 +180,12 @@
   {
    "name": "matched pair R1 recruit accept, different recruiter seat: audio identical (sound effects, lines, takes, count)",
    "pass": true,
-   "detail": "37 vs 37 events"
+   "detail": "45 vs 45 events"
   },
   {
    "name": "matched pair R2 recruit accept vs refuse (same seats): audio identical (sound effects, lines, takes, count)",
    "pass": true,
-   "detail": "37 vs 37 events"
+   "detail": "45 vs 45 events"
   },
   {
    "name": "matched pair F1 Final Circle ballot, Deceiver seat differs: audio identical (sound effects, lines, takes, count)",
@@ -193,26 +193,19 @@
    "detail": "13 vs 13 events"
   },
   {
-   "name": "recruit round vs ordinary murder round (6 living): same hand-off count and Night Falls beat",
+   "name": "recruit round vs ordinary murder round (humans): identical sounds, lines, takes and count — refuse and accept",
    "pass": true,
-   "detail": {
-    "recruit": {
-     "handoffLines": 12,
-     "nightFallsVoice": 2,
-     "nightFallsSfx": 1,
-     "passKnocks": 10,
-     "taps": 13,
-     "cardSounds": 0
-    },
-    "ordinary": {
-     "handoffLines": 12,
-     "nightFallsVoice": 2,
-     "nightFallsSfx": 1,
-     "passKnocks": 10,
-     "taps": 14,
-     "cardSounds": 6
-    }
-   }
+   "detail": "46 / 46 / 46 events"
+  },
+  {
+   "name": "recruit round vs ordinary murder round (all computer seats): identical sounds, lines, takes and count — refuse and accept",
+   "pass": true,
+   "detail": "5 / 5 / 5 events"
+  },
+  {
+   "name": "recruit round vs ordinary murder round (all computer seats): same timing between every sound, within 250 ms",
+   "pass": true,
+   "detail": "worst gap difference 42 ms; round length 9175 / 9121 / 9120 ms"
   }
  ],
  "clipSeconds": 590,

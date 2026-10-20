@@ -8,17 +8,17 @@ PASS  take picker: every take reachable, uniform within 8%, no back-to-back repe
 PASS  gate G1_3p_murder  — 13 phase changes, 15 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,endLeadIn,deceiverWin,seriesClosing
 PASS  gate G2_4p_hidden  — 19 phase changes, 28 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing
 PASS  gate G3_5p_1bot  — 31 phase changes, 60 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,seriesClosing
-PASS  gate G4_6p_2bot_vote  — 47 phase changes, 61 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,discussion,votingBegins,gather,banished,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing
+PASS  gate G4_6p_2bot_vote  — 44 phase changes, 55 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,discussion,votingBegins,gather,banished,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,loyalWin,seriesClosing
 PASS  gate G5_7p_2deceiver  — 91 phase changes, 115 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,murderLater,discussion,votingBegins,tie,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing
-PASS  gate G6_7p_recruit_accept  — 75 phase changes, 99 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,quietNight,discussion,votingBegins,tie,murderFirst,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing
-PASS  gate G7_7p_recruit_refuse  — 47 phase changes, 86 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,discussion,votingBegins,tie,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing
-PASS  gate G8_8p_bot_heavy  — 101 phase changes, 105 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,shieldSaved,murderFirst,discussion,votingBegins,tie,quietNight,murderLater,banished,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing
-PASS  gate G9_4p_series3  — 73 phase changes, 133 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,finalCircle,finalDecision,banishAgain,finalVotingBegins,tie,banished,endLeadIn,deceiverWin,loyalWin,nightFalls,murderFirst,seriesClosing,farewell
-PASS  gate G10_5p_series2_banishagain  — 140 phase changes, 177 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,nightFalls,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,discussion,votingBegins,shieldSaved,seriesClosing
+PASS  gate G6_7p_recruit_accept  — 163 phase changes, 182 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,quietNight,discussion,votingBegins,tie,shieldSaved,murderFirst,murderLater,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,endLeadIn,deceiverWin,seriesClosing
+PASS  gate G7_7p_recruit_refuse  — 22 phase changes, 43 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,murderFirst,discussion,votingBegins,banished,finalCircle,finalDecision,endLeadIn,deceiverWin,seriesClosing
+PASS  gate G8_8p_bot_heavy  — 75 phase changes, 83 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,nightFalls,gather,shieldSaved,murderFirst,discussion,votingBegins,banished,quietNight,murderLater,finalCircle,finalDecision,banishAgain,finalVotingBegins,endLeadIn,deceiverWin,seriesClosing
+PASS  gate G9_4p_series3  — 71 phase changes, 126 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,finalCircle,finalDecision,banishAgain,finalVotingBegins,tie,banished,endLeadIn,deceiverWin,nightFalls,murderFirst,seriesClosing,farewell
+PASS  gate G10_5p_series2_banishagain  — 110 phase changes, 144 narrations, pools: intro1,intro2,intro3,handoff,gameBegins,gather,quietNight,nightFalls,murderFirst,finalCircle,finalDecision,banishAgain,finalVotingBegins,banished,tie,endLeadIn,deceiverWin,discussion,votingBegins,loyalWin,seriesClosing
 PASS  gate exercised every narration pool  — 24 pools
 PASS  hand-off line is always the last part of a sequence (never interrupts a phase line)
 PASS  patient P1_5p_patient: all requested clips played, none overlapping  — {"problems":[],"requested":64,"started":64,"failed":0,"superseded":[],"overlap":0,"intro":"intro1+intro2+intro3"}
-PASS  patient P2_7p_recruit_refuse_patient: all requested clips played, none overlapping  — {"problems":[],"requested":67,"started":67,"failed":0,"superseded":[],"overlap":0,"intro":"intro1+intro2+intro3"}
+PASS  patient P2_7p_recruit_refuse_patient: all requested clips played, none overlapping  — {"problems":[],"requested":124,"started":124,"failed":0,"superseded":[],"overlap":0,"intro":"intro1+intro2+intro3"}
 PASS  failure mode "404": game completes, vote still starts, no uncaught errors  — {"problems":[],"failedClips":74,"narrations":72}
 PASS  failure mode "m4a": game completes, vote still starts, no uncaught errors  — {"problems":[],"failedClips":74,"narrations":72}
 PASS  sound off: no sound effect, line or clip at all, vote still starts  — {"audibleEvents":0,"loggerOnly":27}
@@ -26,10 +26,12 @@ PASS  mute mid-clip stops the voice within 200 ms  — {"ignore":true,"muteStopM
 PASS  voting callback fires exactly once when its line is superseded, and immediately with sound off  — {"ignore":true,"muteStopMs":99,"votingCallsAfterSupersede":1,"votingCallsSoundOff":1}
 PASS  matched pair M1 3p single-decider murder: audio identical (sound effects, lines, takes, count)  — 10 vs 10 events
 PASS  matched pair M2 7p two Deceivers (shortlist/narrow): audio identical (sound effects, lines, takes, count)  — 22 vs 22 events
-PASS  matched pair R1 recruit accept, different recruiter seat: audio identical (sound effects, lines, takes, count)  — 37 vs 37 events
-PASS  matched pair R2 recruit accept vs refuse (same seats): audio identical (sound effects, lines, takes, count)  — 37 vs 37 events
+PASS  matched pair R1 recruit accept, different recruiter seat: audio identical (sound effects, lines, takes, count)  — 45 vs 45 events
+PASS  matched pair R2 recruit accept vs refuse (same seats): audio identical (sound effects, lines, takes, count)  — 45 vs 45 events
 PASS  matched pair F1 Final Circle ballot, Deceiver seat differs: audio identical (sound effects, lines, takes, count)  — 13 vs 13 events
-PASS  recruit round vs ordinary murder round (6 living): same hand-off count and Night Falls beat  — {"recruit":{"handoffLines":12,"nightFallsVoice":2,"nightFallsSfx":1,"passKnocks":10,"taps":13,"cardSounds":0},"ordinary":{"handoffLines":12,"nightFallsVoice":2,"nightFallsSfx":1,"passKnocks":10,"taps":14,"cardSounds":6}}
+PASS  recruit round vs ordinary murder round (humans): identical sounds, lines, takes and count — refuse and accept  — 46 / 46 / 46 events
+PASS  recruit round vs ordinary murder round (all computer seats): identical sounds, lines, takes and count — refuse and accept  — 5 / 5 / 5 events
+PASS  recruit round vs ordinary murder round (all computer seats): same timing between every sound, within 250 ms  — worst gap difference 42 ms; round length 9175 / 9121 / 9120 ms
 
-32/32 passed
+34/34 passed
 EXIT 0

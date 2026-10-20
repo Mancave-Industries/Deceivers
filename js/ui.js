@@ -361,8 +361,10 @@ UI.renderHand = function renderHand(state) {
 
 /* ---------- 7. Night ---------- */
 
-UI.renderNight = function renderNight(state) {
-  const def = cardDefById(state.currentFateCard);
+UI.renderNight = function renderNight(state, defOverride) {
+  // defOverride: Recruit or Die shows this same screen with the Murder
+  // card's text (see main.js render) so the round looks ordinary.
+  const def = defOverride || cardDefById(state.currentFateCard);
   screen('night').innerHTML = `
     <div class="reveal-stage fade-in">
       ${privacyBadge('public')}
@@ -559,9 +561,32 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
 /* ---------- 8.5. Recruit or Die (a private two-player exchange, never a
    public event — see engine.js's "Recruit or Die" section) ---------- */
 
-UI.renderRecruit = function renderRecruit(state, tapped, selectedId) {
+UI.renderRecruit = function renderRecruit(state, tapped, selectedId, confirmed) {
   const player = currentQueuePlayer(state);
   if (!player) return;
+
+  // Third step of every turn, mirroring the Draw pass's Hand screen so the
+  // pass takes the same three taps as a Draw pass (secrecy fix).
+  if (tapped && confirmed) {
+    screen('recruit').innerHTML = `
+      ${privacyBadge('private')}
+      <div class="screen-title-row">${escapeHtml(player.name)}'s Hand</div>
+      <div class="screen-subtitle">Your held cards — what each one means:</div>
+      <p class="small-note">Still just for you — keep the screen down until you're ready to pass it on.</p>
+      <div class="hand-scroll">
+        ${player.hand.length === 0 ? '<div class="hand-empty">No cards held.</div>' : player.hand.map((cardId) => {
+          const def = cardDefById(cardId);
+          return `<div class="hand-card-wrap">
+            ${cardStatic(def.symbol)}
+            <span class="hand-card-name">${def.name}</span>
+            <span class="hand-card-desc">${def.description}</span>
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="spacer"></div>
+      <button class="btn btn-primary btn-block" data-action="recruit-pass-on">Done — Pass The Phone</button>`;
+    return;
+  }
 
   if (!tapped) {
     screen('recruit').innerHTML = passPrompt({

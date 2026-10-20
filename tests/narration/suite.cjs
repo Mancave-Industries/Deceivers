@@ -252,18 +252,53 @@ async function main() {
     record(`matched pair ${p.name}: audio identical (sound effects, lines, takes, count)`, same && !A.errors.length && !B.errors.length, `${shapeA.length} vs ${shapeB.length} events`);
   }
 
-  /* ---------- 5. Recruit round vs ordinary murder round: audible shape ---------- */
+  /* ---------- 5. Recruit round vs ordinary murder round ----------
+     Same table (7 seats, one removed before round 1 so 6 remain), same
+     seeds. Recruit: two Deceivers, one removed -> Recruit or Die fires.
+     Ordinary: one Deceiver (no recruitment possible), Murder card forced.
+     The round is compared from the "Begin Draw Phase" tap up to and
+     including the Gather voice line — everything a listener hears before
+     the public reveal (whose outcome is shown openly anyway). */
   {
-    const recruit = await runGame(browser, port, { name: 'S_recruit', players: 7, seed: 61, deceivers: [0, 3], mode: 'fast', prefer: { 'recruit-refuse': 50, 'recruit-join': 0 }, onMain: ({ round }) => { if (round === 1) state.players[3].alive = false; } });
-    const ordinary = await runGame(browser, port, { name: 'S_ordinary', players: 6, seed: 62, deceivers: [0], mode: 'fast', onMain: ({ round }) => { if (round === 1) state.currentFateCard = 'murder'; } });
-    const cls = (g, from) => shapeOf(segmentEvents(g, from, 'elimination'), false);
-    const r = cls(recruit, 'recruit'); const o = cls(ordinary, 'draw');
-    const count = (arr, x) => arr.filter((y) => y === x).length;
-    const summary = (arr) => ({ handoffLines: arr.filter((x) => x.includes('handoff')).length, nightFallsVoice: arr.filter((x) => x.includes('nightFalls')).length, nightFallsSfx: count(arr, 'sfx:nightFalls'), passKnocks: count(arr, 'sfx:passDevice'), taps: count(arr, 'sfx:tap'), cardSounds: count(arr, 'sfx:draw') + count(arr, 'sfx:gold') });
-    const rs = summary(r); const os_ = summary(o);
-    const structural = rs.handoffLines === os_.handoffLines && rs.nightFallsVoice === os_.nightFallsVoice && rs.nightFallsSfx === os_.nightFallsSfx;
-    record('recruit round vs ordinary murder round (6 living): same hand-off count and Night Falls beat', structural, { recruit: rs, ordinary: os_ });
-    pairOut.push({ name: 'recruit-vs-ordinary', recruit: r, ordinary: o, recruitSummary: rs, ordinarySummary: os_ });
+    const kill3 = ({ round }) => { if (round === 1) state.players[3].alive = false; };
+    const ordinaryMain = ({ round }) => { if (round === 1) { state.players[3].alive = false; state.currentFateCard = 'murder'; } };
+    const roundEvents = (g) => {
+      const start = g.marks.find((m) => m.label === 'click:begin-draw');
+      if (!start) return null;
+      const ev = g.events.filter((e) => (e.type === 'sfx' || e.type === 'narrate') && e.at >= start.at);
+      const end = ev.findIndex((e) => e.type === 'narrate' && e.d.pools.includes('gather'));
+      return end < 0 ? null : ev.slice(0, end + 1);
+    };
+    const variants = [
+      { label: 'humans', extra: {} },
+      { label: 'all computer seats', extra: { bots: [0, 1, 2, 3, 4, 5, 6] } },
+    ];
+    for (const v of variants) {
+      const base = { players: 7, seed: 61, mode: 'fast', stepMs: 80, ...v.extra };
+      const ord = await runGame(browser, port, { name: `S_ordinary_${v.label}`, ...base, deceivers: [0], onMain: ordinaryMain });
+      const recRefuse = await runGame(browser, port, { name: `S_recruit_refuse_${v.label}`, ...base, deceivers: [0, 3], onMain: kill3, prefer: { 'recruit-join': 0, 'recruit-refuse': 50 } });
+      const recAccept = await runGame(browser, port, { name: `S_recruit_accept_${v.label}`, ...base, deceivers: [0, 3], onMain: kill3, prefer: { 'recruit-join': 50, 'recruit-refuse': 0 } });
+      const O = roundEvents(ord); const RR = roundEvents(recRefuse); const RA = roundEvents(recAccept);
+      const isRecruit = (g) => g.phases.includes('recruit');
+      const ok0 = O && RR && RA && !isRecruit(ord) && isRecruit(recRefuse) && isRecruit(recAccept);
+      const so = ok0 ? shapeOf(O, true) : []; const sr = ok0 ? shapeOf(RR, true) : []; const sa = ok0 ? shapeOf(RA, true) : [];
+      const same = ok0 && JSON.stringify(so) === JSON.stringify(sr) && JSON.stringify(so) === JSON.stringify(sa);
+      const errs = ord.errors.concat(recRefuse.errors, recAccept.errors);
+      record(`recruit round vs ordinary murder round (${v.label}): identical sounds, lines, takes and count — refuse and accept`, same && !errs.length,
+        ok0 ? `${so.length} / ${sr.length} / ${sa.length} events` : 'scenario not reached');
+      const entry = { name: `recruit-vs-ordinary (${v.label})`, ordinary: so, recruitRefuse: sr, recruitAccept: sa };
+      if (v.label === 'all computer seats' && ok0) {
+        // With no human taps inside the passes, every gap is game-driven.
+        const gaps = (E) => E.slice(1).map((e, i) => e.at - E[i].at);
+        const go = gaps(O); const gr = gaps(RR); const ga = gaps(RA);
+        const worst = Math.max(...go.map((x, i) => Math.max(Math.abs(x - (gr[i] ?? 1e9)), Math.abs(x - (ga[i] ?? 1e9)))));
+        const total = (E) => E[E.length - 1].at - E[0].at;
+        entry.gapsMs = { ordinary: go, recruitRefuse: gr, recruitAccept: ga };
+        record('recruit round vs ordinary murder round (all computer seats): same timing between every sound, within 250 ms', same && worst <= 250,
+          `worst gap difference ${worst} ms; round length ${total(O)} / ${total(RR)} / ${total(RA)} ms`);
+      }
+      pairOut.push(entry);
+    }
   }
 
   await browser.close();

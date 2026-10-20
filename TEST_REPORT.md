@@ -2377,7 +2377,7 @@ played, regardless of starting player count.
 
 ## Recorded narration (feature/recorded-narration)
 
-The Web Speech voice is replaced by 115 prerecorded Mancaveman clips (see `PROJECT_PLAN.md` §8b). Test harness: `tests/narration/` (local headless Chromium, no network, no paid services). Evidence: `test-evidence/recorded-narration/`. **32/32 checks passed.**
+The Web Speech voice is replaced by 115 prerecorded Mancaveman clips (see `PROJECT_PLAN.md` §8b). Test harness: `tests/narration/` (local headless Chromium, no network, no paid services). Evidence: `test-evidence/recorded-narration/`. **34/34 checks passed.**
 
 **Assets** — manifest lists exactly 115 clips, all present, no 16_C/35_C; all AAC mono 48 kHz, 590 s, 7.4 MB; no text-to-speech left in the code; pools use only lines 1–39, unused exactly 19, 28, 29.
 
@@ -2396,11 +2396,16 @@ The Web Speech voice is replaced by 115 prerecorded Mancaveman clips (see `PROJE
 - R2 Recruit accept vs refuse, same seats — 37 vs 37
 - F1 Final Circle ballot, Deceiver seat differs — 13 vs 13
 
+**Recruit round vs ordinary murder round** — same table (7 seats, 6 remaining), same seeds; compared from the "Begin Draw Phase" tap through the Gather line, i.e. everything a listener hears before the public reveal:
+- Human seats: ordinary, recruit-refuse and recruit-accept rounds produce **identical** sequences — every sound effect, every voice line, the same takes, the same count.
+- All computer seats (so every gap is game-driven, not a person's tap): identical sequences and the same timing between every sound.
+
 **Secrecy fixes made in this branch (all Recruit or Die):**
 1. Picking a recruit target played a tap only on the recruiter's turn — now silent (same fix issue #2 made for murder).
-2. Tapping Join played a tap only on the approached player's turn when they accepted — now silent. *Found by R1/R2 failing on the first run.*
-3. A recruit round had no Night Falls beat, unlike a murder round — the first pass now ends with the Night Falls cue and the second opens with a Night Falls line.
+2. Tapping Join played a tap only on the approached player's turn when they accepted — now silent. *Found by the matched-pair tests.*
+3. The recruit round's structure now mirrors a murder round: the first pass takes a Draw pass's three taps (card sound, tap, pass-on knock, via the player's hand screen), then the Night Falls cue, card, public Night screen and "Begin The Night" tap, then the response pass.
+4. Draws always play the plain card sound (gold's coin chime retired) — otherwise ~60% of draw turns would chime and a recruit pass never could.
 
-**Still different (structural, not narration):** an ordinary murder round's Draw pass makes a card sound per turn and the Night screen adds one "Proceed" tap; a recruit round has neither (and looks different on screen). Fixing that means changing the Recruit-or-Die flow.
+**Still visible (not audio, would need a rule or board change):** the public board shows no new cards and no Prize Pot change after a recruit round; the recruiter's turn has one extra silent tap.
 
 **Not tested here — needs a real iPhone:** AAC playback in Safari, silent switch, lock-screen interruption mid-line, memory over a long series, first load on mobile data.

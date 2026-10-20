@@ -25,6 +25,11 @@ const uiStage = {
   finalCircleTapped: false,
   recruitTapped: false,
   recruitTarget: null,
+  // Recruit pass: the turn's middle step is done, showing the hand screen.
+  recruitConfirmed: false,
+  // Between the two Recruit passes: showing the public Night screen, exactly
+  // as an ordinary murder round does between its Draw and Murder passes.
+  recruitNight: false,
   recruitResponseTapped: false,
   recruitJoinConfirmed: false,
 };
@@ -89,7 +94,6 @@ function autoAdvanceComputerTurns() {
    chosen here depends on anyone's secret role. */
 let lastAnnouncedTurn = null;
 let nightAnnounced = false;
-let recruitNightAnnounced = false;
 let gatherAnnounced = false;
 let discussAnnounced = false;
 let finalDecisionAnnounced = false;
@@ -104,7 +108,6 @@ let introPending = false;
 function resetNarrationTracking() {
   lastAnnouncedTurn = null;
   nightAnnounced = false;
-  recruitNightAnnounced = false;
   gatherAnnounced = false;
   discussAnnounced = false;
   finalDecisionAnnounced = false;
@@ -124,20 +127,12 @@ function collectPhaseNarration() {
     parts.push('gameBegins');
   }
 
-  if (phase === PHASES.NIGHT) {
+  // The Night screen — shown both in an ordinary murder round and, looking
+  // and sounding identical, between the two Recruit-or-Die passes.
+  if (phase === PHASES.NIGHT || (phase === PHASES.RECRUIT_RESPONSE && uiStage.recruitNight)) {
     if (!nightAnnounced) { nightAnnounced = true; parts.push('nightFalls'); }
   } else {
     nightAnnounced = false;
-  }
-
-  // Recruit or Die runs as two full-table passes. An ordinary murder round
-  // is: a pass, Night Falls, a pass, then the reveal — so the second
-  // recruit pass opens with the same Night Falls beat, making the round's
-  // audible shape match instead of standing out (secrecy fix).
-  if (phase === PHASES.RECRUIT_RESPONSE) {
-    if (!recruitNightAnnounced) { recruitNightAnnounced = true; parts.push('nightFalls'); }
-  } else {
-    recruitNightAnnounced = false;
   }
 
   if (phase === PHASES.ELIMINATION && !uiStage.eliminationRevealed) {
@@ -357,9 +352,13 @@ function resolveComputerTurn() {
         const targetId = botPickRecruitTarget(state);
         if (targetId) recordRecruitTarget(state, targetId);
       }
-      // End of the first pass sounds exactly like the end of an ordinary
-      // round's Draw pass going into a murder night (secrecy fix).
-      if (advanceRecruitQueue(state)) Sound.play('nightFalls');
+      // End of the first pass looks and sounds exactly like the end of an
+      // ordinary round's Draw pass going into a murder night (secrecy fix).
+      if (advanceRecruitQueue(state)) {
+        Sound.play('nightFalls');
+        interstitialPending = 'night-falls';
+        uiStage.recruitNight = true;
+      }
       break;
     }
     case PHASES.RECRUIT_RESPONSE: {
@@ -407,6 +406,19 @@ function render() {
     const hold = key === 'reveal' && introPending ? Sound.narrateIntro : null;
     introPending = false;
     UI.showInterstitial(key, render, hold);
+    return;
+  }
+
+  // Recruit or Die's mid-round Night screen (see uiStage.recruitNight):
+  // the public Night screen an ordinary murder round shows, waiting on the
+  // same "Begin The Night" tap. Shown before any computer turn can run.
+  if (state.phase === PHASES.RECRUIT_RESPONSE && uiStage.recruitNight) {
+    showScreen(PHASES.NIGHT);
+    UI.updateHeader(state);
+    document.getElementById('phaseLabel').textContent = PHASE_LABELS[PHASES.NIGHT];
+    const nightNarration = collectPhaseNarration();
+    if (nightNarration.length) Sound.narrate(nightNarration);
+    UI.renderNight(state, cardDefById('murder'));
     return;
   }
 
@@ -458,7 +470,7 @@ function render() {
       UI.renderElimination(state, uiStage.eliminationRevealed);
       break;
     case PHASES.RECRUIT:
-      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget);
+      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget, uiStage.recruitConfirmed);
       break;
     case PHASES.RECRUIT_RESPONSE:
       UI.renderRecruitResponse(state, uiStage.recruitResponseTapped, uiStage.recruitJoinConfirmed);
@@ -629,7 +641,11 @@ const actions = {
     const result = drawFortuneCard(state, player.id);
     state.lastDrawResult = result;
     uiStage.drawTapped = true;
-    Sound.play(result.wentToPot ? 'gold' : 'draw');
+    // Always the plain card sound, gold or not (secrecy fix): a Recruit
+    // round's first pass stands in for a Draw pass but draws nothing, so a
+    // coin chime on ~60% of real draws would let the table hear the
+    // difference. The gold still shows on the drawer's screen and the pot.
+    Sound.play('draw');
     persist();
     render();
     if (result.wentToPot) UI.showToast(`+${result.def.value} gold to the Prize Pot`);
@@ -658,6 +674,17 @@ const actions = {
     render();
   },
   'proceed-to-murder': () => {
+    if (state.phase === PHASES.RECRUIT_RESPONSE && uiStage.recruitNight) {
+      // Recruit round: same tap and Murder card as an ordinary night, then
+      // the second (response) pass.
+      Sound.play('tap');
+      uiStage.recruitNight = false;
+      uiStage.recruitResponseTapped = false;
+      uiStage.recruitJoinConfirmed = false;
+      interstitialPending = 'murder';
+      render();
+      return;
+    }
     Sound.play('tap');
     beginMurderPhase(state);
     uiStage.murderTapped = false;
@@ -779,8 +806,10 @@ const actions = {
     // Same tap for every living player's turn during the Recruit queue
     // pass, whether they're the recruiting Deceiver or not — identical to
     // tap-murder-turn.
+    // Plays the Draw pass's card sound: this pass stands in for a Draw pass,
+    // turn for turn — card sound, tap, pass-on knock (secrecy fix).
     uiStage.recruitTapped = true;
-    Sound.play('tap');
+    Sound.play('draw');
     render();
   },
   'select-recruit-target': (btn) => {
@@ -793,23 +822,33 @@ const actions = {
   },
   'confirm-recruit-turn': () => {
     // Used by BOTH the recruiting Deceiver's real turn and every other
-    // living player's "Nothing To Do" turn during the Recruit queue pass
-    // — identical pattern to confirm-murder-turn.
+    // living player's "Nothing To Do" turn. Like Draw's "Continue To My
+    // Hand": a tap, then the player's own hand screen (recruit-pass-on).
     if (currentRecruitStep(state) === 'offer') {
       if (!uiStage.recruitTarget) return;
       recordRecruitTarget(state, uiStage.recruitTarget);
     }
+    uiStage.recruitConfirmed = true;
+    Sound.play('tap');
+    render();
+  },
+  'recruit-pass-on': () => {
+    // Like Draw's "Done — Pass The Phone": the pass-on knock, or — after
+    // the last turn — the Night Falls cue, card and screen an ordinary
+    // murder round gets (secrecy fix). Hand-off voice comes from render().
     uiStage.recruitTapped = false;
     uiStage.recruitTarget = null;
+    uiStage.recruitConfirmed = false;
     uiStage.recruitResponseTapped = false;
     uiStage.recruitJoinConfirmed = false;
     const passDone = advanceRecruitQueue(state);
-    // Hand-off voice comes from render() -> collectHandoffNarration(), the
-    // same generic path every queue turn uses. The pass's last confirm
-    // plays the Night Falls cue instead of the hand-off knock — exactly
-    // what an ordinary round's last Draw does going into a murder night
-    // (secrecy fix; see collectPhaseNarration).
-    Sound.play(passDone ? 'nightFalls' : 'passDevice');
+    if (passDone) {
+      Sound.play('nightFalls');
+      interstitialPending = 'night-falls';
+      uiStage.recruitNight = true;
+    } else {
+      Sound.play('passDevice');
+    }
     persist();
     render();
   },
