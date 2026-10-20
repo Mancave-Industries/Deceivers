@@ -849,6 +849,53 @@ body {
   line-height: 1.5;
 }
 
+/* ---------- Handoff screen artwork (pass-the-phone backgrounds) ----------
+   Wraps passPrompt()'s existing name/eyebrow/instruction/button stack
+   without touching that markup. The scrim's opacity never drops below
+   0.88 anywhere behind the text, which keeps --ink-dim (the dimmest
+   text color in play here) at a measured contrast ratio of ~5.65:1 --
+   comfortably past the WCAG AA 4.5:1 floor for normal text -- even in
+   the worst case of a near-white pixel sitting directly behind it;
+   --gold-300 (the player name) has a wider margin still since it's a
+   brighter color. Murder Queue and Recruit-or-Die (and the Recruit
+   response step, which mirrors Murder's queue) read the same JS
+   constant for their artwork, so there's no file for anyone to tell
+   apart between them. */
+.handoff-screen {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.handoff-art {
+  position: absolute;
+  inset: -4%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.handoff-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(5,4,3,0.88) 0%, rgba(5,4,3,0.88) 55%, rgba(5,4,3,0.94) 100%);
+}
+.handoff-screen > .reveal-stage {
+  position: relative;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .handoff-art {
+    animation: handoffDrift 26s ease-in-out infinite alternate;
+  }
+}
+@keyframes handoffDrift {
+  from { transform: scale(1); }
+  to { transform: scale(1.035); }
+}
+
 /* ---------- Elimination / ceremonial reveal ---------- */
 /* Shared by every pass-the-phone prompt, role/card reveal, and outcome
    screen — by far the most-seen layout in the game — so bracketing it
