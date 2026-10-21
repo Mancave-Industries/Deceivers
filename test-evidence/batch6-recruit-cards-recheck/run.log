@@ -1,0 +1,21 @@
+PASS  Shield test: reached RECRUIT_RESPONSE phase  — recruitResponse
+PASS  Shield test: target survives a refusal while holding a Shield  — alive=true
+PASS  Shield test: Shield is consumed from hand  — []
+PASS  Shield test: Shield lands in the discard
+PASS  Shield test: resolves with protected:true, murdered:false (same shape as a Murder shield-save)  — {"quiet":false,"targetId":"p2_1792614008381_1","name":"P2","murdered":false,"protected":true,"deceiversChoicePlayed":false}
+PASS  Shield test: eliminationContext is "night" (looks like an ordinary Murder outcome)
+PASS  No-Shield test: refusal still kills the target  — alive=false
+PASS  No-Shield test: murdered:true, protected:false  — {"quiet":false,"targetId":"p2_1792614008381_1","name":"P2","murdered":true,"protected":false,"deceiversChoicePlayed":false}
+PASS  Choice test: currentRecruiterHoldsChoiceCard was true at offer time
+PASS  Choice test: target becomes a Deceiver  — deceiver
+PASS  Choice test: recruiter becomes Loyal  — loyal
+PASS  Choice test: card is consumed from the recruiter's hand  — []
+PASS  Choice test: card lands in the discard
+PASS  Choice test: resolves quiet (same shape as an ordinary join)  — {"quiet":true}
+PASS  Choice test: eliminationContext is "quiet"
+PASS  Choice test: Deceiver count unchanged (still exactly 1 Deceiver overall)  — 1
+PASS  Choice-over-refuse test: target still becomes a Deceiver despite refusing  — deceiver
+PASS  Choice-over-refuse test: target survives (swap, not a kill)
+PASS  Murder regression: currentMurderDeciderHoldsChoiceCard still true for the right holder
+
+ALL PASS

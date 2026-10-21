@@ -42,6 +42,9 @@ const Sound = (() => {
   let musicEnabled = false;
   let musicState = null;
   let ctx = null;
+  // 'full' or 'partial' -- which narration pools narrate() will actually
+  // speak when enabled. Irrelevant when sound is off entirely.
+  let narrationLevel = 'partial';
 
   function getCtx(resume = true) {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -60,6 +63,10 @@ const Sound = (() => {
   function setEnabled(value) {
     enabled = !!value;
     if (!enabled) stopNarration();
+  }
+
+  function setNarrationLevel(value) {
+    narrationLevel = value === 'full' ? 'full' : 'partial';
   }
 
   function setMusicEnabled(value) {
@@ -393,7 +400,10 @@ const Sound = (() => {
      failed, when sound is off, or when a newer announcement replaces
      this one. opts.delay (seconds) holds the first line back — e.g. to
      let a sound effect land first. */
-  function narrate(poolNames, onEnd, opts = {}) {
+  function narrate(poolNamesIn, onEnd, opts = {}) {
+    const poolNames = narrationLevel === 'partial'
+      ? (poolNamesIn || []).filter((p) => NARRATION.ESSENTIAL_POOLS.has(p))
+      : poolNamesIn;
     const generation = ++narrationGeneration;
     stopVoice();
     let finished = false;
@@ -707,7 +717,7 @@ const Sound = (() => {
   }
 
   return {
-    setEnabled, play, setMusicEnabled, startMusic, stopMusic,
+    setEnabled, setNarrationLevel, play, setMusicEnabled, startMusic, stopMusic,
     narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
     // Test hooks only (tests/narration): observe audio events, seed picks.
     _onEvent: (fn) => listeners.push(fn),

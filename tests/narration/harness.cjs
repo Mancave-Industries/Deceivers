@@ -116,8 +116,26 @@ async function runGame(browser, port, cfg) {
   const marks = [];
   const mark = async (label) => { const at = await page.evaluate(() => Math.round(performance.now() - window.__t0)); marks.push({ label, at }); };
 
-  // Sound on (a real tap on the header button, as a player would).
-  if (cfg.sound !== false) await page.click('#soundBtn');
+  // Sound now defaults ON at Partial (not off), so getting to each
+  // desired state is driven explicitly rather than by a single
+  // "tap once to turn on" click, whose direction would otherwise depend
+  // on whatever the default already is. The header icon only has an
+  // on/off tap (muted class); the Full/Partial choice has no header
+  // control of its own (it lives in Settings), so that's set directly.
+  // This suite was written to exercise every narration pool, so it
+  // selects Full unless a test asks for Partial via cfg.narrationLevel.
+  // cfg.sound: true/undefined -- ensure ON, then set cfg.narrationLevel
+  // (default 'full'). false -- ensure OFF. 'leave' -- touch nothing, to
+  // test whatever the real boot default actually is.
+  if (cfg.sound !== 'leave') {
+    const mutedAtBoot = await page.evaluate(() => document.getElementById('soundBtn').classList.contains('muted'));
+    if (cfg.sound !== false) {
+      if (mutedAtBoot) await page.click('#soundBtn');
+      await page.evaluate((level) => Sound.setNarrationLevel(level), cfg.narrationLevel || 'full');
+    } else if (!mutedAtBoot) {
+      await page.click('#soundBtn');
+    }
+  }
 
   // Title -> Setup
   await page.click('.screen.active [data-action="new-game"]');

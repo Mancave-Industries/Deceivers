@@ -203,6 +203,11 @@ async function main() {
     const r = await page.evaluate(async () => {
       const ev = []; Sound._onEvent((t, d) => ev.push({ t, d, at: performance.now() }));
       Sound.setEnabled(true);
+      // 'intro2' isn't in the essential set the default Partial level
+      // allows -- this test drives Sound directly (not through the UI,
+      // which is where a real Settings choice would set this), so it
+      // has to opt into Full itself to actually get a clip playing.
+      Sound.setNarrationLevel('full');
       const out = {};
       // mute mid-clip
       await new Promise((res) => Sound.narrate(['intro2'], res));

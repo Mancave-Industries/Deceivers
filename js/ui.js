@@ -101,9 +101,11 @@ function passPrompt({ icon, name, instruction, action, btnLabel, btnClass, artwo
       <div class="reveal-stage fade-in">
         ${privacyBadge('private')}
         ${iconUse(icon, 'icon icon-lg')}
-        <div class="pass-overlay-eyebrow">Pass the phone to</div>
-        <div class="pass-overlay-name">${escapeHtml(name)}</div>
-        <p class="pass-overlay-instruction">${instruction}</p>
+        <div class="handoff-text-panel">
+          <div class="pass-overlay-eyebrow">Pass the phone to</div>
+          <div class="pass-overlay-name">${escapeHtml(name)}</div>
+          <p class="pass-overlay-instruction">${instruction}</p>
+        </div>
         <button class="btn ${btnClass || 'btn-primary'}" data-action="${action}">${btnLabel}</button>
       </div>
     </div>`;
@@ -569,7 +571,7 @@ UI.renderMurder = function renderMurder(state, tapped, selectedId, useChoice, sh
 /* ---------- 8.5. Recruit or Die (a private two-player exchange, never a
    public event — see engine.js's "Recruit or Die" section) ---------- */
 
-UI.renderRecruit = function renderRecruit(state, tapped, selectedId, confirmed) {
+UI.renderRecruit = function renderRecruit(state, tapped, selectedId, confirmed, useChoice) {
   const player = currentQueuePlayer(state);
   if (!player) return;
 
@@ -627,6 +629,7 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId, confirmed) 
   }
 
   const targets = eligibleRecruitTargets(state);
+  const canUseChoice = currentRecruiterHoldsChoiceCard(state);
   screen('recruit').innerHTML = `
     ${privacyBadge('private')}
     <div class="screen-title-row">Recruit Or Die</div>
@@ -638,9 +641,19 @@ UI.renderRecruit = function renderRecruit(state, tapped, selectedId, confirmed) 
           <span>${escapeHtml(p.name)}</span>
         </button>`).join('')}
     </div>
-    <p class="small-note" style="margin-top:14px;">If they refuse, they will not survive the night. Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
+    ${canUseChoice ? `
+      <label class="rule-row" style="margin-top:16px;">
+        <input type="checkbox" id="dcToggle" ${useChoice ? 'checked' : ''}>
+        <span>Play Deceiver's Choice — force the swap: they become a Deceiver, you become Loyal</span>
+      </label>` : ''}
+    <p class="small-note" style="margin-top:14px;">If they refuse without a Shield, they will not survive the night. Once confirmed, hide the screen and pass the phone to the next player like everyone else.</p>
     <div class="spacer"></div>
     <button class="btn btn-danger btn-block" data-action="confirm-recruit-turn" ${selectedId ? '' : 'disabled'}>Confirm Choice</button>`;
+  if (canUseChoice) {
+    document.getElementById('dcToggle').addEventListener('change', (e) => {
+      main_onToggleDeceiversChoice(e.target.checked);
+    });
+  }
 };
 
 UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinConfirmed) {
@@ -698,7 +711,7 @@ UI.renderRecruitResponse = function renderRecruitResponse(state, tapped, joinCon
       ${iconUse(ICONS.hoodedFigure, 'icon icon-lg')}
       <h2 class="reveal-headline">A Deceiver Has Approached You</h2>
       <p class="reveal-body">In secret, one of the Deceivers offers you a place among them. Choose now — no one else will ever know this moment happened.</p>
-      ${meaningBlock('<strong>Join Us:</strong> you become a Deceiver yourself, starting tonight — hidden among the table, working to help the Deceivers win. No one dies tonight. <strong>Refuse:</strong> you are murdered tonight instead, Shield or no Shield.')}
+      ${meaningBlock("<strong>Join Us:</strong> you become a Deceiver yourself, starting tonight — hidden among the table, working to help the Deceivers win. No one dies tonight. <strong>Refuse:</strong> you are murdered tonight instead, unless you're holding a Shield. A held Deceiver's Choice can override either answer and force the swap regardless of what you pick here.")}
       <div class="spacer"></div>
       <button class="btn btn-confirm btn-block" data-action="recruit-join" style="margin-bottom:10px;">Join Us</button>
       <button class="btn btn-danger btn-block" data-action="recruit-refuse">Refuse</button>
@@ -888,6 +901,7 @@ UI.renderResults = function renderResults(state) {
       ${iconUse(ICONS.coin, 'icon icon-lg')}
     </div>
     <p class="small-note" style="margin-top:10px;">${payoutLine}</p>
+    <button class="btn btn-ghost btn-block" style="margin-top:14px;" data-action="share-result">Share My Result</button>
     <div class="panel-title" style="margin-top:16px;">Every Role Revealed</div>
     <div class="role-reveal-list">
       ${state.players.map((p) => `
@@ -1070,12 +1084,12 @@ UI.helpContent = function helpContent() {
     <div class="panel-title" style="margin-top:4px;">The Final Circle</div>
     <p>Once only ${CONFIG.finalCircleThreshold} players remain — and at least one ordinary round has already been played — the game shifts into its endgame: every round becomes a private ballot where each survivor secretly chooses End Game or Banish Again. If everyone chooses End Game, or once only two players are left, the game ends outright — and at that point any surviving Deceiver wins, even a single one facing two Loyal.</p>
     <div class="panel-title" style="margin-top:4px;">Recruit or Die</div>
-    <p>If a game starts with more than one Deceiver and every one of them but a single survivor is eliminated, that lone Deceiver gets one private chance to recruit instead of murdering — secretly asking a Loyal player to join them. Accept, and no one dies that night; refuse, and that player is murdered instead, Shield or no Shield. Nobody else at the table ever learns this happened.</p>
+    <p>If a game starts with more than one Deceiver and every one of them but a single survivor is eliminated, that lone Deceiver gets one private chance to recruit instead of murdering — secretly asking a Loyal player to join them. Accept, and no one dies that night; refuse, and that player is murdered instead, unless they're holding a Shield, in which case it's spent and they survive. A held Deceiver's Choice can instead force the swap — the approached player becomes a Deceiver, the recruiter becomes Loyal — regardless of what's chosen. Nobody else at the table ever learns any of this happened.</p>
     <div class="panel-title" style="margin-top:4px;">What the cards do</div>
     <div class="rule-row">${iconUse(ICONS.coin, 'icon')}<span>Gold cards fill the shared Prize Pot.</span></div>
-    <div class="rule-row">${iconUse(ICONS.shield, 'icon')}<span>A held Shield protects you automatically if targeted — no action needed — then it's spent.</span></div>
+    <div class="rule-row">${iconUse(ICONS.shield, 'icon')}<span>A held Shield protects you automatically if targeted — in a Murder, or a Recruit or Die refusal — no action needed, then it's spent.</span></div>
     <div class="rule-row">${iconUse(ICONS.dagger, 'icon')}<span>Dagger adds +1 weight to your Banishment vote.</span></div>
-    <div class="rule-row">${iconUse(ICONS.hoodedFigure, 'icon')}<span>Deceiver's Choice cancels a Shield at Night.</span></div>
+    <div class="rule-row">${iconUse(ICONS.hoodedFigure, 'icon')}<span>Deceiver's Choice cancels a Shield at Night, or forces the Recruit or Die swap.</span></div>
     <div class="rule-row">${iconUse(ICONS.skull, 'icon')}<span>On a Murder round, the Deceivers pick a victim in secret.</span></div>
     <div class="rule-row">${iconUse(ICONS.vote, 'icon')}<span>Every living player votes to banish a suspect.</span></div>
     <p>Play a series of several games back to back and points carry across every game — set how many on the setup screen. Setup also lets you choose whether Deceivers learn each other's identities at the reveal, or play completely in the dark from one another.</p>
@@ -1083,12 +1097,20 @@ UI.helpContent = function helpContent() {
 };
 
 UI.settingsContent = function settingsContent(state) {
+  const audio = state.settings.audio || 'partial';
   return `
-    <div class="rule-row">
-      <label style="display:flex;align-items:center;gap:10px;width:100%;">
-        <input type="checkbox" id="soundToggle" ${state.settings.sound ? 'checked' : ''}>
-        <span>Sound effects</span>
-      </label>
+    <div class="panel" style="margin-top:0;">
+      <div class="panel-title">Narration</div>
+      <div class="seat-mode-row" style="padding-left:0;">
+        <button type="button" class="seat-mode-btn ${audio === 'off' ? 'active' : ''}" data-action="set-audio-level" data-mode="off">Off</button>
+        <button type="button" class="seat-mode-btn ${audio === 'partial' ? 'active' : ''}" data-action="set-audio-level" data-mode="partial">Partial</button>
+        <button type="button" class="seat-mode-btn ${audio === 'full' ? 'active' : ''}" data-action="set-audio-level" data-mode="full">Full</button>
+      </div>
+      <p class="small-note" style="text-align:left; margin-top:8px;">${audio === 'off'
+        ? 'All sound is off — effects and narration alike.'
+        : audio === 'partial'
+          ? 'Essential announcements only: phase changes and outcomes. Sound effects stay on; the per-turn "pass the phone" line is skipped.'
+          : 'Every narration line, including the per-turn "pass the phone" prompts.'}</p>
     </div>
     <div class="rule-row">
       <label style="display:flex;align-items:center;gap:10px;width:100%;">

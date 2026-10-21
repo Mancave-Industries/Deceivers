@@ -100,6 +100,21 @@ const NARRATION = (() => {
     gameBegins: [4],
   };
 
+  /* Three-level audio control: FULL plays every pool above; PARTIAL
+     ("essential announcements only") plays just the pools that carry
+     game-state information -- a phase beginning, a night or vote
+     outcome, who won. Left out: the per-turn "pass the phone" courtesy
+     line (handoff -- it fires on every single turn and repeats what's
+     already on screen), the opening flavour lines (intro1-3,
+     gameBegins), and the purely dramatic flourishes before a reveal
+     (endLeadIn) or at the very end (seriesClosing, farewell). */
+  const ESSENTIAL_POOLS = new Set([
+    'nightFalls', 'gather', 'votingBegins', 'finalVotingBegins', 'discussion',
+    'murderFirst', 'murderLater', 'quietNight', 'shieldSaved',
+    'banished', 'tie', 'banishAgain', 'finalCircle', 'finalDecision',
+    'loyalWin', 'deceiverWin',
+  ]);
+
   function clipKey(line, takeIndex) {
     return `${String(line).padStart(2, '0')}_${'ABC'[takeIndex]}`;
   }
@@ -116,5 +131,5 @@ const NARRATION = (() => {
     return keys;
   }
 
-  return { VERSION, BASE, TAKES, SCRIPT, POOLS, clipKey, clipUrl, allClipKeys };
+  return { VERSION, BASE, TAKES, SCRIPT, POOLS, ESSENTIAL_POOLS, clipKey, clipUrl, allClipKeys };
 })();

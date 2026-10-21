@@ -41,7 +41,25 @@ const uiStage = {
    persistent UI state to track across renders. */
 let interstitialPending = null;
 
-Sound.setEnabled(state.settings.sound);
+/* Tracked separately from state.phase so render() can tell a genuine
+   phase change from a same-phase re-render. A stale narration line (a
+   winner announcement, a vote beat) belongs to the phase it started in --
+   once we've moved to a new one, anything still sounding is cut off
+   immediately, before an interstitial or anything else can let it keep
+   playing underneath screens it no longer applies to (issue: winner
+   announcements bleeding into the next game's Draw phase). */
+let lastRenderedPhase = null;
+
+// settings.audio: 'off' | 'partial' | 'full'. 'off' disables Sound
+// entirely (effects and narration alike); 'partial'/'full' both leave
+// effects on and only change which narration pools are allowed to speak
+// (see narration.js's ESSENTIAL_POOLS and sound.js's narrationLevel).
+function applyAudioSettings(audioLevel) {
+  Sound.setEnabled(audioLevel !== 'off');
+  Sound.setNarrationLevel(audioLevel);
+}
+
+applyAudioSettings(state.settings.audio);
 Sound.setMusicEnabled(state.settings.music);
 
 let setupNames = Array(CONFIG.minPlayers).fill('');
@@ -350,7 +368,8 @@ function resolveComputerTurn() {
       // above.
       if (currentRecruitStep(state) === 'offer') {
         const targetId = botPickRecruitTarget(state);
-        if (targetId) recordRecruitTarget(state, targetId);
+        const useChoice = targetId ? botShouldUseDeceiversChoiceForRecruit(state) : false;
+        if (targetId) recordRecruitTarget(state, targetId, useChoice);
       }
       // End of the first pass looks and sounds exactly like the end of an
       // ordinary round's Draw pass going into a murder night (secrecy fix).
@@ -400,6 +419,10 @@ function showScreen(phaseName) {
 }
 
 function render() {
+  if (state.phase !== lastRenderedPhase) {
+    Sound.stopNarration();
+    lastRenderedPhase = state.phase;
+  }
   if (interstitialPending) {
     const key = interstitialPending;
     interstitialPending = null;
@@ -470,7 +493,7 @@ function render() {
       UI.renderElimination(state, uiStage.eliminationRevealed);
       break;
     case PHASES.RECRUIT:
-      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget, uiStage.recruitConfirmed);
+      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget, uiStage.recruitConfirmed, uiStage.useChoice);
       break;
     case PHASES.RECRUIT_RESPONSE:
       UI.renderRecruitResponse(state, uiStage.recruitResponseTapped, uiStage.recruitJoinConfirmed);
@@ -496,6 +519,18 @@ function main_onToggleDeceiversChoice(checked) {
 }
 function main_onToggleDagger(checked) {
   uiStage.useDagger = checked;
+}
+
+/* Wordle-style share text for the Results screen. Spoiler-free: an
+   aggregate headline (which side won) and a few bare numbers, never who
+   held which role or what happened to them -- the "Every Role Revealed"
+   list above it is for the table in the room, not for a social post. */
+function buildShareResultText(state) {
+  const deceiversWon = state.winner === ROLES.DECEIVER.id;
+  const headline = deceiversWon ? 'THE DECEIVERS BEAT ME!' : 'I BEAT THE DECEIVERS!';
+  const survivors = livingPlayers(state).length;
+  const resultLine = `${state.players.length} played. ${survivors} survived to the end, after ${state.round} round${state.round === 1 ? '' : 's'} of lies.`;
+  return `${headline}\n\n${resultLine}\n\nPlay this... IT'S MURDER!!!\n${CONFIG.gameShareUrl}`;
 }
 
 /* ---------- Action handlers ---------- */
@@ -524,10 +559,10 @@ const actions = {
     if (saved) {
       state = saved;
       resetNarrationTracking();
-      Sound.setEnabled(state.settings.sound);
+      applyAudioSettings(state.settings.audio);
       Sound.preloadNarration();
       Sound.setMusicEnabled(state.settings.music);
-      document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
+      document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
       if (state.phase === PHASES.DISCUSS) { Sound.startMusic(); startDiscussTimer(); }
     }
     render();
@@ -571,6 +606,18 @@ const actions = {
     Sound.play('tap');
     setupDeceiverKnowledge = btn.dataset.mode === 'hidden' ? 'hidden' : 'known';
     UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+  },
+  'set-audio-level': (btn) => {
+    const mode = btn.dataset.mode;
+    state.settings.audio = mode === 'off' || mode === 'full' ? mode : 'partial';
+    applyAudioSettings(state.settings.audio);
+    document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
+    if (state.settings.audio !== 'off') {
+      Sound.play('tap');
+      if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration();
+    }
+    persist();
+    UI.showModal('Settings', UI.settingsContent(state));
   },
   'start-game': () => {
     if (!setupNames.every((n) => n.trim().length > 0)) return;
@@ -826,9 +873,10 @@ const actions = {
     // Hand": a tap, then the player's own hand screen (recruit-pass-on).
     if (currentRecruitStep(state) === 'offer') {
       if (!uiStage.recruitTarget) return;
-      recordRecruitTarget(state, uiStage.recruitTarget);
+      recordRecruitTarget(state, uiStage.recruitTarget, uiStage.useChoice);
     }
     uiStage.recruitConfirmed = true;
+    uiStage.useChoice = false;
     Sound.play('tap');
     render();
   },
@@ -991,6 +1039,21 @@ const actions = {
     persist();
     render();
   },
+  'share-result': () => {
+    Sound.play('tap');
+    const text = buildShareResultText(state);
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => { /* cancelled or unsupported — no-op */ });
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text)
+        .then(() => UI.showToast('Result copied — paste it anywhere!'))
+        .catch(() => UI.showToast('Could not copy. Try again?'));
+      return;
+    }
+    UI.showToast('Sharing is not available on this browser.');
+  },
   'next-game-in-series': () => {
     Sound.play('gather');
     startNextGameInSeries(state);
@@ -1053,24 +1116,19 @@ document.addEventListener('input', (e) => {
 document.getElementById('menuBtn').addEventListener('click', () => {
   Sound.play('modalOpen');
   UI.showModal('Settings', UI.settingsContent(state));
-  const toggle = document.getElementById('soundToggle');
-  if (toggle) {
-    toggle.addEventListener('change', (e) => {
-      state.settings.sound = e.target.checked;
-      Sound.setEnabled(state.settings.sound);
-      if (state.settings.sound) { Sound.play('tap'); if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration(); }
-      persist();
-    });
-  }
-  const musicToggle = document.getElementById('musicToggle');
-  if (musicToggle) {
-    musicToggle.addEventListener('change', (e) => {
-      state.settings.music = e.target.checked;
-      Sound.setMusicEnabled(state.settings.music);
-      if (state.settings.music && state.phase === PHASES.DISCUSS) Sound.startMusic();
-      persist();
-    });
-  }
+});
+
+// A checkbox's own 'click' (not 'change') is used here so this goes
+// through the same global data-action delegation as every other control
+// -- including after 'set-audio-level' redraws the modal body, which
+// would otherwise orphan a listener attached directly to the old node.
+document.addEventListener('click', (e) => {
+  const toggle = e.target.closest('#musicToggle');
+  if (!toggle) return;
+  state.settings.music = toggle.checked;
+  Sound.setMusicEnabled(state.settings.music);
+  if (state.settings.music && state.phase === PHASES.DISCUSS) Sound.startMusic();
+  persist();
 });
 
 document.getElementById('helpBtn').addEventListener('click', () => {
@@ -1078,15 +1136,25 @@ document.getElementById('helpBtn').addEventListener('click', () => {
   UI.showModal('How To Play', UI.helpContent());
 });
 
+// Quick mute/restore, independent of the Full/Partial choice made in
+// Settings: remembers the level it was on (for this tab session only,
+// not persisted) and restores exactly that rather than always falling
+// back to the Partial default.
+let lastNonOffAudioLevel = state.settings.audio !== 'off' ? state.settings.audio : 'partial';
 document.getElementById('soundBtn').addEventListener('click', () => {
-  state.settings.sound = !state.settings.sound;
-  Sound.setEnabled(state.settings.sound);
-  document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
-  if (state.settings.sound) { Sound.play('tap'); if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration(); }
+  if (state.settings.audio === 'off') {
+    state.settings.audio = lastNonOffAudioLevel;
+  } else {
+    lastNonOffAudioLevel = state.settings.audio;
+    state.settings.audio = 'off';
+  }
+  applyAudioSettings(state.settings.audio);
+  document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
+  if (state.settings.audio !== 'off') { Sound.play('tap'); if (state.phase !== PHASES.TITLE && state.phase !== PHASES.SETUP) Sound.preloadNarration(); }
   persist();
 });
 
 /* ---------- Boot ---------- */
 
-document.getElementById('soundBtn').classList.toggle('muted', !state.settings.sound);
+document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
 render();

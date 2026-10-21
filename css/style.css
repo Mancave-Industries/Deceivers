@@ -860,7 +860,21 @@ body {
    brighter color. Murder Queue and Recruit-or-Die (and the Recruit
    response step, which mirrors Murder's queue) read the same JS
    constant for their artwork, so there's no file for anyone to tell
-   apart between them. */
+   apart between them.
+
+   Revised: the watermark now sits at ~50% visibility (a much lighter
+   scrim than the original contrast-only pass above), so the image stays
+   recognisable per the brief -- that's too light to carry text contrast
+   on its own (worst case against a near-white pixel computes to well
+   under 2:1). Text contrast now comes from .handoff-text-panel below
+   instead: a separate, fixed ~0.85-opacity backing behind the eyebrow/
+   name/instruction group only, independent of how visible the image
+   is. That panel alone measures ~5.4:1 for --ink-dim against a
+   worst-case near-white pixel -- past the WCAG AA 4.5:1 floor for
+   normal text, with gold-300 (the name) further ahead still. Buttons
+   and the privacy badge already paint a fully opaque fill of their own
+   (see .btn-primary/.btn-danger/.privacy-badge), so they were never at
+   risk and need no panel. */
 .handoff-screen {
   position: relative;
   flex: 1;
@@ -880,16 +894,38 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(5,4,3,0.88) 0%, rgba(5,4,3,0.88) 55%, rgba(5,4,3,0.94) 100%);
+    radial-gradient(ellipse at center, rgba(5,4,3,0.42) 0%, rgba(5,4,3,0.50) 55%, rgba(5,4,3,0.62) 100%);
+  opacity: 1;
+}
+.handoff-text-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background: rgba(5,4,3,0.85);
+  border-radius: 6px;
+  padding: 14px 20px;
 }
 .handoff-screen > .reveal-stage {
   position: relative;
   z-index: 1;
 }
+/* Opening beat (item 1): every handoff opens on the full-colour image
+   with the name superimposed (the text panel above is present and at
+   full contrast from frame one), then the background scrim melts in
+   over it down to its resting ~50% watermark level. */
 @media (prefers-reduced-motion: no-preference) {
+  .handoff-art::after {
+    opacity: 0;
+    animation: handoffMeltIn 1.4s ease-out forwards;
+  }
   .handoff-art {
     animation: handoffDrift 26s ease-in-out infinite alternate;
   }
+}
+@keyframes handoffMeltIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes handoffDrift {
   from { transform: scale(1); }

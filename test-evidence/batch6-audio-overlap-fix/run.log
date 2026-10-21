@@ -1,0 +1,5 @@
+errors: []
+reachedResults: true steps: 535
+game2RevealAt: 27756
+offending stale clips (would still be sounding into game 2): []
+PASS: no stale results-phase audio bleeds into game 2 reveal

@@ -4,7 +4,7 @@
    No DOM access here — engine.js and ui.js read/write this shape.
    ========================================================================== */
 
-const STATE_VERSION = 1;
+const STATE_VERSION = 2;
 
 function shuffle(array) {
   const a = array.slice();
@@ -80,7 +80,9 @@ function createInitialState() {
     // recruitment pact introduces them — see ui.js renderReveal and
     // engine.js's Recruit or Die section). A whole-series choice, set
     // once at Setup via startNewSeries, not reset per game.
-    settings: { sound: false, music: false, deceiverKnowledge: 'known' },
+    // audio: 'off' | 'partial' (essential announcements only) | 'full'
+    // (every narration line). Defaults to 'partial'.
+    settings: { audio: 'partial', music: false, deceiverKnowledge: 'known' },
   };
 }
 

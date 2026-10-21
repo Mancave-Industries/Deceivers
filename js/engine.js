@@ -20,10 +20,23 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   });
 
   const deceiverCount = deceiverCountForPlayers(state.players.length);
-  const shuffledIndexes = shuffle(state.players.map((_, i) => i)).slice(0, deceiverCount);
+  // Picking the Instigator(s) (the seat(s) dealt Deceiver) stays random,
+  // but from game 2 of a series on, a seat that instigated last game is
+  // left out of the draw as long as enough other seats remain to still
+  // fill every Deceiver slot without it -- otherwise (deceiverCount close
+  // to the whole table) that constraint is dropped rather than force a
+  // degenerate or impossible selection. seriesGame is already bumped to
+  // this game's number by the time setupNewGame runs (see
+  // startNextGameInSeries), so > 1 means "there was a previous game."
+  const allIndexes = state.players.map((_, i) => i);
+  const avoidIndexes = state.seriesGame > 1 ? (state.lastDeceiverIndexes || []) : [];
+  const pool = allIndexes.filter((i) => !avoidIndexes.includes(i));
+  const drawFrom = pool.length >= deceiverCount ? pool : allIndexes;
+  const shuffledIndexes = shuffle(drawFrom).slice(0, deceiverCount);
   state.players.forEach((p, i) => {
     p.role = shuffledIndexes.includes(i) ? ROLES.DECEIVER.id : ROLES.LOYAL.id;
   });
+  state.lastDeceiverIndexes = shuffledIndexes;
   // Recruit or Die only ever applies to a game that started with more than
   // one Deceiver and has since lost all but one — a game that only ever
   // had a single Deceiver (3-6 players) has no one to "replenish" and
@@ -513,7 +526,7 @@ function shouldTriggerRecruitment(state) {
 
 function beginRecruitment(state) {
   const deceiver = livingPlayers(state).find((p) => p.role === ROLES.DECEIVER.id);
-  state.recruitment = { recruiterId: deceiver.id, targetId: null, response: null };
+  state.recruitment = { recruiterId: deceiver.id, targetId: null, response: null, useDeceiversChoice: false };
   state.recruitmentAttempted = true;
   state.pendingQueue = livingPlayers(state).map((p) => p.id);
   state.phase = PHASES.RECRUIT;
@@ -535,8 +548,17 @@ function currentRecruitStep(state) {
   return player ? recruitStepFor(state, player.id) : null;
 }
 
-function recordRecruitTarget(state, targetId) {
+/** Mirrors currentMurderDeciderHoldsChoiceCard: whether the recruiter —
+ *  who must be the player currently holding the phone during their
+ *  'offer' turn — holds a Deceiver's Choice card of their own. */
+function currentRecruiterHoldsChoiceCard(state) {
+  const player = currentQueuePlayer(state);
+  return !!player && player.id === state.recruitment.recruiterId && player.hand.includes('deceivers-choice');
+}
+
+function recordRecruitTarget(state, targetId, useDeceiversChoice) {
   state.recruitment.targetId = targetId;
+  state.recruitment.useDeceiversChoice = !!useDeceiversChoice;
 }
 
 /** Advances the Recruit queue one turn. Returns true once every living
@@ -577,11 +599,17 @@ function recordRecruitResponse(state, response) {
 
 /** Advances the Recruit Response queue one turn. Returns true once every
  *  living player has had a turn, at which point the recorded response is
- *  resolved into a (now public) Elimination Reveal. */
+ *  resolved into a (now public) Elimination Reveal. A Deceiver's Choice
+ *  played back at the 'offer' step overrides whatever the target actually
+ *  picks — they're still shown the ordinary Join/Refuse screen and still
+ *  make a tap either way (secrecy fix: the pass must look identical
+ *  whether or not the card was played), but the outcome is forced. */
 function advanceRecruitResponseQueue(state) {
   advanceQueue(state);
   if (state.pendingQueue.length) return false;
-  if (state.recruitment.response === 'join') {
+  if (state.recruitment.useDeceiversChoice) {
+    resolveRecruitmentSwap(state);
+  } else if (state.recruitment.response === 'join') {
     resolveRecruitmentJoin(state);
   } else {
     resolveRecruitmentRefusal(state);
@@ -609,22 +637,52 @@ function resolveRecruitmentJoin(state) {
 /* Refused recruitment: the recruit dies — not the existing Deceiver —
    presented to the table as an ordinary Murder (same nightResult shape
    and 'night' context resolveMurder uses, so the Elimination Reveal is
-   indistinguishable from any other Murder outcome). Deliberately does
-   NOT reuse resolveMurder's Shield-check logic: a held Shield does not
-   protect against this, per the brief, so the kill is unconditional. */
+   indistinguishable from any other Murder outcome). A held Shield now
+   protects here exactly as it does against a Murder: it's spent, and the
+   recruit survives instead, resolved with the same shape resolveMurder's
+   own Shield-save uses (protected: true) — already a publicly ordinary-
+   looking outcome, so reusing it here adds no new pattern to notice. */
 function resolveRecruitmentRefusal(state) {
   const recruit = findPlayer(state, state.recruitment.targetId);
-  recruit.alive = false;
+  const hadShield = recruit.hand.includes('shield');
+  if (hadShield) {
+    recruit.hand.splice(recruit.hand.indexOf('shield'), 1);
+    state.fortuneDiscard.push('shield');
+    log(state, `${recruit.name} refused recruitment, but a Shield saved them.`);
+  } else {
+    recruit.alive = false;
+    log(state, `${recruit.name} refused recruitment and was murdered in the night.`);
+  }
   state.nightResult = {
     quiet: false,
     targetId: recruit.id,
     name: recruit.name,
-    murdered: true,
-    protected: false,
+    murdered: !hadShield,
+    protected: hadShield,
     deceiversChoicePlayed: false,
   };
-  log(state, `${recruit.name} refused recruitment and was murdered in the night.`);
   state.eliminationContext = 'night';
+  state.phase = PHASES.ELIMINATION;
+}
+
+/* Deceiver's Choice, played during Recruit or Die: rather than leave the
+   outcome to the target's own answer, the recruiter forces a straight
+   swap — the target becomes a Deceiver, the recruiter steps down to
+   Loyal. Resolves with the exact same Quiet Night shape as an ordinary
+   successful join, so the public Elimination Reveal can't tell a forced
+   swap from a willing one. */
+function resolveRecruitmentSwap(state) {
+  const recruiter = findPlayer(state, state.recruitment.recruiterId);
+  const recruit = findPlayer(state, state.recruitment.targetId);
+  if (recruiter && recruiter.hand.includes('deceivers-choice')) {
+    recruiter.hand.splice(recruiter.hand.indexOf('deceivers-choice'), 1);
+    state.fortuneDiscard.push('deceivers-choice');
+  }
+  recruit.role = ROLES.DECEIVER.id;
+  recruiter.role = ROLES.LOYAL.id;
+  state.nightResult = { quiet: true };
+  state.eliminationContext = 'quiet';
+  log(state, `${recruiter.name} played Deceiver's Choice: ${recruit.name} is now a Deceiver, and ${recruiter.name} is now Loyal.`);
   state.phase = PHASES.ELIMINATION;
 }
 
@@ -740,6 +798,11 @@ function botChooseMurderVeto() {
 
 function botShouldUseDeceiversChoice(state) {
   if (!currentMurderDeciderHoldsChoiceCard(state)) return false;
+  return Math.random() < 0.4;
+}
+
+function botShouldUseDeceiversChoiceForRecruit(state) {
+  if (!currentRecruiterHoldsChoiceCard(state)) return false;
   return Math.random() < 0.4;
 }
 
