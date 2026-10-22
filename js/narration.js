@@ -103,13 +103,13 @@ const NARRATION = (() => {
   /* Three-level audio control: FULL plays every pool above; PARTIAL
      retains all of it except the per-turn "pass the phone" line
      (handoff -- it fires on every single turn and repeats what's
-     already on screen) and the opening flavour (intro1-3, gameBegins,
-     heard once at the very start of a series/game). OFF plays nothing
-     (see sound.js's narrationLevel / enabled). Defined as an exclusion
-     from the full pool list rather than an inclusion set, so a newly
-     added pool defaults to essential (Partial-included) unless it's
-     deliberately added here. */
-  const PARTIAL_EXCLUDED_POOLS = new Set(['handoff', 'intro1', 'intro2', 'intro3', 'gameBegins']);
+     already on screen). The opening flavour (intro1-3, gameBegins,
+     heard once at the very start of a series/game) is kept even on
+     Partial. OFF plays nothing (see sound.js's narrationLevel /
+     enabled). Defined as an exclusion from the full pool list rather
+     than an inclusion set, so a newly added pool defaults to essential
+     (Partial-included) unless it's deliberately added here. */
+  const PARTIAL_EXCLUDED_POOLS = new Set(['handoff']);
   const ESSENTIAL_POOLS = new Set(Object.keys(POOLS).filter((p) => !PARTIAL_EXCLUDED_POOLS.has(p)));
 
   function clipKey(line, takeIndex) {

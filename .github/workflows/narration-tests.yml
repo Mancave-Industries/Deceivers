@@ -1,0 +1,46 @@
+name: Narration test suite
+
+# Runs the full recorded-narration regression suite (manifest/pool
+# integrity, full-game gates, matched-pair observable-equivalence tests,
+# failure-mode handling) in a clean, stable GitHub-hosted runner. This
+# exists because the suite's ~15-20 minute runtime repeatedly outlived
+# the ephemeral sandbox container used for local development (see PR
+# discussion on Batch 7 / issue #7) — a stable environment was needed so
+# this suite can finish end to end and gate merges reliably.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  narration-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Install ffmpeg (for WAV-decoded audio fixtures)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Run narration test suite
+        run: npm run test:narration -- test-evidence/ci-narration-check
+
+      - name: Upload test evidence on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-suite-evidence
+          path: test-evidence/ci-narration-check/
+          retention-days: 14

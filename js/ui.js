@@ -1112,8 +1112,8 @@ UI.settingsContent = function settingsContent(state) {
       <p class="small-note" style="text-align:left; margin-top:8px;">${audio === 'off'
         ? 'All sound is off — effects and narration alike.'
         : audio === 'partial'
-          ? 'Everything except the per-turn "pass the phone" line and the opening introduction.'
-          : 'Every narration line, including the per-turn "pass the phone" prompts and the opening introduction.'}</p>
+          ? 'Everything except the per-turn "pass the phone" line.'
+          : 'Every narration line, including the per-turn "pass the phone" prompts.'}</p>
     </div>
     <div class="rule-row">
       <label style="display:flex;align-items:center;gap:10px;width:100%;">

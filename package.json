@@ -1,0 +1,12 @@
+{
+  "name": "the-deceivers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The Deceivers — a pass-the-phone social deduction game.",
+  "scripts": {
+    "test:narration": "node tests/narration/harness.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
