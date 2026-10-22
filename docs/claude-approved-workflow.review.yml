@@ -1,0 +1,57 @@
+# REVIEW COPY ONLY — inert because stored under docs/, not .github/workflows/
+# After separate activation approval, move to .github/workflows/claude-approved.yml.
+# The environment name intentionally includes the trailing period, as created by Mark.
+# Anthropic's official setup guide documents a Pro/Max OAuth route using
+# `claude setup-token` locally. Verify subscription usage terms and limitations
+# before activation; no additional API billing has been authorised.
+name: Claude approved job
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Approved GitHub issue number"
+        required: true
+        type: number
+      cost_authorisation:
+        description: "Exact one-run authorisation ID (issued only after Mark's fresh approval)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: claude-approved-single-job
+  cancel-in-progress: false
+
+jobs:
+  claude:
+    # GitHub environment approval is a second gate; the one-time authorisation
+    # verifier below is REQUIRED before production activation.
+    environment: claude-approval.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Verify one-use approval
+        # FAIL CLOSED. Replace with trusted verifier after review.
+        # Must check issue, cost ceiling, expiry, approver, run ID and atomically
+        # consume token. NEVER bypass this step or replace with 'true'.
+        run: |
+          echo "BLOCKED: One-use financial approval verifier not installed."
+          exit 1
+      - name: Claude Code (unreachable until verifier is implemented)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Implement only the authorised work described in issue #${{ inputs.issue_number }}.
+            Work on a development branch, create a draft PR, and report tests,
+            changed files, limitations and DONE/PARTIAL/FAILED.
+            Never merge, deploy, change workflows or trigger other paid jobs.
+          claude_args: "--max-turns 10"

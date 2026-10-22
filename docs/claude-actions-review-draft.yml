@@ -1,0 +1,26 @@
+# REVIEW DRAFT — DO NOT ACTIVATE
+# Proposed eventual path: .github/workflows/claude-approved.yml
+# This file is deliberately stored under docs/ (not .github/workflows).
+# NOT RUNNABLE until manually reviewed, configured and moved after explicit approval.
+#
+# Critical: a standard GitHub Actions workflow_dispatch event is not a sufficient
+# financial approval gate: an authenticated user could rerun an already approved job.
+# Every chargeable invocation, including retries, must have its OWN explicit
+# pre-run approval, bounded cost estimate and one-use authorization.
+# Until that is implemented and verified, this workflow MUST remain inert.
+#
+# Proposed control design (not executable workflow):
+# 1. Alfred publishes approved issue and exact scope.
+# 2. Before EACH invocation, Mark approves named issue, run and maximum estimated cost.
+# 3. A trusted approval service/one-time token (not issue text or label alone) validates
+#    that authorization and atomically consumes it before calling Claude.
+# 4. Retries require fresh approval. Disallow schedule, issue_comment and push triggers.
+# 5. Workflow uses official anthropics/claude-code-action pinned to a reviewed commit SHA,
+#    repository-scoped GitHub App, protected secrets and least privilege permissions.
+# 6. Agent may write only a feature branch and draft PR; no merge, deploy or workflow edits.
+# 7. Cap turns, execution time and concurrency. API budgets alone are not per-run approval.
+# 8. Produce evidence-backed DONE/PARTIAL/FAILED report in issue #1 and link to PR.
+# 9. Test in no-cost review mode before any paid test, with Mark's separate permission.
+#
+# No API keys, authentication, paid triggers or workflows have been configured.
+# Reference: https://github.com/anthropics/claude-code-action
