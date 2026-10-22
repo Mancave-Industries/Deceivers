@@ -101,19 +101,16 @@ const NARRATION = (() => {
   };
 
   /* Three-level audio control: FULL plays every pool above; PARTIAL
-     ("essential announcements only") plays just the pools that carry
-     game-state information -- a phase beginning, a night or vote
-     outcome, who won. Left out: the per-turn "pass the phone" courtesy
-     line (handoff -- it fires on every single turn and repeats what's
-     already on screen), the opening flavour lines (intro1-3,
-     gameBegins), and the purely dramatic flourishes before a reveal
-     (endLeadIn) or at the very end (seriesClosing, farewell). */
-  const ESSENTIAL_POOLS = new Set([
-    'nightFalls', 'gather', 'votingBegins', 'finalVotingBegins', 'discussion',
-    'murderFirst', 'murderLater', 'quietNight', 'shieldSaved',
-    'banished', 'tie', 'banishAgain', 'finalCircle', 'finalDecision',
-    'loyalWin', 'deceiverWin',
-  ]);
+     retains all of it except the per-turn "pass the phone" line
+     (handoff -- it fires on every single turn and repeats what's
+     already on screen) and the opening flavour (intro1-3, gameBegins,
+     heard once at the very start of a series/game). OFF plays nothing
+     (see sound.js's narrationLevel / enabled). Defined as an exclusion
+     from the full pool list rather than an inclusion set, so a newly
+     added pool defaults to essential (Partial-included) unless it's
+     deliberately added here. */
+  const PARTIAL_EXCLUDED_POOLS = new Set(['handoff', 'intro1', 'intro2', 'intro3', 'gameBegins']);
+  const ESSENTIAL_POOLS = new Set(Object.keys(POOLS).filter((p) => !PARTIAL_EXCLUDED_POOLS.has(p)));
 
   function clipKey(line, takeIndex) {
     return `${String(line).padStart(2, '0')}_${'ABC'[takeIndex]}`;

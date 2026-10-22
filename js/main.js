@@ -6,6 +6,17 @@
    when the player explicitly taps Continue (see 'continue-game' action). */
 let state = createInitialState();
 
+/* Bumped every time `state` itself is replaced (new-game, continue-game,
+   play-again, reset-game) -- never on an in-place mutation of the same
+   object. A callback that spans a real-world delay (the Discuss timer's
+   voting-begins announcement is the one case long enough to matter) reads
+   `state` by closing over this outer binding, not a snapshot, so if the
+   game gets reset or restarted mid-announcement it would otherwise act on
+   whatever fresh game now sits in that variable. beginVotingSequence
+   captures the epoch before waiting and checks it's unchanged before
+   touching state. */
+let gameEpoch = 0;
+
 /* Ephemeral UI-only sequencing (pass-device ceremony, in-progress selections).
    None of this is game data — it resets on each screen visit and is never
    persisted to localStorage. */
@@ -32,6 +43,12 @@ const uiStage = {
   recruitNight: false,
   recruitResponseTapped: false,
   recruitJoinConfirmed: false,
+  // Which response the "You Are Now A Deceiver" confirmation screen is
+  // for -- 'join' (an ordinary accept) or 'swap' (a played Deceiver's
+  // Choice). Both land the player in the exact same post-confirm state,
+  // so one screen covers both; this says which one to actually record
+  // when they tap through it.
+  recruitPendingResponse: 'join',
 };
 
 /* Set by an action handler right before calling render() to request a
@@ -262,16 +279,25 @@ function beginVotingSequence() {
   if (uiStage.votingAnnounced) return;
   uiStage.votingAnnounced = true;
   render();
+  const epoch = gameEpoch;
+  const isFinal = state.finalBanishmentActive;
   Sound.announceVotingBegins(() => {
+    // The announcement spans a real delay (narration, or the hard
+    // ceiling if it's superseded/muted) -- if the game was reset or
+    // restarted in the meantime, `state` by now refers to a different
+    // game than the one this sequence was announcing for. Stale: do
+    // nothing rather than force that fresh game into a vote it never
+    // asked for.
+    if (epoch !== gameEpoch) return;
     Sound.stopMusic();
-    beginVotePhase(state, state.finalBanishmentActive);
+    beginVotePhase(state, isFinal);
     uiStage.votingAnnounced = false;
     uiStage.voteTapped = false;
     uiStage.voteSelected = null;
     uiStage.useDagger = false;
     persist();
     render();
-  }, state.finalBanishmentActive);
+  }, isFinal);
 }
 
 /* Shared by the choose-end-game / choose-banish-again action handlers —
@@ -368,8 +394,7 @@ function resolveComputerTurn() {
       // above.
       if (currentRecruitStep(state) === 'offer') {
         const targetId = botPickRecruitTarget(state);
-        const useChoice = targetId ? botShouldUseDeceiversChoiceForRecruit(state) : false;
-        if (targetId) recordRecruitTarget(state, targetId, useChoice);
+        if (targetId) recordRecruitTarget(state, targetId);
       }
       // End of the first pass looks and sounds exactly like the end of an
       // ordinary round's Draw pass going into a murder night (secrecy fix).
@@ -382,7 +407,7 @@ function resolveComputerTurn() {
     }
     case PHASES.RECRUIT_RESPONSE: {
       if (currentRecruitResponseStep(state) === 'response') {
-        recordRecruitResponse(state, botChooseRecruitResponse() ? 'join' : 'refuse');
+        recordRecruitResponse(state, botChooseRecruitResponse(state));
       }
       const done = advanceRecruitResponseQueue(state);
       if (done) uiStage.eliminationRevealed = false;
@@ -493,10 +518,10 @@ function render() {
       UI.renderElimination(state, uiStage.eliminationRevealed);
       break;
     case PHASES.RECRUIT:
-      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget, uiStage.recruitConfirmed, uiStage.useChoice);
+      UI.renderRecruit(state, uiStage.recruitTapped, uiStage.recruitTarget, uiStage.recruitConfirmed);
       break;
     case PHASES.RECRUIT_RESPONSE:
-      UI.renderRecruitResponse(state, uiStage.recruitResponseTapped, uiStage.recruitJoinConfirmed);
+      UI.renderRecruitResponse(state, uiStage.recruitResponseTapped, uiStage.recruitJoinConfirmed, uiStage.recruitPendingResponse);
       break;
     case PHASES.FINAL_CIRCLE_DECISION:
       UI.renderFinalCircleDecision(state, uiStage.finalCircleTapped);
@@ -541,6 +566,7 @@ const actions = {
     cancelComputerTurnTimer();
     cancelDiscussTimer();
     Sound.stopMusic();
+    gameEpoch++;
     state = createInitialState();
     resetNarrationTracking();
     setupNames = Array(CONFIG.minPlayers).fill('');
@@ -557,6 +583,7 @@ const actions = {
     Sound.stopMusic();
     const saved = loadState();
     if (saved) {
+      gameEpoch++;
       state = saved;
       resetNarrationTracking();
       applyAudioSettings(state.settings.audio);
@@ -873,10 +900,9 @@ const actions = {
     // Hand": a tap, then the player's own hand screen (recruit-pass-on).
     if (currentRecruitStep(state) === 'offer') {
       if (!uiStage.recruitTarget) return;
-      recordRecruitTarget(state, uiStage.recruitTarget, uiStage.useChoice);
+      recordRecruitTarget(state, uiStage.recruitTarget);
     }
     uiStage.recruitConfirmed = true;
-    uiStage.useChoice = false;
     Sound.play('tap');
     render();
   },
@@ -927,11 +953,22 @@ const actions = {
     // pass — open tap, then one closing knock. A tap here gave the chosen
     // target's turn an extra sound, revealing who was approached and that
     // they joined.
+    uiStage.recruitPendingResponse = 'join';
+    uiStage.recruitJoinConfirmed = true;
+    render();
+  },
+  'recruit-play-choice': () => {
+    // Only ever offered to the approached player when they're actually
+    // holding a Deceiver's Choice of their own (see ui.js). Lands on the
+    // exact same "You Are Now A Deceiver" confirmation as an ordinary
+    // join -- the outcome is identical, and the two options must sound
+    // and feel the same from here, same as recruit-join above.
+    uiStage.recruitPendingResponse = 'swap';
     uiStage.recruitJoinConfirmed = true;
     render();
   },
   'confirm-recruit-join': () => {
-    recordRecruitResponse(state, 'join');
+    recordRecruitResponse(state, uiStage.recruitPendingResponse);
     uiStage.recruitResponseTapped = false;
     uiStage.recruitJoinConfirmed = false;
     const done = advanceRecruitResponseQueue(state);
@@ -1070,6 +1107,7 @@ const actions = {
     cancelDiscussTimer();
     Sound.stopMusic();
     clearState();
+    gameEpoch++;
     state = createInitialState();
     resetNarrationTracking();
     render();
@@ -1084,6 +1122,7 @@ const actions = {
     Sound.stopMusic();
     Sound.stopNarration();
     clearState();
+    gameEpoch++;
     state = createInitialState();
     resetNarrationTracking();
     render();

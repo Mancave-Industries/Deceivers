@@ -244,6 +244,16 @@ async function main() {
     { name: 'R2 recruit accept vs refuse (same seats)', base: { players: 7, seed: 54, deceivers: [0, 3], onMain: ({ round }) => { if (round === 1) state.players[3].alive = false; } }, a: { prefer: { 'recruit-join': 50, 'recruit-refuse': 0 } }, b: { prefer: { 'recruit-join': 0, 'recruit-refuse': 50 } }, seg: ['recruit', 'elimination'] },
     // Round 1 is forced to a Quiet Night with one Loyal seat removed, so both runs reach the Final Circle (4 living) identically; only the Deceiver's seat differs.
     { name: 'F1 Final Circle ballot, Deceiver seat differs', base: { players: 5, seed: 55, prefer: { 'choose-banish-again': 1, 'choose-end-game': 3 }, onMain: ({ round }) => { if (round === 1) { state.currentFateCard = 'quiet-night'; state.players[4].alive = false; } } }, a: { deceivers: [0] }, b: { deceivers: [2] }, seg: ['finalCircleDecision', 'results'] },
+    // Recruit Response: the approached player holding a Shield plays no
+    // tap differently from one who doesn't -- the save happens silently
+    // inside resolveRecruitmentRefusal, invisible to the rest of the
+    // table either way.
+    { name: 'R3 recruit refuse, target holds Shield vs not', base: { players: 7, seed: 56, deceivers: [0, 3], prefer: { 'recruit-join': 0, 'recruit-refuse': 50 } }, a: { onMain: ({ round }) => { if (round === 1) { state.players[3].alive = false; state.players.forEach((p) => { if (p.role === 'loyal' && p.alive) p.hand.push('shield'); }); } } }, b: { onMain: ({ round }) => { if (round === 1) { state.players[3].alive = false; } } }, seg: ['recruit', 'elimination'] },
+    // Recruit Response: playing a held Deceiver's Choice to force the
+    // swap lands on the same private confirmation screen as an ordinary
+    // join (see 'recruit-play-choice' in main.js), so the table hears the
+    // same single pass-the-phone beat either way.
+    { name: "R4 recruit, target plays Deceiver's Choice (swap) vs joins plainly", base: { players: 7, seed: 57, deceivers: [0, 3] }, a: { onMain: ({ round }) => { if (round === 1) { state.players[3].alive = false; state.players.forEach((p) => { if (p.role === 'loyal' && p.alive) p.hand.push('deceivers-choice'); }); } }, prefer: { 'recruit-join': 0, 'recruit-refuse': 0, 'recruit-play-choice': 50 } }, b: { onMain: ({ round }) => { if (round === 1) { state.players[3].alive = false; } }, prefer: { 'recruit-join': 50, 'recruit-refuse': 0 } }, seg: ['recruit', 'elimination'] },
   ];
   const pairOut = [];
   for (const p of pairs) {

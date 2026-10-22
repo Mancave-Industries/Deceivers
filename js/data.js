@@ -114,7 +114,7 @@ const FORTUNE_DECK_DEF = [
   { id: 'gold-five', name: 'Five Gold', deck: 'fortune', type: 'gold', value: 5, symbol: 'card-gold-five', frame: CARD_FRAMES.gold, icon: ICONS.coin, count: 2, description: 'Adds 5 gold to the Prize Pot.' },
   { id: 'dagger', name: 'Dagger', deck: 'fortune', type: 'action', symbol: 'card-dagger', frame: CARD_FRAMES.action, icon: ICONS.dagger, count: 2, effect: 'vote-weight', description: 'Play during Banishment to add +1 weight to your vote.' },
   { id: 'shield', name: 'Shield', deck: 'fortune', type: 'action', symbol: 'card-shield', frame: CARD_FRAMES.protection, icon: ICONS.shield, count: 2, effect: 'protect', description: 'Protects you automatically if the Deceivers target you — in a Murder, or if you refuse a Recruit or Die offer. Spent the moment it saves you.' },
-  { id: 'deceivers-choice', name: "Deceiver's Choice", deck: 'fortune', type: 'action', symbol: 'card-deceivers-choice', frame: CARD_FRAMES.role, icon: ICONS.hoodedFigure, count: 2, effect: 'counter-shield', description: "Deceivers only: play at Night to cancel one Shield in effect, or during Recruit or Die to force the swap — your target becomes a Deceiver, you become Loyal." },
+  { id: 'deceivers-choice', name: "Deceiver's Choice", deck: 'fortune', type: 'action', symbol: 'card-deceivers-choice', frame: CARD_FRAMES.role, icon: ICONS.hoodedFigure, count: 2, effect: 'counter-shield', description: "Deceivers only: play at Night to cancel one Shield in effect. If you're secretly approached during Recruit or Die, you alone may play it instead of answering — you become the Deceiver, your recruiter becomes Loyal, and you both survive." },
 ];
 
 /* Fate Deck — one card drawn per round; determines the round's shape. */
