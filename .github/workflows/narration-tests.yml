@@ -17,7 +17,7 @@ on:
 jobs:
   narration-suite:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -31,8 +31,11 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Install ffmpeg (for WAV-decoded audio fixtures)
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Ensure ffmpeg (for WAV-decoded audio fixtures)
+        # ubuntu-latest runners ship with ffmpeg preinstalled; only hit
+        # apt (and its slow `update`) on the rare runner image that
+        # doesn't have it, instead of paying that cost on every run.
+        run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
 
       - name: Run narration test suite
         run: npm run test:narration -- test-evidence/ci-narration-check
