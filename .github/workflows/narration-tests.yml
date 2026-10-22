@@ -29,15 +29,24 @@ jobs:
         run: npm install
 
       - name: Install Playwright Chromium
+        timeout-minutes: 20
         run: npx playwright install --with-deps chromium
 
-      - name: Ensure ffmpeg (for WAV-decoded audio fixtures)
-        # ubuntu-latest runners ship with ffmpeg preinstalled; only hit
-        # apt (and its slow `update`) on the rare runner image that
-        # doesn't have it, instead of paying that cost on every run.
-        run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Install ffmpeg (for WAV-decoded audio fixtures)
+        # A static-binary action, not apt: apt-get update stalled for
+        # 18-29+ minutes on this runner pool on two separate attempts
+        # (both a plain apt-get install and a `which ffmpeg ||` guarded
+        # one still fell through to it and hung) -- this downloads a
+        # prebuilt binary directly, no package-index fetch involved.
+        # Bounded to its own short timeout so a third bad surprise here
+        # fails fast and visibly instead of silently eating the rest of
+        # the job's 45-minute budget again.
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        id: setup-ffmpeg
+        timeout-minutes: 5
 
       - name: Run narration test suite
+        timeout-minutes: 25
         run: npm run test:narration -- test-evidence/ci-narration-check
 
       - name: Upload test evidence on failure
