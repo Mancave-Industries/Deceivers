@@ -295,6 +295,25 @@ body {
   background: transparent;
   z-index: 20;
 }
+/* Title screen only: the approved poster bakes its own menu/sound/help
+   icons into the artwork, close to the image's own top edge, so the
+   real header collapses to just the true hardware safe-area inset here
+   -- not the --edge-buffer-top var() other screens use (max(10vh, ...),
+   a generic design buffer, not a notch measurement), which would leave
+   an oversized, uncomposed gap above the full-bleed art on devices
+   with no actual notch to clear. No visible row, no border; icons/
+   wordmark hidden rather than drawn a second time underneath. Still
+   present in the DOM (not display:none) so nothing about its layout/
+   measurement breaks when the next screen un-collapses it. */
+.app-header.app-header--bare {
+  height: env(safe-area-inset-top, 0px);
+  padding: 0;
+  border-bottom: none;
+}
+.app-header.app-header--bare > * {
+  visibility: hidden;
+  pointer-events: none;
+}
 /* Fills the --edge-buffer-top safe-area reservation above the icon row --
    previously just blank space on every screen except Title (which has
    its own full poster). Sized to the buffer itself (height: 100%, since
@@ -492,35 +511,55 @@ body {
 }
 
 /* ---------- Title screen ---------- */
-/* The title key art is tall/portrait (built for a phone screen), so it
-   runs full-bleed as #screen-title's own background rather than sitting
-   in a small framed box — background-origin/-clip default to padding-box/
-   border-box, so it already shows straight through .screen's own padding
-   with no extra markup. The lockup (title, tagline, brand) lives in the
-   image's upper two-thirds; the buttons sit in its emptier lower third. */
+/* The approved poster (864x1536) has its own menu/sound/help icons and
+   NEW GAME / HOW TO PLAY bars printed into the artwork -- see
+   UI.renderTitle. #screen-title drops the base .screen padding so the
+   image frame can sit truly edge to edge, same as the old full-bleed
+   background it replaces. */
 #screen-title {
-  /* Use the newly approved poster when its JPEG has been added to the repo.
-     Until then retain the current working poster; never leave a blank title. */
-  background-image: url('../assets/brand/deceivers-title-poster.jpg?v=202610071539');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
-.title-hero {
+/* Width-locked to the art's own aspect ratio rather than letterboxed
+   inside an arbitrary box: every real iPhone portrait viewport is
+   narrower (taller, relatively) than 864:1536, so sizing by width alone
+   reproduces exactly what `background-size: contain` would have done,
+   while keeping the frame's own coordinate space pinned 1:1 to the
+   image -- which percentage-positioned hotspots below depend on. */
+.title-art-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 864 / 1536;
+  flex-shrink: 0;
+}
+.title-art-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Invisible, accessibly-labelled hit targets over the artwork's own
+   printed icons/bars -- never a second visible button. Positions are
+   percentages of the source image, inset a little from each graphic's
+   own printed edges. */
+.title-hotspot {
+  position: absolute;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* Continue Game has no printed graphic (the art predates the save/
+   continue feature) -- the one real, visibly-labelled control this
+   screen adds, placed in the space left under the art rather than
+   over any part of it. */
+.title-continue-wrap {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 28px;
-  text-align: center;
-}
-.title-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 280px;
+  justify-content: center;
+  padding: 10px 18px;
 }
 
 /* ---------- Setup screen ---------- */

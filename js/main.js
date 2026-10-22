@@ -437,6 +437,13 @@ const actions = {
     Sound.play('modalOpen');
     UI.showModal('How To Play', UI.helpContent());
   },
+  // The Title screen's approved artwork bakes its own menu/sound icons
+  // into the image, so the real header icons are hidden there (see
+  // UI.updateHeader) and these invisible hotspots sit over the printed
+  // graphics instead -- forwarding to the real buttons' own click
+  // handlers rather than duplicating their logic.
+  'title-open-settings': () => { document.getElementById('menuBtn').click(); },
+  'title-toggle-sound': () => { document.getElementById('soundBtn').click(); },
   'add-player': () => {
     Sound.play('tap');
     if (setupNames.length < CONFIG.maxPlayers) {

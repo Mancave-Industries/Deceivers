@@ -110,6 +110,11 @@ function passPrompt({ icon, name, instruction, action, btnLabel, btnClass }) {
 UI.updateHeader = function updateHeader(state) {
   const roundLabel = document.getElementById('roundLabel');
   const phaseLabel = document.getElementById('phaseLabel');
+  // The Title screen's approved artwork bakes its own menu/sound/help
+  // icons into the image (see UI.renderTitle), so the real header is
+  // collapsed to just its safe-area reservation there -- same icons,
+  // same taps, just the printed ones instead of a second visible row.
+  document.querySelector('.app-header').classList.toggle('app-header--bare', state.phase === PHASES.TITLE);
   if (state.phase === PHASES.TITLE || state.phase === PHASES.SETUP) {
     // The big .app-header-wordmark above already says "The Deceivers" --
     // repeating it here in the small label would just say it twice in
@@ -128,15 +133,31 @@ UI.updateHeader = function updateHeader(state) {
 
 /* ---------- 1. Title ---------- */
 
+/* The approved poster (assets/brand/deceivers-title-poster-approved.jpg)
+   has its own menu/sound/help icons and NEW GAME / HOW TO PLAY bars
+   baked into the artwork itself -- so this renders exactly one visible
+   set of controls: the printed ones, with invisible, accessibly-labelled
+   hotspot buttons positioned over their printed positions (percentages
+   of the 864x1536 source, safely inset from each graphic's own edges).
+   The real header icons are hidden while this screen is active (see
+   UI.updateHeader) so nothing is ever drawn twice.
+   Continue Game has no printed graphic to reuse (the art predates the
+   save/continue feature), so when a saved game exists it gets one real,
+   clearly-labelled button of its own below the artwork rather than
+   silently losing that functionality or mislabelling a printed button. */
 UI.renderTitle = function renderTitle(hasSaved) {
   screen('title').innerHTML = `
-    <div class="title-hero fade-in" role="img" aria-label="The Deceivers — Ceremony Of Trust And Betrayal. A Mancave Industries / Game Shed production.">
-      <div class="title-actions">
-        ${hasSaved ? '<button class="btn btn-primary btn-block" data-action="continue-game">Continue Game</button>' : ''}
-        <button class="btn ${hasSaved ? 'btn-ghost' : 'btn-primary'} btn-block" data-action="new-game">New Game</button>
-        <button class="btn btn-ghost btn-block" data-action="open-help">How To Play</button>
-      </div>
-    </div>`;
+    <div class="title-art-frame fade-in">
+      <img class="title-art-img" src="assets/brand/deceivers-title-poster-approved.jpg?v=202610222100"
+        alt="The Deceivers — Ceremony Of Trust And Betrayal. A Mancave Industries / Game Shed production."
+        draggable="false">
+      <button class="title-hotspot" style="left:1%;top:0.5%;width:11%;height:7.5%;" data-action="title-open-settings" aria-label="Settings menu"></button>
+      <button class="title-hotspot" style="left:75%;top:0.5%;width:13%;height:7.5%;" data-action="title-toggle-sound" aria-label="Toggle sound"></button>
+      <button class="title-hotspot" style="left:88%;top:0.5%;width:11%;height:7.5%;" data-action="open-help" aria-label="How to play"></button>
+      <button class="title-hotspot" style="left:5%;top:78%;width:90%;height:8%;" data-action="new-game" aria-label="New game"></button>
+      <button class="title-hotspot" style="left:5%;top:87%;width:90%;height:7.5%;" data-action="open-help" aria-label="How to play"></button>
+    </div>
+    ${hasSaved ? '<div class="title-continue-wrap"><button class="btn btn-primary btn-block" data-action="continue-game">Continue Game</button></div>' : ''}`;
 };
 
 /* ---------- 2. Setup ---------- */
