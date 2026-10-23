@@ -451,6 +451,13 @@ function render() {
   if (interstitialPending) {
     const key = interstitialPending;
     interstitialPending = null;
+    if (key === 'final-two') {
+      const resultState = state;
+      UI.showWinnerReveal(state, () => {
+        if (state === resultState && state.phase === PHASES.RESULTS) render();
+      });
+      return;
+    }
     const hold = key === 'reveal' && introPending ? Sound.narrateIntro : null;
     introPending = false;
     UI.showInterstitial(key, render, hold);
@@ -561,13 +568,24 @@ function buildShareResultText(state) {
 /* ---------- Action handlers ---------- */
 
 const actions = {
+  'replay-winner-reveal': () => {
+    if (state.phase !== PHASES.RESULTS || livingPlayers(state).length !== 2) return;
+    const resultState = state;
+    UI.showWinnerReveal(state, () => {
+      if (state !== resultState || state.phase !== PHASES.RESULTS) return;
+      Sound.narrate(['endLeadIn', state.winner === ROLES.DECEIVER.id ? 'deceiverWin' : 'loyalWin']);
+    });
+  },
   'new-game': () => {
+    UI.hideWinnerReveal();
     Sound.play('tap');
     cancelComputerTurnTimer();
     cancelDiscussTimer();
     Sound.stopMusic();
     gameEpoch++;
+    const settings = { ...state.settings };
     state = createInitialState();
+    state.settings = settings;
     resetNarrationTracking();
     setupNames = Array(CONFIG.minPlayers).fill('');
     setupIsComputer = Array(CONFIG.minPlayers).fill(false);
@@ -598,6 +616,13 @@ const actions = {
     Sound.play('modalOpen');
     UI.showModal('How To Play', UI.helpContent());
   },
+  // The Title screen's approved artwork bakes its own menu/sound icons
+  // into the image, so the real header icons are hidden there (see
+  // UI.updateHeader) and these invisible hotspots sit over the printed
+  // graphics instead -- forwarding to the real buttons' own click
+  // handlers rather than duplicating their logic.
+  'title-open-settings': () => { document.getElementById('menuBtn').click(); },
+  'title-toggle-sound': () => { document.getElementById('soundBtn').click(); },
   'add-player': () => {
     Sound.play('tap');
     if (setupNames.length < CONFIG.maxPlayers) {
@@ -1102,13 +1127,16 @@ const actions = {
     render();
   },
   'play-again': () => {
+    UI.hideWinnerReveal();
     Sound.play('tap');
     cancelComputerTurnTimer();
     cancelDiscussTimer();
     Sound.stopMusic();
     clearState();
     gameEpoch++;
+    const settings = { ...state.settings };
     state = createInitialState();
+    state.settings = settings;
     resetNarrationTracking();
     render();
     Sound.narrate(['farewell']);
@@ -1117,13 +1145,16 @@ const actions = {
     Sound.play('tap');
     UI.hideModal();
     if (!window.confirm('Reset the current game? This cannot be undone.')) return;
+    UI.hideWinnerReveal();
     cancelComputerTurnTimer();
     cancelDiscussTimer();
     Sound.stopMusic();
     Sound.stopNarration();
     clearState();
     gameEpoch++;
+    const settings = { ...state.settings };
     state = createInitialState();
+    state.settings = settings;
     resetNarrationTracking();
     render();
   },

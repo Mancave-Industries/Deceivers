@@ -57,6 +57,7 @@ function setupNewGame(state, playerNames, isComputerFlags) {
   state.prizePot = 0;
   state.round = 1;
   state.winner = null;
+  state.gamePayout = null;
   state.currentFateCard = null;
   state.nightResult = null;
   state.voteResult = null;
@@ -674,25 +675,28 @@ function resolveRecruitmentRefusal(state) {
   state.phase = PHASES.ELIMINATION;
 }
 
-/* Deceiver's Choice, played by the approached (Loyal) recipient instead
-   of answering Join/Refuse: a straight swap — the recipient becomes the
-   sole Deceiver, the recruiter steps down to Loyal, both survive.
+/* Deceiver's Choice, played by the approached Loyal recipient instead
+   of answering Join/Refuse: the recipient becomes the sole Deceiver,
+   and the recruiter becomes the Pariah. Only the Pariah's own private
+   view explains their new status; no new public step or cue is added.
    Resolves with the exact same Quiet Night shape as an ordinary
    successful join, so the public Elimination Reveal can't tell a swap
    from a willing join. */
 function resolveRecruitmentSwap(state) {
   const recruiter = findPlayer(state, state.recruitment.recruiterId);
   const recruit = findPlayer(state, state.recruitment.targetId);
-  if (recruit && recruit.hand.includes('deceivers-choice')) {
-    recruit.hand.splice(recruit.hand.indexOf('deceivers-choice'), 1);
-    state.fortuneDiscard.push('deceivers-choice');
-  }
+  if (!recruiter || !recruiter.alive || recruiter.role !== ROLES.DECEIVER.id
+      || !recruit || !recruit.alive || recruit.role !== ROLES.LOYAL.id
+      || !recruit.hand.includes('deceivers-choice')) return false;
+  recruit.hand.splice(recruit.hand.indexOf('deceivers-choice'), 1);
+  state.fortuneDiscard.push('deceivers-choice');
   recruit.role = ROLES.DECEIVER.id;
-  recruiter.role = ROLES.LOYAL.id;
+  recruiter.role = ROLES.PARIAH.id;
   state.nightResult = { quiet: true };
   state.eliminationContext = 'quiet';
-  log(state, `${recruit.name} played Deceiver's Choice: ${recruit.name} is now a Deceiver, and ${recruiter.name} is now Loyal.`);
+  log(state, `${recruit.name} played Deceiver's Choice: ${recruit.name} is now a Deceiver, and ${recruiter.name} is now the Pariah.`);
   state.phase = PHASES.ELIMINATION;
+  return true;
 }
 
 function botPickRecruitTarget(state) {
@@ -879,6 +883,34 @@ function checkFinalCircleWinner(state) {
 function payoutPrizePot(state, winner) {
   const pot = state.prizePot;
   const survivors = livingPlayers(state).filter((p) => p.role === winner);
+  const pariahs = livingPlayers(state).filter((p) => p.role === ROLES.PARIAH.id);
+  if (pariahs.length) {
+    // Include the Pariah in the nominal split, then give them one quarter
+    // of that share. Redistribute the other three quarters among the
+    // actual winners. Work in hundredths of gold so no rounding creates
+    // or loses pot value. A one-hundredth remainder goes in seat order.
+    const potUnits = Math.round(pot * 100);
+    const pariahUnits = Math.floor(potUnits / (survivors.length + pariahs.length) / 4);
+    const remaining = potUnits - pariahUnits * pariahs.length;
+    const winnerUnits = survivors.length ? Math.floor(remaining / survivors.length) : 0;
+    const remainder = survivors.length ? remaining % survivors.length : 0;
+    const allocations = survivors.map((p, i) => ({
+      playerId: p.id, name: p.name, role: p.role,
+      amount: (winnerUnits + (i < remainder ? 1 : 0)) / 100,
+    })).concat(pariahs.map((p) => ({
+      playerId: p.id, name: p.name, role: p.role, amount: pariahUnits / 100,
+    })));
+    allocations.forEach((p) => {
+      state.seriesScores[p.name] = Math.round(((state.seriesScores[p.name] || 0) + p.amount) * 100) / 100;
+    });
+    state.prizePot = 0;
+    return {
+      winner, pot, share: winnerUnits / 100,
+      recipients: survivors.map((p) => p.name),
+      pariahShare: pariahUnits / 100,
+      pariahRecipients: pariahs.map((p) => p.name), allocations,
+    };
+  }
   const share = survivors.length ? Math.floor(pot / survivors.length) : 0;
   survivors.forEach((p) => {
     state.seriesScores[p.name] = (state.seriesScores[p.name] || 0) + share;

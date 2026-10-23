@@ -130,10 +130,13 @@ async function runGame(browser, port, cfg) {
   if (cfg.sound !== 'leave') {
     const mutedAtBoot = await page.evaluate(() => document.getElementById('soundBtn').classList.contains('muted'));
     if (cfg.sound !== false) {
-      if (mutedAtBoot) await page.click('#soundBtn');
-      await page.evaluate((level) => Sound.setNarrationLevel(level), cfg.narrationLevel || 'full');
+      if (mutedAtBoot) await page.click('[data-action="title-toggle-sound"]');
+      await page.evaluate((level) => {
+        state.settings.audio = level;
+        applyAudioSettings(level);
+      }, cfg.narrationLevel || 'full');
     } else if (!mutedAtBoot) {
-      await page.click('#soundBtn');
+      await page.click('[data-action="title-toggle-sound"]');
     }
   }
 
@@ -161,7 +164,8 @@ async function runGame(browser, port, cfg) {
       round: state.round,
       seriesGame: state.seriesGame,
       seriesLength: state.seriesLength,
-      overlay: !document.getElementById('interstitialOverlay').classList.contains('hidden'),
+      winnerReveal: !document.getElementById('winnerRevealOverlay').classList.contains('hidden'),
+      overlay: !document.getElementById('interstitialOverlay').classList.contains('hidden') || !document.getElementById('winnerRevealOverlay').classList.contains('hidden'),
       actions: Array.from(document.querySelectorAll('.screen.active [data-action]'))
         .filter((b) => !b.disabled && b.offsetParent !== null)
         .map((b) => ({ action: b.dataset.action, id: b.dataset.id || null })),
@@ -183,7 +187,7 @@ async function runGame(browser, port, cfg) {
 
     if (info.overlay) {
       if (cfg.mode === 'patient') { await sleep(150); continue; }
-      await page.click('#interstitialOverlay').catch(() => {});
+      await page.click(info.winnerReveal ? '#skipWinnerReveal' : '#interstitialOverlay').catch(() => {});
       await sleep(30);
       continue;
     }

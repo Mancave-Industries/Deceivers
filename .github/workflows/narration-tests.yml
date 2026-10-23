@@ -62,3 +62,30 @@ jobs:
           name: narration-suite-evidence
           path: test-evidence/ci-narration-check/
           retention-days: 14
+
+  latest-fixes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+        timeout-minutes: 8
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+        timeout-minutes: 3
+      - run: npm run test:rules
+      - run: npm run test:ui
+        timeout-minutes: 5
+      - run: npm run audit:banishment
+      - name: Summarise latest fixes
+        if: always()
+        run: |
+          if test -f test-evidence/latest-fixes/ui-results.json; then
+            node -e 'const r=require("./test-evidence/latest-fixes/ui-results.json"); console.log(`Latest UI checks: ${r.passed} passed, ${r.failed} failed`)' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if test -f test-evidence/latest-fixes/banishment-audit.json; then
+            echo 'Banishment audit completed without changing probabilities.' >> "$GITHUB_STEP_SUMMARY"
+          fi
