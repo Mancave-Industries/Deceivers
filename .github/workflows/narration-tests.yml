@@ -17,7 +17,7 @@ on:
 jobs:
   narration-suite:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -46,7 +46,13 @@ jobs:
         timeout-minutes: 5
 
       - name: Run narration test suite
-        timeout-minutes: 25
+        # The real run (39870552957) reached the patient-mode P1 check
+        # cleanly at ~17.5 min in with zero failures anywhere, then was
+        # cut off by this step's own 25-min timeout before the slower
+        # remaining sections (a second patient-mode run, failure-mode
+        # handling, every matched pair) could finish -- 50 min covers
+        # that with real margin.
+        timeout-minutes: 50
         run: npm run test:narration -- test-evidence/ci-narration-check
 
       - name: Upload test evidence on failure
