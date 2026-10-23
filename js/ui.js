@@ -996,6 +996,7 @@ UI.hideWinnerReveal = function hideWinnerReveal() {
 
 UI.showWinnerReveal = function showWinnerReveal(state, onComplete) {
   UI.hideWinnerReveal();
+  UI.hideModal();
   Sound.stopNarration();
   const overlay = document.getElementById('winnerRevealOverlay');
   const body = document.getElementById('winnerRevealBody');

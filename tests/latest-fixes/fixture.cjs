@@ -23,7 +23,7 @@ function swapFixture() {
   const fixture = loadEngine();
   fixture.run(`
     var state = createInitialState();
-    startNewSeries(state, ['Mark', 'Lila', 'TK', 'max', 'Libby', 'Simon', 'Warwick'], 3);
+    startNewSeries(state, ['Avery', 'Blake', 'Casey', 'Drew', 'Ellis', 'Frankie', 'Gray'], 3);
     state.players.forEach((p, i) => { p.role = i === 0 || i === 3 ? 'deceiver' : 'loyal'; });
     state.players[3].alive = false;
     state.players[1].hand = ['deceivers-choice'];

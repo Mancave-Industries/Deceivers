@@ -35,7 +35,7 @@ async function main() {
       });
       await check(`${tag}: title Settings, sound, and both help controls work`, async () => {
         await page.click('[data-action="title-open-settings"]');
-        assert.equal(await page.locator('#modalTitle').innerText(), 'Settings');
+        assert.equal(await page.locator('#modalTitle').textContent(), 'Settings');
         await page.click('[data-close-modal]');
         const before = await page.evaluate(() => state.settings.audio);
         await page.click('[data-action="title-toggle-sound"]');
@@ -44,28 +44,30 @@ async function main() {
         assert.equal(await page.evaluate(() => state.settings.audio), before);
         for (let i = 0; i < 2; i++) {
           await page.locator('[data-action="open-help"]').nth(i).click();
-          assert.equal(await page.locator('#modalTitle').innerText(), 'How To Play');
+          assert.equal(await page.locator('#modalTitle').textContent(), 'How To Play');
           await page.click('[data-close-modal]');
         }
       });
+      await page.evaluate(() => UI.hideModal());
       await page.screenshot({ path: path.join(out, `title-${tag}.png`), fullPage: true });
       await check(`${tag}: New Game starts a real game and the header returns`, async () => {
         await page.click('[data-action="new-game"]');
-        for (let i = 0; i < 3; i++) await page.locator('.name-input').nth(i).fill(['Mark', 'Lila', 'TK'][i]);
+        assert.equal(await page.locator('#screen-title').isVisible(), false, 'title artwork must hide after New Game');
+        for (let i = 0; i < 3; i++) await page.locator('.name-input').nth(i).fill(['Avery', 'Blake', 'Casey'][i]);
         await page.click('[data-action="start-game"]');
         await page.click('#interstitialOverlay');
         assert.equal(await page.evaluate(() => state.phase), 'reveal');
         assert.equal(await page.locator('.app-header--bare').count(), 0);
-        assert.equal(await page.locator('.screen.active .privacy-badge').innerText(), 'Mark’s Eyes Only');
+        assert.equal(await page.locator('.screen.active .privacy-badge span').textContent(), 'Avery’s Eyes Only');
         await page.click('[data-action="tap-reveal"]');
-        assert.equal(await page.locator('.screen.active .privacy-badge').innerText(), 'Mark’s Eyes Only');
+        assert.equal(await page.locator('.screen.active .privacy-badge span').textContent(), 'Avery’s Eyes Only');
       });
 
       await page.evaluate(() => {
         Sound.setEnabled(false);
         cancelComputerTurnTimer(); cancelDiscussTimer(); UI.hideWinnerReveal();
         gameEpoch++; state = createInitialState(); resetNarrationTracking();
-        startNewSeries(state, ['Mark', 'Lila', 'TK', 'max', 'Libby', 'Simon', 'Warwick'], 3);
+        startNewSeries(state, ['Avery', 'Blake', 'Casey', 'Drew', 'Ellis', 'Frankie', 'Gray'], 3);
         state.players.forEach((p, i) => { p.role = i === 0 || i === 3 ? 'deceiver' : 'loyal'; });
         state.players[3].alive = false; state.players[1].hand = ['deceivers-choice'];
         state.initialDeceiverCount = 2;
@@ -83,8 +85,8 @@ async function main() {
           state.players[5].role = 'deceiver';
           state.pendingQueue = [state.players[1].id]; state.phase = PHASES.HAND; render();
         });
-        assert.match(await page.locator('.screen.active .private-role-note').innerText(), /Simon/);
-        assert.doesNotMatch(await page.locator('.screen.active .private-role-note').innerText(), /Mark|Pariah|max/);
+        assert.match(await page.locator('.screen.active .private-role-note').innerText(), /Frankie/);
+        assert.doesNotMatch(await page.locator('.screen.active .private-role-note').innerText(), /Avery|Pariah|Drew/);
         await page.evaluate(() => { state.players[5].alive = false; render(); });
         assert.match(await page.locator('.screen.active .private-role-note').innerText(), /only remaining/);
         await page.evaluate(() => { state.settings.deceiverKnowledge = 'hidden'; render(); });
@@ -97,32 +99,34 @@ async function main() {
       await check(`${tag}: discussion and ballot show living names only, with no roles`, async () => {
         await page.evaluate(() => { state.phase = PHASES.DISCUSS; uiStage.votingAnnounced = false; render(); });
         const roster = await page.locator('.screen.active .living-player-list').innerText();
-        assert.doesNotMatch(roster, /max|Simon|Deceiver|Pariah|Loyal/);
-        assert.match(roster, /Mark/);
+        assert.doesNotMatch(roster, /Drew|Frankie|Deceiver|Pariah|Loyal/);
+        assert.match(roster, /Avery/);
         await page.evaluate(() => { beginVotePhase(state, false); state.pendingQueue = [state.players[0].id]; uiStage.voteTapped = true; render(); });
         assert.equal(await page.locator('.screen.active .target-card').count(), 4);
-        assert.equal(await page.locator('.screen.active .target-card').allTextContents().then((texts) => texts.some((text) => /max|Simon/.test(text))), false);
+        assert.equal(await page.locator('.screen.active .target-card').allTextContents().then((texts) => texts.some((text) => /Drew|Frankie/.test(text))), false);
         await page.screenshot({ path: path.join(out, `ballot-${tag}.png`), fullPage: true });
       });
       await check(`${tag}: HTML in a player name stays text on private screens`, async () => {
         await page.evaluate(() => { state.players[0].name = '<img src=x>'; render(); });
         assert.equal(await page.locator('.screen.active .privacy-badge img').count(), 0);
-        assert.match(await page.locator('.screen.active .privacy-badge').innerText(), /<img src=x>/);
-        await page.evaluate(() => { state.players[0].name = 'Mark'; });
+        assert.match(await page.locator('.screen.active .privacy-badge span').textContent(), /<img src=x>/);
+        await page.evaluate(() => { state.players[0].name = 'Avery'; });
       });
       await check(`${tag}: Final Two can be skipped and replayed without another payout`, async () => {
         await page.evaluate(() => {
           state.players.forEach((p, i) => { p.alive = i < 2; }); state.players[1].role = 'loyal';
+          UI.showModal('Settings', UI.settingsContent(state));
           state.prizePot = 100; finalizeGame(state, 'loyal'); interstitialPending = 'final-two'; render();
         });
         assert.equal(await page.locator('#winnerRevealOverlay').isVisible(), true);
+        assert.equal(await page.locator('#modalOverlay').isVisible(), false);
         await page.click('#skipWinnerReveal');
         assert.equal(await page.locator('#winnerRevealOverlay').isVisible(), false);
         assert.match(await page.locator('.screen.active').innerText(), /12.5 gold/);
         const scores = await page.evaluate(() => JSON.stringify(state.seriesScores));
         await page.click('[data-action="replay-winner-reveal"]');
         await page.waitForTimeout(3100);
-        assert.match(await page.locator('#winnerRevealBody').innerText(), /Lila/);
+        assert.match(await page.locator('#winnerRevealBody').innerText(), /Blake/);
         await page.screenshot({ path: path.join(out, `final-two-${tag}.png`), fullPage: true });
         await page.keyboard.press('Escape');
         assert.equal(await page.evaluate(() => JSON.stringify(state.seriesScores)), scores);

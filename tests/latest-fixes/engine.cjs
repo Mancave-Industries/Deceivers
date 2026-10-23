@@ -43,8 +43,8 @@ for (const winner of ['loyal', 'deceiver']) {
     assert.equal(run('state.winner'), winner);
     assert.equal(run('state.gamePayout.pariahShare'), 12.5);
     assert.equal(run('state.gamePayout.share'), 87.5);
-    assert.equal(run('state.seriesScores.Mark'), 12.5);
-    assert.equal(run('state.seriesScores.Lila'), 87.5);
+    assert.equal(run('state.seriesScores.Avery'), 12.5);
+    assert.equal(run('state.seriesScores.Blake'), 87.5);
     assert.equal(run('state.prizePot'), 0);
   });
 }
@@ -62,7 +62,7 @@ test('an eliminated Pariah receives nothing and ordinary equal splits stay uncha
   const { run } = swapFixture();
   run("state.players.forEach((p, i) => { p.alive = i === 2 || i === 4; }); state.prizePot = 101; finalizeGame(state, 'loyal')");
   assert.equal(run('state.gamePayout.share'), 50);
-  assert.equal(run('state.seriesScores.Mark'), 0);
+  assert.equal(run('state.seriesScores.Avery'), 0);
   assert.equal(run('state.gamePayout.recipients.length'), 2);
 });
 

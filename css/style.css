@@ -518,7 +518,6 @@ body {
    background it replaces. */
 #screen-title {
   padding: 0;
-  display: flex;
   flex-direction: column;
 }
 /* Width-locked to the art's own aspect ratio rather than letterboxed
@@ -545,6 +544,8 @@ body {
    own printed edges. */
 .title-hotspot {
   position: absolute;
+  min-width: 44px;
+  min-height: 44px;
   background: transparent;
   border: none;
   padding: 0;
