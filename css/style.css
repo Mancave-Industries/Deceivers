@@ -140,8 +140,9 @@ body {
   position: relative;
   width: 100vw;
   max-width: 430px;
-  height: 100svh;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   background: linear-gradient(180deg, var(--charcoal-900), var(--charcoal-950) 60%);
   box-shadow: var(--shadow-deep);
   overflow: hidden;
@@ -396,6 +397,7 @@ body {
 .screens {
   position: relative;
   flex: 1 1 auto;
+  min-height: 0;
   overflow: hidden;
 }
 .screen {
@@ -919,7 +921,9 @@ body {
    risk and need no panel. */
 .handoff-screen {
   position: relative;
-  flex: 1;
+  /* Grow with the full prompt so the outer screen can scroll to its
+     button. Shrinking this clipped the button behind the artwork. */
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -951,6 +955,7 @@ body {
 .handoff-screen > .reveal-stage {
   position: relative;
   z-index: 1;
+  flex: 1 0 auto;
 }
 /* Opening beat (item 1): every handoff opens on the full-colour image
    with the name superimposed (the text panel above is present and at

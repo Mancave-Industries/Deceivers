@@ -17,7 +17,7 @@ async function main() {
   const server = await startServer('wav');
   const browser = await chromium.launch({ args: ['--autoplay-policy=no-user-gesture-required'] });
   try {
-    for (const viewport of [{ width: 375, height: 812 }, { width: 390, height: 844 }, { width: 812, height: 375 }]) {
+    for (const viewport of [{ width: 375, height: 620 }, { width: 375, height: 812 }, { width: 390, height: 844 }, { width: 812, height: 375 }]) {
       const context = await browser.newContext({ viewport });
       const page = await context.newPage();
       const errors = [];
@@ -59,7 +59,22 @@ async function main() {
         assert.equal(await page.evaluate(() => state.phase), 'reveal');
         assert.equal(await page.locator('.app-header--bare').count(), 0);
         assert.equal(await page.locator('.screen.active .privacy-badge span').textContent(), 'Avery’s Eyes Only');
-        await page.click('[data-action="tap-reveal"]');
+        const revealButton = page.locator('[data-action="tap-reveal"]');
+        await revealButton.scrollIntoViewIfNeeded();
+        const reachable = await revealButton.evaluate((button) => {
+          const box = button.getBoundingClientRect();
+          if (box.top < 0 || box.bottom > innerHeight) return false;
+          for (let parent = button.parentElement; parent; parent = parent.parentElement) {
+            if (/hidden|auto|scroll|clip/.test(getComputedStyle(parent).overflowY)) {
+              const clip = parent.getBoundingClientRect();
+              if (box.top < clip.top - 1 || box.bottom > clip.bottom + 1) return false;
+            }
+          }
+          return document.elementFromPoint(box.x + box.width / 2, box.bottom - 4)?.closest('button') === button;
+        });
+        assert.equal(reachable, true, 'the whole reveal button must be reachable, including its bottom edge');
+        await page.screenshot({ path: path.join(out, `handoff-button-${tag}.png`) });
+        await revealButton.click();
         assert.equal(await page.locator('.screen.active .privacy-badge span').textContent(), 'Avery’s Eyes Only');
       });
 
