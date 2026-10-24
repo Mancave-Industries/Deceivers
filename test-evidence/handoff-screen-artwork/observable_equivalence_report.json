@@ -1,0 +1,314 @@
+{
+  "generatedAt": "2026-10-20T18:08:38.936Z",
+  "games": [
+    {
+      "label": "G1_3p",
+      "playerCount": 3,
+      "finished": true,
+      "steps": 30,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "elimination",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 3,
+        "draw": 3,
+        "finalCircleDecision": 3
+      }
+    },
+    {
+      "label": "G2_4p",
+      "playerCount": 4,
+      "finished": true,
+      "steps": 37,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "elimination",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 4,
+        "draw": 4,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G3_5p",
+      "playerCount": 5,
+      "finished": true,
+      "steps": 78,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "elimination",
+        "discuss",
+        "vote",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 5,
+        "draw": 10,
+        "vote": 5,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G4_5p_b",
+      "playerCount": 5,
+      "finished": true,
+      "steps": 56,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "night",
+        "murder",
+        "elimination",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 5,
+        "draw": 5,
+        "murder": 5,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G5_6p",
+      "playerCount": 6,
+      "finished": true,
+      "steps": 99,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "night",
+        "murder",
+        "elimination",
+        "discuss",
+        "vote",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 6,
+        "draw": 11,
+        "murder": 6,
+        "vote": 5,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G6_6p_b",
+      "playerCount": 6,
+      "finished": true,
+      "steps": 96,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "night",
+        "murder",
+        "elimination",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 6,
+        "draw": 11,
+        "murder": 11,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G7_7p",
+      "playerCount": 7,
+      "finished": true,
+      "steps": 205,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "elimination",
+        "discuss",
+        "vote",
+        "recruit",
+        "recruitResponse",
+        "night",
+        "murder",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 7,
+        "draw": 25,
+        "vote": 13,
+        "recruit": 6,
+        "recruitResponse": 6,
+        "murder": 5,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G8_7p_b",
+      "playerCount": 7,
+      "finished": true,
+      "steps": 150,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "night",
+        "murder",
+        "elimination",
+        "discuss",
+        "vote",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 7,
+        "draw": 18,
+        "murder": 7,
+        "vote": 11,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G9_8p",
+      "playerCount": 8,
+      "finished": true,
+      "steps": 290,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "night",
+        "murder",
+        "elimination",
+        "discuss",
+        "vote",
+        "recruit",
+        "recruitResponse",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 8,
+        "draw": 38,
+        "murder": 18,
+        "vote": 13,
+        "recruit": 5,
+        "recruitResponse": 5,
+        "finalCircleDecision": 4
+      }
+    },
+    {
+      "label": "G10_8p_b",
+      "playerCount": 8,
+      "finished": true,
+      "steps": 309,
+      "pageErrors": [],
+      "screensSeen": [
+        "reveal",
+        "main",
+        "draw",
+        "hand",
+        "elimination",
+        "discuss",
+        "vote",
+        "night",
+        "murder",
+        "finalCircleDecision",
+        "results"
+      ],
+      "handoffPhaseCounts": {
+        "reveal": 8,
+        "draw": 49,
+        "vote": 21,
+        "murder": 12,
+        "finalCircleDecision": 4
+      }
+    }
+  ],
+  "artworkCheck": {
+    "ok": true,
+    "murder": "assets/brand/interstitials/night-falls.jpg?v=202610072020",
+    "recruit": "assets/brand/interstitials/night-falls.jpg?v=202610072020",
+    "recruitResponse": "assets/brand/interstitials/night-falls.jpg?v=202610072020",
+    "reveal": "assets/brand/interstitials/reveal.jpg?v=202610071550",
+    "draw": "assets/brand/interstitials/draw.jpg?v=202610072020",
+    "vote": "assets/brand/interstitials/banishment.jpg?v=202610072020",
+    "finalCircleDecision": "assets/brand/night-skyline.png?v=202610081216",
+    "sameConstantRef": true
+  },
+  "handoffArtworkByPhase": {
+    "reveal": [
+      "url(\"assets/brand/interstitials/reveal.jpg?v=202610071550\")"
+    ],
+    "draw": [
+      "url(\"assets/brand/interstitials/draw.jpg?v=202610072020\")"
+    ],
+    "finalCircleDecision": [
+      "url(\"assets/brand/night-skyline.png?v=202610081216\")"
+    ],
+    "vote": [
+      "url(\"assets/brand/interstitials/banishment.jpg?v=202610072020\")"
+    ],
+    "murder": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ],
+    "recruit": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ],
+    "recruitResponse": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ]
+  },
+  "murderRecruitEquivalence": {
+    "murderPhaseObserved": true,
+    "recruitPhaseObserved": true,
+    "recruitResponsePhaseObserved": true,
+    "murderUrlsDistinct": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ],
+    "recruitUrlsDistinct": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ],
+    "recruitResponseUrlsDistinct": [
+      "url(\"assets/brand/interstitials/night-falls.jpg?v=202610072020\")"
+    ],
+    "allThreeIdentical": true
+  },
+  "allGamesFinished": true,
+  "totalPageErrors": 0,
+  "pageErrorsDetail": []
+}

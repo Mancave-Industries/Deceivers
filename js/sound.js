@@ -1,11 +1,15 @@
 /* ==========================================================================
    THE DECEIVERS — Sound
-   A synthesized (WebAudio, no audio files) sound design matching the dark
-   ceremonial theme: bell tolls, low drones, bright coin chimes, dark/bright
-   resolving chords for the two endings. Entirely self-contained — main.js
-   only ever calls Sound.setEnabled(bool), Sound.play(name),
-   Sound.setMusicEnabled(bool), Sound.startMusic(), Sound.stopMusic(), and
-   Sound.announceVotingBegins(onComplete).
+   Sound effects and music are synthesized (WebAudio, no audio files) to
+   match the dark ceremonial theme: bell tolls, low drones, coin chimes,
+   dark/bright resolving chords for the two endings. Spoken narration is
+   the one exception: prerecorded Mancaveman clips (see narration.js and
+   "Recorded narration" below), played through the same WebAudio context.
+   main.js calls Sound.setEnabled(bool), Sound.play(name),
+   Sound.setMusicEnabled(bool), Sound.startMusic(), Sound.stopMusic(),
+   Sound.narrate(pools), Sound.narrateIntro(release),
+   Sound.announceVotingBegins(onComplete, isFinal) and
+   Sound.preloadNarration().
 
    Anonymity note: during the Murder phase's per-player turn queue, the
    *same* device that's passed hand to hand plays these sounds out loud for
@@ -38,15 +42,31 @@ const Sound = (() => {
   let musicEnabled = false;
   let musicState = null;
   let ctx = null;
+  // 'full' or 'partial' -- which narration pools narrate() will actually
+  // speak when enabled. Irrelevant when sound is off entirely.
+  let narrationLevel = 'partial';
 
-  function getCtx() {
+  function getCtx(resume = true) {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
-    if (ctx.state === 'suspended') ctx.resume();
+    // iOS reports 'interrupted' after a call / lock screen, not 'suspended'.
+    if (resume && (ctx.state === 'suspended' || ctx.state === 'interrupted')) {
+      try {
+        const p = ctx.resume();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      } catch (e) {
+        /* ignore */
+      }
+    }
     return ctx;
   }
 
   function setEnabled(value) {
     enabled = !!value;
+    if (!enabled) stopNarration();
+  }
+
+  function setNarrationLevel(value) {
+    narrationLevel = value === 'full' ? 'full' : 'partial';
   }
 
   function setMusicEnabled(value) {
@@ -166,222 +186,276 @@ const Sound = (() => {
     return dur;
   }
 
-  /* ---------- Spoken line (Web Speech API — no audio files, same
-     "no external assets" rule as the rest of this module; silently no-ops
-     wherever speech synthesis isn't available).
+  /* ---------- Recorded narration (the Mancaveman voice) ----------
+     Every spoken line is a prerecorded clip (see narration.js) — no
+     text-to-speech anywhere, and player names are never spoken: names stay
+     on screen only. main.js asks for a *moment* (a named pool, e.g.
+     'handoff' or 'gather'); this picks one line from that pool at random,
+     then one recorded take of that line at random, never the same take of
+     the same line twice in a row when another exists.
 
-     Three things make every repeated line sound a little less like a
-     machine reading a script, with no external service and no network
-     call — just the same Web Speech API already in use:
+     Clips are decoded into the same WebAudio context the sound effects
+     already use, rather than played through <audio> elements: iPhone
+     Safari rejects <audio>.play() that isn't inside a tap, and several of
+     these lines start from a timer (the Discuss clock, the end of an
+     interstitial). Once a tap has unlocked the context, buffer playback
+     from a timer is fine.
 
-     1. Phrase variety — most cues have several interchangeable wordings
-        (the *_PHRASES constants, below) and pick one at random each time,
-        so "Pass the phone to X" doesn't come out as the literal same
-        sentence 20+ times across a game.
-     2. Tone presets + per-line jitter — a small set of named rate/pitch
-        shapes (TONES) for different emotional registers (a routine
-        hand-off reads differently than "night falls"), each nudged by a
-        small random amount per utterance (jitterTone) so even the same
-        tone preset doesn't land at the exact same rate/pitch every time.
-     3. Deliberate pauses between clauses — speakSequence chains multiple
-        short utterances with a real gap between them, closer to how a
-        person actually pauses between sentences than the engine's own
-        (often too-quick) default inter-sentence gap. ---------- */
+     Memory: all 115 decoded clips would be ~110 MB of PCM, too much for a
+     phone. Compressed bytes (~7 MB) are fetched in the background after
+     Start Game; buffers are decoded on demand and kept in a small LRU. The
+     very next pick of each frequent pool is chosen and decoded ahead of
+     time ("primed") so it starts instantly.
 
-  // Common female-leaning voice names across Chrome/Android, Safari/iOS,
-  // and Windows — the Web Speech API has no standard gender field, so this
-  // is a best-effort name match; falls back to the platform default voice
-  // (whatever that happens to be) if none of these are installed.
-  const FEMALE_VOICE_PATTERN = /female|woman|samantha|victoria|karen|moira|tessa|fiona|zira|susan|allison|ava|serena|salli|joanna|ivy|kendra|kimberly|hazel|google us english female|google uk english female/i;
+     Failure is always silent and never blocks the game: a clip that fails
+     to fetch/decode, or isn't ready within CLIP_READY_TIMEOUT_MS, is
+     skipped; a playing clip has a watchdog in case 'ended' never fires;
+     every onEnd callback fires exactly once — including when a newer
+     announcement supersedes it — so nothing waiting on a line (the vote
+     queue, the opening hold) can hang.
 
-  // Platforms that ship multiple quality tiers of the same voice label them
-  // this way (iOS/macOS "Enhanced"/"Premium" Siri voices, Android's
-  // "Natural"/neural voices, Chrome's "Google" network voices) — these sound
-  // markedly less robotic than the default compact/offline tier of the same
-  // name, so prefer one of these over a plain female-name match when both
-  // are available.
-  const HIGH_QUALITY_VOICE_PATTERN = /enhanced|premium|natural|neural|google/i;
+     Secrecy: no pool, take, timing or count here depends on anyone's role.
+     The random choice of take is the only variation. */
 
-  function pickVoice(voices) {
-    const female = voices.filter((v) => FEMALE_VOICE_PATTERN.test(v.name));
-    const pool = female.length ? female : voices;
-    return pool.find((v) => HIGH_QUALITY_VOICE_PATTERN.test(v.name)) || pool[0];
+  const VOICE_GAIN = 1.0;
+  const CLIP_READY_TIMEOUT_MS = 3000;
+  const DECODED_LIMIT = 30;
+  const FADE_OUT_SECONDS = 0.08;
+  const PRIMED_POOLS = ['handoff', 'nightFalls', 'gather', 'votingBegins'];
+
+  let random = Math.random;
+  const lastTake = {};
+  const bytesCache = new Map();
+  const decodedCache = new Map();
+  const primed = {};
+  let narrationGeneration = 0;
+  let currentVoice = null;
+  let preloadStarted = false;
+  const listeners = [];
+
+  function emit(type, data) {
+    for (let i = 0; i < listeners.length; i++) {
+      try { listeners[i](type, data || {}); } catch (e) { /* ignore */ }
+    }
   }
 
-  // Named rate/pitch shapes for different emotional registers. The spread
-  // between tones is deliberately subtle, not a cartoon voice change — see
-  // the no-artificial-pitch-shift note in speak(), below — just enough that
-  // "night falls" doesn't land in the same register as a routine hand-off.
-  const TONES = {
-    calm: { rate: 0.94, pitch: 1.0 },     // routine hand-offs — the default, most-heard tone
-    ominous: { rate: 0.89, pitch: 0.95 }, // Night Falls — slower, a touch lower
-    urgent: { rate: 0.98, pitch: 1.03 },  // Gather Everyone / voting begins — a touch brighter, pressing forward
-  };
-
-  function randBetween(lo, hi) {
-    return lo + Math.random() * (hi - lo);
+  function fetchClip(key) {
+    if (!bytesCache.has(key)) {
+      const p = fetch(NARRATION.clipUrl(key)).then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.arrayBuffer();
+      });
+      p.catch(() => bytesCache.delete(key)); // allow a later retry
+      bytesCache.set(key, p);
+    }
+    return bytesCache.get(key);
   }
 
-  // A small random nudge layered on top of a named tone so the *same* tone
-  // still varies slightly utterance to utterance — never enough to sound
-  // like a different voice, just enough that it isn't a flat, identical
-  // reading every single time.
-  function jitterTone(tone) {
-    const base = TONES[tone] || TONES.calm;
-    return {
-      rate: Math.max(0.6, randBetween(base.rate - 0.035, base.rate + 0.035)),
-      pitch: Math.max(0.5, randBetween(base.pitch - 0.04, base.pitch + 0.04)),
+  function decodeClip(key) {
+    if (decodedCache.has(key)) {
+      const b = decodedCache.get(key);
+      decodedCache.delete(key);
+      decodedCache.set(key, b); // most-recently-used to the back
+      return Promise.resolve(b);
+    }
+    return fetchClip(key).then((buf) => new Promise((resolve, reject) => {
+      let settled = false;
+      const ok = (b) => { if (!settled) { settled = true; resolve(b); } };
+      const fail = (e) => { if (!settled) { settled = true; reject(e || new Error('decode failed')); } };
+      try {
+        // slice(): decodeAudioData detaches its input; keep the cached bytes reusable.
+        const p = getCtx(false).decodeAudioData(buf.slice(0), ok, fail);
+        if (p && typeof p.then === 'function') p.then(ok, fail);
+      } catch (e) {
+        fail(e);
+      }
+    })).then((b) => {
+      decodedCache.set(key, b);
+      while (decodedCache.size > DECODED_LIMIT) decodedCache.delete(decodedCache.keys().next().value);
+      return b;
+    });
+  }
+
+  function withTimeout(promise, ms) {
+    return new Promise((resolve, reject) => {
+      const t = setTimeout(() => reject(new Error('not ready in time')), ms);
+      promise.then((v) => { clearTimeout(t); resolve(v); }, (e) => { clearTimeout(t); reject(e); });
+    });
+  }
+
+  function chooseTake(line) {
+    const n = NARRATION.TAKES[line] || 0;
+    const options = [];
+    for (let t = 0; t < n; t++) if (n === 1 || t !== lastTake[line]) options.push(t);
+    return options.length ? options[Math.floor(random() * options.length)] : -1;
+  }
+
+  function pickFresh(poolName) {
+    const pool = NARRATION.POOLS[poolName];
+    if (!pool || !pool.length) return null;
+    const line = pool[Math.floor(random() * pool.length)];
+    const take = chooseTake(line);
+    if (take < 0) return null;
+    return { pool: poolName, line, take, key: NARRATION.clipKey(line, take) };
+  }
+
+  function choose(poolName) {
+    const c = primed[poolName];
+    if (c) {
+      delete primed[poolName];
+      // The same line may have played via another pool since this was primed.
+      if ((NARRATION.TAKES[c.line] || 0) > 1 && c.take === lastTake[c.line]) {
+        const take = chooseTake(c.line);
+        return { pool: poolName, line: c.line, take, key: NARRATION.clipKey(c.line, take) };
+      }
+      return c;
+    }
+    return pickFresh(poolName);
+  }
+
+  function prime(poolName) {
+    if (!enabled || primed[poolName]) return;
+    const c = pickFresh(poolName);
+    if (!c) return;
+    primed[poolName] = c;
+    decodeClip(c.key).catch(() => {});
+  }
+
+  /* Fetches every clip's compressed bytes in the background, most
+     frequently heard first, three at a time. Idempotent. */
+  function preloadNarration() {
+    if (!enabled || preloadStarted || typeof fetch !== 'function') return;
+    preloadStarted = true;
+    PRIMED_POOLS.forEach(prime);
+    const first = [];
+    PRIMED_POOLS.forEach((p) => NARRATION.POOLS[p].forEach((line) => {
+      for (let t = 0; t < NARRATION.TAKES[line]; t++) first.push(NARRATION.clipKey(line, t));
+    }));
+    const rest = NARRATION.allClipKeys().filter((k) => first.indexOf(k) === -1);
+    const queue = first.concat(rest);
+    let active = 0;
+    const pump = () => {
+      while (active < 3 && queue.length) {
+        active++;
+        fetchClip(queue.shift()).catch(() => {}).then(() => { active--; pump(); });
+      }
     };
+    pump();
   }
 
-  function pick(list) {
-    return list[Math.floor(Math.random() * list.length)];
-  }
-
-  // Bumped at the start of every new announcement (single-line or
-  // multi-part sequence) so an in-flight speakSequence's pending setTimeout
-  // can tell it's been superseded and stop advancing, even though the
-  // actually-playing utterance is also cancelled immediately below.
-  let announceGeneration = 0;
-
-  function speak(text, onEnd, tone) {
-    const finish = () => { if (onEnd) onEnd(); };
-    if (!enabled || !('speechSynthesis' in window)) {
-      finish();
-      return;
-    }
+  function stopVoice() {
+    if (!currentVoice) return;
+    const { src, gain } = currentVoice;
+    currentVoice = null;
     try {
-      const utter = new SpeechSynthesisUtterance(text);
-      // Natural rate/pitch as a base — no heavy artificial pitch shift. A
-      // heavily slowed, deepened, or pitch-bent voice came across as a flat
-      // robotic drone rather than ominous; a real/enhanced voice at close
-      // to its own natural register reads as ominous (or urgent, or calm)
-      // from the words, pacing, and this small tone shift alone.
-      const { rate, pitch } = jitterTone(tone);
-      utter.rate = rate;
-      utter.pitch = pitch;
-      utter.volume = 1;
-      const voices = window.speechSynthesis.getVoices();
-      const chosenVoice = pickVoice(voices);
-      if (chosenVoice) utter.voice = chosenVoice;
-      let done = false;
-      const finishOnce = () => { if (!done) { done = true; finish(); } };
-      utter.onend = finishOnce;
-      utter.onerror = finishOnce;
-      // Some platforms occasionally never fire onend — don't let that hang the game.
-      setTimeout(finishOnce, 6000);
-      window.speechSynthesis.speak(utter);
+      const t = getCtx(false).currentTime;
+      gain.gain.cancelScheduledValues(t);
+      gain.gain.setValueAtTime(gain.gain.value, t);
+      gain.gain.linearRampToValueAtTime(0.0001, t + FADE_OUT_SECONDS);
+      src.stop(t + FADE_OUT_SECONDS + 0.01);
     } catch (e) {
-      finish();
+      try { src.stop(); } catch (e2) { /* already stopped */ }
     }
   }
 
-  // Speaks several short parts in order with a real pause between them —
-  // closer to how someone actually pauses between sentences than most
-  // engines' own (often too-quick) default gap. Cancels cleanly if a newer
-  // announcement supersedes it mid-sequence (announceGeneration changes).
-  function speakSequence(parts, onEnd, tone, pauseMs) {
-    const generation = announceGeneration;
+  function stopNarration() {
+    narrationGeneration++;
+    stopVoice();
+  }
+
+  function playBuffer(buffer, choice, generation, done) {
+    let ended = false;
+    let watchdog = null;
+    let src = null;
+    const end = () => {
+      if (ended) return;
+      ended = true;
+      clearTimeout(watchdog);
+      if (currentVoice && currentVoice.src === src) currentVoice = null;
+      emit('clip-end', { key: choice.key, generation });
+      done();
+    };
+    try {
+      const c = getCtx();
+      src = c.createBufferSource();
+      src.buffer = buffer;
+      const gain = c.createGain();
+      gain.gain.value = VOICE_GAIN;
+      src.connect(gain).connect(c.destination);
+      src.onended = end;
+      currentVoice = { src, gain };
+      lastTake[choice.line] = choice.take;
+      src.start();
+      emit('clip-start', { key: choice.key, line: choice.line, take: 'ABC'[choice.take], pool: choice.pool, duration: buffer.duration, generation });
+      watchdog = setTimeout(end, (buffer.duration + 1.5) * 1000);
+    } catch (e) {
+      emit('clip-failed', { key: choice.key, error: String((e && e.message) || e) });
+      end();
+    }
+  }
+
+  /* Speaks one line from each named pool, in order, with a short pause
+     between them. Supersedes (fades out) anything already speaking.
+     onEnd fires exactly once: when the last line ends, when every line
+     failed, when sound is off, or when a newer announcement replaces
+     this one. opts.delay (seconds) holds the first line back — e.g. to
+     let a sound effect land first. */
+  function narrate(poolNamesIn, onEnd, opts = {}) {
+    const poolNames = narrationLevel === 'partial'
+      ? (poolNamesIn || []).filter((p) => NARRATION.ESSENTIAL_POOLS.has(p))
+      : poolNamesIn;
+    const generation = ++narrationGeneration;
+    stopVoice();
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      emit('narrate-end', { generation, superseded: generation !== narrationGeneration });
+      if (onEnd) { try { onEnd(); } catch (e) { /* ignore */ } }
+    };
+    if (!enabled || !poolNames || !poolNames.length) { finish(); return; }
+    const choices = poolNames.map(choose).filter(Boolean);
+    choices.forEach((c) => decodeClip(c.key).catch(() => {}));
+    emit('narrate', { generation, pools: poolNames.slice(), clips: choices.map((c) => c.key) });
+    setTimeout(() => poolNames.forEach((p) => { if (PRIMED_POOLS.indexOf(p) !== -1) prime(p); }), 0);
+    const gapMs = opts.gapMs != null ? opts.gapMs : 350;
     let i = 0;
-    function next() {
-      if (generation !== announceGeneration) return; // superseded — stop silently
-      if (i >= parts.length) { if (onEnd) onEnd(); return; }
-      const part = parts[i++];
-      speak(part, () => {
-        if (generation !== announceGeneration) return;
-        if (i < parts.length) setTimeout(next, pauseMs);
-        else next();
-      }, tone);
-    }
-    next();
+    const next = () => {
+      if (generation !== narrationGeneration || !enabled || i >= choices.length) { finish(); return; }
+      const choice = choices[i++];
+      withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS).then((buffer) => {
+        if (generation !== narrationGeneration || !enabled) { finish(); return; }
+        playBuffer(buffer, choice, generation, () => setTimeout(next, i < choices.length ? gapMs : 0));
+      }, (err) => {
+        emit('clip-failed', { key: choice.key, error: String((err && err.message) || err) });
+        next();
+      });
+    };
+    setTimeout(next, Math.max(0, (opts.delay || 0) * 1000));
   }
 
-  /* Shared by every announcement below — bumps the generation counter and
-     cancels any previous still-speaking utterance first (a table moving
-     quickly through turns could otherwise queue up a backlog of stale
-     lines that play late/out of order, or leave a superseded multi-part
-     sequence still mid-pause), then speaks the new line(s). Fire-and-forget
-     by default; pass onEnd to be notified when the whole line has finished.
-     text may be a single string or an array of parts to speak as a paced
-     sequence (see speakSequence). */
-  function announceInstruction(text, onEnd, tone) {
-    announceGeneration++;
-    if (!enabled || !('speechSynthesis' in window)) { if (onEnd) onEnd(); return; }
-    try {
-      window.speechSynthesis.cancel();
-    } catch (e) {
-      /* ignore */
-    }
-    if (Array.isArray(text)) speakSequence(text, onEnd, tone, 300);
-    else speak(text, onEnd, tone);
+  /* The opening: lines 01-03 back to back, called while the Reveal
+     interstitial is held on screen (see main.js render / ui.js
+     showInterstitial) so it plays before anyone sees a private role.
+     release() fires when it's done, failed, skipped, or sound is off. */
+  function narrateIntro(release) {
+    narrate(['intro1', 'intro2', 'intro3'], release, { gapMs: 600 });
   }
 
   /* The Open Discussion screen's closing beat: swell the drone (if music
-     is on) to a peak, then speak the line, then call back once it's done
-     so main.js can move on to the vote queue. If sound effects are off,
-     resolves immediately with no sound at all — this is a flourish, never
-     a thing the game waits on. */
-  const VOTING_BEGINS_PHRASES = [
-    'The time for talk is over.',
-    'Talk ends now.',
-    'Enough talk. It is time to vote.',
-  ];
-  function announceVotingBegins(onComplete) {
-    const done = () => { if (onComplete) onComplete(); };
+     is on), then the line, then call back so main.js can start the vote.
+     isFinal (a Final Circle "Banish Again" vote) uses line 25 instead of
+     15-17. If sound is off, resolves immediately. A hard ceiling makes
+     sure the vote always starts even if audio misbehaves in some way the
+     per-clip guards above don't catch. */
+  const VOTING_MAX_SECONDS = 12;
+  function announceVotingBegins(onComplete, isFinal) {
+    let called = false;
+    const done = () => { if (!called) { called = true; if (onComplete) onComplete(); } };
     if (!enabled) { done(); return; }
     const riseSeconds = crescendoMusic(0.17, 0.9);
-    const line = pick(VOTING_BEGINS_PHRASES);
-    if (riseSeconds > 0) {
-      setTimeout(() => announceInstruction(line, done, 'urgent'), riseSeconds * 1000);
-    } else {
-      announceInstruction(line, done, 'urgent');
-    }
-  }
-
-  /* Announces whose turn it is to hold the phone — called once for every
-     per-player queue turn (Reveal, Draw, Vote, Final Circle decision).
-     Deliberately just the player's own name, nothing else: it carries no
-     role information, so naming whoever's turn it actually is leaks
-     nothing even for the Murder queue's acting-Deceiver turn specifically
-     — every living player's turn already gets this same announcement.
-     Pass a falsy name to get a generic "next player" line instead: Murder,
-     Recruit, and Recruit Response all run as full-table queue passes where
-     every turn already looks and sounds identical regardless of role (see
-     this file's header note and main.js's maybeAnnouncePassDevice), and a
-     bare "next player" line matches that same ritual anonymity across all
-     three, even though naming would still be technically safe there too. */
-  const PASS_DEVICE_NAMED_PHRASES = [
-    (name) => `Pass the phone to ${name}.`,
-    (name) => `${name}, you're up.`,
-    (name) => `Over to you, ${name}.`,
-    (name) => `${name}, it's your turn.`,
-  ];
-  const PASS_DEVICE_GENERIC_PHRASES = [
-    'Pass the phone to the next player.',
-    'Hand it to the next player.',
-    'On to the next turn.',
-  ];
-  function announcePassDevice(name) {
-    const line = name ? pick(PASS_DEVICE_NAMED_PHRASES)(name) : pick(PASS_DEVICE_GENERIC_PHRASES);
-    announceInstruction(line, null, 'calm');
-  }
-
-  const NIGHT_FALLS_PHRASES = [
-    ['Night falls.', 'Keep your card secret.'],
-    ['The night falls.', 'Guard your card.'],
-    ['Night has come.', 'Keep it hidden.'],
-  ];
-  function announceNightFalls() {
-    announceInstruction(pick(NIGHT_FALLS_PHRASES), null, 'ominous');
-  }
-
-  const GATHER_EVERYONE_PHRASES = [
-    ['Gather everyone.', 'Place the phone in the centre.'],
-    ['Everyone, gather round.', 'Set the phone down in the centre.'],
-    ['Bring the circle together.', 'Phone in the centre.'],
-  ];
-  function announceGather() {
-    announceInstruction(pick(GATHER_EVERYONE_PHRASES), null, 'urgent');
+    narrate([isFinal ? 'finalVotingBegins' : 'votingBegins'], done, { delay: riseSeconds });
+    setTimeout(done, (riseSeconds + VOTING_MAX_SECONDS) * 1000);
   }
 
   /* ---------- Primitives ---------- */
@@ -630,6 +704,7 @@ const Sound = (() => {
     if (!enabled) return;
     const cue = cues[name];
     if (!cue) return;
+    emit('sfx', { name, delay });
     try {
       if (delay > 0) {
         setTimeout(() => { try { cue(); } catch (e) { /* ignore */ } }, delay * 1000);
@@ -642,8 +717,11 @@ const Sound = (() => {
   }
 
   return {
-    setEnabled, play, setMusicEnabled, startMusic, stopMusic,
-    announceVotingBegins, announcePassDevice, announceInstruction,
-    announceNightFalls, announceGather,
+    setEnabled, setNarrationLevel, play, setMusicEnabled, startMusic, stopMusic,
+    narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
+    // Test hooks only (tests/narration): observe audio events, seed picks.
+    _onEvent: (fn) => listeners.push(fn),
+    _setRandom: (fn) => { random = fn; },
+    _pickForTest: (pool) => { const c = choose(pool); if (c) lastTake[c.line] = c.take; return c ? c.key : null; },
   };
 })();

@@ -1,0 +1,11251 @@
+[
+ {
+  "name": "G1_3p_murder",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 946,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1091,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1705,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 2069,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2268,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 2883,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 6001,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 9117,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 10199,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 10751,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 11284,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 11667,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 11868,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 12301,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 12966,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_C",
+     "37_A",
+     "38_C"
+    ]
+   }
+  ],
+  "clipStarts": 14,
+  "clipFailures": 0
+ },
+ {
+  "name": "G2_4p_hidden",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1015,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1099,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1697,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1896,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2113,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2330,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 2878,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 5994,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 9112,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 12227,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 15445,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 15978,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 16529,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 16745,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 17027,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 17228,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 17662,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_C"
+    ]
+   },
+   {
+    "at": 18295,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_A",
+     "31_B",
+     "08_C"
+    ]
+   },
+   {
+    "at": 18810,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 18994,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 19295,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 19729,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 24112,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 24728,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 25010,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 25312,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 25745,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 25943,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_C",
+     "37_B",
+     "38_C"
+    ]
+   }
+  ],
+  "clipStarts": 26,
+  "clipFailures": 0
+ },
+ {
+  "name": "G3_5p_1bot",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1008,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1096,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1654,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 2557,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2754,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2955,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 3504,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 4504,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 8321,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 11087,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 12169,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 12703,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 13221,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 14120,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 14387,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 14606,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 15054,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_C"
+    ]
+   },
+   {
+    "at": 15689,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_A",
+     "31_B",
+     "08_C"
+    ]
+   },
+   {
+    "at": 16221,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 16421,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 16620,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 16903,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 17325,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 20481,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 21086,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 21369,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 21736,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 22018,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 22453,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 22653,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "07_B"
+    ]
+   },
+   {
+    "at": 23169,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 23353,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 23652,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 24053,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 27271,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 28021,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 28303,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 28569,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_C"
+    ]
+   },
+   {
+    "at": 29020,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 29201,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "06_A"
+    ]
+   },
+   {
+    "at": 29701,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 29886,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 30186,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 30604,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 34981,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 35536,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 35802,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 36090,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 36539,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 36736,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "07_A"
+    ]
+   },
+   {
+    "at": 37234,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 37436,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 37717,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 38121,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 41271,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 42035,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 42304,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 42668,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 43103,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 43284,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_B",
+     "37_A",
+     "38_A"
+    ]
+   }
+  ],
+  "clipStarts": 55,
+  "clipFailures": 0
+ },
+ {
+  "name": "G4_6p_2bot_vote",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1095,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1177,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 2449,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 2625,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 3529,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 3725,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 4257,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 5925,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 8692,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 12525,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 13257,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_B"
+    ]
+   },
+   {
+    "at": 13675,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 17569,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 18910,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 19291,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 20608,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 20857,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 21291,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 21922,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 25007,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 25992,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 29824,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 32690,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_A"
+    ]
+   },
+   {
+    "at": 33089,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_A"
+    ]
+   },
+   {
+    "at": 36559,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 37322,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 37588,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 38557,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 38806,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_C"
+    ]
+   },
+   {
+    "at": 39240,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 39854,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 42957,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 43890,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 47723,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 50589,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_C"
+    ]
+   },
+   {
+    "at": 51023,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "16_B"
+    ]
+   },
+   {
+    "at": 54849,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 55472,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 55738,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 56705,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 56954,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 57389,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 58021,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_A",
+     "31_C",
+     "06_C"
+    ]
+   },
+   {
+    "at": 58539,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 58738,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 59704,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 60124,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 63349,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 64021,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 64287,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 65357,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 65789,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 65994,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "06_B"
+    ]
+   },
+   {
+    "at": 66506,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 67472,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "loyalWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_A",
+     "35_A",
+     "38_A"
+    ]
+   }
+  ],
+  "clipStarts": 51,
+  "clipFailures": 0
+ },
+ {
+  "name": "G5_7p_2deceiver",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1088,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1171,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1752,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1953,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2153,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2350,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 2551,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 2734,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2936,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 3483,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 6585,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 9716,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 12835,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 15949,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 16933,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 20049,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 23283,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 23814,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 24332,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 25550,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 25749,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 25949,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 26149,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 26415,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 26617,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 27050,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_A"
+    ]
+   },
+   {
+    "at": 27665,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 30750,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 31750,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 34865,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 35883,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 36866,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 37949,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "11_C"
+    ]
+   },
+   {
+    "at": 38465,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 39298,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 39498,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 39700,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 39898,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 40264,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 40465,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 40899,
+    "phase": "elimination",
+    "pools": [
+     "murderLater"
+    ],
+    "clips": [
+     "21_B"
+    ]
+   },
+   {
+    "at": 41532,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 42482,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 45599,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 48715,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 51831,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 55048,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_C"
+    ]
+   },
+   {
+    "at": 55464,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 59360,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 60131,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 60397,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 60664,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 60931,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 61198,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 61632,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 62247,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 65331,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 68448,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 71565,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 74681,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 77897,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_A"
+    ]
+   },
+   {
+    "at": 78336,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "17_A"
+    ]
+   },
+   {
+    "at": 81839,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 82447,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 82714,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 82980,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 83246,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 83612,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 84047,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 84663,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 87747,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 90863,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 93982,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 97096,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 100314,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "11_A"
+    ]
+   },
+   {
+    "at": 100828,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 101831,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 102030,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 102230,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 102496,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 102696,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 103130,
+    "phase": "elimination",
+    "pools": [
+     "murderLater"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 103763,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_C",
+     "08_B"
+    ]
+   },
+   {
+    "at": 104282,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 104480,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 104663,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 104963,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 105365,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 109739,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 110314,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 110595,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 110861,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 111230,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 111663,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 111845,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "07_B"
+    ]
+   },
+   {
+    "at": 112347,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 112528,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 112829,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 113248,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 116399,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 117012,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 117277,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 117544,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 117981,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 118179,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "08_C"
+    ]
+   },
+   {
+    "at": 118678,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 118863,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 119161,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 119562,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 123930,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 124495,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 124760,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 125028,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 125480,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 125677,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_C",
+     "36_C",
+     "38_C"
+    ]
+   }
+  ],
+  "clipStarts": 107,
+  "clipFailures": 0
+ },
+ {
+  "name": "G6_7p_recruit_accept",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "recruit",
+   "recruitResponse",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1086,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1187,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1730,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1930,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2131,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2347,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 2546,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 2729,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2930,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 3482,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 4246,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 4547,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 4829,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 5112,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 5413,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 5795,
+    "phase": "recruitResponse",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 6312,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 6830,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 7031,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 7295,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 7497,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 7712,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 7912,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 8347,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_C"
+    ]
+   },
+   {
+    "at": 8978,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 12062,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 13029,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 16145,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 19262,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 20248,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 23460,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_C"
+    ]
+   },
+   {
+    "at": 23863,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 27766,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 28362,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 28645,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 28928,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 29194,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 29460,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 29994,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 30429,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 31061,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 34144,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 35178,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 38312,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 41428,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 44544,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 45529,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 45963,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_A"
+    ]
+   },
+   {
+    "at": 46594,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 49678,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 50645,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 51627,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 54745,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 57862,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 61078,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_C"
+    ]
+   },
+   {
+    "at": 61593,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 62261,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 62461,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 62727,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 62927,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 63127,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 63327,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 63762,
+    "phase": "elimination",
+    "pools": [
+     "shieldSaved"
+    ],
+    "clips": [
+     "23_B"
+    ]
+   },
+   {
+    "at": 64393,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 67480,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 70593,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 73711,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 76827,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 79944,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 83158,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_B"
+    ]
+   },
+   {
+    "at": 83576,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "17_B"
+    ]
+   },
+   {
+    "at": 87455,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 88059,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 88328,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 88595,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 88860,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 89125,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 89574,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 90010,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 90625,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 91576,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 94708,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 97826,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 100942,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 104058,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 107290,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "11_A"
+    ]
+   },
+   {
+    "at": 107808,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 108475,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 108675,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 108941,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 109142,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 109343,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 109541,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 109976,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 110624,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 113707,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 116826,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 119940,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 123058,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 126273,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_C"
+    ]
+   },
+   {
+    "at": 126674,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_A"
+    ]
+   },
+   {
+    "at": 130145,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 130705,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 130990,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 131257,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 131525,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 131790,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 132223,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 132839,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 135924,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 139042,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 142157,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 145273,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 148389,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 148824,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_A"
+    ]
+   },
+   {
+    "at": 149472,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 152556,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 155674,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 158806,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 161924,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 165040,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 165472,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_B"
+    ]
+   },
+   {
+    "at": 166105,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 169188,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 172305,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 175422,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 178539,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 181787,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_A"
+    ]
+   },
+   {
+    "at": 182188,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_B"
+    ]
+   },
+   {
+    "at": 185365,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 185970,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 186238,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 186604,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 186870,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 187137,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 187572,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 188205,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 191288,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 194405,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 197522,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 200638,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 203854,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_B"
+    ]
+   },
+   {
+    "at": 204370,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 205204,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 205404,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 205689,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 205888,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 206088,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 206521,
+    "phase": "elimination",
+    "pools": [
+     "murderLater"
+    ],
+    "clips": [
+     "21_A"
+    ]
+   },
+   {
+    "at": 207138,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_A",
+     "06_B"
+    ]
+   },
+   {
+    "at": 207653,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 207837,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 208038,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 208320,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 208720,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 211936,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 212538,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 212803,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 213170,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 213437,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 213871,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 214053,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "08_A"
+    ]
+   },
+   {
+    "at": 214557,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 214753,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 215037,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 215472,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 219846,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 220453,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 220987,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 221254,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 221687,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 221869,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "06_B"
+    ]
+   },
+   {
+    "at": 222369,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 222569,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 222854,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 223253,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 226466,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 227204,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 227586,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 227853,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 228291,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 228485,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_C",
+     "37_B",
+     "38_C"
+    ]
+   }
+  ],
+  "clipStarts": 168,
+  "clipFailures": 0
+ },
+ {
+  "name": "G7_7p_recruit_refuse",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "recruit",
+   "recruitResponse",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1052,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1139,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1699,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1898,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 2080,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2281,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 2481,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 2663,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2865,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 3396,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 4081,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 4363,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 4646,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 4930,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 5213,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 5598,
+    "phase": "recruitResponse",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 6112,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 6629,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 6830,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 7031,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 7229,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 7430,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 7613,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 8051,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_C"
+    ]
+   },
+   {
+    "at": 8700,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 9663,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 12781,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 15897,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 19013,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 22230,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_B"
+    ]
+   },
+   {
+    "at": 22647,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 26547,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 27129,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 27395,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 27679,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 27946,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 28212,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 28646,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 29296,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_B",
+     "07_B"
+    ]
+   },
+   {
+    "at": 29812,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 29995,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 30196,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 30479,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_C",
+     "37_C",
+     "38_B"
+    ]
+   }
+  ],
+  "clipStarts": 41,
+  "clipFailures": 0
+ },
+ {
+  "name": "G8_8p_bot_heavy",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "recruit",
+   "recruitResponse",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1287,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 2075,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 3685,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 5284,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 5450,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 6697,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 8699,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 12833,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 15696,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 16914,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 18465,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 20366,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 20613,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 21049,
+    "phase": "elimination",
+    "pools": [
+     "shieldSaved"
+    ],
+    "clips": [
+     "23_B"
+    ]
+   },
+   {
+    "at": 22363,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 26480,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 28465,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 31311,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_B"
+    ]
+   },
+   {
+    "at": 32529,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 34081,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 35946,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 36179,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 36614,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_A"
+    ]
+   },
+   {
+    "at": 37946,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 42064,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 45496,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 48344,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_A"
+    ]
+   },
+   {
+    "at": 48762,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 53366,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 54979,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 55945,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 56379,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 56812,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 58162,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 60531,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 61044,
+    "phase": "recruitResponse",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "11_C"
+    ]
+   },
+   {
+    "at": 62261,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 64513,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 64661,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 65094,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_B"
+    ]
+   },
+   {
+    "at": 66427,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 69113,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 71827,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 72262,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_A"
+    ]
+   },
+   {
+    "at": 73594,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 78413,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 81226,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_C"
+    ]
+   },
+   {
+    "at": 81644,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "16_B"
+    ]
+   },
+   {
+    "at": 86175,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 88595,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 88810,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_C"
+    ]
+   },
+   {
+    "at": 89244,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 90576,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 94711,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 97560,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "10_A"
+    ]
+   },
+   {
+    "at": 98778,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 100327,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 100559,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 100992,
+    "phase": "elimination",
+    "pools": [
+     "shieldSaved"
+    ],
+    "clips": [
+     "23_A"
+    ]
+   },
+   {
+    "at": 102309,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 106428,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 109274,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_C"
+    ]
+   },
+   {
+    "at": 110493,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 112062,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 112292,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 112726,
+    "phase": "elimination",
+    "pools": [
+     "murderLater"
+    ],
+    "clips": [
+     "21_B"
+    ]
+   },
+   {
+    "at": 113346,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_A",
+     "31_A",
+     "05_B"
+    ]
+   },
+   {
+    "at": 115260,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 115524,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 115928,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 119084,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 121060,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 121392,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 121827,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 122008,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "05_B"
+    ]
+   },
+   {
+    "at": 123212,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 123492,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 123892,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 127114,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 128393,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 128641,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 129076,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 129258,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_A",
+     "36_C",
+     "38_C"
+    ]
+   }
+  ],
+  "clipStarts": 80,
+  "clipFailures": 0
+ },
+ {
+  "name": "G9_4p_series3",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results",
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results",
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 991,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1070,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1605,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1787,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 1991,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2188,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 2720,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 5803,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 8919,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 9920,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 13036,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 13470,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_A"
+    ]
+   },
+   {
+    "at": 14102,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_B",
+     "05_A"
+    ]
+   },
+   {
+    "at": 14602,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 14786,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 14986,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 15269,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 15704,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 18856,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 19435,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 19702,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 20236,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 20769,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 21206,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_A"
+    ]
+   },
+   {
+    "at": 21386,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "07_C"
+    ]
+   },
+   {
+    "at": 21905,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 22086,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 22286,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 22569,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 22971,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 26196,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 26786,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 27152,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 27426,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 27786,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 28220,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 28402,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "06_B"
+    ]
+   },
+   {
+    "at": 28902,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 29085,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 29286,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 29568,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 29970,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 33116,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 33701,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 34069,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 34336,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 34602,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 35036,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 35235,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "06_C"
+    ]
+   },
+   {
+    "at": 35753,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 35952,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 36135,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 36435,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 36853,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 40056,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 40634,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 41003,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 41369,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 41636,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 42069,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 42251,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "06_A"
+    ]
+   },
+   {
+    "at": 42753,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 42935,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 43235,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 43635,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 46786,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 47370,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 47634,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 47901,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 48336,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 48517,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin"
+    ],
+    "clips": [
+     "33_B",
+     "37_B"
+    ]
+   },
+   {
+    "at": 48985,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 49502,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 49703,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 49885,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 50085,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 50616,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 53701,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 54669,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 55635,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 58486,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 59000,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 59519,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 59785,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 59984,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 60184,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 60620,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_A"
+    ]
+   },
+   {
+    "at": 61267,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_C",
+     "31_A",
+     "08_C"
+    ]
+   },
+   {
+    "at": 61784,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 61968,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 62268,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 62668,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 67046,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 67653,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 67919,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 68203,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 68636,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 68816,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin"
+    ],
+    "clips": [
+     "33_C",
+     "36_B"
+    ]
+   },
+   {
+    "at": 69266,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 69785,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 69967,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 70168,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 70350,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_C"
+    ]
+   },
+   {
+    "at": 70883,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 71834,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 72819,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 75934,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 79151,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "11_B"
+    ]
+   },
+   {
+    "at": 79666,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 80251,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 80450,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 80650,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 80850,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_A"
+    ]
+   },
+   {
+    "at": 81284,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 81933,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_A",
+     "07_B"
+    ]
+   },
+   {
+    "at": 82434,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 82617,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 82917,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 83351,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 86506,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 87082,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 87351,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 87617,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 88050,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 88233,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_B",
+     "36_B",
+     "38_B"
+    ]
+   },
+   {
+    "at": 88651,
+    "phase": "title",
+    "pools": [
+     "farewell"
+    ],
+    "clips": [
+     "39_B"
+    ]
+   }
+  ],
+  "clipStarts": 116,
+  "clipFailures": 0
+ },
+ {
+  "name": "G10_5p_series2_banishagain",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results",
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "discuss",
+   "vote",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1001,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 1069,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 1614,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 1795,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 1995,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 2178,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 2378,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 2913,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 3845,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 6964,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 10079,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 11061,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 14195,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 14628,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_B"
+    ]
+   },
+   {
+    "at": 15260,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 18345,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 19310,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 22428,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 23411,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 26646,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 27177,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 27695,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 27896,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 28164,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 28361,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 28561,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 28995,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 29626,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_B",
+     "31_C",
+     "08_B"
+    ]
+   },
+   {
+    "at": 30127,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 30311,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 30511,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 30795,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 31229,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 34382,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 34960,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 35226,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 35509,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 35877,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 36311,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 36493,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "06_A"
+    ]
+   },
+   {
+    "at": 36993,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 37177,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 37476,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 37905,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 41122,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 41693,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 41960,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 42227,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 42661,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 42842,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "07_A"
+    ]
+   },
+   {
+    "at": 43344,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 43526,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 43826,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 44227,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 47372,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 48142,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 48410,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 48777,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 49211,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 49396,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "08_B"
+    ]
+   },
+   {
+    "at": 49892,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 50075,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 50376,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 50777,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 55153,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 55843,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 56210,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 56576,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 57011,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_A"
+    ]
+   },
+   {
+    "at": 57193,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "05_B"
+    ]
+   },
+   {
+    "at": 57710,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 57893,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 58193,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 58627,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 61772,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 62361,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 62626,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 62893,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 63327,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 63508,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin"
+    ],
+    "clips": [
+     "27_C",
+     "36_A"
+    ]
+   },
+   {
+    "at": 63958,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 64495,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 64694,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 64897,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 65111,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 65294,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_A"
+    ]
+   },
+   {
+    "at": 65826,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 68926,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 72043,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 75159,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 76126,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 79243,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 79675,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_B"
+    ]
+   },
+   {
+    "at": 80308,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 81258,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 84376,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 87491,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 90626,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 93743,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 94175,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_C"
+    ]
+   },
+   {
+    "at": 94807,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 97891,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 101027,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 101992,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 102958,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 106075,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 106507,
+    "phase": "elimination",
+    "pools": [
+     "quietNight"
+    ],
+    "clips": [
+     "22_A"
+    ]
+   },
+   {
+    "at": 107143,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 110243,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 111208,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 112192,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 115307,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 118523,
+    "phase": "discuss",
+    "pools": [
+     "discussion"
+    ],
+    "clips": [
+     "18_B"
+    ]
+   },
+   {
+    "at": 118926,
+    "phase": "discuss",
+    "pools": [
+     "votingBegins"
+    ],
+    "clips": [
+     "15_C"
+    ]
+   },
+   {
+    "at": 122833,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 123574,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 123940,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 124207,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 124474,
+    "phase": "vote",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 124742,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 125174,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 125806,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_C",
+     "31_B",
+     "07_A"
+    ]
+   },
+   {
+    "at": 126306,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 126491,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 126691,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 126974,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 127374,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 131752,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 132439,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 132706,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 132972,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 133341,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 133773,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 133955,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "07_C"
+    ]
+   },
+   {
+    "at": 134455,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 134640,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 134941,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 135357,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 138513,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 139173,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 139441,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 139823,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 140257,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 140438,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "loyalWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "33_C",
+     "34_B",
+     "38_B"
+    ]
+   }
+  ],
+  "clipStarts": 131,
+  "clipFailures": 0
+ },
+ {
+  "name": "P1_5p_patient",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1000,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 22426,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 25060,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 28042,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 30725,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 34108,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 36594,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 41109,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 45876,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 50957,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 56140,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 59606,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 65973,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 72306,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 75375,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 78056,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 81572,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 84138,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 87539,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 93622,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_A"
+    ]
+   },
+   {
+    "at": 102291,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_A",
+     "31_C",
+     "08_A"
+    ]
+   },
+   {
+    "at": 118720,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 121370,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 124336,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 129003,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 135153,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 138376,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 142253,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 145770,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 148585,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 152102,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_C"
+    ]
+   },
+   {
+    "at": 156904,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_A"
+    ]
+   },
+   {
+    "at": 164268,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "07_C"
+    ]
+   },
+   {
+    "at": 173835,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 176384,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 179950,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 184319,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 190866,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 195246,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 197968,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 201483,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 204751,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 208534,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_C"
+    ]
+   },
+   {
+    "at": 213285,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 221484,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "08_A"
+    ]
+   },
+   {
+    "at": 229315,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 231882,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 236551,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 242616,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 245776,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 248882,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 251698,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 255231,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 260599,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_A"
+    ]
+   },
+   {
+    "at": 268299,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "loyalWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_B",
+     "34_B",
+     "38_B"
+    ]
+   },
+   {
+    "at": 284797,
+    "phase": "title",
+    "pools": [
+     "farewell"
+    ],
+    "clips": [
+     "39_C"
+    ]
+   }
+  ],
+  "clipStarts": 64,
+  "clipFailures": 0
+ },
+ {
+  "name": "P2_7p_recruit_refuse_patient",
+  "reachedResults": true,
+  "errors": [],
+  "phases": [
+   "reveal",
+   "main",
+   "recruit",
+   "recruitResponse",
+   "elimination",
+   "main",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "draw",
+   "hand",
+   "night",
+   "murder",
+   "elimination",
+   "main",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "finalCircleDecision",
+   "discuss",
+   "finalBanishment",
+   "elimination",
+   "results"
+  ],
+  "narrations": [
+   {
+    "at": 1025,
+    "phase": "reveal",
+    "pools": [
+     "intro1",
+     "intro2",
+     "intro3"
+    ],
+    "clips": [
+     "01_C",
+     "02_C",
+     "03_C"
+    ]
+   },
+   {
+    "at": 22431,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 25076,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 28075,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 30772,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 34174,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 36656,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 39337,
+    "phase": "reveal",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 42722,
+    "phase": "main",
+    "pools": [
+     "gameBegins"
+    ],
+    "clips": [
+     "04_B"
+    ]
+   },
+   {
+    "at": 47237,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 50487,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 53719,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 56436,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 59671,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 62503,
+    "phase": "recruit",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 66938,
+    "phase": "recruitResponse",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_A"
+    ]
+   },
+   {
+    "at": 73270,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 76236,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 79621,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 83223,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 85902,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 88369,
+    "phase": "recruitResponse",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 91370,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 97452,
+    "phase": "elimination",
+    "pools": [
+     "murderFirst"
+    ],
+    "clips": [
+     "20_C"
+    ]
+   },
+   {
+    "at": 106620,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 111735,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 116918,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 120901,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 125586,
+    "phase": "draw",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 132068,
+    "phase": "night",
+    "pools": [
+     "nightFalls"
+    ],
+    "clips": [
+     "09_C"
+    ]
+   },
+   {
+    "at": 138283,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 141932,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 144917,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 147899,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 150982,
+    "phase": "murder",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 154383,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_B"
+    ]
+   },
+   {
+    "at": 159432,
+    "phase": "elimination",
+    "pools": [
+     "murderLater"
+    ],
+    "clips": [
+     "20_B"
+    ]
+   },
+   {
+    "at": 168699,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalCircle",
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "30_C",
+     "31_C",
+     "05_B"
+    ]
+   },
+   {
+    "at": 187149,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 189698,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 193081,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 197449,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 204032,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 207189,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 210813,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 214230,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 216847,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 219563,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_C"
+    ]
+   },
+   {
+    "at": 224314,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 231681,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "08_B"
+    ]
+   },
+   {
+    "at": 240030,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 242695,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 246062,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 250830,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 256979,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 260199,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_A"
+    ]
+   },
+   {
+    "at": 262811,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 266544,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 269760,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 273127,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 279811,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_C"
+    ]
+   },
+   {
+    "at": 287994,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "06_B"
+    ]
+   },
+   {
+    "at": 298177,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 300826,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 305495,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 312043,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 315189,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 318726,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 321542,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 325276,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "12_A"
+    ]
+   },
+   {
+    "at": 330325,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_A"
+    ]
+   },
+   {
+    "at": 337675,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_C",
+     "05_A"
+    ]
+   },
+   {
+    "at": 347044,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_A"
+    ]
+   },
+   {
+    "at": 349609,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_B"
+    ]
+   },
+   {
+    "at": 354892,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 361659,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 366039,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 369290,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 373023,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 375823,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_A"
+    ]
+   },
+   {
+    "at": 381173,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_C"
+    ]
+   },
+   {
+    "at": 389140,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "08_B"
+    ]
+   },
+   {
+    "at": 398689,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 401756,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 406824,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_A"
+    ]
+   },
+   {
+    "at": 412889,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_C"
+    ]
+   },
+   {
+    "at": 416099,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_C"
+    ]
+   },
+   {
+    "at": 419638,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 422855,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 425971,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_B"
+    ]
+   },
+   {
+    "at": 432038,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_B"
+    ]
+   },
+   {
+    "at": 439422,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_A",
+     "05_C"
+    ]
+   },
+   {
+    "at": 448388,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 451454,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_B"
+    ]
+   },
+   {
+    "at": 456222,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_C"
+    ]
+   },
+   {
+    "at": 462887,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_B"
+    ]
+   },
+   {
+    "at": 467259,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 470319,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_A"
+    ]
+   },
+   {
+    "at": 473538,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_C"
+    ]
+   },
+   {
+    "at": 477370,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "14_B"
+    ]
+   },
+   {
+    "at": 481803,
+    "phase": "elimination",
+    "pools": [
+     "tie"
+    ],
+    "clips": [
+     "26_A"
+    ]
+   },
+   {
+    "at": 489169,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "finalDecision",
+     "handoff"
+    ],
+    "clips": [
+     "31_B",
+     "08_A"
+    ]
+   },
+   {
+    "at": 498119,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_B"
+    ]
+   },
+   {
+    "at": 500768,
+    "phase": "finalCircleDecision",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "07_C"
+    ]
+   },
+   {
+    "at": 505418,
+    "phase": "discuss",
+    "pools": [
+     "banishAgain"
+    ],
+    "clips": [
+     "32_B"
+    ]
+   },
+   {
+    "at": 511969,
+    "phase": "discuss",
+    "pools": [
+     "finalVotingBegins"
+    ],
+    "clips": [
+     "25_A"
+    ]
+   },
+   {
+    "at": 515119,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "08_B"
+    ]
+   },
+   {
+    "at": 518499,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "05_C"
+    ]
+   },
+   {
+    "at": 522367,
+    "phase": "finalBanishment",
+    "pools": [
+     "handoff"
+    ],
+    "clips": [
+     "06_A"
+    ]
+   },
+   {
+    "at": 525150,
+    "phase": "elimination",
+    "pools": [
+     "gather"
+    ],
+    "clips": [
+     "13_C"
+    ]
+   },
+   {
+    "at": 531817,
+    "phase": "elimination",
+    "pools": [
+     "banished"
+    ],
+    "clips": [
+     "24_B"
+    ]
+   },
+   {
+    "at": 539567,
+    "phase": "results",
+    "pools": [
+     "endLeadIn",
+     "deceiverWin",
+     "seriesClosing"
+    ],
+    "clips": [
+     "27_C",
+     "37_C",
+     "38_B"
+    ]
+   }
+  ],
+  "clipStarts": 124,
+  "clipFailures": 0
+ }
+]

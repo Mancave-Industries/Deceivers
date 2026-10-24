@@ -27,6 +27,11 @@ const CONFIG = {
   // (always available) and on the Results screen when a full game ends,
   // same isLastGame gating as the TikTok ad banner above.
   tipUrl: 'https://buy.stripe.com/bJe9AU0iz9UTbo93IX1RC02',
+  // Shown on the Results screen's share text ("Play this... IT'S
+  // MURDER!!!"). Not a deploy target this game talks to -- just a link
+  // included in shared text, same "point at a real place" pattern as the
+  // Spotify/TikTok/tip links above.
+  gameShareUrl: 'https://mancave-industries.github.io/Deceivers/',
 };
 
 const ICONS = {
@@ -74,6 +79,13 @@ const ROLES = {
     icon: ICONS.shield,
     description: 'You are Loyal. Watch, question, and vote to banish every Deceiver before they take the circle.',
   },
+  PARIAH: {
+    id: 'pariah',
+    label: 'Pariah',
+    symbol: 'role-deceiver',
+    icon: ICONS.hoodedFigure,
+    description: 'You are the Pariah: a cast-out Deceiver. You no longer choose murders or act with the Deceivers. You still vote, and you can be murdered or banished. Survive to the end to receive 25% of a normal winning share, whichever side wins. Your status is private.',
+  },
 };
 
 /**
@@ -108,8 +120,8 @@ const FORTUNE_DECK_DEF = [
   { id: 'gold-three', name: 'Three Gold', deck: 'fortune', type: 'gold', value: 3, symbol: 'card-gold-three', frame: CARD_FRAMES.gold, icon: ICONS.coin, count: 4, description: 'Adds 3 gold to the Prize Pot.' },
   { id: 'gold-five', name: 'Five Gold', deck: 'fortune', type: 'gold', value: 5, symbol: 'card-gold-five', frame: CARD_FRAMES.gold, icon: ICONS.coin, count: 2, description: 'Adds 5 gold to the Prize Pot.' },
   { id: 'dagger', name: 'Dagger', deck: 'fortune', type: 'action', symbol: 'card-dagger', frame: CARD_FRAMES.action, icon: ICONS.dagger, count: 2, effect: 'vote-weight', description: 'Play during Banishment to add +1 weight to your vote.' },
-  { id: 'shield', name: 'Shield', deck: 'fortune', type: 'action', symbol: 'card-shield', frame: CARD_FRAMES.protection, icon: ICONS.shield, count: 2, effect: 'protect', description: 'Protects you automatically if the Deceivers target you. Spent the moment it blocks a Murder.' },
-  { id: 'deceivers-choice', name: "Deceiver's Choice", deck: 'fortune', type: 'action', symbol: 'card-deceivers-choice', frame: CARD_FRAMES.role, icon: ICONS.hoodedFigure, count: 2, effect: 'counter-shield', description: 'Deceivers only: play at Night to cancel one Shield in effect.' },
+  { id: 'shield', name: 'Shield', deck: 'fortune', type: 'action', symbol: 'card-shield', frame: CARD_FRAMES.protection, icon: ICONS.shield, count: 2, effect: 'protect', description: 'Protects you automatically if the Deceivers target you — in a Murder, or if you refuse a Recruit or Die offer. Spent the moment it saves you.' },
+  { id: 'deceivers-choice', name: "Deceiver's Choice", deck: 'fortune', type: 'action', symbol: 'card-deceivers-choice', frame: CARD_FRAMES.role, icon: ICONS.hoodedFigure, count: 2, effect: 'counter-shield', description: "Deceivers only: play at Night to cancel one Shield in effect. If you're secretly approached during Recruit or Die, you alone may play it instead of answering — you take the Deceiver role, and you both survive." },
 ];
 
 /* Fate Deck — one card drawn per round; determines the round's shape. */

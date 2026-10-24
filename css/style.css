@@ -295,6 +295,25 @@ body {
   background: transparent;
   z-index: 20;
 }
+/* Title screen only: the approved poster bakes its own menu/sound/help
+   icons into the artwork, close to the image's own top edge, so the
+   real header collapses to just the true hardware safe-area inset here
+   -- not the --edge-buffer-top var() other screens use (max(10vh, ...),
+   a generic design buffer, not a notch measurement), which would leave
+   an oversized, uncomposed gap above the full-bleed art on devices
+   with no actual notch to clear. No visible row, no border; icons/
+   wordmark hidden rather than drawn a second time underneath. Still
+   present in the DOM (not display:none) so nothing about its layout/
+   measurement breaks when the next screen un-collapses it. */
+.app-header.app-header--bare {
+  height: env(safe-area-inset-top, 0px);
+  padding: 0;
+  border-bottom: none;
+}
+.app-header.app-header--bare > * {
+  visibility: hidden;
+  pointer-events: none;
+}
 /* Fills the --edge-buffer-top safe-area reservation above the icon row --
    previously just blank space on every screen except Title (which has
    its own full poster). Sized to the buffer itself (height: 100%, since
@@ -492,33 +511,56 @@ body {
 }
 
 /* ---------- Title screen ---------- */
-/* The title key art is tall/portrait (built for a phone screen), so it
-   runs full-bleed as #screen-title's own background rather than sitting
-   in a small framed box — background-origin/-clip default to padding-box/
-   border-box, so it already shows straight through .screen's own padding
-   with no extra markup. The lockup (title, tagline, brand) lives in the
-   image's upper two-thirds; the buttons sit in its emptier lower third. */
+/* The approved poster (864x1536) has its own menu/sound/help icons and
+   NEW GAME / HOW TO PLAY bars printed into the artwork -- see
+   UI.renderTitle. #screen-title drops the base .screen padding so the
+   image frame can sit truly edge to edge, same as the old full-bleed
+   background it replaces. */
 #screen-title {
-  background-image: url('../assets/brand/deceivers-title-poster.jpg?v=202610071539');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 0;
+  flex-direction: column;
 }
-.title-hero {
+/* Width-locked to the art's own aspect ratio rather than letterboxed
+   inside an arbitrary box: every real iPhone portrait viewport is
+   narrower (taller, relatively) than 864:1536, so sizing by width alone
+   reproduces exactly what `background-size: contain` would have done,
+   while keeping the frame's own coordinate space pinned 1:1 to the
+   image -- which percentage-positioned hotspots below depend on. */
+.title-art-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 864 / 1536;
+  flex-shrink: 0;
+}
+.title-art-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Invisible, accessibly-labelled hit targets over the artwork's own
+   printed icons/bars -- never a second visible button. Positions are
+   percentages of the source image, inset a little from each graphic's
+   own printed edges. */
+.title-hotspot {
+  position: absolute;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* Continue Game has no printed graphic (the art predates the save/
+   continue feature) -- the one real, visibly-labelled control this
+   screen adds, placed in the space left under the art rather than
+   over any part of it. */
+.title-continue-wrap {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 28px;
-  text-align: center;
-}
-.title-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 280px;
+  justify-content: center;
+  padding: 10px 18px;
 }
 
 /* ---------- Setup screen ---------- */
@@ -849,6 +891,89 @@ body {
   line-height: 1.5;
 }
 
+/* ---------- Handoff screen artwork (pass-the-phone backgrounds) ----------
+   Wraps passPrompt()'s existing name/eyebrow/instruction/button stack
+   without touching that markup. The scrim's opacity never drops below
+   0.88 anywhere behind the text, which keeps --ink-dim (the dimmest
+   text color in play here) at a measured contrast ratio of ~5.65:1 --
+   comfortably past the WCAG AA 4.5:1 floor for normal text -- even in
+   the worst case of a near-white pixel sitting directly behind it;
+   --gold-300 (the player name) has a wider margin still since it's a
+   brighter color. Murder Queue and Recruit-or-Die (and the Recruit
+   response step, which mirrors Murder's queue) read the same JS
+   constant for their artwork, so there's no file for anyone to tell
+   apart between them.
+
+   Revised: the watermark now sits at ~50% visibility (a much lighter
+   scrim than the original contrast-only pass above), so the image stays
+   recognisable per the brief -- that's too light to carry text contrast
+   on its own (worst case against a near-white pixel computes to well
+   under 2:1). Text contrast now comes from .handoff-text-panel below
+   instead: a separate, fixed ~0.85-opacity backing behind the eyebrow/
+   name/instruction group only, independent of how visible the image
+   is. That panel alone measures ~5.4:1 for --ink-dim against a
+   worst-case near-white pixel -- past the WCAG AA 4.5:1 floor for
+   normal text, with gold-300 (the name) further ahead still. Buttons
+   and the privacy badge already paint a fully opaque fill of their own
+   (see .btn-primary/.btn-danger/.privacy-badge), so they were never at
+   risk and need no panel. */
+.handoff-screen {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.handoff-art {
+  position: absolute;
+  inset: -4%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.handoff-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(5,4,3,0.42) 0%, rgba(5,4,3,0.50) 55%, rgba(5,4,3,0.62) 100%);
+  opacity: 1;
+}
+.handoff-text-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background: rgba(5,4,3,0.85);
+  border-radius: 6px;
+  padding: 14px 20px;
+}
+.handoff-screen > .reveal-stage {
+  position: relative;
+  z-index: 1;
+}
+/* Opening beat (item 1): every handoff opens on the full-colour image
+   with the name superimposed (the text panel above is present and at
+   full contrast from frame one), then the background scrim melts in
+   over it down to its resting ~50% watermark level. */
+@media (prefers-reduced-motion: no-preference) {
+  .handoff-art::after {
+    opacity: 0;
+    animation: handoffMeltIn 1.4s ease-out forwards;
+  }
+  .handoff-art {
+    animation: handoffDrift 26s ease-in-out infinite alternate;
+  }
+}
+@keyframes handoffMeltIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes handoffDrift {
+  from { transform: scale(1); }
+  to { transform: scale(1.035); }
+}
+
 /* ---------- Elimination / ceremonial reveal ---------- */
 /* Shared by every pass-the-phone prompt, role/card reveal, and outcome
    screen — by far the most-seen layout in the game — so bracketing it
@@ -1087,3 +1212,19 @@ body {
 @media (min-width: 431px) {
   html, body { background: var(--charcoal-950); }
 }
+
+/* Named private views, living voter roster, and the Final Two ceremony. */
+.privacy-badge span { overflow-wrap: anywhere; }
+.private-role-note { width:100%; max-width:460px; padding:12px 14px; margin:8px auto 14px; border:1px solid var(--gold-700); border-radius:10px; background:rgba(0,0,0,.7); color:var(--ink); text-align:left; font-size:14px; line-height:1.5; overflow-wrap:anywhere; }
+.private-role-note p { margin:4px 0 0; }
+.living-player-panel { width:100%; margin:12px 0; text-align:left; }
+.living-player-list { display:flex; flex-wrap:wrap; gap:6px; padding:0; margin:8px 0 0; list-style:none; }
+.living-player-list li { padding:6px 10px; border:1px solid var(--gold-700); border-radius:20px; background:rgba(0,0,0,.6); color:var(--ink); font-size:14px; overflow-wrap:anywhere; max-width:100%; }
+.role-reveal-row.pariah { border-left-color:var(--gold-400); }
+.winner-reveal-overlay { position:fixed; inset:0; z-index:300; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:24px; padding:max(24px,env(safe-area-inset-top)) 22px max(32px,env(safe-area-inset-bottom)); background-color:#000; background-image:linear-gradient(0deg,rgba(0,0,0,.97),rgba(0,0,0,.25)),url('../assets/brand/interstitials/final-two.jpg'); background-size:cover; background-position:center; color:#fff5dc; text-align:center; }
+.winner-reveal-overlay.hidden { display:none; }
+.winner-reveal-copy { max-width:460px; }
+.winner-reveal-copy h2 { margin:12px 0 22px; font-size:clamp(30px,8vw,48px); line-height:1.15; font-family:'Anton',sans-serif; text-transform:uppercase; }
+.winner-reveal-detail { display:grid; gap:10px; font-size:21px; overflow-wrap:anywhere; }
+#skipWinnerReveal { flex-shrink:0; min-height:48px; max-width:420px; width:100%; color:#fff5dc; background:#181511; border:1px solid #e6c877; }
+@media (prefers-reduced-motion:reduce) { .winner-reveal-overlay .scale-in { animation:none; } }

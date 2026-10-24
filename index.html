@@ -21,7 +21,7 @@
      css/style.css or any js/*.js file, so returning
      players' phones are forced to re-fetch instead of silently running
      stale game logic. Harmless no-op on a brand new load either way. -->
-<link rel="stylesheet" href="css/style.css?v=202610082301">
+<link rel="stylesheet" href="css/style.css?v=20261023latest2">
 </head>
 <body>
 <div class="app" id="app">
@@ -601,15 +601,20 @@
   </div>
 
   <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  <div class="winner-reveal-overlay hidden" id="winnerRevealOverlay" role="dialog" aria-modal="true" aria-label="The Final Two reveal">
+    <div id="winnerRevealBody" aria-live="polite"></div>
+    <button class="btn btn-ghost" id="skipWinnerReveal">Skip To Results</button>
+  </div>
 </div>
 
-<script src="js/data.js?v=202610082223"></script>
-<script src="js/state.js?v=202610082223"></script>
-<script src="js/engine.js?v=202610082223"></script>
-<script src="js/sound.js?v=202610082223"></script>
-<script src="js/analytics.js?v=202610082223"></script>
-<script src="js/ui.js?v=202610082223"></script>
-<script src="js/main.js?v=202610082223"></script>
+<script src="js/data.js?v=20261023latest2"></script>
+<script src="js/state.js?v=20261023latest2"></script>
+<script src="js/engine.js?v=20261023latest2"></script>
+<script src="js/narration.js?v=20261023latest2"></script>
+<script src="js/sound.js?v=20261023latest2"></script>
+<script src="js/analytics.js?v=20261023latest2"></script>
+<script src="js/ui.js?v=20261023latest2"></script>
+<script src="js/main.js?v=20261023latest2"></script>
 <script src="/Gameshed/nav.js" defer></script>
 </body>
 </html>

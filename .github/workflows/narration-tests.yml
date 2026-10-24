@@ -1,0 +1,91 @@
+name: Narration test suite
+
+# Runs the full recorded-narration regression suite (manifest/pool
+# integrity, full-game gates, matched-pair observable-equivalence tests,
+# failure-mode handling) in a clean, stable GitHub-hosted runner. This
+# exists because the suite's ~15-20 minute runtime repeatedly outlived
+# the ephemeral sandbox container used for local development (see PR
+# discussion on Batch 7 / issue #7) — a stable environment was needed so
+# this suite can finish end to end and gate merges reliably.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  narration-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Chromium
+        timeout-minutes: 20
+        run: npx playwright install --with-deps chromium
+
+      - name: Install ffmpeg (for WAV-decoded audio fixtures)
+        # A static-binary action, not apt: apt-get update stalled for
+        # 18-29+ minutes on this runner pool on two separate attempts
+        # (both a plain apt-get install and a `which ffmpeg ||` guarded
+        # one still fell through to it and hung) -- this downloads a
+        # prebuilt binary directly, no package-index fetch involved.
+        # Bounded to its own short timeout so a third bad surprise here
+        # fails fast and visibly instead of silently eating the rest of
+        # the job's 45-minute budget again.
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        id: setup-ffmpeg
+        timeout-minutes: 5
+
+      - name: Run narration test suite
+        # The real run (39870552957) reached the patient-mode P1 check
+        # cleanly at ~17.5 min in with zero failures anywhere, then was
+        # cut off by this step's own 25-min timeout before the slower
+        # remaining sections (a second patient-mode run, failure-mode
+        # handling, every matched pair) could finish -- 50 min covers
+        # that with real margin.
+        timeout-minutes: 50
+        run: npm run test:narration -- test-evidence/ci-narration-check
+
+      - name: Upload test evidence on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: narration-suite-evidence
+          path: test-evidence/ci-narration-check/
+          retention-days: 14
+
+  latest-fixes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+        timeout-minutes: 8
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+        timeout-minutes: 3
+      - run: npm run test:rules
+      - run: npm run test:ui
+        timeout-minutes: 5
+      - run: npm run audit:banishment
+      - name: Summarise latest fixes
+        if: always()
+        run: |
+          if test -f test-evidence/latest-fixes/ui-results.json; then
+            node -e 'const r=require("./test-evidence/latest-fixes/ui-results.json"); console.log(`Latest UI checks: ${r.passed} passed, ${r.failed} failed`)' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if test -f test-evidence/latest-fixes/banishment-audit.json; then
+            echo 'Banishment audit completed without changing probabilities.' >> "$GITHUB_STEP_SUMMARY"
+          fi
