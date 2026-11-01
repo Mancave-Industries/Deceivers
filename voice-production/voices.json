@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "candidate_voice_ids_not_approved_for_full_production",
+  "default_host": "david",
+  "hosts": [
+    {
+      "id": "david",
+      "label": "David",
+      "provider_name": "Stephen Davis - British Upbeat Sarcastic",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "gender": "male"
+    },
+    {
+      "id": "victor",
+      "label": "Victor",
+      "provider_name": "Steve - Professional Actor, Warm, Expressive, British",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "gender": "male"
+    },
+    {
+      "id": "aaron",
+      "label": "Aaron",
+      "provider_name": "Aaron - well spoken british",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "gender": "male"
+    },
+    {
+      "id": "beth",
+      "label": "Beth",
+      "provider_name": "Beth - British female, playful and witty",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "gender": "female"
+    },
+    {
+      "id": "lily",
+      "label": "Lily",
+      "provider_name": "Lily - Velvety Actress",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "gender": "female"
+    },
+    {
+      "id": "charlotte",
+      "label": "Charlotte",
+      "provider_name": "Charlotte - Natural and smooth British",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "gender": "female"
+    }
+  ]
+}
