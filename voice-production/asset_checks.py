@@ -105,6 +105,13 @@ def verify_record(record):
     for field in ("sha256", "git_blob_sha", "size_bytes", "codec", "sample_rate_hz", "channels"):
         if record.get(field) != actual[field]:
             raise ValueError(f"Asset/receipt mismatch: {field}")
+    if record.get("import_status") == "github_binary_verified":
+        proof = record.get("github_verification", {})
+        if (proof.get("blob_sha") != actual["git_blob_sha"] or
+                proof.get("byte_for_byte_match") is not True or
+                proof.get("readback_encoding") != "base64" or
+                not re.fullmatch(r"[0-9a-f]{40}", proof.get("commit_sha", ""))):
+            raise ValueError("Uploaded status requires GitHub binary readback evidence")
     return actual
 
 

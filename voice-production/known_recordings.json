@@ -1,5 +1,5 @@
 {
-  "status": "generated_in_elevenlabs_not_yet_imported_to_github",
+  "status": "eight_existing_mp3s_verified_in_github_listening_review_pending",
   "notes": "Exact completed Creative Flow references and provider-linked History IDs. History API enumeration is not verified in this environment. Import via these IDs or authenticated Flow exports; never regenerate to recover an existing clip.",
   "recordings": [
     {
@@ -9,7 +9,7 @@
       "session_id": "hYxXNVJgSS87DUlz5eXF",
       "generation_id": "MWcfEOTPLIqjrfuH6cpF",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "QmmsJsp8rDyRQk0ja01Q"
     },
     {
@@ -19,7 +19,7 @@
       "session_id": "7bMwjj93GJapf0cvdtwn",
       "generation_id": "06tE53BBkaOeXRE8sbxc",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "ZRiwTgoNQmWnveaOcIf7"
     },
     {
@@ -29,7 +29,7 @@
       "session_id": "ZPsjIoRtgKXsDN0CUdeS",
       "generation_id": "Oebomth6MujQj3Z2ioGc",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "kw2UP5PybcZXClWdQjcZ"
     },
     {
@@ -39,7 +39,7 @@
       "session_id": "nld87oEqkXL92skjuMFI",
       "generation_id": "QupJKeVFX4s5ZwzOabAK",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "zOkEFO6BVxRovuwO2iaN"
     },
     {
@@ -49,7 +49,7 @@
       "session_id": "UntJXJeYMpv2fKbSQhcV",
       "generation_id": "42td0x3MNP6ZH8qvHGUF",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "zuaSn9ArcPIvSJRqO4C0"
     },
     {
@@ -59,7 +59,7 @@
       "session_id": "pgFvX1AJUyn8d9yoEzsb",
       "generation_id": "xegSHfN0G7FuviSMxhE6",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "lagFfzUa95WYOin1kwKf"
     },
     {
@@ -69,7 +69,7 @@
       "session_id": "yyvuN1QmTuSLTph3ISrW",
       "generation_id": "I3727as8VIf87MOCpX6G",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "amuYT9NizCpkh0iIYmLu"
     },
     {
@@ -79,7 +79,7 @@
       "session_id": "BDsecH8lRmjX8P1ZfqgE",
       "generation_id": "PIhymBkVI7ZsytzrMJRN",
       "review_status": "pending",
-      "import_status": "not_imported",
+      "import_status": "github_binary_verified",
       "history_item_id": "Ok8zQte2qMgMQAXjJU8N"
     }
   ]

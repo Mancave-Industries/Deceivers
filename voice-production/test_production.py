@@ -61,6 +61,13 @@ class ProductionSafetyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "sha256"):
             assets.verify_record(receipt)
 
+    def test_uploaded_status_requires_readback_evidence(self):
+        receipt = copy.deepcopy(assets.read("imported_assets.json")["assets"][0])
+        receipt["import_status"] = "github_binary_verified"
+        receipt.pop("github_verification", None)
+        with self.assertRaisesRegex(ValueError, "readback evidence"):
+            assets.verify_record(receipt)
+
     def test_download_failure_leaves_no_recording_or_temporary_file(self):
         with tempfile.TemporaryDirectory() as folder:
             destination = Path(folder) / "clip.mp3"
@@ -72,7 +79,7 @@ class ProductionSafetyTests(unittest.TestCase):
     def test_reimport_never_calls_network_even_without_key(self):
         with patch.object(importer, "get", side_effect=AssertionError("Unexpected network request")), \
                 patch("sys.argv", ["import_existing.py", "--execute"]), \
-                patch.dict(importer.os.environ, {}, clear=True):
+                patch.dict(importer.os.environ, {"ELEVENLABS_API_KEY": ""}):
             importer.run()
 
     def test_plan_refuses_previously_generated_target(self):

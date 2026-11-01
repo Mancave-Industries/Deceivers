@@ -17,7 +17,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:18:56.977405+00:00",
       "sha256": "85350a7ad5383d3d03a0c48ff4bc83dfe0343f3d140dcdfb4d95f1584092c0d5",
@@ -27,7 +27,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "c9367f173bb2d191c8b45de7afc991979839c789",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -45,7 +54,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:19:00.770500+00:00",
       "sha256": "3599f8c6194efebbd10dea39d20a3f9c459950ad83f379c18d558a63f7894b95",
@@ -55,7 +64,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "eed9e72e706105ab27e5f263c22a02666452f5c2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -73,7 +91,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:19:08.129716+00:00",
       "sha256": "537dde87a131bd96e351917311ede602888d911754c5e3a1cbf7d382d08f77ff",
@@ -83,7 +101,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "872d031e92d3e26d4eb27555ec41174a09fa561e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -101,7 +128,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:19:11.902607+00:00",
       "sha256": "f7124cd5664a2d569b496147be8b505b04d004d6e1cee3683d68ffc5c952c29c",
@@ -111,7 +138,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "c107c8dd337bf7347cc35e0cfbe6c904c6fff2a5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -129,7 +165,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:19:17.329966+00:00",
       "sha256": "e5bf7de34ce7086f668795b08ba36f08c5369213a6efb0eba390923739e39e96",
@@ -139,7 +175,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "e6ab27be07925696750515d0c9f807d178439896",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -157,7 +202,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:18:49.485586+00:00",
       "sha256": "79cf5d096785be25be4707b1772721bb0fdf0211f5239366a4bd62e0f091d530",
@@ -167,7 +212,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "65ffb45a1c27ceb223d4b750a409dc55bfa6e191",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -185,7 +239,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:19:04.408703+00:00",
       "sha256": "375c00b653ce2afa14940ce4f18c4ad02e5aff5d7e943770ff1bf4e160743d2f",
@@ -195,7 +249,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "014aeffc74c8133975e12a5e201e26e863e6212a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -213,7 +276,7 @@
         "method": "creative_flow_export",
         "history_presence": "provider_link_observed_api_not_queried"
       },
-      "import_status": "local_binary_verified",
+      "import_status": "github_binary_verified",
       "review_status": "listening_pending",
       "imported_at": "2026-11-01T12:18:53.367605+00:00",
       "sha256": "0105b6e19b54189c88e0d8dc08ac4d3c989feba73a0f773889e30a67d34e78a8",
@@ -223,7 +286,16 @@
       "codec": "mp3",
       "sample_rate_hz": 44100,
       "channels": 1,
-      "full_decode_passed": true
+      "full_decode_passed": true,
+      "github_verification": {
+        "repository": "Mancave-Industries/Deceivers",
+        "branch": "feature/six-host-voice-assets-20261101",
+        "commit_sha": "277986e6022dd4e29b799b8ea786d0b9a503c166",
+        "blob_sha": "14a23af41fafec00c86de6aa89e887f5bdb83bf6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-01T12:25:15.839406+00:00"
+      }
     }
   ]
 }

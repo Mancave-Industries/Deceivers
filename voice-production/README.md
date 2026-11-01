@@ -1,7 +1,7 @@
 # The Deceivers — six-host audio production
 
 **Feature branch:** `feature/six-host-voice-assets-20261101`
-**Status:** Eight existing MP3s imported locally and validated; GitHub verification follows the binary commit. Listening review is pending. PR #14 remains a draft. No new speech, merge, deployment or gameplay change.
+**Status:** Eight existing MP3s committed and read back byte for byte from GitHub at commit 277986e6022dd4e29b799b8ea786d0b9a503c166. Listening review is pending. PR #14 remains a draft. No new speech, merge, deployment or gameplay change.
 
 ## Catalogue and imported audio
 
