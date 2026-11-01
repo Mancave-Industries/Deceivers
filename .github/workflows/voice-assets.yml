@@ -45,5 +45,7 @@ jobs:
           node-version: '22'
       - name: Verify narrator selection, static playback and secrecy
         run: node --test tests/narrator-hosts.cjs
+      - name: Validate reviewed script and held-line exclusions
+        run: python voice-production/validate_script_review.py
       - name: Verify controlled batch proposal
         run: python voice-production/plan_batch.py

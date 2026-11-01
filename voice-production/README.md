@@ -1,5 +1,8 @@
 # The Deceivers — six-host audio production
 
+> **Latest script review:** see [SCRIPT_REVIEW.md](SCRIPT_REVIEW.md). The original 276-line catalogue remains preserved. The reviewed candidate has 289 lines: 174 mapped to current public pools, 115 held. It proposes 1,036 further recordings at an estimated 45,696 credits, reusing all eight existing takes. This supersedes earlier full-catalogue/small-batch recording recommendations below; no recording is authorised by this review.
+
+
 **Feature branch:** `feature/six-host-voice-assets-20261101`
 **Status:** Eight existing MP3s committed and read back byte for byte from GitHub at commit 277986e6022dd4e29b799b8ea786d0b9a503c166. Listening review is pending. PR #14 remains a draft. No new speech, merge or deployment. The draft now includes a setup chooser and public opening greeting integration.
 

@@ -1,5 +1,8 @@
 # Deceivers voice production status — 1 November 2026
 
+> **Latest script review:** see [SCRIPT_REVIEW.md](SCRIPT_REVIEW.md). The original 276-line catalogue remains preserved. The reviewed candidate has 289 lines: 174 mapped to current public pools, 115 held. It proposes 1,036 further recordings at an estimated 45,696 credits, reusing all eight existing takes. This supersedes earlier full-catalogue/small-batch recording recommendations below; no recording is authorised by this review.
+
+
 Eight existing MP3s are committed on `feature/six-host-voice-assets-20261101` in [277986e](https://github.com/Mancave-Industries/Deceivers/commit/277986e6022dd4e29b799b8ea786d0b9a503c166). Each was downloaded from a completed ElevenLabs Flow, fully decoded with ffmpeg, checked with ffprobe, then fetched back from GitHub at that exact commit as base64 and compared byte for byte. All eight match.
 
 | Host | Catalogue clip | Bytes | Duration (s) | SHA-256 |
