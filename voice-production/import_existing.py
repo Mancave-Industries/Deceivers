@@ -26,7 +26,7 @@ def read(name):
 
 
 def normalise(text):
-    text = re.sub(r"\\[[^\\]]+\\]", " ", text or "")
+    text = re.sub(r"\[[^\]]+\]", " ", text or "")
     return " ".join(text.replace("’", "'").replace("…", "...").split()).strip()
 
 
