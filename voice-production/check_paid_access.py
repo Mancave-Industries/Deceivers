@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 import urllib.error
 import urllib.request
+import urllib.parse
 
 BASE = "https://api.elevenlabs.io/v1"
 
@@ -42,6 +43,7 @@ def check(key):
     hosts = json.loads(Path(__file__).with_name("voices.json").read_text())["hosts"]
     access = {}
     voice_errors = {}
+    library_matches = {}
     for host in hosts:
         try:
             voice = get("/voices/" + host["voice_id"], key)
@@ -49,6 +51,15 @@ def check(key):
         except RuntimeError as error:
             access[host["id"]] = False
             voice_errors[host["id"]] = str(error)
+            query = urllib.parse.urlencode({"search": host["voice_id"], "page_size": 100,
+                "include_custom_rates": "true", "include_live_moderated": "true"})
+            try:
+                shared = get("/shared-voices?" + query, key)
+                library_matches[host["id"]] = [{field: v.get(field) for field in
+                    ("voice_id", "public_owner_id", "name", "rate", "free_users_allowed")}
+                    for v in shared.get("voices", []) if v.get("voice_id") == host["voice_id"]]
+            except RuntimeError as error:
+                library_matches[host["id"]] = {"error": str(error)}
     result = {
         "read_only": True,
         "audio_generated": 0,
@@ -61,6 +72,7 @@ def check(key):
         "quoted_model_available": "eleven_v4" in tts,
         "voice_access": access,
         "voice_errors": voice_errors,
+        "exact_public_library_matches": library_matches,
         "note": "No spend authorized by this check. Resolve model availability and API pricing before generation.",
     }
     return result
