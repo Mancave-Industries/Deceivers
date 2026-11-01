@@ -41,9 +41,14 @@ def check(key):
     tts = sorted(m["model_id"] for m in models if m.get("can_do_text_to_speech"))
     hosts = json.loads(Path(__file__).with_name("voices.json").read_text())["hosts"]
     access = {}
+    voice_errors = {}
     for host in hosts:
-        voice = get("/voices/" + host["voice_id"], key)
-        access[host["id"]] = voice.get("voice_id") == host["voice_id"]
+        try:
+            voice = get("/voices/" + host["voice_id"], key)
+            access[host["id"]] = voice.get("voice_id") == host["voice_id"]
+        except RuntimeError as error:
+            access[host["id"]] = False
+            voice_errors[host["id"]] = str(error)
     result = {
         "read_only": True,
         "audio_generated": 0,
@@ -55,10 +60,9 @@ def check(key):
         "tts_model_ids": tts,
         "quoted_model_available": "eleven_v4" in tts,
         "voice_access": access,
+        "voice_errors": voice_errors,
         "note": "No spend authorized by this check. Resolve model availability and API pricing before generation.",
     }
-    if not all(access.values()):
-        raise RuntimeError("One or more catalogue voice IDs are inaccessible")
     return result
 
 
@@ -73,3 +77,5 @@ if __name__ == "__main__":
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
             summary.write("## ElevenLabs read-only access check\n\n```json\n" + output + "\n```\n")
+    if not all(report["voice_access"].values()) or not report["quoted_model_available"]:
+        sys.exit(1)
