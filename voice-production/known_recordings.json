@@ -90,7 +90,7 @@
       "generation_id": "xQP044wZTeOjwvzKbMkn",
       "history_item_id": "5khPudUqlB40LMuW184R",
       "review_status": "listening_pending",
-      "import_status": "local_binary_verified"
+      "import_status": "github_binary_verified"
     },
     {
       "host_id": "aaron",
@@ -100,7 +100,7 @@
       "generation_id": "SSL5FK0Snic9oRqq9PKF",
       "history_item_id": "mgrqqyHzKj4yNMrOYNjB",
       "review_status": "listening_pending",
-      "import_status": "local_binary_verified"
+      "import_status": "github_binary_verified"
     },
     {
       "host_id": "beth",
@@ -110,7 +110,7 @@
       "generation_id": "tSbcBX8DqjhONswln9F8",
       "history_item_id": "tGITrBH5rQLKI9mTywkH",
       "review_status": "listening_pending",
-      "import_status": "local_binary_verified"
+      "import_status": "github_binary_verified"
     },
     {
       "host_id": "lily",
@@ -120,7 +120,7 @@
       "generation_id": "0OKVQOwlJkdRG3kX6SbN",
       "history_item_id": "E91mnV63twqD8ymhkURW",
       "review_status": "listening_pending",
-      "import_status": "local_binary_verified"
+      "import_status": "github_binary_verified"
     },
     {
       "host_id": "charlotte",
@@ -130,7 +130,7 @@
       "generation_id": "Dwuy4Y3DvyQMrE3RwNhu",
       "history_item_id": "9AASXnhgDypwVOXqNUde",
       "review_status": "listening_pending",
-      "import_status": "local_binary_verified"
+      "import_status": "github_binary_verified"
     }
   ]
 }
