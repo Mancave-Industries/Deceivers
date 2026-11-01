@@ -58,10 +58,30 @@ def check(key):
                 library_matches[host["id"]] = [{field: v.get(field) for field in
                     ("voice_id", "public_owner_id", "name", "rate", "free_users_allowed")}
                     for v in shared.get("voices", []) if v.get("voice_id") == host["voice_id"]]
+                matches = library_matches[host["id"]]
+                if os.environ.get("ADD_MISSING_PUBLIC_VOICES") == "1" and len(matches) == 1:
+                    match = matches[0]
+                    if match.get("rate") != 1 or not match.get("public_owner_id"):
+                        raise RuntimeError("Public voice requires separate rate or identity review")
+                    url = BASE + "/voices/add/" + match["public_owner_id"] + "/" + host["voice_id"]
+                    request = urllib.request.Request(url, method="POST",
+                        headers={"xi-api-key": key, "Content-Type": "application/json"},
+                        data=json.dumps({"new_name": host["label"], "bookmarked": True}).encode())
+                    try:
+                        with urllib.request.urlopen(request, timeout=30) as response:
+                            added = json.load(response)
+                        if added.get("voice_id") != host["voice_id"]:
+                            raise RuntimeError("Added voice returned a different ID; review before recording")
+                        verified = get("/voices/" + host["voice_id"], key)
+                        access[host["id"]] = verified.get("voice_id") == host["voice_id"]
+                        if access[host["id"]]:
+                            voice_errors.pop(host["id"], None)
+                    except urllib.error.HTTPError as error:
+                        raise RuntimeError(f"Add public voice {host['id']}: HTTP {error.code}; voice write permission may be required") from None
             except RuntimeError as error:
                 library_matches[host["id"]] = {"error": str(error)}
     result = {
-        "read_only": True,
+        "read_only": os.environ.get("ADD_MISSING_PUBLIC_VOICES") != "1",
         "audio_generated": 0,
         "subscription_tier": subscription.get("tier"),
         "subscription_status": subscription.get("status"),

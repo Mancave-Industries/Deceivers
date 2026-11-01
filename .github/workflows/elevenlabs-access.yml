@@ -21,4 +21,5 @@ jobs:
       - name: Check subscription, models and six voices without generating audio
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ADD_MISSING_PUBLIC_VOICES: '1'
         run: python3 voice-production/check_paid_access.py
