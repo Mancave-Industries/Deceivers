@@ -1,150 +1,193 @@
 #!/usr/bin/env python3
-"""Import ALREADY-GENERATED ElevenLabs clips by matching history text + voice.
-
-No TTS generation occurs, no generation credits are consumed. Dry-run by default.
-Run from repository root with ELEVENLABS_API_KEY in the environment.
-"""
+"""Import already generated audio. GET-only transport; dry-run by default."""
 import argparse
-import hashlib
+from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
-import re
 import tempfile
-import time
 import urllib.error
 import urllib.parse
 import urllib.request
 
-ROOT = Path(__file__).resolve().parents[1]
-HERE = Path(__file__).resolve().parent
+from asset_checks import ROOT, HERE, read, write, catalogue, asset_path, normalise, digest, inspect_mp3, verify_record
+
 API = "https://api.elevenlabs.io/v1"
 
 
-def read(name):
-    return json.loads((HERE / name).read_text(encoding="utf-8"))
+class SafeRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if urllib.parse.urlsplit(req.full_url).netloc != urllib.parse.urlsplit(newurl).netloc:
+            raise ValueError("Cross-origin download redirect refused")
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def normalise(text):
-    text = re.sub(r"\[[^\]]+\]", " ", text or "")
-    return " ".join(text.replace("’", "'").replace("…", "...").split()).strip()
+def get(url, key=None):
+    parsed = urllib.parse.urlsplit(url)
+    history = parsed.hostname == "api.elevenlabs.io" and (parsed.path == "/v1/history" or parsed.path.startswith("/v1/history/"))
+    export = parsed.hostname == "storage.googleapis.com" and parsed.path.endswith("/content.mp3")
+    if parsed.scheme != "https" or not (history or export) or (key and not history):
+        raise ValueError("Only existing History or Flow MP3 downloads are allowed")
+    headers = {"Accept": "*/*"}
+    if key:
+        headers["xi-api-key"] = key
+    request = urllib.request.Request(url, headers=headers, method="GET")
+    return urllib.request.build_opener(SafeRedirect()).open(request, timeout=40)
 
 
-def request(path, key, params=None):
-    url = API + path
-    if params:
-        url += "?" + urllib.parse.urlencode(params)
-    return urllib.request.Request(url, headers={"xi-api-key": key, "Accept": "application/json"})
+def metadata_matches(item, voice, text):
+    return item.get("voice_id") == voice and normalise(item.get("text", item.get("prompt"))) == normalise(text)
 
 
-def history_for_voice(key, voice_id, max_pages=5):
+def find_history(known, voice, text, key):
+    history_id = known.get("history_item_id")
+    if history_id:
+        try:
+            with get(API + "/history/" + urllib.parse.quote(history_id, safe=""), key) as response:
+                item = json.load(response)
+            if not metadata_matches(item, voice, text):
+                raise ValueError("Recorded History ID has a different script or voice")
+            return item
+        except urllib.error.HTTPError as error:
+            if error.code != 404:
+                raise
     cursor = None
-    out = []
-    for _ in range(max_pages):
-        params = {"voice_id": voice_id, "page_size": 250, "sort_direction": "desc"}
+    for _ in range(20):
+        params = {"voice_id": voice, "source": "Flows", "page_size": 250}
         if cursor:
             params["start_after_history_item_id"] = cursor
-        with urllib.request.urlopen(request("/history", key, params), timeout=40) as response:
+        with get(API + "/history?" + urllib.parse.urlencode(params), key) as response:
             page = json.load(response)
-        out.extend(page.get("history", []))
-        if not page.get("has_more") or not page.get("last_history_item_id"):
-            break
-        cursor = page["last_history_item_id"]
-    return out
+        matches = [x for x in page.get("history", []) if metadata_matches(x, voice, text) and x.get("history_item_id")]
+        if len(matches) > 1:
+            raise ValueError("Multiple takes match; select an exact History ID")
+        if matches:
+            return matches[0]
+        if not page.get("has_more"):
+            return None
+        next_cursor = page.get("last_history_item_id")
+        if not next_cursor or next_cursor == cursor:
+            raise ValueError("History pagination incomplete")
+        cursor = next_cursor
+    raise ValueError("History search cap reached; result is incomplete, not missing")
 
 
-def is_mp3(path):
-    with open(path, "rb") as f:
-        data = f.read(3)
-    return data == b"ID3" or (len(data) >= 2 and data[0] == 255 and (data[1] & 224) == 224)
+def flow_source(known, export, voice, text):
+    for field in ("flow_id", "session_id", "generation_id", "history_item_id"):
+        if not known.get(field) or export.get(field) != known[field]:
+            raise ValueError(f"Flow export provenance mismatch: {field}")
+    if export.get("status") != "completed" or not metadata_matches(export, voice, text):
+        raise ValueError("Flow export is incomplete or script/voice differs")
+    url = export["download_url"]
+    suffix = f'/content_generation/{known["session_id"]}/{known["generation_id"]}/content.mp3'
+    if not urllib.parse.urlsplit(url).path.endswith(suffix):
+        raise ValueError("Flow URL does not identify the expected recording")
+    source = {k: known[k] for k in ("flow_id", "session_id", "generation_id", "history_item_id")}
+    source.update(method="creative_flow_export", history_presence="provider_link_observed_api_not_queried")
+    return url, source, export.get("model_id"), export.get("prompt")
 
 
-def download_history_audio(key, history_id, destination):
-    """Download an EXISTING history item. Never call TTS endpoints here."""
+def download(url, destination, key=None):
     destination.parent.mkdir(parents=True, exist_ok=True)
-    fd, tmp_name = tempfile.mkstemp(suffix=".mp3", dir=destination.parent)
+    fd, name = tempfile.mkstemp(suffix=".mp3", dir=destination.parent)
     os.close(fd)
-    tmp = Path(tmp_name)
+    temporary = Path(name)
     try:
-        url = API + "/history/" + urllib.parse.quote(history_id, safe="") + "/audio"
-        req = urllib.request.Request(url, headers={"xi-api-key": key, "Accept": "audio/mpeg"})
-        with urllib.request.urlopen(req, timeout=60) as response, tmp.open("wb") as f:
-            while True:
-                block = response.read(65536)
-                if not block:
-                    break
-                f.write(block)
-        if tmp.stat().st_size < 100 or not is_mp3(tmp):
-            raise ValueError("Downloaded item is empty or not MP3")
-        tmp.replace(destination)
+        with get(url, key) as response, temporary.open("wb") as output:
+            total = 0
+            while block := response.read(65536):
+                total += len(block)
+                if total > 20_000_000:
+                    raise ValueError("Existing clip exceeds 20 MB safety cap")
+                output.write(block)
+        details = inspect_mp3(temporary)
+        if destination.exists():
+            raise ValueError("Refusing to overwrite an existing recording")
+        temporary.replace(destination)
+        return details
     finally:
-        tmp.unlink(missing_ok=True)
+        temporary.unlink(missing_ok=True)
 
 
 def run():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--execute", action="store_true", help="Actually download existing MP3s (no synthesis)")
-    parser.add_argument("--host", choices=[h["id"] for h in read("voices.json")["hosts"]])
-    parser.add_argument("--max-files", type=int, default=8, help="Safety cap on number of imports")
+    hosts, clips = catalogue()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--execute", action="store_true")
+    parser.add_argument("--host", choices=list(hosts))
+    parser.add_argument("--max-files", type=int, default=8)
+    parser.add_argument("--flow-exports-json", type=Path, help="Private connector metadata OUTSIDE the checkout; never commit signed URLs")
     args = parser.parse_args()
-    if args.max_files < 1 or args.max_files > 25:
-        parser.error("--max-files must be between 1 and 25")
+    if not 1 <= args.max_files <= 8:
+        parser.error("--max-files must be between 1 and 8")
+    exports = {}
+    if args.flow_exports_json:
+        if args.flow_exports_json.resolve().is_relative_to(ROOT.resolve()):
+            parser.error("Store signed export metadata outside the repository")
+        entries = json.loads(args.flow_exports_json.read_text())
+        exports = {(e["host_id"], e["clip_id"]): e for e in entries}
+        if len(exports) != len(entries):
+            parser.error("Duplicate export targets")
     key = os.getenv("ELEVENLABS_API_KEY")
-    if not key:
-        parser.error("Set ELEVENLABS_API_KEY in your environment; never commit an API key")
-
-    source = read("source_library.json")["categories"]
-    voices = {v["id"]: v for v in read("voices.json")["hosts"]}
-    known = read("known_recordings.json")["recordings"]
-    picked = [r for r in known if (not args.host or r["host_id"] == args.host)][:args.max_files]
-    cache = {}
-    receipts_path = HERE / "imported_assets.json"
-    receipts = json.loads(receipts_path.read_text()) if receipts_path.exists() else {"assets": []}
+    receipts = read("imported_assets.json") if (HERE / "imported_assets.json").exists() else {"schema_version": 1, "assets": []}
     indexed = {(r["host_id"], r["clip_id"]): r for r in receipts["assets"]}
-    results = []
-
-    for item in picked:
-        host, clip = item["host_id"], item["clip_id"]
-        event, number = clip.rsplit("_", 1)
-        expected = source[event][int(number) - 1]
-        voice = voices[host]["voice_id"]
-        filename = ROOT / "assets" / "audio" / "hosts" / host / event / (clip + ".mp3")
-        if filename.exists():
-            print(f"EXISTS {host}/{clip} — preserving existing recording")
+    if len(indexed) != len(receipts["assets"]):
+        raise ValueError("Duplicate receipt targets")
+    picked = [r for r in read("known_recordings.json")["recordings"] if not args.host or r["host_id"] == args.host]
+    missing = 0
+    attempted = 0
+    for known in picked:
+        host, clip = target = (known["host_id"], known["clip_id"])
+        path = asset_path(host, clip)
+        destination = ROOT / path
+        if destination.exists() or target in indexed:
+            if not destination.exists() or target not in indexed:
+                raise ValueError("Existing audio/receipt pair incomplete; recover without generation")
+            verify_record(indexed[target])
+            print(f"VERIFIED EXISTING {host}/{clip}; no download or generation")
             continue
-        if voice not in cache:
-            cache[voice] = history_for_voice(key, voice)
-        matches = [x for x in cache[voice]
-                   if x.get("voice_id") == voice
-                   and normalise(x.get("text")) == normalise(expected)
-                   and x.get("history_item_id")]
-        if not matches:
-            print(f"MISSING {host}/{clip} — no matching history item; no regeneration")
-            results.append({"host_id": host, "clip_id": clip, "status": "missing"})
-            continue
-        match = max(matches, key=lambda x: x.get("date_unix") or 0)
-        history_id = match["history_item_id"]
+        if attempted >= args.max_files:
+            print("IMPORT CAP REACHED; remaining existing recordings left untouched")
+            break
+        attempted += 1
+        voice, text = hosts[host]["voice_id"], clips[clip]["text"]
+        if target in exports:
+            url, source, model, prompt = flow_source(known, exports[target], voice, text)
+            download_key = None
+        else:
+            if not key:
+                raise ValueError("ELEVENLABS_API_KEY unavailable; use authenticated Flow export metadata or restart an authorised Codespace")
+            item = find_history(known, voice, text, key)
+            if not item:
+                print(f"MISSING {host}/{clip}; recover recorded Flow export; never regenerate")
+                missing += 1
+                continue
+            source = {"method": "history_api", "history_item_id": item["history_item_id"], "history_presence": "api_verified"}
+            source.update({k: known[k] for k in ("flow_id", "session_id", "generation_id") if known.get(k)})
+            url = API + "/history/" + urllib.parse.quote(item["history_item_id"], safe="") + "/audio"
+            model, prompt, download_key = item.get("model_id"), item["text"], key
         if not args.execute:
-            print(f"DRY RUN {host}/{clip} — history ID {history_id}; would import {filename.relative_to(ROOT)}")
+            print(f"DRY RUN {path}; existing source {source['method']}")
             continue
-        download_history_audio(key, history_id, filename)
-        digest = hashlib.sha256(filename.read_bytes()).hexdigest()
-        record = {
-            "host_id": host, "clip_id": clip,
-            "path": filename.relative_to(ROOT).as_posix(), "sha256": digest,
-            "size_bytes": filename.stat().st_size,
-            "history_item_id": history_id,
-            "review_status": "pending",
-        }
-        indexed[(host, clip)] = record
-        print(f"IMPORTED {record['path']} ({record['size_bytes']} bytes)")
-    if args.execute:
-        receipts["assets"] = sorted(indexed.values(), key=lambda x: (x["host_id"], x["clip_id"]))
-        receipts_path.write_text(json.dumps(receipts, indent=2) + "\n", encoding="utf-8")
-        print(f"Recorded {len(receipts['assets'])} assets in {receipts_path.relative_to(ROOT)}")
-    else:
-        print("No audio was downloaded or generated. Pass --execute to import existing audio.")
+        details = download(url, destination, download_key)
+        record = dict(host_id=host, clip_id=clip, path=path, voice_id=voice,
+            script_sha256=digest(text), provider_prompt_sha256=digest(prompt), model_id=model,
+            source=source, import_status="local_binary_verified", review_status="listening_pending",
+            imported_at=datetime.now(timezone.utc).isoformat(), **details)
+        indexed[target] = record
+        receipts["assets"] = sorted(indexed.values(), key=lambda r: (r["host_id"], r["clip_id"]))
+        write("imported_assets.json", receipts)
+        print(f"IMPORTED {path} ({details['size_bytes']} bytes); full MP3 decode passed")
+    if missing:
+        raise SystemExit(2)
+    print("No speech was generated. Existing audio only.")
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        run()
+    except urllib.error.HTTPError as error:
+        raise SystemExit(f"Existing-audio request failed: HTTP {error.code}; credentials and signed URL withheld")
+    except urllib.error.URLError:
+        raise SystemExit("Existing-audio network request failed; credentials and signed URL withheld")
+    except (ValueError, KeyError, OSError) as error:
+        raise SystemExit(f"Import blocked: {type(error).__name__}; check catalogue, provenance, environment and binary/receipt pairs")

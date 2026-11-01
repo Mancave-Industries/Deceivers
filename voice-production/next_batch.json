@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "batch_id": "handoff-six-hosts-001",
+  "status": "awaiting_separate_paid_batch_approval",
+  "generated": false,
+  "file_count": 6,
+  "total_script_characters": 252,
+  "provider_surface": "connected_elevenlabs_creative_flow",
+  "model_id": "eleven_v4",
+  "model_reference": "Existing completed David opening Flow node IuVEEznJtWUlUpRwYC9q",
+  "output_format": "mp3_44100_128",
+  "direction": "Calm, dry, neutral public handoff. No additional words or role-specific variation.",
+  "estimated_cost": {
+    "credits": 252.0,
+    "price_cents": 2.52,
+    "currency": "usd",
+    "quoted_on": "2026-11-01",
+    "receipt": "voice-production/batch_quote.json"
+  },
+  "approved_spend_cap": null,
+  "approval_requirements": [
+    "Review/listen to the eight imported takes and confirm narrator identities and delivery.",
+    "Check provider History source=Flows for exact voice/script matches before generation; recover any existing takes.",
+    "Get a current provider quote for this exact six-file batch and record a spend cap; do not infer price from character counts.",
+    "Obtain separate user approval referencing batch_payload_sha256 and spend cap.",
+    "Generate one take per host only; record Flow/session/generation IDs immediately. Never auto-retry a charged or uncertain request.",
+    "Import, decode and checksum each completed take; verify GitHub binaries before marking uploaded."
+  ],
+  "gameplay_integration": "disabled; event mapping and Safari secrecy tests remain required",
+  "records": [
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "4qqF7FE7cuw7sBcIieD2",
+      "prepared_node_id": "dD8LtkJWF26EkyPtqNn9"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "mHQUjjXOsCH3gsffTSy9",
+      "prepared_node_id": "168pReegbo4h1r1FzjA0"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/aaron/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "CmFeuxGdE1xfCisq8Svl",
+      "prepared_node_id": "zdZh2OdZ6hZyX2JpRji4"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "O85fr8d8JOTV8Fgrnf0G",
+      "prepared_node_id": "wBQhBYl60sp17KrV0LxD"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "XnLDIal621iRgc1zSxDR",
+      "prepared_node_id": "4Vb4A7AoKoreNzwEQygN"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_001",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_001.mp3",
+      "text": "Pass the phone along. Nothing to see here.",
+      "script_sha256": "8b49ac9ca0822c8c1f2dc6e0d801c3c67a260cb2c1f4bf9629807e808303b02f",
+      "visibility_guard": "neutral_public_turn_handoff_no_private_action_leak",
+      "generations_count": 1,
+      "prepared_flow_id": "Hy37MrZkGC6gVrQGFj0x",
+      "prepared_node_id": "H8yasHtd0VYyagtZm08H"
+    }
+  ],
+  "batch_payload_sha256": "7497cd5fbfd33ade2af1c152e39ba9a496a3e1193b5132d45b6dfe33c998426f"
+}

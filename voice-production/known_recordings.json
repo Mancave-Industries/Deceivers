@@ -1,6 +1,6 @@
 {
   "status": "generated_in_elevenlabs_not_yet_imported_to_github",
-  "notes": "These are provenance pointers, NOT public downloadable URLs. Import from authenticated ElevenLabs history if possible. Never mistake a flow ID or generation ID for a history_item_id.",
+  "notes": "Exact completed Creative Flow references and provider-linked History IDs. History API enumeration is not verified in this environment. Import via these IDs or authenticated Flow exports; never regenerate to recover an existing clip.",
   "recordings": [
     {
       "host_id": "david",
@@ -9,7 +9,8 @@
       "session_id": "hYxXNVJgSS87DUlz5eXF",
       "generation_id": "MWcfEOTPLIqjrfuH6cpF",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "QmmsJsp8rDyRQk0ja01Q"
     },
     {
       "host_id": "victor",
@@ -18,7 +19,8 @@
       "session_id": "7bMwjj93GJapf0cvdtwn",
       "generation_id": "06tE53BBkaOeXRE8sbxc",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "ZRiwTgoNQmWnveaOcIf7"
     },
     {
       "host_id": "aaron",
@@ -27,7 +29,8 @@
       "session_id": "ZPsjIoRtgKXsDN0CUdeS",
       "generation_id": "Oebomth6MujQj3Z2ioGc",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "kw2UP5PybcZXClWdQjcZ"
     },
     {
       "host_id": "beth",
@@ -36,7 +39,8 @@
       "session_id": "nld87oEqkXL92skjuMFI",
       "generation_id": "QupJKeVFX4s5ZwzOabAK",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "zOkEFO6BVxRovuwO2iaN"
     },
     {
       "host_id": "lily",
@@ -45,7 +49,8 @@
       "session_id": "UntJXJeYMpv2fKbSQhcV",
       "generation_id": "42td0x3MNP6ZH8qvHGUF",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "zuaSn9ArcPIvSJRqO4C0"
     },
     {
       "host_id": "charlotte",
@@ -54,16 +59,18 @@
       "session_id": "pgFvX1AJUyn8d9yoEzsb",
       "generation_id": "xegSHfN0G7FuviSMxhE6",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "lagFfzUa95WYOin1kwKf"
     },
     {
       "host_id": "david",
       "clip_id": "gather_006",
       "flow_id": "E2t91FzM9lsdV13tQZBX",
       "session_id": "yyvuN1QmTuSLTph3ISrW",
-      "generation_id": null,
+      "generation_id": "I3727as8VIf87MOCpX6G",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "amuYT9NizCpkh0iIYmLu"
     },
     {
       "host_id": "david",
@@ -72,7 +79,8 @@
       "session_id": "BDsecH8lRmjX8P1ZfqgE",
       "generation_id": "PIhymBkVI7ZsytzrMJRN",
       "review_status": "pending",
-      "import_status": "not_imported"
+      "import_status": "not_imported",
+      "history_item_id": "Ok8zQte2qMgMQAXjJU8N"
     }
   ]
 }
