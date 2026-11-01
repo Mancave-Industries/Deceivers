@@ -1,0 +1,78 @@
+{
+  "status": "generated_in_elevenlabs_not_yet_imported_to_github",
+  "notes": "These are provenance pointers, NOT public downloadable URLs. Import from authenticated ElevenLabs history if possible. Never mistake a flow ID or generation ID for a history_item_id.",
+  "recordings": [
+    {
+      "host_id": "david",
+      "clip_id": "opening_002",
+      "flow_id": "zAtxyp7QqXq1fHpBiCdf",
+      "session_id": "hYxXNVJgSS87DUlz5eXF",
+      "generation_id": "MWcfEOTPLIqjrfuH6cpF",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "victor",
+      "clip_id": "opening_002",
+      "flow_id": "xFt45SNTbdooezxED5qT",
+      "session_id": "7bMwjj93GJapf0cvdtwn",
+      "generation_id": "06tE53BBkaOeXRE8sbxc",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "aaron",
+      "clip_id": "opening_002",
+      "flow_id": "4FKC9kOsS17fUvAhsfU4",
+      "session_id": "ZPsjIoRtgKXsDN0CUdeS",
+      "generation_id": "Oebomth6MujQj3Z2ioGc",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "beth",
+      "clip_id": "opening_002",
+      "flow_id": "xEZirHXN3WljfMU5o9Sh",
+      "session_id": "nld87oEqkXL92skjuMFI",
+      "generation_id": "QupJKeVFX4s5ZwzOabAK",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "lily",
+      "clip_id": "opening_002",
+      "flow_id": "k1thk8yp8Z5FRZFQZGHs",
+      "session_id": "UntJXJeYMpv2fKbSQhcV",
+      "generation_id": "42td0x3MNP6ZH8qvHGUF",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "charlotte",
+      "clip_id": "opening_002",
+      "flow_id": "fAc2tqdnvHtNsIOL4hQZ",
+      "session_id": "pgFvX1AJUyn8d9yoEzsb",
+      "generation_id": "xegSHfN0G7FuviSMxhE6",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "david",
+      "clip_id": "gather_006",
+      "flow_id": "E2t91FzM9lsdV13tQZBX",
+      "session_id": "yyvuN1QmTuSLTph3ISrW",
+      "generation_id": null,
+      "review_status": "pending",
+      "import_status": "not_imported"
+    },
+    {
+      "host_id": "david",
+      "clip_id": "murder_reveal_018",
+      "flow_id": "7GE0F0hithGEKggD6qCD",
+      "session_id": "BDsecH8lRmjX8P1ZfqgE",
+      "generation_id": "PIhymBkVI7ZsytzrMJRN",
+      "review_status": "pending",
+      "import_status": "not_imported"
+    }
+  ]
+}
