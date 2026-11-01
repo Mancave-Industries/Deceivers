@@ -239,9 +239,17 @@ const Sound = (() => {
     }
   }
 
+  let narratorHost = 'original';
+  function setNarratorHost(id) {
+    narratorHost = typeof NarratorHosts !== 'undefined' && NarratorHosts.find(id) ? id : 'original';
+  }
+  function choiceBuffer(choice) {
+    const result = withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS);
+    return choice.fallbackKey ? result.catch(() => withTimeout(decodeClip(choice.fallbackKey), CLIP_READY_TIMEOUT_MS)) : result;
+  }
   function fetchClip(key) {
     if (!bytesCache.has(key)) {
-      const p = fetch(NARRATION.clipUrl(key)).then((r) => {
+      const p = fetch((typeof NarratorHosts !== 'undefined' && NarratorHosts.clipUrl(key)) || NARRATION.clipUrl(key)).then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.arrayBuffer();
       });
@@ -414,7 +422,15 @@ const Sound = (() => {
       if (onEnd) { try { onEnd(); } catch (e) { /* ignore */ } }
     };
     if (!enabled || !poolNames || !poolNames.length) { finish(); return; }
-    const choices = poolNames.map(choose).filter(Boolean);
+    const choices = poolNames.map(choose).filter(Boolean).map(choice => {
+      // Only a public opening greeting is replaced. Rule explanations and every
+      // private queue/handoff keep the complete legacy narration and its guards.
+      if (narratorHost !== 'original' && choice.pool === 'intro1') {
+        const key = NarratorHosts.openingKey(narratorHost);
+        if (key) return { ...choice, key, fallbackKey: choice.key };
+      }
+      return choice;
+    });
     choices.forEach((c) => decodeClip(c.key).catch(() => {}));
     emit('narrate', { generation, pools: poolNames.slice(), clips: choices.map((c) => c.key) });
     setTimeout(() => poolNames.forEach((p) => { if (PRIMED_POOLS.indexOf(p) !== -1) prime(p); }), 0);
@@ -423,7 +439,7 @@ const Sound = (() => {
     const next = () => {
       if (generation !== narrationGeneration || !enabled || i >= choices.length) { finish(); return; }
       const choice = choices[i++];
-      withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS).then((buffer) => {
+      choiceBuffer(choice).then((buffer) => {
         if (generation !== narrationGeneration || !enabled) { finish(); return; }
         playBuffer(buffer, choice, generation, () => setTimeout(next, i < choices.length ? gapMs : 0));
       }, (err) => {
@@ -717,7 +733,7 @@ const Sound = (() => {
   }
 
   return {
-    setEnabled, setNarrationLevel, play, setMusicEnabled, startMusic, stopMusic,
+    setNarratorHost, setEnabled, setNarrationLevel, play, setMusicEnabled, startMusic, stopMusic,
     narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
     // Test hooks only (tests/narration): observe audio events, seed picks.
     _onEvent: (fn) => listeners.push(fn),

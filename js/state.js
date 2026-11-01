@@ -82,7 +82,7 @@ function createInitialState() {
     // once at Setup via startNewSeries, not reset per game.
     // audio: 'off' | 'partial' (essential announcements only) | 'full'
     // (every narration line). Defaults to 'partial'.
-    settings: { audio: 'partial', music: false, deceiverKnowledge: 'known' },
+    settings: { audio: 'partial', music: false, deceiverKnowledge: 'known', narratorHost: 'original' },
   };
 }
 

@@ -78,6 +78,7 @@ function applyAudioSettings(audioLevel) {
 
 applyAudioSettings(state.settings.audio);
 Sound.setMusicEnabled(state.settings.music);
+Sound.setNarratorHost(state.settings.narratorHost);
 
 let setupNames = Array(CONFIG.minPlayers).fill('');
 let setupIsComputer = Array(CONFIG.minPlayers).fill(false);
@@ -444,6 +445,7 @@ function showScreen(phaseName) {
 }
 
 function render() {
+  if (state.phase !== PHASES.SETUP) NarratorHosts.stopPreview();
   if (state.phase !== lastRenderedPhase) {
     Sound.stopNarration();
     lastRenderedPhase = state.phase;
@@ -493,7 +495,7 @@ function render() {
       UI.renderTitle(hasSavedGame());
       break;
     case PHASES.SETUP:
-      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
       break;
     case PHASES.REVEAL:
       UI.renderReveal(state, uiStage.revealTapped);
@@ -629,35 +631,35 @@ const actions = {
       setupNames.push('');
       setupIsComputer.push(false);
     }
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'remove-player': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupNames.splice(i, 1);
     setupIsComputer.splice(i, 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-seat-mode': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupIsComputer[i] = btn.dataset.mode === 'computer';
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'inc-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.min(20, seriesLength + 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'dec-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.max(1, seriesLength - 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-deceiver-knowledge': (btn) => {
     Sound.play('tap');
     setupDeceiverKnowledge = btn.dataset.mode === 'hidden' ? 'hidden' : 'known';
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-audio-level': (btn) => {
     const mode = btn.dataset.mode;
@@ -671,7 +673,26 @@ const actions = {
     persist();
     UI.showModal('Settings', UI.settingsContent(state));
   },
+  'choose-narrator': (btn) => {
+    if (state.phase !== PHASES.SETUP) return;
+    const host = NarratorHosts.find(btn.dataset.host);
+    if (!host && btn.dataset.host !== 'original') return;
+    NarratorHosts.stopPreview();
+    state.settings.narratorHost = host ? host.id : 'original';
+    Sound.setNarratorHost(state.settings.narratorHost);
+    persist();
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
+  },
+  'preview-narrator': (btn) => {
+    if (state.phase !== PHASES.SETUP) return;
+    NarratorHosts.previewHost(btn.dataset.host, text => {
+      const status = document.getElementById('narrator-preview-status');
+      if (status) status.textContent = text;
+    });
+  },
+  'stop-narrator-preview': () => NarratorHosts.stopPreview(),
   'start-game': () => {
+    NarratorHosts.stopPreview();
     if (!setupNames.every((n) => n.trim().length > 0)) return;
     Sound.play('gather');
     startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);

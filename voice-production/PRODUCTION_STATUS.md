@@ -31,7 +31,7 @@ Total: **1,028,856 bytes**. Every file is MP3, 44.1 kHz, mono. Paths are listed 
 3. Register each future completed take in the generated-recording ledger, then import and verify it using the same pipeline. Never auto-retry a generation if its outcome is uncertain.
 4. **1,648 of 1,656 planned MP3 files remain unproduced/unimported in this catalogue.** No full-library generation is scheduled or approved.
 5. Develop and validate a separate offline host picker and explicit public-event mapping. Preserve the current 39-line narrator until packs are complete enough for a tested fallback strategy.
-6. Run role-equivalence and Safari playback tests before integration approval. No runtime integration or Safari testing is claimed in this asset-only change.
+6. Run role-equivalence and Safari playback tests before integration approval. Only the public opening greeting is integrated in this draft; no Safari testing or full voice-pack replacement is claimed.
 
 ## Codespaces secret investigation
 
@@ -43,6 +43,6 @@ All eight Flow responses provide individual History links, so the History IDs ar
 
 ## Validation and boundaries
 
-The asset checks and 11 production-safety tests pass locally; the existing engine rule suite also passes all 10 tests. GitHub Actions is the authoritative source for current CI status. The original game JavaScript, old narration files, source scripts and voice identities are unchanged.
+The asset checks and 11 production-safety tests pass locally; the existing engine rule suite also passes all 10 tests. GitHub Actions is the authoritative source for current CI status. The original 39-line narration manifest/audio, source scripts and voice identities are unchanged. A subsequent draft revision adds a setup chooser with six portraits, explicit previews, a saved host setting, and replacement of the public opening greeting only; all remaining narration uses the original voice. Five additional narrator-picker tests pass. Safari and the existing full narration CI must pass before rollout.
 
-PR #14 remains draft/open. No merge, deployment, paid audio generation or live ElevenLabs integration occurred. PR #4 remains untouched.
+PR #14 remains draft/open. No merge, deployment, paid audio generation or live ElevenLabs API integration occurred. PR #4 remains untouched.

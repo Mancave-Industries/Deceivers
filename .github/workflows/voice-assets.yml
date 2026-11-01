@@ -3,12 +3,20 @@ name: Voice asset integrity
 on:
   pull_request:
     paths:
+      - 'js/**'
+      - 'css/**'
+      - 'index.html'
+      - 'tests/narrator-hosts.cjs'
       - 'voice-production/**'
       - 'assets/audio/hosts/**'
       - '.github/workflows/voice-assets.yml'
   push:
     branches: [feature/six-host-voice-assets-20261101]
     paths:
+      - 'js/**'
+      - 'css/**'
+      - 'index.html'
+      - 'tests/narrator-hosts.cjs'
       - 'voice-production/**'
       - 'assets/audio/hosts/**'
       - '.github/workflows/voice-assets.yml'
@@ -32,5 +40,10 @@ jobs:
         run: python voice-production/asset_checks.py
       - name: Check import, corruption and duplicate-generation guards
         run: python -m unittest discover -s voice-production -p 'test_*.py'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify narrator selection, static playback and secrecy
+        run: node --test tests/narrator-hosts.cjs
       - name: Verify controlled batch proposal
         run: python voice-production/plan_batch.py

@@ -185,7 +185,7 @@ UI.renderTitle = function renderTitle(hasSaved) {
 
 /* ---------- 2. Setup ---------- */
 
-UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverKnowledge) {
+UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverKnowledge, narratorHost = 'original') {
   const allValid = names.every((n) => n.trim().length > 0);
   const deceivers = deceiverCountForPlayers(names.length);
   const computerCount = isComputer.filter(Boolean).length;
@@ -231,6 +231,22 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverK
         ? "Deceivers begin without knowing who the others are — only a successful recruitment pact introduces two Deceivers to each other."
         : 'Deceivers privately see their fellow Deceivers (if more than one) during the role reveal.'}</p>
     </div>
+    <section class="panel narrator-panel" aria-labelledby="narrator-heading">
+      <h2 class="panel-title" id="narrator-heading">Choose Your Narrator</h2>
+      <p class="small-note">Listen, then choose your host. Preview packs currently change the opening greeting; the original narrator reads the remaining lines.</p>
+      <button type="button" class="seat-mode-btn narrator-original ${narratorHost === 'original' ? 'active' : ''}" data-action="choose-narrator" data-host="original" aria-pressed="${narratorHost === 'original'}">Original Mancaveman · complete narration</button>
+      <div class="narrator-grid">
+        ${NarratorHosts.hosts.map(h => `<div class="narrator-card">
+          <button type="button" class="narrator-select ${narratorHost === h.id ? 'selected' : ''}" data-action="choose-narrator" data-host="${h.id}" aria-label="Choose ${h.label}" aria-pressed="${narratorHost === h.id}">
+            <img src="${h.avatar}" width="512" height="512" alt="${h.label}" loading="lazy">
+            <span class="narrator-selected">${narratorHost === h.id ? 'Selected' : 'Choose ' + h.label}</span>
+          </button>
+          <button type="button" class="narrator-hear" data-action="preview-narrator" data-host="${h.id}" aria-label="Hear ${h.label}'s voice">▶ Hear ${h.label}</button>
+        </div>`).join('')}
+      </div>
+      <button type="button" class="narrator-hear" data-action="stop-narrator-preview">■ Stop preview</button>
+      <p class="small-note" id="narrator-preview-status" role="status" aria-live="polite"></p>
+    </section>
     <div class="spacer"></div>
     <button class="btn btn-primary btn-block" data-action="start-game" ${allValid ? '' : 'disabled'}>Seal The Roles &amp; Begin</button>`;
 };

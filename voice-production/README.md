@@ -1,7 +1,7 @@
 # The Deceivers — six-host audio production
 
 **Feature branch:** `feature/six-host-voice-assets-20261101`
-**Status:** Eight existing MP3s committed and read back byte for byte from GitHub at commit 277986e6022dd4e29b799b8ea786d0b9a503c166. Listening review is pending. PR #14 remains a draft. No new speech, merge, deployment or gameplay change.
+**Status:** Eight existing MP3s committed and read back byte for byte from GitHub at commit 277986e6022dd4e29b799b8ea786d0b9a503c166. Listening review is pending. PR #14 remains a draft. No new speech, merge or deployment. The draft now includes a setup chooser and public opening greeting integration.
 
 ## Catalogue and imported audio
 
@@ -73,7 +73,9 @@ References: [GitHub Codespaces secrets](https://docs.github.com/en/codespaces/ma
 
 ## Future offline host selection and secrecy contract
 
-The existing `js/narration.js`, `js/sound.js`, `js/main.js`, engine, saved state and 39-line narrator are unchanged. These assets are not referenced by gameplay yet. Host selection belongs in a later integration change after event mapping and browser tests.
+The draft setup chooser displays all six named portraits, offers explicit voice previews, and saves the selected host. Only `intro1`, the public greeting before private roles, uses the selected host. Original lines 02–03 still explain the rules, and the original narrator supplies every other event. Missing opening audio falls back to the legacy greeting. The original 39-line manifest and assets remain intact. Full voice-pack replacement and additional event mapping remain future work.
+
+Preview playback stops before starting a game, on leaving setup, when another preview starts, and when the page is hidden. Portraits are 512px WebP files, about 60–66 KB each. Five targeted regression tests cover host greetings, rules retention, missing-file fallback, handoff/night request equivalence and preview overlap. Desktop Chromium preview confirmed the six portraits, selection and successful audio preview; Safari verification remains outstanding.
 
 - Persist a public host ID selected in Settings; use only static catalogue paths during play. No ElevenLabs keys, SDK or API calls belong in the game.
 - Preserve the legacy narrator as a complete fallback. Eight audition files cannot replace 39 functional lines; do not offer incomplete packs as complete.

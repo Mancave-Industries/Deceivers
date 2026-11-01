@@ -1233,3 +1233,15 @@ body {
 .winner-reveal-detail { display:grid; gap:10px; font-size:21px; overflow-wrap:anywhere; }
 #skipWinnerReveal { flex-shrink:0; min-height:48px; max-width:420px; width:100%; color:#fff5dc; background:#181511; border:1px solid #e6c877; }
 @media (prefers-reduced-motion:reduce) { .winner-reveal-overlay .scale-in { animation:none; } }
+
+/* Public setup auditions: static files, independent of hidden roles. */
+.narrator-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:14px 0; }
+.narrator-card { min-width:0; }
+.narrator-select { display:block; width:100%; padding:0; border:2px solid #4c5156; background:#07121d; color:#fff0d0; cursor:pointer; border-radius:6px; overflow:hidden; }
+.narrator-select.selected { border-color:#e6bf57; box-shadow:0 0 0 2px #e6bf57; }
+.narrator-select img { display:block; width:100%; height:auto; aspect-ratio:1; }
+.narrator-selected { display:block; padding:7px 2px; font-size:12px; }
+.narrator-hear { min-height:44px; width:100%; border:1px solid #69717a; border-radius:4px; margin-top:6px; background:#142534; color:#fff0d0; font:inherit; font-size:13px; cursor:pointer; }
+.narrator-original { margin-top:12px; width:100%; min-height:44px; }
+.narrator-select:focus-visible,.narrator-hear:focus-visible { outline:3px solid #fff0d0; outline-offset:3px; }
+@media(max-width:350px) { .narrator-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
