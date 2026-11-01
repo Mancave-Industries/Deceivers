@@ -16,7 +16,16 @@ def get(path, key):
             return json.load(response)
     except urllib.error.HTTPError as error:
         # Do not log response bodies, headers, or exception representations.
-        raise RuntimeError(f"ElevenLabs {path}: HTTP {error.code}; check key permissions/account access") from None
+        reason = "unclassified authentication/access error"
+        try:
+            detail = json.loads(error.read()).get("detail", {})
+            status = detail.get("status") if isinstance(detail, dict) else None
+            allowed = {"invalid_api_key", "missing_permissions", "unauthorized", "quota_exceeded", "voice_not_found"}
+            if status in allowed:
+                reason = status
+        except (ValueError, OSError, AttributeError):
+            pass
+        raise RuntimeError(f"ElevenLabs {path}: HTTP {error.code}; {reason}") from None
     except (OSError, ValueError):
         raise RuntimeError(f"ElevenLabs {path}: network or JSON response failure") from None
 
@@ -55,7 +64,7 @@ def check(key):
 
 if __name__ == "__main__":
     try:
-        report = check(os.environ.get("ELEVENLABS_API_KEY", ""))
+        report = check(os.environ.get("ELEVENLABS_API_KEY", "").strip())
     except RuntimeError as error:
         print(str(error), file=sys.stderr)
         sys.exit(1)
