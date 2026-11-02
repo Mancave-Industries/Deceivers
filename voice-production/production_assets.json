@@ -15981,6 +15981,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:46:50.899008+00:00"
       }
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_014",
+      "text": "The night has claimed a player.",
+      "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300004+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_015",
+      "text": "A fresh absence. An unpleasant sense of dread.",
+      "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300022+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_016",
+      "text": "Murder most inconvenient. Especially for the victim.",
+      "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_016.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300025+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_017",
+      "text": "Someone's game has ended rather abruptly.",
+      "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_017.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300027+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_018",
+      "text": "An empty place at the table. How unsettling.",
+      "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_018.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300029+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_019",
+      "text": "A player silenced. The rest of you, do speak up.",
+      "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_019.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300031+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "murder_reveal_020",
+      "text": "The night was eventful. Not in a good way.",
+      "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
+      "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_020.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300033+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "final_circle_001",
+      "text": "And so, the circle tightens. How wonderfully uncomfortable.",
+      "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
+      "path": "assets/audio/hosts/aaron/final_circle/final_circle_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300035+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "final_circle_002",
+      "text": "Here we are. The moment when every word matters.",
+      "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
+      "path": "assets/audio/hosts/aaron/final_circle/final_circle_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300037+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "final_circle_003",
+      "text": "A few faces. A great many questions.",
+      "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
+      "path": "assets/audio/hosts/aaron/final_circle/final_circle_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:46:52.300038+00:00"
     }
   ]
 }
