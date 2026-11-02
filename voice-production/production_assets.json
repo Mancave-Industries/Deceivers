@@ -31289,8 +31289,25 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/charlotte/gather/gather_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721755+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721755+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "oHMMpkRQ4veyheJaE9f2",
+        "request_id": "MCunbwFVKAKtpfkMStb9"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:03.110971+00:00",
+      "sha256": "f28353a2369cadc24f406dc583217d147092985b8a7620009c50c90ea1b99afa",
+      "git_blob_sha": "c6fb1dc6754df2ba7eb5b5dfeffe0399ac43dcbd",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31299,8 +31316,25 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/charlotte/gather/gather_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721772+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721772+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3Vx7EvuU2z6Do8VpGLbM",
+        "request_id": "GC2SwW8GA9zFwE3afyMi"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:04.175918+00:00",
+      "sha256": "33155c266ba197bcbbd834396cfe40e4c600d6d0da664cec310b709a363c0954",
+      "git_blob_sha": "1077a584560e10f477af0e06f506636493ad2f9b",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31309,8 +31343,25 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/charlotte/gather/gather_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721775+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721775+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FingWrDMZbXgRquR6NsS",
+        "request_id": "eNq8MRVFMp3mK3wFIwZn"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:05.304221+00:00",
+      "sha256": "461ecd4c07ebe09ac948e9efc6e388abb020a78da88b5927dd4bda9e87b1f16b",
+      "git_blob_sha": "8af9f15741c37ad1ffe2edef2bdd07b3cf398dc7",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31319,8 +31370,25 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/charlotte/gather/gather_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721776+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721776+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wNAOq0bA9v1XgAfJTKPA",
+        "request_id": "Hr4yaRU3kXRVnFEp0VEL"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:06.486873+00:00",
+      "sha256": "887d737cc88bead4e45437e6d74fcce2bca1dcf2b42630962b61fc860276da0b",
+      "git_blob_sha": "999c9645827c548d253a2bb3cbc518392fa468e0",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31329,8 +31397,25 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/charlotte/gather/gather_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721778+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721778+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bDYkGofifgPI6sgi6WgR",
+        "request_id": "siCbIBF1uSB0Uh9yNYep"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:07.373738+00:00",
+      "sha256": "45204c3948a7fc0ebf81f3077c4e955531fa792369855c7cbf264795ba679f55",
+      "git_blob_sha": "c29a7a72d7c778045649af677933674ee7ce1797",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31339,8 +31424,25 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/charlotte/gather/gather_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721780+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721780+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DxdXoRnuSmNnzixK81Vt",
+        "request_id": "rIfAxv8LL7SSvTPnVCfp"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:08.384790+00:00",
+      "sha256": "b4d9a192764fa0b4e57769a0f272c14ab7c3a437c836c77419f549ae9e08316a",
+      "git_blob_sha": "e44780ef1a6ddb104ac39fb915094acb1c1f5de2",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31349,8 +31451,25 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/charlotte/gather/gather_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721782+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721782+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uakzhWobml6E4aDVhMDJ",
+        "request_id": "vyWL0YV5kjVVANSrpvc8"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:09.343343+00:00",
+      "sha256": "8a6bf153f3e0efdd29307aceb505346119174d0b86d9e6c7689227d3eb3fe0c9",
+      "git_blob_sha": "06fbaef43cabe98d5ff1b54c5721e70316e480c2",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31359,8 +31478,25 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/charlotte/gather/gather_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721784+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721784+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pc735VQgxqwtqFYCFyF9",
+        "request_id": "cwgsLmWjNYuzB7JKvLed"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:10.537068+00:00",
+      "sha256": "f8a0aeb9173598bd56c756fa19aa1571cc11c097c6d79cfea5174186c88c40a3",
+      "git_blob_sha": "bd76e6883952f686e320dff0fdc57a0049798d39",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31369,8 +31505,25 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721786+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721786+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Z3WfNE12j2w2FLyt6SyS",
+        "request_id": "PbFtezyX20Yr1a5cuOkT"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:11.632323+00:00",
+      "sha256": "fa0f5c9b0e46a614fde6d66ffc415f08a0b86ba51063d2815af9b75241127316",
+      "git_blob_sha": "79068d467907cfcdb624fb77bf5e80f1e3a561ca",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31379,8 +31532,25 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:00.721788+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:00.721788+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pnDVYKkaukpPaEshP6OV",
+        "request_id": "ApkS0mMivXmufLs01d4q"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:12.801831+00:00",
+      "sha256": "aa3359cda1bdc415c0d0afbaa39e05c5f5923d8a59fe7da3452c13256d867010",
+      "git_blob_sha": "8e7c3d21659b1858e14232a3f63df372d754fc7a",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
