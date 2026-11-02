@@ -1,3 +1,17 @@
+# Current checkpoint — 2 November 2026
+
+The GitHub Actions secret authenticated successfully to the active paid Creator account: 131,000 included credits available at preflight. All six exact narrator voice IDs are now accessible. No key values were logged or stored in files.
+
+13 existing MP3s are committed and verified. The user approved the remaining 1,031 reviewed public recordings, one take each, estimated at 45,486 credits. `approved_api_plan.json` pins every text, voice, path and script checksum; its clip-list SHA-256 is `9ce1e9a18cca518c6627550be58129099587b335152dd3fb6d05c2f1e08d6882`.
+
+`record_approved.py` reserves each group of ten in GitHub before calling TTS. Completed MP3s are fully decoded, hashed, committed, and fetched back as GitHub blobs for byte-for-byte verification. `production_assets.json` is the authoritative progress ledger; only `github_binary_verified` entries count as uploaded. An uncertain request stops production and blocks automatic regeneration until provider History is reconciled. New takes remain `listening_pending`. The workflow starts only when `production_request.json` changes on the feature branch.
+
+The worker and its scope, corruption, duplicate and no-retry safeguards passed local tests. This checkpoint prepares execution; it does not claim the remaining audio has been generated. No merge or deployment. Full public-event integration and Safari listening/secrecy checks remain. PR #4 is untouched.
+
+---
+
+The following is the historical initial-import report; its older authorization/count/blocker statements are superseded by the checkpoint above.
+
 # Deceivers voice production status — 1 November 2026
 
 > **Latest script review:** see [SCRIPT_REVIEW.md](SCRIPT_REVIEW.md). The original 276-line catalogue remains preserved. The reviewed candidate has 289 lines: 174 mapped to current public pools, 115 held. It proposes 1,036 further recordings at an estimated 45,696 credits, reusing all eight existing takes. This supersedes earlier full-catalogue/small-batch recording recommendations below; no recording is authorised by this review.

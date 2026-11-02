@@ -127,12 +127,40 @@ def verify_all():
         verify_record(record)
         paths.add(record["path"])
     disk = {p.relative_to(ROOT).as_posix() for p in (ROOT / "assets/audio/hosts").rglob("*.mp3")}
+    production_path = HERE / 'production_assets.json'
+    production = json.loads(production_path.read_text())['assets'] if production_path.exists() else []
+    if production:
+        approved = { (c['host_id'], c['clip_id']): c for c in read('approved_api_plan.json')['clips'] }
+        for record in production:
+            key = (record['host_id'], record['clip_id'])
+            if key in seen or key not in approved:
+                raise ValueError('Duplicate or unapproved production recording')
+            seen.add(key)
+            if any(record.get(f) != approved[key][f] for f in approved[key]):
+                raise ValueError('Production script, voice or path mismatch')
+            if record['status'] == 'reserved_no_automatic_retry':
+                continue
+            if record['status'] not in ('local_binary_verified', 'github_binary_verified'):
+                raise ValueError('Unknown production recording status')
+            actual = inspect_mp3(ROOT / record['path'])
+            if any(record.get(f) != actual[f] for f in ('sha256', 'git_blob_sha', 'size_bytes')):
+                raise ValueError('Production binary checksum mismatch')
+            source = record.get('source', {})
+            if source.get('method') != 'direct_tts_api' or not (source.get('history_item_id') or source.get('request_id')):
+                raise ValueError('Production provider source reference missing')
+            if record['status'] == 'github_binary_verified':
+                proof = record.get('github_verification', {})
+                if (proof.get('blob_sha') != actual['git_blob_sha'] or not proof.get('byte_for_byte_match')
+                        or proof.get('readback_encoding') != 'base64'
+                        or not re.fullmatch(r'[0-9a-f]{40}', proof.get('commit_sha', ''))):
+                    raise ValueError('Production uploaded status lacks binary readback proof')
+            paths.add(record['path'])
     if disk != paths:
         raise ValueError("MP3 files and receipts differ")
     for known in read("known_recordings.json")["recordings"]:
         if known.get("import_status") == "github_binary_verified" and (known["host_id"], known["clip_id"]) not in seen:
             raise ValueError("Recording marked uploaded without a verified binary")
-    print(f"Verified {len(records)} MP3s: canonical paths, SHA-256, Git blobs, complete decode and source receipts.")
+    print(f"Verified {len(paths)} MP3s: canonical paths, SHA-256, Git blobs, complete decode and source receipts.")
     return records
 
 
