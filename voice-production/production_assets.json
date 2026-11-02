@@ -23461,6 +23461,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:55:10.548314+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_005",
+      "text": "Next pair of hands, please.",
+      "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984205+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_006",
+      "text": "A little discretion. How refreshing.",
+      "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984225+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_007",
+      "text": "Pass the phone. Keep your thoughts to yourself.",
+      "script_sha256": "0ced5bfca984ddf17eefbebe921c3022e006b86f62ee906eb3b599ff992dd1f1",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984227+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_008",
+      "text": "Next player. Eyes on your own business.",
+      "script_sha256": "60bf1aa59f7a6b848909ec0e74a6c1910ae73922c0312289c3e0c23234d302f7",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984228+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_009",
+      "text": "Round it goes. Round and round.",
+      "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984230+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_010",
+      "text": "A swift handover, if you please.",
+      "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984231+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_011",
+      "text": "Don't linger. Pass it on.",
+      "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984233+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_012",
+      "text": "The next player awaits. Probably.",
+      "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984234+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_013",
+      "text": "Your turn is over. How tragic.",
+      "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984236+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_014",
+      "text": "Pass it on, and look innocent.",
+      "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:11.984237+00:00"
     }
   ]
 }
