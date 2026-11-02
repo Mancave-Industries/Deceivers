@@ -6461,6 +6461,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:36:33.947563+00:00"
       }
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_021",
+      "text": "Next! Oh, do try to keep up.",
+      "script_sha256": "590fd07620738f9fa3f87a903f0d7f3a7f21b8c92ef9fa2bbe45bbaa51fe7943",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_021.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.253983+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_022",
+      "text": "One phone. So many secrets.",
+      "script_sha256": "2c6507bb85cf20f324a0e934327c891968fe4fcb0cc8e5e58319de67bc78d1d8",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_022.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254003+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_023",
+      "text": "A quiet handover, please.",
+      "script_sha256": "e395ee526a917e6c605702a62faee203ed46a7548b3ceaa6b98b68cf73080eb2",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_023.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254005+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_024",
+      "text": "Off it goes to the next player.",
+      "script_sha256": "699df641f6c788b1f9007c5af916b52dd64227adbd131b1e5d7f695fed9c8e7b",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_024.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254007+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_025",
+      "text": "Don't make a ceremony of it. That's my job.",
+      "script_sha256": "21fd56362a2c72b851b8d80946a30a6c699cad6590cd2751382a24029c15eb00",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_025.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254008+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_026",
+      "text": "Next player. And not a word.",
+      "script_sha256": "a1db20b4a072df925c5aae7d688b28f3e719e46b7c91a37d6b30a53fe96c5d4c",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_026.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254010+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_027",
+      "text": "A discreet little exchange. Lovely.",
+      "script_sha256": "b182fa65380ef76ca7989c75bce8b09ca735026a73c682c113b01a804ea323a4",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_027.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254013+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_028",
+      "text": "Pass it along. Eyes elsewhere.",
+      "script_sha256": "7d5a1b681787273ca38c4d288533de7486e2577467bf3df453302bb2439e0a63",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_028.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254014+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_029",
+      "text": "Next turn. Same rules, fewer questions.",
+      "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_029.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254015+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "anonymous_handoff_030",
+      "text": "The phone, please. Not the whole table.",
+      "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
+      "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_030.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:36:35.254017+00:00"
     }
   ]
 }
