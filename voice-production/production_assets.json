@@ -14621,6 +14621,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:45:25.378119+00:00"
       }
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_004",
+      "text": "Time to vote. This should be enlightening.",
+      "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
+      "path": "assets/audio/hosts/aaron/voting/voting_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731969+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_005",
+      "text": "Make your choice. Preferably a good one.",
+      "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
+      "path": "assets/audio/hosts/aaron/voting/voting_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731987+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_006",
+      "text": "The talking shop is closed. Votes, please.",
+      "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
+      "path": "assets/audio/hosts/aaron/voting/voting_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731989+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_007",
+      "text": "Decisions, decisions. How terribly grown-up.",
+      "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
+      "path": "assets/audio/hosts/aaron/voting/voting_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731990+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_008",
+      "text": "Enough speculation. Commit to something.",
+      "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
+      "path": "assets/audio/hosts/aaron/voting/voting_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731992+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_009",
+      "text": "Voting begins. Your confidence is noted.",
+      "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
+      "path": "assets/audio/hosts/aaron/voting/voting_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731993+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_010",
+      "text": "Time to point the finger. Figuratively.",
+      "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
+      "path": "assets/audio/hosts/aaron/voting/voting_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731995+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_011",
+      "text": "Your vote, please. No dithering.",
+      "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
+      "path": "assets/audio/hosts/aaron/voting/voting_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731996+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_012",
+      "text": "Now we discover what you actually believe.",
+      "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
+      "path": "assets/audio/hosts/aaron/voting/voting_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731997+00:00"
+    },
+    {
+      "host_id": "aaron",
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "clip_id": "voting_013",
+      "text": "Cast your votes. May reason make a rare appearance.",
+      "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
+      "path": "assets/audio/hosts/aaron/voting/voting_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:45:26.731999+00:00"
     }
   ]
 }
