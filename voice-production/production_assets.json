@@ -26861,6 +26861,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:58:52.580302+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_005",
+      "text": "All votes counted. What a confident bunch.",
+      "script_sha256": "ac8cfb1508c1371402f463b21ff252f77d1262d92eaf88ddf376f2703345ccda",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174965+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_006",
+      "text": "A decision! Finally.",
+      "script_sha256": "c5137e892f2dde316b9c421e609e42cdde9b0cc822b4bd38d7dfd4bd4d794c41",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174980+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_007",
+      "text": "The numbers are settled. The consequences are not.",
+      "script_sha256": "55dc9e73fcc6b3d0753bf81cfbedc9f88f4fc349a489ef6e1ea0f096c4ba023a",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174982+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_008",
+      "text": "The votes have spoken. Whether wisely is another matter.",
+      "script_sha256": "9903ac122367517ddc8d41760089a802d44b3173d1289fe5758ac52b782c8e8a",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174985+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_009",
+      "text": "And there we have it. A collective opinion.",
+      "script_sha256": "51528479e856fd7680695d761ed47510a00516bbf9cb67b1fe65af754b6d1895",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174987+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_010",
+      "text": "Your judgement has been recorded.",
+      "script_sha256": "5a82c4867032b145c7a5553930cae68029e0f933e689e22ea45e2f1e987e2795",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174989+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_011",
+      "text": "No more deliberation. It's done.",
+      "script_sha256": "4ed407b951f1b1f8611b199543d4e07753260be344478caf44ea69ee3737a8fc",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174991+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_012",
+      "text": "A fascinating outcome. Perhaps.",
+      "script_sha256": "da7db937f654022fe14a99990aa60d1727db6b4707b0e5cb66cd27b0eb9180f2",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174993+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_013",
+      "text": "The tally is complete. Shall we?",
+      "script_sha256": "27706b9e0aff8492154b0821b9659fcb82444bbc13e33d2991458c34fe96c2aa",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174995+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_014",
+      "text": "Well, that's democracy for you.",
+      "script_sha256": "27412428415531822f01f163269ad655c72b191fb5f3d6eecd686430a42631a4",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:58:54.174997+00:00"
     }
   ]
 }
