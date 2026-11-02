@@ -28569,8 +28569,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735506+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735506+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "EaMiv0PDYBwvwbrE6vcH",
+        "request_id": "Bdz3mqYMOKhEoeHMVZor"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:57.633301+00:00",
+      "sha256": "f2760a50c8aba4d7a270d36407f2a6ee19923ffa80c2d5f962198a00fb8f3a0b",
+      "git_blob_sha": "c0f41b89c186aa9020dc17e82ab9ec50c423665a",
+      "size_bytes": 76529,
+      "duration_seconds": 4.754286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28579,8 +28596,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/lily/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735522+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735522+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tExyO24vnRsT4DqNmTOw",
+        "request_id": "ajFf8P0xJKVjQcCOcNNr"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:00.471938+00:00",
+      "sha256": "ae5282b7442b0998dd79d45844f71f536e344e14a5c69a1abc86ddfc3a867b0f",
+      "git_blob_sha": "b36298cc9b1f94625505ef0bcac82e623a39ab67",
+      "size_bytes": 172660,
+      "duration_seconds": 10.762449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28589,8 +28623,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/lily/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735524+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735524+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6HVXprulFy9OtMC7aMiA",
+        "request_id": "ri8wvXDesuvDiuxHdZSL"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:02.483515+00:00",
+      "sha256": "90c2af29305bd90c490f9ec4b36bac0244ce805d4afd179c09df76a9af262b1f",
+      "git_blob_sha": "d4b845648d8211638ff06cae3cb64dc875abd285",
+      "size_bytes": 122505,
+      "duration_seconds": 7.627755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28599,8 +28650,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/lily/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735526+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735526+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VEZ1xFYRI0CsNA3S7tiS",
+        "request_id": "DavaQLNiawfRy4Op6i57"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:04.247814+00:00",
+      "sha256": "5f85f9f94d31a4b14cbf4e717980a16c171f40a7c7648e205be15302b2e7e19c",
+      "git_blob_sha": "df4543c6803a07e4c77e1e448b6055db72f98caf",
+      "size_bytes": 116235,
+      "duration_seconds": 7.235918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28609,8 +28677,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/lily/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735527+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735527+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lNxvFFUII9DXVnLfnufd",
+        "request_id": "iRLScOoZTYUw0c9p9Gt5"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:06.348113+00:00",
+      "sha256": "77858399fda1578269d50584573c9153de737c2ba9c4d8ab9a59b40539784222",
+      "git_blob_sha": "1ac28c90833bd7ca82e52d1e8171218e865af398",
+      "size_bytes": 129192,
+      "duration_seconds": 8.045714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28619,8 +28704,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/lily/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735529+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735529+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7ehmyFOSzKteXX20krtd",
+        "request_id": "532bpIneV5uXZRptZzM3"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:08.018459+00:00",
+      "sha256": "e51d05c1b7effaa7fa2105a660707aebd30c182c1c75ddc369076c04c82a5baa",
+      "git_blob_sha": "c1ec7bd8fb6a72574ebbbe791d19afb1fceef19e",
+      "size_bytes": 89486,
+      "duration_seconds": 5.564082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28629,8 +28731,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/lily/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735530+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735530+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ITsjfWbDPjqApDc4vRzo",
+        "request_id": "wPQE22HaJj0wcNB6QQng"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:09.080315+00:00",
+      "sha256": "a5d96835b78498c6d5de5a5144b732aaf09c0caa5204241fa3a11eb4afe4e848",
+      "git_blob_sha": "19eaf6c29886f24c8dbbaef6b49f84d2cd09dd5e",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28639,8 +28758,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/lily/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735532+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735532+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dznwlvFOMxZKN6sQ2UBz",
+        "request_id": "h4WOZBxY3gorPDhG8PZP"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:10.585255+00:00",
+      "sha256": "a89c20740073246ba88835daf9da3758d64119383557f6f3855060f5c101a883",
+      "git_blob_sha": "1d67ebb8bca967ae01a8025b4c71a9c30458e978",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28649,8 +28785,25 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/lily/quiet_night/quiet_night_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735533+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735533+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ary6vGEW6K6fv1vamgAo",
+        "request_id": "mdYGM4l4jiUJHEZLPmcR"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:11.748471+00:00",
+      "sha256": "46b001cdab26d778354723e309e0dd6b7b7ebd92aa1931003a89a6e7d2325df1",
+      "git_blob_sha": "51db45b905930573b59fc4115a9325dbd2023c7c",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28659,8 +28812,25 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/lily/shield_saved/shield_saved_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:54.735534+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:54.735534+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "hCH2EwQwQCYdmHW9C9Qu",
+        "request_id": "77t7OA9sBmonOBIr5Ago"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:01:13.030099+00:00",
+      "sha256": "0fc9342d9de839b4daea3a74286b90992098c7a5c6e548aaacb283c10192206a",
+      "git_blob_sha": "f4cc851ad9586e1208e567b387296ad164276116",
+      "size_bytes": 79037,
+      "duration_seconds": 4.91102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
