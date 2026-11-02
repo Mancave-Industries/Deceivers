@@ -17349,8 +17349,25 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/aaron/series_closing/series_closing_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294664+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294664+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xpjpTsoTLwV0YeEG0foF",
+        "request_id": "PUTt7MBdemxLT4eJaMS4"
+      },
+      "provider_character_cost": "37",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:33.241849+00:00",
+      "sha256": "db98b2404eda77501b9859b6a74122699d7dc040d626f5a706fa388f90959e1a",
+      "git_blob_sha": "3f864ba6ac92c9ebbb86ad5e26e4e7829fc26092",
+      "size_bytes": 97009,
+      "duration_seconds": 6.034286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17359,8 +17376,25 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/aaron/farewell/farewell_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294680+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294680+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7TgEALmGcEnAeKcOC0U3",
+        "request_id": "2FavarX0yRPqSGkqqFj7"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:34.092355+00:00",
+      "sha256": "6742204d1fd5d687d58a4f1ef2fed8daf6cc3b78ec080b5e81e261d03ac7939e",
+      "git_blob_sha": "b6be6008c5ceb178bb0074b91e38149decde2a82",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17369,8 +17403,25 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/aaron/rules_intro/rules_intro_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294682+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294682+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "o9VOxUtyHOxCXj3ghAft",
+        "request_id": "jQEuGFFio7nlhlszDcqG"
+      },
+      "provider_character_cost": "53",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:36.041363+00:00",
+      "sha256": "5dadab8a032632096279293a6b3a6d85c3afa74c7fea85f27cfc13626334b7da",
+      "git_blob_sha": "61cc19555c1ca5cbb1d95e7b7c0aae4fdaad5922",
+      "size_bytes": 137969,
+      "duration_seconds": 8.594286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17379,8 +17430,25 @@
       "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
       "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
       "path": "assets/audio/hosts/aaron/rules_intro/rules_intro_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294684+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294684+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DHBzJ0MtaAiEMGP1vh67",
+        "request_id": "lj3spw78jlwEk8jZYubI"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:37.779914+00:00",
+      "sha256": "af94e9b3ababe287128d655737251ee461360c7f61471d1556643727e8440ba0",
+      "git_blob_sha": "818db159895ddb8871f3e35c520d6df77ba37f4a",
+      "size_bytes": 104950,
+      "duration_seconds": 6.530612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17389,8 +17457,25 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/aaron/game_begins/game_begins_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294685+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294685+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Q3OGsabHpXKtPK9XJ7dl",
+        "request_id": "t28rJpV4wIpZgYJq74X6"
+      },
+      "provider_character_cost": "8",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:38.468794+00:00",
+      "sha256": "81dbcc7ade117880cf17b1d69388d88287892baf41e3c71ae450b431c9b8073a",
+      "git_blob_sha": "1bbea825c5a4d9ed783c84bcaa911863ddf6bf6a",
+      "size_bytes": 29300,
+      "duration_seconds": 1.802449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -17399,8 +17484,25 @@
       "text": "Next player, please. No peeking.",
       "script_sha256": "39717a51f67f5c402e642cc01118ee3c686851d813bd9a219756faa8bfc44951",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294686+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294686+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "cxixAPPEIB4NG5dANIn6",
+        "request_id": "hrynODGZNF6x3tUDpy2l"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:39.512728+00:00",
+      "sha256": "c0254b771b3c0413ba6986fba9cd932922e3a1a079d5e0034b985f9bb7c2bdff",
+      "git_blob_sha": "a06d62d35d9ea78695331286ad41d27862be14f3",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -17409,8 +17511,25 @@
       "text": "On we go. Quietly, if you wouldn't mind.",
       "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294688+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294688+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "aWcWGOYto7SGWjbb5zYf",
+        "request_id": "7HbVJSHPEkiW3yTvRjLB"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:40.659183+00:00",
+      "sha256": "6f9201614f59efb1c27ad518e854234506225e1aae72ebb74ff4d91ec9f46522",
+      "git_blob_sha": "8b85e309db81e6c5a0419a0797413e8e6289a622",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -17419,8 +17538,25 @@
       "text": "Pass it along. The suspense is unbearable.",
       "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294689+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294689+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "cpHvrViMpVfsaogNFqEp",
+        "request_id": "5i30pbs7u49RqXBYBYtg"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:41.783049+00:00",
+      "sha256": "b393d2c85a1490ce3dccaa00818e24ce43fa3218008c642152462dea9156e81f",
+      "git_blob_sha": "6779f39dfc367823d2aae4444aca47e6a3afdad8",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -17429,8 +17565,25 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294690+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294690+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "85rUtIqwKPiPpH2gQgnE",
+        "request_id": "0NR8eU0gJ4gZJDqE6Y27"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:42.579254+00:00",
+      "sha256": "db91d2da4003fecb6a11d3a264975dd7483c0abb4ea549e9eb408adb5c014e8a",
+      "git_blob_sha": "ecb64b78ad5bd2a5ad59bdf8d64efe1543a5ff8f",
+      "size_bytes": 28046,
+      "duration_seconds": 1.724082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -17439,8 +17592,25 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:30.294691+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:30.294691+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mVrHd2o2yYnifHlY6T56",
+        "request_id": "BJsmwOAZRVPpKWFQaab8"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:43.516713+00:00",
+      "sha256": "52a5681c2c5da29d5756b297b248f4595f492a4f20d079ef55734bb6370ba7b9",
+      "git_blob_sha": "9e113bab5b2774b65d67305aea0d06253fb378fe",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
