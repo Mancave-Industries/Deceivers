@@ -15989,8 +15989,25 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300004+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300004+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bhVfRaPhgCju8pf9oyMU",
+        "request_id": "IQP1hbnM3N4fcvret7qe"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:54.384684+00:00",
+      "sha256": "0b9d8aa1576305f53e5811bf7525d7a1d2f46853bbd5c78f1712cf82bbe6af6a",
+      "git_blob_sha": "cf87fb460e4a456e40dcd2e4f87a59f0907af4a6",
+      "size_bytes": 35569,
+      "duration_seconds": 2.194286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -15999,8 +16016,25 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300022+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300022+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4AgXt1xvPTZ3Wj5fAiBy",
+        "request_id": "U46Igi4i2eE2qDLHU8aO"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:55.594213+00:00",
+      "sha256": "f1fb5b38363a4faa20a1de53abb3a93e7ae56e0d894e800423ba865c643fab0d",
+      "git_blob_sha": "c4c18867b6a03aae12cdd00b9b503aecd774d2fd",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16009,8 +16043,25 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300025+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300025+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JXnbOamPWAusGiNc4V1h",
+        "request_id": "MDn1D7ZnTMaPp9oeGlrJ"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:56.739510+00:00",
+      "sha256": "6ebc8303b99410fd3e5193820513a9b61003a1bd49d8f02f0d6f864a9d618083",
+      "git_blob_sha": "cf89549386f81ee3a0b27b7ef79c745f838c0028",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16019,8 +16070,25 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300027+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300027+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "jUXO6XZfNyiBtI9bYQSW",
+        "request_id": "iMCD5j02zDwvGnjFQHeR"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:57.679236+00:00",
+      "sha256": "1e7ff5ba4c47e034ef144700154d87b2bf5ea76ef433e512a5697f8272d85b0a",
+      "git_blob_sha": "0de2c73d2685bd4974c9640fcd96253b887de9c2",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16029,8 +16097,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300029+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300029+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "LKgu9J0TZ5WbyW69QPuT",
+        "request_id": "9IFnRiNfqdXeRJoOZAE5"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:58.792834+00:00",
+      "sha256": "a41cd1f8e9052fe3bb8dcee373c2a0e5cb8d2f1ed43382febe6b01f69eb7efb3",
+      "git_blob_sha": "f7789435b9f064cb197dd09075482037bb0203b4",
+      "size_bytes": 59811,
+      "duration_seconds": 3.709388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16039,8 +16124,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300031+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300031+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "sLKnAfv7mL2tBuHUZqfv",
+        "request_id": "IfBrBwis4klyArGkJXXf"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:46:59.911673+00:00",
+      "sha256": "4d6bace3abd8e35d272e03420b47f0b54a8ed4fee8dfc8101958326a7951d63c",
+      "git_blob_sha": "ab93b43c6cd6fa2c1d56b4a2c238070dba66ffba",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16049,8 +16151,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300033+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300033+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HKjSPuQeNfKBLW8og9JV",
+        "request_id": "nUqwBlLnwBKJRidgTALo"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:01.000550+00:00",
+      "sha256": "7c48f134fcb7107fb3d7a791bef4b74691f53e897d2a108c559113296aa1953e",
+      "git_blob_sha": "380cd305c43653b51f6a153b4a04660e169ce162",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16059,8 +16178,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300035+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300035+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "V8vgMLtsj1jx6kaTGMs8",
+        "request_id": "FtjllsEifwmvxplxxOBq"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:02.525205+00:00",
+      "sha256": "9d03cae31753966e959e7ffe6ed215b55e81a1d0179c4efbc0480e249beba730",
+      "git_blob_sha": "d738f1bc954abd3195f886d0857897a4e5bc6af0",
+      "size_bytes": 79037,
+      "duration_seconds": 4.91102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16069,8 +16205,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300037+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300037+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "hyinuL80ZuOX5PZV9Wef",
+        "request_id": "sH99H5fs48D9rsbmYZw0"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:03.587084+00:00",
+      "sha256": "61ddafd00e7cdc6d2d85d89c8fc30bc45e43ca617e039698a053b28c16d8c15a",
+      "git_blob_sha": "d0f922fc2a324ca4cc15cb2db35a2ef9546aecde",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16079,8 +16232,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:46:52.300038+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:46:52.300038+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dgjhO6Xj7sPkdAqX2b6f",
+        "request_id": "scRsOm6HlAVybLxtpJZ1"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:04.622539+00:00",
+      "sha256": "2ced952ed1785c1c23b1e1d3502283cde23e82f60f6c7d7d5fd4da9ec7428ecb",
+      "git_blob_sha": "daf2a4a588816d4dbef38f9f6ec66fe61b6e8fc1",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
