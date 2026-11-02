@@ -1709,8 +1709,25 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/david/night_falls/night_falls_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882656+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882656+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "djI3MH3p7rUGLvgWJxib",
+        "request_id": "eh2aqDtfDT0tRO8xgdtY"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:24.086156+00:00",
+      "sha256": "97142ecc961328d8e0a15f4e257d559fd8857ab3ffbb2f2b642dea4ba84d5c0e",
+      "git_blob_sha": "b39aeb343f61e5095a44c4488b734ff53f8fd90c",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1719,8 +1736,25 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/david/night_falls/night_falls_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882667+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882667+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VGMbALC1uKDg95FEbHg4",
+        "request_id": "h80v7wjZez3wKpFWh92k"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:25.319434+00:00",
+      "sha256": "98fa90ccb438df3ab7aba6a78af2eb1a643f84b582c2331f86153b13530aaa88",
+      "git_blob_sha": "91bfd88c2443570aa1a9b4b954f991936ec311d3",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1729,8 +1763,25 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/david/night_falls/night_falls_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882669+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882669+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gKHxkubFWP8L0ui1Zl2g",
+        "request_id": "nWWTvqtzYg83iJSgXOYi"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:26.563508+00:00",
+      "sha256": "be403545629db3692efc501d8e6fec81c6f8065440943fab452e4d21615734b1",
+      "git_blob_sha": "3811cd870223d024aec77ba0acc98b72d415cd7e",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1739,8 +1790,25 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/david/night_falls/night_falls_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882670+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882670+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "eLervEJ5AfgTLuzogmUj",
+        "request_id": "aqVdgBTSBs8c13jCZC0M"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:27.448552+00:00",
+      "sha256": "f5f7214c381347b527bcd40fc803f42665146fa845e14ffec3ec0d64be7301d5",
+      "git_blob_sha": "81781782bbebf8b59a490327d7e6f1c857e3eef0",
+      "size_bytes": 34315,
+      "duration_seconds": 2.115918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1749,8 +1817,25 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/david/gather/gather_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882672+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882672+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Rp1NgP1h2ymExnStc5jF",
+        "request_id": "dkR6Z3p4lhjuWAyoPai4"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:28.437429+00:00",
+      "sha256": "8fac3ee10b2c0a7f9d28b79fb138c9efed72ac1484afc14813f275cd2f02caa0",
+      "git_blob_sha": "2dee6526218335ad13d34f8c674e37e54842bccf",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1759,8 +1844,25 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/david/gather/gather_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882673+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882673+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0XeeLxpLCv8zwQkdluY4",
+        "request_id": "0PvgUfyYBxwqTgUG3goi"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:29.765777+00:00",
+      "sha256": "11eab4d1587dd6a8e778b6bb1e8fabcff451151e48c8c6a7ee84eb710f7f91e4",
+      "git_blob_sha": "716fdae931985b10ec17977bae2c612793351636",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1769,8 +1871,25 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/david/gather/gather_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882675+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882675+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "n6FvU77ijWkOoTzKnJCh",
+        "request_id": "WJuXBIskGdBriTupxigb"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:30.937963+00:00",
+      "sha256": "4f7637c3efacf7265877e92fdc4cbbb3b2b995f7b5ec260bb276a0146fd6231c",
+      "git_blob_sha": "16f6676f38b3d202fea11390722c17f19b4a2283",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1779,8 +1898,25 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/david/gather/gather_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882676+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882676+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IFmXbsSWTzIbbDRDKsWO",
+        "request_id": "K231zlkvjGqS0sAnmOVm"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:32.041345+00:00",
+      "sha256": "7b013549ced06501e89d389bd2e8817645004d44ac4ff1f7e05095db814952b2",
+      "git_blob_sha": "905e40fb76f114bb050060d488caa414fca55c84",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1789,8 +1925,25 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/david/gather/gather_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882677+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882677+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "RMzUI6kUa9qNbnGtWi19",
+        "request_id": "R7uDLhE5SqxhUyHNw2BS"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:33.376207+00:00",
+      "sha256": "7c1b1f8cb80b13a70f158d0eb84954389d2cf779c996b2348ad7c02df99c5d23",
+      "git_blob_sha": "593ff5b282406f7d54d4829b2756b4524f1db834",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -1799,8 +1952,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/david/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:31:21.882679+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:31:21.882679+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QKWLhllux9iCSeg7NZmg",
+        "request_id": "YlPCDZbJgIJYZCNWgzyK"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:31:34.660329+00:00",
+      "sha256": "ce28b273829371308b33ad057c4071ac639929be30bcb39bce733eb2c8205780",
+      "git_blob_sha": "19e57400b34368b7d9c5280b751d9bed37e2b62d",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
