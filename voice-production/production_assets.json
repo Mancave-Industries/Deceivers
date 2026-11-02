@@ -27201,6 +27201,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:59:14.663161+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "vote_complete_015",
+      "text": "The votes are locked. Here comes the awkward bit.",
+      "script_sha256": "b13efff249969ec29cc8e48143f92ee7d2679b0a684e3b2e511ac8cf0c5615e3",
+      "path": "assets/audio/hosts/lily/vote_complete/vote_complete_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682399+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_001",
+      "text": "A player dispatched. Sleep well, everyone. If you can.",
+      "script_sha256": "d4356f861b2d6d3d2b547d0eef038d46b87a0fb40f927db4fa11551585b0aa16",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682431+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_002",
+      "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
+      "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682433+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_003",
+      "text": "A player has been murdered. The night was not kind.",
+      "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682436+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_004",
+      "text": "A chair sits empty. A charming start to the day.",
+      "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682438+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_005",
+      "text": "Someone didn't make it through the night. How terribly rude.",
+      "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682440+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_006",
+      "text": "A murder has occurred. I trust everyone slept soundly.",
+      "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682442+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_007",
+      "text": "A player gone. The plot thickens.",
+      "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682444+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_008",
+      "text": "Morning has arrived. Not everyone has.",
+      "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682446+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_009",
+      "text": "One of your number has been removed from proceedings.",
+      "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:59:16.682448+00:00"
     }
   ]
 }
