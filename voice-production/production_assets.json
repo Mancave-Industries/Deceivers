@@ -32649,8 +32649,25 @@
       "text": "Well. You've certainly made a choice.",
       "script_sha256": "1df0e99692d25f668c285e560f6f5891d0bd087c68db269f6d1026efe5aaedc9",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605616+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605616+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "D44eUmIawqarf3B6Sdih",
+        "request_id": "C8BQdV6Tj4eAjipjH6Gl"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:31.172683+00:00",
+      "sha256": "7936d039719fdebeb4686c44634d0d9fb076ed4346d64f6bc5123292c645fe5e",
+      "git_blob_sha": "02f01b59eafa8c5b72ccb38c2f49d8b6664bf0c1",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32659,8 +32676,25 @@
       "text": "The verdict awaits. Brace yourselves.",
       "script_sha256": "ec2ef11d88947141311b948ca1a0e75110975fb32a5ff140394ebbf3ef907a2c",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605634+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605634+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JWUn9YRYXP1rS7i7zjzI",
+        "request_id": "WmTwkrP2UFFlBS1BmA39"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:32.112939+00:00",
+      "sha256": "4cf4524fde3c5b29141bf226633e658b5216668a7e52e3bf01703dedace87de8",
+      "git_blob_sha": "a43924e30eb8536b40c6c384a4c2dd4eef92c724",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32669,8 +32703,25 @@
       "text": "All votes counted. What a confident bunch.",
       "script_sha256": "ac8cfb1508c1371402f463b21ff252f77d1262d92eaf88ddf376f2703345ccda",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605636+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605636+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ivf9B8TJXokBI1OrX9tU",
+        "request_id": "5lpY3PDAYPRi6C1ISy43"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:33.228764+00:00",
+      "sha256": "243a42c3631de5f7775c5d16390976df17805af01a7bf3b9278cee9bf9c0fdfa",
+      "git_blob_sha": "3750596f93d242ab37a21e655d71a98c60426544",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32679,8 +32730,25 @@
       "text": "A decision! Finally.",
       "script_sha256": "c5137e892f2dde316b9c421e609e42cdde9b0cc822b4bd38d7dfd4bd4d794c41",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605637+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605637+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SmHF4MA38xv6UyyE0RLj",
+        "request_id": "mCfTMa5TL2dDgobMy6r6"
+      },
+      "provider_character_cost": "9",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:33.976730+00:00",
+      "sha256": "788069b8ba906bd8ed2687c4a942df1f2b0f37c908265be0ab6f57c4094dc22b",
+      "git_blob_sha": "ba17770521cbfc558145c8457c0ff57b4aa4005b",
+      "size_bytes": 38077,
+      "duration_seconds": 2.35102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32689,8 +32757,25 @@
       "text": "The numbers are settled. The consequences are not.",
       "script_sha256": "55dc9e73fcc6b3d0753bf81cfbedc9f88f4fc349a489ef6e1ea0f096c4ba023a",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605639+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605639+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ITMVdgDOxv1UGQ0wxQtS",
+        "request_id": "nNAkBH5mG3lfk9pgzkY9"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:35.196378+00:00",
+      "sha256": "4916c7e1c2fd317ead43f009e7ca10ecf3dcfe07674599f15e82db197d13f8e1",
+      "git_blob_sha": "54836b2cd20ac36d356ce9471b295aab59ccd5b5",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32699,8 +32784,25 @@
       "text": "The votes have spoken. Whether wisely is another matter.",
       "script_sha256": "9903ac122367517ddc8d41760089a802d44b3173d1289fe5758ac52b782c8e8a",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605640+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605640+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DWobwEny3R1mI1XVw4Gx",
+        "request_id": "hJYTJk9qFZWaZT275ToT"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:36.314853+00:00",
+      "sha256": "bbff3921c393622eecc76255ad69ac6b57aafa3774e77d7df00ac439e2778352",
+      "git_blob_sha": "0fa2e3c9d3389329bf903f79c47872bf0776b34d",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32709,8 +32811,25 @@
       "text": "And there we have it. A collective opinion.",
       "script_sha256": "51528479e856fd7680695d761ed47510a00516bbf9cb67b1fe65af754b6d1895",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605642+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605642+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pPm2tojG2Xlk85gvS7Yj",
+        "request_id": "oijdXeWRXNPwwrifiEPs"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:37.245349+00:00",
+      "sha256": "12f5d94c28e638e9145ff4d2bc00b6ecbe3e6721f10d41d5a920a78a3d1e6373",
+      "git_blob_sha": "e5f680f307a40b8d5b75b0fb625fce8fcbe0a8be",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32719,8 +32838,25 @@
       "text": "Your judgement has been recorded.",
       "script_sha256": "5a82c4867032b145c7a5553930cae68029e0f933e689e22ea45e2f1e987e2795",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605643+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605643+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Rg4ITgWa6UPnZUsfUOFj",
+        "request_id": "56r1daoYGx5Rztk2Im4B"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:38.072234+00:00",
+      "sha256": "619b2a45fd98bc244ecb33550877e4be81589b5e7d0f88a8b2cd71efacf51d6d",
+      "git_blob_sha": "26fbaf9bbc7ea22223f45ac4b1128e29b8f5a0ef",
+      "size_bytes": 38077,
+      "duration_seconds": 2.35102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32729,8 +32865,25 @@
       "text": "No more deliberation. It's done.",
       "script_sha256": "4ed407b951f1b1f8611b199543d4e07753260be344478caf44ea69ee3737a8fc",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605644+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605644+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gGNjq6zkezn0XL6gI9F1",
+        "request_id": "p1hDmo3Cs7pS491f4lgt"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:39.013649+00:00",
+      "sha256": "6d3c750e6381c544572c6c9fbd1f0b0778597dd2be8db4dc097e05c8e5dae4e7",
+      "git_blob_sha": "6ed2c2b776d131f74194c889091d19ddef01e968",
+      "size_bytes": 43510,
+      "duration_seconds": 2.690612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -32739,8 +32892,25 @@
       "text": "A fascinating outcome. Perhaps.",
       "script_sha256": "da7db937f654022fe14a99990aa60d1727db6b4707b0e5cb66cd27b0eb9180f2",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:05:28.605646+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:05:28.605646+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IuoLvL8mRzd2Y0dOrRm5",
+        "request_id": "TXiyAH4boOkxAq5lPM4J"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:05:39.949700+00:00",
+      "sha256": "f40623acdbab5f5452133f1bd09f5dc5b50c3dd4614f002dd8fa1fef00b3ab8b",
+      "git_blob_sha": "fd0f410016da28850b6e57948a780ce11cb9199f",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
