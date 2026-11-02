@@ -9529,8 +9529,25 @@
       "text": "No more deliberation. It's done.",
       "script_sha256": "4ed407b951f1b1f8611b199543d4e07753260be344478caf44ea69ee3737a8fc",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109248+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109248+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DEW67qlJr7ye1YRYXPA5",
+        "request_id": "1dcpV3Bit6zr5E25nV1l"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:53.264593+00:00",
+      "sha256": "d06813cb9e4d156d4494b235ec240ca9bdbae8375c2ee5a66955d3d68a3fc453",
+      "git_blob_sha": "c08fff51c301dc8a87fe4811213644ecba8ee413",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9539,8 +9556,25 @@
       "text": "A fascinating outcome. Perhaps.",
       "script_sha256": "da7db937f654022fe14a99990aa60d1727db6b4707b0e5cb66cd27b0eb9180f2",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109266+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109266+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2jVZwocngEPVPsCZU2FL",
+        "request_id": "VgyeMuGSieox2vuJnXVr"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:54.400826+00:00",
+      "sha256": "0059088496e27176b5380dd324030d413e637a3d45b074d60886b4933817ea8b",
+      "git_blob_sha": "a312719951920b1fc7db315914cca1e85c497ef9",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9549,8 +9583,25 @@
       "text": "The tally is complete. Shall we?",
       "script_sha256": "27706b9e0aff8492154b0821b9659fcb82444bbc13e33d2991458c34fe96c2aa",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109268+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109268+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "RwNPseGVCndljLMScFN4",
+        "request_id": "KCakeHwfVYQzMNQQYyBH"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:55.316401+00:00",
+      "sha256": "66d4567dbf9d285ed9846bbf72bdc43266a82d2e0ce22073ac9623d8989778a0",
+      "git_blob_sha": "be0ac8851842a85e8a4b41ed79ab68b3df3d4c15",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9559,8 +9610,25 @@
       "text": "Well, that's democracy for you.",
       "script_sha256": "27412428415531822f01f163269ad655c72b191fb5f3d6eecd686430a42631a4",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109270+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109270+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Y7N4RTjucMBUUKqVYOLz",
+        "request_id": "wP5dQPNyc7441rge2vpU"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:56.247643+00:00",
+      "sha256": "cf8bd7e7d141a16652670b56070951c522f2fdf06b846168db1c65d505fd865b",
+      "git_blob_sha": "65a9867ea232b897d483353ec04df35dd51a6048",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9569,8 +9637,25 @@
       "text": "The votes are locked. Here comes the awkward bit.",
       "script_sha256": "b13efff249969ec29cc8e48143f92ee7d2679b0a684e3b2e511ac8cf0c5615e3",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109272+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109272+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "H5DQwdy3L8cMLSiFD0VH",
+        "request_id": "N8bG5wylKVf9W4YBcQMM"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:57.306269+00:00",
+      "sha256": "1f3803790a51390ec6f0cb12e405424bad2e37b56128b802646fc7e6fc36fc53",
+      "git_blob_sha": "dd6137d2a527620d335f92a1a84a3404b21ef046",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9579,8 +9664,25 @@
       "text": "A player dispatched. Sleep well, everyone. If you can.",
       "script_sha256": "d4356f861b2d6d3d2b547d0eef038d46b87a0fb40f927db4fa11551585b0aa16",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109274+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109274+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "URPABdCEYiaKb9DUQ5xa",
+        "request_id": "XAhU0tbFroxd9qirWp4y"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:58.473315+00:00",
+      "sha256": "d8ef14449f17254276fc743b384a7345b85efc9d161b76aa911ae542f3c7faae",
+      "git_blob_sha": "fef83682cc488c0847e87593cd15865b9f28720b",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9589,8 +9691,25 @@
       "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
       "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109276+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109276+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pg4vb7zzycMtroQ02Puz",
+        "request_id": "bYAxzCVQFy47fTXIaRvN"
+      },
+      "provider_character_cost": "34",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:00.000222+00:00",
+      "sha256": "a9327ff0e91634e8f888b95c01c0ff3209f8c56aeb14f5b0c77d011ab77969f9",
+      "git_blob_sha": "77c62f4f53ebb5ab73b30b6d85c629e0d571e566",
+      "size_bytes": 88232,
+      "duration_seconds": 5.485714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9599,8 +9718,25 @@
       "text": "A player has been murdered. The night was not kind.",
       "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109278+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109278+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "19dR35yHPNajpjG2x60Z",
+        "request_id": "akNaFb1cS8IDIqG1VELM"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:01.189780+00:00",
+      "sha256": "598d70eb37a9a05955ded6d753863881230e543f2d9dcf69388d01b3c38c37db",
+      "git_blob_sha": "36959e76f4b6cf5d16333c54b08da0873a2db61d",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9609,8 +9745,25 @@
       "text": "A chair sits empty. A charming start to the day.",
       "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109280+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109280+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HrUYNbSLld4jwi2AbaF9",
+        "request_id": "e7WSKuahV6POkp7rdKoP"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:02.450883+00:00",
+      "sha256": "b66a15e66d62017e00f525b00d6fc489f906832ecbe8225e3ae361d736d0466b",
+      "git_blob_sha": "a7f22b14d1435492f612eb4f292dd5cf08b09a8a",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -9619,8 +9772,25 @@
       "text": "Someone didn't make it through the night. How terribly rude.",
       "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:51.109282+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:51.109282+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WhMBy04TMY59SoqQG3R1",
+        "request_id": "7nh0RG2buQto6i24WZZW"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:03.873924+00:00",
+      "sha256": "b3844990cdb6a3590726cef67c8fad4a814487c7a323ef2dc6dedaae38e2c6f4",
+      "git_blob_sha": "dfcabce26b49a55e9ebc25472c3258a9be9af612",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
