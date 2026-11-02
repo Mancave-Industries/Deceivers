@@ -34349,8 +34349,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870048+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870048+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NnsTBLbGFQ7VUrefl99R",
+        "request_id": "2HsCMS24e5CaTOZsbg8p"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:25.722510+00:00",
+      "sha256": "b1cb06cfdce218eff06b67cd2a1c13e9fe25757b4dfe0a63577f445c0ef7816a",
+      "git_blob_sha": "977a338181d634f70790789250483a4e8f97215e",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34359,8 +34376,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870065+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870065+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IdCtDV9wQ9Zx8IMvKBgc",
+        "request_id": "W5QQt6cDkHUzlFrzyrHk"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:26.869997+00:00",
+      "sha256": "fe5f0c29b0263b2ffef06f3365e7731f29b50f94eb01bd58e284bc8f8f363da7",
+      "git_blob_sha": "feb3bb60f0da0fc0c46844a75d53f75d344d43e3",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34369,8 +34403,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870067+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870067+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lTgEqm2xjlCMqp7PKMni",
+        "request_id": "DRc36BVWOqtr8u4vHw4E"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:28.327340+00:00",
+      "sha256": "a2b035ac5899cb6c494020040e3908e13e5770cce36c5875951b741a2dd39017",
+      "git_blob_sha": "8262b59bc369ef40c8c6b186cee97866117d8b54",
+      "size_bytes": 77783,
+      "duration_seconds": 4.832653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34379,8 +34430,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/charlotte/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870069+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870069+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JPoFpZC0LvaBh1DS4du3",
+        "request_id": "ecwZnpr0xJpP9qgSvEfs"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:31.296006+00:00",
+      "sha256": "bf407d1d230f888f5a2114dd1e4f213c7fc48f0be8604df8d31732d6fee74eac",
+      "git_blob_sha": "b2cccb9a111b4ec5e4b2e529eedb79a062df6850",
+      "size_bytes": 170152,
+      "duration_seconds": 10.605714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34389,8 +34457,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/charlotte/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870071+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870071+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "RtQXiWKri9HQXlHlyZWL",
+        "request_id": "ZCOYs3j18RfKAgLhIlU3"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:33.170085+00:00",
+      "sha256": "cf6b8f147984db35027b4568ecab936f05efaf44d05b138f197e74267cc4ab25",
+      "git_blob_sha": "aa2574b9ce441fbaa24ec8ba5d7868f7acfd141d",
+      "size_bytes": 114981,
+      "duration_seconds": 7.157551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34399,8 +34484,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/charlotte/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870072+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870072+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WHIG6TkrYM2NBWJHP0ku",
+        "request_id": "fboESIZuywCpYCWUDd32"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:35.253720+00:00",
+      "sha256": "57f047264bae41d08285a240c932bfc653553dceaeaae11875815820dbbc4dfe",
+      "git_blob_sha": "b5b652234ce30cf63ba87ce83bff173863910683",
+      "size_bytes": 108712,
+      "duration_seconds": 6.765714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34409,8 +34511,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/charlotte/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870074+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870074+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2svOTFS149eU1DCjptkU",
+        "request_id": "Sgi4k5sas4MNiptd6Sev"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:37.209909+00:00",
+      "sha256": "eaa9e33ff7a87ced3f0e6daf38e87d0fa2ad5159485f5249123b9f414665c6fb",
+      "git_blob_sha": "1cc7f05db21ccd8eb3cdc1d55f6cbddcc8002c3e",
+      "size_bytes": 123758,
+      "duration_seconds": 7.706122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34419,8 +34538,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/charlotte/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870076+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870076+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Nk9jueyef0OgFeSbq6IA",
+        "request_id": "MKFDbOzrUNTEKuXFLLaF"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:38.780720+00:00",
+      "sha256": "e92f418b6a69c24fe97eb0b09f9d06e444ea24929d89f4866edc213df5de9c77",
+      "git_blob_sha": "8678af97f36f6ac1f22ef219b589602cf1ac2ae7",
+      "size_bytes": 82798,
+      "duration_seconds": 5.146122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34429,8 +34565,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/charlotte/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870078+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870078+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xkDp5PDanNnoewySWdnA",
+        "request_id": "KEhovyXIGlnHWDCq0VTm"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:40.029716+00:00",
+      "sha256": "e245565e5e11204aab0a157df1080152c774cb4df80f861cedd9ca26e5df666e",
+      "git_blob_sha": "e67f3566748040d41b2299eb1cc128052c0ad735",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34439,8 +34592,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/charlotte/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:07:22.870080+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:07:22.870080+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "hzMhvz2hcs4ZWaKr19LQ",
+        "request_id": "LprROlQCWokCcGtJIdjN"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:41.328667+00:00",
+      "sha256": "a5d769255e65b5c2fafaab4db30608ec1bb4014256bb20fc1e5ed558f60f3ae1",
+      "git_blob_sha": "b83c2dc6f42dec7686b506c50943146648c9f157",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
