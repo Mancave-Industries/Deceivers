@@ -10209,8 +10209,25 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708959+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708959+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "PuQCASldBcjpDWANMOFX",
+        "request_id": "vpOSoJ8giKXXWc6P8nNA"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:38.209725+00:00",
+      "sha256": "6efa27a56bb2157b0252feea06a0f0f14f490ae0f395bcece133accc0491e14c",
+      "git_blob_sha": "a64d7552f6b774f5cdff29b0de0961d8985b8549",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10219,8 +10236,25 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708976+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708976+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KmGHc5AWPqYGcbqRrCie",
+        "request_id": "z3FG58qil1Of3gpKwa0V"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:39.193201+00:00",
+      "sha256": "219cb0c3f3f666d5f4b84a1f3ddde229345b883629af61812bf19b8385d12d8e",
+      "git_blob_sha": "0fc924a09b730ef4c4f6657fbf7d0a0e0a89b87d",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10229,8 +10263,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708978+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708978+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "neYCY8FDuiroFVbmE1XX",
+        "request_id": "mDAo6Lp7XgrkDETzIynA"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:40.324080+00:00",
+      "sha256": "2aa696d54f4db6d0e5e034602c5eed476e413a439ac723b7fc1f5f04a2b3c589",
+      "git_blob_sha": "b69cf7a8d29522fa44c60c4d2ffe13a04108e73a",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10239,8 +10290,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708979+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708979+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FcWBjpv7VP5cjXpxX6Tg",
+        "request_id": "V7esw9ucnaPtTEzkAD1U"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:41.583894+00:00",
+      "sha256": "62f763de95cff6cbc9bb394282a531482615eba9e5b19de937ce46882ecd4920",
+      "git_blob_sha": "5fde2734bcf767310249ecb8be90434d71a52dad",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10249,8 +10317,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708981+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708981+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mvWzvKiy3ik8ZFV5uv8J",
+        "request_id": "9IKe3uRNmydBmuAqo4IZ"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:42.652972+00:00",
+      "sha256": "94a6d158ab817178b8a0af49fb4cd380c0311a1a1ba04768c239b6228c0a9d10",
+      "git_blob_sha": "b86fe6fbab168637cd597009656c8b9fd35c5fe0",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10259,8 +10344,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/victor/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708982+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708982+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4G9ubW0zN1NZxLK1Hp6I",
+        "request_id": "SmYNpz7gwTRt9ylSQ4IQ"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:44.210572+00:00",
+      "sha256": "af897acba219a62e4db43147304f5ba0984e6cdf0261e382e9a194bdb22d55b5",
+      "git_blob_sha": "61e51e01e13eda2e1c0c601619184f96f4ee3050",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10269,8 +10371,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/victor/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708984+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708984+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gJ61QKb67mCJDiK3XlKR",
+        "request_id": "a9SlmE6C05bN8yiUnY0e"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:45.221458+00:00",
+      "sha256": "780a71382fbe9b07aa80c9d82a3fb0678c4cf60a862a9181ebe7f374ad3d37e5",
+      "git_blob_sha": "ab46e00f0fcc4e7915a6809e544ae6c9c29fde6a",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10279,8 +10398,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/victor/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708986+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708986+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "BGyS4cBh3if0DqzLN3rG",
+        "request_id": "IRgfrobOAhS14ZiPnWTG"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:46.247680+00:00",
+      "sha256": "f0a9cbe2bda27d1f862029500fa43adcb786acf0c8fc3dc185df4d0c52c744eb",
+      "git_blob_sha": "a7c0a5b4accc23bd82cebb3e1474b105ad477c52",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10289,8 +10425,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/victor/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708987+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708987+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0VLlLtK5sQ1N5xeD48JC",
+        "request_id": "WJreGJ1toFaZRFph9Gep"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:47.421994+00:00",
+      "sha256": "ed2ec78039989c61178175d5b2f214e645887fc1c83aa6187728b85e7ada27b4",
+      "git_blob_sha": "b9bf87b5f3050302b19b2467aa14f8e0308b4bed",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10299,8 +10452,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/victor/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:40:35.708988+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:40:35.708988+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9AebIPBjn3jJCTFUlZhd",
+        "request_id": "wNJE8M30GPNmJkUrnHsx"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:40:49.106645+00:00",
+      "sha256": "12931432b9416d15edcf5d10323c6a77535c26ed2f8b5f89400c199dfb43958a",
+      "git_blob_sha": "490056d734d65d196b62aa205420032e33d7d376",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
