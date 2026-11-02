@@ -31629,8 +31629,25 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888242+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888242+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ie7vORvbcudDVl28hNMu",
+        "request_id": "53Ms1dCC20R0AJCqIUj8"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:25.411110+00:00",
+      "sha256": "e320f4e273d7949a815f0561f0dbf73c8e9cd1dae70c134a9a9f2fbf99b71bb6",
+      "git_blob_sha": "2f50c2c62afe2733acf664be2069058ae6a5ca70",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31639,8 +31656,25 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888264+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888264+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pHl5OpuD4c1go1u3GjOV",
+        "request_id": "ub6TIEUvwkRpjT6h1C1W"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:26.277669+00:00",
+      "sha256": "9acdc2d11583052ce5ad6f224c44d127834d1f8a988d1e596f902b71a585840c",
+      "git_blob_sha": "f0f55ea3af0bb6f1540e076812aa6626b4e8cf3c",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31649,8 +31683,25 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888267+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888267+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wY9a2CHueMLTumeBoHb9",
+        "request_id": "mZWUmHBPYHCSkcnnVeAP"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:27.206075+00:00",
+      "sha256": "88735fd239b56c7b761f312db313fbc534db2bbee98836dcc5f22f77799b988b",
+      "git_blob_sha": "4237e4b2a5d3233ca87267c27007126ac95cf5a6",
+      "size_bytes": 43510,
+      "duration_seconds": 2.690612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31659,8 +31710,25 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888269+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888269+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "V60cYnFpsOdxYG7Aw0yO",
+        "request_id": "nivCZdxPN6bL0HFnBH83"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:28.575568+00:00",
+      "sha256": "6ec6a014a61ad6a3f9a0183abd2ed8c83c11d3abb7b7c740633e5021b53f2178",
+      "git_blob_sha": "285a709ffdf1bee8b68c08053c07f17e85e907d9",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31669,8 +31737,25 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888271+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888271+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Wq6Mgk2Th23t50yc0sGZ",
+        "request_id": "Srr45zArZCneuay6ntwR"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:29.557746+00:00",
+      "sha256": "d0f1507b0ec4246d5e178e71e952e4fe52a753272e3bb34b6b45374629466506",
+      "git_blob_sha": "f02b84c359f63dec69194a6bfe400621ba5ac9d2",
+      "size_bytes": 44764,
+      "duration_seconds": 2.76898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31679,8 +31764,25 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888273+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888273+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ks2rQVYT2LIBvpqpgN5E",
+        "request_id": "388PhkxWMDYfCf3nsKIc"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:30.506799+00:00",
+      "sha256": "c29bb5f79959557e75fdcc4897b4b59c52e37ea8451cce49c0f2a93eed450b65",
+      "git_blob_sha": "5c43cd136ffe01ed2a25e9e1571cd127e35dc92a",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31689,8 +31791,25 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888275+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888275+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "qYKdvOJg5Jh8RbqVBgSk",
+        "request_id": "zU70KKQiec871BFIkQNE"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:32.144579+00:00",
+      "sha256": "7335f0d4b1a4dd193f27c56bdb0f43599cd8134531e9452b42eb3f400af670b9",
+      "git_blob_sha": "dac72b9a7ee9cb12c598d734562d42c563344b51",
+      "size_bytes": 84470,
+      "duration_seconds": 5.250612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31699,8 +31818,25 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888277+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888277+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wjUuVGxfIp6urkBObsfb",
+        "request_id": "sHQpU4K3BLxrVaWv6vZD"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:33.093006+00:00",
+      "sha256": "c4ffb1f82c28e2f10fabbc1d517780c99e2b72de959cf3051802cc9f17233cb7",
+      "git_blob_sha": "8d13ee80ae32c02ad87eb9fa74c73a1e8c0e3582",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31709,8 +31845,25 @@
       "text": "Talk it through. Try to avoid collective wishful thinking.",
       "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888279+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888279+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "caYCOeuWj6UmEd1F14uv",
+        "request_id": "JpvT5wr5W9ob19t3GtK7"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:34.270478+00:00",
+      "sha256": "e210e6a4d3b0cca438e39b3633641325c4ea1addafb01ed28ad14f118c5eb397",
+      "git_blob_sha": "a121529c2965e2dc5efc07b10086e3ecbc199169",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31719,8 +31872,25 @@
       "text": "Who do you trust? Fascinating question.",
       "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:04:22.888281+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:04:22.888281+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SRcgXVEplc7Ck70FRTZq",
+        "request_id": "P67qgshVneNYIWdTG1U4"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:04:35.426461+00:00",
+      "sha256": "5a9ea3d4630a63520d76230289f23d6a3383ec38e96cce23a437262d7edc58e1",
+      "git_blob_sha": "a8d8a3a3f0922a1b551eb822e0658555b01c5fa4",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
