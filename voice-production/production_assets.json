@@ -20069,7 +20069,7 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/beth/discussion/discussion_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045632+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20087,7 +20087,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "327d044bf9a207cb836b7cb31ce41b46af33d010",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:34.820927+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20096,7 +20103,7 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/beth/discussion/discussion_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045650+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20114,7 +20121,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "27a4c412a2f7c99fb56407bf54618dae04eaf14a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:35.424341+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20123,7 +20137,7 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/beth/discussion/discussion_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045652+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20141,7 +20155,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "f43a142f2b57bb6eac74b800cd1961b597f8d347",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:36.092589+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20150,7 +20171,7 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/beth/discussion/discussion_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045653+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20168,7 +20189,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "558fafc305dc2e4a96096b8943f2eff7732a0889",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:36.733518+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20177,7 +20205,7 @@
       "text": "Talk it through. Try to avoid collective wishful thinking.",
       "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
       "path": "assets/audio/hosts/beth/discussion/discussion_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045655+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20195,7 +20223,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "71d69034055bd95f406a9a1a2ba92da098f99e9c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:37.313352+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20204,7 +20239,7 @@
       "text": "Who do you trust? Fascinating question.",
       "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
       "path": "assets/audio/hosts/beth/discussion/discussion_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045656+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20222,7 +20257,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "0a1470d0b6cab4158c4835d6c4f878d5fbdb6533",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:37.943287+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20231,7 +20273,7 @@
       "text": "Time to separate the stories from the storytellers.",
       "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
       "path": "assets/audio/hosts/beth/discussion/discussion_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045658+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20249,7 +20291,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "aee291430bbb41d760ce93c14d77918a798a9740",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:38.563763+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20258,7 +20307,7 @@
       "text": "The discussion is yours. Use it wisely.",
       "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
       "path": "assets/audio/hosts/beth/discussion/discussion_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045659+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20276,7 +20325,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "a2d45f9e5c9c39b2d3a9902a04a83ae55a44b450",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:39.210574+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20285,7 +20341,7 @@
       "text": "You may now begin your collective detective work.",
       "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
       "path": "assets/audio/hosts/beth/discussion/discussion_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045660+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20303,7 +20359,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "d89cfe45f35f7a60581da4a610937b18458cebaf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:39.841171+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20312,7 +20375,7 @@
       "text": "The time for talk is over.",
       "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
       "path": "assets/audio/hosts/beth/voting/voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:51:21.045662+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20330,7 +20393,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "510f0e0153e9758cb3cc4c0050fc81fd048308db",
+        "blob_sha": "f6879e718e5fa0dd906fca30d57e7710f1974812",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:51:40.435183+00:00"
+      }
     }
   ]
 }
