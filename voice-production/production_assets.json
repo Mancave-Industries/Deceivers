@@ -7829,8 +7829,25 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/victor/gather/gather_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296208+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296208+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IE1SnAWPq5dTyMIUTb7o",
+        "request_id": "3eCwH5dj9Fw56mwKiHTb"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:03.658275+00:00",
+      "sha256": "a45d0a9eb30e23077a1a75b545a2b5999447fd03dc6f8c732fc068a4fad5a465",
+      "git_blob_sha": "9ec42c7f78602f30c7e777bfc450bb3157046dd5",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7839,8 +7856,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/victor/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296226+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296226+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ndL2GogQaf1hgWOKIGOE",
+        "request_id": "gZrH2F2AHNMUA3nva3XX"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:04.863025+00:00",
+      "sha256": "9dc2d6bfeba091a6dd452c57f00d7db79beef4ca6a7874b1c813a8a558fe76a7",
+      "git_blob_sha": "c46a64b0dec24f002099bd0495b8f0b94b29575d",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7849,8 +7883,25 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/victor/gather/gather_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296228+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296228+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "28gljDn3OtUEalhK56N8",
+        "request_id": "gwpLeDAdFkB56Zc0k51y"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:05.903722+00:00",
+      "sha256": "a6c45dc017a9115f073cc427b07a0bc2c8dff52b1c0bb455accdf8f93970940a",
+      "git_blob_sha": "b1d23364d4ff55561c6acc6a73e64c3f5bd77aeb",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7859,8 +7910,25 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/victor/gather/gather_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296230+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296230+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OECLGXSSh9eIuqPzuhxA",
+        "request_id": "pXmcckhYz1ndMirtJXog"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:06.927661+00:00",
+      "sha256": "ac0397f0a6279ba01431a5828577804bcbf9032acb5521ecd403e73ffd2bd9b4",
+      "git_blob_sha": "1a3fd1452dcc6cadd341b6f639b81cc3734a2199",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7869,8 +7937,25 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/victor/gather/gather_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296231+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296231+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FIydKav5bzjuOMFOoyvD",
+        "request_id": "2apHdm67aEllMedqWHT1"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:08.125059+00:00",
+      "sha256": "8466ae2d03f54a318b2821a958ca08f76cd2e4fa9fd177829bd49d9fac09ae86",
+      "git_blob_sha": "0bb269370f4256773d486088c5417408fd9452ef",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7879,8 +7964,25 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/victor/gather/gather_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296233+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296233+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "kdkI3fjWGAWDgLd2kG9B",
+        "request_id": "rGC07rjMEyHXdVE8EJjc"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:09.258697+00:00",
+      "sha256": "8b686ce22bbafad3478ddfcdff22ba1e5a8924c39439da61c701afa49a246cb3",
+      "git_blob_sha": "dfe51c10fc5c08a0aa2da0b7e262f4a4d4ec6fd0",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7889,8 +7991,25 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/victor/gather/gather_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296234+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296234+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dO8VrHsynjshaoIVujM1",
+        "request_id": "SILcfqYbVSShJt63gQYn"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:10.148531+00:00",
+      "sha256": "e57d69eea2608a00fa126947c72b1c6f4ef799f8da4de51a7c2c78b86c6bba36",
+      "git_blob_sha": "8b55e56aed3fc16bd3afb030b1df86549bb40e7c",
+      "size_bytes": 35569,
+      "duration_seconds": 2.194286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7899,8 +8018,25 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/victor/gather/gather_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296236+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296236+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dDcEaJ4QuRXjqPPRvGKy",
+        "request_id": "bGqPLHZKDD7Vm6HT05jZ"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:11.289445+00:00",
+      "sha256": "1de3f125e4b3383691f1034c45723daff9c1c7ba73bdd1896dcf5b43ccf49e0c",
+      "git_blob_sha": "289e7037583beaf2114918a66abd1f53b6980700",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7909,8 +8045,25 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/victor/gather/gather_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296237+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296237+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tZrWmdgGJps3s10bn9Ud",
+        "request_id": "SrQTzcqvzg3bE3eqB3IC"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:12.153347+00:00",
+      "sha256": "fe9888c8038d115ac6d195ac3fb16f013125272dda9b10c2315715c2dcccdeb5",
+      "git_blob_sha": "c9ffe2deb101b1816092d29676cb378f817b6ae8",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7919,8 +8072,25 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/victor/gather/gather_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:38:01.296239+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:38:01.296239+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4WO9olhn2ooLlC69Obum",
+        "request_id": "RlNId6oJDFCce6L7OqXk"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:38:13.555886+00:00",
+      "sha256": "e8e7d9dc36dcbb1e605bb8d547f3c4374440d9a5ad233ffc99e93d1d0d04b9ae",
+      "git_blob_sha": "bd32e1d9f83ac24b43ed9b740d8797f39bd74332",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
