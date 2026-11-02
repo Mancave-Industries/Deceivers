@@ -8501,6 +8501,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:38:43.362217+00:00"
       }
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "discussion_011",
+      "text": "Talk it through. Try to avoid collective wishful thinking.",
+      "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
+      "path": "assets/audio/hosts/victor/discussion/discussion_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600309+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "discussion_012",
+      "text": "Who do you trust? Fascinating question.",
+      "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
+      "path": "assets/audio/hosts/victor/discussion/discussion_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600325+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "discussion_013",
+      "text": "Time to separate the stories from the storytellers.",
+      "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
+      "path": "assets/audio/hosts/victor/discussion/discussion_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600327+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "discussion_014",
+      "text": "The discussion is yours. Use it wisely.",
+      "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
+      "path": "assets/audio/hosts/victor/discussion/discussion_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600329+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "discussion_015",
+      "text": "You may now begin your collective detective work.",
+      "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
+      "path": "assets/audio/hosts/victor/discussion/discussion_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600330+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "voting_001",
+      "text": "The time for talk is over.",
+      "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
+      "path": "assets/audio/hosts/victor/voting/voting_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600332+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "voting_002",
+      "text": "Talk ends now.",
+      "script_sha256": "1ac53ec663b05db7d1edf72e44ef6a0deb8ca922cf61b2dba05d3a407ad55fd2",
+      "path": "assets/audio/hosts/victor/voting/voting_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600333+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "voting_003",
+      "text": "Enough talk. It is time to vote.",
+      "script_sha256": "751fd48006ecbddf314539150d4a70c553f8efdc66b34acf25b60c74b1e96449",
+      "path": "assets/audio/hosts/victor/voting/voting_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600334+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "voting_004",
+      "text": "Time to vote. This should be enlightening.",
+      "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
+      "path": "assets/audio/hosts/victor/voting/voting_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600335+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "voting_005",
+      "text": "Make your choice. Preferably a good one.",
+      "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
+      "path": "assets/audio/hosts/victor/voting/voting_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:38:44.600336+00:00"
     }
   ]
 }
