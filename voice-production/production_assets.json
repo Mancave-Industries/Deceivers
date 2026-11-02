@@ -1701,6 +1701,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:31:20.660294+00:00"
       }
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "night_falls_012",
+      "text": "Night falls. Keep your secrets close.",
+      "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
+      "path": "assets/audio/hosts/david/night_falls/night_falls_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882656+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "night_falls_013",
+      "text": "The day is done. The unpleasantness may begin.",
+      "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
+      "path": "assets/audio/hosts/david/night_falls/night_falls_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882667+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "night_falls_014",
+      "text": "Shadows lengthen. So do the lies.",
+      "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
+      "path": "assets/audio/hosts/david/night_falls/night_falls_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882669+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "night_falls_015",
+      "text": "Good evening, suspicious people.",
+      "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
+      "path": "assets/audio/hosts/david/night_falls/night_falls_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882670+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_001",
+      "text": "Gather everyone. Place the phone in the centre.",
+      "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
+      "path": "assets/audio/hosts/david/gather/gather_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882672+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_002",
+      "text": "Everyone, gather round. Set the phone down in the centre.",
+      "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
+      "path": "assets/audio/hosts/david/gather/gather_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882673+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_003",
+      "text": "Bring the circle together. Phone in the centre.",
+      "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
+      "path": "assets/audio/hosts/david/gather/gather_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882675+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_004",
+      "text": "Come together, my suspicious little congregation.",
+      "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
+      "path": "assets/audio/hosts/david/gather/gather_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882676+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_005",
+      "text": "Everyone in. The phone takes centre stage.",
+      "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
+      "path": "assets/audio/hosts/david/gather/gather_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882677+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_007",
+      "text": "Come closer. Not too close. We have standards.",
+      "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
+      "path": "assets/audio/hosts/david/gather/gather_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:21.882679+00:00"
     }
   ]
 }
