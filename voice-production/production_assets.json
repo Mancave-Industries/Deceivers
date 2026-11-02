@@ -34009,8 +34009,25 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387575+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387575+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NzfNhMxT6nUjDRjTyCky",
+        "request_id": "mciNj0t6hczn1sPpPgF2"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:02.113725+00:00",
+      "sha256": "d3c4eef0b8c7356c591344d8759f3c73471756aaf27c6b2aef848b8c262d6a80",
+      "git_blob_sha": "0fd4a881a339566361a0d8d3e1d68f13fcfd570c",
+      "size_bytes": 72767,
+      "duration_seconds": 4.519184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34019,8 +34036,25 @@
       "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
       "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387591+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387591+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4gbSwu9mEC9uKJZjw8my",
+        "request_id": "4hNXZmfeUNI6iyT1yLDP"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:03.496581+00:00",
+      "sha256": "0081f84d9c280d494cab837140d2f3d7b1183940e83a80bc1c9fc7974db60b84",
+      "git_blob_sha": "7dcda458d868429fce7ba3d3b4660400e76f3717",
+      "size_bytes": 82798,
+      "duration_seconds": 5.146122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34029,8 +34063,25 @@
       "text": "Truth prevails. I admit, I had my doubts.",
       "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387593+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387593+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xsv645ixLrex2v6dkyRZ",
+        "request_id": "U6GofdRvVvfVf6LUoRaV"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:04.619974+00:00",
+      "sha256": "cac19539b758e2b9ef20156b92a657f073efcfb2f446c029ff99d4ccdd380ad3",
+      "git_blob_sha": "52ac483b48da6413ccecd73c0cbf4b1ddf60b0d5",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34039,8 +34090,25 @@
       "text": "A Loyal victory! How unexpectedly wholesome.",
       "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387597+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387597+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pQrLy5n3aW3UXnz5kMeH",
+        "request_id": "RscZhGNRTXzURjdpDkas"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:05.953201+00:00",
+      "sha256": "dc25cd70cd6e51d2cd4039b3c05afc772720d1bab6814c4cb227a519cf70f5a8",
+      "git_blob_sha": "ec8935240c0796b5d8bb6fedaf524642e1f4ca00",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34049,8 +34117,25 @@
       "text": "The lies have run out. Congratulations, detectives.",
       "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387599+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387599+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7LQH1BnQijX0ycnWqtak",
+        "request_id": "nVlYlJrnHJjfbYjB1Z69"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:07.033809+00:00",
+      "sha256": "b6134dc5e4df4506e96dcd668ce419a2fa6ba3cefd3a0b5a5e13a7c95e559ea9",
+      "git_blob_sha": "247aa8118de80fd400c0a57865916306fd9f20ed",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34059,8 +34144,25 @@
       "text": "You've found your way through the deception. Eventually.",
       "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387601+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387601+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wwQnUHy3ekDGdrR4qiON",
+        "request_id": "ubrWVlZ5wbrymERZEP9Q"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:08.094798+00:00",
+      "sha256": "533de048bac817b85e8199e2d90a97d7f3fe6d980e2ce0e52713683e7e461afd",
+      "git_blob_sha": "9009accc10a684b7aa142a2c567b41206f7566db",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34069,8 +34171,25 @@
       "text": "The Loyal triumph. You may now look smug. Briefly.",
       "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
       "path": "assets/audio/hosts/charlotte/loyal_victory/loyal_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387603+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387603+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1lYruFOcSN3tWzShkpVf",
+        "request_id": "1wMXpY1PkipO8RvvPWGT"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:09.432086+00:00",
+      "sha256": "a78493ff648d5f98fdf7f5c7b1017e9b6c2545fda2f4dff058267362fc7be307",
+      "git_blob_sha": "44a3145c9b6e1fd0d2d112927f49295ad076585f",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34079,8 +34198,25 @@
       "text": "The Deceivers win. What a delightful betrayal.",
       "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387605+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387605+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "rHZltCoMa0j9KBIQmC3w",
+        "request_id": "9E6Kmr1NRNBkL55gYYPj"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:10.555432+00:00",
+      "sha256": "5f4b1e37f3983afcf2c40ed45415aab53782f7118b14145b80f0ab4242a6610f",
+      "git_blob_sha": "7a4158577a7a06d58417304b10f7d2b9036b281c",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34089,8 +34225,25 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387607+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387607+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SRXYVSXRyV4lY1imCZwY",
+        "request_id": "ohTzRUSSuFaAsQItW74V"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:11.721580+00:00",
+      "sha256": "f67d94431d042e927b62d0f6a166a6e8c86db7560264726d7c35bbaec29f55ae",
+      "git_blob_sha": "0ff78ecadbc476a171e452e4f07af7aedf606db0",
+      "size_bytes": 59811,
+      "duration_seconds": 3.709388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -34099,8 +34252,25 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:59.387609+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:59.387609+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "npJ1GETZfEEOTOHoienz",
+        "request_id": "AJ3VxBtcDKzMZXX6XwfW"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:07:12.736283+00:00",
+      "sha256": "eeb054b69d9114912670273bb23601c654fe9a071b397fa04e2718da38e2f9d9",
+      "git_blob_sha": "598f9843c54147635f7fc536a680287dec6534f2",
+      "size_bytes": 59811,
+      "duration_seconds": 3.709388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
