@@ -35029,8 +35029,25 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/charlotte/game_begins/game_begins_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:08:17.872505+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:08:17.872505+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OseEddEPqNiq6ChAQD4R",
+        "request_id": "NN61t1HAm99aNKySNTDK"
+      },
+      "provider_character_cost": "8",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:08:19.976292+00:00",
+      "sha256": "0109fd8628c6376fee0adfa8938fc9135ea82e33191568880a17572e328835ca",
+      "git_blob_sha": "4b4b7990414ffd6060cadfce18375a6eae323bdb",
+      "size_bytes": 25538,
+      "duration_seconds": 1.567347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
