@@ -35029,7 +35029,7 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/charlotte/game_begins/game_begins_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:08:17.872505+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -35047,7 +35047,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8f3d41db2f1014c924af3d2836cd6e75d86d6d22",
+        "blob_sha": "4b4b7990414ffd6060cadfce18375a6eae323bdb",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:08:22.268994+00:00"
+      }
     }
   ]
 }
