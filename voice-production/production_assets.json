@@ -9189,7 +9189,7 @@
       "text": "Votes are in. Oh, this will be interesting.",
       "script_sha256": "f2e34386e76d2f75b3d8d50caa60f2efcae0378daa3400ee1ada04c23b19b344",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237790+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9207,7 +9207,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "7fc8662c743d87db78e8a1a0600d98288646fcea",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:43.638379+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9216,7 +9223,7 @@
       "text": "The decision is made. No take-backs.",
       "script_sha256": "92f0d1df50634bccec2ed520eae672c0c7a6bb3eb9c5de4c076177a6384ddf7b",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237806+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9234,7 +9241,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "2252aea579a863eddce56204689ccaa76304bd3a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:44.364424+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9243,7 +9257,7 @@
       "text": "Well. You've certainly made a choice.",
       "script_sha256": "1df0e99692d25f668c285e560f6f5891d0bd087c68db269f6d1026efe5aaedc9",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237808+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9261,7 +9275,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "ddbb83e72ae76289b736db0349832f724da187ca",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:45.038784+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9270,7 +9291,7 @@
       "text": "The verdict awaits. Brace yourselves.",
       "script_sha256": "ec2ef11d88947141311b948ca1a0e75110975fb32a5ff140394ebbf3ef907a2c",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237809+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9288,7 +9309,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "a213cbfd44727a4ab27e185fe5de98e4b0717f88",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:45.721340+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9297,7 +9325,7 @@
       "text": "All votes counted. What a confident bunch.",
       "script_sha256": "ac8cfb1508c1371402f463b21ff252f77d1262d92eaf88ddf376f2703345ccda",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237812+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9315,7 +9343,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "c14774b05a9bfd8ccae3cc57426c9221e5c92ab9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:46.403495+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9324,7 +9359,7 @@
       "text": "A decision! Finally.",
       "script_sha256": "c5137e892f2dde316b9c421e609e42cdde9b0cc822b4bd38d7dfd4bd4d794c41",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237815+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9342,7 +9377,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "402c04c8a8ae4ca371eff3b4a0ad5c72a4fd67c6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:47.023800+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9351,7 +9393,7 @@
       "text": "The numbers are settled. The consequences are not.",
       "script_sha256": "55dc9e73fcc6b3d0753bf81cfbedc9f88f4fc349a489ef6e1ea0f096c4ba023a",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237817+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9369,7 +9411,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "5820c081898ac302421a23aa0bc66d0123579ed9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:47.719505+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9378,7 +9427,7 @@
       "text": "The votes have spoken. Whether wisely is another matter.",
       "script_sha256": "9903ac122367517ddc8d41760089a802d44b3173d1289fe5758ac52b782c8e8a",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237819+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9396,7 +9445,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "464c26bf7578f6c81f963894837a687b505d8138",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:48.405677+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9405,7 +9461,7 @@
       "text": "And there we have it. A collective opinion.",
       "script_sha256": "51528479e856fd7680695d761ed47510a00516bbf9cb67b1fe65af754b6d1895",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237821+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9423,7 +9479,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "e974e691b701e16dbd4259395d94558bcaee9c8b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:49.090169+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -9432,7 +9495,7 @@
       "text": "Your judgement has been recorded.",
       "script_sha256": "5a82c4867032b145c7a5553930cae68029e0f933e689e22ea45e2f1e987e2795",
       "path": "assets/audio/hosts/victor/vote_complete/vote_complete_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:39:29.237822+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -9450,7 +9513,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6516325385437c6423e25e211c171639a5db6cbc",
+        "blob_sha": "978f2394f19c96888f50e5b68311116bf27e0e88",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:39:49.738551+00:00"
+      }
     }
   ]
 }
