@@ -30269,7 +30269,7 @@
       "text": "Round we go again. Delightful.",
       "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_033.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892072+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30287,7 +30287,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "247171a22083c66dffdf83f653d9dba430868749",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:07.196418+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30296,7 +30303,7 @@
       "text": "Pass it over. No hovering.",
       "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_034.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892091+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30314,7 +30321,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "146aa6b4c3c71a9526dc4226f2524e6df4e3a888",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:07.840111+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30323,7 +30337,7 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892093+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30341,7 +30355,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "0a2fde7d126a4c71c715782f85b621b71dca8363",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:08.487677+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30350,7 +30371,7 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892095+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30368,7 +30389,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "e8a979bba0f5a904954344b03c6952183d3399a7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:09.151722+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30377,7 +30405,7 @@
       "text": "Keep it moving, my dears.",
       "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_037.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892097+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30395,7 +30423,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "e9f365282f8ad20cc1fb0eb553363a48d5b8798f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:09.852477+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30404,7 +30439,7 @@
       "text": "Next player, and mind your manners.",
       "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_038.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892099+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30422,7 +30457,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "7dfbb8ed35f6eea7d9c580eead4e2442f79a42e5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:10.570323+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30431,7 +30473,7 @@
       "text": "Off you go. Quiet as mice.",
       "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_039.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892100+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30449,7 +30491,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "c5e8583b7cfd6ee906787e7c2cf8c9f21600c8ae",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:11.190711+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30458,7 +30507,7 @@
       "text": "Pass the phone. I'll wait. Briefly.",
       "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_040.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892102+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30476,7 +30525,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "9c1ff1a8f0194c994db4f2fe57abf76235461147",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:11.855988+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30485,7 +30541,7 @@
       "text": "Night falls. Keep your card secret.",
       "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892103+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30503,7 +30559,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "1619a1699751152d0f6ffb559177a1a300f0bd2d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:12.512857+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -30512,7 +30575,7 @@
       "text": "The night falls. Guard your card.",
       "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:02:53.892105+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -30530,7 +30593,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "9f6a025694ddf96eee543fd836482e2defd66e96",
+        "blob_sha": "83d617e2aa4b9c164b17f23ac4a6f1d279ae5aa4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:03:13.171942+00:00"
+      }
     }
   ]
 }
