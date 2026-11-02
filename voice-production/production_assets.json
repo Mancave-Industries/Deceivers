@@ -12929,7 +12929,7 @@
       "text": "Off you go. Quiet as mice.",
       "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
       "path": "assets/audio/hosts/aaron/anonymous_handoff/anonymous_handoff_039.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566733+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12947,7 +12947,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "89225548c269fe9880d2a38180d74a13dc9e6301",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:51.425243+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -12956,7 +12963,7 @@
       "text": "Pass the phone. I'll wait. Briefly.",
       "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
       "path": "assets/audio/hosts/aaron/anonymous_handoff/anonymous_handoff_040.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566751+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12974,7 +12981,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "460f835a70f5c39f6aac27ed353930494a5a5c61",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:52.060641+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -12983,7 +12997,7 @@
       "text": "Night falls. Keep your card secret.",
       "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566753+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13001,7 +13015,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "5f05a2ecd2b434abc46ee8ec7f47e952d7b95ef3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:52.746240+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13010,7 +13031,7 @@
       "text": "The night falls. Guard your card.",
       "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566755+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13028,7 +13049,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "1d408d02a38967e77c9ad019a89f0ae7ace536b8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:53.378569+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13037,7 +13065,7 @@
       "text": "Night has come. Keep it hidden.",
       "script_sha256": "7f154975ed384c859fc13b38985cbe228802e81204ab4bb2195c0fdba6cd7c48",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566756+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13055,7 +13083,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "e28ee67d1d7346caa545e5206ee61562a81ff041",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:54.031591+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13064,7 +13099,7 @@
       "text": "Ah, darkness. Everyone's favourite cover story.",
       "script_sha256": "62388e496413d0ffba1f2b4204cef384ce2d04ccd59f139a34eb3d3f2e2eba2d",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566757+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13082,7 +13117,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "e8a7ad013824c21391e973d350dc396851c64100",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:54.713353+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13091,7 +13133,7 @@
       "text": "The lights go down. So do my expectations.",
       "script_sha256": "57fb0d3d2aae3e50ed45f60c3c2b879007cb7b5d1c477f2baf364aaac5e3e84a",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566759+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13109,7 +13151,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "5e16f1b064180cd71d19fe9b01a26bebf47ac894",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:55.374221+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13118,7 +13167,7 @@
       "text": "Night is upon us. Try not to look guilty.",
       "script_sha256": "77222b126e03f8d021bb55179125451291d5c70ec1801f1b84d3939032fab757",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566761+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13136,7 +13185,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "93bd1cb57f9e42727eba8c6398777fef137284bf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:56.038136+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13145,7 +13201,7 @@
       "text": "Another night. Another excellent opportunity to mistrust everyone.",
       "script_sha256": "7a45abe9c4f41199c3db7987c1c8d81f729c15b03d7671e569062615e9ff98c9",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566762+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13163,7 +13219,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "e638d69d08041fc1c37eeaa605efac1f2ca8dac0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:56.728920+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -13172,7 +13235,7 @@
       "text": "Darkness descends. Secrets remain secrets.",
       "script_sha256": "814d1b67ac56f491de61eec810566bbceaee096303538e1589342bed042e5bc8",
       "path": "assets/audio/hosts/aaron/night_falls/night_falls_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:43:37.566764+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13190,7 +13253,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f7a53a6f3340c0148d80809d95819667d1134d0a",
+        "blob_sha": "cb17fdc6b546052b2a6a7b963569d8cde515e78b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:43:57.341795+00:00"
+      }
     }
   ]
 }
