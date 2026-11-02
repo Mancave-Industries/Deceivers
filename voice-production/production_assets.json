@@ -21769,8 +21769,25 @@
       "text": "A player is gone. And the rest of you have questions.",
       "script_sha256": "cea82aecfe34c6ba0f0543378a5ec87d50757650b3b4331217aefce0a0aadb15",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093272+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093272+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6Jrs9wzbXP3iVwO1g94B",
+        "request_id": "lSNlIvF8nYuggmkUUOUc"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:10.560604+00:00",
+      "sha256": "e87fa95118a34162fb990bc34c9c4a987ea727ee89bdec31823bb33c7de7a3d3",
+      "git_blob_sha": "d7f58614d7705ec88ed02b2a93fa9ec48ebb6aa9",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21779,8 +21796,25 @@
       "text": "Someone was rather busy after dark.",
       "script_sha256": "f6cf0ac9debc1cdff94ae20c901bb11b6ba958deb7a748c21a0c3d677e6c75f4",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093289+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093289+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KtaTz32IipG7GjF69tEn",
+        "request_id": "w7DO9bU0VaKr09DSV0TM"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:11.629046+00:00",
+      "sha256": "130ca5e92d2f472efb65db12bc4188c452c1655f58d05f075a9469e8596df5ae",
+      "git_blob_sha": "df269adfffab7839defe83fa3638ff939091385a",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21789,8 +21823,25 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093291+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093291+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "K04IQyJxYf4P8KaiB6II",
+        "request_id": "Hyi9mspzu9x0Lo3TIn1c"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:12.451815+00:00",
+      "sha256": "b2292680cf15e07e87a1a6800d6c4e1eef64d53ea14ad65309cda3d876d2b815",
+      "git_blob_sha": "b2ee5c8565aba9ddc167df1696344208d84764fe",
+      "size_bytes": 34315,
+      "duration_seconds": 2.115918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21799,8 +21850,25 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093292+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093292+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "l6MUnidXTopoHM8rEiDr",
+        "request_id": "8a74hWMqX421UiHGH2Xi"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:13.554925+00:00",
+      "sha256": "d4d657bbd3ca179f63cc23e0b6a66b59de2efff9d74b3a6523b15b4ca9e1aabe",
+      "git_blob_sha": "a4b7315a4295f203fddf35016a7bb22223ce1a5d",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21809,8 +21877,25 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093293+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093293+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bW6W0eCDtmnw664OaIEK",
+        "request_id": "UJVRQFbzRXPirK9vyhGe"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:14.669192+00:00",
+      "sha256": "e907627ef739154fd58eb08a70d48c52149de5f846f978d5ce05dc622fc77883",
+      "git_blob_sha": "835e95f208b96d6f437391b5b532e82336c899cd",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21819,8 +21904,25 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093295+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093295+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "cqaQsaBhwoMn4Jkaw8Wx",
+        "request_id": "29xxnoDlMPgKKc6ISmyi"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:15.714138+00:00",
+      "sha256": "463b0dcf25cd833a7d1f376be58167379f9b3b18edf5c45bfc5322610da82c5b",
+      "git_blob_sha": "407b30f72253c399708f2e5d5aed7790e938bd02",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21829,8 +21931,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093297+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093297+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7l6EmNYsAENVk1b6Ky1T",
+        "request_id": "V2n3VReGD61pphiUuBAt"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:16.901094+00:00",
+      "sha256": "4f07abed9af85fd3c57b18fd3542a5df0bae4bfd5075040022066681e2f9d545",
+      "git_blob_sha": "7e05a8b2f9e4336a332cd7aa4421261e109888a1",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21839,8 +21958,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093298+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093298+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "R5ft7XimDSDyJoUJLLQI",
+        "request_id": "SEybaHvAgZlAHs7VP9P5"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:18.297042+00:00",
+      "sha256": "1b526c235ad9dfbc9bb9de37298658306c9a1d21cf4fb5fcb82422c31e768a29",
+      "git_blob_sha": "abf533cd125f5d263cf2ba20aa0b9c74c4e97617",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21849,8 +21985,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/beth/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093299+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093299+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "opSCs9jJqbPxalPX2pPK",
+        "request_id": "ejQYdzsvyKGQoVaCp4ao"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:19.546843+00:00",
+      "sha256": "542e98b013ce4f3adfd90d71cb2f49d11f81e11e93787cd52392b93f5ae78c77",
+      "git_blob_sha": "cfadcafcb33c67adba40372ad8fdebc9f3fb97ff",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -21859,8 +22012,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/beth/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:53:08.093300+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:53:08.093300+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "O5n6Du6U7zsFGZRQc786",
+        "request_id": "Hzy2M8DMBy6xtMaZLf2w"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:53:20.774722+00:00",
+      "sha256": "c370377c13f522e988fdb55535a53ce45fe93160b9ecc89767805609315f18a3",
+      "git_blob_sha": "dd8004e43b0b3531d9e7df15605b416f17a10647",
+      "size_bytes": 75275,
+      "duration_seconds": 4.675918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
