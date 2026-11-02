@@ -19389,8 +19389,25 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/beth/gather/gather_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808389+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808389+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "YFJZTIKMs0tPsmtPGjdu",
+        "request_id": "qYkX5rU2Sep6pf8xDZCl"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:40.216194+00:00",
+      "sha256": "c09548a3c7a82dc65faeb451ff3dfdd292ebc6670ea1f814a35e56c053ecf1b1",
+      "git_blob_sha": "ee8a7c9b1684cfda11ef6be04cab9ecd922872ad",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19399,8 +19416,25 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/beth/gather/gather_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808421+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808421+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "clJWcYdo9Uj2kbe8rLK6",
+        "request_id": "LCCot451oN5DxJ8HYzrC"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:41.340769+00:00",
+      "sha256": "5b1eec6a1cc2bd281f53d484a2b3360289561a876b9ec110237e729d43749fa0",
+      "git_blob_sha": "767314fa2924b12d79678dd244792b241cdb794c",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19409,8 +19443,25 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/beth/gather/gather_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808423+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808423+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "J0yJtuPU9CrYFrYeVOYc",
+        "request_id": "kXOMniCd0xgT3IFr2Hnq"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:42.386916+00:00",
+      "sha256": "c81cf6b6f1a779ff53a61624b3c55fd2666dbe70c41e45494d8b78b8983156e0",
+      "git_blob_sha": "9c526e1c28ab07eedf351f31bf8d459faeb9899e",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19419,8 +19470,25 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/beth/gather/gather_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808425+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808425+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VjaoQmmoEP85OWIs7MRn",
+        "request_id": "PJkdTsYPia8n7skwHAOr"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:43.342554+00:00",
+      "sha256": "ccb558bbf200a042d62f4a5adea47be3ca0fa1dfeed79a70e6cd8398ac2ffca2",
+      "git_blob_sha": "a802f3d1012711319df2e0e619b6f1715c0e69d2",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19429,8 +19497,25 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/beth/gather/gather_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808427+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808427+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "K5y0Nn5aigLoqgC9dMOz",
+        "request_id": "jxZPmTmc24E5ij1npeZ6"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:44.507165+00:00",
+      "sha256": "1e930280f1861245a92727d6b527551b7e293c02377af3e041952194d7840324",
+      "git_blob_sha": "3bd988d85ff530649d67de572c79581dd4345224",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19439,8 +19524,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/beth/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808429+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808429+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "eFDd5F2VcSIAAYyjYGFQ",
+        "request_id": "sSgnIakeqZcEa3WDZWR3"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:45.646434+00:00",
+      "sha256": "ac648e9a7d90581994f4a7c882fc46322626fd7198b18cc7a3eeaf2bfe614493",
+      "git_blob_sha": "0695eb0184f4dd8e7b0fb70e5b6d491b5e97c981",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19449,8 +19551,25 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/beth/gather/gather_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808431+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808431+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "30xnaWLbfChSBQPswBeG",
+        "request_id": "cDd2DqwAeyOpu9UzbbbO"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:46.638888+00:00",
+      "sha256": "4a87ec24fbf791e58e03a29b2861b69c48813304e2edae7d934562aff7e6373e",
+      "git_blob_sha": "027aa9ac6215b870720d4a49170176d29eb749b7",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19459,8 +19578,25 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/beth/gather/gather_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808433+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808433+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HYUy2lDxMcPQp3XOC1BZ",
+        "request_id": "oz9Tw7ltctj3lQIRxMn2"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:47.637492+00:00",
+      "sha256": "9c3e85fcdffbf9974543bf07c877023f5f0cf3be62a3bfc3f385a69cf6a7fe31",
+      "git_blob_sha": "a420bb978473d5263e5ddf67ae2f1a885daef505",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19469,8 +19605,25 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/beth/gather/gather_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808435+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808435+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ZaysQ39CpVB27ZFyNd7U",
+        "request_id": "WAKkuZFuZCStLMtBWJ0l"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:48.710699+00:00",
+      "sha256": "9dc48c905eb249ea7d6f023b25826f60fc6ab4e77ba18e5c25e53637737539e9",
+      "git_blob_sha": "8ab63d78ad5460d21106e9fd56c7c59cef45743d",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19479,8 +19632,25 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/beth/gather/gather_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:37.808437+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:37.808437+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IWJjW0rFwNsly10w6B4Z",
+        "request_id": "lFuNS9xrm9qU2TtpXl57"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:50:49.809383+00:00",
+      "sha256": "3dde1d508601ba3020934ec32e301b9975d6b7e150bde6017ab3d8ab7c5950a7",
+      "git_blob_sha": "964ba6652d7010fc192737bf529cda8e61ab0a50",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
