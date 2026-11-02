@@ -14289,7 +14289,7 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/aaron/discussion/discussion_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865604+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14307,7 +14307,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "9118c138fcaf8e64880e8b00f4424a664e5b2c8a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:19.327024+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14316,7 +14323,7 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/aaron/discussion/discussion_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865624+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14334,7 +14341,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "40f31a88b4886133d0d8af3fcdc64536c20b5bb1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:20.013984+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14343,7 +14357,7 @@
       "text": "Talk it through. Try to avoid collective wishful thinking.",
       "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
       "path": "assets/audio/hosts/aaron/discussion/discussion_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865627+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14361,7 +14375,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "1e313843df2ff7fa778c0d930b816536fd9af32f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:20.743241+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14370,7 +14391,7 @@
       "text": "Who do you trust? Fascinating question.",
       "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
       "path": "assets/audio/hosts/aaron/discussion/discussion_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865629+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14388,7 +14409,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "33d8f3aadfe14d3963a961db36b69382d36e65e1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:21.401509+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14397,7 +14425,7 @@
       "text": "Time to separate the stories from the storytellers.",
       "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
       "path": "assets/audio/hosts/aaron/discussion/discussion_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865631+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14415,7 +14443,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "e4b97439ccc472f21857c093b221972694b5f0f2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:22.084786+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14424,7 +14459,7 @@
       "text": "The discussion is yours. Use it wisely.",
       "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
       "path": "assets/audio/hosts/aaron/discussion/discussion_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865633+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14442,7 +14477,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "cf20d1be7dd29b51e50211dcc697bd70e2d2e4b1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:22.782565+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14451,7 +14493,7 @@
       "text": "You may now begin your collective detective work.",
       "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
       "path": "assets/audio/hosts/aaron/discussion/discussion_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865635+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14469,7 +14511,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "b6648a712eec37c1b93727f7abb1a922f0bb6984",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:23.422937+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14478,7 +14527,7 @@
       "text": "The time for talk is over.",
       "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
       "path": "assets/audio/hosts/aaron/voting/voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865637+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14496,7 +14545,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "9563db9087d7f22dfafb05bc36a92dcb56b63fff",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:24.098309+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14505,7 +14561,7 @@
       "text": "Talk ends now.",
       "script_sha256": "1ac53ec663b05db7d1edf72e44ef6a0deb8ca922cf61b2dba05d3a407ad55fd2",
       "path": "assets/audio/hosts/aaron/voting/voting_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865638+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14523,7 +14579,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "f4b7c3e4acbeefbba47aeb8df14dc570b7634dc4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:24.768153+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -14532,7 +14595,7 @@
       "text": "Enough talk. It is time to vote.",
       "script_sha256": "751fd48006ecbddf314539150d4a70c553f8efdc66b34acf25b60c74b1e96449",
       "path": "assets/audio/hosts/aaron/voting/voting_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:45:04.865641+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14550,7 +14613,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "b9c8d792cf233ba548b7cf94bf7b22f4da4f359a",
+        "blob_sha": "717d540b123ab9b158ec60eb8951f46d3118472d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:45:25.378119+00:00"
+      }
     }
   ]
 }
