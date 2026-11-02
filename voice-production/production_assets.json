@@ -34341,6 +34341,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T11:07:21.372025+00:00"
       }
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "deceiver_victory_004",
+      "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
+      "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
+      "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870048+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "deceiver_victory_005",
+      "text": "The truth has lost. Spectacularly.",
+      "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
+      "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870065+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "deceiver_victory_006",
+      "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
+      "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
+      "path": "assets/audio/hosts/charlotte/deceiver_victory/deceiver_victory_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870067+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "opening_001",
+      "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
+      "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
+      "path": "assets/audio/hosts/charlotte/opening/opening_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870069+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "opening_003",
+      "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
+      "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
+      "path": "assets/audio/hosts/charlotte/opening/opening_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870071+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "opening_004",
+      "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
+      "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
+      "path": "assets/audio/hosts/charlotte/opening/opening_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870072+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "opening_005",
+      "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
+      "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
+      "path": "assets/audio/hosts/charlotte/opening/opening_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870074+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "opening_006",
+      "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
+      "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
+      "path": "assets/audio/hosts/charlotte/opening/opening_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870076+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "final_voting_001",
+      "text": "A final banishment. It is time to vote.",
+      "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
+      "path": "assets/audio/hosts/charlotte/final_voting/final_voting_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870078+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "banish_again_001",
+      "text": "The circle has chosen to continue. Another decision must be made.",
+      "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
+      "path": "assets/audio/hosts/charlotte/banish_again/banish_again_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:07:22.870080+00:00"
     }
   ]
 }
