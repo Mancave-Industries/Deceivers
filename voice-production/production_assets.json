@@ -24141,6 +24141,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:55:54.962743+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_025",
+      "text": "Don't make a ceremony of it. That's my job.",
+      "script_sha256": "21fd56362a2c72b851b8d80946a30a6c699cad6590cd2751382a24029c15eb00",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_025.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449041+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_026",
+      "text": "Next player. And not a word.",
+      "script_sha256": "a1db20b4a072df925c5aae7d688b28f3e719e46b7c91a37d6b30a53fe96c5d4c",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_026.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449059+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_027",
+      "text": "A discreet little exchange. Lovely.",
+      "script_sha256": "b182fa65380ef76ca7989c75bce8b09ca735026a73c682c113b01a804ea323a4",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_027.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449061+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_028",
+      "text": "Pass it along. Eyes elsewhere.",
+      "script_sha256": "7d5a1b681787273ca38c4d288533de7486e2577467bf3df453302bb2439e0a63",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_028.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449063+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_029",
+      "text": "Next turn. Same rules, fewer questions.",
+      "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_029.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449065+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_030",
+      "text": "The phone, please. Not the whole table.",
+      "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_030.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449067+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_031",
+      "text": "A little less staring, perhaps.",
+      "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_031.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449069+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_032",
+      "text": "Next player. Keep the screen private.",
+      "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_032.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449071+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_033",
+      "text": "Round we go again. Delightful.",
+      "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_033.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449073+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_034",
+      "text": "Pass it over. No hovering.",
+      "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_034.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:55:56.449074+00:00"
     }
   ]
 }
