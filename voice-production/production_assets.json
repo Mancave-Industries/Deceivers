@@ -35021,6 +35021,16 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T11:08:16.385404+00:00"
       }
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "game_begins_001",
+      "text": "Let the game begin.",
+      "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
+      "path": "assets/audio/hosts/charlotte/game_begins/game_begins_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:08:17.872505+00:00"
     }
   ]
 }
