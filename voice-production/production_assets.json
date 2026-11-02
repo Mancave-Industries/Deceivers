@@ -5109,8 +5109,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/david/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557571+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557571+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lyOyCSWAMe4qVSjtB9kD",
+        "request_id": "q1QfvGO8xItiX5EYDjLU"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:04.746845+00:00",
+      "sha256": "74d7ce54593dabaffbe5387961b20cff4685a3b2e29d99f8a3276df787aaae7b",
+      "git_blob_sha": "457efe85c7cd5e544e382fd941d18787428876e0",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5119,8 +5136,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/david/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557588+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557588+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FrxB3DzUMPPPAMjgitXI",
+        "request_id": "rEQngHeS6clZjFjPXanQ"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:06.061254+00:00",
+      "sha256": "c682884d46b46c41c08e433f1d233530fde80074719599592378dc30a7783fd5",
+      "git_blob_sha": "ab5ce54e906a83d4195ee6936c8b7a00a76f2ead",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5129,8 +5163,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/david/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557592+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557592+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1FLUV67iZD0Vyn2g2eCY",
+        "request_id": "p72hrGPt5fQvwMVf2p8r"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:08.657405+00:00",
+      "sha256": "b4d74943bf1f81eb072c998c617d655226c10de2edd9b80140e0eb1e676c89fa",
+      "git_blob_sha": "475469cfb7fc3c38258b0071421bfe011d6aafc7",
+      "size_bytes": 159703,
+      "duration_seconds": 9.952653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5139,8 +5190,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/david/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557595+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557595+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VcARcREsuoJRplzIhY4m",
+        "request_id": "Q53ZX6nUIAyaYKBbJg70"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:10.333519+00:00",
+      "sha256": "7cdf4cc074e633165d512d6984d59710940736f35fc1ac9e3e2dcbfeb6d44b0f",
+      "git_blob_sha": "15ff83217a9e7ee9112a6eb7358cfc2f95efacca",
+      "size_bytes": 103278,
+      "duration_seconds": 6.426122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5149,8 +5217,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/david/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557597+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557597+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ljIbwEWkN14GbyA4xXkx",
+        "request_id": "D5BlD470pJcvroJVGb74"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:12.010877+00:00",
+      "sha256": "c27f65379a9e012e63210a3fc110291d69bc97fff78c2ba6f7cd0393934a98b0",
+      "git_blob_sha": "774696e40072c0afea46b700de2dacf022b150f9",
+      "size_bytes": 103278,
+      "duration_seconds": 6.426122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5159,8 +5244,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/david/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557599+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557599+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ixNdQtvZ6DKbcHROOQiQ",
+        "request_id": "4SW1MQh03mgXXvVCoNEL"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:13.755588+00:00",
+      "sha256": "957e0650714efdcf86a393479bc2d499a2e89d2cd7ea611f35f5531fc354fd0b",
+      "git_blob_sha": "f09e6040021713b01635ef6e977f5eb7ac04a1a2",
+      "size_bytes": 118743,
+      "duration_seconds": 7.392653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5169,8 +5271,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/david/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557601+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557601+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MOJd2BBQVNeGp3RPZFE6",
+        "request_id": "NJ8fxjzIb1sKhAJ1YhCJ"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:15.230252+00:00",
+      "sha256": "8b0c84123c30d4e550c13c517c0c216b6a2747cee115d4f988bf12085c27551a",
+      "git_blob_sha": "662b625459f549ed4fc3484daf2bcf59aa73c8f8",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5179,8 +5298,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/david/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557603+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557603+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bpnPHj5tOZ9HShfYh1s6",
+        "request_id": "YRcVz6NXay8vTzEVMnfv"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:16.387329+00:00",
+      "sha256": "8de0f7edb39413d1f56c25006b71a83d10001dcc953702937ad734fda0cc4450",
+      "git_blob_sha": "cd69621e1b1cdb1982f58eb3e8e3c51bf83b49e5",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5189,8 +5325,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/david/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557605+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557605+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dGiBv5PwFSXjxXZfDuye",
+        "request_id": "BxTTbyEeNQ21LIYvOIyI"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:17.574167+00:00",
+      "sha256": "732563eb563a6dcd69cbcd94d88f21654f2be4ed4c793ea9220467ef0c53cf37",
+      "git_blob_sha": "0ae40256faf9e1565da3ad3d8089f2960b6f48b1",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -5199,8 +5352,25 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/david/quiet_night/quiet_night_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:35:02.557607+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:35:02.557607+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ljtUJjwIULjmQuMvv3fr",
+        "request_id": "YKCjQMv5pehrm3EhLmsV"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:35:18.700490+00:00",
+      "sha256": "f6124d9d24c7603296417982745978802f104afcff4f802abc906647591991bd",
+      "git_blob_sha": "8cb34f954de5ec5be0de02b3444ddddd794d2479",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
