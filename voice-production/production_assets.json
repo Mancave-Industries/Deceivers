@@ -25841,6 +25841,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:57:46.283708+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_005",
+      "text": "Right then. Who's telling porkies?",
+      "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
+      "path": "assets/audio/hosts/lily/discussion/discussion_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969749+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_006",
+      "text": "Let the accusations begin. Politely, if possible.",
+      "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
+      "path": "assets/audio/hosts/lily/discussion/discussion_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969767+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_007",
+      "text": "Have a chat. Make it uncomfortable.",
+      "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
+      "path": "assets/audio/hosts/lily/discussion/discussion_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969769+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_008",
+      "text": "Everyone has a theory. How charming.",
+      "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
+      "path": "assets/audio/hosts/lily/discussion/discussion_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969771+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_009",
+      "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
+      "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
+      "path": "assets/audio/hosts/lily/discussion/discussion_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969773+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_010",
+      "text": "Your suspicions are now officially welcome.",
+      "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
+      "path": "assets/audio/hosts/lily/discussion/discussion_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969775+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_011",
+      "text": "Talk it through. Try to avoid collective wishful thinking.",
+      "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
+      "path": "assets/audio/hosts/lily/discussion/discussion_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969777+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_012",
+      "text": "Who do you trust? Fascinating question.",
+      "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
+      "path": "assets/audio/hosts/lily/discussion/discussion_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969778+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_013",
+      "text": "Time to separate the stories from the storytellers.",
+      "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
+      "path": "assets/audio/hosts/lily/discussion/discussion_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969780+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "discussion_014",
+      "text": "The discussion is yours. Use it wisely.",
+      "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
+      "path": "assets/audio/hosts/lily/discussion/discussion_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:57:47.969783+00:00"
     }
   ]
 }
