@@ -7489,7 +7489,7 @@
       "text": "Time for a little darkness. Behave yourselves.",
       "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656059+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7507,7 +7507,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "1b6d658a5f0d5243934f8d9058608ee20abef397",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:52.921041+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7516,7 +7523,7 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656075+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7534,7 +7541,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "3c56df5f1012326850783e164c06f7534eceff7f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:53.556960+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7543,7 +7557,7 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656077+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7561,7 +7575,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "d4c0075ce446e47d70f3b0c2fcc6e0e15efe729d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:54.247855+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7570,7 +7591,7 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656079+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7588,7 +7609,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "5cf135fa847d8342d039f64a0c5a5c52c283a54d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:54.894574+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7597,7 +7625,7 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656081+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7615,7 +7643,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "7bca8ab1dce0d06fc4738408d7154309aefe756d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:55.703539+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7624,7 +7659,7 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/victor/gather/gather_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656082+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7642,7 +7677,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "d0aadc218c3a56a3faef5ccc973f6d9c0429a81e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:56.375050+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7651,7 +7693,7 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/victor/gather/gather_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656083+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7669,7 +7711,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "297d8b6053596cfec9c7408952e1125d63c6044d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:57.189780+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7678,7 +7727,7 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/victor/gather/gather_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656085+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7696,7 +7745,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "957ab4da93bf3961c6286d747b5d1c3ec920230c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:58.002152+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7705,7 +7761,7 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/victor/gather/gather_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656086+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7723,7 +7779,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "e141240774d3b28fb6513df98ae4649c6217cd1d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:58.710770+00:00"
+      }
     },
     {
       "host_id": "victor",
@@ -7732,7 +7795,7 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/victor/gather/gather_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:37:38.656087+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -7750,7 +7813,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "13bfa30d380b060300f7d62fa5028cf227b731f5",
+        "blob_sha": "fdc47a6962ba5e28d69197c1785bee263ec58bbd",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:37:59.830462+00:00"
+      }
     }
   ]
 }
