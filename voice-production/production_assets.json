@@ -2389,7 +2389,7 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/david/discussion/discussion_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862767+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2407,7 +2407,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "093d3924350cd1200b02c52f4dda4a3e468b20e9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:21.803595+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2416,7 +2423,7 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/david/discussion/discussion_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862785+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2434,7 +2441,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "dd93f6001646992beaa6013e5234cd8c9d36fefc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:22.538345+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2443,7 +2457,7 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/david/discussion/discussion_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862788+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2461,7 +2475,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "3310a154d9a9878aca8ea048156d533a321d51e1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:23.291177+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2470,7 +2491,7 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/david/discussion/discussion_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862790+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2488,7 +2509,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "ea7b5348fb9c101acbe0320ccc444317c0fbe343",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:23.918148+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2497,7 +2525,7 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/david/discussion/discussion_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862792+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2515,7 +2543,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "461ef17b4ee99d7fee2882c1d028ecc835385ac2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:24.557827+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2524,7 +2559,7 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/david/discussion/discussion_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862794+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2542,7 +2577,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "b09152e1485afb10a16d47014c3746633af6a0d3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:25.199991+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2551,7 +2593,7 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/david/discussion/discussion_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862796+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2569,7 +2611,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "b65a0d0e60645ae84790da12d03184aee8da82c4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:25.871502+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2578,7 +2627,7 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/david/discussion/discussion_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862798+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2596,7 +2645,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "b161a10e3215d6418fa3b8e60c81070a4f4b5b6a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:26.542471+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2605,7 +2661,7 @@
       "text": "Talk it through. Try to avoid collective wishful thinking.",
       "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
       "path": "assets/audio/hosts/david/discussion/discussion_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862800+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2623,7 +2679,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "6d619f9376086baefc4b25e6527f293baff83537",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:27.206188+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -2632,7 +2695,7 @@
       "text": "Who do you trust? Fascinating question.",
       "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
       "path": "assets/audio/hosts/david/discussion/discussion_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:32:06.862802+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -2650,7 +2713,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "39b9f4328de865733fbb43dbfe58a0da3154b666",
+        "blob_sha": "36ba1ec5aa18a5de7696c36a81c4b16ca1feebd4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:32:27.845255+00:00"
+      }
     }
   ]
 }
