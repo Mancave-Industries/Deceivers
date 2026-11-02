@@ -15989,7 +15989,7 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300004+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16007,7 +16007,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "cf87fb460e4a456e40dcd2e4f87a59f0907af4a6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:07.030082+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16016,7 +16023,7 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300022+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16034,7 +16041,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "c4c18867b6a03aae12cdd00b9b503aecd774d2fd",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:07.658634+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16043,7 +16057,7 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_016.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300025+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16061,7 +16075,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "cf89549386f81ee3a0b27b7ef79c745f838c0028",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:08.301052+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16070,7 +16091,7 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_017.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300027+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16088,7 +16109,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "0de2c73d2685bd4974c9640fcd96253b887de9c2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:08.943871+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16097,7 +16125,7 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_018.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300029+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16115,7 +16143,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "f7789435b9f064cb197dd09075482037bb0203b4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:09.531181+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16124,7 +16159,7 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_019.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300031+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16142,7 +16177,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "ab93b43c6cd6fa2c1d56b4a2c238070dba66ffba",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:10.176337+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16151,7 +16193,7 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/aaron/murder_reveal/murder_reveal_020.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300033+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16169,7 +16211,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "380cd305c43653b51f6a153b4a04660e169ce162",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:10.880533+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16178,7 +16227,7 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300035+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16196,7 +16245,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "d738f1bc954abd3195f886d0857897a4e5bc6af0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:11.609693+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16205,7 +16261,7 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300037+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16223,7 +16279,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "d0f922fc2a324ca4cc15cb2db35a2ef9546aecde",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:12.281573+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -16232,7 +16295,7 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:46:52.300038+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16250,7 +16313,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "7a43eac7be070b0ef0328e7cbc6e71309c9bfb85",
+        "blob_sha": "daf2a4a588816d4dbef38f9f6ec66fe61b6e8fc1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:47:12.943453+00:00"
+      }
     }
   ]
 }
