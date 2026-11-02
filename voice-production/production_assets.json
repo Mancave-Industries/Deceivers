@@ -4429,8 +4429,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/david/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293564+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293564+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CxIKj0Iikk4yd3lCmNQy",
+        "request_id": "0GFEe2CjsMmCqlkDWeTi"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:18.793358+00:00",
+      "sha256": "8584e201416c0378a2b9b7e057c686321141834b018341b086d6ed87e00868cd",
+      "git_blob_sha": "c3ca8b72e651569e9c8e2cbcb914b6cd80525e59",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4439,8 +4456,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/david/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293582+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293582+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uhBwVKbKCLiqdkI1btzg",
+        "request_id": "cpzYtLVtIJaYzsZ7jubB"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:19.883206+00:00",
+      "sha256": "6cb104fb416199c2f40214598effb6f751b1c084bc7b56c7120eb1c2399f1d95",
+      "git_blob_sha": "eb57b2af9ccd97b2e09d01328a662e9a4633c942",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4449,8 +4483,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/david/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293584+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293584+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2xLy3inTmlRrEl6eH9g4",
+        "request_id": "B8n4151mkz3oVg6R4J82"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:21.369007+00:00",
+      "sha256": "f9e93594597e9bb3bd73563318a737015f5cf7834aaa7cd4928467fe44f5b07e",
+      "git_blob_sha": "0cb3b770538f512867234f4e9877865004d8cc76",
+      "size_bytes": 75275,
+      "duration_seconds": 4.675918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4459,8 +4510,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/david/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293586+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293586+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ND1Vm4KcwEVpoa8LzLjP",
+        "request_id": "20jLqRRmLwF4fZpvtOwx"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:22.412342+00:00",
+      "sha256": "964f32bc4b76fe350e0726cb848eb96da9ae14087c2806309d071fa49a7ad8a8",
+      "git_blob_sha": "a9db3eb39f855cd418a6cef2f8bc90268cf7c18d",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4469,8 +4537,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/david/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293587+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293587+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tKLn3KoiPxBwoHmyGoxK",
+        "request_id": "GuWG2TXpZBMjVoTBqY0R"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:23.479937+00:00",
+      "sha256": "c77d28208160f2dee6eca0ec6e4020ab1185b2bf39c68b7ac17f46ab060d05c8",
+      "git_blob_sha": "4d56ffc27dd3a1ac257fdc00f22024b2fdef420c",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4479,8 +4564,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/david/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293589+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293589+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ca9Oeeeb1Og3zKKHdKmF",
+        "request_id": "5YypebPAl9r5DjQVmWoe"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:24.605095+00:00",
+      "sha256": "2f09ff1cc3de80bf74fca4b01bca566af65daa25ee7fc117f4a2ae7252cbbd83",
+      "git_blob_sha": "5807fbdf5a6d8f13db1a1d023f00e2234a728e22",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4489,8 +4591,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/david/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293590+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293590+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4mIvGSoHWRivCFWPphzp",
+        "request_id": "c5rCZzWzBcv1AhhlfyYZ"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:26.036738+00:00",
+      "sha256": "ebd6aa85d3005959e6421b370fcc178ab6318d790cfc23601ed7d02cab5124d3",
+      "git_blob_sha": "44b3153d2be0be04c74a3d16c3d3f3ecbd9e3b35",
+      "size_bytes": 76529,
+      "duration_seconds": 4.754286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4499,8 +4618,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/david/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293592+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293592+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xvqmeGFfrxJeqAUc8jrZ",
+        "request_id": "OY6QXYGNFZdDfGr2LkOL"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:27.476489+00:00",
+      "sha256": "41003bb17b42ccfec9a891334c84bdcefb90708da0c8ce8ce1b45b3aa2222fe6",
+      "git_blob_sha": "69411df638a8c6ca7db83f5b47bdd4c75877a682",
+      "size_bytes": 72767,
+      "duration_seconds": 4.519184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4509,8 +4645,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/david/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293593+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293593+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JOhz1RvOiHeoeUpsOPme",
+        "request_id": "DmpPtLNOwgWpvbMex6iw"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:28.479747+00:00",
+      "sha256": "3cbebe841fcb83213cefa0e6c7f08cde3834410c90e5dfe19180ba3024760827",
+      "git_blob_sha": "9ad66f25e97155aba54db6975fba15685dbebe14",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -4519,8 +4672,25 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/david/final_circle/final_circle_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:34:16.293594+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:34:16.293594+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QP3DbLofU3wu7ipJBERL",
+        "request_id": "RTHGPGQiorYSF4g3qgYn"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:34:29.653867+00:00",
+      "sha256": "13733013a6d30c4c5d3d7184377130e24a2335f0874bccbfee412add8185cd19",
+      "git_blob_sha": "d3f9cfe6e721a605fc8713351e2612ccb9d0c285",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
