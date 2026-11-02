@@ -30949,8 +30949,25 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538574+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538574+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0LvdTrlxajX0mZrCQsFi",
+        "request_id": "ETNxi1M42yz06Ts9HS6o"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:41.091671+00:00",
+      "sha256": "1a85db25f425c074942406167e86613bf6a1f942130ead70e386ec06c20bf733",
+      "git_blob_sha": "f7947674383c72ff6e9b5986167826fbd594a380",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30959,8 +30976,25 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538587+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538587+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OUPlI927ufBvL9Jj9kMu",
+        "request_id": "EjjP5bisJgV5SFzdCcgM"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:42.110112+00:00",
+      "sha256": "07b612359a27be752f84a543bd85d5f847765edfffb8bee6c62cac1d25b8b96d",
+      "git_blob_sha": "f782dc5bef7db6f9caaa5b8449369ef3a151ab6e",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30969,8 +31003,25 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538589+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538589+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NUQnKux025ZJafdACHwG",
+        "request_id": "4OTyUCIIKWjWOj7Ka2WD"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:43.038674+00:00",
+      "sha256": "00e4f86899bdb5d995c3ac23b6dbcc84f11603428759b204ef82854d1b511ddd",
+      "git_blob_sha": "bf31cf83794457044140a1e12a190b49094e56b3",
+      "size_bytes": 34315,
+      "duration_seconds": 2.115918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30979,8 +31030,25 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/charlotte/gather/gather_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538590+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538590+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9O5H88B6Cz8zNuiyFcR3",
+        "request_id": "MQkezP1Zsp06Ofdcu1RA"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:44.114289+00:00",
+      "sha256": "441f461ea0171dc972b87328d25db37d25b0c61f4fd99c40f1e7aa70fa7a42cc",
+      "git_blob_sha": "5b5bbee6f90109eede0e5e51d868f8bab68a5ad8",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30989,8 +31057,25 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/charlotte/gather/gather_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538592+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538592+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FWXbFmJUu61uOOXqW8R2",
+        "request_id": "kmczAxFohAYkz17yAvdu"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:45.180760+00:00",
+      "sha256": "18d1ff4ec56930798576e2d7b3cb825e2fe0ed2684b267a8da53eff84ff2757d",
+      "git_blob_sha": "f63247b73c9e7130ab9dba8c8f809eaadafe289f",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30999,8 +31084,25 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/charlotte/gather/gather_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538593+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538593+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Kn6riqs1cJvSeEHVBMcB",
+        "request_id": "8NtyY5GIK7lsQ3mHDN9U"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:46.338933+00:00",
+      "sha256": "e0fb9e49fd22926dc0a1407439dbecd198f3ca1fcd94ed70d5b682e31dcb436b",
+      "git_blob_sha": "3f938e9f3c4edcb75d09f8c4b359e6674eb86b6e",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31009,8 +31111,25 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/charlotte/gather/gather_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538595+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538595+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Z6BjDkahuvxz5FSIUSzA",
+        "request_id": "Cr3C0mOF8yNTvf1fwF69"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:47.475679+00:00",
+      "sha256": "6dfded36bff5932954997ee0e9e45f74c56087c46e0f883dc759f4de46823378",
+      "git_blob_sha": "e145ade384a1da0f9d734bafe254b0bb95c78aa2",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31019,8 +31138,25 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/charlotte/gather/gather_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538596+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538596+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "31zVCM3DTYqsFDt9eFrB",
+        "request_id": "mv0U53DPG8PPXUdveifg"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:48.578091+00:00",
+      "sha256": "227c19834cb5a02df4107f3b5cfbba1827d9cd782ff2bbc4cad9c744a4e5518f",
+      "git_blob_sha": "f76a39ebc3f45a4fc387309de38d5918f8a5ab25",
+      "size_bytes": 59811,
+      "duration_seconds": 3.709388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31029,8 +31165,25 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/charlotte/gather/gather_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538597+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538597+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pxGfZcjdXjaH3MGNQBfj",
+        "request_id": "H54Dacv0VUKVwJwI0X06"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:49.650657+00:00",
+      "sha256": "d6ad13f9fbdd5c231b5cb3e027392d440b8d832fa6687f79350ac7f96cd59308",
+      "git_blob_sha": "82b3bc49707970d0ba7bad0b4cdd2bab51df5ed5",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -31039,8 +31192,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/charlotte/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:38.538598+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:38.538598+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MwSSbQv0Rma9ACieIoSG",
+        "request_id": "XTscfUhU0LKkbBDUPhM6"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:50.883603+00:00",
+      "sha256": "573a1bf9bd39b554c26447b52cf09fe3ad8e4fd5ae57ac69a45cf753236f9439",
+      "git_blob_sha": "8f70eda74e952bf38f11961c5d7bc86a04ec11a8",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
