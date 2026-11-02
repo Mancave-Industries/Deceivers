@@ -17349,7 +17349,7 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/aaron/series_closing/series_closing_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294664+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17367,7 +17367,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "3f864ba6ac92c9ebbb86ad5e26e4e7829fc26092",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:45.914545+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -17376,7 +17383,7 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/aaron/farewell/farewell_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294680+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17394,7 +17401,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "b6be6008c5ceb178bb0074b91e38149decde2a82",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:46.572255+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -17403,7 +17417,7 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/aaron/rules_intro/rules_intro_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294682+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17421,7 +17435,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "61cc19555c1ca5cbb1d95e7b7c0aae4fdaad5922",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:47.250536+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -17430,7 +17451,7 @@
       "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
       "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
       "path": "assets/audio/hosts/aaron/rules_intro/rules_intro_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294684+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17448,7 +17469,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "818db159895ddb8871f3e35c520d6df77ba37f4a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:47.919032+00:00"
+      }
     },
     {
       "host_id": "aaron",
@@ -17457,7 +17485,7 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/aaron/game_begins/game_begins_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294685+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17475,7 +17503,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "1bbea825c5a4d9ed783c84bcaa911863ddf6bf6a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:48.534914+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -17484,7 +17519,7 @@
       "text": "Next player, please. No peeking.",
       "script_sha256": "39717a51f67f5c402e642cc01118ee3c686851d813bd9a219756faa8bfc44951",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294686+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17502,7 +17537,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "a06d62d35d9ea78695331286ad41d27862be14f3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:49.244733+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -17511,7 +17553,7 @@
       "text": "On we go. Quietly, if you wouldn't mind.",
       "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294688+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17529,7 +17571,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "8b85e309db81e6c5a0419a0797413e8e6289a622",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:49.883512+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -17538,7 +17587,7 @@
       "text": "Pass it along. The suspense is unbearable.",
       "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294689+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17556,7 +17605,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "6779f39dfc367823d2aae4444aca47e6a3afdad8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:50.558674+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -17565,7 +17621,7 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294690+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17583,7 +17639,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "ecb64b78ad5bd2a5ad59bdf8d64efe1543a5ff8f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:51.225077+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -17592,7 +17655,7 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/beth/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:48:30.294691+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17610,7 +17673,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a19f0cfbc898ce8d59dc441eaf09dc52f1725fa2",
+        "blob_sha": "9e113bab5b2774b65d67305aea0d06253fb378fe",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:48:51.858677+00:00"
+      }
     }
   ]
 }
