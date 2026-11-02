@@ -27209,7 +27209,7 @@
       "text": "The votes are locked. Here comes the awkward bit.",
       "script_sha256": "b13efff249969ec29cc8e48143f92ee7d2679b0a684e3b2e511ac8cf0c5615e3",
       "path": "assets/audio/hosts/lily/vote_complete/vote_complete_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682399+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27227,7 +27227,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "9bde68d0e994702bf2f4bbfa5768c39320ecb36a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:33.269616+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27236,7 +27243,7 @@
       "text": "A player dispatched. Sleep well, everyone. If you can.",
       "script_sha256": "d4356f861b2d6d3d2b547d0eef038d46b87a0fb40f927db4fa11551585b0aa16",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682431+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27254,7 +27261,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "eb63dd52662afabb5275951defe302f48fde257e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:33.983538+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27263,7 +27277,7 @@
       "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
       "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682433+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27281,7 +27295,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "24c9308393a02760340058e64ff6d4920f078eb7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:34.675574+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27290,7 +27311,7 @@
       "text": "A player has been murdered. The night was not kind.",
       "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682436+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27308,7 +27329,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "7c62885f5011c5b7ee2cfe90b8d20c93875d3eae",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:35.400318+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27317,7 +27345,7 @@
       "text": "A chair sits empty. A charming start to the day.",
       "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682438+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27335,7 +27363,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "ed215994e20a711feffe7132d0b7b3b6b3463868",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:36.033352+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27344,7 +27379,7 @@
       "text": "Someone didn't make it through the night. How terribly rude.",
       "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682440+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27362,7 +27397,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "8b59d057164afc2910b10340b3e7c1a2a51486b5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:36.719706+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27371,7 +27413,7 @@
       "text": "A murder has occurred. I trust everyone slept soundly.",
       "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682442+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27389,7 +27431,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "fe53723538597555d5b803e00d77b92a0d6eeadf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:37.350035+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27398,7 +27447,7 @@
       "text": "A player gone. The plot thickens.",
       "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682444+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27416,7 +27465,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "313e9d88ca8cb2a9662e2f6ef04a15e418e71256",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:38.026243+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27425,7 +27481,7 @@
       "text": "Morning has arrived. Not everyone has.",
       "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682446+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27443,7 +27499,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "8008611f8a073fe97e91d44492ed8068a73c14bc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:39.187937+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -27452,7 +27515,7 @@
       "text": "One of your number has been removed from proceedings.",
       "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:59:16.682448+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27470,7 +27533,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "baeb8b1bcbb9b9a3374f56777508cc409d5df4e3",
+        "blob_sha": "a3fd1bd882e546da5231dd73e47c7beb95fb9a33",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:59:39.977085+00:00"
+      }
     }
   ]
 }
