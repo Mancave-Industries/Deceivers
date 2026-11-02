@@ -28569,7 +28569,7 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735506+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28587,7 +28587,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "c0f41b89c186aa9020dc17e82ab9ec50c423665a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:15.587062+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28596,7 +28603,7 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/lily/opening/opening_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735522+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28614,7 +28621,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "b36298cc9b1f94625505ef0bcac82e623a39ab67",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:16.366324+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28623,7 +28637,7 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/lily/opening/opening_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735524+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28641,7 +28655,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "d4b845648d8211638ff06cae3cb64dc875abd285",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:17.178623+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28650,7 +28671,7 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/lily/opening/opening_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735526+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28668,7 +28689,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "df4543c6803a07e4c77e1e448b6055db72f98caf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:17.926394+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28677,7 +28705,7 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/lily/opening/opening_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735527+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28695,7 +28723,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "1ac28c90833bd7ca82e52d1e8171218e865af398",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:18.700928+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28704,7 +28739,7 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/lily/opening/opening_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735529+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28722,7 +28757,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "c1ec7bd8fb6a72574ebbbe791d19afb1fceef19e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:19.505030+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28731,7 +28773,7 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/lily/final_voting/final_voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735530+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28749,7 +28791,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "19eaf6c29886f24c8dbbaef6b49f84d2cd09dd5e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:20.201134+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28758,7 +28807,7 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/lily/banish_again/banish_again_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735532+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28776,7 +28825,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "1d67ebb8bca967ae01a8025b4c71a9c30458e978",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:20.899384+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28785,7 +28841,7 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/lily/quiet_night/quiet_night_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735533+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28803,7 +28859,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "51db45b905930573b59fc4115a9325dbd2023c7c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:21.524923+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -28812,7 +28875,7 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/lily/shield_saved/shield_saved_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:00:54.735534+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -28830,7 +28893,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f2bf1129c95932ad83ff947125e19f6b81e2b6b",
+        "blob_sha": "f4cc851ad9586e1208e567b387296ad164276116",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:01:22.219847+00:00"
+      }
     }
   ]
 }
