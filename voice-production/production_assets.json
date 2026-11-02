@@ -29929,8 +29929,25 @@
       "text": "A quiet handover, please.",
       "script_sha256": "e395ee526a917e6c605702a62faee203ed46a7548b3ceaa6b98b68cf73080eb2",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_023.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889348+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889348+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4FsAnCNsiOJRzbwgMdqG",
+        "request_id": "XcpMPuQtnff2Sk53F0ay"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:34.947914+00:00",
+      "sha256": "77fab9b3231f8ab01679e92f8bbcd3da768cae1ef23f146679ca4d5324fe83b0",
+      "git_blob_sha": "6d9ec3c220e386eed813b154c4c04479003b0ee7",
+      "size_bytes": 31807,
+      "duration_seconds": 1.959184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29939,8 +29956,25 @@
       "text": "Off it goes to the next player.",
       "script_sha256": "699df641f6c788b1f9007c5af916b52dd64227adbd131b1e5d7f695fed9c8e7b",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_024.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889366+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889366+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JR1Dpo2bDpm8adDGS0fb",
+        "request_id": "vpNOflXCA789MSZBzvBs"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:35.932470+00:00",
+      "sha256": "dc474dc9a54ee644ad28a0298f4dafc7dcb30997899eed1a805efcb5ced7d8e6",
+      "git_blob_sha": "4a69b03012cf91f961ca4b360e6c6b18b546874a",
+      "size_bytes": 34315,
+      "duration_seconds": 2.115918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29949,8 +29983,25 @@
       "text": "Don't make a ceremony of it. That's my job.",
       "script_sha256": "21fd56362a2c72b851b8d80946a30a6c699cad6590cd2751382a24029c15eb00",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_025.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889368+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889368+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3U4WUcG2TPm6I7czyy6P",
+        "request_id": "YIaUiom8tFNk1UAS6yvG"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:37.138701+00:00",
+      "sha256": "35b30c6aa63e076cbeed8400145cc4c0dfd23b9475b4174220d86eacb2b2ae20",
+      "git_blob_sha": "e10a2800c8e9584493ca0a2644863dcd98490c8b",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29959,8 +30010,25 @@
       "text": "Next player. And not a word.",
       "script_sha256": "a1db20b4a072df925c5aae7d688b28f3e719e46b7c91a37d6b30a53fe96c5d4c",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_026.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889369+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889369+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "qB7a17IfQmUxPzvJu2z8",
+        "request_id": "HjoX0Rsf2dnvJyNl5seu"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:38.172663+00:00",
+      "sha256": "e58d649001937c7085a6ecf44d0f92effa56ebbbefc1682a6b41aea2cd604bfe",
+      "git_blob_sha": "687c083a20064cafd47e39c3ba75526f861706f8",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29969,8 +30037,25 @@
       "text": "A discreet little exchange. Lovely.",
       "script_sha256": "b182fa65380ef76ca7989c75bce8b09ca735026a73c682c113b01a804ea323a4",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_027.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889371+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889371+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2GLuHdCZ2VdyMRU1hy7v",
+        "request_id": "C0IltOWOJyb3ylKAgByk"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:39.115150+00:00",
+      "sha256": "e0b595f297f85e199887886f27863bc2985c329674087a098dcd5ff7436d4960",
+      "git_blob_sha": "b84f9483cfc6fccaf8e61a78974b5ae32c92984e",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29979,8 +30064,25 @@
       "text": "Pass it along. Eyes elsewhere.",
       "script_sha256": "7d5a1b681787273ca38c4d288533de7486e2577467bf3df453302bb2439e0a63",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_028.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889372+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889372+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3QiE6IERxoJOV6FcthXQ",
+        "request_id": "Gz2aD8JAykebu3jmzw1g"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:40.041283+00:00",
+      "sha256": "e999b90eb5a539cddc633bde9fe37386b43e3f94c1caf9c3520f3ca397ed670b",
+      "git_blob_sha": "98c1e78eb6eae48bb53ac16e3ae02df0f351e450",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29989,8 +30091,25 @@
       "text": "Next turn. Same rules, fewer questions.",
       "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_029.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889373+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889373+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "8jMlHDt0ZkZrftNfgtq1",
+        "request_id": "0pWUNexilTfOH0BTO5AK"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:41.038596+00:00",
+      "sha256": "bca56f7af2d2cdef68061e0ad84a2d409e8d741504b333207d88e6f76519bada",
+      "git_blob_sha": "0758d4431cf4c7c22514097c202b95efec750084",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -29999,8 +30118,25 @@
       "text": "The phone, please. Not the whole table.",
       "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_030.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889375+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889375+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "iVlbjJ6RMos9wDy6EQ1w",
+        "request_id": "npDfXU49bgWPRAocQSm0"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:42.003989+00:00",
+      "sha256": "0a228640e513f8faf200a2d1829880cc6f3917066d7906ba9fbc4e73c19784ec",
+      "git_blob_sha": "2be70da76288b28b83202a7042db8909d0c9c120",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30009,8 +30145,25 @@
       "text": "A little less staring, perhaps.",
       "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_031.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889376+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889376+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4Tt1ASbgZ67aMGAihOtH",
+        "request_id": "XRotYdRTtbTNhNOZ9sdu"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:42.906653+00:00",
+      "sha256": "7db07b14e3639920bbef7a3e87edaf07699f38723e02bd57991b107b396e1d5f",
+      "git_blob_sha": "6921aea372c1461ab6b08c4415e1d7dfb3af7f27",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30019,8 +30172,25 @@
       "text": "Next player. Keep the screen private.",
       "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_032.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:32.889377+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:32.889377+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yrpAs6Vg2xeaR6aY0LnA",
+        "request_id": "sibg3GG6lulc8nczaEY0"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:44.058092+00:00",
+      "sha256": "6b6ca14155bb12830c0e2514f80bd274e39923400461e845210dc39c1b3ce019",
+      "git_blob_sha": "0b33a1606e16d6542c1850923c06cb0afe94bda5",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
