@@ -32989,7 +32989,7 @@
       "text": "The tally is complete. Shall we?",
       "script_sha256": "27706b9e0aff8492154b0821b9659fcb82444bbc13e33d2991458c34fe96c2aa",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167600+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33007,7 +33007,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "0e947c194d873ef9bc5632c8a7c5ef29e6b0d431",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:06.212101+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33016,7 +33023,7 @@
       "text": "Well, that's democracy for you.",
       "script_sha256": "27412428415531822f01f163269ad655c72b191fb5f3d6eecd686430a42631a4",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167617+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33034,7 +33041,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "ac099c49e4bcd9b7e530ccffec557f83d80864fe",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:06.853433+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33043,7 +33057,7 @@
       "text": "The votes are locked. Here comes the awkward bit.",
       "script_sha256": "b13efff249969ec29cc8e48143f92ee7d2679b0a684e3b2e511ac8cf0c5615e3",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167619+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33061,7 +33075,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "a96afa9e618e4fee128e7cf9cacff26590322b6b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:07.495242+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33070,7 +33091,7 @@
       "text": "A player dispatched. Sleep well, everyone. If you can.",
       "script_sha256": "d4356f861b2d6d3d2b547d0eef038d46b87a0fb40f927db4fa11551585b0aa16",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167620+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33088,7 +33109,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "1d5b138abebe1b1ab21ef25b99edee22329b1a77",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:08.115705+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33097,7 +33125,7 @@
       "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
       "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167622+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33115,7 +33143,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "508cd8d17a01be3167ea934afefcd570b58fe881",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:08.857554+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33124,7 +33159,7 @@
       "text": "A player has been murdered. The night was not kind.",
       "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167623+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33142,7 +33177,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "efc3c796deed324b8adbf1d96869860d3f84b048",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:09.452510+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33151,7 +33193,7 @@
       "text": "A chair sits empty. A charming start to the day.",
       "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167625+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33169,7 +33211,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "65d93a3fa6a9262a10ac49c31d1e67f8a694478a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:10.114235+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33178,7 +33227,7 @@
       "text": "Someone didn't make it through the night. How terribly rude.",
       "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167626+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33196,7 +33245,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "cd7158ef39e64336314986b31d31cf124cb62c9b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:10.766688+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33205,7 +33261,7 @@
       "text": "A murder has occurred. I trust everyone slept soundly.",
       "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167628+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33223,7 +33279,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "8c7956e3814f47ef72f1285fcd12e1bfc211ddfc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:11.414083+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -33232,7 +33295,7 @@
       "text": "A player gone. The plot thickens.",
       "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:50.167629+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -33250,7 +33313,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "bfd68ae57c76d7588a685c8e30d094b4d352abeb",
+        "blob_sha": "c36a251f621e5268b2f17feef6be4b11e8807909",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:06:12.106612+00:00"
+      }
     }
   ]
 }
