@@ -10889,8 +10889,25 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/victor/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527355+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527355+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "eVMMt2h9yfzP6u9fnf91",
+        "request_id": "jT1Qe2xWSiSFBxfwHYm6"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:24.931678+00:00",
+      "sha256": "766afc03a905bd2dc73cc5d9a99f9f4ce3e49b57044ef24a486808be375b8f34",
+      "git_blob_sha": "0287529b1c113bc907b0d6324320abf46f193090",
+      "size_bytes": 59811,
+      "duration_seconds": 3.709388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10899,8 +10916,25 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/victor/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527374+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527374+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "osliWtYGgY43F8VyDLQV",
+        "request_id": "IYLVY3LojvtncOCZGzLa"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:26.067262+00:00",
+      "sha256": "5be221080220e804a90d44d96fcf81dfbc3c578b0c6564e6325cd2f3563008d9",
+      "git_blob_sha": "c5338ae702859b55e67c3873784aae5553f954f6",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10909,8 +10943,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/victor/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527377+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527377+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QH67voGgFzaucKxUMEG2",
+        "request_id": "RqKOYSlVswLKG9jHsP71"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:27.499690+00:00",
+      "sha256": "a5f36ef42d14ac79aa98f261d4f5d50e7d565ff8a818103d700f63ff49012cb4",
+      "git_blob_sha": "2e7ff20b3d7b1aa639e905dc2aee5b764307a4e9",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10919,8 +10970,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/victor/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527379+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527379+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "TIKH2EQJ4nkD7S9d6xeJ",
+        "request_id": "uPH2oUD2npxv1TO7B1d6"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:28.509186+00:00",
+      "sha256": "dc6d657e07f8cb5f60c9abaebb7297cdc8746daa0e38cd3fc383b517c45f6111",
+      "git_blob_sha": "2fdf5400a27d27f2da4c8d8ec2fb3a8e3a833277",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10929,8 +10997,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/victor/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527381+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527381+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1Jizn46CtessPRB7FmVJ",
+        "request_id": "epkFxlR9lGTaS1ChGiD4"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:29.765806+00:00",
+      "sha256": "a9308e567cd97cbfacb13930eecf88471ffafd60693ca7d97b2f195dcfa0da09",
+      "git_blob_sha": "e0e089c46335bb63514ff334ae1bff32acb7b485",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10939,8 +11024,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/victor/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527383+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527383+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KGn2wSSNw8kBL9aa5bgF",
+        "request_id": "TjP1wsqlOCcIOBwP56EC"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:32.520355+00:00",
+      "sha256": "d3b3742ba0cfc82c858444d92b1d6981f2a78b341da7587b7bf3932e27c69750",
+      "git_blob_sha": "5fb43250a1d865776034882d144569a497196637",
+      "size_bytes": 177675,
+      "duration_seconds": 11.075918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10949,8 +11051,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/victor/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527384+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527384+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "R7HdlLqjx2Cq0iHX3KOG",
+        "request_id": "0g8HxPRWnsDA1kxyTtSD"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:34.508786+00:00",
+      "sha256": "415a12d09595934e38a11de9c0fa3800c0e8ba5f9b0fd982834eac812c04e803",
+      "git_blob_sha": "60c089f3780a460edbd97187a0a6c9414d472d20",
+      "size_bytes": 116235,
+      "duration_seconds": 7.235918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10959,8 +11078,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/victor/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527386+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527386+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wdE1BDjqPk116A0pKT44",
+        "request_id": "PQ7bIEaA5X7pnvuy4kDy"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:36.505272+00:00",
+      "sha256": "8b7dac858b7e9081a6da9f4034213544d67da480b911d4d7914b12f715dbf880",
+      "git_blob_sha": "29ea717d5f83911fc37cdc929e2746b5ab49cf89",
+      "size_bytes": 112474,
+      "duration_seconds": 7.000816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10969,8 +11105,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/victor/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527388+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527388+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "guTNxWkkmRmYVZsD8hzK",
+        "request_id": "M79dSjaaK2vgrmzeFJM3"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:38.406500+00:00",
+      "sha256": "90f319db6a58120dc8d720dc83d20162bdeafbf6d73095abcb06304c6e510e61",
+      "git_blob_sha": "b2afd05d5e27ee9288fb27eafab62b118acbfd84",
+      "size_bytes": 126684,
+      "duration_seconds": 7.88898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -10979,8 +11132,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/victor/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:41:22.527390+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:41:22.527390+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1KrVnc3SW7FkeSzoj1Db",
+        "request_id": "kwAt4QWbUneONxTkKQAU"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:41:39.880401+00:00",
+      "sha256": "df02a1dd4f26726e4c1a9fe8b8edf54f121a95bde2277d97773da96efbd6161a",
+      "git_blob_sha": "cf3049fec1963bd66a230ab6247b2a6444453345",
+      "size_bytes": 82798,
+      "duration_seconds": 5.146122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
