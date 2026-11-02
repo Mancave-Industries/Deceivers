@@ -23469,8 +23469,25 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984205+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984205+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FwTwV4ostF6sDkOrCnuu",
+        "request_id": "e2OQdrPTLVViXLzVK68A"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:14.051456+00:00",
+      "sha256": "4ad73e0a867d67a91c8cd7923c6b91aa61db8bbd501be53510149f76e41840d0",
+      "git_blob_sha": "9ae595ecaab089c7c399819172b79ca29d59c9ee",
+      "size_bytes": 30554,
+      "duration_seconds": 1.880816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23479,8 +23496,25 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984225+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984225+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ubo9lNgtem8TUGTFuk0O",
+        "request_id": "Clv9K1DVBffqN97j5Qif"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:15.024792+00:00",
+      "sha256": "475bd6e054c4dbfd41e8ba81e96edeb9e98d9c5a23a4d307dc7271c78ff37767",
+      "git_blob_sha": "d70a86e3e8764875ce9ba12b4b4a08f9e601722e",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23489,8 +23523,25 @@
       "text": "Pass the phone. Keep your thoughts to yourself.",
       "script_sha256": "0ced5bfca984ddf17eefbebe921c3022e006b86f62ee906eb3b599ff992dd1f1",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984227+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984227+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "njvV2iaw3jRjg1NQOE6H",
+        "request_id": "tLANSM4hTklmnTVR63iu"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:16.261150+00:00",
+      "sha256": "f0e508d53153835f6518d78a996af8203b3b50b95c0d2f84b24483be34088763",
+      "git_blob_sha": "31b33ca6c3d93665c5adfd94210786bd08785086",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23499,8 +23550,25 @@
       "text": "Next player. Eyes on your own business.",
       "script_sha256": "60bf1aa59f7a6b848909ec0e74a6c1910ae73922c0312289c3e0c23234d302f7",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984228+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984228+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "I6RP5f4itM3GGrjkiBHz",
+        "request_id": "vXp0PPRujaz9DAmgDnr3"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:17.381837+00:00",
+      "sha256": "2b2aecf6a9b5e4762c07d1c1f56632c39c3d95e516f6cdeee21db5be7288351b",
+      "git_blob_sha": "c814c2ba1725debe56640ffbd6dca13ca9dd7c1c",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23509,8 +23577,25 @@
       "text": "Round it goes. Round and round.",
       "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984230+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984230+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "zwevUkUNhKQwt6bP0VW4",
+        "request_id": "XnHcu0jq2cqmkTe6iQ50"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:18.417130+00:00",
+      "sha256": "6f70410d79aa9fcc338e95146fb2b39001483ee2c83569567e8440ed8857ecaa",
+      "git_blob_sha": "d616bbcb4d7437a9dda5f342ece4eed16e1ab3f2",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23519,8 +23604,25 @@
       "text": "A swift handover, if you please.",
       "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984231+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984231+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HfrAEcuftmH1DGJlvLBk",
+        "request_id": "8TmhCbnlJy835V2G3Uvk"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:19.252883+00:00",
+      "sha256": "57350ccf32e01bec5650cfb1fe0e08e050077f727354f5f3f4cc7d4d29636099",
+      "git_blob_sha": "1daa625522eefb0e1cf17eacff802ad3740d544b",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23529,8 +23631,25 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984233+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984233+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "T4DalAYeDWnGdHOkN5ry",
+        "request_id": "ecuoOV4f9fzn1UyT8Lic"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:20.117435+00:00",
+      "sha256": "e8c301688f6e3b52a68303439978ddeea841db8170206270fbef45c19d828b51",
+      "git_blob_sha": "7f04540e9b09e8c8c68f12ad961232398643bcc1",
+      "size_bytes": 36823,
+      "duration_seconds": 2.272653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23539,8 +23658,25 @@
       "text": "The next player awaits. Probably.",
       "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984234+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984234+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "R48UuA0qu5PoUxxBr804",
+        "request_id": "lqhGnpkdF7p40steZYqe"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:21.111332+00:00",
+      "sha256": "3240854f8343e37859b400327ea3be16f0cf2046381dfedb99fa3f4afe237c8a",
+      "git_blob_sha": "c987e8c1a6352e5c45f4de025671e407a972623f",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23549,8 +23685,25 @@
       "text": "Your turn is over. How tragic.",
       "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984236+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984236+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "p0DDwCwCvilODSgHwv84",
+        "request_id": "VGUWH47bDuTuVzFZqXVC"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:22.111548+00:00",
+      "sha256": "417e9c7bae186cf3b5cd34cadff109f9c75d73d3cf59976a247c1ec548d7c492",
+      "git_blob_sha": "94d3f716d51a550015f61490cf46033f927d8b73",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -23559,8 +23712,25 @@
       "text": "Pass it on, and look innocent.",
       "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:55:11.984237+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:55:11.984237+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "q58e1yfr81OiV1qURKH6",
+        "request_id": "Plb1l1b1BkqC2Q5Ml4gc"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:55:23.111767+00:00",
+      "sha256": "6da913d830dfe33d9caea81707db5305186079741e31f3c6bca248545d37dccf",
+      "git_blob_sha": "614d220b90d16dbe49aeb2a2b3fdb2736d62adcd",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
