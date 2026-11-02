@@ -30269,8 +30269,25 @@
       "text": "Round we go again. Delightful.",
       "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_033.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892072+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892072+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "fgMYqyhu00DRqOVy26I0",
+        "request_id": "hsKlP80cokXw1gurdloe"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:56.282638+00:00",
+      "sha256": "18750b6714e432ff444ce1fb03364140c75f8a461252e72b5c06fae4dba04c04",
+      "git_blob_sha": "247171a22083c66dffdf83f653d9dba430868749",
+      "size_bytes": 44764,
+      "duration_seconds": 2.76898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30279,8 +30296,25 @@
       "text": "Pass it over. No hovering.",
       "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_034.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892091+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892091+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IYaqwH2qakCQ5ZgBvmIs",
+        "request_id": "3j83beDfPpxyXrxTGSRX"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:57.193011+00:00",
+      "sha256": "88c1f643eb47f6d73315494b2bec99522b5abbed7f2eb1c0f74fa25c2012e0c7",
+      "git_blob_sha": "146aa6b4c3c71a9526dc4226f2524e6df4e3a888",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30289,8 +30323,25 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892093+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892093+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VLyuXFLOHhbXCZKFYChx",
+        "request_id": "CBXmdvHqG3GfV8sNYXW4"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:57.968116+00:00",
+      "sha256": "36e341c9b10fbbed0bf771a828d7dd19f85da08d68d5c3f8d04b475f2446f3b1",
+      "git_blob_sha": "0a2fde7d126a4c71c715782f85b621b71dca8363",
+      "size_bytes": 33061,
+      "duration_seconds": 2.037551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30299,8 +30350,25 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892095+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892095+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wrjQsnSTlNouGXAzBXY4",
+        "request_id": "b5IUIyWEseJC0A8EqVYr"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:58.946548+00:00",
+      "sha256": "1b9266cb091ca850459c1f576969a0679be1336a57b118729026520de8916c08",
+      "git_blob_sha": "e8a979bba0f5a904954344b03c6952183d3399a7",
+      "size_bytes": 44764,
+      "duration_seconds": 2.76898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30309,8 +30377,25 @@
       "text": "Keep it moving, my dears.",
       "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_037.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892097+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892097+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QnX6cVhKdPdK2vEqcvup",
+        "request_id": "7K6mGhISGzVL7XuKs2Go"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:02:59.738805+00:00",
+      "sha256": "01cd175517841d560915ab1cd126b92f8d2e82190230363a2d5e345b8a1133b6",
+      "git_blob_sha": "e9f365282f8ad20cc1fb0eb553363a48d5b8798f",
+      "size_bytes": 28046,
+      "duration_seconds": 1.724082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30319,8 +30404,25 @@
       "text": "Next player, and mind your manners.",
       "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_038.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892099+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892099+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "w5dbRecKVWSv2MMbvcGz",
+        "request_id": "2qASbB6kyGij16GYSF8H"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:00.752103+00:00",
+      "sha256": "516b24129d6759006d65cf4d35670d35f228c8d16d43e9846139ed244c74144f",
+      "git_blob_sha": "7dfbb8ed35f6eea7d9c580eead4e2442f79a42e5",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30329,8 +30431,25 @@
       "text": "Off you go. Quiet as mice.",
       "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_039.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892100+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892100+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lB0Mh7V8SORdYC2NXPLv",
+        "request_id": "v9zD0lw0VnsQBBt3LBPx"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:01.667975+00:00",
+      "sha256": "3011958b9cf4f7941217e38bc317265e5e375f62a190928efc047304130c206b",
+      "git_blob_sha": "c5e8583b7cfd6ee906787e7c2cf8c9f21600c8ae",
+      "size_bytes": 40585,
+      "duration_seconds": 2.507755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30339,8 +30458,25 @@
       "text": "Pass the phone. I'll wait. Briefly.",
       "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
       "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_040.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892102+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892102+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FPVUhnjNWcEyEzcloqqf",
+        "request_id": "LRx6ADkq3o9KjGRFbIKF"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:02.763165+00:00",
+      "sha256": "168cca20965fb789eca5ce2a12461501865580053cc1aee93344612532c88e58",
+      "git_blob_sha": "9c1ff1a8f0194c994db4f2fe57abf76235461147",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30349,8 +30485,25 @@
       "text": "Night falls. Keep your card secret.",
       "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892103+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892103+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "g60PqAma7ls7Nj8HL650",
+        "request_id": "GiI5uSVzJNOvjaVOUQkA"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:03.790794+00:00",
+      "sha256": "c177cb9dfbf3154388183b673aeca3e0c07ac95d827d781b656e66093789d33f",
+      "git_blob_sha": "1619a1699751152d0f6ffb559177a1a300f0bd2d",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30359,8 +30512,25 @@
       "text": "The night falls. Guard your card.",
       "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:02:53.892105+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:02:53.892105+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HD4EoBYqsK6Vz7p3NJcD",
+        "request_id": "lkz2nTM2cqewhbPB2e71"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:04.751181+00:00",
+      "sha256": "99d5c531a848f62c4c08e17adb76d1755caa4292523a6985a89d3156497cfa21",
+      "git_blob_sha": "83d617e2aa4b9c164b17f23ac4a6f1d279ae5aa4",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
