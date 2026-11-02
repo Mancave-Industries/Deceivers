@@ -2729,8 +2729,25 @@
       "text": "Time to separate the stories from the storytellers.",
       "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
       "path": "assets/audio/hosts/david/discussion/discussion_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122777+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122777+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "zJQ2TlGMxDeXn4LF9aO9",
+        "request_id": "8k6jX2hmyYgzD03kPVrU"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:31.386131+00:00",
+      "sha256": "6b351df5db4ef00b19d9eb3007959faa79ee15ffe5bc0a8cd07b0d0d19a40beb",
+      "git_blob_sha": "93733eb4595fa4683d819624b6bbf0ff5da8280f",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2739,8 +2756,25 @@
       "text": "The discussion is yours. Use it wisely.",
       "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
       "path": "assets/audio/hosts/david/discussion/discussion_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122796+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122796+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MhJH38dUc1FmMekb1cOj",
+        "request_id": "G1L08CIuBgLk1sPCyijN"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:32.558776+00:00",
+      "sha256": "614778dad0d25bfe9aacbfd48437db550503910278b541b9f845cbd480c4dcdd",
+      "git_blob_sha": "c17de38e5568a5c1b29c350983170ce4df09a164",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2749,8 +2783,25 @@
       "text": "You may now begin your collective detective work.",
       "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
       "path": "assets/audio/hosts/david/discussion/discussion_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122798+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122798+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "fVR1qRUp00Q6oijVMdB8",
+        "request_id": "1ZKmhwsxPw39K4JhpofF"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:33.588711+00:00",
+      "sha256": "c2511d0bff3475f30eece2975c7a90537133377ec64454db538109e2d31a2a31",
+      "git_blob_sha": "3b4e11f646fc33d81f6820f50d2f873f346b7649",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2759,8 +2810,25 @@
       "text": "The time for talk is over.",
       "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
       "path": "assets/audio/hosts/david/voting/voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122799+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122799+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xVVA03GsrwryN0Bc3wGx",
+        "request_id": "hUkF2yibwHmWgfOu3SIr"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:34.442740+00:00",
+      "sha256": "d89029e9512a3d1c9e97514da154d52788134064d34d7828634a52ef1ef813c1",
+      "git_blob_sha": "539b00aab9d9bba04322f1c8fb4a2695ad732195",
+      "size_bytes": 35569,
+      "duration_seconds": 2.194286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2769,8 +2837,25 @@
       "text": "Talk ends now.",
       "script_sha256": "1ac53ec663b05db7d1edf72e44ef6a0deb8ca922cf61b2dba05d3a407ad55fd2",
       "path": "assets/audio/hosts/david/voting/voting_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122801+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122801+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pTTlqtEwXyiomLnN5zpb",
+        "request_id": "tDZxJwNLBQliXO0KxD7B"
+      },
+      "provider_character_cost": "6",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:35.223071+00:00",
+      "sha256": "4626c24e6b5419cd8818553fa080edfc3d279accf5ac935f1ce356b73cd54dd6",
+      "git_blob_sha": "e90f1fb835ebec067c084b0166febfc72a56cb50",
+      "size_bytes": 26792,
+      "duration_seconds": 1.645714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2779,8 +2864,25 @@
       "text": "Enough talk. It is time to vote.",
       "script_sha256": "751fd48006ecbddf314539150d4a70c553f8efdc66b34acf25b60c74b1e96449",
       "path": "assets/audio/hosts/david/voting/voting_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122803+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122803+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pPhpcYXZ3CJC4WcZ89Xu",
+        "request_id": "dTEqhiB1kOXganL8DWWP"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:36.146390+00:00",
+      "sha256": "95c23e332a046d604bad4438adde9f60b973432e2fa6abcf8b50b9e57235f6a9",
+      "git_blob_sha": "6eeeacaac93f7f017598c3027746fd793160a22f",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2789,8 +2891,25 @@
       "text": "Time to vote. This should be enlightening.",
       "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
       "path": "assets/audio/hosts/david/voting/voting_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122804+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122804+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "XD2ohnIohzHlHGTSVoAG",
+        "request_id": "awVz7r6aJew7590nM28S"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:37.215348+00:00",
+      "sha256": "38067bf733ed1a7c04fa9f3ab70c8c92d03fe47964f096a57c65d3911d47bfeb",
+      "git_blob_sha": "e7a8251455afd7b6f5211dabad6689a2ed2ceb95",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2799,8 +2918,25 @@
       "text": "Make your choice. Preferably a good one.",
       "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
       "path": "assets/audio/hosts/david/voting/voting_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122806+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122806+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "35pZtBk5Fux0cEGXHJoF",
+        "request_id": "G8smC1cWHRdwsQ3qZ7IB"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:38.136178+00:00",
+      "sha256": "338196262f2417e69a374c889c3e44365bf2fbcf17d5fb3ae916f05d96d218fc",
+      "git_blob_sha": "9f698843b40f933480ebd49b0d918f7e5a2a560c",
+      "size_bytes": 44764,
+      "duration_seconds": 2.76898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2809,8 +2945,25 @@
       "text": "The talking shop is closed. Votes, please.",
       "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
       "path": "assets/audio/hosts/david/voting/voting_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122808+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122808+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WTOrG0TCRo7S1yC2awtM",
+        "request_id": "AsTFoF7bSNApecp668LE"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:39.145586+00:00",
+      "sha256": "adfa722bb01b94f10fb576258617303e7000336860ff60cf746eee28630ad800",
+      "git_blob_sha": "ce17b0766bce73a7e01430ff3660736fc2f266e7",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "david",
@@ -2819,8 +2972,25 @@
       "text": "Decisions, decisions. How terribly grown-up.",
       "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
       "path": "assets/audio/hosts/david/voting/voting_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:32:29.122810+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:32:29.122810+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "L5YRV7Jh9I5CWloo28k9",
+        "request_id": "Bv1RimyUTyYQfGBVL9C1"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:32:40.299132+00:00",
+      "sha256": "9e1a7dbdea0f94006d82d48a53de6bf1709e83f326e0d4b8c43a4717c9c072b1",
+      "git_blob_sha": "68a09d6b77e596f7b881321062ba8748d0a234c8",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
