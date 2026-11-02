@@ -28229,8 +28229,25 @@
       "text": "Truth prevails. I admit, I had my doubts.",
       "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783815+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783815+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "doHgVjDqVafFtbIAJ5Wj",
+        "request_id": "CvjG4oyRLel6THTg3Eqw"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:33.461271+00:00",
+      "sha256": "0f72ad9c59fd43fc0aceb44d44c4cee2549c74961e2a0a58310818021a037bf6",
+      "git_blob_sha": "ac1d147dd51202e948be2efd50ed9d9fa7a09e5d",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28239,8 +28256,25 @@
       "text": "A Loyal victory! How unexpectedly wholesome.",
       "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783835+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783835+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "UYT8rl2m0GQBWRIe3cYd",
+        "request_id": "iCy8xlxRVhNEYPJD5MW0"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:34.610367+00:00",
+      "sha256": "ecb88d2b0497f33b2fc8885ac47c4ddcb54548708a6170e2a7fb469519f2faab",
+      "git_blob_sha": "678bc9d134b6a9c56feb211e44d29987e0b14d7b",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28249,8 +28283,25 @@
       "text": "The lies have run out. Congratulations, detectives.",
       "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783838+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783838+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "z7VSJQrRtAdtzXKAl2xY",
+        "request_id": "65vsMJX4Gv4fTvafCts7"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:35.797742+00:00",
+      "sha256": "35570b71790f5a952dde978e3bd0f113de09a3c05538f9560cc78126ac4f1e96",
+      "git_blob_sha": "b16e384775e6c0a1a22ab19ca3cfcce8937c8f49",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28259,8 +28310,25 @@
       "text": "You've found your way through the deception. Eventually.",
       "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783840+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783840+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bkm9Ij9Ne4D6oQrSjsyB",
+        "request_id": "W6u8jY4jrOdhtLhAErZl"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:37.011348+00:00",
+      "sha256": "1c546702cbd2d53678bdb2e2edca788584f2154afccfe565c4df27f210a3a3ac",
+      "git_blob_sha": "0a117e1d276dc86626b6647b54ca09a1d74d14f2",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28269,8 +28337,25 @@
       "text": "The Loyal triumph. You may now look smug. Briefly.",
       "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783842+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783842+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7wc3dEJOnrcnk7OJjNSj",
+        "request_id": "4lXsuBhVVcCdUEoP5841"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:38.290833+00:00",
+      "sha256": "1b31bd13b7727aaa355a1f0a34d2cb60936d00759e8e88f7bb81b18dd2fa034b",
+      "git_blob_sha": "24426740d3ec89be8e717a92935c1bc6f24a6b85",
+      "size_bytes": 77783,
+      "duration_seconds": 4.832653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28279,8 +28364,25 @@
       "text": "The Deceivers win. What a delightful betrayal.",
       "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783844+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783844+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "fsvmKPkatlTBbfaLOLTE",
+        "request_id": "7OM1qsUrfWvNUKri0AhI"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:39.598797+00:00",
+      "sha256": "0ab211ca6a22def954f81f2211ad91220b2d80ad07e40654b37d590f233de122",
+      "git_blob_sha": "9ee0026841bbd77bdd158fc07003f6f537b06c3e",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28289,8 +28391,25 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783845+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783845+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "nqY4yH3mAtENqV5WldfG",
+        "request_id": "WwOxVkQceuYp0PuPZhFq"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:40.630284+00:00",
+      "sha256": "ad977a9650bf4c8a1ff886e440365b74e0ba974112eb750b0bf6cc89d11421b3",
+      "git_blob_sha": "9f174815fa51f53541d501542b35423fd0abb272",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28299,8 +28418,25 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783847+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783847+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dgMMYEUahFZJOMBJBhZe",
+        "request_id": "DBez9kXo44X5OcrfIzH9"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:41.733701+00:00",
+      "sha256": "85d34b822471eb3d9107f8f6ddb4457819fd6dd763aec075ff08235e959b4e26",
+      "git_blob_sha": "18377ecd1a4de256f4a9e9da846794854c36dc32",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28309,8 +28445,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783849+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783849+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VA0tMKYVx6z1vXpuJcdi",
+        "request_id": "lyZeM0tj32HQgmQvi1SN"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:43.262888+00:00",
+      "sha256": "acd6959f779ec020a9c7ba316f6ad9c6b7d64285fffdf9e248354420cd61139a",
+      "git_blob_sha": "64560a020534dc95ff36548df1e3840652167020",
+      "size_bytes": 77783,
+      "duration_seconds": 4.832653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -28319,8 +28472,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/lily/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:30.783851+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:30.783851+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OdRWpjBebWGCwFSIMGbM",
+        "request_id": "A3mbpXLRql4xiNSQjtfF"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:44.355337+00:00",
+      "sha256": "c1233a38cc041b2d5fdb9d6925a25da1ca702a454aed684159b6e01f9eae3e1a",
+      "git_blob_sha": "bbe8be0fc0d31de46ed2fc4f5ef2122907c1b112",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
