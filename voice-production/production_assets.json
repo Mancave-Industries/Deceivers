@@ -25169,7 +25169,7 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000082+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25187,7 +25187,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "6b83cd324c8744ab285b8afc9f6a740fb137ed4a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:16.665902+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25196,7 +25203,7 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/lily/gather/gather_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000097+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25214,7 +25221,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "b07dbe555ac68c2ea444cdec9795d4b8b00e18d4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:17.342909+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25223,7 +25237,7 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/lily/gather/gather_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000099+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25241,7 +25255,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "146de273065f45d3f8831c44f5688059b9f7308c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:17.983039+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25250,7 +25271,7 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/lily/gather/gather_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000101+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25268,7 +25289,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "41cd2337f9e2e59070d199b72fd68aa712cd9979",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:18.659959+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25277,7 +25305,7 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/lily/gather/gather_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000103+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25295,7 +25323,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "6e4aad804049908acad5988f0b8b48a29dc712c5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:19.380438+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25304,7 +25339,7 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/lily/gather/gather_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000104+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25322,7 +25357,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "8e2e58d227f7fe72507f204cdc661d9d2ec0c74c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:20.093823+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25331,7 +25373,7 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/lily/gather/gather_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000105+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25349,7 +25391,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "3a6fe13d420ea3e6e383fe2ea926b2b97bf70c0a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:20.823060+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25358,7 +25407,7 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/lily/gather/gather_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000106+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25376,7 +25425,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "1a8d2d565d1746fec8e32e98c43781278d5e53ec",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:21.498066+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25385,7 +25441,7 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/lily/gather/gather_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000107+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25403,7 +25459,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "cc90c1c50aa655e5cf79a009c184cd3acdfb1342",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:22.181210+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -25412,7 +25475,7 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/lily/gather/gather_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:57:02.000109+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -25430,7 +25493,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "460b3a4f2eb8d54ec657c6ebb68bd62fcb7e9e9d",
+        "blob_sha": "06e80445827348f89f1c3982ff7a81ed449ebada",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:57:22.839483+00:00"
+      }
     }
   ]
 }
