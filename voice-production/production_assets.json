@@ -5449,7 +5449,7 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/david/shield_saved/shield_saved_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544699+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5467,7 +5467,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "811c17b3701f0aac20968f4f6fcec6895cdc9ea3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:45.257398+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5476,7 +5483,7 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/david/tied_vote/tied_vote_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544716+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5494,7 +5501,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "ceb143fa8da85c52339fc8a61e40220fc81c482b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:46.074334+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5503,7 +5517,7 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/david/final_decision/final_decision_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544718+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5521,7 +5535,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "794572ff5bf09e7172831e4f13f1bcb1f5a27dea",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:46.892531+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5530,7 +5551,7 @@
       "text": "And now, the truth.",
       "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
       "path": "assets/audio/hosts/david/truth_reveal/truth_reveal_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544720+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5548,7 +5569,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "31914756424567432bb07def6f498a3fb9308163",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:47.648250+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5557,7 +5585,7 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/david/truth_reveal/truth_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544721+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5575,7 +5603,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "b7c98125c5d152c19faff9210a1596c1e793cc24",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:48.369755+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5584,7 +5619,7 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/david/series_closing/series_closing_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544722+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5602,7 +5637,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "209b63140bd82b29cb99069a1afcd02741163962",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:49.061984+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5611,7 +5653,7 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/david/farewell/farewell_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544723+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5629,7 +5671,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "821ded0e67e3737f8ad0e405b5346dfbb968b455",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:49.732590+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5638,7 +5687,7 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/david/rules_intro/rules_intro_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544725+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5656,7 +5705,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "7a62ff15f194cc9e9d4bb5f057bfe6f66ca0cfb6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:50.449843+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5665,7 +5721,7 @@
       "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
       "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
       "path": "assets/audio/hosts/david/rules_intro/rules_intro_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544726+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5683,7 +5739,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "a09a6cf85287b35c0ab7972b8b145554106ba1e7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:51.142441+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -5692,7 +5755,7 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/david/game_begins/game_begins_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:35:28.544727+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5710,7 +5773,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "995f6fd026ec780529fe659f5e04ace11698073c",
+        "blob_sha": "26555b12ad69a85f4da14774ed1480230d71c368",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:35:51.814776+00:00"
+      }
     }
   ]
 }
