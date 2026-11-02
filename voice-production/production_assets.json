@@ -9,7 +9,7 @@
       "text": "Next player, please. No peeking.",
       "script_sha256": "39717a51f67f5c402e642cc01118ee3c686851d813bd9a219756faa8bfc44951",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312398+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -27,7 +27,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "c718e44d8114b79e2429c7956c6a25cca746616a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:52.973617+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -36,7 +43,7 @@
       "text": "On we go. Quietly, if you wouldn't mind.",
       "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312429+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -54,7 +61,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "bd81b13b8be0dae705812573fa44e2ab4d7141df",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:53.675550+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -63,7 +77,7 @@
       "text": "Pass it along. The suspense is unbearable.",
       "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312432+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -81,7 +95,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "3bfac98065c5db2cd8d32c468638639ee8ebda4b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:54.303340+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -90,7 +111,7 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312434+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -108,7 +129,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "dba478aa8180bc797380d3778ff788c346b31a94",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:54.946731+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -117,7 +145,7 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312435+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -135,7 +163,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "c08906b88aa2e80db2de06eafc9721038b1ef14c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:55.591947+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -144,7 +179,7 @@
       "text": "Pass the phone. Keep your thoughts to yourself.",
       "script_sha256": "0ced5bfca984ddf17eefbebe921c3022e006b86f62ee906eb3b599ff992dd1f1",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312437+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -162,7 +197,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "daf9a3e10746ec635bc17debbe262eaeec62b35c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:56.271247+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -171,7 +213,7 @@
       "text": "Next player. Eyes on your own business.",
       "script_sha256": "60bf1aa59f7a6b848909ec0e74a6c1910ae73922c0312289c3e0c23234d302f7",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312438+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -189,7 +231,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "cdcc9d5b31f7a82056b060f638bc493af91d38fe",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:56.864154+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -198,7 +247,7 @@
       "text": "Round it goes. Round and round.",
       "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312439+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -216,7 +265,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "deadcfb1870d6df2bf7c3718bf955ab38e5d22a7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:57.535559+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -225,7 +281,7 @@
       "text": "A swift handover, if you please.",
       "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312440+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -243,7 +299,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "a5a6f3d1783c4c5a48215f111a3adfa49ce7568c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:58.229751+00:00"
+      }
     },
     {
       "host_id": "david",
@@ -252,7 +315,7 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/david/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:29:39.312441+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -270,7 +333,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "345ec82267cf0a337e48a8774fdb273a0f177fec",
+        "blob_sha": "633a7ed2d2919e9f3f195148eef0df628ef1d8dc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:29:58.875288+00:00"
+      }
     }
   ]
 }
