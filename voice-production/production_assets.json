@@ -7149,8 +7149,25 @@
       "text": "Night falls. Keep your card secret.",
       "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702645+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702645+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3EOFI4EebYCFkpTMaNe6",
+        "request_id": "g3SaRQ36rQWol8wpLAF4"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:18.860507+00:00",
+      "sha256": "d5af29aa73ac89902440e9523029c9a84ff022ebc9e473ffe7f0ca69ea238031",
+      "git_blob_sha": "0882d91c9dde2ce69233f89cc0f2dd56daa37a0b",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7159,8 +7176,25 @@
       "text": "The night falls. Guard your card.",
       "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702662+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702662+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "u2nQuERhM9gU3anxPJGm",
+        "request_id": "OdhHZeNqzldiXeLQVXiB"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:19.796654+00:00",
+      "sha256": "39fdea26d9f5e8364316f00b85208ea36dcf0cf50bf581b56d38dcfd33999934",
+      "git_blob_sha": "9287bb519f7dc23123078336bd218f02aeb13f33",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7169,8 +7203,25 @@
       "text": "Night has come. Keep it hidden.",
       "script_sha256": "7f154975ed384c859fc13b38985cbe228802e81204ab4bb2195c0fdba6cd7c48",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702664+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702664+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "36IJQm07ZMEocpoZSpwj",
+        "request_id": "pitBbr0fT53OtC1Qn8gt"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:20.636696+00:00",
+      "sha256": "e34fb4ba8f012a763392cab4f31ce50c12acfde0e90561ec41b4ee007e1618d5",
+      "git_blob_sha": "2ac4f350186558ad4de6ea5d69d9ec47bb23447c",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7179,8 +7230,25 @@
       "text": "Ah, darkness. Everyone's favourite cover story.",
       "script_sha256": "62388e496413d0ffba1f2b4204cef384ce2d04ccd59f139a34eb3d3f2e2eba2d",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702666+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702666+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xIV3KGkjJhr4hw1dnyAI",
+        "request_id": "QqpMIZ27zw3AqmoOIX09"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:21.914438+00:00",
+      "sha256": "1a514bf5071fa594e016a0e49584d70ef92d6030925f8df1d47b4b35c664ebb9",
+      "git_blob_sha": "f92609258ff97be4bb8708ca2579bfc3fa067d9d",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7189,8 +7257,25 @@
       "text": "The lights go down. So do my expectations.",
       "script_sha256": "57fb0d3d2aae3e50ed45f60c3c2b879007cb7b5d1c477f2baf364aaac5e3e84a",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702667+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702667+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "J2uSCpLUYqbkiOi4DpQo",
+        "request_id": "HBN9EdXQNJIXDGNZaggp"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:23.114242+00:00",
+      "sha256": "4621505a0df330689bedfdccd11ba19e28661cedc8ffa56d20d34ed0c3b0d6d2",
+      "git_blob_sha": "9c8fc7136ea2669bc9220b131aa0bcf2fcb6ddfd",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7199,8 +7284,25 @@
       "text": "Night is upon us. Try not to look guilty.",
       "script_sha256": "77222b126e03f8d021bb55179125451291d5c70ec1801f1b84d3939032fab757",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702669+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702669+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "prfZrJMMQUuPWLoj2mnK",
+        "request_id": "4n5HjctjNGOQoIv9wz4G"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:24.189738+00:00",
+      "sha256": "987829aad224e5d2ce369e72051b9bf577dc0b4c3192270ea3e86247a455d2ba",
+      "git_blob_sha": "1659737262928fc7c37a62c7bb50929492d08659",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7209,8 +7311,25 @@
       "text": "Another night. Another excellent opportunity to mistrust everyone.",
       "script_sha256": "7a45abe9c4f41199c3db7987c1c8d81f729c15b03d7671e569062615e9ff98c9",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702671+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702671+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mh5nTAHTL3z8cQsosoub",
+        "request_id": "Bwj88lkHcUaR5N8gvCsY"
+      },
+      "provider_character_cost": "29",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:25.488175+00:00",
+      "sha256": "5588b32de5825d838238bfb04dd73d3b7e11a40510afd9f9c3f85888a313b33e",
+      "git_blob_sha": "4de4d2299afab80c5bc62a8c405aa3bf712024e8",
+      "size_bytes": 82798,
+      "duration_seconds": 5.146122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7219,8 +7338,25 @@
       "text": "Darkness descends. Secrets remain secrets.",
       "script_sha256": "814d1b67ac56f491de61eec810566bbceaee096303538e1589342bed042e5bc8",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702672+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702672+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Rul0eiVj7d0wZscYm33p",
+        "request_id": "rgOhb0Tl7rx5QeK6HM0P"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:26.514377+00:00",
+      "sha256": "7569826a52668d83483a2e63d07632ab29e80bfef30cce1223aaa796b1b3a5b4",
+      "git_blob_sha": "75dca7a8a47d80631901e65a1e250e02ecef95b4",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7229,8 +7365,25 @@
       "text": "The sun has gone. How inconvenient.",
       "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702673+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702673+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "D3K3YWLiDQ1rAQldRXsa",
+        "request_id": "wYDjicPtY7O35cV4ROfJ"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:27.551214+00:00",
+      "sha256": "3bfc2a49b0d4a4f237a50e53438509e4a6bdac7ed12565f6c91d2d4442ae8744",
+      "git_blob_sha": "45f8c9852af6816de538e519c4facf7928ff1ebe",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -7239,8 +7392,25 @@
       "text": "And now, the night. How very atmospheric.",
       "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
       "path": "assets/audio/hosts/victor/night_falls/night_falls_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:37:16.702675+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:37:16.702675+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Xi6WeW9XDfyfEw6LJuD7",
+        "request_id": "wZmwfcr1ATdJ32TVQ7IL"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:28.729592+00:00",
+      "sha256": "cf2060f2ed6e923130397d11a82e48546718e85b2b3992814a685128d5d6282b",
+      "git_blob_sha": "ec5a432ab4659d18addb39bda2675d5fa4a31173",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
