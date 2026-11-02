@@ -27549,8 +27549,25 @@
       "text": "An unfortunate night for one of your fellow players.",
       "script_sha256": "28a800b258e4dcfc98ef0d03974fa3fcbf337f603c0eb68b794889fcf52e0106",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650559+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650559+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KgUvSWyfyjT8iUWaiA8w",
+        "request_id": "MzqMj2gzajkEFlTPcgfg"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:44.075005+00:00",
+      "sha256": "72bcf9c265b4c12711babb83fc9c23394948b8140d03bceda31a3d90f88d7aff",
+      "git_blob_sha": "30a0f222825e791fabf25c2e70f10e97e1b79cc3",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27559,8 +27576,25 @@
       "text": "A murder. Really, this neighbourhood.",
       "script_sha256": "104cfb902083477e1de1c0a315c30628f74ff3d48f235a1c3290a0a19aacdcdf",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650577+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650577+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "PU8aDgjN4MBAyT2J3ni3",
+        "request_id": "89vU6lhASP7id197I9WK"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:45.273096+00:00",
+      "sha256": "08fd5b8ca6f3cc69bbc37d96dc70e8014c1bd7128bf6a9f5cebdaf1e7cc5dbf0",
+      "git_blob_sha": "f4e33fa32186db3bddd00ddc894c50a83b39917d",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27569,8 +27603,25 @@
       "text": "A player is gone. And the rest of you have questions.",
       "script_sha256": "cea82aecfe34c6ba0f0543378a5ec87d50757650b3b4331217aefce0a0aadb15",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650579+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650579+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "p6SqiYPjpJ7U4pBTXPfv",
+        "request_id": "sib2xlWILABUHJ4zr3RP"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:46.689280+00:00",
+      "sha256": "ea554d48f3e6577ff623ef87a623f5033cf0c7f803228d6fc6f02f97a0223280",
+      "git_blob_sha": "e1aee9415c447fa50f146757d03f9668902400af",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27579,8 +27630,25 @@
       "text": "Someone was rather busy after dark.",
       "script_sha256": "f6cf0ac9debc1cdff94ae20c901bb11b6ba958deb7a748c21a0c3d677e6c75f4",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650581+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650581+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ib2Ong28HmlLuOWfUmWO",
+        "request_id": "FxVv48hVx46EnNkxZZf4"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:47.597586+00:00",
+      "sha256": "b8661e478d1b2916aa728241cb0c3cbd73ff2aff4880fe78931f0c32e53ff423",
+      "git_blob_sha": "9d8e1dad8ee2285df7d060bcc9afbd8add0d6e05",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27589,8 +27657,25 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650583+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650583+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "auW03LsZaApIF3YkPVbj",
+        "request_id": "3Q5EMImbEUfvme6O5vBk"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:48.615841+00:00",
+      "sha256": "3ddffd7b78140ddbc808e24168660d901c93a3f92ac771c12f28e0fd32c75054",
+      "git_blob_sha": "5fab910a872d21b561f73a8068a3cf25fcfb98ad",
+      "size_bytes": 38077,
+      "duration_seconds": 2.35102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27599,8 +27684,25 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650585+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650585+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "EdaoN5vn3iVNgr8eQjnh",
+        "request_id": "omn6ZSZLOMv9ePifKWWg"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:49.985444+00:00",
+      "sha256": "f1aafa7c65c732da191e3fa54f3d998ee7722ef62f50346342479482f23f6fc4",
+      "git_blob_sha": "734f14b016b06981f6a5d7a86578f9f1787b2e0b",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27609,8 +27711,25 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650587+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650587+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MLxRt32b9OBujxewLBYl",
+        "request_id": "SWNsc2U5sM0bGPvBdTC4"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:51.168043+00:00",
+      "sha256": "01a9a4131afd30bd5e0de91d0d922344d65896cfa2e9ab3024859d1e1c03b992",
+      "git_blob_sha": "0e85d64828212ad7949d384e73e098c907bbad5a",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27619,8 +27738,25 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650589+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650589+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "324EZOpidLgGGRXY21Ns",
+        "request_id": "PDF9hxQRXoef18PUTE0e"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:52.100243+00:00",
+      "sha256": "57d0c88003cdf9e77c5fcbaed04710138f5a01ee90373f3773996b3f3c98c053",
+      "git_blob_sha": "779bde25baa10c2a8b6703ab02c485abf5d90923",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27629,8 +27765,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650591+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650591+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "x5ezxbf4IjhYsghIfZ5U",
+        "request_id": "mctKPqWxmOTvj6eZnCgr"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:53.492037+00:00",
+      "sha256": "f914f226b5e7f6b07d050b232f0700a01ee6347334823227c563fb3ec9414330",
+      "git_blob_sha": "0b30c4ec75458a4e2b2d6952142943c8ac11365c",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27639,8 +27792,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:59:41.650593+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:59:41.650593+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "rsEch67FIroitnfVEjVo",
+        "request_id": "ndtkRUJGjX7vR6EHxZT4"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:59:54.637129+00:00",
+      "sha256": "e36f7baaa33b550b24d83e384cb5408f0adef5f1e06427878ed030a73eb8acad",
+      "git_blob_sha": "a6d688b99714ae946654da144cce012db49721da",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
