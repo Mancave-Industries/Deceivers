@@ -24829,8 +24829,25 @@
       "text": "The lights go down. So do my expectations.",
       "script_sha256": "57fb0d3d2aae3e50ed45f60c3c2b879007cb7b5d1c477f2baf364aaac5e3e84a",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933209+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933209+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "frBvGCyDSwNLyIzfWtPv",
+        "request_id": "MZKjcBjpbgNFLfpTRQOF"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:41.454146+00:00",
+      "sha256": "46602d6816209a93958ae31f029b2067d716d98e427529de1290677a8aef54cf",
+      "git_blob_sha": "87b642be688d10fb6dc86043a77b23d5f209e294",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24839,8 +24856,25 @@
       "text": "Night is upon us. Try not to look guilty.",
       "script_sha256": "77222b126e03f8d021bb55179125451291d5c70ec1801f1b84d3939032fab757",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933225+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933225+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NYOwwbiuj2oaXVDTYfpD",
+        "request_id": "lVAynejRph9XduX45rxr"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:42.522406+00:00",
+      "sha256": "75488ccbb92a5600e60593f777b2f423fe5e56dbdc5c037d42e8cde066827951",
+      "git_blob_sha": "455ee7d81f2daee806a805526c73ea804a79b7af",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24849,8 +24883,25 @@
       "text": "Another night. Another excellent opportunity to mistrust everyone.",
       "script_sha256": "7a45abe9c4f41199c3db7987c1c8d81f729c15b03d7671e569062615e9ff98c9",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933227+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933227+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2qqiKQxas8eThpp3ttd6",
+        "request_id": "TI0vgTVe1OD4V1u6B8qw"
+      },
+      "provider_character_cost": "29",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:43.874911+00:00",
+      "sha256": "b236bacf002868e01950cf9a376cec7a099752be242bb1b88c38b7abe56c8418",
+      "git_blob_sha": "d958576903c6b4e5240a2e4837575e5035690df9",
+      "size_bytes": 81545,
+      "duration_seconds": 5.067755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24859,8 +24910,25 @@
       "text": "Darkness descends. Secrets remain secrets.",
       "script_sha256": "814d1b67ac56f491de61eec810566bbceaee096303538e1589342bed042e5bc8",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933228+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933228+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CPzjTXt5zDA01ZcAKlMt",
+        "request_id": "BF9AIn4oDWzdqoDcckdX"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:45.068103+00:00",
+      "sha256": "1d7338fd5fb1013ad5e8f6caf0fba4b2446963f77ecf77104f71db6940438a52",
+      "git_blob_sha": "022a1d76d4d3f4670fb9588b4fd77f5add4ae9b1",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24869,8 +24937,25 @@
       "text": "The sun has gone. How inconvenient.",
       "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933230+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933230+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uWsplTGPaqYtvycLGZcA",
+        "request_id": "zLRZXEkYMttfsDaxuqZ8"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:46.061667+00:00",
+      "sha256": "beb320c96b03aa7d567a712eceb2b071cb9ce2afe42c4c763a75df9f9b3b09fb",
+      "git_blob_sha": "5bf7836ed8f7c51eec219b4ccdfa72331bccc8eb",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24879,8 +24964,25 @@
       "text": "And now, the night. How very atmospheric.",
       "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933231+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933231+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WjZQ0gDgRTxgYlsHin80",
+        "request_id": "I3GJPiAHSTOxbRx0TFke"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:47.207722+00:00",
+      "sha256": "07fe3ad6ecd9646705d9ad3f0e0169cfec1d4118b90ae738ef44c1784561767f",
+      "git_blob_sha": "deb3903601da62504512fa79c4bbe5ebc9036936",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24889,8 +24991,25 @@
       "text": "Time for a little darkness. Behave yourselves.",
       "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933233+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933233+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WRusWTTZZlokCxrRxzF2",
+        "request_id": "liSx5dvG2Tvg1q7xUES6"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:48.283663+00:00",
+      "sha256": "63684a09bcc21305db0259006cbad31ee66563326b1becc8be5e241e932b6561",
+      "git_blob_sha": "9fe438d74f6298d4cff0c0769667650e38d6ce55",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24899,8 +25018,25 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933234+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933234+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ouDbsg6gZXTsY8mabB58",
+        "request_id": "GIQ5TlAaRnf5u3JAFQ1l"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:49.355628+00:00",
+      "sha256": "7d9d78c9baa91196572c3a882065f7afe048850cd8d31b9ea8113c50476a4d8b",
+      "git_blob_sha": "18a68d1a79ae5810003bbd5b52f0e5143761335e",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24909,8 +25045,25 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933235+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933235+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "LUSRUJPpZr70oEfQgfl5",
+        "request_id": "36V9dbUPh7dNFE2tJsX5"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:50.424728+00:00",
+      "sha256": "34c9626fece88becdb93111dba93d3f65a4b488334b5909c3a7b64f79d934efa",
+      "git_blob_sha": "c3988e2106e92c80a71bc3d12d739bfebca17393",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -24919,8 +25072,25 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:56:38.933236+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:56:38.933236+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "aouSnEwieyuBJxWpS8WG",
+        "request_id": "6x1Mwx7gQe5puAfkiIH8"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:56:51.491253+00:00",
+      "sha256": "4a86cc6514c97be9b055da321c90996cb00049a2b3ea6fb32ea0012720da4ec6",
+      "git_blob_sha": "7ee18c6748f479629e522b9bcf758ce6321a9c5d",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
