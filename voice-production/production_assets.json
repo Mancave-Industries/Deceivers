@@ -2041,6 +2041,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:31:43.021564+00:00"
       }
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_008",
+      "text": "All present? Splendid. Phone in the middle.",
+      "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
+      "path": "assets/audio/hosts/david/gather/gather_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282393+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_009",
+      "text": "Circle up. Keep your hands where I can see them.",
+      "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
+      "path": "assets/audio/hosts/david/gather/gather_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282419+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_010",
+      "text": "Everyone together. Let's pretend we trust one another.",
+      "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
+      "path": "assets/audio/hosts/david/gather/gather_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282421+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_011",
+      "text": "Gather round the phone. A most peculiar altar.",
+      "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
+      "path": "assets/audio/hosts/david/gather/gather_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282425+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_012",
+      "text": "Back to the centre, if you please.",
+      "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
+      "path": "assets/audio/hosts/david/gather/gather_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282427+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_013",
+      "text": "All eyes here. The phone goes in the middle.",
+      "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
+      "path": "assets/audio/hosts/david/gather/gather_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282430+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_014",
+      "text": "Come along, everybody. No stragglers.",
+      "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
+      "path": "assets/audio/hosts/david/gather/gather_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282432+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "gather_015",
+      "text": "Form your circle. The fun is about to deteriorate.",
+      "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
+      "path": "assets/audio/hosts/david/gather/gather_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282434+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "discussion_001",
+      "text": "Discussion begins. Choose your words carefully.",
+      "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
+      "path": "assets/audio/hosts/david/discussion/discussion_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282437+00:00"
+    },
+    {
+      "host_id": "david",
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "clip_id": "discussion_002",
+      "text": "Talk amongst yourselves. Someone will regret it.",
+      "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
+      "path": "assets/audio/hosts/david/discussion/discussion_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:31:44.282438+00:00"
     }
   ]
 }
