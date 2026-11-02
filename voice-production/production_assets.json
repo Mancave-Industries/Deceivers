@@ -24481,6 +24481,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:56:16.847967+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_035",
+      "text": "The next person may proceed.",
+      "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_035.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228474+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_036",
+      "text": "A handover. Nothing more to report.",
+      "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_036.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228491+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_037",
+      "text": "Keep it moving, my dears.",
+      "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_037.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228493+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_038",
+      "text": "Next player, and mind your manners.",
+      "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_038.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228495+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_039",
+      "text": "Off you go. Quiet as mice.",
+      "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_039.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228497+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_040",
+      "text": "Pass the phone. I'll wait. Briefly.",
+      "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_040.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228500+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "night_falls_001",
+      "text": "Night falls. Keep your card secret.",
+      "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
+      "path": "assets/audio/hosts/lily/night_falls/night_falls_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228502+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "night_falls_002",
+      "text": "The night falls. Guard your card.",
+      "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
+      "path": "assets/audio/hosts/lily/night_falls/night_falls_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228504+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "night_falls_003",
+      "text": "Night has come. Keep it hidden.",
+      "script_sha256": "7f154975ed384c859fc13b38985cbe228802e81204ab4bb2195c0fdba6cd7c48",
+      "path": "assets/audio/hosts/lily/night_falls/night_falls_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228505+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "night_falls_004",
+      "text": "Ah, darkness. Everyone's favourite cover story.",
+      "script_sha256": "62388e496413d0ffba1f2b4204cef384ce2d04ccd59f139a34eb3d3f2e2eba2d",
+      "path": "assets/audio/hosts/lily/night_falls/night_falls_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:56:18.228507+00:00"
     }
   ]
 }
