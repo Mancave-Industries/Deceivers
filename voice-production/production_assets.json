@@ -30609,8 +30609,25 @@
       "text": "Night has come. Keep it hidden.",
       "script_sha256": "7f154975ed384c859fc13b38985cbe228802e81204ab4bb2195c0fdba6cd7c48",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628583+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628583+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "rERcax54qC9OYtOAcgd5",
+        "request_id": "zIoUidk5c0uHhca5QKs6"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:17.912462+00:00",
+      "sha256": "287530c47d487dcb5c61e70b82f84ea9b80809d6308174601edd3f8b08a57087",
+      "git_blob_sha": "d8ff2bb2a6cca0bcd60dc94d043a85266c8aedc3",
+      "size_bytes": 38077,
+      "duration_seconds": 2.35102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30619,8 +30636,25 @@
       "text": "Ah, darkness. Everyone's favourite cover story.",
       "script_sha256": "62388e496413d0ffba1f2b4204cef384ce2d04ccd59f139a34eb3d3f2e2eba2d",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628603+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628603+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ug1GK61hN1n9HftsIvTZ",
+        "request_id": "xOpYL5gnjfYUtQCPZY0y"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:19.301930+00:00",
+      "sha256": "24e28472b8643842e3dc39aae06a008cfe034672e68a18056409d05bdc3fafb8",
+      "git_blob_sha": "a654d8fa6b7dff71b00876755e55692849ea7e89",
+      "size_bytes": 71514,
+      "duration_seconds": 4.440816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30629,8 +30663,25 @@
       "text": "The lights go down. So do my expectations.",
       "script_sha256": "57fb0d3d2aae3e50ed45f60c3c2b879007cb7b5d1c477f2baf364aaac5e3e84a",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628605+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628605+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "5lKmjk3ngsTTFciGTeFp",
+        "request_id": "aSssPVCwrYItVLAGXLLL"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:20.429308+00:00",
+      "sha256": "a359344c0c2172f0c65355c9884c415ef7d5b2e32adf73a7c8ac176f11f0453b",
+      "git_blob_sha": "ec0fd20025791833151be2e0c378124452c77ac3",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30639,8 +30690,25 @@
       "text": "Night is upon us. Try not to look guilty.",
       "script_sha256": "77222b126e03f8d021bb55179125451291d5c70ec1801f1b84d3939032fab757",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628607+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628607+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7fAsNtclsx4bAyD1NHfn",
+        "request_id": "ZNDMMIT31jvSliMXcI0f"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:21.617351+00:00",
+      "sha256": "7e91f757f8cf88409f24420d381f601920ccb577ac89b160aa37edc62681363e",
+      "git_blob_sha": "108f03dd0ebe9e7fafffdda14fec36f2a4146922",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30649,8 +30717,25 @@
       "text": "Another night. Another excellent opportunity to mistrust everyone.",
       "script_sha256": "7a45abe9c4f41199c3db7987c1c8d81f729c15b03d7671e569062615e9ff98c9",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628609+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628609+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yQFbDgOOTq4eU4bin5pg",
+        "request_id": "cpWP15OHZt3SrODYRte6"
+      },
+      "provider_character_cost": "29",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:23.057741+00:00",
+      "sha256": "ef648e4a50222612342757a1cad96c6129b7fd0eb9a31017df58d5cee6971444",
+      "git_blob_sha": "6f38ac08cce7d060995eef3e547994795bb607e0",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30659,8 +30744,25 @@
       "text": "Darkness descends. Secrets remain secrets.",
       "script_sha256": "814d1b67ac56f491de61eec810566bbceaee096303538e1589342bed042e5bc8",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628612+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628612+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "BzqiRNdARjUsKrZlPbRp",
+        "request_id": "cxrEhs2GKwYbp5chkmtp"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:24.241718+00:00",
+      "sha256": "39610f5d94375408a0750e9a04d455e28cd888db4dc0196f046c3f243e8df806",
+      "git_blob_sha": "e64b0e6d27777ecc049757df39142d18c7084fd2",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30669,8 +30771,25 @@
       "text": "The sun has gone. How inconvenient.",
       "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628614+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628614+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bqa3qPkmhPP8IrH5FCNG",
+        "request_id": "dUbE3NLnfa4cQDhte6BU"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:25.203746+00:00",
+      "sha256": "71a3e94eb32e099f2679326a868b06287bb39f31680262a482d53c9f707e4938",
+      "git_blob_sha": "907ba25ea9dbcbe11c8e73f53d406d016879bcdb",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30679,8 +30798,25 @@
       "text": "And now, the night. How very atmospheric.",
       "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628616+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628616+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "qi7RywWQHw7XkqMcZMbm",
+        "request_id": "QwMT2zrxwAmsqWmxLB08"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:26.309346+00:00",
+      "sha256": "9cde9f5d278c3a5474e99adde9d4546299265ee741255b4026ca0a8044a2f681",
+      "git_blob_sha": "a87542dbaf0476cd3c7572cd6c543737f36cce4f",
+      "size_bytes": 67752,
+      "duration_seconds": 4.205714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30689,8 +30825,25 @@
       "text": "Time for a little darkness. Behave yourselves.",
       "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628617+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628617+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "cpgkQXelitC7dIiPeJQq",
+        "request_id": "BCPDQIEjzNSqG7mZTzmQ"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:27.400795+00:00",
+      "sha256": "9b2ca6394c4213743fc3af8b62a3e7ae37dc86643be616827b4091fec7711013",
+      "git_blob_sha": "734248a59d6160e2335f62060f634e17a2c31ade",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -30699,8 +30852,25 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/charlotte/night_falls/night_falls_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:03:14.628620+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:03:14.628620+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0BUvdr7ChqrumOh9OFZf",
+        "request_id": "hZbaYKIe5gd6aFNbTdiM"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:03:28.555406+00:00",
+      "sha256": "fcda487b6a6fadca9a0c79253c34b677e388415694ac91a1e99dca53f7ca5056",
+      "git_blob_sha": "3bed6b079134ee032e3cb4fffda61d31a0fef2b3",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
