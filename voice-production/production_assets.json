@@ -6809,8 +6809,25 @@
       "text": "A little less staring, perhaps.",
       "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_031.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984601+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984601+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VhmZvigPi6V9nj6jEz8K",
+        "request_id": "0GqqmIeyqmea7mt9AHZC"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:36:58.297450+00:00",
+      "sha256": "8f883dee424d2d8f61438e887eb1e02a8db4a809cad1d70696702a04ac651941",
+      "git_blob_sha": "b7e0dc2858148d6a3291196c88994a88cafa4a4b",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6819,8 +6836,25 @@
       "text": "Next player. Keep the screen private.",
       "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_032.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984619+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984619+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ScVVVqrUkxahZDNZUtVw",
+        "request_id": "SRXF9WodE0glJxk17kSZ"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:36:59.330169+00:00",
+      "sha256": "16b2dc5d7a9f8613cbe83a04bc864a0311ddd028d92fea616e9e43cd0787bca3",
+      "git_blob_sha": "090637715fbfaa64d5f5ed1e5e7bb6d7fc8bd5a7",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6829,8 +6863,25 @@
       "text": "Round we go again. Delightful.",
       "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_033.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984621+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984621+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0Dva996GH6rxGA9krcPj",
+        "request_id": "paYKPP64TeKG0gbvxmAo"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:00.429606+00:00",
+      "sha256": "08f56f0e7a83b49b789ba79a9a1838db346dd2d46841ba6f2a34a734cbea315b",
+      "git_blob_sha": "d13fe3671898644138ff60491fd07c46771aada5",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6839,8 +6890,25 @@
       "text": "Pass it over. No hovering.",
       "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_034.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984622+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984622+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "4louKTXHYVM61ERBSWl3",
+        "request_id": "YneTFITrRxUbf3Aw5gnB"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:01.312567+00:00",
+      "sha256": "3f8727973cfe0c58e442336da2ba3a6c9d6959667d89214a4cab9098f49cec7f",
+      "git_blob_sha": "056b2e704fc6bc2c18b1fc1b6f68847d1a5f6a4c",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6849,8 +6917,25 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984624+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984624+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "5tZW2fEhBNiLuCwbxVF0",
+        "request_id": "2Szv7H5vV6cFqzbmGL7y"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:02.471804+00:00",
+      "sha256": "350aea6c30703a7be68610bb471f41b4acf1a5db2acefd8e5c92d46ddc1fc5fa",
+      "git_blob_sha": "6bb7f00691c63a7d17d54fef8a40c5d11fdfb03e",
+      "size_bytes": 34315,
+      "duration_seconds": 2.115918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6859,8 +6944,25 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984625+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984625+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3O88qMGsIrPAgRhXtrmP",
+        "request_id": "qOJFr2Gac9YZmLtjUQCJ"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:03.314800+00:00",
+      "sha256": "23dfed7ba0bbacccac66ba940ae697372fd48dbf445d2f66fdadff9082b5c31c",
+      "git_blob_sha": "b3686398e674da0a66b05eb7a1aca8d747b29bde",
+      "size_bytes": 43510,
+      "duration_seconds": 2.690612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6869,8 +6971,25 @@
       "text": "Keep it moving, my dears.",
       "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_037.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984626+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984626+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xeRaR7mNGvFkkvvuhFoJ",
+        "request_id": "CnXO05h7OW3yxiYVxoeW"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:04.081098+00:00",
+      "sha256": "8a383d7927a1665ac5a245a5d0d1ac07e646293fc36ae1b9d1cab79485b99e5c",
+      "git_blob_sha": "63487b189d04e81d9a8723aade96378388f18312",
+      "size_bytes": 29300,
+      "duration_seconds": 1.802449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6879,8 +6998,25 @@
       "text": "Next player, and mind your manners.",
       "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_038.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984628+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984628+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "o7ZhpIlp1RMc7toojQQM",
+        "request_id": "9bLtFPN6jQYjMYvsz86D"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:05.023857+00:00",
+      "sha256": "17875b4dcb2f3a20e15573cb876f94334079cdfcdc01c5bfbf10a13b0a21563c",
+      "git_blob_sha": "12d3c0dee93a0ef539d7b5d1efe13175edc98422",
+      "size_bytes": 43510,
+      "duration_seconds": 2.690612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6889,8 +7025,25 @@
       "text": "Off you go. Quiet as mice.",
       "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_039.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984629+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984629+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "v7wXMuLAT6LenDCrAXf2",
+        "request_id": "5vAIh4hwEUJkYJwAPev1"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:05.916361+00:00",
+      "sha256": "17e0cdba2db258ed1ed82a1726d93123f09ff8fe0ce5498e2f4c0a59953528e6",
+      "git_blob_sha": "f7b57673f5c101cf1ef9d4c1ec2d5af7bbd8d880",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -6899,8 +7052,25 @@
       "text": "Pass the phone. I'll wait. Briefly.",
       "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
       "path": "assets/audio/hosts/victor/anonymous_handoff/anonymous_handoff_040.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:36:55.984630+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:36:55.984630+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3dChsrN8iXNJAPaj2L75",
+        "request_id": "qJ7fQCY3yzEeReR3EiHS"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:37:06.919523+00:00",
+      "sha256": "58d2175101822b2b6160d201b13c6b05932e8fff53bd9f590003a0b8cac1558f",
+      "git_blob_sha": "9cd69beac14636e2d68e050ef9992a918a818752",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
