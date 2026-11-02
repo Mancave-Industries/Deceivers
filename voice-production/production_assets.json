@@ -27881,6 +27881,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T11:00:03.702790+00:00"
       }
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "murder_reveal_020",
+      "text": "The night was eventful. Not in a good way.",
+      "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
+      "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_020.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118321+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_001",
+      "text": "And so, the circle tightens. How wonderfully uncomfortable.",
+      "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118339+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_002",
+      "text": "Here we are. The moment when every word matters.",
+      "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118341+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_003",
+      "text": "A few faces. A great many questions.",
+      "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118343+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_004",
+      "text": "The end approaches. Trust becomes expensive.",
+      "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118345+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_005",
+      "text": "A chance to be brilliantly right. Or spectacularly wrong.",
+      "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118346+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_006",
+      "text": "The Final Circle. Do try to make history, not a mess.",
+      "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118347+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_007",
+      "text": "The room is smaller. The stakes are not.",
+      "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118348+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "final_circle_008",
+      "text": "This is it. A final reckoning, with excellent company.",
+      "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
+      "path": "assets/audio/hosts/lily/final_circle/final_circle_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118350+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "loyal_victory_001",
+      "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
+      "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
+      "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:00:06.118351+00:00"
     }
   ]
 }
