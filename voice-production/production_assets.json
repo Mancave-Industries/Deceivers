@@ -27889,8 +27889,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/lily/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118321+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118321+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "z42Gx6izy8AyVzjXaXLi",
+        "request_id": "shg7uw2tTbwAQBEMhKqh"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:08.889985+00:00",
+      "sha256": "746a5c5c78641b451cbd6fab9cd9a157fb0aa6af33a080a6812bc7962337efcc",
+      "git_blob_sha": "2cd016ffdb78c5d0eb4e168da6e9a9024866f9c1",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27899,8 +27916,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118339+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118339+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "i1RzMwafKrGH8IwfMOWt",
+        "request_id": "54UT8FqOMoyjcm14INlo"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:10.167478+00:00",
+      "sha256": "4582c6c447fe0c23088e3bfdfe818b37cf2b0e2169e20a34165e24dc8d580f57",
+      "git_blob_sha": "6da6d17f15d8df47560269183a2b38ee8bd16044",
+      "size_bytes": 80291,
+      "duration_seconds": 4.989388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27909,8 +27943,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118341+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118341+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "X6NFz1v9JoQeOf8Hf2gG",
+        "request_id": "tkdi7cM1WlvNM46l6wol"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:11.478795+00:00",
+      "sha256": "2312ae70c3aa3bcc2dabb2fde1e1482ef08bae03ec405c9d395938507b87ecff",
+      "git_blob_sha": "12fbefa1001a009a1bacce761707e9406dbf1856",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27919,8 +27970,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118343+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118343+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9MqAd9pjzoE4cE6CM8Am",
+        "request_id": "6CGtP2L1nN0VoKxMXsXx"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:12.525491+00:00",
+      "sha256": "3d6ae3c72243182a0f917be1d541fa0c7feb1ad2563abc50022939fdb3662cd0",
+      "git_blob_sha": "1c4baddebfad81c5eeded6da7e829d1654f5c276",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27929,8 +27997,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118345+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118345+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "EMfEQvFKaMxUjwwhtnRC",
+        "request_id": "VAbobSrVag1uT1OUWdQA"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:13.666904+00:00",
+      "sha256": "95f712c1d66086a184b852e7060fddf9b6d711acd3873b8f881921fdea30b1ee",
+      "git_blob_sha": "844eb06271aacd05f21289e78cf43efe4ffb9475",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27939,8 +28024,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118346+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118346+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "eBxtRhXzY6jHeZ8UnRpJ",
+        "request_id": "yez44FExwcU1pwjhPNpc"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:15.214946+00:00",
+      "sha256": "52d486cc65dc557bef8aa68cab399b560c7e66888f95aa9b953de3fbfab13889",
+      "git_blob_sha": "ac015a4398ca2bba474e8f69400f0e4ec26e364c",
+      "size_bytes": 85724,
+      "duration_seconds": 5.32898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27949,8 +28051,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118347+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118347+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "u9qD8frScug4zIGDFpSC",
+        "request_id": "pVtGKvHnIaEafMVdd1FE"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:16.550158+00:00",
+      "sha256": "2203e2f45740e19992e1b986b9f246589d08964eae550d9759dd0a516af1f37e",
+      "git_blob_sha": "b6ed7a5a47ae4daee5ed70e73810377943d3308b",
+      "size_bytes": 79037,
+      "duration_seconds": 4.91102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27959,8 +28078,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118348+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118348+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "TBU7qy8003SyGo2VXfSf",
+        "request_id": "gVntlxOvOGxLKwR7qCvw"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:17.691881+00:00",
+      "sha256": "0c12ea966a5889f82507a2436dc2e55ca4ba48559cfd7f65d417721e7c0da887",
+      "git_blob_sha": "ebd28b5fcf891315ec4c051934182ec7b4f963c7",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27969,8 +28105,25 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/lily/final_circle/final_circle_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118350+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118350+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "39FVXdwblFPvTRmnwPYz",
+        "request_id": "ElB2IbODfBKAWs6KSy4N"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:18.907794+00:00",
+      "sha256": "a066bfc9302cf26b1cdd40860ed4857de7ee6cc00e5ddfaacd12fef6e70f37f8",
+      "git_blob_sha": "a4900c3a211bbb9c6bcaffea2e53e8a66c776ffc",
+      "size_bytes": 72767,
+      "duration_seconds": 4.519184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "lily",
@@ -27979,8 +28132,25 @@
       "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
       "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
       "path": "assets/audio/hosts/lily/loyal_victory/loyal_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:00:06.118351+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:00:06.118351+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1W5K3bpYCUJ7KOsO9QeY",
+        "request_id": "eHGmvmtQP7q4dD8A93pK"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:00:20.477399+00:00",
+      "sha256": "23c4bfce06d62e015db5a707ea59889abe18cbb5ea3d4c4866bafc272998eab5",
+      "git_blob_sha": "74dd299712ddeb55377ea8bf785c9642aed6ec4e",
+      "size_bytes": 88232,
+      "duration_seconds": 5.485714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
