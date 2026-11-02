@@ -9521,6 +9521,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:39:49.738551+00:00"
       }
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "vote_complete_011",
+      "text": "No more deliberation. It's done.",
+      "script_sha256": "4ed407b951f1b1f8611b199543d4e07753260be344478caf44ea69ee3737a8fc",
+      "path": "assets/audio/hosts/victor/vote_complete/vote_complete_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109248+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "vote_complete_012",
+      "text": "A fascinating outcome. Perhaps.",
+      "script_sha256": "da7db937f654022fe14a99990aa60d1727db6b4707b0e5cb66cd27b0eb9180f2",
+      "path": "assets/audio/hosts/victor/vote_complete/vote_complete_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109266+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "vote_complete_013",
+      "text": "The tally is complete. Shall we?",
+      "script_sha256": "27706b9e0aff8492154b0821b9659fcb82444bbc13e33d2991458c34fe96c2aa",
+      "path": "assets/audio/hosts/victor/vote_complete/vote_complete_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109268+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "vote_complete_014",
+      "text": "Well, that's democracy for you.",
+      "script_sha256": "27412428415531822f01f163269ad655c72b191fb5f3d6eecd686430a42631a4",
+      "path": "assets/audio/hosts/victor/vote_complete/vote_complete_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109270+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "vote_complete_015",
+      "text": "The votes are locked. Here comes the awkward bit.",
+      "script_sha256": "b13efff249969ec29cc8e48143f92ee7d2679b0a684e3b2e511ac8cf0c5615e3",
+      "path": "assets/audio/hosts/victor/vote_complete/vote_complete_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109272+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "murder_reveal_001",
+      "text": "A player dispatched. Sleep well, everyone. If you can.",
+      "script_sha256": "d4356f861b2d6d3d2b547d0eef038d46b87a0fb40f927db4fa11551585b0aa16",
+      "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109274+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "murder_reveal_002",
+      "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
+      "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
+      "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109276+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "murder_reveal_003",
+      "text": "A player has been murdered. The night was not kind.",
+      "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
+      "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109278+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "murder_reveal_004",
+      "text": "A chair sits empty. A charming start to the day.",
+      "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
+      "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109280+00:00"
+    },
+    {
+      "host_id": "victor",
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "clip_id": "murder_reveal_005",
+      "text": "Someone didn't make it through the night. How terribly rude.",
+      "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
+      "path": "assets/audio/hosts/victor/murder_reveal/murder_reveal_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:39:51.109282+00:00"
     }
   ]
 }
