@@ -19729,8 +19729,25 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/beth/gather/gather_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544506+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544506+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mfW5OXc133tZZM1EsWMj",
+        "request_id": "KSp7brJr8SyFvQuUuBrM"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:01.692454+00:00",
+      "sha256": "ddbb46dfd80b451e22968e9067f245fb7080ef8e1e54a35ba0f35ab1aeda5763",
+      "git_blob_sha": "8b3c49b078b6e360b7a690a5bc074c7618e2284c",
+      "size_bytes": 35569,
+      "duration_seconds": 2.194286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19739,8 +19756,25 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/beth/gather/gather_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544524+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544524+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "UpRBz0RiZIPl3WB1trXT",
+        "request_id": "e4IErdChOxZOIZKlzF0D"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:02.691539+00:00",
+      "sha256": "d94d60d3c01e5bab6e5c28b04589b85f39e1840e68940547f92c0fe3bdce0fab",
+      "git_blob_sha": "47eb08e0fbf395e36a314befeeebfe3e5c6ac566",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19749,8 +19783,25 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/beth/gather/gather_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544526+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544526+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ni8aQVlY6sY0qAGJeblO",
+        "request_id": "f5oqdixyYz300cu5oBGe"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:03.565283+00:00",
+      "sha256": "6169f8679e91dbd0abf45b8d3fe81b6442a2898aece5f589fcaa5c1d8aed4471",
+      "git_blob_sha": "5aeeacdef00357f50d27a9712f93c34ea631f1a0",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19759,8 +19810,25 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/beth/gather/gather_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544527+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544527+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pcS2hCKmS67xO8gsafCp",
+        "request_id": "zfEwr863d13RmWjM2SHW"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:04.683630+00:00",
+      "sha256": "55cf1bfe0219ba863088c8448673c823209bd6115997deaa6720a0e491fc391c",
+      "git_blob_sha": "e4ca416badab78de0bc7d2cc86c1f1dd31d0f9c6",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19769,8 +19837,25 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/beth/discussion/discussion_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544528+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544528+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2m6OXVyX6iCe2NNkNBax",
+        "request_id": "q1cldGfDyLg8F5liPLJy"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:05.777009+00:00",
+      "sha256": "6b3852ae678287b7c721fe6a2eec060a3415dc73d7668c4ae1dd21f437592688",
+      "git_blob_sha": "9130c678ee2f07db27c3b87a2bde14b2cdba5adc",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19779,8 +19864,25 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/beth/discussion/discussion_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544530+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544530+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "B8beQqTsFRIV2yD6ICGh",
+        "request_id": "5FI1E0NeEDveAFxtHhnq"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:06.866516+00:00",
+      "sha256": "4de24e7ed9a27ad506e9e611037b6c4e723384f2441e33e14b794e7c8b45b8b6",
+      "git_blob_sha": "e94d26ec9d79fd210658b3d91696644f0f06ca78",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19789,8 +19891,25 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/beth/discussion/discussion_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544531+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544531+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ZrgQiQbsewLr3S51ATjs",
+        "request_id": "V6ddYy5YDB2VcLJ8Grdd"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:08.000743+00:00",
+      "sha256": "4207f0e587190eafc90edecbc6407fdc88c053ebfd89ed789ce701d695a7d0fd",
+      "git_blob_sha": "8db5844dfd23e3d6c80afa943f1b581a66ad336d",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19799,8 +19918,25 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/beth/discussion/discussion_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544533+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544533+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JxhsJJAphTFqg3uVnQjV",
+        "request_id": "lW1HjoSobBB8PHrIbUhg"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:08.924609+00:00",
+      "sha256": "ef227bac09b7fc55b152f75c75804e690f76344c89e11bb1ff96e65f793a6744",
+      "git_blob_sha": "109f2a84c06c763192959c5a490cab7186b42a58",
+      "size_bytes": 47272,
+      "duration_seconds": 2.925714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19809,8 +19945,25 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/beth/discussion/discussion_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544534+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544534+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "RkUb1Wx0Zt92JVUHBchk",
+        "request_id": "tR31fgYSzO1cqgkcjfrc"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:09.766925+00:00",
+      "sha256": "ac937905f179b4e4e915296a4948a282c10b620293dfa470182a0c613ef773d4",
+      "git_blob_sha": "a2792a90ed24c4511d836857f5b79da0af12a61a",
+      "size_bytes": 39331,
+      "duration_seconds": 2.429388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -19819,8 +19972,25 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/beth/discussion/discussion_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:50:59.544535+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:50:59.544535+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6LXx217IgfWnInPrsEYL",
+        "request_id": "mzon3MY5Pp171n0k2CfS"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:51:10.962934+00:00",
+      "sha256": "b8768574d7af9e09f329785c3ac0f2a3403138d7db1825333fbc05f7040df0cf",
+      "git_blob_sha": "dfacc86f1eba8dce9c2249e81b2d48a82bb4555d",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
