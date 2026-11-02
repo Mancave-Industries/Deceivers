@@ -16669,8 +16669,25 @@
       "text": "The Loyal triumph. You may now look smug. Briefly.",
       "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576920+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576920+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "5xP3qH14AR1hW2hevWbN",
+        "request_id": "xyzht7Rl6KfmHq6Lf0Mx"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:42.059014+00:00",
+      "sha256": "a9b1e093cb9f9523106c9bf2e7ec6dc6012547dc26f843d05b9d465d4f7c008f",
+      "git_blob_sha": "f064ef36b0ba6d6c86858cb7f1baef1e18ac3633",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16679,8 +16696,25 @@
       "text": "The Deceivers win. What a delightful betrayal.",
       "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576939+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576939+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dWDyvLwo6LLBeeEgytQW",
+        "request_id": "oI4sw7CY0lOWydMgO1Sw"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:43.377620+00:00",
+      "sha256": "170c72a2b3dc08d5eeba2b917ac0fb68d29b82228627e00d5a5c06d6e1a75292",
+      "git_blob_sha": "cfeb0c21a7dab1a547787774c4bc560bbef74509",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16689,8 +16723,25 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576940+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576940+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0DtmG5FPiQIbjE9bMBSR",
+        "request_id": "5A9GLZuMOO0RNEnvZugs"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:44.507053+00:00",
+      "sha256": "92eea60e0b0217f830ea8f9313e29f41366a3a82c95fa7210d608d442ee64b5d",
+      "git_blob_sha": "fe33b800f1303bf35a79ba134d93dd2e21f6aeb3",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16699,8 +16750,25 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576942+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576942+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Gqj01LHzKm8A8VIYnbgp",
+        "request_id": "T7RFmXZxiSspB9TuG1fI"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:45.641919+00:00",
+      "sha256": "e317916cb1153358edb4be0c8d4fa45e760029d7940aa75a794cd38f3d53eaec",
+      "git_blob_sha": "917816d097556da2ed913bc977e084a108f1a47f",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16709,8 +16777,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576943+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576943+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "k0AeZySYF1aS3j708qGe",
+        "request_id": "nQAmHRsR933rMOM8flqR"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:47.094659+00:00",
+      "sha256": "f504aecf8a7eede1cbd2407b77478b8f8d90926993d70ac9baf19df7bd9d7f8b",
+      "git_blob_sha": "c0b10433e89eb91dca721591de0608a2002909e6",
+      "size_bytes": 76529,
+      "duration_seconds": 4.754286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16719,8 +16804,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576944+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576944+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Q7TSjmUAO7lyKDxYE9bS",
+        "request_id": "gwABLJ7wsZ2tmaEoyQ7a"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:48.276756+00:00",
+      "sha256": "0785aef3c27fc5a670389864b32b55d79565632378c0b0ae9d6aa8a38a853613",
+      "git_blob_sha": "d1e9d32d9c40da4896c27ef51b737260aa2cfbc4",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16729,8 +16831,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/aaron/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576946+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576946+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "z5vuCWKq5whls4cKWdEy",
+        "request_id": "EvBvuQSx1TiWiR2JiTjK"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:49.666967+00:00",
+      "sha256": "a6f5314bbe721dc15f62da90930550cf774a7c1cef83c8f2c6bc7f5077b2cdb9",
+      "git_blob_sha": "5ccdb015fc3900e4dc7909339f3328d52b23258d",
+      "size_bytes": 72767,
+      "duration_seconds": 4.519184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16739,8 +16858,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/aaron/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576947+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576947+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gA0iNZ7QZuyhqkKItG6b",
+        "request_id": "fd6TAff3hCyx9eZ1Egpu"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:52.074806+00:00",
+      "sha256": "8289bf2da430bb2fa4f9121995341d870b2fb9877afdf9fb261fd76751aa5c74",
+      "git_blob_sha": "52ac0429d9151b524c7bbc9e2e06de9b3118d7f1",
+      "size_bytes": 162211,
+      "duration_seconds": 10.109388,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16749,8 +16885,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/aaron/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576948+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576948+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ftuWEGvv2jZI8uN6VV68",
+        "request_id": "gH596Yo1gdDg9WBDBGBk"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:53.915712+00:00",
+      "sha256": "65acaaa5651c885b8bd578326053ebdc27b45c0567be4654f0497a20652bbeb0",
+      "git_blob_sha": "145e9e468d001bec0c44b589f790fb03bb841fcf",
+      "size_bytes": 111220,
+      "duration_seconds": 6.922449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16759,8 +16912,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/aaron/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:39.576950+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:39.576950+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "UxXtvXkWRCWz99TsCged",
+        "request_id": "sVfb2i2sMRGOMAXFY6oj"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:55.623928+00:00",
+      "sha256": "710f112c1ba1dab26d19b305a66bab511a3f58257a2199858ae91ee1b78fe6c1",
+      "git_blob_sha": "f2ac35e0d775fd5f39722c01c2471376247ade29",
+      "size_bytes": 108712,
+      "duration_seconds": 6.765714,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
