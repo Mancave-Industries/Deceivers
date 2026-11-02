@@ -22789,8 +22789,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/beth/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868928+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868928+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SnBOlkd46ofG8O8VctCM",
+        "request_id": "S6EqrZBUgznbA20IoUO9"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:23.055136+00:00",
+      "sha256": "36a56a3e6a6ded294a82bef2ecb48b31396bc42f77d677494270ca192801448a",
+      "git_blob_sha": "3110a2d83881527b6ad1f5889164541ba8114df6",
+      "size_bytes": 103278,
+      "duration_seconds": 6.426122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22799,8 +22816,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/beth/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868945+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868945+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xajNQ3FjYRVjqsjdKCgD",
+        "request_id": "5lj3dfjJYQLo0LhifoP5"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:25.063061+00:00",
+      "sha256": "72309698fe3b4dff9576d2ee886eaadfde922606168a536f229f88389affde59",
+      "git_blob_sha": "f942c5029bdfc175b77a5f684d2636ccd6d31d84",
+      "size_bytes": 103278,
+      "duration_seconds": 6.426122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22809,8 +22843,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/beth/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868946+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868946+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JxCJ8xxCVHu7FxRVyUyk",
+        "request_id": "BYveAhRCVbPWpHOZEndy"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:27.311961+00:00",
+      "sha256": "884b8356ee93eecac04ce8957dab9b1a3178e3d0e577ccfc49be781894542628",
+      "git_blob_sha": "7639c17589acad1c0f6c86ce27fc4cbd61d7591d",
+      "size_bytes": 114981,
+      "duration_seconds": 7.157551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22819,8 +22870,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/beth/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868948+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868948+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6drX1iDUb6tnz8G10bqH",
+        "request_id": "IDifS2UDQR4hJYtgh3SC"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:29.073724+00:00",
+      "sha256": "60c1d220bedcee5eefdabbae45c754114ac63d4fa2877caf396ad5951acec651",
+      "git_blob_sha": "64aec9d31ee806fe67f43befcb0ebf81edefa9fa",
+      "size_bytes": 79037,
+      "duration_seconds": 4.91102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22829,8 +22897,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/beth/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868949+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868949+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1ASlFQIdnPykgpnnEA9m",
+        "request_id": "DH8MrEonaTHBgfsHlvI3"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:30.058857+00:00",
+      "sha256": "2e960a5569a58fb2c4f99950781b90c847f083c027e1e81071c1208d7fdc6431",
+      "git_blob_sha": "cc919029ad7e572b6f1346a3ddba0573e1217ef6",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22839,8 +22924,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/beth/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868951+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868951+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JPdY5j1YJ6eXxVONBToZ",
+        "request_id": "69bmRShnJTbuoRyXLGOz"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:31.417778+00:00",
+      "sha256": "14747a9b073c934f06121b48bb1b4421703ed02d5d24d858ce998f7666effbd8",
+      "git_blob_sha": "f29614c866968878144a4415e1a7133730207129",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22849,8 +22951,25 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/beth/quiet_night/quiet_night_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868953+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868953+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "K6hBOjOzYctw0LoSM2i4",
+        "request_id": "OxnjRSMLxF3knMOWo67c"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:32.674493+00:00",
+      "sha256": "f275c0cf7419b603235ab1f81e2e4def3327f1d2ffedcc3e1c08d8605d510a7b",
+      "git_blob_sha": "d05f83f7380d7b7e7df2059cbe097fc1e4fb868e",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22859,8 +22978,25 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/beth/shield_saved/shield_saved_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868954+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868954+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "YLYxYsMnPFHEJUuHOfBI",
+        "request_id": "MEa1i7TzKGaP3NvXFTbT"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:33.951516+00:00",
+      "sha256": "a1eaa93ef40c5027200ec1ee179babb5a332c87e73f918701213d5aaa48156e1",
+      "git_blob_sha": "3d274610019508d93d3f3a35109c076bb59202a7",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22869,8 +23005,25 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/beth/tied_vote/tied_vote_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868955+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868955+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "fHiaKHgUVMoKQ0tTnBSN",
+        "request_id": "0UGMxDlHzqqI5jYOiQRe"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:35.108561+00:00",
+      "sha256": "3861f73de4b9fde1e61b0783acf99f8b3d9fefa16da467c84fe36a66b80f18f9",
+      "git_blob_sha": "952b846ca8b2b64837a196233225d967a545e9d7",
+      "size_bytes": 49780,
+      "duration_seconds": 3.082449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "beth",
@@ -22879,8 +23032,25 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/beth/final_decision/final_decision_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:54:19.868957+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:54:19.868957+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mt2SD4XBol7BEIPvngEr",
+        "request_id": "nQGOofNfZeUeUBP6aGuE"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:54:36.381062+00:00",
+      "sha256": "2a476cbb1c7829105dd737c7edc7ed47e4fcb9e3812321da4768223967724803",
+      "git_blob_sha": "26aed783c72f06d3812bcb18e592850c32876712",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
