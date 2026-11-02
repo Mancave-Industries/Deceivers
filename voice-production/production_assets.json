@@ -8849,8 +8849,25 @@
       "text": "The talking shop is closed. Votes, please.",
       "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
       "path": "assets/audio/hosts/victor/voting/voting_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178351+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178351+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "B7VYHlmNpA3E53USNLeh",
+        "request_id": "PY6HDxFGcknoaofhnzFj"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:09.606537+00:00",
+      "sha256": "373277b08acff2c6be6564eecc05303cb3ca79b8f800c24f4b54cbe7b0fcecb0",
+      "git_blob_sha": "698ed46a18ed9c0ecd15d8bb4632e0a438e56dbd",
+      "size_bytes": 52287,
+      "duration_seconds": 3.239184,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8859,8 +8876,25 @@
       "text": "Decisions, decisions. How terribly grown-up.",
       "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
       "path": "assets/audio/hosts/victor/voting/voting_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178367+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178367+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "psaOmGwnXGloHy9s4M9z",
+        "request_id": "jeAFMMemBq4AW9EDsTWY"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:10.680374+00:00",
+      "sha256": "dd4e197acf97b2e75aa0cd7e300a52b3bd0e1cf67f37efd421cdf7a28cbc081a",
+      "git_blob_sha": "3dd422c68291297c416d83bc9030f2bcd334ec66",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8869,8 +8903,25 @@
       "text": "Enough speculation. Commit to something.",
       "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
       "path": "assets/audio/hosts/victor/voting/voting_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178369+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178369+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "GAvgc7y0mS9TXWOHYoK8",
+        "request_id": "QRbm1vkvLLvQYCSBm4Se"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:11.618171+00:00",
+      "sha256": "125ea6ed15eb8b338bd81e589f1a633dd18982a5a03c7dfeedd904173865b3ad",
+      "git_blob_sha": "e8841c3298282c46b268382b611013020ef59898",
+      "size_bytes": 48526,
+      "duration_seconds": 3.004082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8879,8 +8930,25 @@
       "text": "Voting begins. Your confidence is noted.",
       "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
       "path": "assets/audio/hosts/victor/voting/voting_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178371+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178371+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ng6jFotjOp9PBfe37hna",
+        "request_id": "lzid40kmAbrvlb3jv749"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:12.835070+00:00",
+      "sha256": "193edd6c98963d3023b0bbeb7d9f2241515777b36b0d3dc971882aaaa0b6193b",
+      "git_blob_sha": "f04b538d9f3173b690094ca24cf7a57e25fcb610",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8889,8 +8957,25 @@
       "text": "Time to point the finger. Figuratively.",
       "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
       "path": "assets/audio/hosts/victor/voting/voting_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178372+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178372+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ZueoY9dQ04i7TXL2slcr",
+        "request_id": "s2TS9xYPsqeGsNSepSfq"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:13.891833+00:00",
+      "sha256": "18878ad8b996790ec607382a01899808ecfa0b03d5b2227b1edbbfb4a848dc62",
+      "git_blob_sha": "375307ade2be762f34fdab4140d5c97a9937d4bb",
+      "size_bytes": 51034,
+      "duration_seconds": 3.160816,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8899,8 +8984,25 @@
       "text": "Your vote, please. No dithering.",
       "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
       "path": "assets/audio/hosts/victor/voting/voting_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178373+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178373+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9XcP7afy6VvBDIjrrQ3G",
+        "request_id": "Zp9ay3vrP6NqEULw1w3n"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:14.874770+00:00",
+      "sha256": "39bb9771faf3c0e80d9ebad89544cca649ef1fd473f32bf9e197b6b0f906f812",
+      "git_blob_sha": "d1ccc137ede139120f7f04320f5782e122df7e99",
+      "size_bytes": 41838,
+      "duration_seconds": 2.586122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8909,8 +9011,25 @@
       "text": "Now we discover what you actually believe.",
       "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
       "path": "assets/audio/hosts/victor/voting/voting_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178375+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178375+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3Tn6Z2VasA5iuMgBfP1r",
+        "request_id": "aUvjEPeybNbuLXdEu0cx"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:15.794718+00:00",
+      "sha256": "13e0f41aabf731dfea7631d248ca2345321f1c68cb1d5139a28ea785afe5e167",
+      "git_blob_sha": "90662868a05da8f63425834cfca0fa16312ed3fb",
+      "size_bytes": 46018,
+      "duration_seconds": 2.847347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8919,8 +9038,25 @@
       "text": "Cast your votes. May reason make a rare appearance.",
       "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
       "path": "assets/audio/hosts/victor/voting/voting_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178376+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178376+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "RuDvG225W2Lf6aJcmfmM",
+        "request_id": "HWFYJOhjA4FWI5IIW4j4"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:17.093394+00:00",
+      "sha256": "e8dd88fdc96b22abbfcab120ddfb2b3bad91e66897db2493f08475a8fb642af6",
+      "git_blob_sha": "459c93fd24c3d16239d6a8e113cb02dcddce35ec",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8929,8 +9065,25 @@
       "text": "The moment of judgement. How grand.",
       "script_sha256": "e9895dd91c47a693438d14921722c31eeddf657e4ca2a9f16d289036f0a931bd",
       "path": "assets/audio/hosts/victor/voting/voting_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178378+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178378+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VsVcVX4UbejVvHfGikrR",
+        "request_id": "UoVBZn4kjUXZudXreq4e"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:18.347249+00:00",
+      "sha256": "4cd277e55064298a8f12595c678d21ccd72ce7771f3dbddffcd91bdc4914a942",
+      "git_blob_sha": "f2ab860f4f42b03e70c2e6b0656ff78a5d83b2a7",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "victor",
@@ -8939,8 +9092,25 @@
       "text": "Voting time. Try not to embarrass yourselves.",
       "script_sha256": "c58f06be4e94ae7e295ed047d011df06e43fd6e516bef033186ade9cd4f4004b",
       "path": "assets/audio/hosts/victor/voting/voting_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:39:07.178379+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:39:07.178379+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "nWN2IANP0CChZhJisZ72",
+        "request_id": "epFmEESMqgqCxmhuRJCG"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:39:19.407290+00:00",
+      "sha256": "fcdfd44668e1a6935b8e90bf0e7ef64d4b6fd89a9ae2947193ca0f3dbafb749e",
+      "git_blob_sha": "bc35160bb07239839425c8b2b43959c8829c9592",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
