@@ -31289,7 +31289,7 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/charlotte/gather/gather_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721755+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31307,7 +31307,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "c6fb1dc6754df2ba7eb5b5dfeffe0399ac43dcbd",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:15.263567+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31316,7 +31323,7 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/charlotte/gather/gather_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721772+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31334,7 +31341,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "1077a584560e10f477af0e06f506636493ad2f9b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:15.940828+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31343,7 +31357,7 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/charlotte/gather/gather_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721775+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31361,7 +31375,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "8af9f15741c37ad1ffe2edef2bdd07b3cf398dc7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:16.623577+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31370,7 +31391,7 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/charlotte/gather/gather_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721776+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31388,7 +31409,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "999c9645827c548d253a2bb3cbc518392fa468e0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:17.301947+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31397,7 +31425,7 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/charlotte/gather/gather_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721778+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31415,7 +31443,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "c29a7a72d7c778045649af677933674ee7ce1797",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:18.028441+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31424,7 +31459,7 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/charlotte/gather/gather_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721780+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31442,7 +31477,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "e44780ef1a6ddb104ac39fb915094acb1c1f5de2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:18.700959+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31451,7 +31493,7 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/charlotte/gather/gather_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721782+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31469,7 +31511,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "06fbaef43cabe98d5ff1b54c5721e70316e480c2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:19.345298+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31478,7 +31527,7 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/charlotte/gather/gather_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721784+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31496,7 +31545,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "bd76e6883952f686e320dff0fdc57a0049798d39",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:20.065371+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31505,7 +31561,7 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721786+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31523,7 +31579,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "79068d467907cfcdb624fb77bf5e80f1e3a561ca",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:20.671389+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -31532,7 +31595,7 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/charlotte/discussion/discussion_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:04:00.721788+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -31550,7 +31613,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e10c504740f449aaf45ad35443e38d16176505f6",
+        "blob_sha": "8e7c3d21659b1858e14232a3f63df372d754fc7a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:04:21.333029+00:00"
+      }
     }
   ]
 }
