@@ -20749,7 +20749,7 @@
       "text": "Now we discover what you actually believe.",
       "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
       "path": "assets/audio/hosts/beth/voting/voting_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275773+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20767,7 +20767,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "17130226e4335696edd6441e24d68e04507f7fda",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:16.444311+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20776,7 +20783,7 @@
       "text": "Cast your votes. May reason make a rare appearance.",
       "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
       "path": "assets/audio/hosts/beth/voting/voting_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275792+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20794,7 +20801,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "668ab5759cd5278264497645553c93aad6bd3c12",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:17.085479+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20803,7 +20817,7 @@
       "text": "The moment of judgement. How grand.",
       "script_sha256": "e9895dd91c47a693438d14921722c31eeddf657e4ca2a9f16d289036f0a931bd",
       "path": "assets/audio/hosts/beth/voting/voting_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275794+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20821,7 +20835,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "832bcaa2b9912d65b959bf398acff2f437bef925",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:17.783545+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20830,7 +20851,7 @@
       "text": "Voting time. Try not to embarrass yourselves.",
       "script_sha256": "c58f06be4e94ae7e295ed047d011df06e43fd6e516bef033186ade9cd4f4004b",
       "path": "assets/audio/hosts/beth/voting/voting_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275795+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20848,7 +20869,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "68a17533c2e93d7dbee4dcd060ccba22c1e3edee",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:18.440936+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20857,7 +20885,7 @@
       "text": "Votes are in. Oh, this will be interesting.",
       "script_sha256": "f2e34386e76d2f75b3d8d50caa60f2efcae0378daa3400ee1ada04c23b19b344",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275797+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20875,7 +20903,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "8bcd66f5a8e228781e130d38e0e21f213cb98dc2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:19.046283+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20884,7 +20919,7 @@
       "text": "The decision is made. No take-backs.",
       "script_sha256": "92f0d1df50634bccec2ed520eae672c0c7a6bb3eb9c5de4c076177a6384ddf7b",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275798+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20902,7 +20937,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "965202a307f150d97aa03ab2c266953ef65f971a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:19.729715+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20911,7 +20953,7 @@
       "text": "Well. You've certainly made a choice.",
       "script_sha256": "1df0e99692d25f668c285e560f6f5891d0bd087c68db269f6d1026efe5aaedc9",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275800+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20929,7 +20971,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "636bd0c6ef0c047504d3d3bf2f34bf7bf0a1fb71",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:20.350626+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20938,7 +20987,7 @@
       "text": "The verdict awaits. Brace yourselves.",
       "script_sha256": "ec2ef11d88947141311b948ca1a0e75110975fb32a5ff140394ebbf3ef907a2c",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275801+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20956,7 +21005,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "6d7e784e9f98608794330c26e3d182cfeb70d423",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:20.999267+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20965,7 +21021,7 @@
       "text": "All votes counted. What a confident bunch.",
       "script_sha256": "ac8cfb1508c1371402f463b21ff252f77d1262d92eaf88ddf376f2703345ccda",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275802+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20983,7 +21039,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "66df454126cdccca1fcfad80c95d1a57fdb9e12a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:21.617582+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -20992,7 +21055,7 @@
       "text": "A decision! Finally.",
       "script_sha256": "c5137e892f2dde316b9c421e609e42cdde9b0cc822b4bd38d7dfd4bd4d794c41",
       "path": "assets/audio/hosts/beth/vote_complete/vote_complete_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:52:02.275804+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -21010,7 +21073,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "173a8e1f0b8b217b4872494eda050f79b35e66fe",
+        "blob_sha": "12ca4eef11bbd9fb90661612e734004ee3bc9705",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:52:22.249980+00:00"
+      }
     }
   ]
 }
