@@ -24489,7 +24489,7 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228474+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24507,7 +24507,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "325f848263e41a82572aea993c4a8741fc1cb5eb",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:31.430805+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24516,7 +24523,7 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228491+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24534,7 +24541,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "65203cd5f1c243f1a8f79dc87a479ba56a7af887",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:32.149854+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24543,7 +24557,7 @@
       "text": "Keep it moving, my dears.",
       "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_037.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228493+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24561,7 +24575,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "75a617dca7a1f8199c8c6a9437270ad49f865c6b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:32.791266+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24570,7 +24591,7 @@
       "text": "Next player, and mind your manners.",
       "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_038.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228495+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24588,7 +24609,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "ff1b82caf945223fe2f90e2f84701f2d91393813",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:33.456801+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24597,7 +24625,7 @@
       "text": "Off you go. Quiet as mice.",
       "script_sha256": "94da8d546db8207c418ea000391abe6b091f3b78f59f65fdb00a893f769fabec",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_039.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228497+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24615,7 +24643,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "49d5b266216c0bbfb82328ff5416137ef0c1580e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:34.106740+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24624,7 +24659,7 @@
       "text": "Pass the phone. I'll wait. Briefly.",
       "script_sha256": "7852572d7c66b9242ecf124b09fb1909b8d9c35cccd36ef96a2b838b52e3f26a",
       "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_040.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228500+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24642,7 +24677,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "82321fe41dad385c495f7c5b04f13d62abf02b3e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:34.848814+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24651,7 +24693,7 @@
       "text": "Night falls. Keep your card secret.",
       "script_sha256": "3cdeb3654859ba34ae18249ac3c77cf36a661397cf684bd1289c0b8df1758f35",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228502+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24669,7 +24711,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "8290587db4300b83c9da5c83fef356776802c082",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:35.493612+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24678,7 +24727,7 @@
       "text": "The night falls. Guard your card.",
       "script_sha256": "9890cf1ee49cd11cf63a460ac906f3038864e6841bcd81e1d5f7c4cbd21d9bc3",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228504+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24696,7 +24745,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "32956c8bee8b806b66ecfe493008184b6ba1a20b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:36.178094+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24705,7 +24761,7 @@
       "text": "Night has come. Keep it hidden.",
       "script_sha256": "7f154975ed384c859fc13b38985cbe228802e81204ab4bb2195c0fdba6cd7c48",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228505+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24723,7 +24779,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "3a3336ca5fa28f66eca349cfe249540f40d17936",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:36.908038+00:00"
+      }
     },
     {
       "host_id": "lily",
@@ -24732,7 +24795,7 @@
       "text": "Ah, darkness. Everyone's favourite cover story.",
       "script_sha256": "62388e496413d0ffba1f2b4204cef384ce2d04ccd59f139a34eb3d3f2e2eba2d",
       "path": "assets/audio/hosts/lily/night_falls/night_falls_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:56:18.228507+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -24750,7 +24813,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "8adc54961f2c66adb0664371b0c46af6e94f161c",
+        "blob_sha": "06186d79135d1fae96ab47597f8a7c58819f189a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:56:37.565040+00:00"
+      }
     }
   ]
 }
