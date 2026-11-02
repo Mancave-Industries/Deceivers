@@ -33669,8 +33669,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904667+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904667+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "TrgomjlK37A3CDD2A9By",
+        "request_id": "wFyPvq2kqD2kYyyQ24pG"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:38.303277+00:00",
+      "sha256": "76f0e214029afed2e2b3a2b81fba78751c6ff5de7828f930875749c1add253ed",
+      "git_blob_sha": "fa60e8c9b421a8667fd5161f164be746ca718abc",
+      "size_bytes": 61065,
+      "duration_seconds": 3.787755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33679,8 +33696,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904684+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904684+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0qasbCVoMQzJGnVNvcMz",
+        "request_id": "LOnyE8uyFiGwVWUq6xJo"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:39.603571+00:00",
+      "sha256": "b2fe7cb25adeeb9df124fdcb827156af7b02dbba28ddd1ef69071c52f9fd4a8a",
+      "git_blob_sha": "7fda60eb8f8f8115ce4ad11892b27611f31f0db4",
+      "size_bytes": 69006,
+      "duration_seconds": 4.284082,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33689,8 +33723,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/charlotte/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904686+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904686+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "YMO7fxsmOk7cIQ4475Lu",
+        "request_id": "6Co3YRFDyyLPrfEMmg2j"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:40.659004+00:00",
+      "sha256": "49bab4d022848f6f108792fddd87cba844aef799e43aa0b938d541f60d3a1b78",
+      "git_blob_sha": "361f9f680536373b48009b674efb93818525a0fb",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33699,8 +33750,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904687+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904687+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Gsuj70PK0J7OQmQZo6md",
+        "request_id": "EaPAie6DC6W4Ox1W5uZc"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:42.158295+00:00",
+      "sha256": "c35155636132ab584a65b2df897cdaee49fd9a78e0e2652bd4e70b29699ec823",
+      "git_blob_sha": "d983bfc37b38073efb74595d9088a2f9059ff141",
+      "size_bytes": 81545,
+      "duration_seconds": 5.067755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33709,8 +33777,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904689+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904689+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HwrIExcZZ6MGGpuwSCeu",
+        "request_id": "GuSWHonMfHCGC2zUMv1P"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:43.300356+00:00",
+      "sha256": "dd81265150a513612f48357673b3c1a0c319a47fb0ad9b9d6dac1916b01589b7",
+      "git_blob_sha": "d452aea69efff45281ee29eca175472c3a40c1c4",
+      "size_bytes": 66498,
+      "duration_seconds": 4.127347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33719,8 +33804,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904690+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904690+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "BEluPEenfAKJm5x5WeWF",
+        "request_id": "BvDTd4rAGMCPuU93KQSC"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:44.333770+00:00",
+      "sha256": "6e55024edd7116546b4cc0d23088e910e7a3611faa4800f9afb7ca0a7e9761d2",
+      "git_blob_sha": "41519558f6346b852139bdb389ade004e18530b7",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33729,8 +33831,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904692+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904692+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "optwz1arVR3KXJO1WdTC",
+        "request_id": "YMVrVHBGzLiNK8GP3wqH"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:45.430770+00:00",
+      "sha256": "af039d0f7d0fc7570aea101bfed68e8bfd7ef6e1a5b12456981e9a3e6e8d7ad4",
+      "git_blob_sha": "c32c7dcf73372ef49228b0a12a4a6e57001f2105",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33739,8 +33858,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904693+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904693+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "LsaLPo3E5MFzk7rRK2HV",
+        "request_id": "L5DTICR6eUr7mdGzeK5g"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:46.892210+00:00",
+      "sha256": "f8a3cfb65da9bee52ffbf968d7754b58060c2338eee4a8b8ff95dc7360153bd2",
+      "git_blob_sha": "c56faed015275b582454ca8ee7a42e5f39f31382",
+      "size_bytes": 81545,
+      "duration_seconds": 5.067755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33749,8 +33885,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904694+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904694+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "nmMa3Ie0aFu3y9RxLl8D",
+        "request_id": "LteWI6e9adSP8f7KlQfr"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:48.210135+00:00",
+      "sha256": "b7492d5223fb3371495e867f6ca496e28352c7cdcb7d3fc200988dd9a4da2306",
+      "git_blob_sha": "bab44e526718ac16bea630623589161da86f9966",
+      "size_bytes": 77783,
+      "duration_seconds": 4.832653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "charlotte",
@@ -33759,8 +33912,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/charlotte/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T11:06:35.904695+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T11:06:35.904695+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Dtlgf7UJ614nbBetrkTS",
+        "request_id": "yEboKlTMRf9Z3R20jEP2"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T11:06:49.562435+00:00",
+      "sha256": "e63f6641269bdb16e57ef1196d814e939e4e9c4034ca3febb57d12817026327a",
+      "git_blob_sha": "c5450dcc8411c13a94bcd745464e64b114d801c3",
+      "size_bytes": 56049,
+      "duration_seconds": 3.474286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
