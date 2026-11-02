@@ -16329,8 +16329,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565087+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565087+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CcWC1jgPUY8R31sAhjdm",
+        "request_id": "h4E1oLNqRDcOI0yCOM6x"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:17.188338+00:00",
+      "sha256": "d75febab55de857eb5890c546e48e2275096eeb5866d46f62c0595392feacb64",
+      "git_blob_sha": "f8e71d3b459a7b18d9d33aec5da7e31a0347a7dc",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16339,8 +16356,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565105+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565105+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "TmWIFl7TleVN3jPKdg49",
+        "request_id": "n23YtpS3ZjvFItkzSoH6"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:18.762548+00:00",
+      "sha256": "a393e5f603e432f1b227fd4faa64062ebc8a6bad711c1273558068dde1a217ec",
+      "git_blob_sha": "ad723340f56f531e92af6a6e86901af7f276b4f9",
+      "size_bytes": 81545,
+      "duration_seconds": 5.067755,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16349,8 +16383,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565107+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565107+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yIfrlKX48GADxZFktko7",
+        "request_id": "RMl3xyvWKXbP91gVkH4n"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:20.166616+00:00",
+      "sha256": "e19bdf4a17d3a2036d2a920f9e9a423cfee3c612dc4be143981255039a1c287f",
+      "git_blob_sha": "f189aac13d0686de5abc075e05a0aafe229fd3f7",
+      "size_bytes": 75275,
+      "duration_seconds": 4.675918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16359,8 +16410,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565109+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565109+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "smY2N6J41VJF1MrDbPbR",
+        "request_id": "5UdD94CqFuw6HKmHhvAJ"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:21.323146+00:00",
+      "sha256": "e8db6ba055a5b96c3e17eb6f2c7d6273f4334b1228a2327d2482e3d042956a98",
+      "git_blob_sha": "0114cb3cc7a4e48492d3aec69de68804d20e6f6f",
+      "size_bytes": 54795,
+      "duration_seconds": 3.395918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16369,8 +16437,25 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/aaron/final_circle/final_circle_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565110+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565110+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HXoNmQXAOqieCIyWcP3T",
+        "request_id": "xqGGbN3NCK7CufWZIbn6"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:22.549895+00:00",
+      "sha256": "946c472170e3d611419539ed1568023c885c5502ed4475f8976fa680b7738c4d",
+      "git_blob_sha": "b8c8bf7dd9738d9cf666080fad63a910e3c576da",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16379,8 +16464,25 @@
       "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
       "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565111+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565111+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "x3abCF69PDqFDfUTSuaZ",
+        "request_id": "SPpeCO6Zifin0ZkoYCCQ"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:24.087024+00:00",
+      "sha256": "4b7c35ddc745b720c68aa1fadd739daef1262dfe155668549f0e6c42b6df806a",
+      "git_blob_sha": "dcf5e384eeaa9c77a3358b1dc46f712821d84e3c",
+      "size_bytes": 79037,
+      "duration_seconds": 4.91102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16389,8 +16491,25 @@
       "text": "Truth prevails. I admit, I had my doubts.",
       "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565113+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565113+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "099LD39B0xpkBRtkdal0",
+        "request_id": "yaOnFb6ZQdbsCiB6c5mc"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:25.281452+00:00",
+      "sha256": "dbd413ba1b3c3d00d736dd315e3841f90d15b72502c8f0c5b4a9eccbcdfa0797",
+      "git_blob_sha": "ee2806459c46d0a90ade2224b815f3c9fd327a29",
+      "size_bytes": 63990,
+      "duration_seconds": 3.970612,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16399,8 +16518,25 @@
       "text": "A Loyal victory! How unexpectedly wholesome.",
       "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565114+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565114+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "AOWWyshHfmI8785lu9Kn",
+        "request_id": "fcGiQygRkjjbnL7dM7Ke"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:26.567787+00:00",
+      "sha256": "2527f90d34a12503c142bba2f123dc3e9ffe55031d7128a228140ddb455eb33d",
+      "git_blob_sha": "ee12f1ea26fad59985ece81ef82dff558449c25f",
+      "size_bytes": 65244,
+      "duration_seconds": 4.04898,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16409,8 +16545,25 @@
       "text": "The lies have run out. Congratulations, detectives.",
       "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565115+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565115+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NdVO4YS2RgnXcePW2sWh",
+        "request_id": "eJzxO9MRELlNxzMUzi1b"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:27.783023+00:00",
+      "sha256": "966f2f83760d8931d7c74a8e531c905c9245a55a4792a8bbff50701a706a64e3",
+      "git_blob_sha": "25dfe5ba5c88ed041b48be059ecdf49d769164f1",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -16419,8 +16572,25 @@
       "text": "You've found your way through the deception. Eventually.",
       "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
       "path": "assets/audio/hosts/aaron/loyal_victory/loyal_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:47:14.565117+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:47:14.565117+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Iqt0fvXXrGMw2dxp6QDm",
+        "request_id": "XmtX9bpglTojRS31ourV"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:47:29.050196+00:00",
+      "sha256": "16a1e8fce89ace8701fe121047c59aba9d9d85e91a4dfe8c333a0661e8b02abd",
+      "git_blob_sha": "7a4cbbb7f6da6ccdcff1da4223d1adc8ab914897",
+      "size_bytes": 62318,
+      "duration_seconds": 3.866122,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
