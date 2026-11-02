@@ -23121,6 +23121,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T10:54:45.092841+00:00"
       }
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "truth_reveal_001",
+      "text": "And now, the truth.",
+      "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
+      "path": "assets/audio/hosts/beth/truth_reveal/truth_reveal_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962459+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "truth_reveal_002",
+      "text": "There is nowhere left to hide. The truth will now be revealed.",
+      "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
+      "path": "assets/audio/hosts/beth/truth_reveal/truth_reveal_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962476+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "series_closing_001",
+      "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
+      "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
+      "path": "assets/audio/hosts/beth/series_closing/series_closing_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962478+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "farewell_001",
+      "text": "Until next time. Trust nobody.",
+      "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
+      "path": "assets/audio/hosts/beth/farewell/farewell_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962479+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "rules_intro_001",
+      "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
+      "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
+      "path": "assets/audio/hosts/beth/rules_intro/rules_intro_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962480+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "rules_intro_002",
+      "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
+      "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
+      "path": "assets/audio/hosts/beth/rules_intro/rules_intro_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962482+00:00"
+    },
+    {
+      "host_id": "beth",
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "clip_id": "game_begins_001",
+      "text": "Let the game begin.",
+      "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
+      "path": "assets/audio/hosts/beth/game_begins/game_begins_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962483+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_002",
+      "text": "Next player, please. No peeking.",
+      "script_sha256": "39717a51f67f5c402e642cc01118ee3c686851d813bd9a219756faa8bfc44951",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962484+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_003",
+      "text": "On we go. Quietly, if you wouldn't mind.",
+      "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962485+00:00"
+    },
+    {
+      "host_id": "lily",
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "clip_id": "anonymous_handoff_004",
+      "text": "Pass it along. The suspense is unbearable.",
+      "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
+      "path": "assets/audio/hosts/lily/anonymous_handoff/anonymous_handoff_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T10:54:46.962486+00:00"
     }
   ]
 }
