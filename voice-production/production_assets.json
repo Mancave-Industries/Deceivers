@@ -32309,7 +32309,7 @@
       "text": "Enough speculation. Commit to something.",
       "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
       "path": "assets/audio/hosts/charlotte/voting/voting_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637176+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32327,7 +32327,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "5c786205bc6ab85ada998db14dbbcf7a5ce4b843",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:20.958840+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32336,7 +32343,7 @@
       "text": "Voting begins. Your confidence is noted.",
       "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
       "path": "assets/audio/hosts/charlotte/voting/voting_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637194+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32354,7 +32361,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "33be24a8f9c95f6c671fd4da00f9bfa15da27f17",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:21.645236+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32363,7 +32377,7 @@
       "text": "Time to point the finger. Figuratively.",
       "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
       "path": "assets/audio/hosts/charlotte/voting/voting_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637195+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32381,7 +32395,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "ad9a130d0b521169d0dca034d1ac58f0633eaee5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:22.305770+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32390,7 +32411,7 @@
       "text": "Your vote, please. No dithering.",
       "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
       "path": "assets/audio/hosts/charlotte/voting/voting_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637197+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32408,7 +32429,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "ca28d0ce43c92782e3454614c0faf02f9c8f5eff",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:22.965390+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32417,7 +32445,7 @@
       "text": "Now we discover what you actually believe.",
       "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
       "path": "assets/audio/hosts/charlotte/voting/voting_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637198+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32435,7 +32463,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "f73811e5e33c95114ac843a274a3cf5db6b19184",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:23.708007+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32444,7 +32479,7 @@
       "text": "Cast your votes. May reason make a rare appearance.",
       "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
       "path": "assets/audio/hosts/charlotte/voting/voting_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637199+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32462,7 +32497,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "539b933a9d12329bd221ebb305c6c3b6dc7dc1fc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:24.366315+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32471,7 +32513,7 @@
       "text": "The moment of judgement. How grand.",
       "script_sha256": "e9895dd91c47a693438d14921722c31eeddf657e4ca2a9f16d289036f0a931bd",
       "path": "assets/audio/hosts/charlotte/voting/voting_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637201+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32489,7 +32531,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "7f5c30af1e306148b2755836e37647eb099537b8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:25.108774+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32498,7 +32547,7 @@
       "text": "Voting time. Try not to embarrass yourselves.",
       "script_sha256": "c58f06be4e94ae7e295ed047d011df06e43fd6e516bef033186ade9cd4f4004b",
       "path": "assets/audio/hosts/charlotte/voting/voting_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637202+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32516,7 +32565,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "3b5144c7f0b2aeb052fdc75338853cb9dd8d85fc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:25.793382+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32525,7 +32581,7 @@
       "text": "Votes are in. Oh, this will be interesting.",
       "script_sha256": "f2e34386e76d2f75b3d8d50caa60f2efcae0378daa3400ee1ada04c23b19b344",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637204+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32543,7 +32599,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "d746b396e735ba5975dfa72cbab61ccc9c5ffd63",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:26.397402+00:00"
+      }
     },
     {
       "host_id": "charlotte",
@@ -32552,7 +32615,7 @@
       "text": "The decision is made. No take-backs.",
       "script_sha256": "92f0d1df50634bccec2ed520eae672c0c7a6bb3eb9c5de4c076177a6384ddf7b",
       "path": "assets/audio/hosts/charlotte/vote_complete/vote_complete_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T11:05:06.637205+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -32570,7 +32633,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a263483744df03dcae57c4f7ddf587b595db6cc1",
+        "blob_sha": "bd9a7fff373ed21629ad7f33ec8bbc7eb299edff",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T11:05:27.031832+00:00"
+      }
     }
   ]
 }
