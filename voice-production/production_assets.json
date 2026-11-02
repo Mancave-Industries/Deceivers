@@ -17009,8 +17009,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/aaron/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488136+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488136+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7wyrOFCtprRHhqLgDtsC",
+        "request_id": "eDcFgBLTarrGrcgiqkyl"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:08.314251+00:00",
+      "sha256": "5085875e03eed6c9422be74905544cce69939bdd3181df28395d251073dd10c0",
+      "git_blob_sha": "5917159c919168a158745ba29ff79c60b97e502a",
+      "size_bytes": 117489,
+      "duration_seconds": 7.314286,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17019,8 +17036,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/aaron/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488154+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488154+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "5DmQv5zV6thRQT0MnSGf",
+        "request_id": "9biN5sDGB90h0hwFZnN8"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:09.937826+00:00",
+      "sha256": "132a9ecb2ea6396b6355e21587cb844044fb046cbe4a5765b45f07d666ed2516",
+      "git_blob_sha": "72bf77bc892e48b5fcab2c2a59cbb43f4cdc34d7",
+      "size_bytes": 86978,
+      "duration_seconds": 5.407347,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17029,8 +17063,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/aaron/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488156+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488156+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "e2owy9V3g4gwnGewX0vg",
+        "request_id": "yKXfw0PSlmNDyEveGG6Z"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:11.076775+00:00",
+      "sha256": "490206113515a9b2f2894bd0e3c1369400cb275bf209ecb6b0f217dcc9400195",
+      "git_blob_sha": "ef6f6ee6e669b79d3913e34bdacd355291911970",
+      "size_bytes": 57303,
+      "duration_seconds": 3.552653,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17039,8 +17090,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/aaron/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488158+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488158+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "X3NQp4tdJclAF06Q1F0d",
+        "request_id": "BS8ChHFz6S8mzOJ57pNq"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:12.307198+00:00",
+      "sha256": "bc2416a9de14992cfd1da937648531561773590723a8a3d0b038b6efa63b11a5",
+      "git_blob_sha": "cdd4232871737f978b3ff3bf17467d4f57e71eba",
+      "size_bytes": 70260,
+      "duration_seconds": 4.362449,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17049,8 +17117,25 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/aaron/quiet_night/quiet_night_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488159+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488159+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "BNr98a1n1uYQpxrVOk6r",
+        "request_id": "4EXYh8JnQWauIJCXGdj3"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:13.364212+00:00",
+      "sha256": "2d8b80d0eb4ef93d0b894a5debc3bfd26d4508d490f80dc3003cd74f4ebd43b9",
+      "git_blob_sha": "6a9a7dc0f8c0ac95d49cfe0ac8d33192994734d1",
+      "size_bytes": 58557,
+      "duration_seconds": 3.63102,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17059,8 +17144,25 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/aaron/shield_saved/shield_saved_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488161+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488161+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "c4crSRTNFBlw104iPD8C",
+        "request_id": "FKupbPuQXk3pHV6oR9OG"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:14.795329+00:00",
+      "sha256": "b0725bc8a556ab456f012a35d261fa730359dd6fe5c6d302f5b47d3c20d9e846",
+      "git_blob_sha": "1966ded821d61c60cfc25c951b98c20b443866dc",
+      "size_bytes": 75275,
+      "duration_seconds": 4.675918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17069,8 +17171,25 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/aaron/tied_vote/tied_vote_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488162+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488162+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "V6i6PAgDZpEvj78YgU0i",
+        "request_id": "HpQnMWydoOLF2ocGMqTR"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:15.882171+00:00",
+      "sha256": "ff7d533a40d0a62154aad1d1e4599a5c2d6357ee49fd250a2567d409e5486887",
+      "git_blob_sha": "fea98dd67fbe5328b04d79c9a1666c46ff3a1c53",
+      "size_bytes": 53541,
+      "duration_seconds": 3.317551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17079,8 +17198,25 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/aaron/final_decision/final_decision_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488164+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488164+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "8g39mhMvE5FhVm04vjzn",
+        "request_id": "Aw6tLEFluiW6HG3jl2gF"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:17.250334+00:00",
+      "sha256": "bfc009480649e1af44e4e41ed13d3010b0d6c8911d62615600f5706c93524048",
+      "git_blob_sha": "956ebc8cf2fd69f25ea5559eaf8cc0705726d8ce",
+      "size_bytes": 75275,
+      "duration_seconds": 4.675918,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17089,8 +17225,25 @@
       "text": "And now, the truth.",
       "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
       "path": "assets/audio/hosts/aaron/truth_reveal/truth_reveal_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488165+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488165+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "65T8BA3WKbIort8wWOGQ",
+        "request_id": "wReno7tOhDGzINxYWN3l"
+      },
+      "provider_character_cost": "8",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:18.086906+00:00",
+      "sha256": "a77c9cb8cbd169d5016d243e5e62c26b9abc3e775b2321adcbfa60e1ad8f9926",
+      "git_blob_sha": "2199880619cdc5459a8be371ea347c65602bcad6",
+      "size_bytes": 33061,
+      "duration_seconds": 2.037551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "aaron",
@@ -17099,8 +17252,25 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/aaron/truth_reveal/truth_reveal_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-02T10:48:05.488166+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-02T10:48:05.488166+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "e30q6KfoAq6oyfCj6bOT",
+        "request_id": "UNHlf0PMZZSUqodKtDmX"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-02T10:48:19.351519+00:00",
+      "sha256": "5e57f1cd07a8f8e7dca2bd43e9a30067cf4a5cb7082cba15d06a926fc9193470",
+      "git_blob_sha": "5cd59e7d0e8c2a052c80467a3bae930ac5729e8f",
+      "size_bytes": 74021,
+      "duration_seconds": 4.597551,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
