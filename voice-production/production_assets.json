@@ -29581,6 +29581,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-02T11:02:09.762921+00:00"
       }
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_013",
+      "text": "Your turn is over. How tragic.",
+      "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350257+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_014",
+      "text": "Pass it on, and look innocent.",
+      "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350278+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_015",
+      "text": "A little privacy, ladies and gentlemen.",
+      "script_sha256": "c2cc2986f6a915725d851922ce2ffe18944942ade6e3b7390c77943409dd7fd0",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350281+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_016",
+      "text": "Next player. No audience required.",
+      "script_sha256": "bf71dc8db6a530b042f585cc7d970ec9930c59b63e8063dede7d6e47a5e82b91",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_016.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350282+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_017",
+      "text": "The phone travels. The secrets stay.",
+      "script_sha256": "29f5cd9f49fc31a03c100ad8c3a1efefbe8b5dfeef8567d6c3493f822570e99b",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_017.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350284+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_018",
+      "text": "Hand it over. Gently, now.",
+      "script_sha256": "6a6d85184223cccda9274048ec9134612896cf6857eb7abc0c40f6ffae3bbc98",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_018.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350286+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_019",
+      "text": "Moving along. Nothing dramatic. Yet.",
+      "script_sha256": "d2b3df9df60822ac8e0e536d4126e0d1d5a3151495ff14607f397e07bbb8d723",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_019.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350288+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_020",
+      "text": "Pass the phone. No commentary from the gallery.",
+      "script_sha256": "d45ad80f4e1a990d84069d48acfc2dafd27c38215b35b2d3ea02bc1032c47f10",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_020.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350290+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_021",
+      "text": "Next! Oh, do try to keep up.",
+      "script_sha256": "590fd07620738f9fa3f87a903f0d7f3a7f21b8c92ef9fa2bbe45bbaa51fe7943",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_021.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350292+00:00"
+    },
+    {
+      "host_id": "charlotte",
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "clip_id": "anonymous_handoff_022",
+      "text": "One phone. So many secrets.",
+      "script_sha256": "2c6507bb85cf20f324a0e934327c891968fe4fcb0cc8e5e58319de67bc78d1d8",
+      "path": "assets/audio/hosts/charlotte/anonymous_handoff/anonymous_handoff_022.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-02T11:02:11.350294+00:00"
     }
   ]
 }
