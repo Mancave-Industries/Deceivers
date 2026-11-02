@@ -22449,7 +22449,7 @@
       "text": "The lies have run out. Congratulations, detectives.",
       "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
       "path": "assets/audio/hosts/beth/loyal_victory/loyal_victory_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441726+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22467,7 +22467,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "2e8cc70cc24f1e6805c3249207fedf7e2104abd5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:12.209330+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22476,7 +22483,7 @@
       "text": "You've found your way through the deception. Eventually.",
       "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
       "path": "assets/audio/hosts/beth/loyal_victory/loyal_victory_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441742+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22494,7 +22501,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "7014b14b7a6f63942cdf04e57e76db3ad9b2ce74",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:12.944607+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22503,7 +22517,7 @@
       "text": "The Loyal triumph. You may now look smug. Briefly.",
       "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
       "path": "assets/audio/hosts/beth/loyal_victory/loyal_victory_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441744+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22521,7 +22535,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "a6b52f448d52aeaa74d39e6134081c049f10ed5f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:13.711878+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22530,7 +22551,7 @@
       "text": "The Deceivers win. What a delightful betrayal.",
       "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441745+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22548,7 +22569,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "65b7b1a7aa63d356ed8244b8c9c74c6681311e99",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:14.386537+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22557,7 +22585,7 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441747+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22575,7 +22603,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "5e2e5361a3fe549d9673c2036891583ae53ad4d8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:15.017263+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22584,7 +22619,7 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441748+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22602,7 +22637,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "96349c370730b0154af8887a57aaef11206999d9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:15.699477+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22611,7 +22653,7 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441749+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22629,7 +22671,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "556a4f6039f0fc05aa44ec09db035b8a2948f78a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:16.408539+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22638,7 +22687,7 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441751+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22656,7 +22705,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "4845615389808edb909a12b4e9e105ddaf513455",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:17.078972+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22665,7 +22721,7 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/beth/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441752+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22683,7 +22739,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "51feff5bf691f9b4eddfbcdb7f449020f5552de3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:17.718869+00:00"
+      }
     },
     {
       "host_id": "beth",
@@ -22692,7 +22755,7 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/beth/opening/opening_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-02T10:53:54.441753+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22710,7 +22773,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "ec8b67fde02c7c3751e8148e3b025fb200f3e09a",
+        "blob_sha": "95086047d5f965dc86eb17fb50ccf79d25cec603",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-02T10:54:18.422290+00:00"
+      }
     }
   ]
 }
