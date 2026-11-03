@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Deceivers — Narrator listening room (test only)</title>
+<style>
+:root{color-scheme:dark;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;background:#101116;color:#f6f0e6}
+*{box-sizing:border-box}body{max-width:650px;margin:0 auto;padding:24px 18px 55px;line-height:1.5}
+small{color:#b4adb0}h1{font-family:Georgia,serif;text-transform:uppercase;letter-spacing:.045em;font-size:clamp(1.5rem,6vw,2.15rem);margin:8px 0 3px}
+h2{font-size:1.05rem;font-weight:650;margin-bottom:6px}p{color:#ccc4c6;margin:6px 0 18px}
+.brand{font-size:.73rem;letter-spacing:.2em;color:#d6b880;text-transform:uppercase}
+.panel{background:#1e1d25;border:1px solid #48404c;border-radius:14px;padding:18px;margin-top:18px}
+label{display:block;color:#dacbb8;font-weight:650;margin:15px 0 6px}
+select,button,a.link{font:inherit;border-radius:8px}
+select{width:100%;padding:13px 12px;background:#101116;color:#fff;border:1px solid #71616b}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px}
+button{padding:13px 9px;background:#40363d;color:#f6f0e6;border:1px solid #655b64;font-weight:700}
+button.primary{background:#e9bf66;color:#1d160e;border-color:#e9bf66}
+button:disabled{opacity:.4}
+#script{font-size:1.15rem;line-height:1.55;font-family:Georgia,serif;min-height:75px;margin:10px 0 16px;color:#ffedcd}
+#clip{font-size:.76rem;color:#b7adba;overflow-wrap:anywhere}
+#status{min-height:24px;color:#e9bf66}
+a.link{display:inline-block;color:#edcd8a;font-weight:650;margin:18px 0 0}
+.warning{font-size:.83rem;color:#bdb3b5;padding:10px 0;border-top:1px solid #403941}
+</style></head>
+<body>
+<div class="brand">ManCave Industries · The Deceivers</div>
+<h1>Narrator Listening Room</h1>
+<small>TEST BUILD — not merged or live</small>
+<p>Listen to any of the six narrators across the approved public-game scripts. Check clarity, tone, pronunciation and whether the spoken words match the script shown.</p>
+<section class="panel">
+<label for="host">Narrator</label><select id="host"><option value="david">David</option><option value="victor">Victor</option><option value="aaron">Aaron</option><option value="beth">Beth</option><option value="lily">Lily</option><option value="charlotte">Charlotte</option></select>
+<label for="pool">Game moment</label><select id="pool" disabled><option>Loading approved scripts…</option></select>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px"><h2>Script</h2><small id="counter">—</small></div>
+<div id="script" aria-live="polite">Loading the approved recording catalogue…</div><div id="clip"></div>
+<div class="controls"><button id="previous" disabled>Previous</button><button class="primary" id="play" disabled>▶ Play</button><button id="next" disabled>Next</button></div>
+<button id="stop" style="width:100%;margin-top:8px" disabled>■ Stop</button>
+<p id="status" role="status" aria-live="polite"></p>
+</section>
+<a class="link" href="index.html">Try the complete game on this test build</a>
+<p class="warning">All recordings play as MP3s from this development snapshot. No ElevenLabs account, API key or paid generation is used. Please report missing audio, lines that sound wrong, or timing issues during a real game.</p>
+<script src="js/narrator-hosts.js"></script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const el = {host:$('host'),pool:$('pool'),script:$('script'),clip:$('clip'),counter:$('counter'),play:$('play'),stop:$('stop'),previous:$('previous'),next:$('next'),status:$('status')};
+  let catalogue=null, poolList=[], position=0, active=null;
+  const label = text => text.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/_/g,' ').replace(/\b\w/g,x=>x.toUpperCase());
+  function stop() {if(active){active.pause();active.src='';active.load();active=null;}el.stop.disabled=true;}
+  function current() {return poolList[position]||null;}
+  function render() {
+    stop();poolList=catalogue?(catalogue.pools[el.pool.value]?.clip_ids||[]).map(id=>catalogue.clips.find(c=>c.id===id)).filter(Boolean):[];
+    const c=current();
+    el.counter.textContent=c?`${position+1} of ${poolList.length}`:'—';
+    el.script.textContent=c?c.text:'No recordings found';
+    el.clip.textContent=c?c.id:'';
+    el.previous.disabled=!c||position===0;el.next.disabled=!c||position>=poolList.length-1;el.play.disabled=!c;
+    el.status.textContent='';
+  }
+  el.pool.addEventListener('change',()=>{position=0;render()});
+  el.host.addEventListener('change',()=>{stop();el.status.textContent='Selected '+el.host.selectedOptions[0].text+'.';});
+  el.previous.addEventListener('click',()=>{position=Math.max(0,position-1);render()});
+  el.next.addEventListener('click',()=>{position=Math.min(poolList.length-1,position+1);render()});
+  el.stop.addEventListener('click',()=>{stop();el.status.textContent='Stopped.'});
+  el.play.addEventListener('click',()=>{
+    stop();
+    const clip=current();if(!clip)return;
+    const key='host:'+el.host.value+':'+clip.id;
+    const path=NarratorHosts.clipUrl(key);if(!path){el.status.textContent='Clip not mapped.';return;}
+    const a=active=new Audio(path);a.preload='auto';a.onended=()=>{if(active===a){active=null;el.stop.disabled=true;el.status.textContent='Finished.';}};
+    a.onerror=()=>{if(active===a){el.status.textContent='Cannot load '+clip.id+'.';stop();}};
+    el.stop.disabled=false;el.status.textContent='Playing '+el.host.selectedOptions[0].text+' — '+clip.id;
+    a.play().catch(()=>{if(active===a){el.status.textContent='Playback blocked. Tap Play again.';stop();}});
+  });
+  fetch('voice-production/reviewed_production_script.json')
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(data=>{
+      catalogue=data;
+      el.pool.replaceChildren();
+      for(const name of Object.keys(data.pools)){const op=document.createElement('option');op.value=name;op.textContent=label(name);el.pool.appendChild(op);}
+      el.pool.disabled=false;position=0;render();
+    }).catch(err=>{el.script.textContent='Could not load script catalogue.';el.status.textContent=String(err);});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+  window.addEventListener('pagehide',stop);
+})();
+</script>
+</body></html>
