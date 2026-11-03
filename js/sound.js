@@ -251,12 +251,24 @@ const Sound = (() => {
   function unlockAudio() {
     if (!enabled) return Promise.resolve(false);
     try {
+      // iOS requires a real source to start inside a user gesture. An
+      // inaudible one-frame buffer unlocks the SAME context used by game
+      // narration later (including time-delayed public announcements).
       const c = getCtx(false);
+      if (typeof c.createBuffer === 'function' && typeof c.createBufferSource === 'function') {
+        const src = c.createBufferSource();
+        src.buffer = c.createBuffer(1, 1, c.sampleRate || 44100);
+        src.connect(c.destination);
+        src.start(0);
+      }
       if (c.state === 'running') return Promise.resolve(true);
       return Promise.resolve(c.resume()).then(() => c.state === 'running').catch(() => false);
     } catch (e) {
       return Promise.resolve(false);
     }
+  }
+  function getAudioStatus() {
+    return { enabled, host: narratorHost, contextState: ctx ? ctx.state : 'not-created' };
   }
   function choiceBuffer(choice) {
     const result = withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS);
@@ -738,10 +750,16 @@ const Sound = (() => {
   }
 
   return {
-    setNarratorHost, setEnabled, setNarrationLevel, unlockAudio, play, setMusicEnabled, startMusic, stopMusic,
+    setNarratorHost, setEnabled, setNarrationLevel, unlockAudio, getAudioStatus, play, setMusicEnabled, startMusic, stopMusic,
     narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
     // Test hooks only (tests/narration): observe audio events, seed picks.
-    _onEvent: (fn) => listeners.push(fn),
+    _onEvent: (fn) => {
+      listeners.push(fn);
+      return () => {
+        const i = listeners.indexOf(fn);
+        if (i >= 0) listeners.splice(i, 1);
+      };
+    },
     _setRandom: (fn) => { random = fn; },
     _pickForTest: (pool) => { const c = choose(pool); if (c) lastTake[c.line] = c.take; return c ? c.key : null; },
   };
