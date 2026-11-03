@@ -66,6 +66,18 @@ async function run() {
       e.type === 'clip-start' && /^host:david:anonymous_handoff_/.test(e.detail.key)
     ), null, {timeout:20000});
     console.log('PASS: David started speaking at first pass-the-phone moment');
+    await page.click('#menuBtn');
+    await page.click('[data-action="restore-game-audio"]');
+    await page.waitForFunction(() =>
+      document.getElementById('audio-recovery-status')?.textContent.includes('Audio reconnected')
+    , null, {timeout:20000});
+    assert.equal(await page.evaluate(() => state.phase), 'reveal');
+    assert.equal(await page.evaluate(() => state.settings.narratorHost), 'david');
+    await page.click('[data-action="test-game-narration"]');
+    await page.waitForFunction(() =>
+      document.getElementById('game-narration-status')?.textContent.includes('Playback started')
+    , null, {timeout:20000});
+    console.log('PASS: Restore Audio keeps the game state and narrator and recovers playback');
     assert.equal(errors.length,0, 'JavaScript errors: ' + errors.join('; '));
   } finally {
     await browser.close();
