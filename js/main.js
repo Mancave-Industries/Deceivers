@@ -683,7 +683,9 @@ const actions = {
     NarratorHosts.stopPreview();
     state.settings.narratorHost = host ? host.id : 'original';
     Sound.setNarratorHost(state.settings.narratorHost);
-    if (state.settings.audio === 'off') {
+    // Choosing a host opts into full spoken narration, even if a saved
+    // game had the old Partial or Off mode. The user may mute it again.
+    if (state.settings.audio !== 'full') {
       state.settings.audio = 'full';
       applyAudioSettings('full');
       document.getElementById('soundBtn').classList.remove('muted');
