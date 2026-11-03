@@ -45,6 +45,13 @@ async function run() {
     await page.click('[data-action="choose-narrator"][data-host="david"]');
     assert.equal(await page.evaluate(() => state.settings.narratorHost), 'david');
     assert.equal(await page.evaluate(() => state.settings.audio), 'full');
+    await page.click('[data-action="test-game-narration"]');
+    await page.waitForFunction(() => {
+      const text = document.getElementById('game-narration-status')?.textContent || '';
+      return text.includes('Playback started');
+    }, null, { timeout: 20000 });
+    console.log('PASS: Test narration button starts audible game clip and reports playback');
+    await page.evaluate(() => Sound.stopNarration());
     await page.click('[data-close-modal]');
     await page.click('.screen.active [data-action="new-game"]');
     const inputs = page.locator('.screen.active .name-input');
