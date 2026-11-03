@@ -52,12 +52,12 @@ async function run() {
     await page.click('.screen.active [data-action="start-game"]');
     await page.waitForFunction(() => window.__voiceEvents.some(e =>
       e.type === 'clip-start' && /^host:david:opening_/.test(e.detail.key)
-    ), {timeout:20000});
+    ), null, {timeout:20000});
     console.log('PASS: David started speaking at game opening');
     await page.click('#interstitialOverlay');
     await page.waitForFunction(() => window.__voiceEvents.some(e =>
       e.type === 'clip-start' && /^host:david:anonymous_handoff_/.test(e.detail.key)
-    ), {timeout:20000});
+    ), null, {timeout:20000});
     console.log('PASS: David started speaking at first pass-the-phone moment');
     assert.equal(errors.length,0, 'JavaScript errors: ' + errors.join('; '));
   } finally {
