@@ -12,14 +12,15 @@ function runtime(failHost = false) {
   createBufferSource() { return {connect(){return this;}, start(){setTimeout(()=>this.onended?.(),0);},stop:noop}; }
  }
  class Audio { constructor(url){this.url=url;this.paused=false;previews.push(this);} pause(){this.paused=true;} removeAttribute(){} load(){} play(){return Promise.resolve();} }
- const sandbox={window:{addEventListener:noop,AudioContext:Context},document:{addEventListener:noop},Audio,setTimeout,clearTimeout,console,
+ const audioSession = {type:'ambient'};
+ const sandbox={window:{addEventListener:noop,AudioContext:Context},document:{addEventListener:noop},navigator:{audioSession},Audio,setTimeout,clearTimeout,console,
   fetch:async url=>{requests.push(url); if(failHost && url.includes('/hosts/')) throw Error('missing host');return {ok:true,arrayBuffer:async()=>new ArrayBuffer(8)};}};
  vm.createContext(sandbox);
  for(const f of ['narrator-hosts','narration','sound']) vm.runInContext(fs.readFileSync(`js/${f}.js`,'utf8'),sandbox);
  const api=vm.runInContext('({Sound,NarratorHosts,NARRATION})',sandbox);
  api.Sound._onEvent((type,data)=>events.push({type,...data}));
  api.Sound.setEnabled(true); api.Sound.setNarrationLevel('full');
- return {...api,requests,events,previews};
+ return {...api,requests,events,previews,audioSession};
 }
 async function speak(r,pools){await new Promise(resolve=>r.Sound.narrate(pools,resolve,{gapMs:0}));}
 test('six static portraits and six opening MP3s are complete, local and distinct',()=>{
@@ -67,4 +68,12 @@ test('repeated public events avoid immediate clip repeats where alternatives exi
 test('starting a new preview stops the previous one and stop clears the current audio',()=>{
  const r=runtime();r.NarratorHosts.previewHost('david',()=>{});r.NarratorHosts.previewHost('beth',()=>{});
  assert.equal(r.previews[0].paused,true);r.NarratorHosts.stopPreview();assert.equal(r.previews[1].paused,true);
+});
+
+test('unlockAudio requests Safari playback session instead of silent ambient',async()=>{
+ const r=runtime();
+ assert.equal(r.audioSession.type,'ambient');
+ const unlocked=await r.Sound.unlockAudio();
+ assert.equal(unlocked,true);
+ assert.equal(r.audioSession.type,'playback');
 });
