@@ -42,12 +42,23 @@ const Sound = (() => {
   let musicEnabled = false;
   let musicState = null;
   let ctx = null;
+  let lastContextInterrupted = false;
   // 'full' or 'partial' -- which narration pools narrate() will actually
   // speak when enabled. Irrelevant when sound is off entirely.
   let narrationLevel = 'partial';
 
   function getCtx(resume = true) {
-    if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (!ctx) {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      if (typeof ctx.addEventListener === 'function') {
+        const current = ctx;
+        current.addEventListener('statechange', () => {
+          if (ctx !== current) return;
+          if (current.state === 'interrupted' || current.state === 'suspended') lastContextInterrupted = true;
+          emit('audio-context-state', { state: current.state });
+        });
+      }
+    }
     // iOS reports 'interrupted' after a call / lock screen, not 'suspended'.
     if (resume && (ctx.state === 'suspended' || ctx.state === 'interrupted')) {
       try {
@@ -267,15 +278,51 @@ const Sound = (() => {
         src.connect(c.destination);
         src.start(0);
       }
-      if (c.state === 'running') return Promise.resolve(true);
-      return Promise.resolve(c.resume()).then(() => c.state === 'running').catch(() => false);
+      if (c.state === 'running') {
+        lastContextInterrupted = false;
+        return Promise.resolve(true);
+      }
+      return Promise.resolve(c.resume()).then(() => {
+        const restored = c.state === 'running';
+        if (restored) lastContextInterrupted = false;
+        return restored;
+      }).catch(() => false);
     } catch (e) {
       return Promise.resolve(false);
     }
   }
   function getAudioStatus() {
-    return { enabled, host: narratorHost, contextState: ctx ? ctx.state : 'not-created' };
+    return { enabled, host: narratorHost, contextState: ctx ? ctx.state : 'not-created',
+      interrupted: lastContextInterrupted };
   }
+  // Explicit recovery is always initiated by a user tap. Re-create the Web
+  // Audio context because iOS can leave an apparently "running" context mute
+  // after a phone/route/volume interruption. Do not change the game or voice.
+  function recoverAudio() {
+    if (!enabled) return Promise.resolve(false);
+    stopNarration();
+    const previous = ctx;
+    ctx = null;
+    lastContextInterrupted = false;
+    decodedCache.clear();
+    Object.keys(primed).forEach(pool => delete primed[pool]);
+    preloadStarted = false;
+    if (previous && typeof previous.close === 'function') {
+      try { const closing = previous.close(); if (closing && closing.catch) closing.catch(() => {}); } catch(e) { /* best effort */ }
+    }
+    emit('audio-context-reset', {});
+    return unlockAudio();
+  }
+  function resumeOnForeground() {
+    // Do not create audio on boot or restart music; only recover an existing
+    // suspended context. The next *public* game trigger chooses narration.
+    if (enabled && ctx && (ctx.state === 'suspended' || ctx.state === 'interrupted')) {
+      unlockAudio().catch(() => {});
+    }
+  }
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) resumeOnForeground(); });
+  window.addEventListener('pageshow', resumeOnForeground);
+  window.addEventListener('focus', resumeOnForeground);
   function choiceBuffer(choice) {
     const result = withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS);
     return choice.fallbackKey ? result.catch(() => withTimeout(decodeClip(choice.fallbackKey), CLIP_READY_TIMEOUT_MS)) : result;
@@ -406,6 +453,7 @@ const Sound = (() => {
     };
     try {
       const c = getCtx();
+      if (c.state !== 'running') throw new Error('Audio context ' + c.state);
       src = c.createBufferSource();
       src.buffer = buffer;
       const gain = c.createGain();
@@ -464,7 +512,25 @@ const Sound = (() => {
       const choice = choices[i++];
       choiceBuffer(choice).then((buffer) => {
         if (generation !== narrationGeneration || !enabled) { finish(); return; }
-        playBuffer(buffer, choice, generation, () => setTimeout(next, i < choices.length ? gapMs : 0));
+        const proceed = () => {
+          if (generation !== narrationGeneration || !enabled) { finish(); return; }
+          playBuffer(buffer, choice, generation, () => setTimeout(next, i < choices.length ? gapMs : 0));
+        };
+        const c = getCtx(false);
+        if (c.state === 'running') { proceed(); return; }
+        // A volume/route interruption can suspend Web Audio mid-game.
+        // Try resuming once. Never report a "clip-start" until it is running.
+        withTimeout(unlockAudio(), 2500).then(ok => {
+          if (generation !== narrationGeneration || !enabled) { finish(); return; }
+          if (ok) proceed();
+          else {
+            emit('clip-failed', { key: choice.key, error: 'Audio context still ' + c.state });
+            next();
+          }
+        }).catch(() => {
+          emit('clip-failed', { key: choice.key, error: 'Audio context resume timed out' });
+          next();
+        });
       }, (err) => {
         emit('clip-failed', { key: choice.key, error: String((err && err.message) || err) });
         next();
@@ -756,7 +822,7 @@ const Sound = (() => {
   }
 
   return {
-    setNarratorHost, setEnabled, setNarrationLevel, unlockAudio, getAudioStatus, play, setMusicEnabled, startMusic, stopMusic,
+    setNarratorHost, setEnabled, setNarrationLevel, unlockAudio, recoverAudio, getAudioStatus, play, setMusicEnabled, startMusic, stopMusic,
     narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
     // Test hooks only (tests/narration): observe audio events, seed picks.
     _onEvent: (fn) => {
