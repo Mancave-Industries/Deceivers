@@ -703,6 +703,25 @@ const actions = {
     });
   },
   'stop-narrator-preview': () => NarratorHosts.stopPreview(),
+  'restore-game-audio': () => {
+    const status = document.getElementById('audio-recovery-status');
+    if (!status) return;
+    if (state.settings.audio === 'off') {
+      state.settings.audio = 'full';
+      applyAudioSettings('full');
+      document.getElementById('soundBtn').classList.remove('muted');
+      persist();
+    }
+    status.textContent = 'Reconnecting phone audio…';
+    // Called directly from the real button tap: keeps the same game, round,
+    // roles, narrator choice and settings; no role-specific cues are replayed.
+    Sound.recoverAudio().then(ok => {
+      if (!status.isConnected) return;
+      status.textContent = ok
+        ? 'Audio reconnected. Tap Test in-game narration above to confirm.'
+        : 'iPhone audio is still blocked. Try turning volume up and tapping Restore Audio again.';
+    });
+  },
   'test-game-narration': () => {
     NarratorHosts.stopPreview();
     const status = document.getElementById('game-narration-status');
