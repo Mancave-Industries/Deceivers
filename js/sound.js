@@ -218,7 +218,7 @@ const Sound = (() => {
      The random choice of take is the only variation. */
 
   const VOICE_GAIN = 1.0;
-  const CLIP_READY_TIMEOUT_MS = 3000;
+  const CLIP_READY_TIMEOUT_MS = 8500;
   const DECODED_LIMIT = 30;
   const FADE_OUT_SECONDS = 0.08;
   const PRIMED_POOLS = ['handoff', 'nightFalls', 'gather', 'votingBegins'];
@@ -241,7 +241,22 @@ const Sound = (() => {
 
   let narratorHost = 'original';
   function setNarratorHost(id) {
-    narratorHost = typeof NarratorHosts !== 'undefined' && NarratorHosts.find(id) ? id : 'original';
+    const next = typeof NarratorHosts !== 'undefined' && NarratorHosts.find(id) ? id : 'original';
+    if (next !== narratorHost) {
+      narratorHost = next;
+      Object.keys(primed).forEach(pool => delete primed[pool]);
+      preloadStarted = false;
+    }
+  }
+  function unlockAudio() {
+    if (!enabled) return Promise.resolve(false);
+    try {
+      const c = getCtx(false);
+      if (c.state === 'running') return Promise.resolve(true);
+      return Promise.resolve(c.resume()).then(() => c.state === 'running').catch(() => false);
+    } catch (e) {
+      return Promise.resolve(false);
+    }
   }
   function choiceBuffer(choice) {
     const result = withTimeout(decodeClip(choice.key), CLIP_READY_TIMEOUT_MS);
@@ -325,30 +340,18 @@ const Sound = (() => {
     if (!enabled || primed[poolName]) return;
     const c = pickFresh(poolName);
     if (!c) return;
-    primed[poolName] = c;
-    decodeClip(c.key).catch(() => {});
+    const key = narratorHost !== 'original' && typeof NarratorHosts !== 'undefined'
+      ? NarratorHosts.pickPoolKey(narratorHost, poolName, random) : null;
+    primed[poolName] = key ? { ...c, key, fallbackKey: c.key } : c;
+    decodeClip(primed[poolName].key).catch(() => {});
   }
 
-  /* Fetches every clip's compressed bytes in the background, most
-     frequently heard first, three at a time. Idempotent. */
+  /* Preload only opening clips. Fetching all 115 original takes at the
+     start competed with the selected host MP3s on mobile connections. */
   function preloadNarration() {
     if (!enabled || preloadStarted || typeof fetch !== 'function') return;
     preloadStarted = true;
-    PRIMED_POOLS.forEach(prime);
-    const first = [];
-    PRIMED_POOLS.forEach((p) => NARRATION.POOLS[p].forEach((line) => {
-      for (let t = 0; t < NARRATION.TAKES[line]; t++) first.push(NARRATION.clipKey(line, t));
-    }));
-    const rest = NARRATION.allClipKeys().filter((k) => first.indexOf(k) === -1);
-    const queue = first.concat(rest);
-    let active = 0;
-    const pump = () => {
-      while (active < 3 && queue.length) {
-        active++;
-        fetchClip(queue.shift()).catch(() => {}).then(() => { active--; pump(); });
-      }
-    };
-    pump();
+    ['intro1', 'intro2', 'intro3'].forEach(prime);
   }
 
   function stopVoice() {
@@ -427,6 +430,7 @@ const Sound = (() => {
       // only reviewed, recorded public lines for the selected host; the old
       // audio is the reliable per-clip fallback on download/decode failure.
       if (narratorHost !== 'original' && typeof NarratorHosts !== 'undefined') {
+        if (choice.key.startsWith('host:')) return choice; // already primed for this host
         const key = NarratorHosts.pickPoolKey(narratorHost, choice.pool, random);
         if (key) return { ...choice, key, fallbackKey: choice.key };
       }
@@ -734,7 +738,7 @@ const Sound = (() => {
   }
 
   return {
-    setNarratorHost, setEnabled, setNarrationLevel, play, setMusicEnabled, startMusic, stopMusic,
+    setNarratorHost, setEnabled, setNarrationLevel, unlockAudio, play, setMusicEnabled, startMusic, stopMusic,
     narrate, narrateIntro, announceVotingBegins, stopNarration, preloadNarration,
     // Test hooks only (tests/narration): observe audio events, seed picks.
     _onEvent: (fn) => listeners.push(fn),
