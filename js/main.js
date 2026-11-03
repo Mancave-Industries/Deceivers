@@ -708,14 +708,41 @@ const actions = {
     const status = document.getElementById('game-narration-status');
     if (!status) return;
     if (state.settings.audio === 'off') {
-      status.textContent = 'Audio is Off. Turn it On above before testing.';
+      status.textContent = 'Narration is Off. Tap On above, then test again.';
       return;
     }
-    status.textContent = 'Testing the actual in-game audio engine…';
-    Sound.unlockAudio();
+    Sound.stopNarration();
+    status.textContent = 'Loading the selected narrator through the game audio engine…';
+    let started = false;
+    let failed = '';
+    const unsubscribe = Sound._onEvent((type, data) => {
+      if (!status.isConnected) return;
+      if (type === 'clip-start') {
+        started = true;
+        const audio = Sound.getAudioStatus();
+        status.textContent = audio.contextState === 'running'
+          ? 'Playback started (' + audio.host + '). Can you hear the voice?'
+          : 'Playback requested, but phone audio is ' + audio.contextState + '.';
+      }
+      if (type === 'clip-failed') {
+        failed = String(data.error || 'Unknown audio error');
+        status.textContent = 'Playback failed: ' + failed;
+      }
+    });
+    Sound.unlockAudio().then(ok => {
+      if (!ok && status.isConnected && !started && !failed) {
+        status.textContent = 'The phone blocked the audio engine. Tap Test again.';
+      }
+    });
     Sound.narrate(['intro1'], () => {
-      if (status.isConnected && status.textContent.startsWith('Testing')) {
-        status.textContent = 'Test completed. If you heard nothing, report a playback fault.';
+      unsubscribe();
+      if (!status.isConnected) return;
+      if (failed) {
+        status.textContent = 'Test failed: ' + failed;
+      } else if (!started) {
+        status.textContent = 'No voice playback started. Report this as a narration fault.';
+      } else {
+        status.textContent = 'Playback finished. If you heard silence, the phone blocked audio output.';
       }
     });
   },
