@@ -231,22 +231,11 @@ UI.renderSetup = function renderSetup(names, seriesLength, isComputer, deceiverK
         ? "Deceivers begin without knowing who the others are — only a successful recruitment pact introduces two Deceivers to each other."
         : 'Deceivers privately see their fellow Deceivers (if more than one) during the role reveal.'}</p>
     </div>
-    <section class="panel narrator-panel" aria-labelledby="narrator-heading">
-      <h2 class="panel-title" id="narrator-heading">Choose Your Narrator</h2>
-      <p class="small-note">Listen, then choose your host. Preview packs currently change the opening greeting; the original narrator reads the remaining lines.</p>
-      <button type="button" class="seat-mode-btn narrator-original ${narratorHost === 'original' ? 'active' : ''}" data-action="choose-narrator" data-host="original" aria-pressed="${narratorHost === 'original'}">Original Mancaveman · complete narration</button>
-      <div class="narrator-grid">
-        ${NarratorHosts.hosts.map(h => `<div class="narrator-card">
-          <button type="button" class="narrator-select ${narratorHost === h.id ? 'selected' : ''}" data-action="choose-narrator" data-host="${h.id}" aria-label="Choose ${h.label}" aria-pressed="${narratorHost === h.id}">
-            <img src="${h.avatar}" width="512" height="512" alt="${h.label}" loading="lazy">
-            <span class="narrator-selected">${narratorHost === h.id ? 'Selected' : 'Choose ' + h.label}</span>
-          </button>
-          <button type="button" class="narrator-hear" data-action="preview-narrator" data-host="${h.id}" aria-label="Hear ${h.label}'s voice">▶ Hear ${h.label}</button>
-        </div>`).join('')}
-      </div>
-      <button type="button" class="narrator-hear" data-action="stop-narrator-preview">■ Stop preview</button>
-      <p class="small-note" id="narrator-preview-status" role="status" aria-live="polite"></p>
-    </section>
+    <div class="panel" style="margin-top:10px;">
+      <div class="panel-title">Your Narrator</div>
+      <p class="small-note">Selected: ${narratorHost === 'original' ? 'Original Mancaveman' : (NarratorHosts.find(narratorHost)?.label || 'Original Mancaveman')}</p>
+      <button type="button" class="btn btn-ghost btn-block" data-action="open-narrator-settings">Choose narrator &amp; test audio</button>
+    </div>
     <div class="spacer"></div>
     <button class="btn btn-primary btn-block" data-action="start-game" ${allValid ? '' : 'disabled'}>Seal The Roles &amp; Begin</button>`;
 };
@@ -998,6 +987,7 @@ UI.showModal = function showModal(title, bodyHtml) {
 };
 
 UI.hideModal = function hideModal() {
+  NarratorHosts.stopPreview();
   document.getElementById('modalOverlay').classList.add('hidden');
 };
 
@@ -1225,31 +1215,37 @@ UI.helpContent = function helpContent() {
 };
 
 UI.settingsContent = function settingsContent(state) {
-  const audio = state.settings.audio || 'partial';
+  const audio = state.settings.audio || 'full';
+  const hostId = state.settings.narratorHost || 'original';
   return `
     <div class="panel" style="margin-top:0;">
-      <div class="panel-title">Narration</div>
+      <div class="panel-title">Narration & Sound</div>
       <div class="seat-mode-row" style="padding-left:0;">
         <button type="button" class="seat-mode-btn ${audio === 'off' ? 'active' : ''}" data-action="set-audio-level" data-mode="off">Off</button>
-        <button type="button" class="seat-mode-btn ${audio === 'partial' ? 'active' : ''}" data-action="set-audio-level" data-mode="partial">Partial</button>
-        <button type="button" class="seat-mode-btn ${audio === 'full' ? 'active' : ''}" data-action="set-audio-level" data-mode="full">Full</button>
+        <button type="button" class="seat-mode-btn ${audio !== 'off' ? 'active' : ''}" data-action="set-audio-level" data-mode="full">On · Full Narration</button>
       </div>
       <p class="small-note" style="text-align:left; margin-top:8px;">${audio === 'off'
-        ? 'All sound is off — effects and narration alike.'
-        : audio === 'partial'
-          ? 'Everything except the per-turn "pass the phone" line.'
-          : 'Every narration line, including the per-turn "pass the phone" prompts.'}</p>
+        ? 'Audio is muted. Narrators and sound effects will not play.'
+        : 'Narration is on, including public game instructions and every pass-the-phone prompt.'}</p>
     </div>
-    <div class="rule-row">
-      <label style="display:flex;align-items:center;gap:10px;width:100%;">
-        <input type="checkbox" id="musicToggle" ${state.settings.music ? 'checked' : ''}>
-        <span>Background music during discussion</span>
-      </label>
-    </div>
-    <a href="${CONFIG.spotifyPlaylistUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:10px; border-radius:10px; overflow:hidden; line-height:0;">
-      <img src="assets/brand/listen-on-spotify.jpg" alt="Listen to our Deceitful playlist on Spotify" style="width:100%; height:auto; display:block;">
-    </a>
-    <p class="small-note" style="margin-top:6px;">Play it through a connected speaker, not the phone, for the full effect.</p>
+    <section class="panel narrator-panel" aria-labelledby="narrator-heading">
+      <h2 class="panel-title" id="narrator-heading">Choose Your Narrator</h2>
+      <p class="small-note">One voice throughout the game. Tap Hear to preview; your choice is saved.</p>
+      <button type="button" class="seat-mode-btn narrator-original ${hostId === 'original' ? 'active' : ''}" data-action="choose-narrator" data-host="original" aria-pressed="${hostId === 'original'}">Original Mancaveman</button>
+      <div class="narrator-grid">
+      ${NarratorHosts.hosts.map(h => `<div class="narrator-card">
+        <button type="button" class="narrator-select ${hostId === h.id ? 'selected' : ''}" data-action="choose-narrator" data-host="${h.id}" aria-label="Choose ${h.label}" aria-pressed="${hostId === h.id}">
+          <img src="${h.avatar}" width="512" height="512" alt="${h.label}" loading="lazy">
+          <span class="narrator-selected">${hostId === h.id ? 'Selected' : 'Choose ' + h.label}</span>
+        </button>
+        <button type="button" class="narrator-hear" data-action="preview-narrator" data-host="${h.id}" aria-label="Hear ${h.label}'s voice">▶ Hear ${h.label}</button>
+      </div>`).join('')}
+      </div>
+      <button type="button" class="narrator-hear" data-action="stop-narrator-preview">■ Stop preview</button>
+      <p class="small-note" id="narrator-preview-status" role="status" aria-live="polite"></p>
+      <button type="button" class="btn btn-ghost btn-block" data-action="test-game-narration" style="margin-top:8px;">▶ Test in-game narration</button>
+      <p class="small-note" id="game-narration-status" role="status" aria-live="polite"></p>
+    </section>
     <a href="${CONFIG.tipUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:14px; border-radius:10px; overflow:hidden; line-height:0;">
       <img src="assets/brand/send-a-tip.jpg" alt="Send a tip to MANCAVEMAN" style="width:100%; height:auto; display:block;">
     </a>
