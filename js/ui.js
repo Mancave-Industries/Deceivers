@@ -1245,6 +1245,9 @@ UI.settingsContent = function settingsContent(state) {
       <p class="small-note" id="narrator-preview-status" role="status" aria-live="polite"></p>
       <button type="button" class="btn btn-ghost btn-block" data-action="test-game-narration" style="margin-top:8px;">▶ Test in-game narration</button>
       <p class="small-note" id="game-narration-status" role="status" aria-live="polite"></p>
+      <button type="button" class="btn btn-ghost btn-block" data-action="restore-game-audio" style="margin-top:10px;">Restore Audio</button>
+      <p class="small-note" style="margin-top:4px;">If voices stopped partway through, restore sound without restarting your game.</p>
+      <p class="small-note" id="audio-recovery-status" role="status" aria-live="polite"></p>
     </section>
     <a href="${CONFIG.tipUrl}" target="_blank" rel="noopener noreferrer" style="display:block; margin-top:14px; border-radius:10px; overflow:hidden; line-height:0;">
       <img src="assets/brand/send-a-tip.jpg" alt="Send a tip to MANCAVEMAN" style="width:100%; height:auto; display:block;">
