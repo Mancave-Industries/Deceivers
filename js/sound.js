@@ -423,10 +423,11 @@ const Sound = (() => {
     };
     if (!enabled || !poolNames || !poolNames.length) { finish(); return; }
     const choices = poolNames.map(choose).filter(Boolean).map(choice => {
-      // Only a public opening greeting is replaced. Rule explanations and every
-      // private queue/handoff keep the complete legacy narration and its guards.
-      if (narratorHost !== 'original' && choice.pool === 'intro1') {
-        const key = NarratorHosts.openingKey(narratorHost);
+      // The established phase/public-reveal gates choose the pool. Substitute
+      // only reviewed, recorded public lines for the selected host; the old
+      // audio is the reliable per-clip fallback on download/decode failure.
+      if (narratorHost !== 'original' && typeof NarratorHosts !== 'undefined') {
+        const key = NarratorHosts.pickPoolKey(narratorHost, choice.pool, random);
         if (key) return { ...choice, key, fallbackKey: choice.key };
       }
       return choice;
