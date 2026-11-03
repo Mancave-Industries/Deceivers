@@ -27,23 +27,42 @@ test('six static portraits and six opening MP3s are complete, local and distinct
  for(const h of r.NarratorHosts.hosts){assert.ok(fs.existsSync(h.avatar));assert.ok(fs.existsSync(h.opening));assert.ok(!h.opening.includes('://'));}
  assert.equal(r.NarratorHosts.openingKey('../victor'),null);
 });
-test('each narrator replaces only the public greeting, preserving both rule explanations',async()=>{
+test('all 174 reviewed public clips exist for each of the six hosts',()=>{
+ const r=runtime();const reviewed=JSON.parse(fs.readFileSync('voice-production/reviewed_production_script.json','utf8'));
+ const clips=reviewed.clips.filter(c=>c.recording_status==='public_pool_candidate');assert.equal(clips.length,174);
+ for(const host of r.NarratorHosts.hosts)for(const clip of clips){
+  const key='host:'+host.id+':'+clip.id;
+  assert.equal(r.NarratorHosts.clipUrl(key),`assets/audio/hosts/${host.id}/${clip.event}/${clip.id}.mp3`);
+  assert.ok(fs.existsSync(r.NarratorHosts.clipUrl(key)),key);
+ }
+ assert.equal(r.NarratorHosts.clipUrl('host:david:recruit_001'),null);
+ assert.equal(r.NarratorHosts.clipUrl('host:../../etc:opening_002'),null);
+});
+test('each host plays its own approved opening and two rule explanations',async()=>{
  for(const host of ['david','victor','aaron','beth','lily','charlotte']){
-  const r=runtime();r.Sound.setNarratorHost(host); await speak(r,['intro1','intro2','intro3']);
-  assert.ok(r.requests.includes(`assets/audio/hosts/${host}/opening/opening_002.mp3`));
-  assert.ok(r.requests.some(x=>/02_[ABC]\.m4a/.test(x)));assert.ok(r.requests.some(x=>/03_[ABC]\.m4a/.test(x)));
+  const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['intro1','intro2','intro3']);
+  assert.ok(r.requests.some(url=>url.startsWith(`assets/audio/hosts/${host}/opening/opening_`)),host);
+  for(const clip of ['rules_intro_001','rules_intro_002'])assert.ok(r.requests.includes(`assets/audio/hosts/${host}/rules_intro/${clip}.mp3`));
+  assert.ok(!r.requests.some(url=>/0[123]_[ABC]\\.m4a/.test(url)),host);
  }
 });
-test('missing host audio falls back to the original greeting and finishes',async()=>{
+test('missing selected-host MP3 falls back to the original and completes',async()=>{
  const r=runtime(true);r.Sound.setNarratorHost('david');await speak(r,['intro1']);
- assert.ok(r.requests.some(x=>/01_[ABC]\.m4a/.test(x)));assert.equal(r.events.filter(x=>x.type==='clip-start').length,1);
+ assert.ok(r.requests.some(x=>/01_[ABC]\\.m4a/.test(x)));assert.equal(r.events.filter(x=>x.type==='clip-start').length,1);
 });
-test('handoff and night requests are equivalent for every host and never request private host clips',async()=>{
- const snapshots=[];
- for(const host of ['original','david','victor','aaron','beth','lily','charlotte']){
-  const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['handoff','nightFalls']);snapshots.push(r.requests);
+test('public handoffs and night lines are host-specific but never request held/private lines',async()=>{
+ for(const host of ['david','victor','aaron','beth','lily','charlotte']){
+  const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['handoff','nightFalls']);
+  assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/anonymous_handoff/`)));
+  assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/night_falls/`)));
+  assert.ok(r.requests.every(x=>!/(recruit|private|role_reveal)/.test(x)));
+  assert.deepEqual(r.events.filter(e=>e.type==='narrate').map(e=>e.pools),[['handoff','nightFalls']]);
  }
- for(const requests of snapshots) assert.deepEqual(requests,snapshots[0]);
+});
+test('repeated public events avoid immediate clip repeats where alternatives exist',()=>{
+ const r=runtime();for(const pool of ['handoff','nightFalls','murderFirst']){
+  let last=null;for(let i=0;i<50;i++){const key=r.NarratorHosts.pickPoolKey('david',pool,()=>0);assert.notEqual(key,last);last=key;}
+ }
 });
 test('starting a new preview stops the previous one and stop clears the current audio',()=>{
  const r=runtime();r.NarratorHosts.previewHost('david',()=>{});r.NarratorHosts.previewHost('beth',()=>{});
