@@ -43,12 +43,12 @@ test('each host plays its own approved opening and two rule explanations',async(
   const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['intro1','intro2','intro3']);
   assert.ok(r.requests.some(url=>url.startsWith(`assets/audio/hosts/${host}/opening/opening_`)),host);
   for(const clip of ['rules_intro_001','rules_intro_002'])assert.ok(r.requests.includes(`assets/audio/hosts/${host}/rules_intro/${clip}.mp3`));
-  assert.ok(!r.requests.some(url=>/0[123]_[ABC]\\.m4a/.test(url)),host);
+  assert.ok(!r.requests.some(url=>/0[123]_[ABC]\.m4a/.test(url)),host);
  }
 });
 test('missing selected-host MP3 falls back to the original and completes',async()=>{
  const r=runtime(true);r.Sound.setNarratorHost('david');await speak(r,['intro1']);
- assert.ok(r.requests.some(x=>/01_[ABC]\\.m4a/.test(x)));assert.equal(r.events.filter(x=>x.type==='clip-start').length,1);
+ assert.ok(r.requests.some(x=>/01_[ABC]\.m4a/.test(x)));assert.equal(r.events.filter(x=>x.type==='clip-start').length,1);
 });
 test('public handoffs and night lines are host-specific but never request held/private lines',async()=>{
  for(const host of ['david','victor','aaron','beth','lily','charlotte']){
@@ -56,7 +56,7 @@ test('public handoffs and night lines are host-specific but never request held/p
   assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/anonymous_handoff/`)));
   assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/night_falls/`)));
   assert.ok(r.requests.every(x=>!/(recruit|private|role_reveal)/.test(x)));
-  assert.deepEqual(r.events.filter(e=>e.type==='narrate').map(e=>e.pools),[['handoff','nightFalls']]);
+  assert.equal(r.events.filter(e=>e.type==='narrate').map(e=>e.pools.join(',')).join('|'),'handoff,nightFalls');
  }
 });
 test('repeated public events avoid immediate clip repeats where alternatives exist',()=>{
