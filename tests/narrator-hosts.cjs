@@ -3,10 +3,14 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 function runtime(failHost = false) {
- const requests = [], events = [], previews = [];
+ const requests = [], events = [], previews = [], contexts = [];
  const noop = () => {};
  class Context {
-  constructor() { this.state='running'; this.currentTime=0; this.destination={}; }
+  constructor() { this.state='running'; this.currentTime=0; this.destination={}; this.sampleRate=44100; contexts.push(this); }
+  addEventListener(type, fn) { if(type==='statechange') this.onStateChange=fn; }
+  resume() { this.state='running'; this.onStateChange?.(); return Promise.resolve(); }
+  close() { this.state='closed'; return Promise.resolve(); }
+  createBuffer() { return {}; }
   decodeAudioData(bytes, ok) { const b={duration:0.001}; ok(b); return Promise.resolve(b); }
   createGain() { return {gain:{value:1,cancelScheduledValues:noop,setValueAtTime:noop,linearRampToValueAtTime:noop},connect(){return this;}}; }
   createBufferSource() { return {connect(){return this;}, start(){setTimeout(()=>this.onended?.(),0);},stop:noop}; }
@@ -20,7 +24,7 @@ function runtime(failHost = false) {
  const api=vm.runInContext('({Sound,NarratorHosts,NARRATION})',sandbox);
  api.Sound._onEvent((type,data)=>events.push({type,...data}));
  api.Sound.setEnabled(true); api.Sound.setNarrationLevel('full');
- return {...api,requests,events,previews,audioSession};
+ return {...api,requests,events,previews,audioSession,contexts};
 }
 async function speak(r,pools){await new Promise(resolve=>r.Sound.narrate(pools,resolve,{gapMs:0}));}
 test('six static portraits and six opening MP3s are complete, local and distinct',()=>{
@@ -76,4 +80,28 @@ test('unlockAudio requests Safari playback session instead of silent ambient',as
  const unlocked=await r.Sound.unlockAudio();
  assert.equal(unlocked,true);
  assert.equal(r.audioSession.type,'playback');
+});
+
+test('audio interrupted halfway through resumes for the next public cue',async()=>{
+ const r=runtime();r.Sound.setNarratorHost('david');await speak(r,['intro1']);
+ const context=r.contexts.at(-1);
+ context.state='interrupted';context.onStateChange?.();
+ assert.equal(r.Sound.getAudioStatus().interrupted,true);
+ assert.equal(await r.Sound.unlockAudio(),true);
+ assert.equal(r.Sound.getAudioStatus().contextState,'running');
+ await speak(r,['handoff']);
+ assert.ok(r.events.some(e=>e.type==='clip-start' && /host:david:anonymous_handoff_/.test(e.key)));
+});
+
+test('Restore Audio recreates a stale context without changing the host',async()=>{
+ const r=runtime();r.Sound.setNarratorHost('lily');
+ await speak(r,['intro1']);
+ const first=r.contexts.at(-1);
+ first.state='interrupted';first.onStateChange?.();
+ assert.equal(await r.Sound.recoverAudio(),true);
+ assert.equal(first.state,'closed');
+ assert.notEqual(r.contexts.at(-1),first);
+ assert.equal(r.Sound.getAudioStatus().host,'lily');
+ await speak(r,['handoff']);
+ assert.ok(r.events.some(e=>e.type==='clip-start' && /host:lily:anonymous_handoff_/.test(e.key)));
 });
