@@ -251,6 +251,12 @@ const Sound = (() => {
   function unlockAudio() {
     if (!enabled) return Promise.resolve(false);
     try {
+      // Safari can mute Web Audio when the phone's Ring/Silent switch is
+      // silent, even though HTML <audio> previews still work. This is a
+      // playback-first app: request the Playback session where supported.
+      if (typeof navigator !== 'undefined' && navigator.audioSession) {
+        try { navigator.audioSession.type = 'playback'; } catch (e) { /* unsupported mode */ }
+      }
       // iOS requires a real source to start inside a user gesture. An
       // inaudible one-frame buffer unlocks the SAME context used by game
       // narration later (including time-delayed public announcements).
