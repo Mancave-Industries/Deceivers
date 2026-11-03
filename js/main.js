@@ -77,7 +77,7 @@ function applyAudioSettings(audioLevel) {
 }
 
 applyAudioSettings(state.settings.audio);
-Sound.setMusicEnabled(state.settings.music);
+Sound.setMusicEnabled(false);
 Sound.setNarratorHost(state.settings.narratorHost);
 
 let setupNames = Array(CONFIG.minPlayers).fill('');
@@ -346,7 +346,7 @@ function resolveComputerTurn() {
         uiStage.votingAnnounced = false;
         if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
+        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); startDiscussTimer(); interstitialPending = 'banishment'; }
       }
       break;
     }
@@ -422,7 +422,7 @@ function resolveComputerTurn() {
         const nextPhase = resolveFinalCircleDecision(state);
         if (nextPhase === PHASES.DISCUSS) {
           Sound.play('gather');
-          Sound.startMusic();
+          
           startDiscussTimer();
           interstitialPending = 'banish-again';
         } else if (nextPhase === PHASES.RESULTS) {
@@ -608,9 +608,9 @@ const actions = {
       resetNarrationTracking();
       applyAudioSettings(state.settings.audio);
       Sound.preloadNarration();
-      Sound.setMusicEnabled(state.settings.music);
+      Sound.setMusicEnabled(false);
       document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
-      if (state.phase === PHASES.DISCUSS) { Sound.startMusic(); startDiscussTimer(); }
+      if (state.phase === PHASES.DISCUSS) { startDiscussTimer(); }
     }
     render();
   },
@@ -663,7 +663,7 @@ const actions = {
   },
   'set-audio-level': (btn) => {
     const mode = btn.dataset.mode;
-    state.settings.audio = mode === 'off' || mode === 'full' ? mode : 'partial';
+    state.settings.audio = mode === 'off' ? 'off' : 'full';
     applyAudioSettings(state.settings.audio);
     document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
     if (state.settings.audio !== 'off') {
@@ -673,26 +673,53 @@ const actions = {
     persist();
     UI.showModal('Settings', UI.settingsContent(state));
   },
+  'open-narrator-settings': () => {
+    Sound.play('modalOpen');
+    UI.showModal('Narrator & Sound', UI.settingsContent(state));
+  },
   'choose-narrator': (btn) => {
-    if (state.phase !== PHASES.SETUP) return;
     const host = NarratorHosts.find(btn.dataset.host);
     if (!host && btn.dataset.host !== 'original') return;
     NarratorHosts.stopPreview();
     state.settings.narratorHost = host ? host.id : 'original';
     Sound.setNarratorHost(state.settings.narratorHost);
+    if (state.settings.audio === 'off') {
+      state.settings.audio = 'full';
+      applyAudioSettings('full');
+      document.getElementById('soundBtn').classList.remove('muted');
+    }
     persist();
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
+    UI.showModal('Narrator & Sound', UI.settingsContent(state));
+    if (state.phase === PHASES.SETUP) {
+      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
+    }
   },
   'preview-narrator': (btn) => {
-    if (state.phase !== PHASES.SETUP) return;
     NarratorHosts.previewHost(btn.dataset.host, text => {
       const status = document.getElementById('narrator-preview-status');
       if (status) status.textContent = text;
     });
   },
   'stop-narrator-preview': () => NarratorHosts.stopPreview(),
+  'test-game-narration': () => {
+    NarratorHosts.stopPreview();
+    const status = document.getElementById('game-narration-status');
+    if (!status) return;
+    if (state.settings.audio === 'off') {
+      status.textContent = 'Audio is Off. Turn it On above before testing.';
+      return;
+    }
+    status.textContent = 'Testing the actual in-game audio engine…';
+    Sound.unlockAudio();
+    Sound.narrate(['intro1'], () => {
+      if (status.isConnected && status.textContent.startsWith('Testing')) {
+        status.textContent = 'Test completed. If you heard nothing, report a playback fault.';
+      }
+    });
+  },
   'start-game': () => {
     NarratorHosts.stopPreview();
+    Sound.unlockAudio();
     if (!setupNames.every((n) => n.trim().length > 0)) return;
     Sound.play('gather');
     startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
@@ -785,7 +812,7 @@ const actions = {
       uiStage.votingAnnounced = false;
       if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
+      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); startDiscussTimer(); interstitialPending = 'banishment'; }
     } else {
       // Still more players in the Draw queue — hand the phone on.
       Sound.play('passDevice');
@@ -1193,7 +1220,10 @@ document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-action]');
   if (!btn) return;
   const action = actions[btn.dataset.action];
-  if (action) action(btn);
+  if (action) {
+    Sound.unlockAudio(); // Resume iPhone AudioContext inside the user gesture.
+    action(btn);
+  }
 });
 
 document.addEventListener('input', (e) => {
@@ -1207,19 +1237,6 @@ document.addEventListener('input', (e) => {
 document.getElementById('menuBtn').addEventListener('click', () => {
   Sound.play('modalOpen');
   UI.showModal('Settings', UI.settingsContent(state));
-});
-
-// A checkbox's own 'click' (not 'change') is used here so this goes
-// through the same global data-action delegation as every other control
-// -- including after 'set-audio-level' redraws the modal body, which
-// would otherwise orphan a listener attached directly to the old node.
-document.addEventListener('click', (e) => {
-  const toggle = e.target.closest('#musicToggle');
-  if (!toggle) return;
-  state.settings.music = toggle.checked;
-  Sound.setMusicEnabled(state.settings.music);
-  if (state.settings.music && state.phase === PHASES.DISCUSS) Sound.startMusic();
-  persist();
 });
 
 document.getElementById('helpBtn').addEventListener('click', () => {
