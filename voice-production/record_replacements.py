@@ -168,7 +168,10 @@ def run():
     if '--dry-run' in sys.argv:
         print(json.dumps({'remaining_clips': len(todo), 'estimated_credits': remaining_credits}))
         return
-    if os.environ.get('GITHUB_REPOSITORY') != REPO or os.environ.get('GITHUB_REF') != 'refs/heads/' + BRANCH:
+    direct_branch = os.environ.get('GITHUB_REF') == 'refs/heads/' + BRANCH
+    pull_request_branch = (os.environ.get('GITHUB_EVENT_NAME') == 'pull_request'
+                           and os.environ.get('GITHUB_HEAD_REF') == BRANCH)
+    if os.environ.get('GITHUB_REPOSITORY') != REPO or not (direct_branch or pull_request_branch):
         raise RuntimeError('Replacement production is restricted to the approved repository and draft branch')
     api_key = os.environ.get('ELEVENLABS_API_KEY', '').strip()
     token = os.environ.get('GITHUB_TOKEN', '')
