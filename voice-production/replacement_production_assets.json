@@ -17349,7 +17349,7 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/kay/banish_again/banish_again_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013655+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17367,7 +17367,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "bdf9b86a279b0fefd6a24b2acf7d7b3ef868f940",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:24.381860+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17376,7 +17383,7 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/kay/quiet_night/quiet_night_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013673+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17394,7 +17401,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "535721b2e61267beae3309dce9355c2f2add9acf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:25.209147+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17403,7 +17417,7 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/kay/shield_saved/shield_saved_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013675+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17421,7 +17435,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "7034a74f9b2cfa5f354cf00c676a88234cbe5117",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:26.037342+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17430,7 +17451,7 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/kay/tied_vote/tied_vote_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013677+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17448,7 +17469,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "faccaba2b6bc43d8221ea059f5261857d8b05c99",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:26.834604+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17457,7 +17485,7 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/kay/final_decision/final_decision_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013681+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17475,7 +17503,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "5e7f70a403366fa3ad6d4cf9a25554331d6d24b3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:27.737446+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17484,7 +17519,7 @@
       "text": "And now, the truth.",
       "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
       "path": "assets/audio/hosts/kay/truth_reveal/truth_reveal_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013684+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17502,7 +17537,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "e63b07042754ca633cfbcd9dcf4f250ec352d0ca",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:28.526196+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17511,7 +17553,7 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/kay/truth_reveal/truth_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013685+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17529,7 +17571,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "375b62bd0e44d2e6ac7307c1b592b34ec6f696ec",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:29.392621+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17538,7 +17587,7 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/kay/series_closing/series_closing_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013688+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17556,7 +17605,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "f7eace2fe1aeb3a61f2b22c32759f453975f99cd",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:30.250798+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17565,7 +17621,7 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/kay/farewell/farewell_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013690+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17583,7 +17639,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "5df5d715760dff294d32f7c213567d5481d4d6b4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:31.073313+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17592,7 +17655,7 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/kay/rules_intro/rules_intro_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:07.013692+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17610,7 +17673,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e0b85e623e72d88c1705c3d858759db32724f013",
+        "blob_sha": "cce91c5531f4aa062c328f046a77b1b373fdec6b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:31.977093+00:00"
+      }
     }
   ]
 }
