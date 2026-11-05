@@ -40,11 +40,11 @@ test('all 174 reviewed public clips exist for each of the six hosts',()=>{
   assert.equal(r.NarratorHosts.clipUrl(key),`assets/audio/hosts/${host.id}/${clip.event}/${clip.id}.mp3`);
   assert.ok(fs.existsSync(r.NarratorHosts.clipUrl(key)),key);
  }
- assert.equal(r.NarratorHosts.clipUrl('host:david:recruit_001'),null);
+ assert.equal(r.NarratorHosts.clipUrl('host:timothy:recruit_001'),null);
  assert.equal(r.NarratorHosts.clipUrl('host:../../etc:opening_002'),null);
 });
 test('each host plays its own approved opening and two rule explanations',async()=>{
- for(const host of ['david','victor','aaron','beth','lily','charlotte']){
+ for(const host of ['victor','lily','timothy','cate','kay','penelope']){
   const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['intro1','intro2','intro3']);
   assert.ok(r.requests.some(url=>url.startsWith(`assets/audio/hosts/${host}/opening/opening_`)),host);
   for(const clip of ['rules_intro_001','rules_intro_002'])assert.ok(r.requests.includes(`assets/audio/hosts/${host}/rules_intro/${clip}.mp3`));
@@ -52,11 +52,11 @@ test('each host plays its own approved opening and two rule explanations',async(
  }
 });
 test('missing selected-host MP3 falls back to the original and completes',async()=>{
- const r=runtime(true);r.Sound.setNarratorHost('david');await speak(r,['intro1']);
+ const r=runtime(true);r.Sound.setNarratorHost('timothy');await speak(r,['intro1']);
  assert.ok(r.requests.some(x=>/01_[ABC]\.m4a/.test(x)));assert.equal(r.events.filter(x=>x.type==='clip-start').length,1);
 });
 test('public handoffs and night lines are host-specific but never request held/private lines',async()=>{
- for(const host of ['david','victor','aaron','beth','lily','charlotte']){
+ for(const host of ['victor','lily','timothy','cate','kay','penelope']){
   const r=runtime();r.Sound._setRandom(()=>0);r.Sound.setNarratorHost(host);await speak(r,['handoff','nightFalls']);
   assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/anonymous_handoff/`)));
   assert.ok(r.requests.some(x=>x.startsWith(`assets/audio/hosts/${host}/night_falls/`)));
@@ -66,11 +66,11 @@ test('public handoffs and night lines are host-specific but never request held/p
 });
 test('repeated public events avoid immediate clip repeats where alternatives exist',()=>{
  const r=runtime();for(const pool of ['handoff','nightFalls','murderFirst']){
-  let last=null;for(let i=0;i<50;i++){const key=r.NarratorHosts.pickPoolKey('david',pool,()=>0);assert.notEqual(key,last);last=key;}
+  let last=null;for(let i=0;i<50;i++){const key=r.NarratorHosts.pickPoolKey('timothy',pool,()=>0);assert.notEqual(key,last);last=key;}
  }
 });
 test('starting a new preview stops the previous one and stop clears the current audio',()=>{
- const r=runtime();r.NarratorHosts.previewHost('david',()=>{});r.NarratorHosts.previewHost('beth',()=>{});
+ const r=runtime();r.NarratorHosts.previewHost('timothy',()=>{});r.NarratorHosts.previewHost('cate',()=>{});
  assert.equal(r.previews[0].paused,true);r.NarratorHosts.stopPreview();assert.equal(r.previews[1].paused,true);
 });
 
@@ -83,14 +83,14 @@ test('unlockAudio requests Safari playback session instead of silent ambient',as
 });
 
 test('audio interrupted halfway through resumes for the next public cue',async()=>{
- const r=runtime();r.Sound.setNarratorHost('david');await speak(r,['intro1']);
+ const r=runtime();r.Sound.setNarratorHost('timothy');await speak(r,['intro1']);
  const context=r.contexts.at(-1);
  context.state='interrupted';context.onStateChange?.();
  assert.equal(r.Sound.getAudioStatus().interrupted,true);
  assert.equal(await r.Sound.unlockAudio(),true);
  assert.equal(r.Sound.getAudioStatus().contextState,'running');
  await speak(r,['handoff']);
- assert.ok(r.events.some(e=>e.type==='clip-start' && /host:david:anonymous_handoff_/.test(e.key)));
+ assert.ok(r.events.some(e=>e.type==='clip-start' && /host:timothy:anonymous_handoff_/.test(e.key)));
 });
 
 test('Restore Audio recreates a stale context without changing the host',async()=>{
