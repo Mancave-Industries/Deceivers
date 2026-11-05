@@ -18709,8 +18709,25 @@
       "text": "Next turn. Same rules, fewer questions.",
       "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_029.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490882+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490882+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "salLhkGnhQSw4zgpeRSz",
+        "request_id": "syAOMzz0SRoAFHHZtJCQ"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:45.058871+00:00",
+      "sha256": "a92e81357f30f5d7fccea63d642988085d3a6cfc0f640eb91f2a7c431c8d7ae2",
+      "git_blob_sha": "b0a821b8b9fbc6de9271eede4f930229871fd990",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18719,8 +18736,25 @@
       "text": "The phone, please. Not the whole table.",
       "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_030.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490899+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490899+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "42doDrHALeaHpJiEIx0C",
+        "request_id": "AGNYk6w0a7pZKLr0uDIQ"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:46.105199+00:00",
+      "sha256": "2c19e22a989d7c26e42eb9e0a3d05a917585e259b79518a16b4459ec1b548871",
+      "git_blob_sha": "f570a4cbfde5a74fca86802a20869e83724c99eb",
+      "size_bytes": 53541,
+      "duration_seconds": 3.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18729,8 +18763,25 @@
       "text": "A little less staring, perhaps.",
       "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_031.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490902+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490902+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MjNMl4Ik7otYDAY4VRnQ",
+        "request_id": "ICgrwYR2WHoLJPohUAic"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:47.086021+00:00",
+      "sha256": "6a878636e46ee5a4aaec68ab3193e3934224e8b6f3237475272198aa4de87513",
+      "git_blob_sha": "1d88cde4f2b1e6f9582f53f71c84d4da848cdb41",
+      "size_bytes": 43510,
+      "duration_seconds": 2.64,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18739,8 +18790,25 @@
       "text": "Next player. Keep the screen private.",
       "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_032.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490904+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490904+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7en9Y2oxjTOs3hsxl4gr",
+        "request_id": "gtiFa1ok3tYSHxZy7T9f"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:48.108916+00:00",
+      "sha256": "cdc7ee611ef5da71ffc0e50b46caab26e3ca0dd898229d5041dee50e95b2dada",
+      "git_blob_sha": "d8a5497a4803b3fce389f173bfa0da9c67d6a021",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18749,8 +18817,25 @@
       "text": "Round we go again. Delightful.",
       "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_033.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490905+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490905+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DeuNcJbiw9XRva0W8k2J",
+        "request_id": "CYQdbZgey9G37LbMWvLA"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:49.052341+00:00",
+      "sha256": "09bcff982c7ffe0406492f6658e22c60d7107d02d7b7bad38f60fa649babe331",
+      "git_blob_sha": "5e1b2f4d754002a57ccac8ee3add3f771a49c9d7",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18759,8 +18844,25 @@
       "text": "Pass it over. No hovering.",
       "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_034.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490907+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490907+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vICBNWFjV4MEkNRyq0JH",
+        "request_id": "UETbdJmCOt7nCiMlI3BZ"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:49.988213+00:00",
+      "sha256": "82a5d9c16cbb71566393a179ab0944672bfdb4d779a51c92c1c0f677e2db6c18",
+      "git_blob_sha": "e8ad1da6ffa0636edd277e0a6e097b1fcd8107c3",
+      "size_bytes": 39331,
+      "duration_seconds": 2.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18769,8 +18871,25 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490909+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490909+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IFkIbnSUNyybvnIZ8P5B",
+        "request_id": "FWSQ7ENwc6pUBI3oAJJr"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:50.823023+00:00",
+      "sha256": "704e4614983531d8ebdb9e02db8a07fdf064c41b5cb0e968dbd0a14bf67b9ed8",
+      "git_blob_sha": "2068b26347ac9f02715fa0a445968452f606eff5",
+      "size_bytes": 34315,
+      "duration_seconds": 2.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18779,8 +18898,25 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490911+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490911+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "t91t0OuR7e2U3P4Sxl3r",
+        "request_id": "9SHNA5lpZiMVjGQTBEvc"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:51.840837+00:00",
+      "sha256": "afbf806603e40aa3688fb8f75254200e376a16bfcf2d563188116940cba0d087",
+      "git_blob_sha": "be3bb55127ce8034c4c0e780a57808addb21ceab",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18789,8 +18925,25 @@
       "text": "Keep it moving, my dears.",
       "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_037.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490913+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490913+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "GLcDdxF93hGgWUQjgSNf",
+        "request_id": "VtTFfa0sq0xyEOOCuELd"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:52.606160+00:00",
+      "sha256": "af2111eeb0e24986ebb9855e147886844befff0cb951f4bd878e471891ac41c2",
+      "git_blob_sha": "1b5ee98aef3d7e9bfed312424d7acc75b1bdb2fa",
+      "size_bytes": 28046,
+      "duration_seconds": 1.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -18799,8 +18952,25 @@
       "text": "Next player, and mind your manners.",
       "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_038.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:20:42.490915+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:20:42.490915+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "rwHFhmJEpGHx8Vj7mFt4",
+        "request_id": "O4xUj0bki4wBFEvQmiY0"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:20:53.624255+00:00",
+      "sha256": "d75747d17a2fc8b40283f1e1d24f3a019e09c31b853edf95ce2c7f28c578950a",
+      "git_blob_sha": "8dd5d2a19180e7d9f2173cffc163e8b57913ea6e",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
