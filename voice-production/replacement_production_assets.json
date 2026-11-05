@@ -2389,8 +2389,25 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/timothy/discussion/discussion_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632602+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632602+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HIXSHSs8fDrBjn6UCgDA",
+        "request_id": "DFjIUNiPaHrvir7H53ou"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:18.944287+00:00",
+      "sha256": "08a11fe3c86607c1ba1a338c20043cf63d04247c74f5c314435c17c3a5783e09",
+      "git_blob_sha": "ddd462ae0cfef5b415be443056c8d8848e6821db",
+      "size_bytes": 62318,
+      "duration_seconds": 3.84,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2399,8 +2416,25 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/timothy/discussion/discussion_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632623+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632623+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "zZAtLLjBBES6sN2NRaRX",
+        "request_id": "Gh0YXqIOi3evHO9NdkRg"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:20.065278+00:00",
+      "sha256": "8d052c27078945fa9c11ef7dc3b2be667a5465ec20441e79f6c288bcb543af2f",
+      "git_blob_sha": "0d12d6cd134b5908d470daa37c613b091688ae82",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2409,8 +2443,25 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/timothy/discussion/discussion_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632625+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632625+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "D1T3IDIaEABXtihQtakb",
+        "request_id": "q0inTBqYVstpgXtO37dW"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:21.244864+00:00",
+      "sha256": "84f4e6609608bfe785c5926d433cc97d35f54d33d40070b6474bed840ab4e1ea",
+      "git_blob_sha": "6173e9631678b7e8e96510130190bd48a05917a3",
+      "size_bytes": 67752,
+      "duration_seconds": 4.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2419,8 +2470,25 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/timothy/discussion/discussion_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632627+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632627+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ZvPc6dv45uNhj4tDLZq7",
+        "request_id": "IiehmeLUChcRbDu7s669"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:22.365944+00:00",
+      "sha256": "a557f6dd4c6c70d3234490773c2bbc55e734cffd574f4686b926649d599d646e",
+      "git_blob_sha": "b2c6686e6502685d036d030eed76f01f6dee1de1",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2429,8 +2497,25 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/timothy/discussion/discussion_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632629+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632629+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9FacYTEMrN5p2qij6h9c",
+        "request_id": "i9zqJbDOsFtO4yNyU0rX"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:23.281453+00:00",
+      "sha256": "e347dc58bb45b15365b70d43c14a0de6bff531be4804dfc3ef03295836c3f384",
+      "git_blob_sha": "97d2d55a2fde22ad1f911b9f8b07c3500f747b9a",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2439,8 +2524,25 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/timothy/discussion/discussion_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632631+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632631+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tMIg6rMVXjoHJMCQlYUN",
+        "request_id": "ewv6F8FMpK2jNswTKBJ8"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:24.491472+00:00",
+      "sha256": "a652e67d56d6c62171a1f8142c5ece4cc4555298260f3ca5da6a049c2894bbde",
+      "git_blob_sha": "ebbd23d5fa45a5a0b38290ffe5a73364873fc18d",
+      "size_bytes": 67752,
+      "duration_seconds": 4.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2449,8 +2551,25 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/timothy/discussion/discussion_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632633+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632633+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "AHS6STLMIDAiRHPjR5fD",
+        "request_id": "IQQ9amTzn22itlFBON9U"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:25.332433+00:00",
+      "sha256": "8647dca18aa17f8ce95539658f25a9dc90db330ff814fb1a06cc103d79f5b029",
+      "git_blob_sha": "bd16ae6a24fb56ceefa8b654ce34561184eaac1d",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2459,8 +2578,25 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/timothy/discussion/discussion_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632635+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632635+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "UKI50ozaWb97pH4ckPpO",
+        "request_id": "a9dk4nmb14rFOZo0ZFkN"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:26.317017+00:00",
+      "sha256": "6ffb01520f992aab939a59c4b1614d43e5c3e09784094ade1c0425fd25a0197d",
+      "git_blob_sha": "a05bb1b1c9d9a46cdc3be9a494954f765ed3d46f",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2469,8 +2605,25 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/timothy/discussion/discussion_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632637+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632637+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HhRxkFtAYqkXoVqIYu6H",
+        "request_id": "ofdNDxkOwOSkfF98U4NG"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:28.037588+00:00",
+      "sha256": "517c7cc743b933f21bb7dc15c779bcbf2c37be8e3290976bb775bdf98fcab410",
+      "git_blob_sha": "1be96642bd11db0e345ccfbabcf1ab18f81ff99a",
+      "size_bytes": 81545,
+      "duration_seconds": 5.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "timothy",
@@ -2479,8 +2632,25 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/timothy/discussion/discussion_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:01:16.632639+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:01:16.632639+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "f8vAbUQJB2VNojVSk9pt",
+        "request_id": "zhvyy4qceVPfM4EwCgdD"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:01:29.167983+00:00",
+      "sha256": "0754a4e52065c6a53f045b8a526b7d5c567c03dbe134cef9fa5f7172a992421e",
+      "git_blob_sha": "273332f0d71acb70196302a23ea5cdb90a1f45ab",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
