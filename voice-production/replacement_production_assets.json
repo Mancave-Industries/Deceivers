@@ -9861,6 +9861,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:10:03.453277+00:00"
       }
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_002",
+      "text": "Someone's been busy. And the rest of you have been spectacularly unobservant.",
+      "script_sha256": "1f7f499f329682533ca6d580d09c8073867010deda9e2b555120a98bd75c5cf1",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827537+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_003",
+      "text": "A player has been murdered. The night was not kind.",
+      "script_sha256": "3bf123047f1d24a2872396730ee3f56a48df4d9f2549d122407585ba2b088683",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827555+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_004",
+      "text": "A chair sits empty. A charming start to the day.",
+      "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827557+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_005",
+      "text": "Someone didn't make it through the night. How terribly rude.",
+      "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827559+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_006",
+      "text": "A murder has occurred. I trust everyone slept soundly.",
+      "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827563+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_007",
+      "text": "A player gone. The plot thickens.",
+      "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827565+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_008",
+      "text": "Morning has arrived. Not everyone has.",
+      "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827566+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_009",
+      "text": "One of your number has been removed from proceedings.",
+      "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827569+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_010",
+      "text": "An unfortunate night for one of your fellow players.",
+      "script_sha256": "28a800b258e4dcfc98ef0d03974fa3fcbf337f603c0eb68b794889fcf52e0106",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827571+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "murder_reveal_011",
+      "text": "A murder. Really, this neighbourhood.",
+      "script_sha256": "104cfb902083477e1de1c0a315c30628f74ff3d48f235a1c3290a0a19aacdcdf",
+      "path": "assets/audio/hosts/cate/murder_reveal/murder_reveal_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:10:04.827573+00:00"
     }
   ]
 }
