@@ -16661,6 +16661,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:18:10.995966+00:00"
       }
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "final_circle_008",
+      "text": "This is it. A final reckoning, with excellent company.",
+      "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
+      "path": "assets/audio/hosts/kay/final_circle/final_circle_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468464+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_001",
+      "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
+      "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468485+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_002",
+      "text": "Truth prevails. I admit, I had my doubts.",
+      "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468487+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_003",
+      "text": "A Loyal victory! How unexpectedly wholesome.",
+      "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468489+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_004",
+      "text": "The lies have run out. Congratulations, detectives.",
+      "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468492+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_005",
+      "text": "You've found your way through the deception. Eventually.",
+      "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468494+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "loyal_victory_006",
+      "text": "The Loyal triumph. You may now look smug. Briefly.",
+      "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
+      "path": "assets/audio/hosts/kay/loyal_victory/loyal_victory_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468496+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "deceiver_victory_001",
+      "text": "The Deceivers win. What a delightful betrayal.",
+      "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
+      "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468498+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "deceiver_victory_002",
+      "text": "And there it is. The liars have the last laugh.",
+      "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
+      "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468500+00:00"
+    },
+    {
+      "host_id": "kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "clip_id": "deceiver_victory_003",
+      "text": "A victory for deception. How very on-brand.",
+      "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
+      "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:18:12.468502+00:00"
     }
   ]
 }
