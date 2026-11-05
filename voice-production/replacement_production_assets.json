@@ -23469,7 +23469,7 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/penelope/truth_reveal/truth_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972828+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23487,7 +23487,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "033ef7301a648b26ec5a6484a79e1a2f5d9daa68",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:37.400022+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -23496,7 +23503,7 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/penelope/series_closing/series_closing_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972848+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23514,7 +23521,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "5888b24f25002a74c2a8bd16ffe78285293fd576",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:38.227457+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -23523,7 +23537,7 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/penelope/farewell/farewell_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972851+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23541,7 +23555,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "5d991bd7e662538c241f6c604cb63e09c220cd8c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:39.051956+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -23550,7 +23571,7 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972853+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23568,7 +23589,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "6c76a9fe2ecd884b87cd696543cd313f76d523bb",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:39.993229+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -23577,7 +23605,7 @@
       "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
       "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
       "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972855+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23595,7 +23623,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "b9141b204380d80e37d8fa6f57a8106c8d3cd4d2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:40.807909+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -23604,7 +23639,7 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/penelope/game_begins/game_begins_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:26:23.972857+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -23622,7 +23657,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "e983c39548ea27219974c7c0030db06e12c5c947",
+        "blob_sha": "519892214b1ccc6df7c2b45efdeb7f1d76885063",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:26:41.511073+00:00"
+      }
     }
   ]
 }
