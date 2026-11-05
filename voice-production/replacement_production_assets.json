@@ -22789,8 +22789,25 @@
       "text": "The Loyal triumph. You may now look smug. Briefly.",
       "script_sha256": "2c56a83462ce460ffdeb6934a78fb6223f3d32c6608fbd284c8c6b8df9035e3d",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797279+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797279+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "8sNZpsyoAwPnWCo1I6xN",
+        "request_id": "KAD5G3pvCiEkKDDnV0ip"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:30.601576+00:00",
+      "sha256": "36ecc48c7ab2bfef1ce44dfdfa175177ae8aaf14008e16d5f3a9fa205fd2f58c",
+      "git_blob_sha": "c1f6992cdd24f1f1a909d63adb1b715be192ca51",
+      "size_bytes": 80291,
+      "duration_seconds": 4.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22799,8 +22816,25 @@
       "text": "The Deceivers win. What a delightful betrayal.",
       "script_sha256": "af1c9e72b1072134ccc3537a7f6e112a1dcdb88a67c9f00ce8cd7bb07cd4f489",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797291+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797291+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "E6pdJ5WiccUg2TkGtDHF",
+        "request_id": "PeSjZ3t5mxnzd1KWlIJl"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:31.846387+00:00",
+      "sha256": "6aad91d19c98a68041a59051759f1e1b4fed3b038504d76a71974820c999fad2",
+      "git_blob_sha": "4dff769de4c7e6141e60c3bdf363acdd400efe2e",
+      "size_bytes": 67752,
+      "duration_seconds": 4.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22809,8 +22843,25 @@
       "text": "And there it is. The liars have the last laugh.",
       "script_sha256": "44d3f5e9f04fb4a96840131a579da1f37bc1ac35056518cf79c694fbccbabb9e",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797294+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797294+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "pFUfrABNt03yIWOQA8KC",
+        "request_id": "2CdO5Nii4nchFn4zmDGq"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:33.126741+00:00",
+      "sha256": "afc33f02489a33514ac4e892fef25f483d11d8ef08b7a7889e3e054009c9ce93",
+      "git_blob_sha": "f3c1394bccf156f00bf87bf04d433bd846f8822b",
+      "size_bytes": 61065,
+      "duration_seconds": 3.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22819,8 +22870,25 @@
       "text": "A victory for deception. How very on-brand.",
       "script_sha256": "b49f5f268ce17e6f02d544db585aae65e7d4dd14808ec8419fb6ee2361862aec",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797295+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797295+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vFEREJ0tjGNv6jIEG5wu",
+        "request_id": "U3nh80tH9Rb1wRz6oVl1"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:34.260206+00:00",
+      "sha256": "359c1a79fd959ed004d580c81633d76887c4cf1d18ab21b6814cce55328e6581",
+      "git_blob_sha": "086eb1df2eba294898a29f3fae33d7bfd7dbed36",
+      "size_bytes": 65244,
+      "duration_seconds": 4.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22829,8 +22897,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797297+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797297+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HsxWnQ6Ab2DHIIMSDSCP",
+        "request_id": "A2awgn37fguiV6vcSaSh"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:35.864543+00:00",
+      "sha256": "c7ce61e08ac320b065077bc17cf767cc41193f17d5129cbc995c62a33b79fdef",
+      "git_blob_sha": "72490f70431d6d4f711f9eac3cb1a07b503fb2f8",
+      "size_bytes": 76529,
+      "duration_seconds": 4.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22839,8 +22924,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797299+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797299+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vCc3EU0gHvTFA25EFmKZ",
+        "request_id": "xbrxu3Av2zHq8PmeucTF"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:36.909671+00:00",
+      "sha256": "0d0a4f681f3c9a5837cb6e27375dfc8b58f03ed93b6c2c97323f5d84d8535ecd",
+      "git_blob_sha": "6f3830f20724512f3a6c9a739ae5a72387ddc415",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22849,8 +22951,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/penelope/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797304+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797304+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wz2zUR815fPRVNC7ylvC",
+        "request_id": "HitUUCDUipuB4PWo0mVR"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:38.406736+00:00",
+      "sha256": "55cd786c22a1d63fd52fdfb8e6640f425dc5569d7a30af8822545cac2287a88d",
+      "git_blob_sha": "6ddc422aa8cd67ec630b230d0dacc7a88d334f14",
+      "size_bytes": 76529,
+      "duration_seconds": 4.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22859,8 +22978,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/penelope/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797306+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797306+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wyDdZybvFZp1we9ogwZu",
+        "request_id": "pZItrSZn6YkFsQJjqBUG"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:41.228120+00:00",
+      "sha256": "e02deac54f11bccacd7729ee98670718130b228d6b2d94c929b633249c3b89ba",
+      "git_blob_sha": "399fa2c0c58178f207b4ca31bc426677707b088b",
+      "size_bytes": 171406,
+      "duration_seconds": 10.64,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22869,8 +23005,25 @@
       "text": "Ah, there you are. Welcome to The Deceivers. Trust is a lovely thing. It won't last.",
       "script_sha256": "c775c9baae314b81bea2de6f663904a3f596aed58ca62276b5fffb24d5162765",
       "path": "assets/audio/hosts/penelope/opening/opening_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797308+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797308+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "iDgm31QE7N7gwElhLCSa",
+        "request_id": "kHF6g4f2fIHtg1cwgaUZ"
+      },
+      "provider_character_cost": "37",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:43.076976+00:00",
+      "sha256": "10b152812b21218e6cddda822ae3ad726594eb66648d2e0e3726619038717772",
+      "git_blob_sha": "eb0269dbf5292a6f29bca2c70bade1d6e9316c60",
+      "size_bytes": 116235,
+      "duration_seconds": 7.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22879,8 +23032,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/penelope/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:27.797310+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:27.797310+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WZrK2WMCmgsdOCFbfTtg",
+        "request_id": "J7Unsl8YORfs1uL3jmmi"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:25:44.979214+00:00",
+      "sha256": "62cbf2ff2d44f33fb654b6f281777e1d950f4625a460d79024601f6348098455",
+      "git_blob_sha": "7e3a495a8fe8ed4b0848cc509fa0a3ff16bd0cab",
+      "size_bytes": 121251,
+      "duration_seconds": 7.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
