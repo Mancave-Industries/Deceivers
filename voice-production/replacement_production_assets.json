@@ -21769,8 +21769,25 @@
       "text": "A chair sits empty. A charming start to the day.",
       "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271816+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271816+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "YxCgcFAT3dPkgxEat44B",
+        "request_id": "x6Z6oIRmMsgm71ZI2TyF"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:16.842651+00:00",
+      "sha256": "22ecabdbc32bbde96a1127eb73aac0a9c7ae4ee27e1ff6c4fff829c5c7469087",
+      "git_blob_sha": "3160fa420d531cce31ca02cf46c79f2a9a7d7148",
+      "size_bytes": 67752,
+      "duration_seconds": 4.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21779,8 +21796,25 @@
       "text": "Someone didn't make it through the night. How terribly rude.",
       "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271837+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271837+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "16RdZn3iVxHPHiZWOZSG",
+        "request_id": "ZdzUaoEYtxPQxu6NFrTH"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:18.163901+00:00",
+      "sha256": "0e417cec5fe45d72377cbe355b80fc8f2526f9c390bcc67ea1d59c5e6b8e188e",
+      "git_blob_sha": "4465fe180b1126de9cb5d1234a22cb8ebc77cbf3",
+      "size_bytes": 70260,
+      "duration_seconds": 4.32,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21789,8 +21823,25 @@
       "text": "A murder has occurred. I trust everyone slept soundly.",
       "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271839+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271839+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wohZoNqEq0SrLKIxtAyz",
+        "request_id": "589nfqv8xDnsFl1ukc1Y"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:19.467158+00:00",
+      "sha256": "4f6a6671bd12ed7bdf430db039cbd88947f464be32ec20788fc89f4bcee2ba40",
+      "git_blob_sha": "1ecf12a1969f93550d4e48b4ba1e25bb0de7bf1d",
+      "size_bytes": 69006,
+      "duration_seconds": 4.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21799,8 +21850,25 @@
       "text": "A player gone. The plot thickens.",
       "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271841+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271841+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IBAxK3GmcR9dre2NP7Ax",
+        "request_id": "rog8FCbSh1YM7lHTT8Qs"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:20.470225+00:00",
+      "sha256": "be6ceff3c8b6949806fcbcaa84c3e607e508594f61cbf07788e9f5c21ae25172",
+      "git_blob_sha": "60eab7dbb0bed5d6275ad6ab92f6dd7ba970484c",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21809,8 +21877,25 @@
       "text": "Morning has arrived. Not everyone has.",
       "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271843+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271843+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "LK2PPxkfpEPy2LCtDMhg",
+        "request_id": "6XfawIK5e1eFYBtra2nG"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:21.432711+00:00",
+      "sha256": "0d49524425397a8aa1c391f6ce4a8267163c73b4d25199a6e9f78694e684462e",
+      "git_blob_sha": "5d0c4e9adb38401a13233f6f0c08b591ae75cf81",
+      "size_bytes": 53541,
+      "duration_seconds": 3.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21819,8 +21904,25 @@
       "text": "One of your number has been removed from proceedings.",
       "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271845+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271845+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CfO7Gy3vI8tT0dcVKvZO",
+        "request_id": "qrMSwTsYSmfWg4Ye2kft"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:22.611503+00:00",
+      "sha256": "c6c9edf0750748e33d759575226b7843e2d56658c75e0c0182e4db8dd51692ba",
+      "git_blob_sha": "b818718e8d66f7629394f3db6e96ff48bbbd82de",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21829,8 +21931,25 @@
       "text": "An unfortunate night for one of your fellow players.",
       "script_sha256": "28a800b258e4dcfc98ef0d03974fa3fcbf337f603c0eb68b794889fcf52e0106",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271847+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271847+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CoLxZYYp4hPduVrXsnjK",
+        "request_id": "wisw76NkY9fo7ZobWNLc"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:23.553576+00:00",
+      "sha256": "19e6df3446a9384e436afd4a296adb44f26e3cca591203958ba31b7f4b37c990",
+      "git_blob_sha": "6dbd004310b6425703c6b9a68639c03ebf0683cb",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21839,8 +21958,25 @@
       "text": "A murder. Really, this neighbourhood.",
       "script_sha256": "104cfb902083477e1de1c0a315c30628f74ff3d48f235a1c3290a0a19aacdcdf",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271849+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271849+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "XgKlub8hdKOPt9rzfLkV",
+        "request_id": "ZAtA4ahvXUKPxPk5Ig5h"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:24.590482+00:00",
+      "sha256": "3a432c1b504b550e825a64485d57f4ba7d7b1b03abb2d9c50519a15c91aac5f4",
+      "git_blob_sha": "47e93dbe539e803f0c7945194f308780253ce9b5",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21849,8 +21985,25 @@
       "text": "A player is gone. And the rest of you have questions.",
       "script_sha256": "cea82aecfe34c6ba0f0543378a5ec87d50757650b3b4331217aefce0a0aadb15",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271851+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271851+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3T2xj1H4d0XFQbCuqdM8",
+        "request_id": "k3PeHIZr6R09FJyRCXbd"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:25.771528+00:00",
+      "sha256": "de66af8783911c4adad059fb611fd70ea36cc95391041f04bf677ed677dab111",
+      "git_blob_sha": "1d6c20ccd346bc2010735de830983d4c278dd9b2",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -21859,8 +22012,25 @@
       "text": "Someone was rather busy after dark.",
       "script_sha256": "f6cf0ac9debc1cdff94ae20c901bb11b6ba958deb7a748c21a0c3d677e6c75f4",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:14.271853+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:14.271853+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OwOrK4zWPaGxf3qy2cgz",
+        "request_id": "MF1MZCZIJn0bzex1cEqY"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:26.663562+00:00",
+      "sha256": "3fd20e19f90a7abba03156866bc615d3e0c2ef4d9174d3e72e085cc3e04fef3d",
+      "git_blob_sha": "40528d6e08c1c72dbff2d76fb43a485134fead71",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
