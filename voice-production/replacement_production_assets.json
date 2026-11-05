@@ -6809,8 +6809,25 @@
       "text": "A discreet little exchange. Lovely.",
       "script_sha256": "b182fa65380ef76ca7989c75bce8b09ca735026a73c682c113b01a804ea323a4",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_027.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759360+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759360+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "edsOk4rGs8DYUpncQTiE",
+        "request_id": "BQGCQataU0VoIX5bEV7q"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:38.414022+00:00",
+      "sha256": "4fd05b929df1d63ab830fdaf55663c6a353b44e0392981c1d5d8768409738994",
+      "git_blob_sha": "6c7b9c6893677275c92a20eac75783454a1563f4",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6819,8 +6836,25 @@
       "text": "Pass it along. Eyes elsewhere.",
       "script_sha256": "7d5a1b681787273ca38c4d288533de7486e2577467bf3df453302bb2439e0a63",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_028.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759377+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759377+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uvoBIE0bTYLD37YiENJv",
+        "request_id": "ZfuUa1P6mSDnqVNTwsKj"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:39.269952+00:00",
+      "sha256": "10f6578d595d0a62305622d4ae658c9b1ecdeb6516b87ab85c45a2edc2cb69e4",
+      "git_blob_sha": "6e7ad7e730ebead123e4744665df0aea9ea605fc",
+      "size_bytes": 40585,
+      "duration_seconds": 2.48,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6829,8 +6863,25 @@
       "text": "Next turn. Same rules, fewer questions.",
       "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_029.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759379+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759379+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vqWDONEJrv6YvnvR7or9",
+        "request_id": "GP1uN7zqHdevay9KZ9SA"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:40.420548+00:00",
+      "sha256": "248c7e870000dad4602515863c4aa49230fdeba8d79d6722e43237977d878772",
+      "git_blob_sha": "709791968d3f7dd85df361aed933b81ba4479c5e",
+      "size_bytes": 58557,
+      "duration_seconds": 3.6,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6839,8 +6890,25 @@
       "text": "The phone, please. Not the whole table.",
       "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_030.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759380+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759380+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "S2c1pl25NOc0GQA1Iz1X",
+        "request_id": "6sWOL8sTVV9ibchS3KaW"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:41.587291+00:00",
+      "sha256": "4616c3ffa4162e43cdeea1ea3f998b9984f56ed33e62038eb7aa8f6570c8c96c",
+      "git_blob_sha": "19f985d4df200accfd2965b361fbfbd7b72aa7c3",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6849,8 +6917,25 @@
       "text": "A little less staring, perhaps.",
       "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_031.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759381+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759381+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Q2yRwIIHB3Q98hjwSKVc",
+        "request_id": "W87z8WjtNCMVYP0YE1pv"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:42.417527+00:00",
+      "sha256": "783afffc78299db061d8df63b5f8c58a6e17542a3ef4c46a5c5e8828806e1678",
+      "git_blob_sha": "9f4a175d55f0cf61674eb9612d45b8ca24342264",
+      "size_bytes": 41838,
+      "duration_seconds": 2.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6859,8 +6944,25 @@
       "text": "Next player. Keep the screen private.",
       "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_032.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759383+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759383+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0ee8UN4Qgneczh805pcK",
+        "request_id": "Dw1CjEzrSMsfucntNnDr"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:43.491707+00:00",
+      "sha256": "acbe7aedbe4ec8f737d6ad6f82dc16b3cd28f1d7ea3ee1339eb87ba2b55fa92a",
+      "git_blob_sha": "8d9cb53e4ed2dbf2ef3fad23dc8a367bf1034ec3",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6869,8 +6971,25 @@
       "text": "Round we go again. Delightful.",
       "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_033.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759385+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759385+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "epWGFBH5xohwKNThMPvU",
+        "request_id": "7TfscEEi4QQthyxWoiCV"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:44.517496+00:00",
+      "sha256": "57f44be079f59a6f6dae8ef1055291f42fe3673ede23906fbe50cf86f6c41283",
+      "git_blob_sha": "3f38fa8f9abec1e1924fc414f74daa04ff34b228",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6879,8 +6998,25 @@
       "text": "Pass it over. No hovering.",
       "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_034.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759386+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759386+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "jIehUPM9PmdvokAiZCT5",
+        "request_id": "1crMoq9sUfTN667oFaWX"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:45.361718+00:00",
+      "sha256": "d0352b719f16717ae4e33542752ba29cc04bc6997c3984c72745aa356d11f42c",
+      "git_blob_sha": "66dccb5cc227d2ba5d6e609d4ca10d2e962d1485",
+      "size_bytes": 40585,
+      "duration_seconds": 2.48,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6889,8 +7025,25 @@
       "text": "The next person may proceed.",
       "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_035.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759387+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759387+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9ChuJK3banthy8LByf8R",
+        "request_id": "KemCbUbscwO6ykkBw9C6"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:46.154741+00:00",
+      "sha256": "9805c0a81a306d9afe0cc1535934ddd96188728558123040e9d31d5b617bd828",
+      "git_blob_sha": "d9db67d1610e9478b01186548ce508079f5d799d",
+      "size_bytes": 31807,
+      "duration_seconds": 1.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -6899,8 +7052,25 @@
       "text": "A handover. Nothing more to report.",
       "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
       "path": "assets/audio/hosts/cate/anonymous_handoff/anonymous_handoff_036.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:06:35.759388+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:06:35.759388+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "WazYKhHdAcn37Z0mh874",
+        "request_id": "AWzNHJnHjhv3IfRdEgkL"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:06:47.131485+00:00",
+      "sha256": "c3fb89c226e58c0d734df18bf3e4286cdcbb628d5cd4d6a3461ed6f0d3a4fad1",
+      "git_blob_sha": "6861af397821d2e84ce87df59277dbccaabac03e",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
