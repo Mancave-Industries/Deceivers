@@ -13949,7 +13949,7 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/kay/gather/gather_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225818+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13967,7 +13967,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "3da1c985b93eb8611585214105f0990e30410c6e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:19.148898+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -13976,7 +13983,7 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/kay/gather/gather_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225839+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -13994,7 +14001,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "9fb203ff4df5b8c750ccdfc8ffecf74708291a64",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:19.970798+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14003,7 +14017,7 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/kay/gather/gather_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225842+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14021,7 +14035,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "7d39e269e56adea9566259383037d75379b7e0b5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:20.818672+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14030,7 +14051,7 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/kay/gather/gather_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225844+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14048,7 +14069,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "b758f2aa53340ecf4d454a0d55257457186625a8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:21.643363+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14057,7 +14085,7 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/kay/gather/gather_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225846+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14075,7 +14103,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "1d01621699cf28a79418130dae1566e1c6dc732e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:22.421899+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14084,7 +14119,7 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/kay/gather/gather_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225848+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14102,7 +14137,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "9f5ae9aba705f4d6f4e044c92be9bdf1b1ab552e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:23.195315+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14111,7 +14153,7 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/kay/gather/gather_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225850+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14129,7 +14171,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "006dc669851fece7c8f19d569e518f1e90f2d6d4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:24.030498+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14138,7 +14187,7 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/kay/gather/gather_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225852+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14156,7 +14205,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "ef1410aebdf6609311ae62aa8a10a599a513a841",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:24.865701+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14165,7 +14221,7 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/kay/discussion/discussion_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225853+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14183,7 +14239,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "19d26e941699eebaec7b545a8b69b5777341f526",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:25.634418+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14192,7 +14255,7 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/kay/discussion/discussion_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:04.225856+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14210,7 +14273,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "6fe39f29e4d2e61110383f64f6be5f7f38063541",
+        "blob_sha": "b04199d117ef5d4012438685e3ad38d083970247",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:15:26.422908+00:00"
+      }
     }
   ]
 }
