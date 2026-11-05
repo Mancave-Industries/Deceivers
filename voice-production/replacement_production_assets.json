@@ -16329,8 +16329,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782668+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782668+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9ptThFahq1L1eThN8TYQ",
+        "request_id": "yInuRhyIG7ajJ3uOWX5d"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:50.126589+00:00",
+      "sha256": "777c19c8db622c1773e38d3fa34997f600b74bb094051a1087ec2476d7a4da2e",
+      "git_blob_sha": "153c66a8f79aaa547137ab1bc3d0100b1c79d4ab",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16339,8 +16356,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782687+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782687+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2EOEXjVJEiyqxu61P7sw",
+        "request_id": "04oIwB4FIPw3S27wazsq"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:51.336604+00:00",
+      "sha256": "0f5bedf9ce0452f0ff471d694288e446821009912ef718c711f57e3ec187d29e",
+      "git_blob_sha": "ee98d2ece508a45806ec789b3e5edf6349ead642",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16349,8 +16383,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782689+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782689+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "CPU0F7sPFBALoGewJuJa",
+        "request_id": "jJ6SDXqOJCVC1dxweSTS"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:52.314908+00:00",
+      "sha256": "b7f663eb6b0847d2b18e1c1ad364a9b6b97e9e8999e312d802e42f7a6bf2f8e2",
+      "git_blob_sha": "5d7607c197adccfe7842c36b505185a887a7c982",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16359,8 +16410,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782691+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782691+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "oSW0QE8AcmfFAHbBSc81",
+        "request_id": "tsYbQQBfc39z1JAKABEA"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:53.525550+00:00",
+      "sha256": "71f9c2128c46a9255aead43120295c4bb905ea05125ef154bbfbec2d93cfb42c",
+      "git_blob_sha": "c1dfd4f1f78d66a5ac031715d2d6653e74b12fe7",
+      "size_bytes": 74021,
+      "duration_seconds": 4.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16369,8 +16437,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782692+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782692+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Zal4EDYsvUHnD0enB6tD",
+        "request_id": "LyafTXgb9yAnaDHwuzUW"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:54.663537+00:00",
+      "sha256": "3d4ff31055249ee21314682ce2f1f0d5760980671385c92e4430efef583274ee",
+      "git_blob_sha": "6c5aeff6a11d62e02bb5ad58d7576b51edafecd6",
+      "size_bytes": 61065,
+      "duration_seconds": 3.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16379,8 +16464,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782694+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782694+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JpBb0IQ7D6N0VbCkNw2p",
+        "request_id": "ct4nKIgMyJy6RT6v0ruL"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:55.733568+00:00",
+      "sha256": "b9f2a31738951eaea0492b5e3df28c9767e62180336c36596f31c7576b58126d",
+      "git_blob_sha": "52c20edfc60786f6493c26f846ea34bee86eb959",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16389,8 +16491,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782698+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782698+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "7Owyl2t0imkGijuOb5An",
+        "request_id": "wVvR1hUkA7REsMDzxApg"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:56.851221+00:00",
+      "sha256": "03b3f7e273d4fcc1b8819dba5000854605771e6e51c35ba5b0bc9b693e32cef5",
+      "git_blob_sha": "0f78a8c5e198250439320fc1a9818f3f94cb10f5",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16399,8 +16518,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782700+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782700+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "N4pSizH1ETKA1Ea7FDhk",
+        "request_id": "V1OI3anW1rCSVluLo4YE"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:58.175499+00:00",
+      "sha256": "9803b080debb43910ba88aeb024c8b6913f758b02371d636722307f98814ad44",
+      "git_blob_sha": "942b0bd28a578c3e32ae94c10b807c1ce6a228b2",
+      "size_bytes": 77783,
+      "duration_seconds": 4.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16409,8 +16545,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782702+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782702+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uOzZKB98DYm5SwrjpZD9",
+        "request_id": "eFURHUhc3ZOUa52LJUzZ"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:17:59.620441+00:00",
+      "sha256": "120a35dc9450235497290d76b417692de79630c40300f4a82d896f15dea983b4",
+      "git_blob_sha": "3417095e7d1d2292f5ecd33ca400207e81f90eaf",
+      "size_bytes": 72767,
+      "duration_seconds": 4.48,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -16419,8 +16572,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:17:47.782704+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:17:47.782704+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "O8oGzbvDUo9kBPZXC1Ax",
+        "request_id": "17vIagnTwlRLeSspHG9p"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:00.734299+00:00",
+      "sha256": "4f27d6534a8bb95a28aeee97d330dfd868efcb26dfa4825d52040ab76aca184c",
+      "git_blob_sha": "36cc4ed4d4a58a1425c5095f067643b1bf4577b1",
+      "size_bytes": 51034,
+      "duration_seconds": 3.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
