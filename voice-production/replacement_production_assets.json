@@ -18701,6 +18701,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:20:40.951678+00:00"
       }
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_029",
+      "text": "Next turn. Same rules, fewer questions.",
+      "script_sha256": "8a944286bd2783ddfb30ff66b470444074febff4b007867ae028741a4234cefc",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_029.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490882+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_030",
+      "text": "The phone, please. Not the whole table.",
+      "script_sha256": "5d3db5feabcb0d9862ba836a2e2433583791ea081c0273df14f0319d9df086de",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_030.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490899+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_031",
+      "text": "A little less staring, perhaps.",
+      "script_sha256": "1a6451613b7a85ff98d0009f0292d6fa9006821be37468c8b18b2a63fefe6fd9",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_031.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490902+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_032",
+      "text": "Next player. Keep the screen private.",
+      "script_sha256": "ac74da8818be45ce7fb80b8cbf56a5aaa1f75931494ab466f15b46797a8bc760",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_032.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490904+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_033",
+      "text": "Round we go again. Delightful.",
+      "script_sha256": "76190ac04e33251f3c9ddfd48ea350b5f026085d7c2ff634f94d519b66d76747",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_033.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490905+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_034",
+      "text": "Pass it over. No hovering.",
+      "script_sha256": "35812642c821c4e2ce19f088c37cfc93195d8a13c01d1aff5fcd3800ce199c4e",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_034.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490907+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_035",
+      "text": "The next person may proceed.",
+      "script_sha256": "73d44b39ba56f0ebef41c3e8b8cbf196b048ad4b61bcdab535f26eaa0ade13d5",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_035.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490909+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_036",
+      "text": "A handover. Nothing more to report.",
+      "script_sha256": "10e6cf02c1f3d85937121609abec501faf8cadb691b956ce387c4234dd92e520",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_036.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490911+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_037",
+      "text": "Keep it moving, my dears.",
+      "script_sha256": "387cd751f8fdf5e0ada99ccd281cd9d84cfc78548945a78f15efcc61eddcc36a",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_037.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490913+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "anonymous_handoff_038",
+      "text": "Next player, and mind your manners.",
+      "script_sha256": "4e25ec3a4165849647777b3356b51ce4aedd6120b3195bd70df8faffc435bfb5",
+      "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_038.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:20:42.490915+00:00"
     }
   ]
 }
