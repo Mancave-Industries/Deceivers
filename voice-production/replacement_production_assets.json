@@ -23129,8 +23129,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/penelope/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565880+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565880+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "3PiItZRgsCKhztFaUbLE",
+        "request_id": "5X17D6TG1j63fkHHf2iq"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:00.035628+00:00",
+      "sha256": "3b8d09f63019f746c823a1c7381ba3ec49d89b226ac7a781055834613f91aaed",
+      "git_blob_sha": "3cde2029b8e0554853a3f71c545d4faa0032b962",
+      "size_bytes": 117489,
+      "duration_seconds": 7.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23139,8 +23156,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/penelope/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565899+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565899+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "eHY2qT29NawkR7xa7tx4",
+        "request_id": "gMDmddedjiA9x2P2HpuN"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:02.179606+00:00",
+      "sha256": "6c0314f334ffb98944908e3c3700aa9841b6209c0ba673249bd4880f1367e4f4",
+      "git_blob_sha": "5b6c69dbfa9e993d6566619196ec612cd37deac3",
+      "size_bytes": 125430,
+      "duration_seconds": 7.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23149,8 +23183,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/penelope/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565904+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565904+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NWKltOm7NbEVBYWf50w6",
+        "request_id": "DdPCsZuyJazuLvnfXSuM"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:03.904886+00:00",
+      "sha256": "6d948992586a2d5ca4edc95a5830a6a64e6b1e48262eebfec18395d63d735489",
+      "git_blob_sha": "c34bbf3372552ebab158c392feb250a44917fed0",
+      "size_bytes": 88232,
+      "duration_seconds": 5.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23159,8 +23210,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/penelope/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565906+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565906+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gHX3DG0TwJA5Jcjk3Jnv",
+        "request_id": "Wz7D9PtiKqwMslhB7kLq"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:04.964322+00:00",
+      "sha256": "7cdb1a36ad12213628bd1c9c839932645462286a7b78123fa9212b71842b69ab",
+      "git_blob_sha": "80a637be63dc6f2dd8b937768e2d948c4ea042db",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23169,8 +23237,25 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/penelope/banish_again/banish_again_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565908+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565908+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "GabaMZYtTnVkWJo1SW75",
+        "request_id": "sIn4fKOSkAzVOJjSvp6U"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:06.240837+00:00",
+      "sha256": "268f33fbadda18cbe047b1fd6d8f0e44fdffcd0252715b6b99f0382be3071e42",
+      "git_blob_sha": "f8ffc12db947d653e8c455222834eafbf0802104",
+      "size_bytes": 76529,
+      "duration_seconds": 4.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23179,8 +23264,25 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/penelope/quiet_night/quiet_night_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565910+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565910+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "INKImL5Fytr0Rg5eGigZ",
+        "request_id": "3bEyJAOJ913QSOWRChOp"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:07.396779+00:00",
+      "sha256": "4de05075d90a80f77b85ecb288d587871f77b720e730682906b217d951ec2604",
+      "git_blob_sha": "c1d058732bad2a47203ea605779a16d3388988e7",
+      "size_bytes": 61065,
+      "duration_seconds": 3.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23189,8 +23291,25 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/penelope/shield_saved/shield_saved_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565912+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565912+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NvyJNyh0KVeZu1dKOM9A",
+        "request_id": "GLW7yoWplgQSsQEEIbwN"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:08.719966+00:00",
+      "sha256": "5ae96228a63bc16ffa4c39260d9d7e32d020433e2b3660a0da67986bbfe76c54",
+      "git_blob_sha": "a4aeabe15bdc4d5a71943651b2374ea8b919ed99",
+      "size_bytes": 79037,
+      "duration_seconds": 4.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23199,8 +23318,25 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/penelope/tied_vote/tied_vote_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565914+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565914+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wJjaqkJ8o357E6DFikRN",
+        "request_id": "25gLgZKPF2ecxMNuZjww"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:09.951211+00:00",
+      "sha256": "94a759312c2281fd3540e925b3f853714bea9033e75bdc440353c229353d1ec2",
+      "git_blob_sha": "951072dadbaf81ba1355c80017d760964d6010ad",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23209,8 +23345,25 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/penelope/final_decision/final_decision_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565916+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565916+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "kKLqggb4bNahWgWAtXE8",
+        "request_id": "ejcXitCGQknVqkaZA8Vj"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:11.414843+00:00",
+      "sha256": "c7f83385cd996c010ea8a030829064f9d7c6e2827af315009f8809693e27fa51",
+      "git_blob_sha": "8c900a6ef83eb711b0c6212b805acc52315b2e57",
+      "size_bytes": 80291,
+      "duration_seconds": 4.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23219,8 +23372,25 @@
       "text": "And now, the truth.",
       "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
       "path": "assets/audio/hosts/penelope/truth_reveal/truth_reveal_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:25:56.565919+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:25:56.565919+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IAAcFh0j0LoIMAI1VkG8",
+        "request_id": "8MisbdAz5BPu4ncBwdiH"
+      },
+      "provider_character_cost": "8",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:12.216732+00:00",
+      "sha256": "6077c9acab54530cefe24b1b58858cdc1d40113fb59707be6774c6d12a56b10e",
+      "git_blob_sha": "73e4a8bf20db5b0c2afc84582bb159e181378c4a",
+      "size_bytes": 33061,
+      "duration_seconds": 2.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
