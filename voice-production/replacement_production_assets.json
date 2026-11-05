@@ -15989,7 +15989,7 @@
       "text": "Morning has arrived. Not everyone has.",
       "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131511+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16007,7 +16007,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "90e52c98ab6a146251460fdbf5ff3f012b982243",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:39.021164+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16016,7 +16023,7 @@
       "text": "One of your number has been removed from proceedings.",
       "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131529+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16034,7 +16041,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "7c82341032a71298170415d7593e0e203ad508a8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:39.778941+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16043,7 +16057,7 @@
       "text": "An unfortunate night for one of your fellow players.",
       "script_sha256": "28a800b258e4dcfc98ef0d03974fa3fcbf337f603c0eb68b794889fcf52e0106",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131531+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16061,7 +16075,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "68173495e182a8636fe5dc3de52f5c7d1a158a2d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:40.621375+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16070,7 +16091,7 @@
       "text": "A murder. Really, this neighbourhood.",
       "script_sha256": "104cfb902083477e1de1c0a315c30628f74ff3d48f235a1c3290a0a19aacdcdf",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131533+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16088,7 +16109,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "84ffe3f85258b50d5728cfb9a368acea2cc9eec9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:41.479754+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16097,7 +16125,7 @@
       "text": "A player is gone. And the rest of you have questions.",
       "script_sha256": "cea82aecfe34c6ba0f0543378a5ec87d50757650b3b4331217aefce0a0aadb15",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131534+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16115,7 +16143,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "05fb425e91ddde7745c2316ece8d69b1f8c4f9a0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:42.256422+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16124,7 +16159,7 @@
       "text": "Someone was rather busy after dark.",
       "script_sha256": "f6cf0ac9debc1cdff94ae20c901bb11b6ba958deb7a748c21a0c3d677e6c75f4",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131536+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16142,7 +16177,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "d6bf39b350f2365e8ffd6800ac0ae47ea5e838da",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:43.088601+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16151,7 +16193,7 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131537+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16169,7 +16211,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "5afcea7def683c4adf4b4d78b23f6c437b0cd351",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:43.925384+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16178,7 +16227,7 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131539+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16196,7 +16245,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "197daa873fdd8783a78601121f5b1f8d90652d0c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:44.751102+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16205,7 +16261,7 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_016.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131540+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16223,7 +16279,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "b242d683a55b3b55036d12e98a97d44f9137f9d8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:45.574878+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16232,7 +16295,7 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_017.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:24.131541+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16250,7 +16313,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "5fbcd5d14612b25d71f0ef3befd6f6cf2ce45171",
+        "blob_sha": "a0ae9e8529be2ef0ba70d5af0ba47b3f3fdce7aa",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:17:46.353183+00:00"
+      }
     }
   ]
 }
