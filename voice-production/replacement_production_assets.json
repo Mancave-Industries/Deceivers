@@ -13949,8 +13949,25 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/kay/gather/gather_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225818+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225818+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "cmJVnIhhuc6xeWmoSYGd",
+        "request_id": "3o4xBwzvzfawcnPLA4XQ"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:06.606492+00:00",
+      "sha256": "055a38f50f8044ebaceb9d588cbdde4a5c38442917c96e27e70974de6a3c20f2",
+      "git_blob_sha": "3da1c985b93eb8611585214105f0990e30410c6e",
+      "size_bytes": 51034,
+      "duration_seconds": 3.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13959,8 +13976,25 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/kay/gather/gather_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225839+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225839+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "heqEfhHSiJozDTxLv6gJ",
+        "request_id": "0fTZYXYBFvqeFWPq5WTE"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:07.724819+00:00",
+      "sha256": "fe7db13eebbd5a62f45046c239bbdef48b383bf3d0e408e8c04e671246bf4b5f",
+      "git_blob_sha": "9fb203ff4df5b8c750ccdfc8ffecf74708291a64",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13969,8 +14003,25 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/kay/gather/gather_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225842+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225842+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KjfjEozkIngKxHeOfB2m",
+        "request_id": "2ZQH01KUHjxYPojYDibc"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:09.011831+00:00",
+      "sha256": "66246bb7c6176e5f93461d8cad0998aaa635e5f041365db1c4cfe7e9ca0edafa",
+      "git_blob_sha": "7d39e269e56adea9566259383037d75379b7e0b5",
+      "size_bytes": 58557,
+      "duration_seconds": 3.6,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13979,8 +14030,25 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/kay/gather/gather_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225844+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225844+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "y1afn2kehrFpIzhwvQ9D",
+        "request_id": "dTMcCxDKWBVdIQG5uyVx"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:10.260757+00:00",
+      "sha256": "b6f8e7841d9a1e16ee6bf598e4645b49d05376b7a82b59a5f022843832b64b04",
+      "git_blob_sha": "b758f2aa53340ecf4d454a0d55257457186625a8",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13989,8 +14057,25 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/kay/gather/gather_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225846+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225846+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "19uVj6vIki9BErZIollF",
+        "request_id": "j0JPs0xTLosR626bbl13"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:11.146244+00:00",
+      "sha256": "5780253d752e9ae93d68101f39162a8bc1a8c47c75af6b38901cf78ce2903766",
+      "git_blob_sha": "1d01621699cf28a79418130dae1566e1c6dc732e",
+      "size_bytes": 35569,
+      "duration_seconds": 2.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13999,8 +14084,25 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/kay/gather/gather_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225848+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225848+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "zQxEK4DQJaM99X7CiATd",
+        "request_id": "dO9zvzdKlexilZ9YAu3d"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:12.170710+00:00",
+      "sha256": "f5761ff2fc8a4734a3626f4940fdf77e18d4fd29b217e2bf7a3d09ddfe58f873",
+      "git_blob_sha": "9f5ae9aba705f4d6f4e044c92be9bdf1b1ab552e",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14009,8 +14111,25 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/kay/gather/gather_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225850+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225850+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IFWnsBZJ3jELSkFGxnIf",
+        "request_id": "ugvpRHlPLkXJs7knA4Eb"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:13.086558+00:00",
+      "sha256": "663cfecf180204e99d506a3b4a84dc28339cb8e28e2d3ec9ac4a1aaa0a78c591",
+      "git_blob_sha": "006dc669851fece7c8f19d569e518f1e90f2d6d4",
+      "size_bytes": 39331,
+      "duration_seconds": 2.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14019,8 +14138,25 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/kay/gather/gather_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225852+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225852+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "HMUw3FZr2QZnq4RpAzpk",
+        "request_id": "zjLBVlXGj4X9IDe136GL"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:14.333081+00:00",
+      "sha256": "a514f0460a81393306772c4d1529be8c34bd446fa393b9f974e31f73d9227a3b",
+      "git_blob_sha": "ef1410aebdf6609311ae62aa8a10a599a513a841",
+      "size_bytes": 65244,
+      "duration_seconds": 4.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14029,8 +14165,25 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/kay/discussion/discussion_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225853+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225853+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tF0ozFSOuDSaMae5kAAe",
+        "request_id": "oI1rX6EhcaT6sH9pHI8u"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:15.532965+00:00",
+      "sha256": "ff5e31037919222c3ab8d0d16b12bc666ab0ced29120e91d92309621d10691d3",
+      "git_blob_sha": "19d26e941699eebaec7b545a8b69b5777341f526",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14039,8 +14192,25 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/kay/discussion/discussion_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:15:04.225856+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:15:04.225856+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NvOsfLZiv7dpRMdRJcZO",
+        "request_id": "qIcnIDDUbvEsAKB47emt"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:15:16.639633+00:00",
+      "sha256": "3fa9c006d86184a642f9ae6defbd43ec502e0e2109d248d17ea8c04c6266e656",
+      "git_blob_sha": "b04199d117ef5d4012438685e3ad38d083970247",
+      "size_bytes": 53541,
+      "duration_seconds": 3.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
