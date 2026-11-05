@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "approved_cast_pending_replacement_binary_verification",
+  "status": "active_cast_audio_verified_2026-11-05",
   "hosts": [
     {
       "id": "victor",
@@ -56,5 +56,7 @@
       "avatar_path": "assets/brand/narrators/aaron-setup.webp",
       "audio_source": "approved_replacement_pack"
     }
-  ]
+  ],
+  "verified_clip_count": 1044,
+  "preserved_legacy_clip_count": 696
 }
