@@ -19729,8 +19729,25 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/penelope/gather/gather_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790904+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790904+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6HXrRduwi3oJuF8UryvT",
+        "request_id": "REFZxwxU2kfHn5CeiAMS"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:55.391153+00:00",
+      "sha256": "030e9f235c6ac1f47e02da25e2f577fc820d0f9b1e6c1fcb545788a26ee7b06a",
+      "git_blob_sha": "37b9d93aaf2d734eb1ed9879cc2d411d321e4c3e",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19739,8 +19756,25 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/penelope/gather/gather_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790923+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790923+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uuurfoHUqDKDA1TmSX13",
+        "request_id": "doRUwO6caVtZ6VY66qbp"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:56.505428+00:00",
+      "sha256": "5c734d1311d53aacdde2cfa76e9404c6e234cbbe529ef46c28668e59d8786702",
+      "git_blob_sha": "c98104f2bc5f16ebf9e6bf5101f12dd554d7136f",
+      "size_bytes": 58557,
+      "duration_seconds": 3.6,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19749,8 +19783,25 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/penelope/gather/gather_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790925+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790925+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9j8xFS4JAt6iypJlB0v0",
+        "request_id": "OuU7Kl2MUfzOCiNXJA3X"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:57.591737+00:00",
+      "sha256": "d4f6a8ff44c575b177de0dc539df04fc4472289beea522c5878e289bed5f3a94",
+      "git_blob_sha": "74356fe4f2c13808a53474d6d203e044a3ab28a4",
+      "size_bytes": 62318,
+      "duration_seconds": 3.84,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19759,8 +19810,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/penelope/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790926+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790926+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "sHHxKKNjMR1qRCtJk9Pq",
+        "request_id": "fVRgMx70ikfW8Gzr5Uid"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:58.838496+00:00",
+      "sha256": "e2f39ae130a1785c63b28445c28cda0d2403b0119481cd2cba0d56d5b11c92f3",
+      "git_blob_sha": "6aaad4890baf7c0daeeb0afd8901052a5c03a597",
+      "size_bytes": 69006,
+      "duration_seconds": 4.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19769,8 +19837,25 @@
       "text": "All present? Splendid. Phone in the middle.",
       "script_sha256": "af9ea428e213cd96380c9ddf87d82dfcd7848b5ebef49051c1a16dbfe862c1d3",
       "path": "assets/audio/hosts/penelope/gather/gather_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790928+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790928+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Oxi9xm8QqgfxVUOfIapc",
+        "request_id": "wo0M9d3IYA2GHBa4oTaE"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:59.747220+00:00",
+      "sha256": "1ea90ff93edac698c86d103be79366f1a1d0837e17febdc6b245b38e010d9a79",
+      "git_blob_sha": "fd920c73f622ebda32f29be0e333ae0be4d3d74c",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19779,8 +19864,25 @@
       "text": "Circle up. Keep your hands where I can see them.",
       "script_sha256": "d7c966fc6a110ece10721e8015650cd238dd765189e608c8955ccfbf3598d164",
       "path": "assets/audio/hosts/penelope/gather/gather_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790929+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790929+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vOuYZV547daoXgUTtf03",
+        "request_id": "3OuxppKl0Gld3vWs2goR"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:22:00.879327+00:00",
+      "sha256": "f8bc163edda4ba56f11fd6dac58d68e5980df70df180868e7e6c8982d202c318",
+      "git_blob_sha": "d3dc12ed76999687e71e9c56a40685cc17a02be0",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19789,8 +19891,25 @@
       "text": "Everyone together. Let's pretend we trust one another.",
       "script_sha256": "1db52672daba73431bc7bb932e0dd990f5195a0532e20dd050315e3ebc156f79",
       "path": "assets/audio/hosts/penelope/gather/gather_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790931+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790931+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "TCr5HxG8Z0TjgEUsj1dJ",
+        "request_id": "LxzbHNTNl2oay4QPKqmL"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:22:02.097792+00:00",
+      "sha256": "9ea2d1429167d64e29a925ec39c8fb062e18d0c345aed5cdb51a305897287972",
+      "git_blob_sha": "ce4fda063a8dcd7d4aeca7328287cc02481e1e72",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19799,8 +19918,25 @@
       "text": "Gather round the phone. A most peculiar altar.",
       "script_sha256": "1be886922a5207a714d5ce893b8c635ae9da28363d9327688bd125bd921f06f3",
       "path": "assets/audio/hosts/penelope/gather/gather_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790932+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790932+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QFPygI7QlrSRZeGawttB",
+        "request_id": "Vzi1ah5He4p7rdpIoHKG"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:22:03.145425+00:00",
+      "sha256": "729893c66ebec55c7b9f08d32d9430233485e070d4aea164055653839397bc93",
+      "git_blob_sha": "db2d63a625b329938845b1846f4d0a9cd8da6251",
+      "size_bytes": 65244,
+      "duration_seconds": 4.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19809,8 +19945,25 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/penelope/gather/gather_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790937+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790937+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yjSnjBMHStTIWfz2ucFz",
+        "request_id": "2AGNpiL3IcnOiR68k7YV"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:22:04.059322+00:00",
+      "sha256": "c00fd7a150b14686537ec83eccdb7b41e40baa7da5a13cc918e84ec33a48c33e",
+      "git_blob_sha": "cbd1d7bacc19974c2e2fcf02e3b9e8a72e7ebbc5",
+      "size_bytes": 36823,
+      "duration_seconds": 2.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19819,8 +19972,25 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/penelope/gather/gather_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:52.790938+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:52.790938+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1A60JkPBRqmK4ndoSeXG",
+        "request_id": "ZoAS5pgVA47ccjoGT6xw"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:22:05.288064+00:00",
+      "sha256": "f06293621462d81921f39360b3593988c9fbb551d7d5ee6e00e940e02cf7dc13",
+      "git_blob_sha": "388addeb21362ee529242e4224924df42ea76efe",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
