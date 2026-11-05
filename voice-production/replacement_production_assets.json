@@ -8509,8 +8509,25 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/cate/discussion/discussion_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217281+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217281+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "OQ7660dTdq7crrhPcsQN",
+        "request_id": "z1bI5hiKdxbn3hajrnTw"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:34.528264+00:00",
+      "sha256": "55780217456e7d2189db20890fe5eeb5a03f1beb7705b84b81dc05a0ab156b46",
+      "git_blob_sha": "15cc903bce78d560aa5e8e1b1f02c1b48a6a55f8",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8519,8 +8536,25 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/cate/discussion/discussion_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217295+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217295+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2Ksi3Al7yILi2QKEJhqO",
+        "request_id": "ejdGAcUdKhIwHt9Vn6FA"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:35.555372+00:00",
+      "sha256": "164fbfbe0201206dc26168ced2e6ba00ada53d4b759070af710d90b2e419994a",
+      "git_blob_sha": "478086234f4f35de15b9370fb4b1beef3b5005c6",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8529,8 +8563,25 @@
       "text": "Ask questions. Listen to the answers. Revolutionary, I know.",
       "script_sha256": "2c48fd687d0da38ecccd13a56c9aac9a4c91a93b10a6a32b697018611b09d9d9",
       "path": "assets/audio/hosts/cate/discussion/discussion_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217297+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217297+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "XyCqGp4JtKumcpyeoit5",
+        "request_id": "8jOibh5twzWQ4Mzw3VxU"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:36.980234+00:00",
+      "sha256": "588bb597a715550dfbe4334cd99d013d54d3d46dac075499d027311f33afe9f3",
+      "git_blob_sha": "6a132867da05760507ba03a1ace9078b0c49d3a4",
+      "size_bytes": 81545,
+      "duration_seconds": 5.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8539,8 +8590,25 @@
       "text": "Your suspicions are now officially welcome.",
       "script_sha256": "1b30937d93d2dc74d7698ba067f147af0106617c5be7efacf48c12c15c986a54",
       "path": "assets/audio/hosts/cate/discussion/discussion_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217300+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217300+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "x0cUsdy5CRh4Hap630NK",
+        "request_id": "pCY4WjERUUw71SZIttrH"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:38.109187+00:00",
+      "sha256": "54f96c43ca8b412430032f4dc24914a00452bc237b2cde451f0584b68d8f65eb",
+      "git_blob_sha": "e8a1f4fec36cc75896b8789470ea0c3f677b7f67",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8549,8 +8617,25 @@
       "text": "Talk it through. Try to avoid collective wishful thinking.",
       "script_sha256": "d87a4d4d2101e75fce4a607d8213015ea6991a8a3569e0435c6a20ebb8f18dbf",
       "path": "assets/audio/hosts/cate/discussion/discussion_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217302+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217302+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SIIXlsolCPEj45EmuGrR",
+        "request_id": "F9Aq2OmZbDkDsjiti3jh"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:39.385432+00:00",
+      "sha256": "93cec30462603c4c4e2e74bfaa88a2e0c847c0d755b31eba7266d61062a4ca11",
+      "git_blob_sha": "e2566a83fb68062b5eb5cefa91ecf9a5d6bbe3dc",
+      "size_bytes": 69006,
+      "duration_seconds": 4.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8559,8 +8644,25 @@
       "text": "Who do you trust? Fascinating question.",
       "script_sha256": "cd2638db9163240082109941cf1ffe9f61b575b3d80194c4dd3a51229aa8c86b",
       "path": "assets/audio/hosts/cate/discussion/discussion_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217303+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217303+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NidqrnlIZWNGWIkVrJsh",
+        "request_id": "6qMXACy3sew6fxyqTccG"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:40.556937+00:00",
+      "sha256": "f4bb546a6163694af0d73714e896779781b55b5eb802765f70387cdef44acbd1",
+      "git_blob_sha": "5a7276c253f1be9cbd58d32a521fb3bab0ee9d35",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8569,8 +8671,25 @@
       "text": "Time to separate the stories from the storytellers.",
       "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
       "path": "assets/audio/hosts/cate/discussion/discussion_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217305+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217305+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "UHgDYhAsA2qynFgVI1d5",
+        "request_id": "sA28480HqOuCCw82Ocud"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:41.591277+00:00",
+      "sha256": "6a49e2dfd7563022c5b1bdf7ec6556c85495894b51a59469639910d3ec3c6b02",
+      "git_blob_sha": "4434762577c3306940b740b47d0b50ac7fef362c",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8579,8 +8698,25 @@
       "text": "The discussion is yours. Use it wisely.",
       "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
       "path": "assets/audio/hosts/cate/discussion/discussion_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217308+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217308+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ZHuOviwtTSh8dr1XTOmd",
+        "request_id": "meBUeBEXaRyRQScXOw7h"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:42.734555+00:00",
+      "sha256": "666e47d2f21d90952c41a98755ad5875eedebaad39f2a76b4043971d4deb1427",
+      "git_blob_sha": "534c3b3586b15759118e5158b0feff790b68c4c8",
+      "size_bytes": 51034,
+      "duration_seconds": 3.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8589,8 +8725,25 @@
       "text": "You may now begin your collective detective work.",
       "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
       "path": "assets/audio/hosts/cate/discussion/discussion_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217310+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217310+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "g9fsqqhj3rVEfPmPOUE6",
+        "request_id": "S7huECeEb51luGh0TGcn"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:43.645677+00:00",
+      "sha256": "15ef980b0d3cc62717f5103ee4b15ada94523d7ee661a63c2db487541a55ded1",
+      "git_blob_sha": "d9557f0f7a5dafd2ba9d168c02de0955e771869c",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8599,8 +8752,25 @@
       "text": "The time for talk is over.",
       "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
       "path": "assets/audio/hosts/cate/voting/voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:32.217312+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:32.217312+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "QkXMqbAtqM42LKHUGmTJ",
+        "request_id": "B7vHB8f2TLSeYkQOuw8H"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:44.479106+00:00",
+      "sha256": "ac6f2201fb55d9d14797cc0e356767ca22b5f03ee57e1060d993e79d242c6551",
+      "git_blob_sha": "1f5d88aac4fa246d2af9b1c31837a1d668c63568",
+      "size_bytes": 35569,
+      "duration_seconds": 2.16,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
