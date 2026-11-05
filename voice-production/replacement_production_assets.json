@@ -21761,6 +21761,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:24:12.734037+00:00"
       }
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_004",
+      "text": "A chair sits empty. A charming start to the day.",
+      "script_sha256": "988b5982f70e61332bdb6410532fda0af7ecfc58ae8ac1633515122844a0d606",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271816+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_005",
+      "text": "Someone didn't make it through the night. How terribly rude.",
+      "script_sha256": "40d242954fec20f1fae088c0edd2e8f8a854c5e4349fc0a0def3e98121c04f41",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271837+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_006",
+      "text": "A murder has occurred. I trust everyone slept soundly.",
+      "script_sha256": "40aec7155591d92216ba0404d0ba4f5f1df5d07adfb27aa99dedfdaf377fee07",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271839+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_007",
+      "text": "A player gone. The plot thickens.",
+      "script_sha256": "4dc684d48351fdc771f251bcdd8438d1999bcbde2d5b96464a51c4d76a0f24ff",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271841+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_008",
+      "text": "Morning has arrived. Not everyone has.",
+      "script_sha256": "002a98599b3f82358bbc94ad6d10b0920cdf82bd2c97f1421ec9f4a8be1e0bae",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271843+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_009",
+      "text": "One of your number has been removed from proceedings.",
+      "script_sha256": "4335327a849d4503ca0efc298341a4c4632b397855ccce97b1f9f95460994961",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271845+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_010",
+      "text": "An unfortunate night for one of your fellow players.",
+      "script_sha256": "28a800b258e4dcfc98ef0d03974fa3fcbf337f603c0eb68b794889fcf52e0106",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271847+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_011",
+      "text": "A murder. Really, this neighbourhood.",
+      "script_sha256": "104cfb902083477e1de1c0a315c30628f74ff3d48f235a1c3290a0a19aacdcdf",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271849+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_012",
+      "text": "A player is gone. And the rest of you have questions.",
+      "script_sha256": "cea82aecfe34c6ba0f0543378a5ec87d50757650b3b4331217aefce0a0aadb15",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271851+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "murder_reveal_013",
+      "text": "Someone was rather busy after dark.",
+      "script_sha256": "f6cf0ac9debc1cdff94ae20c901bb11b6ba958deb7a748c21a0c3d677e6c75f4",
+      "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:24:14.271853+00:00"
     }
   ]
 }
