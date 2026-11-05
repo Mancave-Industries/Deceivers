@@ -18029,7 +18029,7 @@
       "text": "Round it goes. Round and round.",
       "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301816+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18047,7 +18047,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "7938e68c490d3cff004f73c3a6f3d92ba6bacac9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:10.908780+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18056,7 +18063,7 @@
       "text": "A swift handover, if you please.",
       "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301835+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18074,7 +18081,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "007f16aebb9ec630346314180052d2570f26882f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:11.776104+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18083,7 +18097,7 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301837+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18101,7 +18115,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "0017e780a3a6fd4a379d7a2deadc681123177e26",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:12.643063+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18110,7 +18131,7 @@
       "text": "The next player awaits. Probably.",
       "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301839+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18128,7 +18149,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "38faf4aa95d8bfce276d6931e1732ac10ff33a83",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:13.440123+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18137,7 +18165,7 @@
       "text": "Your turn is over. How tragic.",
       "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301840+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18155,7 +18183,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "5cad152c35472e50c192a59cce7f32fd8ac0c0c8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:14.226410+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18164,7 +18199,7 @@
       "text": "Pass it on, and look innocent.",
       "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301841+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18182,7 +18217,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "44b04b61f2ed99d7d4b67c658a6826e862c9c5a1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:15.013723+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18191,7 +18233,7 @@
       "text": "A little privacy, ladies and gentlemen.",
       "script_sha256": "c2cc2986f6a915725d851922ce2ffe18944942ade6e3b7390c77943409dd7fd0",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301843+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18209,7 +18251,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "7ac11a42c44703a81f76f1e551d6db57d4985546",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:15.803510+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18218,7 +18267,7 @@
       "text": "Next player. No audience required.",
       "script_sha256": "bf71dc8db6a530b042f585cc7d970ec9930c59b63e8063dede7d6e47a5e82b91",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_016.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301844+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18236,7 +18285,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "44c66e4c28d9cbcd005596798d3c50c34403d975",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:16.719045+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18245,7 +18301,7 @@
       "text": "The phone travels. The secrets stay.",
       "script_sha256": "29f5cd9f49fc31a03c100ad8c3a1efefbe8b5dfeef8567d6c3493f822570e99b",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_017.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301846+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18263,7 +18319,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "78bf6edef357df6e9e03062d6884f9030d76a07d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:17.498186+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -18272,7 +18335,7 @@
       "text": "Hand it over. Gently, now.",
       "script_sha256": "6a6d85184223cccda9274048ec9134612896cf6857eb7abc0c40f6ffae3bbc98",
       "path": "assets/audio/hosts/penelope/anonymous_handoff/anonymous_handoff_018.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:19:57.301849+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -18290,7 +18353,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "422dad95f20f680315130bf7e92eafb040fb02af",
+        "blob_sha": "307c830f4f3863fe174eb2a512a30cc9ed2bb75f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:20:18.349239+00:00"
+      }
     }
   ]
 }
