@@ -11909,8 +11909,25 @@
       "text": "On we go. Quietly, if you wouldn't mind.",
       "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943473+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943473+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "6gvmUtpPunt1c96FV6B2",
+        "request_id": "WdXanzZr41qisXksQLI0"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:49.223139+00:00",
+      "sha256": "5e615286f5f55acf445adce446e2003dcc8ee1b19f08f9ccd5dff13e265e89d2",
+      "git_blob_sha": "b7dc449c4cfe624a1b6beaa72cac12a64d1b904f",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11919,8 +11936,25 @@
       "text": "Pass it along. The suspense is unbearable.",
       "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943492+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943492+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SNqHCbyeLlYMuGcdgMUJ",
+        "request_id": "m7uGHuIonDNdbMzhGZrj"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:50.300420+00:00",
+      "sha256": "dabfa142c0381457f23251018c734611f16773f7ab5e10674b98bfc83b052376",
+      "git_blob_sha": "2e14a42769815a114abf64e3e47bde67be45f27c",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11929,8 +11963,25 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943494+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943494+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yK2i6La9BqwhlKBHxqng",
+        "request_id": "xTVEIZ8vEchZiYLVdctV"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:51.028417+00:00",
+      "sha256": "b180ed13fa1720c6f56c31f6890c23671e00347adcd40ecbab2d1ad737519185",
+      "git_blob_sha": "f393494eca80eb12f186360b5a2758859346acc2",
+      "size_bytes": 28046,
+      "duration_seconds": 1.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11939,8 +11990,25 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943495+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943495+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mplUCRTEI4PagwvT4Ct9",
+        "request_id": "wF8OL7ovcyxbWFv3pPNw"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:51.949751+00:00",
+      "sha256": "4a7a25aabb2d25f693b397587ca4f53e5d516abc0bcf069641736fcedf5689f6",
+      "git_blob_sha": "0a4ea99251af1dc7a6d20877ff2df56bc5733b1c",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11949,8 +12017,25 @@
       "text": "Pass the phone. Keep your thoughts to yourself.",
       "script_sha256": "0ced5bfca984ddf17eefbebe921c3022e006b86f62ee906eb3b599ff992dd1f1",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943497+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943497+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0ZI5bzqicWL0WbHFr6bq",
+        "request_id": "Jq9L7WtpE9nOZnqOIl6D"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:53.136959+00:00",
+      "sha256": "5b93ee0b92114b233aa49c2e0c73f3ad940e62bdf9ec133c8b099e0eb5622868",
+      "git_blob_sha": "6a47cefd36edfddaa22173240e22a0ac52862797",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11959,8 +12044,25 @@
       "text": "Next player. Eyes on your own business.",
       "script_sha256": "60bf1aa59f7a6b848909ec0e74a6c1910ae73922c0312289c3e0c23234d302f7",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943498+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943498+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "vzPNDFiLwnMg7Ov0Cf9d",
+        "request_id": "PigB2RCDeezNwiSJramG"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:54.148114+00:00",
+      "sha256": "cb0b5fb772ec331f01992c4265a940ba64325294d06fd43239e3652a44ba287e",
+      "git_blob_sha": "c58917e28d6f064552c7c5f053c907829995b5b9",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11969,8 +12071,25 @@
       "text": "Round it goes. Round and round.",
       "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943500+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943500+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2cSTKMRByHmeVWl86m3Q",
+        "request_id": "vDnBlrISpAPMTxhUhXc9"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:55.075340+00:00",
+      "sha256": "67ea43f01d315da082bf47bb9514d492beb7cdf19f1ee9ce8e8200253faac43c",
+      "git_blob_sha": "8021a25775da1d602faca12c4b6a3aa4ee6c540f",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11979,8 +12098,25 @@
       "text": "A swift handover, if you please.",
       "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943501+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943501+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0KQaPAJk563vFMu81a34",
+        "request_id": "k67iV9yKU1AuHYJy5yvF"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:55.963310+00:00",
+      "sha256": "7088dbd499dd84da4475513e66634ddba3de9c3cfd4bc90a3e7f4ed2c26e7325",
+      "git_blob_sha": "04c56dfc0a3e47c0ce979457310718935bfb4b0b",
+      "size_bytes": 38077,
+      "duration_seconds": 2.32,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11989,8 +12125,25 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943502+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943502+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "AQrTyrHTSp2aV4vfTcD3",
+        "request_id": "vTX991YFK1XGQqy9ytc7"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:56.837829+00:00",
+      "sha256": "0f8e5e5c0ba38ff5e19e50b2c2a19c36773341de7b900dedd26a13294ff018a6",
+      "git_blob_sha": "13c33d8a81094f5b9a2db296772daf40886ec252",
+      "size_bytes": 34315,
+      "duration_seconds": 2.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -11999,8 +12152,25 @@
       "text": "The next player awaits. Probably.",
       "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:12:46.943504+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:12:46.943504+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "86zkvnSeM7VOmGBukg7O",
+        "request_id": "WMqq0QAFNtphAWpppbY8"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:12:57.786106+00:00",
+      "sha256": "4833bbed3aa126d178ceaface2764abf8bf8bcc05d3a0befc6d96d8f0e82f73a",
+      "git_blob_sha": "291f5e8deacfd6c46cff9b956509ed48274eff97",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
