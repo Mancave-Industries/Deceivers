@@ -7,6 +7,8 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 
 from asset_checks import inspect_mp3
@@ -129,6 +131,53 @@ def verify_github(record, commit, token):
     }
 
 
+def ensure_voice(host, api_key):
+    try:
+        voice = get('/voices/' + host['voice_id'], api_key)
+        if voice.get('voice_id') == host['voice_id']:
+            return
+    except RuntimeError as error:
+        if 'voice_not_found' not in str(error):
+            raise
+    query = urllib.parse.urlencode({
+        'search': host['voice_id'],
+        'page_size': 100,
+        'include_custom_rates': 'true',
+        'include_live_moderated': 'true',
+    })
+    shared = get('/shared-voices?' + query, api_key)
+    matches = [voice for voice in shared.get('voices', [])
+               if voice.get('voice_id') == host['voice_id']]
+    if len(matches) != 1:
+        raise RuntimeError('Approved replacement voice is unavailable in the public library: ' + host['id'])
+    match = matches[0]
+    try:
+        rate = float(match.get('rate'))
+    except (TypeError, ValueError):
+        raise RuntimeError('Replacement voice rate could not be verified: ' + host['id']) from None
+    if rate != 1 or not match.get('public_owner_id'):
+        raise RuntimeError('Replacement voice rate or owner differs from the approved quote: ' + host['id'])
+    url = ('https://api.elevenlabs.io/v1/voices/add/' + match['public_owner_id']
+           + '/' + host['voice_id'])
+    request = urllib.request.Request(
+        url,
+        method='POST',
+        headers={'xi-api-key': api_key, 'Content-Type': 'application/json'},
+        data=json.dumps({'new_name': host['label'], 'bookmarked': True}).encode(),
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            added = json.load(response)
+    except urllib.error.HTTPError as error:
+        raise RuntimeError('Could not add approved public replacement voice '
+                           + host['id'] + ': HTTP ' + str(error.code)) from None
+    if added.get('voice_id') != host['voice_id']:
+        raise RuntimeError('Added replacement voice returned a different ID: ' + host['id'])
+    verified = get('/voices/' + host['voice_id'], api_key)
+    if verified.get('voice_id') != host['voice_id']:
+        raise RuntimeError('Added replacement voice could not be verified: ' + host['id'])
+
+
 def generate(clip, api_key):
     request = urllib.request.Request(
         'https://api.elevenlabs.io/v1/text-to-speech/' + clip['voice_id'] + '?output_format=mp3_44100_128',
@@ -184,9 +233,9 @@ def run():
     if not any(model.get('model_id') == 'eleven_v4' and model.get('can_do_text_to_speech')
                for model in get('/models', api_key)):
         raise RuntimeError('Approved model unavailable')
-    for voice in {clip['voice_id'] for clip in todo}:
-        if get('/voices/' + voice, api_key).get('voice_id') != voice:
-            raise RuntimeError('Approved replacement voice unavailable')
+    replacement_hosts = read(HERE / 'replacement_voices.json')['hosts']
+    for host in replacement_hosts:
+        ensure_voice(host, api_key)
     git('config', 'user.name', 'github-actions[bot]')
     git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
     for offset in range(0, len(todo), 10):
