@@ -14969,8 +14969,25 @@
       "text": "Enough speculation. Commit to something.",
       "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
       "path": "assets/audio/hosts/kay/voting/voting_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267712+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267712+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "94gS0nuxIMVvJeFi4XlZ",
+        "request_id": "V0Pc5YbCPKxF0U46lDm9"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:16.791937+00:00",
+      "sha256": "06237f1c12f57fbbd12f4b0381a2c844c564f0165aa69e38d6de243b10e5360c",
+      "git_blob_sha": "58d231d71c4ab168fa4e257023ed4b8faa516835",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14979,8 +14996,25 @@
       "text": "Voting begins. Your confidence is noted.",
       "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
       "path": "assets/audio/hosts/kay/voting/voting_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267733+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267733+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tHl99wLgDXLUSX1kVqkk",
+        "request_id": "QT4sGWheG705qlW9nAQ9"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:17.783799+00:00",
+      "sha256": "65cb131031b934cfff1afca11188d2b26158275fd41343ef95d22ecc53f7d507",
+      "git_blob_sha": "9a12d947c0cc3c39089ca221cac272a3a6f8b596",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14989,8 +15023,25 @@
       "text": "Time to point the finger. Figuratively.",
       "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
       "path": "assets/audio/hosts/kay/voting/voting_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267735+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267735+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ROCxS6ScfAZ0QUSq6ael",
+        "request_id": "Vb75UFh2PZLm6szRqNNT"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:18.823599+00:00",
+      "sha256": "d1bf9797099c3618c6f8b3e22d60ec8564b104e81bbf85ad3f13ebb8c75b4a92",
+      "git_blob_sha": "9f6a8b3c7a1830b2f7ccb6d13de3d120957363ba",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -14999,8 +15050,25 @@
       "text": "Your vote, please. No dithering.",
       "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
       "path": "assets/audio/hosts/kay/voting/voting_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267738+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267738+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "9qcU5NpVZ5lufWehHWYG",
+        "request_id": "J4Iq9j6qqnRLLBC5DEZ0"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:19.770677+00:00",
+      "sha256": "bfccf7492acaae2e535b2a5c540aedb6a0cd69955de4c8cfec826d35d12f8050",
+      "git_blob_sha": "767e6a9330d0df80acd55bfb6f535097cbd0dd35",
+      "size_bytes": 40585,
+      "duration_seconds": 2.48,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15009,8 +15077,25 @@
       "text": "Now we discover what you actually believe.",
       "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
       "path": "assets/audio/hosts/kay/voting/voting_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267739+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267739+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "j77pkZS6NVtnMEOFflwV",
+        "request_id": "Txvh0cQ4tWDnAmx6jitl"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:20.755931+00:00",
+      "sha256": "9bdab6f86d0186f09d1ca4baefff80a4a98e5ba8fc9cc6d8a504364c9a2cd6e8",
+      "git_blob_sha": "6222564266f3ccec73ff77ba31c2d80f34974921",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15019,8 +15104,25 @@
       "text": "Cast your votes. May reason make a rare appearance.",
       "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
       "path": "assets/audio/hosts/kay/voting/voting_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267742+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267742+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ay6hiC88RJNNlvVyNGan",
+        "request_id": "9MKZ445TEBCFREx29avH"
+      },
+      "provider_character_cost": "22",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:21.867254+00:00",
+      "sha256": "ec85945bd0bc36289e8428a91d3fa8bcb295b0e65d79df85ee45f290523b2876",
+      "git_blob_sha": "9208da176e055adc92415e00fe37162bfd0ee2f5",
+      "size_bytes": 61065,
+      "duration_seconds": 3.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15029,8 +15131,25 @@
       "text": "The moment of judgement. How grand.",
       "script_sha256": "e9895dd91c47a693438d14921722c31eeddf657e4ca2a9f16d289036f0a931bd",
       "path": "assets/audio/hosts/kay/voting/voting_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267744+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267744+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Pwsfi2gllaRZMF3Hamgj",
+        "request_id": "RxblxEI9Huj0bP4VDrgQ"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:22.967937+00:00",
+      "sha256": "bfb1cb2195237dc8b72b20cf529b9c6f3f636044c0e45f7ee98c33f043180e35",
+      "git_blob_sha": "18c4fd4d99ed5334e42cee6f0bbbb02f7bfcf51e",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15039,8 +15158,25 @@
       "text": "Voting time. Try not to embarrass yourselves.",
       "script_sha256": "c58f06be4e94ae7e295ed047d011df06e43fd6e516bef033186ade9cd4f4004b",
       "path": "assets/audio/hosts/kay/voting/voting_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267746+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267746+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ujKyDlfCG7qmC3Ok8d6J",
+        "request_id": "xwS9DVchGB8i8F4ppKZ7"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:24.033935+00:00",
+      "sha256": "1b6a485a726bf7e16dfc81cd7444a6c164f4bb5477262cd64bc70f86b2314b88",
+      "git_blob_sha": "2e70752bfa7c0afe273da75ddd898a824839474e",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15049,8 +15185,25 @@
       "text": "Votes are in. Oh, this will be interesting.",
       "script_sha256": "f2e34386e76d2f75b3d8d50caa60f2efcae0378daa3400ee1ada04c23b19b344",
       "path": "assets/audio/hosts/kay/vote_complete/vote_complete_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267748+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267748+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2wbBevec9agq7NjDXjHk",
+        "request_id": "vZ67IaGsPCreLG3V4gqM"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:25.126397+00:00",
+      "sha256": "516007164e6c0e9f8e2edb5e0ddd915f3479a1dfd511d2745aaae3683b8f30f0",
+      "git_blob_sha": "288fee02ec16f3b5920307cb244a0310f50d5c30",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -15059,8 +15212,25 @@
       "text": "The decision is made. No take-backs.",
       "script_sha256": "92f0d1df50634bccec2ed520eae672c0c7a6bb3eb9c5de4c076177a6384ddf7b",
       "path": "assets/audio/hosts/kay/vote_complete/vote_complete_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:16:14.267750+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:16:14.267750+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Qu7TEzxRzx3Swp0Wx8rA",
+        "request_id": "bSTPAm5xB3LusBnZzEEs"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:16:26.071879+00:00",
+      "sha256": "1d3c22911dd2cba820376491870e0fadcfb1908f74603f4d878d7517bd62e07f",
+      "git_blob_sha": "4c96d3bb2b9afc7db1876112c50ea04105acef2e",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
