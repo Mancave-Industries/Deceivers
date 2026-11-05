@@ -22449,7 +22449,7 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454255+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22467,7 +22467,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "b41e933f070cab96d4d8ee0b1e3083d72cacc87a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:19.073104+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22476,7 +22483,7 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454276+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22494,7 +22501,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "6c830e67ac9e94761f0dbe05edb0863b8c6896be",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:19.889901+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22503,7 +22517,7 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454279+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22521,7 +22535,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "4be414a8362a4e3d45bc47531e3764c45d765241",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:20.738585+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22530,7 +22551,7 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454281+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22548,7 +22569,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "adc29d71f8312f19dab88b6b66e18f9b87175229",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:21.507470+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22557,7 +22585,7 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454283+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22575,7 +22603,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "26fabebbce0afe3af5e79f6ad1036ac67bb05ab9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:22.362431+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22584,7 +22619,7 @@
       "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
       "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454286+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22602,7 +22637,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "7ec9d00632e7678fd7f42c62d996d59378a1d324",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:23.232866+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22611,7 +22653,7 @@
       "text": "Truth prevails. I admit, I had my doubts.",
       "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454288+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22629,7 +22671,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "4b0a4762ca7ac5a3d95cbe6b3a361683e5dc421a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:24.039842+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22638,7 +22687,7 @@
       "text": "A Loyal victory! How unexpectedly wholesome.",
       "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454290+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22656,7 +22705,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "0971cfd175875230e4e5b027eb3d5cc75be2fc4e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:24.798338+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22665,7 +22721,7 @@
       "text": "The lies have run out. Congratulations, detectives.",
       "script_sha256": "51211c6d1dd98821e2f7291596a7e17f5cd3ec53dcf4ad5859743d26396b3327",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454292+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22683,7 +22739,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "95f7e40a581a091bf97f1cd3fe94c63eff8bba74",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:25.571118+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -22692,7 +22755,7 @@
       "text": "You've found your way through the deception. Eventually.",
       "script_sha256": "bdd6e309ae43cc02ea9b4bc0561459f9599b2ddb5e40af165027ea526fe71164",
       "path": "assets/audio/hosts/penelope/loyal_victory/loyal_victory_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:25:01.454294+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -22710,7 +22773,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f9fb8ef61d427902627bc65c0e7582c0cfa3d303",
+        "blob_sha": "f474810090443caa6ac52142c5bbfa5eafcffc9f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:25:26.377984+00:00"
+      }
     }
   ]
 }
