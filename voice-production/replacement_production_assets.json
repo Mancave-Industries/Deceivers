@@ -8849,8 +8849,25 @@
       "text": "Talk ends now.",
       "script_sha256": "1ac53ec663b05db7d1edf72e44ef6a0deb8ca922cf61b2dba05d3a407ad55fd2",
       "path": "assets/audio/hosts/cate/voting/voting_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125356+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125356+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Fdt1M4ECNHpLvz9Q1x5J",
+        "request_id": "OCToA3ALU5IkSMogOQYM"
+      },
+      "provider_character_cost": "6",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:58.293720+00:00",
+      "sha256": "c6926b88a72ca40857f91deda482f876a7652c0c0e3c0836bb0427eb4f20a0c1",
+      "git_blob_sha": "ac6eb52dfc65db67054ea0f11d3eeefc7511d9c9",
+      "size_bytes": 28046,
+      "duration_seconds": 1.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8859,8 +8876,25 @@
       "text": "Enough talk. It is time to vote.",
       "script_sha256": "751fd48006ecbddf314539150d4a70c553f8efdc66b34acf25b60c74b1e96449",
       "path": "assets/audio/hosts/cate/voting/voting_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125374+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125374+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uzmEuNWBSaVZTlHFusH8",
+        "request_id": "X9dCTd7fZAcIcpcDcMKc"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:08:59.249747+00:00",
+      "sha256": "f53d9b1a4b01697b6c62552f6c43859581b49952f12f3471df95badf2c51b63a",
+      "git_blob_sha": "4c9870e8e63665b2eddeeba8556d78d6d99658bc",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8869,8 +8903,25 @@
       "text": "Time to vote. This should be enlightening.",
       "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
       "path": "assets/audio/hosts/cate/voting/voting_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125376+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125376+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "KemECAPwoCD3Y9waDKh6",
+        "request_id": "9GKnqI4XLq6Hnjq6QUqX"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:00.178440+00:00",
+      "sha256": "ef9ca4ad4b45b014f4ce83e19d54ae3333301e0e5973d6d84bc611562d231426",
+      "git_blob_sha": "6939e6f148e34ef9455942072bd319b36b346dfc",
+      "size_bytes": 46018,
+      "duration_seconds": 2.8,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8879,8 +8930,25 @@
       "text": "Make your choice. Preferably a good one.",
       "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
       "path": "assets/audio/hosts/cate/voting/voting_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125378+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125378+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "yeDmj3f1dTYjCNiYkBqO",
+        "request_id": "p7SbRoPuD9MkMMNkRyNZ"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:01.233938+00:00",
+      "sha256": "c7601ae46dd28d36de2cec827681196d1ff7adf9c95c47fdd10459aa2f6fac6b",
+      "git_blob_sha": "eb39b759c699b536b9c99534903311a32c51fcd8",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8889,8 +8957,25 @@
       "text": "The talking shop is closed. Votes, please.",
       "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
       "path": "assets/audio/hosts/cate/voting/voting_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125379+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125379+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "xJs6YLZJIpl665BvIOTC",
+        "request_id": "2SbtYMuDp2kSv4KeHCPo"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:02.365515+00:00",
+      "sha256": "f76065298833ba329ff815fb942386d0ad4af0e6315ca8d5eb4257e89c1f77f0",
+      "git_blob_sha": "99077860177589e8c6292977b9e47e5fa3a240cd",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8899,8 +8984,25 @@
       "text": "Decisions, decisions. How terribly grown-up.",
       "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
       "path": "assets/audio/hosts/cate/voting/voting_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125381+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125381+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gbcJoGrkMHeUVRfGtEOT",
+        "request_id": "935PEBH2rW2i8JsTDMp2"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:03.374534+00:00",
+      "sha256": "045935c9510ca6d0749cc4146bcef06dcb0b9b9bdd9c8959318ee730e509459a",
+      "git_blob_sha": "f2cfd903d371301b2f45343e10d019a706e723d2",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8909,8 +9011,25 @@
       "text": "Enough speculation. Commit to something.",
       "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
       "path": "assets/audio/hosts/cate/voting/voting_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125382+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125382+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JUFXtVXuocxzWIpKjGPK",
+        "request_id": "y9O7K9FFvM9JEy6sN7C0"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:04.422926+00:00",
+      "sha256": "ea254adedd999514993dfe74e723b061a22aaac283fc3ea78578a95787ded656",
+      "git_blob_sha": "5a44c9f6168a7711f3b8f857cdaaa03b00c674f7",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8919,8 +9038,25 @@
       "text": "Voting begins. Your confidence is noted.",
       "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
       "path": "assets/audio/hosts/cate/voting/voting_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125384+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125384+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "LMH5RZ1Gg3TdCQgu6Agk",
+        "request_id": "H8ZUV0vYXhXSNnjoUBeG"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:05.562970+00:00",
+      "sha256": "9c85e2e91d6a978b9a2ffbb96c7024edbf56e1bd4999a9b0208dcfd258ed840e",
+      "git_blob_sha": "7be1f29419ae6d6ec018f50a09efef7ea427c5db",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8929,8 +9065,25 @@
       "text": "Time to point the finger. Figuratively.",
       "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
       "path": "assets/audio/hosts/cate/voting/voting_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125385+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125385+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "GG9l4kD8T4qrqDbFjRgD",
+        "request_id": "mAvPvBljgiCcLpiUXQLT"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:06.456271+00:00",
+      "sha256": "3efbe5f26b862f6e523bbc8e2c7554428d6dbd70d6ce2264ab950d0cfdff9f9a",
+      "git_blob_sha": "6334c5fe66419772690be16df9b0e6ab4a961eea",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -8939,8 +9092,25 @@
       "text": "Your vote, please. No dithering.",
       "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
       "path": "assets/audio/hosts/cate/voting/voting_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:08:56.125386+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:08:56.125386+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "oEc4kat4WPI2amDMfgeS",
+        "request_id": "oSjZ178f66hjKkNbBsTd"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:09:07.384640+00:00",
+      "sha256": "f32fa92ecec0cc4b95f6fa0154456d561d184fec57e4c0fea310357859bfd061",
+      "git_blob_sha": "6e16805812cd9c2ca870082fadc4084c04e1a6c3",
+      "size_bytes": 39331,
+      "duration_seconds": 2.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
