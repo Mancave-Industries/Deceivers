@@ -1,3 +1,7 @@
+# Final cast update — 5 November 2026
+
+The earlier unassigned replacement status below has been superseded. The user selected and approved **Timothy, Cate, Kay and Penelope**, alongside retained narrators **Victor and Lily**. All four complete replacement packs were recorded and technically verified. Human listening review remains outstanding before merge or deployment.
+
 # Deceivers narrator review — 4 November 2026
 
 ## User-confirmed decision
