@@ -19389,7 +19389,7 @@
       "text": "The sun has gone. How inconvenient.",
       "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658332+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19407,7 +19407,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "12394647100401e6bae54494618a658664b5d8a2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:44.263149+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19416,7 +19423,7 @@
       "text": "And now, the night. How very atmospheric.",
       "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658349+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19434,7 +19441,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "31668b72d2276568878508d0574209707390aed9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:45.061784+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19443,7 +19457,7 @@
       "text": "Time for a little darkness. Behave yourselves.",
       "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658351+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19461,7 +19475,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "41c7ea9215ac4c1dbb71f3cda9133523ad18c1cb",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:45.843463+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19470,7 +19491,7 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658353+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19488,7 +19509,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "1ebb0c59a082956161871be29ea518fe8e263dc0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:46.580647+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19497,7 +19525,7 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658354+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19515,7 +19543,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "b824ccff3b3a07ad00cb5bfa0ce03265edeed6f4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:47.358329+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19524,7 +19559,7 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658356+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19542,7 +19577,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "441215c067527455d0c11a54bdea04b33f252955",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:48.158946+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19551,7 +19593,7 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658357+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19569,7 +19611,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "2740e432977992649bffc5dda40413b80cb8a6b7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:48.971868+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19578,7 +19627,7 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/penelope/gather/gather_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658359+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19596,7 +19645,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "f8410a75b41960dbba1a8221bc612bec68759483",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:49.790135+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19605,7 +19661,7 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/penelope/gather/gather_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658360+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19623,7 +19679,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "9de33c03cd85a9646dcfbe18753511e24a1f5da2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:50.588351+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -19632,7 +19695,7 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/penelope/gather/gather_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:21:29.658361+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -19650,7 +19713,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "1e54c5cb73546d92780e8aa69316f83636f204ff",
+        "blob_sha": "5226c57d1f8a648a2e1ab61ce88cd666e352a07b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:21:51.372819+00:00"
+      }
     }
   ]
 }
