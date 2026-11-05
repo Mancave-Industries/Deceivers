@@ -22109,8 +22109,25 @@
       "text": "The night has claimed a player.",
       "script_sha256": "0e0d6ac2516e0fca45bf995acc2e676647ddbcdc19e8bd789a3db2c2ce2696a6",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971202+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971202+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "A6e3HNIbbQs5fk2GbmHK",
+        "request_id": "zAw9aliyfKgFpsvIkfYd"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:40.051141+00:00",
+      "sha256": "9fe881714abea693b5cdbf9000ddf6bd9b200813ccc4788661bd7258cba2c43a",
+      "git_blob_sha": "88263ec06076e70f858524d948685cecbbfe99cc",
+      "size_bytes": 34315,
+      "duration_seconds": 2.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22119,8 +22136,25 @@
       "text": "A fresh absence. An unpleasant sense of dread.",
       "script_sha256": "27330f062e901e7452b80cc0b6958d4c0778164714a258faf1df8e07c9da97dc",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971219+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971219+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "d1SAeWeulhjUFKXmbfoH",
+        "request_id": "U2CxHGYvhdHAlOBFKOgX"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:41.128029+00:00",
+      "sha256": "2b1e93e80d377b2ef31d12d253c4938303428735d61bf5c35624f60ecf3f41a1",
+      "git_blob_sha": "a69bdabe6a2371626e448565336c21ddd298e650",
+      "size_bytes": 71514,
+      "duration_seconds": 4.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22129,8 +22163,25 @@
       "text": "Murder most inconvenient. Especially for the victim.",
       "script_sha256": "3d718ec28371c0b13a69c3733fdbd83892fc7642d900d528c193aa3ce9a621de",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971221+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971221+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "C7FQp7GOZyeLkWGsomhO",
+        "request_id": "1ScjoF30KfPu6oLzmPx3"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:42.251874+00:00",
+      "sha256": "66ef8ac82b666e5a4ab104fb7c61643b63f9958a25aaf9aac55e5c285f245b02",
+      "git_blob_sha": "62489eaffab135f1494258c8f60cfc524f54ddd3",
+      "size_bytes": 69006,
+      "duration_seconds": 4.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22139,8 +22190,25 @@
       "text": "Someone's game has ended rather abruptly.",
       "script_sha256": "5be02bba753dfc4538801b281f2fd9fa4e26153ce94aaf57f7aeabbcb442a8bb",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971222+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971222+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "sMEOSGceAcs6aSgfbjsT",
+        "request_id": "j7a2jBB0BQkqL37C4VKZ"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:43.277797+00:00",
+      "sha256": "85031ff6c24ccbaa471f906369b12aae6438b3a30897515e668bb2683f3fef00",
+      "git_blob_sha": "52c994590968a141d1e80d4a731dff95ac6da0f7",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22149,8 +22217,25 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971224+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971224+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "jfOnoDDQWefoDP2ke9jF",
+        "request_id": "mkMEv638gyQgbZ4MrM6T"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:44.248135+00:00",
+      "sha256": "c2bc9cd6ac71e0fe539db8aa4a2f4367d7ff4180de93381538e2f9e45c9f89e9",
+      "git_blob_sha": "0f472d47a7080b65f0ba75f140932a50821cc126",
+      "size_bytes": 61065,
+      "duration_seconds": 3.76,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22159,8 +22244,25 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971225+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971225+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lkxkmCd56ukTID4QVjgB",
+        "request_id": "S3UCRFEqzkHo7Z2objLY"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:45.358085+00:00",
+      "sha256": "e1caaa7d4e56a9377370befad95e2afb233ae6c30ae82d2c238e50d13eb001d4",
+      "git_blob_sha": "772309f29ce48e865ca36bd59ba387ee7961c8e9",
+      "size_bytes": 66498,
+      "duration_seconds": 4.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22169,8 +22271,25 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/penelope/murder_reveal/murder_reveal_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971227+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971227+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "sxvtae93WbMjErO4tVTk",
+        "request_id": "9bV7W96jK3m6bhxrlY86"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:46.383897+00:00",
+      "sha256": "2e906144099cb8a4a45368388bf65a84f69a43ff038a559ce3863cef553647d4",
+      "git_blob_sha": "7bc061d8f4e6e97b5bc786160b2cc1360c43f871",
+      "size_bytes": 56049,
+      "duration_seconds": 3.44,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22179,8 +22298,25 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971228+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971228+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "COEkf0hZ579be2RNqEEH",
+        "request_id": "4WCbM1eXoUCcGU39KfK3"
+      },
+      "provider_character_cost": "26",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:47.701569+00:00",
+      "sha256": "f69cc1d0bd13d3766aaf99317668f722cef7d41145dd862db51d50c45902e925",
+      "git_blob_sha": "cb831b76734d27315bc5e7d58569622dc3d193fc",
+      "size_bytes": 82798,
+      "duration_seconds": 5.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22189,8 +22325,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971229+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971229+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "u9A5VLfRUXUEquTefKRE",
+        "request_id": "WJUdxvRG3QLtpsiGndRL"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:48.962245+00:00",
+      "sha256": "aded333d8a3ed0e9f74904311574cf118abb302c5226be40e5b264c3253d61be",
+      "git_blob_sha": "e1d05f3c28516fc65ef03977b8251a6cfd3bdad8",
+      "size_bytes": 69006,
+      "duration_seconds": 4.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -22199,8 +22352,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/penelope/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:24:37.971231+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:24:37.971231+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "84mDz62ctXfFU31LMKqf",
+        "request_id": "n2gjGEPbyUT6uKpA7Jd9"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:24:50.048005+00:00",
+      "sha256": "ae14299bc0355dbc28a1e5d902cd3b5f6a3c9757c9f79660e7fae74690394dcf",
+      "git_blob_sha": "539867a8f207984e614834efe36f46f11da946bd",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
