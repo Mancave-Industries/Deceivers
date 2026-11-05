@@ -20069,7 +20069,7 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/penelope/gather/gather_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602347+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20087,7 +20087,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "73941963471abdfceefdd0e5dcf1d06bc2226ba9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:30.902737+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20096,7 +20103,7 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/penelope/gather/gather_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602368+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20114,7 +20121,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "a2c9bd9e09bb828a97c462d70529e2ace9cc7cad",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:31.732758+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20123,7 +20137,7 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/penelope/discussion/discussion_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602371+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20141,7 +20155,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "012e7bb099f7c9fccc213e7be500076d16fe483d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:32.528474+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20150,7 +20171,7 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/penelope/discussion/discussion_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602374+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20168,7 +20189,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "3c77652d8e8ad726e08e1632d13f7cba53726da2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:33.302810+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20177,7 +20205,7 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/penelope/discussion/discussion_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602376+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20195,7 +20223,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "78689ba9f666dd3cda24ed8a5d1d6455c7d940b0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:34.115843+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20204,7 +20239,7 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/penelope/discussion/discussion_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602378+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20222,7 +20257,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "af91bce87a3564bc4aeaf9b2fe08dd8bc34b7c76",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:34.902911+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20231,7 +20273,7 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/penelope/discussion/discussion_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602380+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20249,7 +20291,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "fda6e8439fa6810f017dd19a8de70bfd3bdb2e2a",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:35.702350+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20258,7 +20307,7 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/penelope/discussion/discussion_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602381+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20276,7 +20325,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "483de4ac6415eefc6b169b78dcfe5188fcce9c5d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:36.551077+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20285,7 +20341,7 @@
       "text": "Have a chat. Make it uncomfortable.",
       "script_sha256": "af0b7ae4784452b3cf3e6b45bea112cb265b457f61462ce39cc12602f31fcf7d",
       "path": "assets/audio/hosts/penelope/discussion/discussion_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602384+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20303,7 +20359,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "097b3f85326a2c0e1d728223bcfa749985de73c5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:37.340121+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20312,7 +20375,7 @@
       "text": "Everyone has a theory. How charming.",
       "script_sha256": "7a3297d59eec91105000ad8d0ad27d762dbdce52de547e0e082153a5263b0c1d",
       "path": "assets/audio/hosts/penelope/discussion/discussion_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:22:16.602386+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20330,7 +20393,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f2320280a0962c40ea659b81726f82f91a7f7dfb",
+        "blob_sha": "d81e9fb11fa4b3351c33ed5d1c9ebaf1955d54c6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:22:38.122574+00:00"
+      }
     }
   ]
 }
