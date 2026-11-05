@@ -11229,7 +11229,7 @@
       "text": "Ah, there you are. Welcome to The Deceivers. Trust is a lovely thing. It won't last.",
       "script_sha256": "c775c9baae314b81bea2de6f663904a3f596aed58ca62276b5fffb24d5162765",
       "path": "assets/audio/hosts/cate/opening/opening_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646187+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11247,7 +11247,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "f89f89d71934346e2696afb330d136ef60ac17e3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:11.451655+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11256,7 +11263,7 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/cate/opening/opening_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646207+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11274,7 +11281,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "1718455618630bbc12b32487a266684ede405234",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:12.343484+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11283,7 +11297,7 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/cate/opening/opening_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646208+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11301,7 +11315,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "6a5483e6de38181359280f7e09c1d6f3b93d2800",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:13.314932+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11310,7 +11331,7 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/cate/opening/opening_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646210+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11328,7 +11349,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "a3f7c14e5f74173a38dccf957f55fe8936b2bd30",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:14.185897+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11337,7 +11365,7 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/cate/opening/opening_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646212+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11355,7 +11383,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "a88e54ce6e672b15c40a9ea1384e4a411e103636",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:15.001388+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11364,7 +11399,7 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/cate/final_voting/final_voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646213+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11382,7 +11417,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "85414ce65a11f96a650864dec8f1b1f70822a479",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:15.803742+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11391,7 +11433,7 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/cate/banish_again/banish_again_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646215+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11409,7 +11451,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "b7fd6d3d98c6b42b27f992447b5026216c353b85",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:16.646539+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11418,7 +11467,7 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/cate/quiet_night/quiet_night_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646216+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11436,7 +11485,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "c9703102b410eea2ac63a8956bbc07503b0511cf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:17.478108+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11445,7 +11501,7 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/cate/shield_saved/shield_saved_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646217+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11463,7 +11519,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "299fe2f486871b9959c375b7f31d2175f83373ba",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:18.358424+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -11472,7 +11535,7 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/cate/tied_vote/tied_vote_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:11:50.646219+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11490,7 +11553,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "fccfc87e245e1f416fd3841347293efa89d95fa4",
+        "blob_sha": "8829a13b6b384b367af155c5d05432c82e597a5f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:12:19.159286+00:00"
+      }
     }
   ]
 }
