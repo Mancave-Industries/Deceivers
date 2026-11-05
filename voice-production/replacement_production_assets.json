@@ -7481,6 +7481,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:07:19.368906+00:00"
       }
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_007",
+      "text": "Another night. Another excellent opportunity to mistrust everyone.",
+      "script_sha256": "7a45abe9c4f41199c3db7987c1c8d81f729c15b03d7671e569062615e9ff98c9",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690536+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_008",
+      "text": "Darkness descends. Secrets remain secrets.",
+      "script_sha256": "814d1b67ac56f491de61eec810566bbceaee096303538e1589342bed042e5bc8",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690556+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_009",
+      "text": "The sun has gone. How inconvenient.",
+      "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690559+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_010",
+      "text": "And now, the night. How very atmospheric.",
+      "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690561+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_011",
+      "text": "Time for a little darkness. Behave yourselves.",
+      "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_011.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690563+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_012",
+      "text": "Night falls. Keep your secrets close.",
+      "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_012.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690564+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_013",
+      "text": "The day is done. The unpleasantness may begin.",
+      "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_013.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690566+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_014",
+      "text": "Shadows lengthen. So do the lies.",
+      "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_014.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690568+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "night_falls_015",
+      "text": "Good evening, suspicious people.",
+      "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
+      "path": "assets/audio/hosts/cate/night_falls/night_falls_015.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690570+00:00"
+    },
+    {
+      "host_id": "cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "clip_id": "gather_001",
+      "text": "Gather everyone. Place the phone in the centre.",
+      "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
+      "path": "assets/audio/hosts/cate/gather/gather_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:07:20.690572+00:00"
     }
   ]
 }
