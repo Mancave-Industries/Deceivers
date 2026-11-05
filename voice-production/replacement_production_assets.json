@@ -19389,8 +19389,25 @@
       "text": "The sun has gone. How inconvenient.",
       "script_sha256": "a546bd509a7f5f019d1bb5aef23f42674d4fe8217b55ee8eb3902f67b8632563",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_009.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658332+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658332+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "X0GofF2sUizELVicMSMr",
+        "request_id": "uKTdRS7hRCoJOHt6Epqs"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:32.133142+00:00",
+      "sha256": "a0d37915bb26b801c86b20d12bf14e80860b3f39dafd595e5511d48c9d1bd8a9",
+      "git_blob_sha": "12394647100401e6bae54494618a658664b5d8a2",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19399,8 +19416,25 @@
       "text": "And now, the night. How very atmospheric.",
       "script_sha256": "ec52853775b1dfb9c912e9dcf26df58662d1fe6a8c385f828eddcd465b32da5c",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_010.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658349+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658349+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "S9z073909FDlEfhZAvfx",
+        "request_id": "O8MX40Xm8Zb6bdooBYKa"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:33.272301+00:00",
+      "sha256": "7c5cd670263e6e6fa523bc5a74eba69fb6bd42aa820a84356cdee322b9b7907d",
+      "git_blob_sha": "31668b72d2276568878508d0574209707390aed9",
+      "size_bytes": 66498,
+      "duration_seconds": 4.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19409,8 +19443,25 @@
       "text": "Time for a little darkness. Behave yourselves.",
       "script_sha256": "2a135ddc5f192d3c43e4ca81b7b3a8e734606214f2d96edae6c35e03a6fb3fc2",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_011.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658351+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658351+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SM4XNS8wojWxfb36hevj",
+        "request_id": "KN5xwwhXJC0i7ZTQOke6"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:34.363121+00:00",
+      "sha256": "bc04469051bfef5f5d0ce3d526f42b86df2f1ef8f5c1f680cdc4edd3aa968306",
+      "git_blob_sha": "41c7ea9215ac4c1dbb71f3cda9133523ad18c1cb",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19419,8 +19470,25 @@
       "text": "Night falls. Keep your secrets close.",
       "script_sha256": "773f61de7d6adfd472e903b584c9d2628f8e4facc74491dce87b8acda3afa70e",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_012.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658353+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658353+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "rtnzJs9ptL7G1SyNDTlx",
+        "request_id": "6HmCCmYaK98mVlF0oUB0"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:35.443525+00:00",
+      "sha256": "6c8d81dd2bb633f6409dec0f37a66d92c095b6ba4fd82b8688866e462cbe4c0c",
+      "git_blob_sha": "1ebb0c59a082956161871be29ea518fe8e263dc0",
+      "size_bytes": 57303,
+      "duration_seconds": 3.52,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19429,8 +19497,25 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658354+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658354+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MyQAI8owFZ5v8Du0hpvi",
+        "request_id": "LUGmfpmOIxLexvFhwZCW"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:36.487388+00:00",
+      "sha256": "d7871437d27ba6aaf7aa074d5b98e9a17ccbafedef06a47218bfdeb9e29ea5d2",
+      "git_blob_sha": "b824ccff3b3a07ad00cb5bfa0ce03265edeed6f4",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19439,8 +19524,25 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658356+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658356+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "m3m6H6jkW923P3PkiUrL",
+        "request_id": "thE51hlsrnlcAx6svvq3"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:37.559934+00:00",
+      "sha256": "00ecc269566c766178f4c6465a0d5ff5d8e6cf9d162f24cd8b9e8bd93f8f6ded",
+      "git_blob_sha": "441215c067527455d0c11a54bdea04b33f252955",
+      "size_bytes": 53541,
+      "duration_seconds": 3.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19449,8 +19551,25 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/penelope/night_falls/night_falls_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658357+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658357+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "2tPjUCWXx4sIu3NTQEnP",
+        "request_id": "KWUVfQAlyd8QZouiy9Pv"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:38.360659+00:00",
+      "sha256": "784fab0471551f2f6dfc0f8858ad3e1bcdad1e44b65fe41740360a6166f302cf",
+      "git_blob_sha": "2740e432977992649bffc5dda40413b80cb8a6b7",
+      "size_bytes": 36823,
+      "duration_seconds": 2.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19459,8 +19578,25 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/penelope/gather/gather_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658359+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658359+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ivYekVCZaR6fFkkNXeT7",
+        "request_id": "q6Z4WKCPucRPF3TUbNUD"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:39.394322+00:00",
+      "sha256": "af5241d6a444d86171fe3f98d600b14d62dc5caa806ecdab09c1576a44d7e6da",
+      "git_blob_sha": "f8410a75b41960dbba1a8221bc612bec68759483",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19469,8 +19605,25 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/penelope/gather/gather_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658360+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658360+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "AULaFiuIpeAIfR33IwZb",
+        "request_id": "CDt50kcaSVZg8zrPrtKp"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:40.547911+00:00",
+      "sha256": "bf1333c41ef5d03d3273727b170989d9e9230d73e0f1d99efe86cb48aae09008",
+      "git_blob_sha": "9de33c03cd85a9646dcfbe18753511e24a1f5da2",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -19479,8 +19632,25 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/penelope/gather/gather_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:21:29.658361+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:21:29.658361+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mzDIyvEYt7XDoJ2ii5eZ",
+        "request_id": "T0HGO7SntCDm4Y7kO9QC"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:21:41.681923+00:00",
+      "sha256": "863aa45c415fc6fa4bf5d3e0cbf8fe9a9c7991513cffbedf4383767c4e4239d4",
+      "git_blob_sha": "5226c57d1f8a648a2e1ab61ce88cd666e352a07b",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
