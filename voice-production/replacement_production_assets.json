@@ -12249,8 +12249,25 @@
       "text": "Your turn is over. How tragic.",
       "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991671+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991671+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "oT0Sj1kOwJfnHKYyajCw",
+        "request_id": "p7xg5XvABVdoP9IKNeJ5"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:11.280698+00:00",
+      "sha256": "eeb200522b6941370555f1f4f13fd26b62faffffd0ee16e5ef4b837133481cb2",
+      "git_blob_sha": "75bceb85d6325c0b1f948d562ed9ed1a8af15ebf",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12259,8 +12276,25 @@
       "text": "Pass it on, and look innocent.",
       "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991692+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991692+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "jHu86eNmMvarHdSS8Cnw",
+        "request_id": "roDGMu6Q8Rqmgwon0wWm"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:12.509381+00:00",
+      "sha256": "0a20c1d4577e62ef4306c477a3e39dcdac24ace087d4986f17389343088bf121",
+      "git_blob_sha": "6fe2260367944d0cada2759e66fc86ae1f474dd3",
+      "size_bytes": 36823,
+      "duration_seconds": 2.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12269,8 +12303,25 @@
       "text": "A little privacy, ladies and gentlemen.",
       "script_sha256": "c2cc2986f6a915725d851922ce2ffe18944942ade6e3b7390c77943409dd7fd0",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991694+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991694+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "NyQqvsxMemQzZXrf4XQS",
+        "request_id": "VVUAIXhkTFgszFFVeaIT"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:13.351660+00:00",
+      "sha256": "5fde174167ead200771fcde8f54ddd9245454c3e3ee247e73276311c513fc301",
+      "git_blob_sha": "80293ad34b4a01ce937ebaad5e7da2e70d57453c",
+      "size_bytes": 41838,
+      "duration_seconds": 2.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12279,8 +12330,25 @@
       "text": "Next player. No audience required.",
       "script_sha256": "bf71dc8db6a530b042f585cc7d970ec9930c59b63e8063dede7d6e47a5e82b91",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_016.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991696+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991696+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Ba18sZLcNlmrb1vBYPpf",
+        "request_id": "qODHrgc2VB4GWTFg2MMB"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:14.319690+00:00",
+      "sha256": "502fbf2c8189d9d171857d5ca340cc52d59f14945aacab41c5d5fc88fa9f9de5",
+      "git_blob_sha": "0cdecdc5cbef665a3e20cc664c271b318f6f2575",
+      "size_bytes": 44764,
+      "duration_seconds": 2.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12289,8 +12357,25 @@
       "text": "The phone travels. The secrets stay.",
       "script_sha256": "29f5cd9f49fc31a03c100ad8c3a1efefbe8b5dfeef8567d6c3493f822570e99b",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_017.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991698+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991698+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "PCLRk05SWHdhVB0WrTw9",
+        "request_id": "p0d6lPanBxefTK4Ygyhk"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:15.342242+00:00",
+      "sha256": "0e3b13ef8b51d94ec619b60d6ecae106700b0c73a5146e2613c81ea3c62f0804",
+      "git_blob_sha": "770ef2e0bc19ac5443e54d4df981962a80005e96",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12299,8 +12384,25 @@
       "text": "Hand it over. Gently, now.",
       "script_sha256": "6a6d85184223cccda9274048ec9134612896cf6857eb7abc0c40f6ffae3bbc98",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_018.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991700+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991700+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "MisSbEZTTIn8fr6sTX46",
+        "request_id": "jLakn7rYlzwSS4C49und"
+      },
+      "provider_character_cost": "11",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:16.272088+00:00",
+      "sha256": "b7186867b47b13e8af421a85d4ceb9bf6cd15d6231ed4ef000cd9b76547025ee",
+      "git_blob_sha": "f02de37ccd159fe3659e1895021f8315f8a574a8",
+      "size_bytes": 39331,
+      "duration_seconds": 2.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12309,8 +12411,25 @@
       "text": "Moving along. Nothing dramatic. Yet.",
       "script_sha256": "d2b3df9df60822ac8e0e536d4126e0d1d5a3151495ff14607f397e07bbb8d723",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_019.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991702+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991702+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "FYv1OxK1xFxo1Dsu98l6",
+        "request_id": "hsYH6NzTc8MescH6z9sH"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:17.277668+00:00",
+      "sha256": "aff0022f9543aaeb960926d73e0c217627d0e2dfa646ee2558748745e7b65e6d",
+      "git_blob_sha": "6d76b8a2d559d0f633cf031b073fadb4e38ecc55",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12319,8 +12438,25 @@
       "text": "Pass the phone. No commentary from the gallery.",
       "script_sha256": "d45ad80f4e1a990d84069d48acfc2dafd27c38215b35b2d3ea02bc1032c47f10",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_020.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991704+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991704+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "mVlDHgi4fis4kToDthsr",
+        "request_id": "VNndOs81NOFA35s40If2"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:18.302192+00:00",
+      "sha256": "766f090f8514b6c3a8205ff3d87edb3452659937f05b04dc4e06a94a0e94d8cd",
+      "git_blob_sha": "0628c2aa9581d051818e85cbe73c462393c59828",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12329,8 +12465,25 @@
       "text": "Next! Oh, do try to keep up.",
       "script_sha256": "590fd07620738f9fa3f87a903f0d7f3a7f21b8c92ef9fa2bbe45bbaa51fe7943",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_021.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991706+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991706+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "EZGSRrtYmiBN42iyjohH",
+        "request_id": "hv7QFxyLNAFV9RHPjXZC"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:19.193013+00:00",
+      "sha256": "a59165f4116bc2adc9831e2e80678f0cba498ad29c12832769e4467405798749",
+      "git_blob_sha": "b8f255918128c5cfe78e5f84b4b9db8f1816ae06",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -12339,8 +12492,25 @@
       "text": "One phone. So many secrets.",
       "script_sha256": "2c6507bb85cf20f324a0e934327c891968fe4fcb0cc8e5e58319de67bc78d1d8",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_022.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:13:08.991708+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:13:08.991708+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Au5aAppz1Qny9To35DM8",
+        "request_id": "PqDiAG8fkohN7ICdwNJM"
+      },
+      "provider_character_cost": "12",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:13:20.156899+00:00",
+      "sha256": "c763bbde4e389ba5dcc19aedd2f2c0ab5267dc9e941fa0e95bb5b7bf2f2e2016",
+      "git_blob_sha": "f35f965924d1011e90dbe3880e08a7e233381199",
+      "size_bytes": 48526,
+      "duration_seconds": 2.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
