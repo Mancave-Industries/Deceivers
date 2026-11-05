@@ -20749,7 +20749,7 @@
       "text": "Time to vote. This should be enlightening.",
       "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
       "path": "assets/audio/hosts/penelope/voting/voting_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.399973+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20767,7 +20767,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "9a5b1e78143e3449f4caad389aec74bbcc1ede5d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:18.038150+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20776,7 +20783,7 @@
       "text": "Make your choice. Preferably a good one.",
       "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
       "path": "assets/audio/hosts/penelope/voting/voting_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400007+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20794,7 +20801,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "d73bfeeb4425b57c5415bb0db1c9bf6262eea529",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:18.825089+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20803,7 +20817,7 @@
       "text": "The talking shop is closed. Votes, please.",
       "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
       "path": "assets/audio/hosts/penelope/voting/voting_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400010+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20821,7 +20835,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "076ef39de36ae83dda9daecc7ff48caaaaeb4a9d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:19.649582+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20830,7 +20851,7 @@
       "text": "Decisions, decisions. How terribly grown-up.",
       "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
       "path": "assets/audio/hosts/penelope/voting/voting_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400012+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20848,7 +20869,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "77a4fff57bd2e8c639a86c2db6b137c97b394a4e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:20.506383+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20857,7 +20885,7 @@
       "text": "Enough speculation. Commit to something.",
       "script_sha256": "6a86cc455c676408a123ba576d80547a6b8d4d20c11c260ea9cf3ceb1e74589e",
       "path": "assets/audio/hosts/penelope/voting/voting_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400014+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20875,7 +20903,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "fe0b048d0b3fa76109d929fd656e7c3b032ae5d3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:21.278559+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20884,7 +20919,7 @@
       "text": "Voting begins. Your confidence is noted.",
       "script_sha256": "4133ce99516c620cd274a872f21a1450384a65d724cc170eeff8277dbfe95f88",
       "path": "assets/audio/hosts/penelope/voting/voting_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400016+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20902,7 +20937,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "0dc4a29d9bc034b06b9c9ed1fb8e2d9f622806d5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:22.085284+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20911,7 +20953,7 @@
       "text": "Time to point the finger. Figuratively.",
       "script_sha256": "a7ff1c3555a1bcbe0c3d8acbe0c1dacacdee770c17492eece7b4fed469857619",
       "path": "assets/audio/hosts/penelope/voting/voting_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400017+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20929,7 +20971,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "026a490e45cb8b599ab7b25fadd9bf34c2b5f0e3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:22.910444+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20938,7 +20987,7 @@
       "text": "Your vote, please. No dithering.",
       "script_sha256": "1a7451a38e122f5ac0350f7a38b988101354fbf60e9b98bb4c8e6124ac7e2ee9",
       "path": "assets/audio/hosts/penelope/voting/voting_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400019+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20956,7 +21005,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "306ff01f90afa6c16f5a3bb32f947211244167d2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:23.754566+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20965,7 +21021,7 @@
       "text": "Now we discover what you actually believe.",
       "script_sha256": "5418c7b7a03abd4015b49fde10aefc9918802f0356887d494e1f044545af87ae",
       "path": "assets/audio/hosts/penelope/voting/voting_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400020+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -20983,7 +21039,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "06a4cd742887d45da9755f7be1b9f09236dc99fa",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:24.556677+00:00"
+      }
     },
     {
       "host_id": "penelope",
@@ -20992,7 +21055,7 @@
       "text": "Cast your votes. May reason make a rare appearance.",
       "script_sha256": "194c8d9a7cb52fb7489a93cb41eccb587e3acbde409abc4e42c1b9c5d5e40d33",
       "path": "assets/audio/hosts/penelope/voting/voting_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:23:03.400021+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -21010,7 +21073,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "62239aedc8cc7ed32db2fd51261ee3612f4a4d31",
+        "blob_sha": "1f8eaa9b83ac61d6d58bda6d83fd715e93c9f5b3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:23:25.382981+00:00"
+      }
     }
   ]
 }
