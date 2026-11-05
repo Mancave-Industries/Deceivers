@@ -14629,7 +14629,7 @@
       "text": "Time to separate the stories from the storytellers.",
       "script_sha256": "243a25e9f0b8293b55d8fbe8e2d9cd386717a99ca99e662fabb9f8a661834122",
       "path": "assets/audio/hosts/kay/discussion/discussion_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929783+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14647,7 +14647,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "94218281b542ec57351f99707acf59486563ecdf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:04.712760+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14656,7 +14663,7 @@
       "text": "The discussion is yours. Use it wisely.",
       "script_sha256": "17281122389f851383d627b6fbc1173816363cc6769f25b5861c91416c1b0749",
       "path": "assets/audio/hosts/kay/discussion/discussion_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929802+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14674,7 +14681,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "f1ed664e7715c0ec71f55d98c19249ddd755833e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:05.578444+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14683,7 +14697,7 @@
       "text": "You may now begin your collective detective work.",
       "script_sha256": "019b1ed0e3ec5a64df4e02afd08225ca7df17f2b3e27e203f8883f082fe61e1b",
       "path": "assets/audio/hosts/kay/discussion/discussion_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929803+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14701,7 +14715,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "a4faf199becb14846620e13506cb2694c7cb62e8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:06.464814+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14710,7 +14731,7 @@
       "text": "The time for talk is over.",
       "script_sha256": "8722ac1a643d49e8c11645931f63997f073d1e3d3c4ed6fb54d1e519db93dd71",
       "path": "assets/audio/hosts/kay/voting/voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929805+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14728,7 +14749,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "21d1317ebf2e4f53bf33cfaea0f9f4500040304f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:07.310792+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14737,7 +14765,7 @@
       "text": "Talk ends now.",
       "script_sha256": "1ac53ec663b05db7d1edf72e44ef6a0deb8ca922cf61b2dba05d3a407ad55fd2",
       "path": "assets/audio/hosts/kay/voting/voting_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929806+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14755,7 +14783,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "9a364b47ccd535ed63874df69becb33dc25886b7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:08.250732+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14764,7 +14799,7 @@
       "text": "Enough talk. It is time to vote.",
       "script_sha256": "751fd48006ecbddf314539150d4a70c553f8efdc66b34acf25b60c74b1e96449",
       "path": "assets/audio/hosts/kay/voting/voting_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929808+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14782,7 +14817,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "514cc53777fc4909db3af0ef75babf180c44d033",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:09.142434+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14791,7 +14833,7 @@
       "text": "Time to vote. This should be enlightening.",
       "script_sha256": "11a5819734ad19bc789f4913ef598f1fac62e8e71105546439bbc3a13e7ec4f5",
       "path": "assets/audio/hosts/kay/voting/voting_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929809+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14809,7 +14851,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "1fa257235e13455764eb42df718410adc97e8ba6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:10.038830+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14818,7 +14867,7 @@
       "text": "Make your choice. Preferably a good one.",
       "script_sha256": "a17b0ad74deb40dcda269ba9a80ac542d518c6d953a8590607ae638edc8a9386",
       "path": "assets/audio/hosts/kay/voting/voting_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929810+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14836,7 +14885,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "1cf18ee59c70f863f8c7e29ea13852a20babc8be",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:10.934784+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14845,7 +14901,7 @@
       "text": "The talking shop is closed. Votes, please.",
       "script_sha256": "58c4c5c657b61b6a786212bff21ea6ea0d02dcff7b7029235441baeb456b0209",
       "path": "assets/audio/hosts/kay/voting/voting_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929812+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14863,7 +14919,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "85e1b9f11f6a3a6ffd632cb77c78dfcad26e229d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:11.733077+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -14872,7 +14935,7 @@
       "text": "Decisions, decisions. How terribly grown-up.",
       "script_sha256": "30e4244174d633a4ad7c853fb8cd69c81091706b24c3a9e4c98a0b0f7b7590b1",
       "path": "assets/audio/hosts/kay/voting/voting_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:15:50.929813+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -14890,7 +14953,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "0f8950b5cab638fb47191776c10f764460579476",
+        "blob_sha": "6644f7bf8906e1d557afd6ff2051d3f70a375afe",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:16:12.598599+00:00"
+      }
     }
   ]
 }
