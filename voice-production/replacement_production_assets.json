@@ -8169,7 +8169,7 @@
       "text": "Back to the centre, if you please.",
       "script_sha256": "1cc1ae5bc1110db97b5073e30f4d213627a7cce43505097faf91d7c016745a5b",
       "path": "assets/audio/hosts/cate/gather/gather_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140163+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8187,7 +8187,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "0f9dea2d61283a40474fdf9cc3d85589e8bd5d88",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:23.552548+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8196,7 +8203,7 @@
       "text": "All eyes here. The phone goes in the middle.",
       "script_sha256": "226714097dc98d98085ae10c2e5f6d22f5dc2e934a9b230f746bc8d026c7428c",
       "path": "assets/audio/hosts/cate/gather/gather_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140185+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8214,7 +8221,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "3c82f87629c19d346f4525c5ea69a919e888baf6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:24.391013+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8223,7 +8237,7 @@
       "text": "Come along, everybody. No stragglers.",
       "script_sha256": "5d0a898e02b74fcbaff282d996125ec1c87d8de077aa2d1143bf3d13cda1e3f5",
       "path": "assets/audio/hosts/cate/gather/gather_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140186+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8241,7 +8255,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "a1a5d5caf953a8ed2b89dc9ffa2b2eb59089fb76",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:25.209496+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8250,7 +8271,7 @@
       "text": "Form your circle. The fun is about to deteriorate.",
       "script_sha256": "8bf21f1f7e10172c3dfb9d2c69a06828197e080b2f0d44675d5cc464ba0171b9",
       "path": "assets/audio/hosts/cate/gather/gather_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140188+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8268,7 +8289,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "5e89ed45da9f70e512ba13a56f697666f418ffb0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:26.022446+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8277,7 +8305,7 @@
       "text": "Discussion begins. Choose your words carefully.",
       "script_sha256": "2de1d7d87292887b0128ec5939fe6d0dc4ee2cf4da144ac5d885975eccdc0c18",
       "path": "assets/audio/hosts/cate/discussion/discussion_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140190+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8295,7 +8323,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "352f3ed86ea26f23dc69f140c3d0320f7816243d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:26.845010+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8304,7 +8339,7 @@
       "text": "Talk amongst yourselves. Someone will regret it.",
       "script_sha256": "03ed09dbe1709a2bca5b2889a94d985c202f17af3798474f4496d46d6c84e7e8",
       "path": "assets/audio/hosts/cate/discussion/discussion_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140192+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8322,7 +8357,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "a7e45349d2a9933248638b12e47ba8db7d9cfc22",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:27.640177+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8331,7 +8373,7 @@
       "text": "The floor is open. So are the possibilities for nonsense.",
       "script_sha256": "fd3eab9bc830846ed3fdd6401f9806be97311cf7963de60b51881790c4f29780",
       "path": "assets/audio/hosts/cate/discussion/discussion_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140193+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8349,7 +8391,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "0868fd4a4bf4640f95efd54373a0322dfccadd09",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:28.428562+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8358,7 +8407,7 @@
       "text": "Speak freely. Believe selectively.",
       "script_sha256": "d22491c2a81063ce711ba97d57e56a4a58e5d426fa74abe231533ad0332979f7",
       "path": "assets/audio/hosts/cate/discussion/discussion_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140195+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8376,7 +8425,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "544b6995fa3dc6a2c85e21ee80c5ce605858866d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:29.265954+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8385,7 +8441,7 @@
       "text": "Right then. Who's telling porkies?",
       "script_sha256": "8a39968b097f4032fcbeafcffc30175a2b98c14e79a3312650c0107a7544baca",
       "path": "assets/audio/hosts/cate/discussion/discussion_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140197+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8403,7 +8459,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "17126bf6672af97e8fd252f9b34161575088ecdc",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:30.033168+00:00"
+      }
     },
     {
       "host_id": "cate",
@@ -8412,7 +8475,7 @@
       "text": "Let the accusations begin. Politely, if possible.",
       "script_sha256": "e4234b3eafba525d140266f44d5ab409e54c23fd6e7c8828be9cea0b57b59f85",
       "path": "assets/audio/hosts/cate/discussion/discussion_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:08:09.140198+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -8430,7 +8493,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "3a764a9de0c7a94e577b31e7ba39e5c213284655",
+        "blob_sha": "a9b33dd075030e3824677bb820705037eaa8c6a1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:08:30.825865+00:00"
+      }
     }
   ]
 }
