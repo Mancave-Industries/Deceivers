@@ -33,10 +33,11 @@ def digest(text):
 def catalogue():
     manifest = read("manifest.json")
     source = read("source_library.json")["categories"]
-    hosts = {h["id"]: h for h in read("voices.json")["hosts"]}
+    voice_rows = read("voices.json")["hosts"] + read("replacement_voices.json")["hosts"]
+    hosts = {h["id"]: h for h in voice_rows}
     clips = {c["id"]: c for c in manifest["clips"]}
-    if len(clips) != len(manifest["clips"]) or len(hosts) != 6:
-        raise ValueError("Duplicate clip IDs or incorrect host count")
+    if len(clips) != len(manifest["clips"]) or len(hosts) != len(voice_rows) or len(hosts) != 10:
+        raise ValueError("Duplicate clip IDs or incorrect complete voice registry")
     if len(clips) != sum(map(len, source.values())) or len(clips) != manifest["clip_count"]:
         raise ValueError("Manifest/source count mismatch")
     for clip in clips.values():
@@ -127,23 +128,27 @@ def verify_all():
         verify_record(record)
         paths.add(record["path"])
     disk = {p.relative_to(ROOT).as_posix() for p in (ROOT / "assets/audio/hosts").rglob("*.mp3")}
-    production_path = HERE / 'production_assets.json'
-    production = json.loads(production_path.read_text())['assets'] if production_path.exists() else []
-    if production:
-        approved = { (c['host_id'], c['clip_id']): c for c in read('approved_api_plan.json')['clips'] }
+    ledgers = (
+        ('production_assets.json', 'approved_api_plan.json'),
+        ('replacement_production_assets.json', 'replacement_api_plan.json'),
+    )
+    for ledger_name, plan_name in ledgers:
+        production_path = HERE / ledger_name
+        production = json.loads(production_path.read_text())['assets'] if production_path.exists() else []
+        approved = {(c['host_id'], c['clip_id']): c for c in read(plan_name)['clips']}
         for record in production:
             key = (record['host_id'], record['clip_id'])
             if key in seen or key not in approved:
                 raise ValueError('Duplicate or unapproved production recording')
             seen.add(key)
-            if any(record.get(f) != approved[key][f] for f in approved[key]):
+            if any(record.get(field) != approved[key][field] for field in approved[key]):
                 raise ValueError('Production script, voice or path mismatch')
             if record['status'] == 'reserved_no_automatic_retry':
                 continue
             if record['status'] not in ('local_binary_verified', 'github_binary_verified'):
                 raise ValueError('Unknown production recording status')
             actual = inspect_mp3(ROOT / record['path'])
-            if any(record.get(f) != actual[f] for f in ('sha256', 'git_blob_sha', 'size_bytes')):
+            if any(record.get(field) != actual[field] for field in ('sha256', 'git_blob_sha', 'size_bytes')):
                 raise ValueError('Production binary checksum mismatch')
             source = record.get('source', {})
             if source.get('method') != 'direct_tts_api' or not (source.get('history_item_id') or source.get('request_id')):
