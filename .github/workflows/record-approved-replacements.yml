@@ -1,8 +1,8 @@
 name: Record approved replacement narrators
 
 on:
-  push:
-    branches: [feature/six-host-voice-assets-20261101]
+  pull_request:
+    branches: [main]
     paths: [voice-production/replacement_production_request.json]
 
 permissions:
@@ -14,6 +14,7 @@ concurrency:
 
 jobs:
   record-replacements:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
