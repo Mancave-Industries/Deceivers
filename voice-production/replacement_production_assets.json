@@ -16329,7 +16329,7 @@
       "text": "An empty place at the table. How unsettling.",
       "script_sha256": "7cbca63ab7ab998445d2bd8aca506b82161195248a409e2e8cbeee7560057658",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_018.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782668+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16347,7 +16347,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "153c66a8f79aaa547137ab1bc3d0100b1c79d4ab",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:03.638569+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16356,7 +16363,7 @@
       "text": "A player silenced. The rest of you, do speak up.",
       "script_sha256": "52ca8e61558a838e07c8e08c3b0b9bc2043ae735799ba2a83c7d9fe2565cf87a",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_019.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782687+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16374,7 +16381,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "ee98d2ece508a45806ec789b3e5edf6349ead642",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:04.425575+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16383,7 +16397,7 @@
       "text": "The night was eventful. Not in a good way.",
       "script_sha256": "e4dee06ee137c19893e4174da460f1beb3edbebc890b26fbb2c0b0c4625e9353",
       "path": "assets/audio/hosts/kay/murder_reveal/murder_reveal_020.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782689+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16401,7 +16415,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "5d7607c197adccfe7842c36b505185a887a7c982",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:05.201747+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16410,7 +16431,7 @@
       "text": "And so, the circle tightens. How wonderfully uncomfortable.",
       "script_sha256": "bc91e134de3ee82c6831dac112ee1610f77e169af46e4a7ca40119a720521170",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782691+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16428,7 +16449,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "c1dfd4f1f78d66a5ac031715d2d6653e74b12fe7",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:06.084169+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16437,7 +16465,7 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782692+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16455,7 +16483,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "6c5aeff6a11d62e02bb5ad58d7576b51edafecd6",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:06.886014+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16464,7 +16499,7 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782694+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16482,7 +16517,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "52c20edfc60786f6493c26f846ea34bee86eb959",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:07.751493+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16491,7 +16533,7 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782698+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16509,7 +16551,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "0f78a8c5e198250439320fc1a9818f3f94cb10f5",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:08.552933+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16518,7 +16567,7 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782700+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16536,7 +16585,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "942b0bd28a578c3e32ae94c10b807c1ce6a228b2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:09.381644+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16545,7 +16601,7 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782702+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16563,7 +16619,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "3417095e7d1d2292f5ecd33ca400207e81f90eaf",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:10.210116+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -16572,7 +16635,7 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/kay/final_circle/final_circle_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:17:47.782704+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -16590,7 +16653,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "84cbd5d329b7766b9297058ef5523ccc51857196",
+        "blob_sha": "36cc4ed4d4a58a1425c5095f067643b1bf4577b1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:10.995966+00:00"
+      }
     }
   ]
 }
