@@ -3,7 +3,9 @@ name: Record approved narrator library
 on:
   push:
     branches: [feature/six-host-voice-assets-20261101]
-    paths: [voice-production/production_request.json]
+    paths:
+      - voice-production/production_request.json
+      - voice-production/replacement_production_request.json
 
 permissions:
   contents: write
@@ -31,19 +33,22 @@ jobs:
           python3 voice-production/validate_script_review.py
           python3 voice-production/asset_checks.py
           python3 -m unittest discover -s voice-production -p 'test_*.py'
-          python3 voice-production/record_approved.py --dry-run
+          python3 voice-production/record_replacements.py --dry-run
       - name: Record one take per approved missing clip and verify GitHub binaries
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: python3 -u voice-production/record_approved.py
+        run: python3 -u voice-production/record_replacements.py
       - name: Final MP3 integrity check
         run: python3 voice-production/asset_checks.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: narrator-production-checkpoint
+          name: replacement-narrator-production-checkpoint
           path: |
-            voice-production/production_assets.json
-            assets/audio/hosts/
+            voice-production/replacement_production_assets.json
+            assets/audio/hosts/timothy/
+            assets/audio/hosts/cate/
+            assets/audio/hosts/kay/
+            assets/audio/hosts/penelope/
           retention-days: 14
