@@ -5,6 +5,7 @@
   "new_clips": 696,
   "max_credits": 30864,
   "plan_sha256": "34cfa396ee69c3821723849a4599ef6353d25fd59cbf9893ba591e37a7a81ba1",
-  "request_id": "approved-replacements-20261105-1",
-  "merge_or_deploy": false
+  "request_id": "approved-replacements-20261105-2",
+  "merge_or_deploy": false,
+  "retrigger_reason": "Established recording workflow route; scope, cast and credit ceiling unchanged."
 }
