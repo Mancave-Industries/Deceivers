@@ -3401,6 +3401,106 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:02:24.550058+00:00"
       }
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_001",
+      "text": "Votes are in. Oh, this will be interesting.",
+      "script_sha256": "f2e34386e76d2f75b3d8d50caa60f2efcae0378daa3400ee1ada04c23b19b344",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167734+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_002",
+      "text": "The decision is made. No take-backs.",
+      "script_sha256": "92f0d1df50634bccec2ed520eae672c0c7a6bb3eb9c5de4c076177a6384ddf7b",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167755+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_003",
+      "text": "Well. You've certainly made a choice.",
+      "script_sha256": "1df0e99692d25f668c285e560f6f5891d0bd087c68db269f6d1026efe5aaedc9",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_003.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167757+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_004",
+      "text": "The verdict awaits. Brace yourselves.",
+      "script_sha256": "ec2ef11d88947141311b948ca1a0e75110975fb32a5ff140394ebbf3ef907a2c",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_004.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167759+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_005",
+      "text": "All votes counted. What a confident bunch.",
+      "script_sha256": "ac8cfb1508c1371402f463b21ff252f77d1262d92eaf88ddf376f2703345ccda",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_005.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167761+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_006",
+      "text": "A decision! Finally.",
+      "script_sha256": "c5137e892f2dde316b9c421e609e42cdde9b0cc822b4bd38d7dfd4bd4d794c41",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_006.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167763+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_007",
+      "text": "The numbers are settled. The consequences are not.",
+      "script_sha256": "55dc9e73fcc6b3d0753bf81cfbedc9f88f4fc349a489ef6e1ea0f096c4ba023a",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_007.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167765+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_008",
+      "text": "The votes have spoken. Whether wisely is another matter.",
+      "script_sha256": "9903ac122367517ddc8d41760089a802d44b3173d1289fe5758ac52b782c8e8a",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_008.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167767+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_009",
+      "text": "And there we have it. A collective opinion.",
+      "script_sha256": "51528479e856fd7680695d761ed47510a00516bbf9cb67b1fe65af754b6d1895",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_009.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167769+00:00"
+    },
+    {
+      "host_id": "timothy",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "clip_id": "vote_complete_010",
+      "text": "Your judgement has been recorded.",
+      "script_sha256": "5a82c4867032b145c7a5553930cae68029e0f933e689e22ea45e2f1e987e2795",
+      "path": "assets/audio/hosts/timothy/vote_complete/vote_complete_010.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:02:26.167771+00:00"
     }
   ]
 }
