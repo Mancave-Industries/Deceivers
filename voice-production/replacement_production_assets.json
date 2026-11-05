@@ -23469,8 +23469,25 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/penelope/truth_reveal/truth_reveal_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972828+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972828+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "hV3Qrzpqc2n9redGhvZg",
+        "request_id": "8fhXFgGJqsoh7rVSZGWF"
+      },
+      "provider_character_cost": "27",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:26.895015+00:00",
+      "sha256": "66e0d185b7e89d8fa92ff6fee06821696ea762f3126fcb19519cd690f675eaab",
+      "git_blob_sha": "033ef7301a648b26ec5a6484a79e1a2f5d9daa68",
+      "size_bytes": 80291,
+      "duration_seconds": 4.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23479,8 +23496,25 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/penelope/series_closing/series_closing_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972848+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972848+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "gjHkvzEsdlECMLR9E5eo",
+        "request_id": "2Z6LqkMWQ73b9N2aKmtQ"
+      },
+      "provider_character_cost": "37",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:28.632516+00:00",
+      "sha256": "3311f58e17862d6d4cf613f15f78c08b4cbd0bdeadbcce96e3a6989c42ba782f",
+      "git_blob_sha": "5888b24f25002a74c2a8bd16ffe78285293fd576",
+      "size_bytes": 97009,
+      "duration_seconds": 6.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23489,8 +23523,25 @@
       "text": "Until next time. Trust nobody.",
       "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
       "path": "assets/audio/hosts/penelope/farewell/farewell_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972851+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972851+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "uVYzCuyP1pkvBsDrAj5E",
+        "request_id": "tuhFTsDr2m9Y9Tj2Ow6n"
+      },
+      "provider_character_cost": "13",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:29.525265+00:00",
+      "sha256": "40ac97fb1784a99b7686aca1b2646fe4fd496f224daadc82e71d6bc3af2e4d7e",
+      "git_blob_sha": "5d991bd7e662538c241f6c604cb63e09c220cd8c",
+      "size_bytes": 49780,
+      "duration_seconds": 3.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23499,8 +23550,25 @@
       "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
       "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
       "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972853+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972853+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ee0xp06cov9KDJcRS7qd",
+        "request_id": "Bz5m4PaN4Zin6jSYIX74"
+      },
+      "provider_character_cost": "53",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:31.994979+00:00",
+      "sha256": "18e5004dd3e0a4974feccf6cb65f543a3dbe6e5266153e137c3b8af1a50486fe",
+      "git_blob_sha": "6c76a9fe2ecd884b87cd696543cd313f76d523bb",
+      "size_bytes": 150926,
+      "duration_seconds": 9.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23509,8 +23577,25 @@
       "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
       "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
       "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972855+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972855+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "SGZwgRl6j3Aj1RHPeHmR",
+        "request_id": "5Cn473OT7UYjNM6UmiQC"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:33.914576+00:00",
+      "sha256": "f4d13aa76f29ba0f5a2403e3e5e34cebc929f42684a46551b84671c89fa09aef",
+      "git_blob_sha": "b9141b204380d80e37d8fa6f57a8106c8d3cd4d2",
+      "size_bytes": 113727,
+      "duration_seconds": 7.04,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "penelope",
@@ -23519,8 +23604,25 @@
       "text": "Let the game begin.",
       "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
       "path": "assets/audio/hosts/penelope/game_begins/game_begins_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:26:23.972857+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:26:23.972857+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lmuoasQWZ20qwx4F8vdb",
+        "request_id": "7hYTBdFRmNUgZmGlzCkZ"
+      },
+      "provider_character_cost": "8",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:26:34.653060+00:00",
+      "sha256": "232bacadeec1351e24a7860fa6e8efe254a0b1597eaf88b99a8409448ad8e9f7",
+      "git_blob_sha": "519892214b1ccc6df7c2b45efdeb7f1d76885063",
+      "size_bytes": 28046,
+      "duration_seconds": 1.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
