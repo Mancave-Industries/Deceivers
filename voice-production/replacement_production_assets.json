@@ -10549,8 +10549,25 @@
       "text": "Here we are. The moment when every word matters.",
       "script_sha256": "02b1e23d1dba28a36afb1ca64c97bf846e827698ae5e45e129c2a7c2b6babf0c",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292327+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292327+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "EVBjBIiBn1D6GOVK7eVQ",
+        "request_id": "wqApxM9gHWuH71CnrNvi"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:10:59.193609+00:00",
+      "sha256": "7ae5f3c399f20609c765dd870ce99758091cacf4f25a141f4436b24372a8d8cd",
+      "git_blob_sha": "8393db818e2c6f4d2dc1ffd21b94370c30e818ca",
+      "size_bytes": 62318,
+      "duration_seconds": 3.84,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10559,8 +10576,25 @@
       "text": "A few faces. A great many questions.",
       "script_sha256": "6bee63debc40be481045a3fdefe41a0cc90bccf8a00fe98c92fed21197481ed6",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292346+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292346+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "zghniWYDtcez7Aw7eO1I",
+        "request_id": "jmUiKtBtT4OqYZGpOt1s"
+      },
+      "provider_character_cost": "16",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:00.254946+00:00",
+      "sha256": "de6e1fa3f23772bd4108cef9e562d59dc0b7613ce9b0707f22de028be34ef23c",
+      "git_blob_sha": "0e558cddca23e0ab88a55ad895629339f41e6236",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10569,8 +10603,25 @@
       "text": "The end approaches. Trust becomes expensive.",
       "script_sha256": "628fb7c5e2fc646833cf2aa330219e5097fff1d62318d3d762d5320e40a74775",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292349+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292349+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "IEQ8GmHob4NoKiD1mtsY",
+        "request_id": "Osgg0R0H6vKoETRDfeTS"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:01.352403+00:00",
+      "sha256": "70b50b26c72ebf975768ed14e9008d32eb491a571241f90315b233ea85945a3c",
+      "git_blob_sha": "07ec3381621e7722f302e4f5f65507e1c3062271",
+      "size_bytes": 65244,
+      "duration_seconds": 4.0,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10579,8 +10630,25 @@
       "text": "A chance to be brilliantly right. Or spectacularly wrong.",
       "script_sha256": "2344fafa4b366d467c3bbc79ea58028b86935c158930d51cd1b6bced8b2766ec",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292351+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292351+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wmhQ0t5dD6BDTglAKMfy",
+        "request_id": "kxXjDAD462ptUMgYmUuC"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:02.991127+00:00",
+      "sha256": "bdbc0f1de34a53c32867f3f407a45e985828662eee1bde1efd3b7b8861523a3b",
+      "git_blob_sha": "9365b057cfbc3f172f2ac65748589efa871a5af9",
+      "size_bytes": 80291,
+      "duration_seconds": 4.96,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10589,8 +10657,25 @@
       "text": "The Final Circle. Do try to make history, not a mess.",
       "script_sha256": "f22045b322f2b13aa967abf01247ee9095ae77a6248d39db428b41e215ae7179",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292352+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292352+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "ItIPeHEDav8WMMWWhFPL",
+        "request_id": "x72xk5JC3da3Ns5Vif0N"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:04.312648+00:00",
+      "sha256": "18d3ccd9d67eb324b8709dc444351de3cd3c293f0e967ce83689d4664ad8abe7",
+      "git_blob_sha": "cd80588ba7ea747520a84089e85c89ea95e54b3f",
+      "size_bytes": 79037,
+      "duration_seconds": 4.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10599,8 +10684,25 @@
       "text": "The room is smaller. The stakes are not.",
       "script_sha256": "c55a76a26f5c573f08ce5186c740498ea372ec76519df3e77b69b39128a81936",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292354+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292354+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "kEypCm0LlMBUoTwrL0Nm",
+        "request_id": "bshCPVUBZVzQF9L4cPGR"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:05.478725+00:00",
+      "sha256": "d3b0dcab7ee5d27c537a56f8c054dbcd950031b70b445e0709a57d0d73ebb3bd",
+      "git_blob_sha": "94e07e057c3f92edb8b96980e974d378a36f853e",
+      "size_bytes": 58557,
+      "duration_seconds": 3.6,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10609,8 +10711,25 @@
       "text": "This is it. A final reckoning, with excellent company.",
       "script_sha256": "75d084072651e8f6956d934d41d40abce22bdea7d7a31d9a6ae50c924ffbe4a6",
       "path": "assets/audio/hosts/cate/final_circle/final_circle_008.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292356+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292356+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "iPx19Lxy0nzOcYhPqWsq",
+        "request_id": "ts8UXM70m3ymWYlpCLG7"
+      },
+      "provider_character_cost": "24",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:06.935370+00:00",
+      "sha256": "0abf83a68422c4ca0f890d8d0c9b744988f20622d80b9083e6e2639d87990be8",
+      "git_blob_sha": "1fe7dded532ad62b147a97bda6010c48679020e8",
+      "size_bytes": 74021,
+      "duration_seconds": 4.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10619,8 +10738,25 @@
       "text": "The Loyal have won! Against some fairly compelling evidence to the contrary.",
       "script_sha256": "458e3fb7b5107683cf5919993d1c1371744306075336d1084715ff34d401cf9d",
       "path": "assets/audio/hosts/cate/loyal_victory/loyal_victory_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292357+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292357+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "0U2MUPJH9HdAULAVRf23",
+        "request_id": "Xl3Pw3zWHlkRY4z9o2dH"
+      },
+      "provider_character_cost": "33",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:08.433651+00:00",
+      "sha256": "424646179cd4eecebed48021f0f962ceb13942aff7ac22c599e0c7bc1f02e36c",
+      "git_blob_sha": "5aa6e3cc54ec651136c145d6169f96b181a02c8b",
+      "size_bytes": 82798,
+      "duration_seconds": 5.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10629,8 +10765,25 @@
       "text": "Truth prevails. I admit, I had my doubts.",
       "script_sha256": "b566e591fb3485d0b9528b5157a3a11bafdc084fb99eb1881c334b32a9df4a5b",
       "path": "assets/audio/hosts/cate/loyal_victory/loyal_victory_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292359+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292359+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "kNrZHu3cEdDNko5S8piX",
+        "request_id": "3U0mklxuETWhe9Rg4vtu"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:09.722726+00:00",
+      "sha256": "3597cd4db604c8b6240383422c8467f96e1e27028b79b2cc561db2ca89d7c51b",
+      "git_blob_sha": "46880bd44b63e455dcf25b9ee504779fc95eea77",
+      "size_bytes": 66498,
+      "duration_seconds": 4.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "cate",
@@ -10639,8 +10792,25 @@
       "text": "A Loyal victory! How unexpectedly wholesome.",
       "script_sha256": "bbd8d95774181af0bdca6f4967161e9733279f980bdbe806c9103438daab8b68",
       "path": "assets/audio/hosts/cate/loyal_victory/loyal_victory_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:10:56.292360+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:10:56.292360+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "lnYLkd5olqjpC93c8dj4",
+        "request_id": "apjvbHASaotE2LBM4TXM"
+      },
+      "provider_character_cost": "19",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:11:10.981804+00:00",
+      "sha256": "fe4a64288331db390a2c31460b4f87621d8d3f2d9595adc73f5121d07f891958",
+      "git_blob_sha": "9b0b8f1c5ab4f0a74083bacd6591f0d859d6c243",
+      "size_bytes": 66498,
+      "duration_seconds": 4.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
