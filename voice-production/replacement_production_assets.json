@@ -5449,7 +5449,7 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/timothy/opening/opening_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988255+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5467,7 +5467,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "9d2ecdc1f9d22e9cd20fff05a01fe520f45e1609",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:17.411545+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5476,7 +5483,7 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/timothy/final_voting/final_voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988276+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5494,7 +5501,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "b7b107a80ac22183957c156d6b1341a35ebb6b58",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:18.226335+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5503,7 +5517,7 @@
       "text": "The circle has chosen to continue. Another decision must be made.",
       "script_sha256": "afea87e820ef2947cf45da10a501243522665a5d0c4bfb28d284348d3953441c",
       "path": "assets/audio/hosts/timothy/banish_again/banish_again_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988279+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5521,7 +5535,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "78f871a08657bb0613de847b795c05714b0295e3",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:19.081616+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5530,7 +5551,7 @@
       "text": "The night has passed. And everyone has survived.",
       "script_sha256": "2507549d1c92a1428d5c88c784f3dd09b98ee40190fe5cd3ba2263c404c8607f",
       "path": "assets/audio/hosts/timothy/quiet_night/quiet_night_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988281+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5548,7 +5569,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "16dfa0a4ce8f7edd5ccf9e67971543d829eb4409",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:19.911261+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5557,7 +5585,7 @@
       "text": "Someone was marked for death. But tonight, they were protected.",
       "script_sha256": "0569c5eeaa642565dc8a01f9e9cea3baf1be8735be608b92adf7e5f00b507970",
       "path": "assets/audio/hosts/timothy/shield_saved/shield_saved_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988283+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5575,7 +5603,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "c29b62e33d97711e2a43ab0104aafe33ed91de9e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:20.783812+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5584,7 +5619,7 @@
       "text": "The vote is tied. Nobody will be banished.",
       "script_sha256": "f1d734d28983765451153533002cd0b60e87b180c692cf9fd004b09801e521df",
       "path": "assets/audio/hosts/timothy/tied_vote/tied_vote_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988285+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5602,7 +5637,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "a9298ec13b689148cccafd127261068f8e2f6f0d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:21.536004+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5611,7 +5653,7 @@
       "text": "You must now decide. End the game. Or banish again.",
       "script_sha256": "ce3d268b1390534a563b16acbfc7edd2a401a4e528f2056fdde1babc4296ebd4",
       "path": "assets/audio/hosts/timothy/final_decision/final_decision_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988287+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5629,7 +5671,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "5b004a53f4a000739321d2e69772c7714d622c07",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:22.376945+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5638,7 +5687,7 @@
       "text": "And now, the truth.",
       "script_sha256": "7420b4641367572ad93f1886a6cf1be7f4b2adff58976e6e1f79e6dbf32c6dad",
       "path": "assets/audio/hosts/timothy/truth_reveal/truth_reveal_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988289+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5656,7 +5705,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "20ecb99dc84c89d1f21b17a6a5b6c809d53a8f7c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:23.155815+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5665,7 +5721,7 @@
       "text": "There is nowhere left to hide. The truth will now be revealed.",
       "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
       "path": "assets/audio/hosts/timothy/truth_reveal/truth_reveal_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988291+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5683,7 +5739,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "75b846164723f0e5d044ba8820e80d97545319ed",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:24.009122+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -5692,7 +5755,7 @@
       "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
       "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
       "path": "assets/audio/hosts/timothy/series_closing/series_closing_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:05:00.988293+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -5710,7 +5773,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "a51680f4451c9925506c52a111b5b85d1c2ed92a",
+        "blob_sha": "7976252652178b842c898008e7d0050519febf9b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:05:24.866853+00:00"
+      }
     }
   ]
 }
