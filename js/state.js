@@ -81,8 +81,8 @@ function createInitialState() {
     // engine.js's Recruit or Die section). A whole-series choice, set
     // once at Setup via startNewSeries, not reset per game.
     // audio: 'off' | 'partial' (essential announcements only) | 'full'
-    // (every narration line). Defaults to 'partial'.
-    settings: { audio: 'partial', music: false, deceiverKnowledge: 'known' },
+    // (every narration line). Defaults to 'full'.
+    settings: { audio: 'full', music: false, deceiverKnowledge: 'known', narratorHost: 'original' },
   };
 }
 

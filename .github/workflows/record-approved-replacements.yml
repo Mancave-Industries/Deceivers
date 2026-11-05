@@ -1,0 +1,50 @@
+name: Record approved replacement narrators
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deceivers-approved-narrator-production
+  cancel-in-progress: false
+
+jobs:
+  record-replacements:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/six-host-voice-assets-20261101
+      - name: Install audio decoder
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+      - name: Verify approved replacement scope and safeguards
+        run: |
+          python3 voice-production/validate_script_review.py
+          python3 voice-production/asset_checks.py
+          python3 -m unittest discover -s voice-production -p 'test_*.py'
+          python3 voice-production/record_replacements.py --dry-run
+      - name: Record one take per approved replacement clip
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u voice-production/record_replacements.py
+      - name: Final MP3 integrity check
+        run: python3 voice-production/asset_checks.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replacement-narrator-production-checkpoint
+          path: |
+            voice-production/replacement_production_assets.json
+            assets/audio/hosts/timothy/
+            assets/audio/hosts/cate/
+            assets/audio/hosts/kay/
+            assets/audio/hosts/penelope/
+          retention-days: 14

@@ -79,6 +79,9 @@ jobs:
       - run: npm run test:rules
       - run: npm run test:ui
         timeout-minutes: 5
+      - name: Verify mobile game starts selected host narration
+        timeout-minutes: 2
+        run: node tests/voice-gameplay-smoke.cjs
       - run: npm run audit:banishment
       - name: Summarise latest fixes
         if: always()

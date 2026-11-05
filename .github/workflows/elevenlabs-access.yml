@@ -1,0 +1,25 @@
+name: ElevenLabs paid account access check
+
+on:
+  push:
+    branches: [feature/six-host-voice-assets-20261101]
+    paths:
+      - .github/workflows/elevenlabs-access.yml
+      - voice-production/check_paid_access.py
+
+permissions:
+  contents: read
+
+jobs:
+  read-only-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check subscription, models and six voices without generating audio
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ADD_MISSING_PUBLIC_VOICES: '1'
+        run: python3 voice-production/check_paid_access.py

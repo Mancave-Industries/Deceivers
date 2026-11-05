@@ -1,0 +1,97 @@
+{
+  "status": "estimate_only_not_approved",
+  "scope": "174 public-event script lines across six voices, reusing eight existing recordings; excludes 115 held lines",
+  "new_files": 1036,
+  "credits": 45696,
+  "price_cents": 456.96,
+  "currency": "usd",
+  "method": "Exact outstanding revised text concatenated per host for character pricing only. These estimate nodes must never be run as production; they are not split into catalogue clips.",
+  "generated": false,
+  "charged": false,
+  "quotes": [
+    {
+      "host_id": "david",
+      "files": 171,
+      "characters": 7536,
+      "estimate": {
+        "credits": 7536,
+        "price_cents": 75.36,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "LGKug300ybJiLBE33vVL",
+      "estimate_node_id": "wiUAXNpy0F7GpMT5eiBE"
+    },
+    {
+      "host_id": "victor",
+      "files": 173,
+      "characters": 7632,
+      "estimate": {
+        "credits": 7631.999999999999,
+        "price_cents": 76.32,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "rs4pHiVk5Qb9PsEl4ulO",
+      "estimate_node_id": "lC3LXSY8eR9WCRV3JM2q"
+    },
+    {
+      "host_id": "aaron",
+      "files": 173,
+      "characters": 7632,
+      "estimate": {
+        "credits": 7631.999999999999,
+        "price_cents": 76.32,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "xDUcAyZ1LrczFcI09Dsi",
+      "estimate_node_id": "pxEOosCy6tP0cS3Ggz0H"
+    },
+    {
+      "host_id": "beth",
+      "files": 173,
+      "characters": 7632,
+      "estimate": {
+        "credits": 7631.999999999999,
+        "price_cents": 76.32,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "6gGn4K0CrOmdM0bAic3a",
+      "estimate_node_id": "a3WPqN239cTExC19wlra"
+    },
+    {
+      "host_id": "lily",
+      "files": 173,
+      "characters": 7632,
+      "estimate": {
+        "credits": 7631.999999999999,
+        "price_cents": 76.32,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "Ka8vWHNniiB7fiaWV3Hi",
+      "estimate_node_id": "99e7qL8LxlEbtW1nQcbi"
+    },
+    {
+      "host_id": "charlotte",
+      "files": 173,
+      "characters": 7632,
+      "estimate": {
+        "credits": 7631.999999999999,
+        "price_cents": 76.32,
+        "generations_count": 1,
+        "currency": "usd",
+        "estimated_runtime_seconds": 5
+      },
+      "estimate_flow_id": "9ZBQDHU6WF4hmjPmS2Jv",
+      "estimate_node_id": "VqWf6JmlhQGX1aFGZ4mU"
+    }
+  ]
+}

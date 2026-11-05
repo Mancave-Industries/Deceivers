@@ -1,0 +1,90 @@
+{
+  "quoted_on": "2026-11-01",
+  "method": "creative_generate_speech estimate_only=true",
+  "generated": false,
+  "charged": false,
+  "quotes": [
+    {
+      "host_id": "david",
+      "flow_id": "4qqF7FE7cuw7sBcIieD2",
+      "node_id": "dD8LtkJWF26EkyPtqNn9",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "F7n0VEnrij6y8mtpFPfu",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    },
+    {
+      "host_id": "victor",
+      "flow_id": "mHQUjjXOsCH3gsffTSy9",
+      "node_id": "168pReegbo4h1r1FzjA0",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "33aGKIlf0SKhTTaSWPVO",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    },
+    {
+      "host_id": "aaron",
+      "flow_id": "CmFeuxGdE1xfCisq8Svl",
+      "node_id": "zdZh2OdZ6hZyX2JpRji4",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "sNwCKTIAudVoHBcLnZER",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    },
+    {
+      "host_id": "beth",
+      "flow_id": "O85fr8d8JOTV8Fgrnf0G",
+      "node_id": "wBQhBYl60sp17KrV0LxD",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "zH7TN9vEZAsEway9xWev",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    },
+    {
+      "host_id": "lily",
+      "flow_id": "XnLDIal621iRgc1zSxDR",
+      "node_id": "4Vb4A7AoKoreNzwEQygN",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    },
+    {
+      "host_id": "charlotte",
+      "flow_id": "Hy37MrZkGC6gVrQGFj0x",
+      "node_id": "H8yasHtd0VYyagtZm08H",
+      "credits": 42.0,
+      "price_cents": 0.42,
+      "currency": "usd",
+      "generations_count": 1,
+      "estimate_only": true,
+      "voice_id": "I7QBbqvBcOGnmbD4D98p",
+      "prompt": "Pass the phone along. Nothing to see here.",
+      "model_id": "eleven_v4"
+    }
+  ],
+  "total_credits": 252.0,
+  "total_price_cents": 2.52,
+  "currency": "usd",
+  "note": "Live provider estimate only; not a billed amount or approval. Refresh before spending."
+}

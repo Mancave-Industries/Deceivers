@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "user_approved_for_full_production_2026-11-05",
+  "hosts": [
+    {
+      "id": "timothy",
+      "label": "Timothy",
+      "provider_name": "Timothy Pemberton Smythe",
+      "voice_id": "qkG6pQFWpZTnYnoQZGFs",
+      "gender": "male",
+      "avatar_path": "assets/brand/narrators/david-setup.webp"
+    },
+    {
+      "id": "cate",
+      "label": "Cate",
+      "provider_name": "Cate",
+      "voice_id": "J64VNrjLE6uKFBKlxfSJ",
+      "gender": "female",
+      "avatar_path": "assets/brand/narrators/charlotte-setup.webp"
+    },
+    {
+      "id": "kay",
+      "label": "Kay",
+      "provider_name": "Kay",
+      "voice_id": "vBRU4ztAu1MfP8arDoB3",
+      "gender": "female",
+      "avatar_path": "assets/brand/narrators/beth-setup.webp"
+    },
+    {
+      "id": "penelope",
+      "label": "Penelope",
+      "provider_name": "Penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "gender": "female",
+      "avatar_path": "assets/brand/narrators/aaron-setup.webp"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "named_setup_portraits",
+  "generator": "built_in_imagegen",
+  "style": "Current supplied painted Deceivers posters: midnight blue, cream, red and gold.",
+  "assets": [
+    {
+      "host_id": "david",
+      "label": "David",
+      "path": "assets/brand/narrators/david-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "c7bac8e86dcaa79bfad0b4522551106a831f317ec6fcf45fe3689e0460c26467",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'DAVID' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly DAVID. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    },
+    {
+      "host_id": "victor",
+      "label": "Victor",
+      "path": "assets/brand/narrators/victor-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "0ed09a4e4f2d630cfff464c4ea8de50aae37332ced4ab2004c5400eee827ad9b",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'VICTOR' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly VICTOR. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    },
+    {
+      "host_id": "aaron",
+      "label": "Aaron",
+      "path": "assets/brand/narrators/aaron-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "d82cf989c863a1fa11d605e441105b58fa1a1a1983cab1e7d3112bd2765660d2",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'AARON' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly AARON. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    },
+    {
+      "host_id": "beth",
+      "label": "Beth",
+      "path": "assets/brand/narrators/beth-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "f2c7bf388780262575b02a78086046acf2d5ac5b596d58440fbddc81cc411545",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'BETH' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly BETH. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    },
+    {
+      "host_id": "lily",
+      "label": "Lily",
+      "path": "assets/brand/narrators/lily-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "9caa64de4fa9437596bf06aba33eafea63c007b17f7c7c7a97798270794f33dc",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'LILY' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly LILY. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    },
+    {
+      "host_id": "charlotte",
+      "label": "Charlotte",
+      "path": "assets/brand/narrators/charlotte-setup.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sha256": "3cef5b0357122f760f8e05b83fd38da1d2eb03235462c53511003962d698c9ce",
+      "prompt": "Make a precise text-addition edit to this existing narrator portrait. Preserve the square image, exact person's identity, face, expression, hairstyle, proportions, clothing, castle, moon, red left stripe, midnight-blue black cream and gold palette, painterly illustration and all existing composition. ADD ONLY the narrator name 'CHARLOTTE' in very large bold warm CREAM uppercase vintage condensed slab-serif display letters centered across the bottom of the image, matching the chunky theatrical headline lettering of The Deceivers' current NIGHT FALLS / BANISH AGAIN posters. Spell exactly CHARLOTTE. Use a subtle dark black-to-midnight-blue gradient backing over the lower chest only to keep the name completely readable; do not cover the face or shift the portrait upwards. Keep the full name inside the square with safe margins, optically centered, a consistent text cap-height of about 9% of the image height across the six-character portrait set, and about 4% bottom safe margin. A single fine understated gold horizontal rule immediately above the name. No other words, no logos, no extra borders. Do not redesign, regenerate a different person, recolor or embellish the portrait. This is the same finished portrait with its own name added."
+    }
+  ]
+}

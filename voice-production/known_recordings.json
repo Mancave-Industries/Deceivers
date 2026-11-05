@@ -1,0 +1,136 @@
+{
+  "status": "eight_existing_mp3s_verified_in_github_listening_review_pending",
+  "notes": "Exact completed Creative Flow references and provider-linked History IDs. History API enumeration is not verified in this environment. Import via these IDs or authenticated Flow exports; never regenerate to recover an existing clip.",
+  "recordings": [
+    {
+      "host_id": "david",
+      "clip_id": "opening_002",
+      "flow_id": "zAtxyp7QqXq1fHpBiCdf",
+      "session_id": "hYxXNVJgSS87DUlz5eXF",
+      "generation_id": "MWcfEOTPLIqjrfuH6cpF",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "QmmsJsp8rDyRQk0ja01Q"
+    },
+    {
+      "host_id": "victor",
+      "clip_id": "opening_002",
+      "flow_id": "xFt45SNTbdooezxED5qT",
+      "session_id": "7bMwjj93GJapf0cvdtwn",
+      "generation_id": "06tE53BBkaOeXRE8sbxc",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "ZRiwTgoNQmWnveaOcIf7"
+    },
+    {
+      "host_id": "aaron",
+      "clip_id": "opening_002",
+      "flow_id": "4FKC9kOsS17fUvAhsfU4",
+      "session_id": "ZPsjIoRtgKXsDN0CUdeS",
+      "generation_id": "Oebomth6MujQj3Z2ioGc",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "kw2UP5PybcZXClWdQjcZ"
+    },
+    {
+      "host_id": "beth",
+      "clip_id": "opening_002",
+      "flow_id": "xEZirHXN3WljfMU5o9Sh",
+      "session_id": "nld87oEqkXL92skjuMFI",
+      "generation_id": "QupJKeVFX4s5ZwzOabAK",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "zOkEFO6BVxRovuwO2iaN"
+    },
+    {
+      "host_id": "lily",
+      "clip_id": "opening_002",
+      "flow_id": "k1thk8yp8Z5FRZFQZGHs",
+      "session_id": "UntJXJeYMpv2fKbSQhcV",
+      "generation_id": "42td0x3MNP6ZH8qvHGUF",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "zuaSn9ArcPIvSJRqO4C0"
+    },
+    {
+      "host_id": "charlotte",
+      "clip_id": "opening_002",
+      "flow_id": "fAc2tqdnvHtNsIOL4hQZ",
+      "session_id": "pgFvX1AJUyn8d9yoEzsb",
+      "generation_id": "xegSHfN0G7FuviSMxhE6",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "lagFfzUa95WYOin1kwKf"
+    },
+    {
+      "host_id": "david",
+      "clip_id": "gather_006",
+      "flow_id": "E2t91FzM9lsdV13tQZBX",
+      "session_id": "yyvuN1QmTuSLTph3ISrW",
+      "generation_id": "I3727as8VIf87MOCpX6G",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "amuYT9NizCpkh0iIYmLu"
+    },
+    {
+      "host_id": "david",
+      "clip_id": "murder_reveal_018",
+      "flow_id": "7GE0F0hithGEKggD6qCD",
+      "session_id": "BDsecH8lRmjX8P1ZfqgE",
+      "generation_id": "PIhymBkVI7ZsytzrMJRN",
+      "review_status": "pending",
+      "import_status": "github_binary_verified",
+      "history_item_id": "Ok8zQte2qMgMQAXjJU8N"
+    },
+    {
+      "host_id": "david",
+      "clip_id": "anonymous_handoff_001",
+      "flow_id": "O50VWUSriZWEa6B6P1HU",
+      "session_id": "sY8pFSc4mH4m1VDw8ovZ",
+      "generation_id": "xQP044wZTeOjwvzKbMkn",
+      "history_item_id": "5khPudUqlB40LMuW184R",
+      "review_status": "listening_pending",
+      "import_status": "github_binary_verified"
+    },
+    {
+      "host_id": "aaron",
+      "clip_id": "anonymous_handoff_001",
+      "flow_id": "qojlPJUMeqVLwHWMiccd",
+      "session_id": "9lJBl2NFXCD2I9DfnYZt",
+      "generation_id": "SSL5FK0Snic9oRqq9PKF",
+      "history_item_id": "mgrqqyHzKj4yNMrOYNjB",
+      "review_status": "listening_pending",
+      "import_status": "github_binary_verified"
+    },
+    {
+      "host_id": "beth",
+      "clip_id": "anonymous_handoff_001",
+      "flow_id": "vCntvVFgbKbSKkAmgmgm",
+      "session_id": "FOxtXOL28ZZhGQSDYCMs",
+      "generation_id": "tSbcBX8DqjhONswln9F8",
+      "history_item_id": "tGITrBH5rQLKI9mTywkH",
+      "review_status": "listening_pending",
+      "import_status": "github_binary_verified"
+    },
+    {
+      "host_id": "lily",
+      "clip_id": "anonymous_handoff_001",
+      "flow_id": "iZhFgL1NpA9ogvvf3Se0",
+      "session_id": "vqZ0C4ZN0clkDBZIdOsF",
+      "generation_id": "0OKVQOwlJkdRG3kX6SbN",
+      "history_item_id": "E91mnV63twqD8ymhkURW",
+      "review_status": "listening_pending",
+      "import_status": "github_binary_verified"
+    },
+    {
+      "host_id": "charlotte",
+      "clip_id": "anonymous_handoff_001",
+      "flow_id": "GUG9bqs9CwfY88Dpez0F",
+      "session_id": "OHo587tNRTFzCY5qJgBF",
+      "generation_id": "Dwuy4Y3DvyQMrE3RwNhu",
+      "history_item_id": "9AASXnhgDypwVOXqNUde",
+      "review_status": "listening_pending",
+      "import_status": "github_binary_verified"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "changes": [
+    {
+      "id": "murder_reveal_001",
+      "before": "Another Loyal dispatched. Sleep well, everyone. If you can.",
+      "after": "A player dispatched. Sleep well, everyone. If you can.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_003",
+      "before": "A Loyal has been murdered. The night was not kind.",
+      "after": "A player has been murdered. The night was not kind.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_004",
+      "before": "One more chair empty. A charming start to the day.",
+      "after": "A chair sits empty. A charming start to the day.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_007",
+      "before": "Another innocent gone. The plot thickens.",
+      "after": "A player gone. The plot thickens.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_010",
+      "before": "An unfortunate night for a Loyal player.",
+      "after": "An unfortunate night for one of your fellow players.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_011",
+      "before": "Another murder. Really, this neighbourhood.",
+      "after": "A murder. Really, this neighbourhood.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_012",
+      "before": "A Loyal is gone. And the rest of you have questions.",
+      "after": "A player is gone. And the rest of you have questions.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_014",
+      "before": "The night has claimed another player.",
+      "after": "The night has claimed a player.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_015",
+      "before": "A fresh absence. A familiar sense of dread.",
+      "after": "A fresh absence. An unpleasant sense of dread.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "murder_reveal_019",
+      "before": "Another Loyal silenced. The rest of you, do speak up.",
+      "after": "A player silenced. The rest of you, do speak up.",
+      "reason": "Works for a first murder and for any eligible victim, including a Pariah; does not disclose a role."
+    },
+    {
+      "id": "loyal_banished_001",
+      "before": "Another innocent gone. The Deceivers must be delighted.",
+      "after": "A Loyal gone. An unfortunate result for the investigation.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "loyal_banished_002",
+      "before": "You're doing their job for them. Very generous.",
+      "after": "You removed an ally. Very generous.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "loyal_banished_006",
+      "before": "The Deceivers didn't even have to lift a finger.",
+      "after": "A Loyal banished without a murderer lifting a finger.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "loyal_banished_011",
+      "before": "Wrong again. But with such conviction!",
+      "after": "Wrong. But with such conviction!",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "loyal_banished_017",
+      "before": "The Deceivers are getting excellent value from you lot.",
+      "after": "Your investigation is getting rather expensive.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "loyal_banished_020",
+      "before": "Another Loyal gone. Do try opening your eyes next time.",
+      "after": "A Loyal gone. Do try opening your eyes next time.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "deceiver_banished_006",
+      "before": "At last. The evidence has met the enthusiasm.",
+      "after": "The evidence has met the enthusiasm.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "deceiver_banished_012",
+      "before": "One less Deceiver in the room. Publicly speaking, of course.",
+      "after": "A Deceiver removed from the game. Publicly speaking, of course.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "deceiver_banished_014",
+      "before": "The mask slips. The game goes on.",
+      "after": "The mask slips. There is your answer.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "deceiver_banished_020",
+      "before": "The right person, for once. Carry on.",
+      "after": "The right person. A moment worth remembering.",
+      "reason": "Avoids assuming prior mistakes, remaining hidden roles, physical departure or guaranteed continuation. Still requires the exact role to be publicly revealed."
+    },
+    {
+      "id": "suspicion_001",
+      "before": "Open your eyes. Someone here is lying to you.",
+      "after": "Who is telling the truth? That is for you to decide.",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_004",
+      "before": "Someone knows more than they're saying.",
+      "after": "Perhaps someone knows more than they're saying.",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_008",
+      "before": "There are stories here. Some are fiction.",
+      "after": "Everyone has a story. Which ones do you believe?",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_012",
+      "before": "An excellent theory. Pity about the facts.",
+      "after": "An excellent theory. Does the evidence support it?",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_013",
+      "before": "Somebody's bluffing. You may wish to notice.",
+      "after": "Is somebody bluffing? You may wish to find out.",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_019",
+      "before": "Someone's having a very good time watching this.",
+      "after": "Who looks rather too comfortable?",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "suspicion_030",
+      "before": "Who's lying to you? That is rather the point.",
+      "after": "Who do you believe? That is rather the point.",
+      "reason": "Narrator must not certify an accusation, judge an actual answer, or claim a liar remains alive. Optional suspicion commentary remains held."
+    },
+    {
+      "id": "discussion_011",
+      "before": "Talk it through. Try to avoid a group hallucination.",
+      "after": "Talk it through. Try to avoid collective wishful thinking.",
+      "reason": "Keeps the dry tone without an unnecessary clinical metaphor."
+    },
+    {
+      "id": "final_circle_005",
+      "before": "One last chance to be brilliantly right. Or spectacularly wrong.",
+      "after": "A chance to be brilliantly right. Or spectacularly wrong.",
+      "reason": "Final Circle may require multiple ballots; this need not be the last decision."
+    }
+  ],
+  "added_categories": {
+    "final_voting": [
+      "A final banishment. It is time to vote."
+    ],
+    "banish_again": [
+      "The circle has chosen to continue. Another decision must be made."
+    ],
+    "quiet_night": [
+      "The night has passed. And everyone has survived."
+    ],
+    "shield_saved": [
+      "Someone was marked for death. But tonight, they were protected."
+    ],
+    "tied_vote": [
+      "The vote is tied. Nobody will be banished."
+    ],
+    "final_decision": [
+      "You must now decide. End the game. Or banish again."
+    ],
+    "truth_reveal": [
+      "And now, the truth.",
+      "There is nowhere left to hide. The truth will now be revealed."
+    ],
+    "series_closing": [
+      "The game is over. But remember, the next Deceiver might be sitting right beside you."
+    ],
+    "farewell": [
+      "Until next time. Trust nobody."
+    ],
+    "rules_intro": [
+      "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
+      "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody."
+    ],
+    "game_begins": [
+      "Let the game begin."
+    ]
+  },
+  "held_categories": {
+    "named_handoff_generic": "DEFER: redundant generic handoff alternatives; no spoken player-name support exists. Do not create a separate private queue cue.",
+    "secret_action": "BLOCKED: no distinct audible announcement of private actions. Do not generate for runtime or map to Murder/Recruit/response decisions. Use the common handoff instead.",
+    "suspicion": "DEFER: no current dedicated trigger; never comment on an actual accusation or imply privileged knowledge.",
+    "loyal_banished": "DEFER: current game uses a generic banishment pool. Future use requires an explicit public role reveal equal to Loyal; exclude Pariah/unknown.",
+    "deceiver_banished": "DEFER: current game uses a generic banishment pool. Future use requires an explicit public role reveal equal to Deceiver; not a private remaining-role test."
+  }
+}

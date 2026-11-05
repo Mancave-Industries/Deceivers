@@ -1,0 +1,72 @@
+name: Voice asset integrity
+
+on:
+  pull_request:
+    paths:
+      - 'js/**'
+      - 'css/**'
+      - 'index.html'
+      - 'tests/narrator-hosts.cjs'
+      - 'voice-production/**'
+      - 'assets/audio/hosts/**'
+      - '.github/workflows/voice-assets.yml'
+  push:
+    branches: [feature/six-host-voice-assets-20261101]
+    paths:
+      - 'js/**'
+      - 'css/**'
+      - 'index.html'
+      - 'tests/narrator-hosts.cjs'
+      - 'voice-production/**'
+      - 'assets/audio/hosts/**'
+      - '.github/workflows/voice-assets.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify-existing-audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+        timeout-minutes: 3
+      - name: Verify catalogue, MP3 decoding and checksums
+        run: python voice-production/asset_checks.py
+      - name: Check import, corruption and duplicate-generation guards
+        run: python -m unittest discover -s voice-production -p 'test_*.py'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify narrator selection, static playback and secrecy
+        run: node --test tests/narrator-hosts.cjs
+      - name: Validate reviewed script and held-line exclusions
+        run: python voice-production/validate_script_review.py
+      # The old six-file proposal was fulfilled. Checking it as if it were
+      # still awaiting recording correctly rejects duplicates, but makes CI red.
+      - name: Verify complete approved public-game coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path('.')
+          review = json.loads((base/'voice-production/reviewed_production_script.json').read_text())
+          voices = json.loads((base/'voice-production/active_voices.json').read_text())
+          clips = [clip for clip in review['clips'] if clip['recording_status'] == 'public_pool_candidate']
+          hosts = voices['hosts']
+          if len(clips) != 174 or len(hosts) != 6:
+              raise SystemExit('Unexpected reviewed clip or host count')
+          missing = [
+              f"assets/audio/hosts/{host['id']}/{clip['event']}/{clip['id']}.mp3"
+              for host in hosts for clip in clips
+              if not (base/f"assets/audio/hosts/{host['id']}/{clip['event']}/{clip['id']}.mp3").is_file()
+          ]
+          if missing:
+              raise SystemExit(f"Missing {len(missing)} approved MP3s: {missing[:5]}")
+          print(f"Active reviewed public pool fully recorded: {len(clips) * len(hosts)} MP3s, six hosts.")
+          PY

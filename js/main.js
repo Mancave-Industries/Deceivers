@@ -77,7 +77,8 @@ function applyAudioSettings(audioLevel) {
 }
 
 applyAudioSettings(state.settings.audio);
-Sound.setMusicEnabled(state.settings.music);
+Sound.setMusicEnabled(false);
+Sound.setNarratorHost(state.settings.narratorHost);
 
 let setupNames = Array(CONFIG.minPlayers).fill('');
 let setupIsComputer = Array(CONFIG.minPlayers).fill(false);
@@ -345,7 +346,7 @@ function resolveComputerTurn() {
         uiStage.votingAnnounced = false;
         if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
         else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
+        else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); startDiscussTimer(); interstitialPending = 'banishment'; }
       }
       break;
     }
@@ -421,7 +422,7 @@ function resolveComputerTurn() {
         const nextPhase = resolveFinalCircleDecision(state);
         if (nextPhase === PHASES.DISCUSS) {
           Sound.play('gather');
-          Sound.startMusic();
+          
           startDiscussTimer();
           interstitialPending = 'banish-again';
         } else if (nextPhase === PHASES.RESULTS) {
@@ -444,6 +445,7 @@ function showScreen(phaseName) {
 }
 
 function render() {
+  if (state.phase !== PHASES.SETUP) NarratorHosts.stopPreview();
   if (state.phase !== lastRenderedPhase) {
     Sound.stopNarration();
     lastRenderedPhase = state.phase;
@@ -493,7 +495,7 @@ function render() {
       UI.renderTitle(hasSavedGame());
       break;
     case PHASES.SETUP:
-      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
       break;
     case PHASES.REVEAL:
       UI.renderReveal(state, uiStage.revealTapped);
@@ -606,9 +608,9 @@ const actions = {
       resetNarrationTracking();
       applyAudioSettings(state.settings.audio);
       Sound.preloadNarration();
-      Sound.setMusicEnabled(state.settings.music);
+      Sound.setMusicEnabled(false);
       document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
-      if (state.phase === PHASES.DISCUSS) { Sound.startMusic(); startDiscussTimer(); }
+      if (state.phase === PHASES.DISCUSS) { startDiscussTimer(); }
     }
     render();
   },
@@ -629,39 +631,39 @@ const actions = {
       setupNames.push('');
       setupIsComputer.push(false);
     }
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'remove-player': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupNames.splice(i, 1);
     setupIsComputer.splice(i, 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-seat-mode': (btn) => {
     Sound.play('tap');
     const i = Number(btn.dataset.index);
     setupIsComputer[i] = btn.dataset.mode === 'computer';
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'inc-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.min(20, seriesLength + 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'dec-series-length': () => {
     Sound.play('tap');
     seriesLength = Math.max(1, seriesLength - 1);
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-deceiver-knowledge': (btn) => {
     Sound.play('tap');
     setupDeceiverKnowledge = btn.dataset.mode === 'hidden' ? 'hidden' : 'known';
-    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
+    UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
   },
   'set-audio-level': (btn) => {
     const mode = btn.dataset.mode;
-    state.settings.audio = mode === 'off' || mode === 'full' ? mode : 'partial';
+    state.settings.audio = mode === 'off' ? 'off' : 'full';
     applyAudioSettings(state.settings.audio);
     document.getElementById('soundBtn').classList.toggle('muted', state.settings.audio === 'off');
     if (state.settings.audio !== 'off') {
@@ -671,7 +673,101 @@ const actions = {
     persist();
     UI.showModal('Settings', UI.settingsContent(state));
   },
+  'open-narrator-settings': () => {
+    Sound.play('modalOpen');
+    UI.showModal('Narrator & Sound', UI.settingsContent(state));
+  },
+  'choose-narrator': (btn) => {
+    const host = NarratorHosts.find(btn.dataset.host);
+    if (!host && btn.dataset.host !== 'original') return;
+    NarratorHosts.stopPreview();
+    state.settings.narratorHost = host ? host.id : 'original';
+    Sound.setNarratorHost(state.settings.narratorHost);
+    // Choosing a host opts into full spoken narration, even if a saved
+    // game had the old Partial or Off mode. The user may mute it again.
+    if (state.settings.audio !== 'full') {
+      state.settings.audio = 'full';
+      applyAudioSettings('full');
+      document.getElementById('soundBtn').classList.remove('muted');
+    }
+    persist();
+    UI.showModal('Narrator & Sound', UI.settingsContent(state));
+    if (state.phase === PHASES.SETUP) {
+      UI.renderSetup(setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge, state.settings.narratorHost);
+    }
+  },
+  'preview-narrator': (btn) => {
+    NarratorHosts.previewHost(btn.dataset.host, text => {
+      const status = document.getElementById('narrator-preview-status');
+      if (status) status.textContent = text;
+    });
+  },
+  'stop-narrator-preview': () => NarratorHosts.stopPreview(),
+  'restore-game-audio': () => {
+    const status = document.getElementById('audio-recovery-status');
+    if (!status) return;
+    if (state.settings.audio === 'off') {
+      state.settings.audio = 'full';
+      applyAudioSettings('full');
+      document.getElementById('soundBtn').classList.remove('muted');
+      persist();
+    }
+    status.textContent = 'Reconnecting phone audio…';
+    // Called directly from the real button tap: keeps the same game, round,
+    // roles, narrator choice and settings; no role-specific cues are replayed.
+    Sound.recoverAudio().then(ok => {
+      if (!status.isConnected) return;
+      status.textContent = ok
+        ? 'Audio reconnected. Tap Test in-game narration above to confirm.'
+        : 'iPhone audio is still blocked. Try turning volume up and tapping Restore Audio again.';
+    });
+  },
+  'test-game-narration': () => {
+    NarratorHosts.stopPreview();
+    const status = document.getElementById('game-narration-status');
+    if (!status) return;
+    if (state.settings.audio === 'off') {
+      status.textContent = 'Narration is Off. Tap On above, then test again.';
+      return;
+    }
+    Sound.stopNarration();
+    status.textContent = 'Loading the selected narrator through the game audio engine…';
+    let started = false;
+    let failed = '';
+    const unsubscribe = Sound._onEvent((type, data) => {
+      if (!status.isConnected) return;
+      if (type === 'clip-start') {
+        started = true;
+        const audio = Sound.getAudioStatus();
+        status.textContent = audio.contextState === 'running'
+          ? 'Playback started (' + audio.host + '). Can you hear the voice?'
+          : 'Playback requested, but phone audio is ' + audio.contextState + '.';
+      }
+      if (type === 'clip-failed') {
+        failed = String(data.error || 'Unknown audio error');
+        status.textContent = 'Playback failed: ' + failed;
+      }
+    });
+    Sound.unlockAudio().then(ok => {
+      if (!ok && status.isConnected && !started && !failed) {
+        status.textContent = 'The phone blocked the audio engine. Tap Test again.';
+      }
+    });
+    Sound.narrate(['intro1'], () => {
+      unsubscribe();
+      if (!status.isConnected) return;
+      if (failed) {
+        status.textContent = 'Test failed: ' + failed;
+      } else if (!started) {
+        status.textContent = 'No voice playback started. Report this as a narration fault.';
+      } else {
+        status.textContent = 'Playback finished. If you heard silence, the phone blocked audio output.';
+      }
+    });
+  },
   'start-game': () => {
+    NarratorHosts.stopPreview();
+    Sound.unlockAudio();
     if (!setupNames.every((n) => n.trim().length > 0)) return;
     Sound.play('gather');
     startNewSeries(state, setupNames, seriesLength, setupIsComputer, setupDeceiverKnowledge);
@@ -764,7 +860,7 @@ const actions = {
       uiStage.votingAnnounced = false;
       if (state.phase === PHASES.NIGHT) { Sound.play('nightFalls'); interstitialPending = 'night-falls'; }
       else if (state.phase === PHASES.ELIMINATION) Sound.play('quietNight');
-      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); Sound.startMusic(); startDiscussTimer(); interstitialPending = 'banishment'; }
+      else if (state.phase === PHASES.DISCUSS) { Sound.play('gather'); startDiscussTimer(); interstitialPending = 'banishment'; }
     } else {
       // Still more players in the Draw queue — hand the phone on.
       Sound.play('passDevice');
@@ -1172,7 +1268,10 @@ document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-action]');
   if (!btn) return;
   const action = actions[btn.dataset.action];
-  if (action) action(btn);
+  if (action) {
+    Sound.unlockAudio(); // Resume iPhone AudioContext inside the user gesture.
+    action(btn);
+  }
 });
 
 document.addEventListener('input', (e) => {
@@ -1186,19 +1285,6 @@ document.addEventListener('input', (e) => {
 document.getElementById('menuBtn').addEventListener('click', () => {
   Sound.play('modalOpen');
   UI.showModal('Settings', UI.settingsContent(state));
-});
-
-// A checkbox's own 'click' (not 'change') is used here so this goes
-// through the same global data-action delegation as every other control
-// -- including after 'set-audio-level' redraws the modal body, which
-// would otherwise orphan a listener attached directly to the old node.
-document.addEventListener('click', (e) => {
-  const toggle = e.target.closest('#musicToggle');
-  if (!toggle) return;
-  state.settings.music = toggle.checked;
-  Sound.setMusicEnabled(state.settings.music);
-  if (state.settings.music && state.phase === PHASES.DISCUSS) Sound.startMusic();
-  persist();
 });
 
 document.getElementById('helpBtn').addEventListener('click', () => {
