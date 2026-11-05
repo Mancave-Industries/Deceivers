@@ -17009,8 +17009,25 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619938+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619938+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "k84hnNTpPU4L3kcctTmZ",
+        "request_id": "jvDSK1p67EPfIfzmPRlJ"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:40.440366+00:00",
+      "sha256": "accd262a044d9b03ffed7adadbaee7358191999163c71ead33ab2aefb35179ee",
+      "git_blob_sha": "4266aeba38916a597be97fc525a659cbc4015689",
+      "size_bytes": 74021,
+      "duration_seconds": 4.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17019,8 +17036,25 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619956+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619956+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "5i5lRxmpkBd87UNX8zwu",
+        "request_id": "3SeODbfbQIUEp4XByDCt"
+      },
+      "provider_character_cost": "15",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:41.458438+00:00",
+      "sha256": "4a8f5787d85c35cf21255b638aee4dd745636727eac5740ae8c5735289068b09",
+      "git_blob_sha": "c3a0d21cd5762c909740b1710434bbb8e623e478",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17029,8 +17063,25 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619958+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619958+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "M7YcPlrgrSl9WMVeTHuP",
+        "request_id": "3wkEoplqiKRxwHQEHjiA"
+      },
+      "provider_character_cost": "28",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:42.808923+00:00",
+      "sha256": "768b00a83bebd53f836bd79298de5c74d299b3c645204c0ff8a18681c62a4851",
+      "git_blob_sha": "36ea6d44fe395c7e8284c8be8383c30d7ddd5097",
+      "size_bytes": 71514,
+      "duration_seconds": 4.4,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17039,8 +17090,25 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/kay/opening/opening_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619960+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619960+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "fXexZxU6yvTGxY7JwWd6",
+        "request_id": "mYWNoECH99hl6vUlq6Lj"
+      },
+      "provider_character_cost": "64",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:45.242372+00:00",
+      "sha256": "3bda90ccebea7dd1a5a587ddfbde2449d947af1998aa06dc802f4b55bb12209a",
+      "git_blob_sha": "99d022c1cc7c92fec37b6e56472dfd47de9c4ee4",
+      "size_bytes": 155941,
+      "duration_seconds": 9.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17049,8 +17117,25 @@
       "text": "Ah, there you are. Welcome to The Deceivers. Trust is a lovely thing. It won't last.",
       "script_sha256": "c775c9baae314b81bea2de6f663904a3f596aed58ca62276b5fffb24d5162765",
       "path": "assets/audio/hosts/kay/opening/opening_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619961+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619961+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "VOpUquhQMISGmZ4uhHyt",
+        "request_id": "ybCz1yp0em8R86WrcHlJ"
+      },
+      "provider_character_cost": "37",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:47.143482+00:00",
+      "sha256": "2d7b9824408efbc96e4daba0c7c446a1c6bde28c821e0b03275601e54f08d124",
+      "git_blob_sha": "1e376c66f1f4ccf429a25964cbbe523767daa8ae",
+      "size_bytes": 108712,
+      "duration_seconds": 6.72,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17059,8 +17144,25 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/kay/opening/opening_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619963+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619963+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "voxCHIwdJ968MlsGQflA",
+        "request_id": "dSlW3t17BUMRAEKSjSfY"
+      },
+      "provider_character_cost": "43",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:49.023095+00:00",
+      "sha256": "d2cca3bf72dbb62ca850fc92c1bfa6e0de62654220626b1dcefd7e1091c34403",
+      "git_blob_sha": "fb0f304ecb94a432cd23162ab1a223f5af2caa8e",
+      "size_bytes": 106204,
+      "duration_seconds": 6.56,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17069,8 +17171,25 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/kay/opening/opening_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619964+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619964+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "1cZp9Bmp3vUHOWgO72W8",
+        "request_id": "xWQksqrLead5thM5RPoY"
+      },
+      "provider_character_cost": "45",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:50.795745+00:00",
+      "sha256": "54981a0cf565b9207374d60a9e8fb3b574681263e65cefc93d56b576f25f3b85",
+      "git_blob_sha": "87cbe5e489a002ee19dac79762e0f26896858566",
+      "size_bytes": 100771,
+      "duration_seconds": 6.24,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17079,8 +17198,25 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/kay/opening/opening_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619966+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619966+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DfmVchHx4wp2oB78mRzU",
+        "request_id": "BFlWiZSpNpa31ejJPX09"
+      },
+      "provider_character_cost": "38",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:52.550814+00:00",
+      "sha256": "abbe912e7b5ce7840ba4ad7c1254c34eb36a842ec651b8c3cc1b2e813c1b4061",
+      "git_blob_sha": "418b1072314d19e0117570b2c99abe16f1a0e20d",
+      "size_bytes": 114981,
+      "duration_seconds": 7.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17089,8 +17225,25 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/kay/opening/opening_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619967+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619967+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DVaptFyzsfju5y1A9cEW",
+        "request_id": "qy4eRxQADxTr4cKXKvgK"
+      },
+      "provider_character_cost": "31",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:54.083112+00:00",
+      "sha256": "fd7c6c7f3c54dc0c0118d5d2f0039b06ccc120fcd02d3a172174e3b2e98f1b8e",
+      "git_blob_sha": "cfe787dd31d896509e58e881e307369cc94e0f26",
+      "size_bytes": 79037,
+      "duration_seconds": 4.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -17099,8 +17252,25 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/kay/final_voting/final_voting_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:18:37.619969+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:18:37.619969+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "JVviqirBz4bK1FhZsjar",
+        "request_id": "5HHJ2yl15AOEaTykEGs4"
+      },
+      "provider_character_cost": "17",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:18:55.172611+00:00",
+      "sha256": "e58b044ac1547394c0638d2fccbd5b803effa5fe4053f389147ef51ed20da174",
+      "git_blob_sha": "7c5bbacb084ffc682e4e8c0fa63ace16213ea551",
+      "size_bytes": 53541,
+      "duration_seconds": 3.28,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
