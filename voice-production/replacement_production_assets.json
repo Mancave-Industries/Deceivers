@@ -349,7 +349,7 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522243+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -367,7 +367,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "034c4a0c9f2b98a852d7c12c2b36d02ee2982b54",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:13.205635+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -376,7 +383,7 @@
       "text": "The next player awaits. Probably.",
       "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522264+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -394,7 +401,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "314ab9e83c3d45e257cc139a767321938fb49ca1",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:13.975020+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -403,7 +417,7 @@
       "text": "Your turn is over. How tragic.",
       "script_sha256": "b0b9d09fb27656dfff6b2976da77587f43aeab376a762442a1f972ed7151ade1",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_013.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522267+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -421,7 +435,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "fd6e99e010478c43a1c81c8b733ea205a0d34666",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:14.755603+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -430,7 +451,7 @@
       "text": "Pass it on, and look innocent.",
       "script_sha256": "b752e4ca987204a764dafbb2fd6b1589f49532b5c3cbe96f161d0ec2e2ffde6b",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_014.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522269+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -448,7 +469,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "09614557c28b1ca834f066ff4ab0e0bc1edbd2e8",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:15.543203+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -457,7 +485,7 @@
       "text": "A little privacy, ladies and gentlemen.",
       "script_sha256": "c2cc2986f6a915725d851922ce2ffe18944942ade6e3b7390c77943409dd7fd0",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_015.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522271+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -475,7 +503,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "84666a2679db41c04783cb8377094cd0e78880e0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:16.375730+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -484,7 +519,7 @@
       "text": "Next player. No audience required.",
       "script_sha256": "bf71dc8db6a530b042f585cc7d970ec9930c59b63e8063dede7d6e47a5e82b91",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_016.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522273+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -502,7 +537,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "2282bd07f6469d2f6cc4db8605efc12b2987543e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:17.186283+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -511,7 +553,7 @@
       "text": "The phone travels. The secrets stay.",
       "script_sha256": "29f5cd9f49fc31a03c100ad8c3a1efefbe8b5dfeef8567d6c3493f822570e99b",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_017.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522275+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -529,7 +571,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "1151b5c55c70b6e0b0fa17f6629934328fafeef9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:17.958329+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -538,7 +587,7 @@
       "text": "Hand it over. Gently, now.",
       "script_sha256": "6a6d85184223cccda9274048ec9134612896cf6857eb7abc0c40f6ffae3bbc98",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_018.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522277+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -556,7 +605,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "6a53f9b9a6a9744f5fccaeb0eb451c759046bfd0",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:18.785138+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -565,7 +621,7 @@
       "text": "Moving along. Nothing dramatic. Yet.",
       "script_sha256": "d2b3df9df60822ac8e0e536d4126e0d1d5a3151495ff14607f397e07bbb8d723",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_019.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522279+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -583,7 +639,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "47d60d140b48647263191c43b926fb63e1d9034b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:19.610674+00:00"
+      }
     },
     {
       "host_id": "timothy",
@@ -592,7 +655,7 @@
       "text": "Pass the phone. No commentary from the gallery.",
       "script_sha256": "d45ad80f4e1a990d84069d48acfc2dafd27c38215b35b2d3ea02bc1032c47f10",
       "path": "assets/audio/hosts/timothy/anonymous_handoff/anonymous_handoff_020.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T20:58:59.522282+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -610,7 +673,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "faa693d6b91c12c96daa14f83059b43647827115",
+        "blob_sha": "2c093bc57fc7c760ef59ee36eafec7ecdf03b304",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T20:59:20.405155+00:00"
+      }
     }
   ]
 }
