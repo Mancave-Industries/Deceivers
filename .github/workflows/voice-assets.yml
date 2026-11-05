@@ -56,7 +56,7 @@ jobs:
           from pathlib import Path
           base = Path('.')
           review = json.loads((base/'voice-production/reviewed_production_script.json').read_text())
-          voices = json.loads((base/'voice-production/voices.json').read_text())
+          voices = json.loads((base/'voice-production/active_voices.json').read_text())
           clips = [clip for clip in review['clips'] if clip['recording_status'] == 'public_pool_candidate']
           hosts = voices['hosts']
           if len(clips) != 174 or len(hosts) != 6:
@@ -68,5 +68,5 @@ jobs:
           ]
           if missing:
               raise SystemExit(f"Missing {len(missing)} approved MP3s: {missing[:5]}")
-          print(f"Reviewed public pool fully recorded: {len(clips) * len(hosts)} MP3s, six hosts.")
+          print(f"Active reviewed public pool fully recorded: {len(clips) * len(hosts)} MP3s, six hosts.")
           PY
