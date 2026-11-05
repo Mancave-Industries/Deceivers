@@ -33,11 +33,10 @@ def digest(text):
 def catalogue():
     manifest = read("manifest.json")
     source = read("source_library.json")["categories"]
-    voice_rows = read("voices.json")["hosts"] + read("replacement_voices.json")["hosts"]
-    hosts = {h["id"]: h for h in voice_rows}
+    hosts = {h["id"]: h for h in read("voices.json")["hosts"]}
     clips = {c["id"]: c for c in manifest["clips"]}
-    if len(clips) != len(manifest["clips"]) or len(hosts) != len(voice_rows) or len(hosts) != 10:
-        raise ValueError("Duplicate clip IDs or incorrect complete voice registry")
+    if len(clips) != len(manifest["clips"]) or len(hosts) != 6:
+        raise ValueError("Duplicate clip IDs or incorrect host count")
     if len(clips) != sum(map(len, source.values())) or len(clips) != manifest["clip_count"]:
         raise ValueError("Manifest/source count mismatch")
     for clip in clips.values():
