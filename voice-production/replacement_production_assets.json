@@ -23461,6 +23461,66 @@
         "byte_for_byte_match": true,
         "verified_at": "2026-11-05T21:26:22.444953+00:00"
       }
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "truth_reveal_002",
+      "text": "There is nowhere left to hide. The truth will now be revealed.",
+      "script_sha256": "f222ec7385cb24c9e125b38b97bd491448e9987cfd897017f58b6d644dbae819",
+      "path": "assets/audio/hosts/penelope/truth_reveal/truth_reveal_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972828+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "series_closing_001",
+      "text": "The game is over. But remember, the next Deceiver might be sitting right beside you.",
+      "script_sha256": "26f61d6b913b362a33b22ae26d3c1f6198ec9d1ad8a497aae7d9a980fdf8bbea",
+      "path": "assets/audio/hosts/penelope/series_closing/series_closing_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972848+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "farewell_001",
+      "text": "Until next time. Trust nobody.",
+      "script_sha256": "e72f5fff80d8021bcd75f6019d00e42a4e434d554ee219ad2ccfeaaaa1382ac4",
+      "path": "assets/audio/hosts/penelope/farewell/farewell_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972851+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "rules_intro_001",
+      "text": "Among you are those who cannot be trusted. They will lie. They will deceive. And, given the opportunity, they will murder.",
+      "script_sha256": "e0b0b90db463b189894cf85471617ec9c7f3f38d13e177fd32d337764d132959",
+      "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972853+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "rules_intro_002",
+      "text": "The Loyal must find the Deceivers. The Deceivers must survive. Trust nobody.",
+      "script_sha256": "b78fd382cfa9aa98ba4e2a480b72385cc31a9640339c9a28c330e13d4729e7dc",
+      "path": "assets/audio/hosts/penelope/rules_intro/rules_intro_002.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972855+00:00"
+    },
+    {
+      "host_id": "penelope",
+      "voice_id": "b6T2IrWoTx7ZIb3BHJSg",
+      "clip_id": "game_begins_001",
+      "text": "Let the game begin.",
+      "script_sha256": "3b9903b98903bd2eeae71103182643fdf54fecd7cb76a698b894c209693d6e6f",
+      "path": "assets/audio/hosts/penelope/game_begins/game_begins_001.mp3",
+      "status": "reserved_no_automatic_retry",
+      "reserved_at": "2026-11-05T21:26:23.972857+00:00"
     }
   ]
 }
