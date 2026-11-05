@@ -13609,8 +13609,25 @@
       "text": "The day is done. The unpleasantness may begin.",
       "script_sha256": "22e3505e810a1214db6226617f5dd4caf7b221bd36aeedc73ca1856c93ee51c3",
       "path": "assets/audio/hosts/kay/night_falls/night_falls_013.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844094+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844094+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "wnpL1NUf7MvrmbQ56qfO",
+        "request_id": "bAXgP6adeyeOVxv25ANk"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:42.580133+00:00",
+      "sha256": "855d95b1f6ad4b4a0817e3c3d8dd60a8eaf2ac46d649d296dfbd446ace367dd4",
+      "git_blob_sha": "7e1456e90089b8f89cc1271492a8def09b64d14c",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13619,8 +13636,25 @@
       "text": "Shadows lengthen. So do the lies.",
       "script_sha256": "ba101c299b54a7e4a7a3b7f23ab87d30037d2fc179ff5ee32434644a307877cf",
       "path": "assets/audio/hosts/kay/night_falls/night_falls_014.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844116+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844116+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "tc4BWstUx7wgFPrtNTLO",
+        "request_id": "EsKjypckWa7ACXfrFfD2"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:43.504146+00:00",
+      "sha256": "73c3477a071d71eaa8fb1db83a78318902871b8f13d1f15d8f60527be4cbba40",
+      "git_blob_sha": "f2016b71a31ecfba1c57fb0b0b44a4665f9caff6",
+      "size_bytes": 47272,
+      "duration_seconds": 2.88,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13629,8 +13663,25 @@
       "text": "Good evening, suspicious people.",
       "script_sha256": "066a68bff52d0d210f198f1dca9a6cbd6542355157e088806c96fb3c7a3b810e",
       "path": "assets/audio/hosts/kay/night_falls/night_falls_015.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844118+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844118+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "BLJNAaZemS8x2aO5ZxGH",
+        "request_id": "JOJZDh5OplEZk0GdpUlj"
+      },
+      "provider_character_cost": "14",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:44.404517+00:00",
+      "sha256": "addb737faad84a366ae05522e008ba0363bafb03a58c5417f24318787407f5b6",
+      "git_blob_sha": "4c718bd8d10eea337e9490b49a5189e1bd98e844",
+      "size_bytes": 34315,
+      "duration_seconds": 2.08,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13639,8 +13690,25 @@
       "text": "Gather everyone. Place the phone in the centre.",
       "script_sha256": "be37ba9c05a99c0433881e0f9dd7e6133e49c3127f079938076fc4bb7f2ffc0d",
       "path": "assets/audio/hosts/kay/gather/gather_001.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844120+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844120+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "Z7MOJfaZKRxL6ivTtHTO",
+        "request_id": "lNmTFdhNrQ2W4a4sObO9"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:45.506355+00:00",
+      "sha256": "dc20918d4f1fe76e97e1e52b5e3d859e921468c4a5f5bb5b7af490d8e72e3000",
+      "git_blob_sha": "7f9696ff80b1df546a35d4e644461d0999ee9477",
+      "size_bytes": 51034,
+      "duration_seconds": 3.12,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13649,8 +13717,25 @@
       "text": "Everyone, gather round. Set the phone down in the centre.",
       "script_sha256": "944608bbb8ba3036212c692285572c43aafe10ea8cbc7737e3b1db5a74f9387e",
       "path": "assets/audio/hosts/kay/gather/gather_002.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844122+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844122+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "qNlVF5tNt9SPSufN7IsE",
+        "request_id": "5QEcxrABjhKSkZLDvQxb"
+      },
+      "provider_character_cost": "25",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:46.863291+00:00",
+      "sha256": "26c2fd276d3a78e6811eb0a62fa7a00d5d2566f64b8271190bf15ea9b143fa1b",
+      "git_blob_sha": "fae4e065de5d8d4a4272af03216162ba4fee7d08",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13659,8 +13744,25 @@
       "text": "Bring the circle together. Phone in the centre.",
       "script_sha256": "e945b0f71fbc6d72a88ed136a3e0c7c0f74c377816d59e3703bee3163fd42a94",
       "path": "assets/audio/hosts/kay/gather/gather_003.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844124+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844124+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "r5P8IyznchZwaCWKGKKj",
+        "request_id": "d4eb5QN63OpUroDWdrBX"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:47.996186+00:00",
+      "sha256": "d746d8b2824e8be6aec55a4df600653a7ecfba6f2dd4bfe49a62b04b99804d77",
+      "git_blob_sha": "ea3b22e8dc995d264d6b3ea022f82b303a71fb28",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13669,8 +13771,25 @@
       "text": "Come together, my suspicious little congregation.",
       "script_sha256": "3bac2b33a603c4bd6c9c25d81ededd481e55b03ab54ad6119724eb95e22f9466",
       "path": "assets/audio/hosts/kay/gather/gather_004.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844126+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844126+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "bevQiadlbz3FfTsKXfvG",
+        "request_id": "E8YY2SwyF3XrZvzxolsb"
+      },
+      "provider_character_cost": "21",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:49.101389+00:00",
+      "sha256": "160b1df53f23a6a155d6d3668ae98ffa9948bbfd16ced12c94ffb5690da96777",
+      "git_blob_sha": "bf8bacd8cabed2156a58dc56757057ea0cb0473a",
+      "size_bytes": 54795,
+      "duration_seconds": 3.36,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13679,8 +13798,25 @@
       "text": "Everyone in. The phone takes centre stage.",
       "script_sha256": "d473d464ae4cf83ac554ab93af58dcfc8a27aa946990316f1cf5455934b66ecb",
       "path": "assets/audio/hosts/kay/gather/gather_005.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844128+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844128+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "f7sDie47AtbUw4mru5W9",
+        "request_id": "kT67msk9yec3Oznzmh33"
+      },
+      "provider_character_cost": "18",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:50.205435+00:00",
+      "sha256": "c1e8331b024c481634a7a7b7c586fc26c9c6b9b717900c2ede61e4b24fb83492",
+      "git_blob_sha": "d901a000f69efbb3c9dff761cd08f8d30eeb3997",
+      "size_bytes": 52287,
+      "duration_seconds": 3.2,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13689,8 +13825,25 @@
       "text": "Gather round. It's time to be collectively mistaken.",
       "script_sha256": "19082de648c43f414f2a76f0d11c038173724bad4c6afb99604f5880404a693f",
       "path": "assets/audio/hosts/kay/gather/gather_006.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844130+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844130+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "dJjRKYENlhok5014ojNr",
+        "request_id": "eQZNpeQmkne96XAy0xXH"
+      },
+      "provider_character_cost": "23",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:51.384452+00:00",
+      "sha256": "cd0ec618b81487ebee21b4581ab87daad51ab4976d2740445e28798f78809c73",
+      "git_blob_sha": "7afd4a356b1a91d87c4bc6ed899833e6c58b44a6",
+      "size_bytes": 59811,
+      "duration_seconds": 3.68,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     },
     {
       "host_id": "kay",
@@ -13699,8 +13852,25 @@
       "text": "Come closer. Not too close. We have standards.",
       "script_sha256": "c13179e9113a7305b9b05337dc125e36c39b28ab66f7b88e08ad3987537342c7",
       "path": "assets/audio/hosts/kay/gather/gather_007.mp3",
-      "status": "reserved_no_automatic_retry",
-      "reserved_at": "2026-11-05T21:14:39.844133+00:00"
+      "status": "local_binary_verified",
+      "reserved_at": "2026-11-05T21:14:39.844133+00:00",
+      "source": {
+        "method": "direct_tts_api",
+        "history_item_id": "DamH4yr8ZTG4Ftkqp1vk",
+        "request_id": "D8UTKP5TgncbuQfBY0bo"
+      },
+      "provider_character_cost": "20",
+      "model_id": "eleven_v4",
+      "generated_at": "2026-11-05T21:14:52.737425+00:00",
+      "sha256": "28c8635715ed3afcf311c5e8d7b200efa275a372844ed168450f4d13892f2692",
+      "git_blob_sha": "383ee9da2b3b3939c9d1aea03952be0650373313",
+      "size_bytes": 63990,
+      "duration_seconds": 3.92,
+      "codec": "mp3",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "full_decode_passed": true,
+      "review_status": "listening_pending"
     }
   ]
 }
