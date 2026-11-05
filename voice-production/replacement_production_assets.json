@@ -11909,7 +11909,7 @@
       "text": "On we go. Quietly, if you wouldn't mind.",
       "script_sha256": "ebe0fc8d483bb1b5b82c81d6a2d26a58a54680a66246813866f3f60da53378cc",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943473+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11927,7 +11927,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "b7dc449c4cfe624a1b6beaa72cac12a64d1b904f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:00.242634+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -11936,7 +11943,7 @@
       "text": "Pass it along. The suspense is unbearable.",
       "script_sha256": "92aeaa1aa3df51c28cfde033cc8f2ba3963853168eccd2da2921aa5696862c3f",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943492+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11954,7 +11961,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "2e14a42769815a114abf64e3e47bde67be45f27c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:01.080348+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -11963,7 +11977,7 @@
       "text": "Next pair of hands, please.",
       "script_sha256": "4dbd6c21e5c4657d64c99850324193bd0264be816a6eaacc005207e5b8d1fc5e",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943494+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -11981,7 +11995,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "f393494eca80eb12f186360b5a2758859346acc2",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:01.886861+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -11990,7 +12011,7 @@
       "text": "A little discretion. How refreshing.",
       "script_sha256": "5c842b9f23c74797dbcedc97065ef28f25e883e512703f45de92a96752dcf6a2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943495+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12008,7 +12029,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "0a4ea99251af1dc7a6d20877ff2df56bc5733b1c",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:02.702888+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12017,7 +12045,7 @@
       "text": "Pass the phone. Keep your thoughts to yourself.",
       "script_sha256": "0ced5bfca984ddf17eefbebe921c3022e006b86f62ee906eb3b599ff992dd1f1",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_007.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943497+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12035,7 +12063,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "6a47cefd36edfddaa22173240e22a0ac52862797",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:03.518537+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12044,7 +12079,7 @@
       "text": "Next player. Eyes on your own business.",
       "script_sha256": "60bf1aa59f7a6b848909ec0e74a6c1910ae73922c0312289c3e0c23234d302f7",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_008.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943498+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12062,7 +12097,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "c58917e28d6f064552c7c5f053c907829995b5b9",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:04.336969+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12071,7 +12113,7 @@
       "text": "Round it goes. Round and round.",
       "script_sha256": "320b7640e958510c17cf96df1165d0ff2c13650f5fd039a311829e708e3974d2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_009.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943500+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12089,7 +12131,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "8021a25775da1d602faca12c4b6a3aa4ee6c540f",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:05.147664+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12098,7 +12147,7 @@
       "text": "A swift handover, if you please.",
       "script_sha256": "4c5bbbd8344adbf6db00dccbc244c45750a1eead6b27e59ded325f4c8ccc8dd9",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_010.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943501+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12116,7 +12165,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "04c56dfc0a3e47c0ce979457310718935bfb4b0b",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:05.933406+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12125,7 +12181,7 @@
       "text": "Don't linger. Pass it on.",
       "script_sha256": "4abeca4e9be98da4aa87f4f06787e36ae26936892b6e6b646f96bd49ee0de2c8",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_011.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943502+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12143,7 +12199,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "13c33d8a81094f5b9a2db296772daf40886ec252",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:06.693929+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -12152,7 +12215,7 @@
       "text": "The next player awaits. Probably.",
       "script_sha256": "b9189b14d23ba0d825d13d65e7f45b31b2b44286364506a9f03daa5087efd2e2",
       "path": "assets/audio/hosts/kay/anonymous_handoff/anonymous_handoff_012.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:12:46.943504+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -12170,7 +12233,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "09bf94d08dd90debaa3092255760797798e36e1e",
+        "blob_sha": "291f5e8deacfd6c46cff9b956509ed48274eff97",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:13:07.498148+00:00"
+      }
     }
   ]
 }
