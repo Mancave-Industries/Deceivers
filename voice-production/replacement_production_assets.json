@@ -17009,7 +17009,7 @@
       "text": "The Deceivers take the prize. Trust is a dangerous hobby.",
       "script_sha256": "93165eb2790f17a38c82ce2b8106cd5326129f6932723e7c2b448b6f1a4e922a",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619938+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17027,7 +17027,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "4266aeba38916a597be97fc525a659cbc4015689",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:57.859634+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17036,7 +17043,7 @@
       "text": "The truth has lost. Spectacularly.",
       "script_sha256": "d9ca5569f042fb957208ea89c361e227021196106582e727954a656732d05d43",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619956+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17054,7 +17061,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "c3a0d21cd5762c909740b1710434bbb8e623e478",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:58.711919+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17063,7 +17077,7 @@
       "text": "The Deceivers prevail. Do congratulate the people who fooled you.",
       "script_sha256": "feb21e449f9ac0b157f7ed1de2b6de1a713d11277c53afa77333eb9646fd71f2",
       "path": "assets/audio/hosts/kay/deceiver_victory/deceiver_victory_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619958+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17081,7 +17095,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "36ea6d44fe395c7e8284c8be8383c30d7ddd5097",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:18:59.542723+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17090,7 +17111,7 @@
       "text": "Welcome to The Deceivers. Some of you are loyal. Some of you are lying. And some of you are considerably better at it than others. Shall we begin?",
       "script_sha256": "b8e8dc91eed7c747d263db8adc23cb089f39a28240f8d2084847ed38902a3586",
       "path": "assets/audio/hosts/kay/opening/opening_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619960+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17108,7 +17129,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "99d022c1cc7c92fec37b6e56472dfd47de9c4ee4",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:00.455500+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17117,7 +17145,7 @@
       "text": "Ah, there you are. Welcome to The Deceivers. Trust is a lovely thing. It won't last.",
       "script_sha256": "c775c9baae314b81bea2de6f663904a3f596aed58ca62276b5fffb24d5162765",
       "path": "assets/audio/hosts/kay/opening/opening_002.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619961+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17135,7 +17163,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "1e376c66f1f4ccf429a25964cbbe523767daa8ae",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:01.295066+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17144,7 +17179,7 @@
       "text": "Good evening, and welcome. There are secrets in this room, and I intend to enjoy every one of them.",
       "script_sha256": "9458d0f739b295dd7f21f2af1a36f56d8fbd02e4dd93c98454cbb8a55cfcff3f",
       "path": "assets/audio/hosts/kay/opening/opening_003.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619963+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17162,7 +17197,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "fb0f304ecb94a432cd23162ab1a223f5af2caa8e",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:02.151253+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17171,7 +17213,7 @@
       "text": "Welcome, contestants. Keep your friends close, your suspicions closer, and your phone where I tell you.",
       "script_sha256": "1b5fc3bca1780444ef7db7aa5353d2f3433ad7e365f9adc3e174ef103504cb4f",
       "path": "assets/audio/hosts/kay/opening/opening_004.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619964+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17189,7 +17231,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "87cbe5e489a002ee19dac79762e0f26896858566",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:03.038656+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17198,7 +17247,7 @@
       "text": "The Deceivers begins. Everyone has a face. Not everyone has an honest one. How exciting.",
       "script_sha256": "9f9edea8a1432aec3a2c9f8e650c4caa9e928ff266051a2c6f6c54f029cf140d",
       "path": "assets/audio/hosts/kay/opening/opening_005.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619966+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17216,7 +17265,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "418b1072314d19e0117570b2c99abe16f1a0e20d",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:03.932917+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17225,7 +17281,7 @@
       "text": "Come in, come in. A room full of friends. What could possibly go wrong?",
       "script_sha256": "30a97989b4a909cc2876be22dfe8cc1fc1f7a22f964ff7bf3ade6c843e41ba9a",
       "path": "assets/audio/hosts/kay/opening/opening_006.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619967+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17243,7 +17299,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "cfe787dd31d896509e58e881e307369cc94e0f26",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:04.732110+00:00"
+      }
     },
     {
       "host_id": "kay",
@@ -17252,7 +17315,7 @@
       "text": "A final banishment. It is time to vote.",
       "script_sha256": "036d3ec6e01a45b787b98c33f30bbd8c0e22d219ee02a2a3197b04345b9343d9",
       "path": "assets/audio/hosts/kay/final_voting/final_voting_001.mp3",
-      "status": "local_binary_verified",
+      "status": "github_binary_verified",
       "reserved_at": "2026-11-05T21:18:37.619969+00:00",
       "source": {
         "method": "direct_tts_api",
@@ -17270,7 +17333,14 @@
       "sample_rate_hz": 44100,
       "channels": 1,
       "full_decode_passed": true,
-      "review_status": "listening_pending"
+      "review_status": "listening_pending",
+      "github_verification": {
+        "commit_sha": "f0bbe1676562c133bfb71cdb37d9cd46fc18e128",
+        "blob_sha": "7c5bbacb084ffc682e4e8c0fa63ace16213ea551",
+        "readback_encoding": "base64",
+        "byte_for_byte_match": true,
+        "verified_at": "2026-11-05T21:19:05.547609+00:00"
+      }
     }
   ]
 }
