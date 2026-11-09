@@ -42,8 +42,8 @@ async function run() {
       Sound._onEvent((type, detail) => window.__voiceEvents.push({type, detail}));
     });
     await page.click('[data-action="title-open-settings"]');
-    await page.click('[data-action="choose-narrator"][data-host="david"]');
-    assert.equal(await page.evaluate(() => state.settings.narratorHost), 'david');
+    await page.click('[data-action="choose-narrator"][data-host="timothy"]');
+    assert.equal(await page.evaluate(() => state.settings.narratorHost), 'timothy');
     assert.equal(await page.evaluate(() => state.settings.audio), 'full');
     await page.click('[data-action="test-game-narration"]');
     await page.waitForFunction(() => {
@@ -58,21 +58,21 @@ async function run() {
     for (let i=0; i<await inputs.count(); i++) await inputs.nth(i).fill('Player' + (i+1));
     await page.click('.screen.active [data-action="start-game"]');
     await page.waitForFunction(() => window.__voiceEvents.some(e =>
-      e.type === 'clip-start' && /^host:david:opening_/.test(e.detail.key)
+      e.type === 'clip-start' && /^host:timothy:opening_/.test(e.detail.key)
     ), null, {timeout:20000});
-    console.log('PASS: David started speaking at game opening');
+    console.log('PASS: Timothy started speaking at game opening');
     await page.click('#interstitialOverlay');
     await page.waitForFunction(() => window.__voiceEvents.some(e =>
-      e.type === 'clip-start' && /^host:david:anonymous_handoff_/.test(e.detail.key)
+      e.type === 'clip-start' && /^host:timothy:anonymous_handoff_/.test(e.detail.key)
     ), null, {timeout:20000});
-    console.log('PASS: David started speaking at first pass-the-phone moment');
+    console.log('PASS: Timothy started speaking at first pass-the-phone moment');
     await page.click('#menuBtn');
     await page.click('[data-action="restore-game-audio"]');
     await page.waitForFunction(() =>
       document.getElementById('audio-recovery-status')?.textContent.includes('Audio reconnected')
     , null, {timeout:20000});
     assert.equal(await page.evaluate(() => state.phase), 'reveal');
-    assert.equal(await page.evaluate(() => state.settings.narratorHost), 'david');
+    assert.equal(await page.evaluate(() => state.settings.narratorHost), 'timothy');
     await page.click('[data-action="test-game-narration"]');
     await page.waitForFunction(() =>
       document.getElementById('game-narration-status')?.textContent.includes('Playback started')
